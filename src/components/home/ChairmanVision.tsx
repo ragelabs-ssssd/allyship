@@ -1,0 +1,83 @@
+"use client";
+
+import React from "react";
+import Image from "next/image";
+import { Quote } from "lucide-react";
+import { SectionReveal } from "../animations/SectionReveal";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+
+export function ChairmanVision() {
+  return (
+    <section className="py-24 lg:py-36 bg-surface-2 relative border-y border-line overflow-hidden">
+      {/* Subtle luxury ambient pattern */}
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          {/* Left Column: Portrait */}
+          <SectionReveal className="lg:col-span-5 relative" direction="left">
+            <div className="relative mx-auto max-w-md lg:max-w-none">
+              <div className="relative rounded-2xl overflow-hidden bg-surface-3 shadow-2xl border border-line aspect-[4/5] on-media">
+                <Image
+                  src="/chairman-manojranjan-nayak.png"
+                  alt="Prof. (Dr.) Manojranjan Nayak, Founder President & Chairman, SOA University"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover object-top grayscale contrast-105 hover:grayscale-0 transition-all duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90" />
+                
+                <div className="absolute bottom-4 left-4 right-4 text-content">
+                  <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
+                    Founding Visionary
+                  </span>
+                  <h4 className="font-display text-base font-semibold tracking-normal text-content leading-snug">
+                    Prof. (Dr.) Manojranjan Nayak
+                  </h4>
+                  <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-muted">
+                    Founder President &amp; Chairman, Siksha &lsquo;O&rsquo; Anusandhan
+                  </p>
+                </div>
+              </div>
+
+              {/* Gold border accent accentuating editorial frame */}
+              <div className="absolute -bottom-4 -right-4 w-28 h-28 border-b-2 border-r-2 border-accent rounded-br-2xl pointer-events-none opacity-50 hidden sm:block" />
+            </div>
+          </SectionReveal>
+
+          {/* Right Column: Editorial Quote & Philosophy */}
+          <SectionReveal className="lg:col-span-7 space-y-8" direction="right">
+            <div className="space-y-4">
+              <Quote className="w-12 h-12 text-accent opacity-80" />
+              <blockquote className="font-serif italic font-normal tracking-normal text-2xl sm:text-3xl lg:text-4xl leading-[1.4] text-content">
+                &ldquo;Allyship is not a transactional summit. It is an enduring covenant between
+                corporate boardrooms and academic halls — an obligation to sculpt talent that leads
+                with intellect, empathy, and technological resilience.&rdquo;
+              </blockquote>
+            </div>
+
+            <div className="space-y-3 pt-4 border-t border-line text-sm sm:text-base text-content-secondary leading-relaxed">
+              <p className="font-sans text-sm sm:text-base font-normal tracking-[0.01em] leading-relaxed text-content-secondary">
+                Under the stewardship of Prof. (Dr.) Manojranjan Nayak, SOA has evolved into a premier
+                Deemed-to-be University (NIRF Top 15 in University category and Top 27 in Overall India),
+                fostering nine constituent institutes, world-class teaching hospitals, and over 15,000 scholars.
+              </p>
+              <p className="font-sans text-xs text-content-muted uppercase tracking-[0.14em] font-medium">
+                Inaugural addresses delivered across Bengaluru, Mumbai, Hyderabad &amp; Chennai Conclaves
+              </p>
+            </div>
+
+            <div className="pt-2">
+              <Link
+                href="/discover-soa"
+                className="inline-flex items-center gap-2 font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-content-secondary hover:text-accent transition-colors group"
+              >
+                <span>Explore the Institutional Legacy of SOA</span>
+                <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </Link>
+            </div>
+          </SectionReveal>
+        </div>
+      </div>
+    </section>
+  );
+}

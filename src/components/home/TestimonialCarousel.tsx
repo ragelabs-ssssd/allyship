@@ -1,0 +1,251 @@
+"use client";
+
+import React, { useCallback, useEffect, useState } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import { ArrowLeft, ArrowRight, Quote, Award } from "lucide-react";
+import Image from "next/image";
+import { SectionReveal } from "../animations/SectionReveal";
+
+interface Testimonial {
+  quote: string;
+  author: string;
+  role: string;
+  organization: string;
+  chapter: string;
+  highlight?: string;
+  image?: string;
+}
+
+const initials = (name: string) =>
+  name
+    .split(" ")
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0])
+    .join("")
+    .toUpperCase();
+
+const testimonials: Testimonial[] = [
+  {
+    quote:
+      "Leadership in elite athletics mirrors corporate allyship. You cannot expect extraordinary execution without relentless trust, psychological conditioning, and mutual respect between mentors and performers.",
+    author: "Anju Bobby George",
+    role: "Olympian & World Championship Medalist",
+    organization: "Athletics Federation of India",
+    chapter: "Bengaluru Chapter 1.0 Keynote",
+    highlight: "Keynote Luminary",
+    image: "/testimonials/anju-bobby-george.jpg",
+  },
+  {
+    quote:
+      "When we bridge corporate learning academies directly with curriculum design at universities like SOA, we eliminate the two-year learning curve for graduate engineers entering global tech organizations.",
+    author: "Dr. P.B. Kotur",
+    role: "Global Head, Engineering Academy",
+    organization: "L&T Technology Services",
+    chapter: "Bengaluru & Mumbai Chapter Deliberations",
+    highlight: "Academy Head",
+    image: "/testimonials/pb-kotur-v2.jpg",
+  },
+  {
+    quote:
+      "Allyship is not a soft sentiment; it is an executive duty. Leaders must actively create safe harbors where emerging talent can question assumptions, innovate without fear, and build resilient careers.",
+    author: "Archana Grover",
+    role: "Global Head – Capabilities & Transformation",
+    organization: "Standard Chartered",
+    chapter: "Chennai Chapter 2.0 Moderator",
+    highlight: "Panel Moderator",
+    image: "/testimonials/archana-grover.jpg",
+  },
+  {
+    quote:
+      "Training national sprinters for the Paris Olympics proved that peak performance is nurtured through empathy and discipline. Corporate leadership must adopt the same coach-athlete allyship.",
+    author: "Premanand J.",
+    role: "Paris Olympics National Sprint Coach",
+    organization: "Indian National Athletics Squad",
+    chapter: "Chennai Chapter 2.0 Fireside",
+    highlight: "Olympic Mentor",
+    image: "/testimonials/premanand-j.jpg",
+  },
+  {
+    quote:
+      "In high-pressure cricket matches as in volatile enterprise environments, talent only flourishes when backed by institutional stamina, mental preparation, and authentic camaraderie.",
+    author: "Arshad Ayub",
+    role: "Former Indian International Cricketer",
+    organization: "Former President, HCA",
+    chapter: "Hyderabad Chapter 1.0 Chief Guest",
+    highlight: "Chief Guest",
+    image: "/testimonials/arshad-ayub-v2.jpg",
+  },
+  {
+    quote:
+      "Gen-Z professionals require authentic mentorship rather than top-down mandates. ALLYSHIP++ provides the exact forum where industry CHROs and university deans establish that cadence.",
+    author: "Gauri Das",
+    role: "SVP & Head of Human Resources",
+    organization: "India Factoring & Finance Solutions",
+    chapter: "Mumbai Chapter 1.0 Panelist",
+    highlight: "HR Panelist",
+    image: "/testimonials/gauri-das.jpg",
+  },
+  {
+    quote:
+      "Young professionals don’t need perfect success stories, they need real ones. Talking about my setbacks here reminded me why struggle, when shared, becomes the most powerful form of mentorship.",
+    author: "Dr. G. Srinivas Patnaik",
+    role: "Secretary, Athletics Federation of India",
+    organization: "Athletics Federation of India",
+    chapter: "Hyderabad Chapter 2.0",
+    highlight: "AFI Secretary",
+    image: "/testimonials/srinivas-patnaik.jpg",
+  },
+];
+
+export function TestimonialCarousel() {
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { loop: true, align: "start" },
+    [Autoplay({ delay: 5000, stopOnInteraction: false, stopOnMouseEnter: true })]
+  );
+
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    emblaApi.on("select", onSelect);
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- client-only hydration; runs once after mount
+    onSelect();
+  }, [emblaApi, onSelect]);
+
+  return (
+    <section className="py-24 lg:py-32 bg-canvas relative border-b border-line overflow-hidden">
+      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
+        {/* Header & Controls */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 pb-6 border-b border-line">
+          <SectionReveal>
+            <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
+              Voices of Conclave Luminaries
+            </span>
+            <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-[-0.025em] leading-[1.1] text-content mt-2">
+              Perspectives From the Conclave
+            </h2>
+          </SectionReveal>
+
+          {/* Carousel Arrows */}
+          <div className="flex items-center gap-3">
+            <button
+              onClick={scrollPrev}
+              aria-label="Previous testimonial"
+              className="w-12 h-12 rounded-full border border-line bg-surface-3 flex items-center justify-center text-content hover:border-accent hover:text-accent shadow-xs transition-colors"
+            >
+              <ArrowLeft className="w-5 h-5" />
+            </button>
+            <button
+              onClick={scrollNext}
+              aria-label="Next testimonial"
+              className="w-12 h-12 rounded-full border border-line bg-surface-3 flex items-center justify-center text-content hover:border-accent hover:text-accent shadow-xs transition-colors"
+            >
+              <ArrowRight className="w-5 h-5" />
+            </button>
+          </div>
+        </div>
+
+        {/* Embla Carousel Viewport */}
+        <div className="overflow-hidden cursor-grab active:cursor-grabbing" ref={emblaRef}>
+          <div className="flex -ml-6 sm:-ml-8">
+            {testimonials.map((item, idx) => (
+              <div
+                key={idx}
+                className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.333%] pl-6 sm:pl-8"
+              >
+                <div className="h-full flex flex-col bg-surface-3 rounded-2xl border border-line shadow-lg hover:border-accent/60 transition-all duration-300 overflow-hidden">
+                  {/* Portrait — the focal point of the card */}
+                  <div className="relative aspect-[4/3] w-full overflow-hidden bg-surface-2 on-media">
+                    {item.image ? (
+                      <Image
+                        src={item.image}
+                        alt={item.author}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover object-top"
+                      />
+                    ) : (
+                      <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-surface-2 to-surface-sunken">
+                        <span className="font-display text-5xl font-bold text-accent">
+                          {initials(item.author)}
+                        </span>
+                      </div>
+                    )}
+
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+
+                    {item.highlight && (
+                      <span className="absolute top-3 right-3 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-sans text-[10px] font-semibold uppercase tracking-[0.14em] bg-black/70 text-amber-400/90 border border-amber-400/30 backdrop-blur-md">
+                        <Award className="w-3 h-3" />
+                        {item.highlight}
+                      </span>
+                    )}
+
+                    <div className="absolute bottom-4 left-5 right-5 text-white">
+                      <h4 className="font-display text-lg font-semibold leading-tight">
+                        {item.author}
+                      </h4>
+                      <p className="font-sans text-xs text-white/80 mt-0.5 line-clamp-1">
+                        {item.role}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Quote + attribution */}
+                  <div className="flex flex-1 flex-col justify-between p-6 sm:p-7">
+                    <div className="space-y-4">
+                      <Quote className="w-7 h-7 text-accent opacity-80" />
+                      <p className="font-serif italic font-normal tracking-normal text-base leading-[1.45] text-content">
+                        &ldquo;{item.quote}&rdquo;
+                      </p>
+                    </div>
+
+                    <div className="pt-5 mt-5 border-t border-line space-y-1">
+                      <p className="font-sans text-xs font-semibold text-accent">
+                        {item.organization}
+                      </p>
+                      <p className="font-sans text-[10px] text-content-muted uppercase tracking-[0.14em] pt-0.5 font-medium">
+                        {item.chapter}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Dots indicator */}
+        <div className="flex items-center justify-center gap-2 mt-10">
+          {testimonials.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => emblaApi && emblaApi.scrollTo(idx)}
+              aria-label={`Go to slide ${idx + 1}`}
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                selectedIndex === idx
+                  ? "w-8 bg-accent"
+                  : "w-2 bg-line-strong"
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

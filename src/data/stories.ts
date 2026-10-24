@@ -1,0 +1,58 @@
+import { Story } from "@/lib/types";
+
+export const COMMUNITY_STORIES: Story[] = [
+  {
+    id: "story-1",
+    slug: "shifting-from-bystander-to-advocate-engineering",
+    title: "From Silent Observer to Active Advocate: A Lead Engineer's Journey",
+    authorName: "Marcus Sterling",
+    authorRole: "Principal Systems Architect",
+    communityContext: "Distributed Engineering Organization",
+    theme: "Workplace Intervention",
+    publishedDate: "2025-10-18",
+    excerpt: "For years, I believed that not causing harm was sufficient. It took a high-stakes project review to show me that silence is actively complicit in maintaining unfair dynamics.",
+    fullStory: [
+      "In technical architecture reviews, interruption is often dismissed as 'intellectual passion'. For two years, I noticed a recurring pattern: whenever our most junior female engineer offered an architectural proposal, a senior counterpart would talk over her or rephrase her idea ten minutes later to widespread nods.",
+      "I used to sit silently, feeling uncomfortable but telling myself, 'She is capable; she doesn't need me to speak for her.' I confused empowering colleagues with abandoning them in hostile conversational environments.",
+      "After attending an Allyship intervention workshop, I learned that intervention isn't saviorism—it is shared boundary enforcement. In the very next sprint kickoff, when the same interruption occurred, I deliberately interrupted the interrupter: 'Hold on, Alex—Priya was right in the middle of outlining her caching strategy, and I want to hear how she resolved the latency trade-off.'",
+      "The room shifted immediately. It didn't cause a fight; it simply established a norm. Over six months, other engineers began mirroring the habit. Allyship isn't an identity you claim once; it is a muscular habit you practice every single day.",
+    ],
+    keyLearning: "Silence during moments of interpersonal slight is not neutrality—it is consent to the existing hierarchy.",
+  },
+  {
+    id: "story-2",
+    slug: "normalizing-neurodivergent-communication",
+    title: "Redesigning Meeting Norms for Cognitive Diversity",
+    authorName: "Priya Nair",
+    authorRole: "Product Operations Lead",
+    communityContext: "Healthcare Technology Startup",
+    theme: "Neurodiversity & Psychological Safety",
+    publishedDate: "2025-11-04",
+    excerpt: "When half our team burned out from 40 hours of synchronous video calls, we audited our working assumptions and discovered how much talent we were muting.",
+    fullStory: [
+      "I was diagnosed with ADHD in my early thirties, right around the time I stepped into product leadership. In our culture of rapid-fire brainstorming meetings, quick verbal thinkers were constantly lauded as 'brilliant', while those who needed time to process complex documents were often perceived as disengaged or slow.",
+      "Working with our Allyship Circle, we tested a radical shift: 24-hour asynchronous review periods for all major product proposals before any live discussion was scheduled. We banned 'surprise brainstorms' and introduced silent reading blocks at the beginning of meetings.",
+      "The results were transformative. Our autistic and ADHD colleagues submitted our team's highest-quality bug discoveries and architectural edge cases. Our introverted peers reported an 80% decrease in workday exhaustion.",
+      "True inclusion does not ask neurodivergent individuals to mask and conform to 20th-century corporate standards. It redesigns the environment so all cognitive strengths are amplified.",
+    ],
+    keyLearning: "Universal design in communication lowers stress for everyone while unlocking previously suppressed insights.",
+  },
+  {
+    id: "story-3",
+    slug: "first-generation-college-mentorship",
+    title: "Bridging the Hidden Curriculum in Higher Education",
+    authorName: "Carlos Mendoza",
+    authorRole: "Higher Education Fellow & Student Mentor",
+    communityContext: "Civic Coalition for Student Equity",
+    theme: "First-Gen Empowerment",
+    publishedDate: "2025-11-22",
+    excerpt: "Being the first in your family to attend college means learning two languages at once: academic coursework and the unwritten social codes of institutional privilege.",
+    fullStory: [
+      "When I entered college, I had no concept of what 'office hours' were. I assumed going to a professor's office meant you were in trouble. I didn't know that research fellowships, summer internships, and alumni networking events were things you actively petitioned for.",
+      "Through the Youth & Student Empowerment Coalition, I was paired with an ally mentor who had walked that road ten years earlier. Instead of giving me platitudes, she opened up her own Google Docs: showing me cold email templates, how to formulate research grant proposals, and how to discuss financial aid openly without shame.",
+      "Today, I mentor four undergraduate scholars. We don't just talk about career goals; we dismantle imposter syndrome by recognizing that feeling out of place is a natural consequence of navigating a system never built for you.",
+      "When allies share their institutional maps, doors that once felt locked swing open for entire communities.",
+    ],
+    keyLearning: "Demystifying unwritten institutional codes is one of the highest-leverage actions an ally can offer.",
+  },
+];

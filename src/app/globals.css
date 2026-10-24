@@ -1,0 +1,460 @@
+@import "tailwindcss";
+
+@theme {
+  /* Standardized Typography System */
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Newsreader", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+  /* Aliases for backwards compatibility */
+  --font-heading: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Theme-aware colour tokens: utilities resolve to the CSS variables below,
+   which flip under [data-theme="light"]. */
+@theme inline {
+  --color-canvas: var(--t-canvas);
+  --color-surface: var(--t-surface);
+  --color-surface-2: var(--t-surface-2);
+  --color-surface-3: var(--t-surface-3);
+  --color-surface-sunken: var(--t-surface-sunken);
+  --color-content: var(--t-content);
+  --color-content-secondary: var(--t-content-secondary);
+  --color-content-muted: var(--t-content-muted);
+  --color-content-faint: var(--t-content-faint);
+  --color-line: var(--t-line);
+  --color-line-strong: var(--t-line-strong);
+  --color-glass: var(--t-glass);
+  --color-glass-strong: var(--t-glass-strong);
+  --color-accent: var(--t-accent);
+  --color-accent-hover: var(--t-accent-hover);
+  --color-accent-light: var(--t-accent-light);
+  --color-accent-subtle: var(--t-accent-subtle);
+  --color-on-accent: var(--t-on-accent);
+  --color-success: var(--t-success);
+  --color-success-bg: var(--t-success-bg);
+  --color-success-border: var(--t-success-border);
+  --color-on-success: var(--t-on-success);
+  --color-danger: var(--t-danger);
+  --color-danger-bg: var(--t-danger-bg);
+  --color-danger-border: var(--t-danger-border);
+  --color-danger-text: var(--t-danger-text);
+}
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@layer base {
+  :root {
+    /* ═══════════════════════════════════════════
+       ALLYSHIP++ Cinematic Dark Luxury System
+       (Inspired by times-event.de & corporate.airscreamuk.com)
+       ═══════════════════════════════════════════ */
+
+    color-scheme: dark;
+
+    /* Canvas & Surfaces (Dark — default) */
+    --t-canvas: #0A0A0A;
+    --t-surface: #121212;
+    --t-surface-2: #181818;
+    --t-surface-3: #141414;
+    --t-surface-sunken: #0E0E0E;
+
+    /* Typography */
+    --t-content: #FFFFFF;
+    --t-content-secondary: #E4E4E7; /* zinc-200 */
+    --t-content-muted: #9CA3AF;
+    --t-content-faint: #6B7280;
+
+    /* Lines, glass & overlays */
+    --t-line: rgba(255, 255, 255, 0.10);
+    --t-line-strong: rgba(255, 255, 255, 0.20);
+    --t-glass: rgba(255, 255, 255, 0.05);
+    --t-glass-strong: rgba(255, 255, 255, 0.10);
+
+    /* Accent — Pure Executive Champagne Gold */
+    --t-accent: #C5A869;
+    --t-accent-hover: #D4B97B;
+    --t-accent-light: #E8D5A7;
+    --t-accent-subtle: rgba(197, 168, 105, 0.12);
+    --t-on-accent: #0A0A0A;
+
+    /* Semantic states */
+    --t-success: #34D399;
+    --t-success-bg: rgba(16, 185, 129, 0.10);
+    --t-success-border: rgba(16, 185, 129, 0.20);
+    --t-on-success: #0A0A0A;
+
+    --t-danger: #F87171;
+    --t-danger-bg: rgba(127, 29, 29, 0.50);
+    --t-danger-border: #991B1B;
+    --t-danger-text: #FECACA;
+
+    /* Back-compat aliases (component CSS below uses these) */
+    --color-canvas: var(--t-canvas);
+    --color-surface: var(--t-surface);
+    --color-surface-elevated: var(--t-surface-2);
+    --color-surface-sunken: var(--t-surface-sunken);
+    --color-text-primary: var(--t-content);
+    --color-text-secondary: var(--t-content-secondary);
+    --color-text-muted: var(--t-content-muted);
+    --color-text-faint: var(--t-content-faint);
+    --color-accent: var(--t-accent);
+    --color-accent-hover: var(--t-accent-hover);
+    --color-accent-light: var(--t-accent-light);
+    --color-accent-subtle: var(--t-accent-subtle);
+    --color-border: var(--t-line);
+    --color-border-strong: var(--t-line-strong);
+    --color-border-subtle: var(--t-line);
+
+    /* Typography Font Family Tokens */
+    --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+    --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+    --font-serif: "Newsreader", ui-serif, Georgia, serif;
+    --font-heading: var(--font-display);
+    --font-body: var(--font-sans);
+    --font-serif-display: var(--font-serif);
+    --font-outfit: var(--font-display);
+
+    --text-hero: clamp(4rem, 10vw, 8rem);
+    --text-display: clamp(2.5rem, 5vw, 4rem);
+    --text-h1: clamp(2rem, 4vw, 3rem);
+    --text-h2: clamp(1.5rem, 3vw, 2.25rem);
+    --text-h3: clamp(1.25rem, 2vw, 1.5rem);
+    --text-body: 1.0625rem;
+    --text-body-sm: 0.9375rem;
+    --text-caption: 0.8125rem;
+    --text-overline: 0.6875rem;
+
+    /* Spacing Scale */
+    --space-section: clamp(5rem, 10vh, 8rem);
+    --space-block: clamp(2rem, 4vh, 4rem);
+    --space-element: 1.5rem;
+
+    /* Motion */
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+    --duration-fast: 200ms;
+    --duration-normal: 400ms;
+    --duration-slow: 800ms;
+    --duration-reveal: 1000ms;
+
+    /* Radius */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+    --radius-xl: 28px;
+    --radius-full: 9999px;
+  }
+
+  [data-theme="light"] {
+    color-scheme: light;
+
+    --t-canvas: #F7F5F0;
+    --t-surface: #FFFFFF;
+    --t-surface-2: #F1EEE7;
+    --t-surface-3: #E9E4DA;
+    --t-surface-sunken: #EFEAE1;
+
+    --t-content: #0F172A;
+    --t-content-secondary: #334155;
+    --t-content-muted: #64748B;
+    --t-content-faint: #6B7280;
+
+    --t-line: rgba(15, 23, 42, 0.10);
+    --t-line-strong: rgba(15, 23, 42, 0.22);
+    --t-glass: rgba(15, 23, 42, 0.04);
+    --t-glass-strong: rgba(15, 23, 42, 0.08);
+
+    --t-accent: #7E5F24;
+    --t-accent-hover: #6A4F1D;
+    --t-accent-light: #9C7A33;
+    --t-accent-subtle: rgba(126, 95, 36, 0.12);
+    --t-on-accent: #FFFFFF;
+
+    --t-success: #047857;
+    --t-success-bg: rgba(5, 150, 105, 0.08);
+    --t-success-border: rgba(5, 150, 105, 0.25);
+    --t-on-success: #FFFFFF;
+
+    --t-danger: #B91C1C;
+    --t-danger-bg: #FEF2F2;
+    --t-danger-border: #FCA5A5;
+    --t-danger-text: #7F1D1D;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html[data-scroll-behavior="smooth"] {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--t-canvas);
+    color: var(--t-content-secondary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    font-size: var(--text-body);
+    line-height: 1.7;
+    letter-spacing: 0em; /* 0em default to ensure no squished words */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Global paragraph rules: never negative tracking, always readable */
+  p {
+    letter-spacing: 0em;
+    line-height: 1.625; /* leading-relaxed */
+  }
+
+  /* Accessible focus indicators */
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
+  /* Selection */
+  ::selection {
+    background-color: rgba(245, 158, 11, 0.2); /* selection:bg-amber-500/20 */
+    color: inherit;
+  }
+
+  /* Headings global reset */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+}
+
+
+
+/* ═══════════════════════════════════════════
+   THEME SCOPES
+   ═══════════════════════════════════════════ */
+
+/* Keep text light over dark photo overlays in both themes. */
+.on-media {
+  --t-content: #FFFFFF;
+  --t-content-secondary: #E4E4E7;
+  --t-content-muted: #A1A1AA;
+  --t-content-faint: #6B7280;
+  --t-line: rgba(255, 255, 255, 0.10);
+  --t-line-strong: rgba(255, 255, 255, 0.20);
+  --t-glass: rgba(255, 255, 255, 0.05);
+  --t-glass-strong: rgba(255, 255, 255, 0.10);
+  --t-accent: #C5A869;
+  --t-accent-hover: #D4B97B;
+  --t-accent-light: #E8D5A7;
+}
+
+/* Keep a panel dark in both themes (code / terminal visuals). */
+.force-dark {
+  color-scheme: dark;
+  --t-canvas: #0A0A0A;
+  --t-surface: #121212;
+  --t-surface-2: #181818;
+  --t-surface-3: #141414;
+  --t-surface-sunken: #0E0E0E;
+  --t-content: #FFFFFF;
+  --t-content-secondary: #E4E4E7;
+  --t-content-muted: #9CA3AF;
+  --t-content-faint: #6B7280;
+  --t-line: rgba(255, 255, 255, 0.10);
+  --t-line-strong: rgba(255, 255, 255, 0.20);
+  --t-glass: rgba(255, 255, 255, 0.05);
+  --t-glass-strong: rgba(255, 255, 255, 0.10);
+  --t-accent: #C5A869;
+  --t-accent-hover: #D4B97B;
+  --t-accent-light: #E8D5A7;
+  --t-accent-subtle: rgba(197, 168, 105, 0.12);
+  --t-on-accent: #0A0A0A;
+  --t-success: #34D399;
+  --t-success-bg: rgba(16, 185, 129, 0.10);
+  --t-success-border: rgba(16, 185, 129, 0.20);
+  --t-on-success: #0A0A0A;
+}
+
+/* ═══════════════════════════════════════════
+   NAVIGATION
+   ═══════════════════════════════════════════ */
+
+.nav-editorial {
+  background: color-mix(in srgb, var(--t-canvas) 85%, transparent);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid var(--t-line);
+}
+
+
+
+/* ═══════════════════════════════════════════
+   LOGO TICKER STRIP
+   ═══════════════════════════════════════════ */
+
+@keyframes ticker-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.logo-ticker-track {
+  animation: ticker-scroll 30s linear infinite;
+}
+
+.logo-ticker-track:hover {
+  animation-play-state: paused;
+}
+
+/* ═══════════════════════════════════════════
+   KINETIC TYPOGRAPHY & HERO KEYFRAMES
+   ═══════════════════════════════════════════ */
+
+@keyframes charReveal {
+  0% {
+    transform: translateY(110%) rotateZ(2deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) rotateZ(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.animate-char-reveal {
+  animation: charReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-shimmer {
+  animation: shimmer 6s linear infinite;
+}
+
+
+
+
+/* ═══════════════════════════════════════════
+   EDITORIAL TYPOGRAPHY UTILITIES
+   ═══════════════════════════════════════════ */
+
+.text-overline {
+  font-size: var(--text-overline);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+
+
+/* ═══════════════════════════════════════════
+   BUTTONS
+   ═══════════════════════════════════════════ */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.75rem;
+  background-color: var(--t-accent);
+  color: var(--t-on-accent);
+  font-family: var(--font-sans), sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0em;
+  border-radius: var(--radius-full);
+  transition: background-color var(--duration-fast) ease, transform var(--duration-fast) ease;
+  border: 1px solid transparent;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.btn-primary:hover {
+  background-color: var(--t-accent-hover);
+  color: var(--t-on-accent);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background-color: var(--t-surface-3);
+  color: var(--t-content-secondary);
+  font-family: var(--font-sans), sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  letter-spacing: 0em;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--t-line-strong);
+  transition: all var(--duration-fast) ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--t-surface-2);
+  color: var(--t-content);
+  border-color: var(--t-line-strong);
+  transform: translateY(-1px);
+}
+
+
+
+
+/* ═══════════════════════════════════════════
+   SCROLLBAR
+   ═══════════════════════════════════════════ */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-canvas);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-strong);
+  border-radius: 9999px;
+  border: 2px solid var(--color-canvas);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+
+
+/* ═══════════════════════════════════════════
+   REDUCED MOTION
+   ═══════════════════════════════════════════ */
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .logo-ticker-track {
+    animation: none;
+  }
+}

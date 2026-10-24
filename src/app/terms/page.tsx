@@ -1,0 +1,78 @@
+import React from "react";
+import Link from "next/link";
+import { Metadata } from "next";
+import { FileCheck, ArrowLeft } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Terms of Engagement | ALLYSHIP++",
+  description: "Terms governing executive participation in ALLYSHIP++ conclaves and partnership platforms.",
+};
+
+export default function TermsPage() {
+  return (
+    <div className="bg-canvas min-h-screen pt-24 sm:pt-32 pb-12">
+      <div className="max-w-4xl mx-auto px-6 sm:px-8 space-y-10">
+        <div>
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-xs font-bold text-content-muted hover:text-accent transition-colors uppercase tracking-wider font-heading"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            <span>Return to Home</span>
+          </Link>
+        </div>
+
+        <div className="space-y-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-2 text-accent text-xs font-semibold border border-accent/30 font-heading">
+            <FileCheck className="w-3.5 h-3.5" />
+            <span>Governance & Engagement Charter</span>
+          </div>
+          <h1 className="font-heading text-4xl sm:text-5xl font-bold text-content tracking-tight">
+            Terms of Engagement
+          </h1>
+          <p className="text-xs text-content-muted">
+            Effective Date: January 1, 2026 • Siksha &lsquo;O&rsquo; Anusandhan Conclave Secretariat
+          </p>
+        </div>
+
+        <div className="bg-surface rounded-3xl p-8 sm:p-12 border border-line shadow-xl space-y-8 text-sm text-content-secondary leading-relaxed font-normal">
+          <section className="space-y-3">
+            <h2 className="font-heading text-lg font-bold text-content">
+              1. Executive Conclave Participation
+            </h2>
+            <p>
+              Participation in ALLYSHIP++ conclaves across Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai is strictly by invitation or verified executive delegation. Siksha &lsquo;O&rsquo; Anusandhan reserves the right to review and confirm delegation seats based on senior leadership capacity.
+            </p>
+          </section>
+
+          <section className="space-y-3">
+            <h2 className="font-heading text-lg font-bold text-content">
+              2. Centre of Excellence & Incubation Terms
+            </h2>
+            <p>
+              Industry problem statements and proposals for campus Centres of Excellence (such as those established with Tech Mahindra and LTTS at ITER) are governed by bilateral Memoranda of Understanding (MoU) executed between SOA University and the sponsoring corporation.
+            </p>
+          </section>
+
+          <section className="space-y-3">
+            <h2 className="font-heading text-lg font-bold text-content">
+              3. Intellectual Property & Research Output
+            </h2>
+            <p>
+              Collaborative research, patent filings, and prototype development conducted through the AIC-SOA Foundation (Atal Incubation Centre under NITI Aayog) adhere to established institutional intellectual property governance, ensuring shared ownership and fair commercialization frameworks.
+            </p>
+          </section>
+
+          <section className="space-y-3">
+            <h2 className="font-heading text-lg font-bold text-content">
+              4. Code of Conclave Conduct
+            </h2>
+            <p>
+              All delegates, keynote speakers, and panelists commit to maintaining professional respect, constructive dialogue, and genuine allyship, fostering psychological safety for participating young researchers and students.
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+  );
+}
