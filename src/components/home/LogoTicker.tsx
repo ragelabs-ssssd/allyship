@@ -65,7 +65,7 @@ export function LogoTicker() {
 
   return (
     <section className="border-y border-black/10 bg-[#F1EEE7] py-8 overflow-hidden select-none">
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 mb-6">
+      <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 mb-6">
         <p className="text-center font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-[#5B6472]">
           Engaged by Executive Leaders From
         </p>

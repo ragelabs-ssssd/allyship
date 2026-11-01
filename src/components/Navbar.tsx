@@ -63,7 +63,7 @@ export function Navbar() {
             : "bg-gradient-to-b from-canvas/95 via-canvas/70 to-transparent backdrop-blur-[2px]"
         }`}
       >
-        <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
           <div className="flex items-center justify-between h-20 sm:h-22 lg:h-24">
             {/* Logo */}
             <Link
@@ -155,7 +155,7 @@ export function Navbar() {
         {/* Mobile Navigation Drawer */}
         {isMobileMenuOpen && (
           <div id="mobile-navigation" className="lg:hidden border-t border-line bg-canvas/98 backdrop-blur-2xl shadow-2xl">
-            <div className="max-w-[1400px] mx-auto px-6 sm:px-8 py-6 space-y-2">
+            <div className="max-w-[1720px] mx-auto px-6 sm:px-8 xl:px-16 py-6 space-y-2">
               {navLinks.map((link) => {
                 const active = isActive(link.href);
                 return (

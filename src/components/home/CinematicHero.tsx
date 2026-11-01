@@ -102,10 +102,10 @@ export function CinematicHero({ onOpenInvite }: CinematicHeroProps) {
       <div className="absolute top-10 right-1/4 w-[500px] h-[500px] bg-accent-subtle rounded-full blur-3xl pointer-events-none -z-10 opacity-70" />
       <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-[rgba(12,20,38,0.02)] rounded-full blur-2xl pointer-events-none -z-10" />
 
-      <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <div className="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 2xl:gap-24 items-center">
           {/* Left Column: Monumental Headline & Narrative */}
-          <div className="lg:col-span-7 space-y-8">
+          <div className="lg:col-span-6 xl:col-span-6 space-y-8 text-left">
             {/* Dateline & Institutional Kicker */}
             <motion.div
               initial={{ opacity: 0, y: 16 }}
@@ -264,16 +264,16 @@ export function CinematicHero({ onOpenInvite }: CinematicHeroProps) {
             initial={{ opacity: 0, scale: 0.96, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-5 relative"
+            className="lg:col-span-6 xl:col-span-6 relative flex justify-center lg:justify-end"
           >
-            <div className="relative mx-auto max-w-lg lg:max-w-none">
+            <div className="relative w-full max-w-xl lg:max-w-none xl:max-w-[640px] 2xl:max-w-[700px]">
               {/* Photo Frame Container with Dynamic Slideshow */}
               <div
                 className="relative rounded-2xl overflow-hidden shadow-2xl border border-line bg-surface-3 group on-media"
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}
               >
-                <div className="aspect-[4/5] sm:aspect-[3/4] relative overflow-hidden bg-black/80">
+                <div className="aspect-[16/10] sm:aspect-[3/2] relative overflow-hidden bg-black/80">
                   {HERO_SLIDES.map((slide, idx) => {
                     const isActive = idx === heroSlide;
                     return (
@@ -290,7 +290,7 @@ export function CinematicHero({ onOpenInvite }: CinematicHeroProps) {
                           alt={slide.chapter}
                           fill
                           priority={idx === 0}
-                          sizes="(max-width: 1024px) 100vw, 45vw"
+                          sizes="(max-width: 1024px) 100vw, 50vw"
                           className={`object-cover object-center contrast-105 transition-transform duration-1000 ease-out ${
                             isActive ? "scale-105" : "scale-100"
                           }`}
@@ -300,7 +300,7 @@ export function CinematicHero({ onOpenInvite }: CinematicHeroProps) {
                   })}
 
                   {/* Subtle Gradient Vignette Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/50 to-transparent z-20 pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 via-35% to-transparent z-20 pointer-events-none" />
 
                   {/* Accessible Minimalist Progress Bars / Dots */}
                   <div className="absolute top-4 right-4 z-30 flex items-center gap-1 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full border border-line shadow-xl">
@@ -352,7 +352,7 @@ export function CinematicHero({ onOpenInvite }: CinematicHeroProps) {
                 </div>
 
                 {/* Editorial Photo Caption Overlay */}
-                <div className="absolute bottom-0 inset-x-0 p-6 sm:p-8 text-content space-y-2 z-30 pointer-events-none">
+                <div className="absolute bottom-0 inset-x-0 p-5 sm:p-6 lg:p-7 text-content space-y-1.5 sm:space-y-2 z-30 pointer-events-none">
                   <div className="flex items-center gap-2">
                     <span className="inline-block w-2.5 h-2.5 rounded-full bg-accent animate-pulse" />
                     <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
@@ -366,12 +366,12 @@ export function CinematicHero({ onOpenInvite }: CinematicHeroProps) {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -6 }}
                       transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-                      className="space-y-1.5"
+                      className="space-y-1"
                     >
-                      <h3 className="font-display text-2xl font-bold text-content tracking-normal leading-snug">
+                      <h3 className="font-display text-xl sm:text-2xl font-bold text-content tracking-normal leading-snug">
                         {HERO_SLIDES[heroSlide].chapter}
                       </h3>
-                      <p className="font-sans text-sm text-content-secondary leading-relaxed line-clamp-3">
+                      <p className="font-sans text-xs sm:text-sm text-content-secondary leading-relaxed line-clamp-2">
                         {HERO_SLIDES[heroSlide].description}
                       </p>
                     </motion.div>
@@ -380,15 +380,15 @@ export function CinematicHero({ onOpenInvite }: CinematicHeroProps) {
               </div>
 
               {/* Decorative Luxury Gold Borders */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 border-t-2 border-r-2 border-accent rounded-tr-xl pointer-events-none opacity-60 hidden sm:block" />
-              <div className="absolute -bottom-4 -left-4 w-24 h-24 border-b-2 border-l-2 border-accent rounded-bl-xl pointer-events-none opacity-60 hidden sm:block" />
+              <div className="absolute -top-3 -right-3 w-20 h-20 border-t-2 border-r-2 border-accent rounded-tr-xl pointer-events-none opacity-60 hidden sm:block" />
+              <div className="absolute -bottom-3 -left-3 w-20 h-20 border-b-2 border-l-2 border-accent rounded-bl-xl pointer-events-none opacity-60 hidden sm:block" />
 
               {/* Floating Stat Badge */}
               <motion.div
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="absolute -bottom-6 -right-3 sm:-right-6 bg-surface-2/95 backdrop-blur-md px-5 py-3.5 rounded-xl border border-line shadow-2xl hidden sm:flex items-center gap-3.5 z-20"
+                className="absolute -bottom-4 -right-2 sm:-right-4 bg-surface-2/95 backdrop-blur-md px-4 py-3 rounded-xl border border-line shadow-2xl hidden sm:flex items-center gap-3 z-20"
               >
                 <div className="w-10 h-10 rounded-full bg-accent-subtle border border-accent/30 flex items-center justify-center font-display font-bold text-base text-accent">
                   6+
