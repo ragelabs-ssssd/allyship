@@ -78,11 +78,17 @@ export function Navbar() {
                 />
               </div>
               <div className="flex flex-col justify-center">
-                <span className="font-display text-lg font-extrabold tracking-tight text-content flex items-center leading-none">
-                  ALLYSHIP<span className="text-accent ml-0.5 text-[1.15em] font-extrabold drop-shadow-[0_0_12px_rgba(201,169,110,0.45)]">++</span>
+                <span className="font-display text-lg font-extrabold tracking-tight text-content leading-none inline-flex items-start">
+                  ALLYSHIP
+                  <span className="text-accent text-[0.62em] font-bold ml-0.5 -mt-0.5 drop-shadow-[0_0_10px_rgba(201,169,110,0.45)]">
+                    ++
+                  </span>
                 </span>
                 <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.18em] text-accent mt-1 opacity-90 group-hover:opacity-100 group-hover:text-content transition-all duration-300">
                   Siksha &lsquo;O&rsquo; Anusandhan
+                </span>
+                <span className="font-sans text-[9px] font-medium tracking-[0.04em] text-content/90 group-hover:text-content mt-0.5 transition-colors">
+                  (Deemed to be University)
                 </span>
               </div>
             </Link>

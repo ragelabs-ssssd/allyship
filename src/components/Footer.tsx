@@ -46,11 +46,17 @@ export function Footer() {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="font-display text-lg font-extrabold tracking-tight text-content leading-none">
-                  ALLYSHIP<span className="text-accent">++</span>
+                <span className="font-display text-lg font-extrabold tracking-tight text-content leading-none inline-flex items-start">
+                  ALLYSHIP
+                  <span className="text-accent text-[0.62em] font-bold ml-0.5 -mt-0.5">
+                    ++
+                  </span>
                 </span>
                 <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.18em] text-accent mt-1">
-                  Siksha &lsquo;O&rsquo; Anusandhan (SOA)
+                  Siksha &lsquo;O&rsquo; Anusandhan
+                </span>
+                <span className="font-sans text-[9px] font-medium tracking-[0.04em] text-content/90 mt-0.5">
+                  (Deemed to be University)
                 </span>
               </div>
             </Link>
