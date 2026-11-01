@@ -101,49 +101,42 @@ const nirfRankings2025 = [
     category: "University Category",
     subtext: "Ranked #1 in Odisha",
     highlight: "Top 15 Nationally",
-    color: "from-amber-500/20 to-accent/30 border-accent/40 text-accent",
   },
   {
     rank: "22nd",
     category: "Engineering Category",
     subtext: "ITER Faculty of Engineering",
     highlight: "Ahead of Top IITs/NITs",
-    color: "from-blue-500/20 to-sky-500/30 border-sky-500/40 text-sky-400",
   },
   {
     rank: "15th",
     category: "Medical Category",
     subtext: "IMS & SUM Hospital",
     highlight: "Climbed 6 Ranks",
-    color: "from-emerald-500/20 to-teal-500/30 border-emerald-500/40 text-emerald-400",
   },
   {
     rank: "9th",
     category: "Dental Category",
     subtext: "Institute of Dental Sciences",
     highlight: "Top 10 in India",
-    color: "from-amber-500/20 to-orange-500/30 border-orange-500/40 text-amber-400",
   },
   {
     rank: "10th",
     category: "Law Category",
     subtext: "SOA National Institute of Law",
     highlight: "Top 10 Nationally",
-    color: "from-purple-500/20 to-indigo-500/30 border-purple-500/40 text-purple-400",
   },
   {
     rank: "66th",
     category: "Management Category",
     subtext: "IBCS Faculty of Management",
     highlight: "#1 in Odisha (Business)",
-    color: "from-rose-500/20 to-pink-500/30 border-rose-500/40 text-rose-400",
   },
   {
     rank: "25th",
     category: "Overall Category",
     subtext: "Across All Indian Institutions",
     highlight: "Consistently in Top 25",
-    color: "from-accent/30 to-amber-600/30 border-accent/60 text-accent",
   },
 ];
 
@@ -440,12 +433,12 @@ export default function DiscoverSoaPage() {
           </p>
         </div>
 
-        {/* 7 Pentagon/Shield Cards */}
+        {/* 7 Clean Uniform Cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 sm:gap-6">
           {nirfRankings2025.map((item, idx) => (
             <div
               key={item.category}
-              className={`relative rounded-2xl p-5 sm:p-6 bg-gradient-to-b ${item.color} bg-surface-2 border backdrop-blur-md shadow-lg flex flex-col items-center justify-between text-center transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl group ${
+              className={`relative rounded-2xl p-5 sm:p-6 bg-surface-2 border border-line hover:border-accent/80 transition-all duration-300 hover:-translate-y-1.5 shadow-md hover:shadow-2xl flex flex-col items-center justify-between text-center group ${
                 idx === 6 ? "col-span-2 md:col-span-4 lg:col-span-1" : ""
               }`}
             >
@@ -456,7 +449,7 @@ export default function DiscoverSoaPage() {
 
               {/* Prominent Gold Ranking Number */}
               <div className="my-4 space-y-1">
-                <span className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-content drop-shadow-sm group-hover:scale-105 transition-transform inline-block">
+                <span className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-content group-hover:text-accent transition-colors drop-shadow-sm inline-block">
                   {item.rank}
                 </span>
                 <span className="block text-[11px] font-semibold text-accent uppercase tracking-wider">
