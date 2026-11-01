@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { ArrowRight, ChevronDown, ChevronLeft, ChevronRight, Sparkles, MapPin } from "lucide-react";
+import { ChevronDown, ChevronLeft, ChevronRight, MapPin } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HeroBackdrop } from "@/components/HeroBackdrop";
 
@@ -113,11 +113,8 @@ export function CinematicHero({ onOpenInvite }: CinematicHeroProps) {
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className="flex items-center gap-3 flex-wrap"
             >
-              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-2 border border-accent/30 shadow-sm font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
-                <Sparkles className="w-3.5 h-3.5 text-accent" />
+              <span className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-surface-2 border border-accent/30 shadow-sm font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
                 <span>Siksha &lsquo;O&rsquo; Anusandhan Leadership Series</span>
-                <span className="text-content-faint">|</span>
-                <span className="text-content-secondary">Chapters 1.0 &amp; 2.0</span>
               </span>
             </motion.div>
 
