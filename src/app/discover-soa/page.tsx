@@ -2,19 +2,14 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import {
   Play,
   ArrowRight,
   GraduationCap,
-  Users,
   Award,
-  BookOpen,
   Globe,
-  Building,
+  Building2,
   Trophy,
-  FileText,
-  Rocket,
   CheckCircle2,
   Sparkles,
   X,
@@ -23,9 +18,16 @@ import {
   Scale,
   Briefcase,
   FlaskConical,
-  Camera,
   ShieldCheck,
   TrendingUp,
+  Maximize2,
+  Check,
+  FileCheck2,
+  Landmark,
+  HeartPulse,
+  Heart,
+  ChevronRight,
+  ExternalLink,
 } from "lucide-react";
 import { GetInvitedModal } from "@/components/GetInvitedModal";
 import { HeroBackdrop } from "@/components/HeroBackdrop";
@@ -53,10 +55,278 @@ const universityHeroImages = [
   },
 ];
 
+// Official Presentation Slides
+const presentationSlides = [
+  {
+    id: "nirf",
+    title: "NIRF India Rankings 2025",
+    subtitle: "Ministry of Education, Govt. of India",
+    src: "/discover/nirf-rankings-2025.jpg",
+    badge: "National Standing",
+  },
+  {
+    id: "qs-the",
+    title: "QS & THE World Rankings",
+    subtitle: "Global Benchmarks & Swachhata Accolades",
+    src: "/discover/qs-the-other-rankings.jpg",
+    badge: "International Impact",
+  },
+  {
+    id: "recognitions",
+    title: "Other Major Recognitions",
+    subtitle: "UGC Graded Autonomy, DSIR, Cochrane & ISO",
+    src: "/discover/major-recognitions.jpg",
+    badge: "Regulatory Authority",
+  },
+  {
+    id: "accreditations",
+    title: "Accreditations",
+    subtitle: "NAAC A++, NBA, ICAR, NABH & NABL",
+    src: "/discover/accreditations.jpg",
+    badge: "Quality Certifications",
+  },
+  {
+    id: "growth",
+    title: "Evolution & Growth",
+    subtitle: "13 Constituent Institutes & 18 Research Centres",
+    src: "/discover/evolution-growth.jpg",
+    badge: "30-Year Milestones",
+  },
+];
+
+// 1. NIRF Rankings 2025 Data
+const nirfRankings2025 = [
+  {
+    rank: "15th",
+    category: "University Category",
+    subtext: "Ranked #1 in Odisha",
+    highlight: "Top 15 Nationally",
+    color: "from-amber-500/20 to-accent/30 border-accent/40 text-accent",
+  },
+  {
+    rank: "22nd",
+    category: "Engineering Category",
+    subtext: "ITER Faculty of Engineering",
+    highlight: "Ahead of Top IITs/NITs",
+    color: "from-blue-500/20 to-sky-500/30 border-sky-500/40 text-sky-400",
+  },
+  {
+    rank: "15th",
+    category: "Medical Category",
+    subtext: "IMS & SUM Hospital",
+    highlight: "Climbed 6 Ranks",
+    color: "from-emerald-500/20 to-teal-500/30 border-emerald-500/40 text-emerald-400",
+  },
+  {
+    rank: "9th",
+    category: "Dental Category",
+    subtext: "Institute of Dental Sciences",
+    highlight: "Top 10 in India",
+    color: "from-amber-500/20 to-orange-500/30 border-orange-500/40 text-amber-400",
+  },
+  {
+    rank: "10th",
+    category: "Law Category",
+    subtext: "SOA National Institute of Law",
+    highlight: "Top 10 Nationally",
+    color: "from-purple-500/20 to-indigo-500/30 border-purple-500/40 text-purple-400",
+  },
+  {
+    rank: "66th",
+    category: "Management Category",
+    subtext: "IBCS Faculty of Management",
+    highlight: "#1 in Odisha (Business)",
+    color: "from-rose-500/20 to-pink-500/30 border-rose-500/40 text-rose-400",
+  },
+  {
+    rank: "25th",
+    category: "Overall Category",
+    subtext: "Across All Indian Institutions",
+    highlight: "Consistently in Top 25",
+    color: "from-accent/30 to-amber-600/30 border-accent/60 text-accent",
+  },
+];
+
+// 2. Global QS & THE Rankings Data
+const qsRankings = [
+  { metric: "QS World Rankings", value: "1201–1400" },
+  { metric: "QS Asia Rankings", value: "332" },
+  { metric: "QS Southern Asia Rankings", value: "80" },
+  { metric: "Computer Science & Info Systems", value: "751–850" },
+  { metric: "Engineering & Technology", value: "401–450" },
+  { metric: "Medicine", value: "701–850" },
+  { metric: "Social Sciences & Management", value: "451–500" },
+];
+
+const theRankings = [
+  { metric: "THE World University Rankings", value: "801–1000" },
+  { metric: "THE World Reputational Rankings", value: "201–300" },
+  { metric: "THE Asia University Rankings", value: "251–300" },
+  { metric: "Engineering & Technology", value: "501–600" },
+  { metric: "Computer Science", value: "801–1000" },
+  { metric: "Medical & Health Sciences", value: "601–800" },
+  { metric: "Young University", value: "201–250" },
+];
+
+// 3. Accreditations
+const accreditationsList = [
+  {
+    title: "NAAC Accredited with Grade ‘A++’",
+    sub: "3rd Cycle · CGPA 3.88",
+    body: "Highest possible grade awarded by the National Assessment and Accreditation Council for institutional excellence.",
+    tag: "NAAC A++",
+  },
+  {
+    title: "NBA Accredited Programmes",
+    sub: "National Board of Accreditation",
+    body: "Engineering, Hospitality Management, Management & Pharmacy Programmes rigorously accredited for quality.",
+    tag: "NBA Tier-1",
+  },
+  {
+    title: "Accredited by ICAR",
+    sub: "Indian Council of Agricultural Research",
+    body: "Recognized agricultural programs fostering regional crop resilience, modern agronomy, and rural livelihoods.",
+    tag: "ICAR Approved",
+  },
+  {
+    title: "NABH Accredited Hospital",
+    sub: "IMS & SUM Hospital",
+    body: "National Accreditation Board for Hospitals & Healthcare Providers certification for patient safety and clinical excellence.",
+    tag: "NABH Hospital",
+  },
+  {
+    title: "International Accreditation Organisation",
+    sub: "IAO Global Certification",
+    body: "Global verification ensuring curriculum delivery meets international quality, pedagogy, and faculty standards.",
+    tag: "IAO Certified",
+  },
+  {
+    title: "NABL Accredited Medical Laboratories",
+    sub: "National Accreditation Board for Testing Labs",
+    body: "Certified diagnostic testing and clinical reference laboratories upholding gold-standard precision.",
+    tag: "NABL Laboratories",
+  },
+];
+
+// 4. Other Major Recognitions
+const majorRecognitionsList = [
+  {
+    title: "Category-I Graded Autonomy Status",
+    authority: "UGC (University Grants Commission)",
+    desc: "Granted highest level of academic and operational freedom by Ministry of Education, Govt. of India.",
+    pill: "UGC Category-I",
+  },
+  {
+    title: "UGC 12(B) Status",
+    authority: "University Grants Commission",
+    desc: "Declared fit to receive central assistance and research grants under Section 12(B) of the UGC Act.",
+    pill: "UGC 12(B)",
+  },
+  {
+    title: "DSIR (SIRO) Recognized",
+    authority: "Dept. of Science & Technology, Govt. of India",
+    desc: "Formally recognized as a Scientific and Industrial Research Organization (SIRO) driving indigenous innovation.",
+    pill: "DSIR / SIRO",
+  },
+  {
+    title: "QS I-GAUGE E-LEAD Certified",
+    authority: "QS I-GAUGE",
+    desc: "E-Learning Excellence for Academic Digitization certified for world-class hybrid digital infrastructure.",
+    pill: "E-LEAD Certified",
+  },
+  {
+    title: "COCHRANE (UK) Affiliated Centre",
+    authority: "Cochrane Global Network",
+    desc: "International network producing high-quality systematic medical evidence and clinical health syntheses.",
+    pill: "Cochrane Centre",
+  },
+  {
+    title: "ISO 9001 : 2015 Certified",
+    authority: "United Registrar of Systems (URS)",
+    desc: "Certified Quality Management System across higher education, healthcare delivery, and administrative services.",
+    pill: "ISO 9001:2015",
+  },
+];
+
+// 5. Evolution & Growth Timeline
+const growthTimeline = [
+  {
+    year: "1996–97",
+    title: "Engineering & Technology",
+    faculty: "ITER (Institute of Technical Education and Research)",
+    desc: "Founding faculty that pioneered technical education in Eastern India; now NIRF #22 nationally.",
+    side: "left",
+  },
+  {
+    year: "1997–98",
+    title: "Management Sciences",
+    faculty: "IBCS (Institute of Business and Computer Studies)",
+    desc: "Established premier corporate management and business analytics education in Odisha.",
+    side: "left",
+  },
+  {
+    year: "2004–05",
+    title: "Nursing | Hotel Management | Pharmacy",
+    faculty: "SNC · SHM · SPS",
+    desc: "Triple expansion into professional healthcare, hospitality management, and pharmaceutical chemistry.",
+    side: "left",
+  },
+  {
+    year: "2006–07",
+    title: "Dental Sciences",
+    faculty: "IDS (Institute of Dental Sciences)",
+    desc: "Ranked #9 in India by NIRF 2025; premier multi-chair dental surgery and maxillofacial center.",
+    side: "left",
+  },
+  {
+    year: "2007–08",
+    title: "Medical Sciences",
+    faculty: "IMS & SUM Hospital",
+    desc: "Super-specialty medical college and hospital ranked #15 nationally with 2,000+ clinical beds.",
+    side: "left",
+  },
+  {
+    year: "2011–12",
+    title: "Legal Studies",
+    faculty: "SNIL (SOA National Institute of Law)",
+    desc: "Consistently ranked in India's Top 10 Law Schools (#10 in NIRF 2025) with high court judicial clerkships.",
+    side: "right",
+  },
+  {
+    year: "2013–14",
+    title: "Agricultural Sciences",
+    faculty: "Institute of Agricultural Sciences (IAS)",
+    desc: "ICAR-accredited agricultural research training next-generation agronomists and climate scientists.",
+    side: "right",
+  },
+  {
+    year: "2022–23",
+    title: "Veterinary Sciences",
+    faculty: "Institute of Veterinary Sciences & Animal Husbandry",
+    desc: "Modern clinical animal hospital and research facility serving veterinary care and livestock science.",
+    side: "right",
+  },
+  {
+    year: "2024–25",
+    title: "Medical Sciences - II | Nursing Sciences - II",
+    faculty: "SUM Hospital Campus 2 & College of Nursing 2",
+    desc: "Major healthcare expansion adding specialized regional referral capacity and advanced patient wings.",
+    side: "right",
+  },
+  {
+    year: "2025–26",
+    title: "Pharmaceutical Sciences - II",
+    faculty: "School of Pharmaceutical Sciences (Phase II)",
+    desc: "Cutting-edge biopharmaceutical R&D facility focusing on drug discovery, genomics, and clinical pharmacology.",
+    side: "right",
+  },
+];
+
 export default function DiscoverSoaPage() {
   const [isInviteOpen, setIsInviteOpen] = useState(false);
   const [isTourOpen, setIsTourOpen] = useState(false);
   const [heroSlide, setHeroSlide] = useState(0);
+  const [selectedSlide, setSelectedSlide] = useState<string | null>(null);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -65,77 +335,12 @@ export default function DiscoverSoaPage() {
     return () => clearInterval(timer);
   }, []);
 
-  const heroCounters = [
-    { value: "15th", label: "NIRF 2025, University Category (Score: 63.14 · #1 in Odisha)" },
-    { value: "25th", label: "NIRF 2025, Overall Category (Top 25 since 2016)" },
-    { value: "A++", label: "NAAC Accredited (CGPA 3.88) · UGC Category-I Graded Autonomy" },
-    { value: "Top 4", label: "In India, THE World Reputation Rankings 2025" },
-    { value: "3rd", label: "Swachh Campus Ranking Nationally" },
-  ];
-
-  const constituentFaculties = [
-    {
-      name: "Institute of Medical Sciences (IMS) & SUM Hospital",
-      tag: "Medical Sciences",
-      icon: Stethoscope,
-      standing: "15th in Medical, NIRF 2025 (Climbed 6 spots) · 701–850 Globally in QS Medicine",
-      desc: "NABH and NABL accredited super-specialty hospital and medical college. Ranked 601–800 in THE 2026, delivering 100% MBBS and MD/MS graduate clinical absorption across leading national healthcare networks.",
-      metric: "100% Clinical Placement",
-      highlight: "NABH & NABL Accredited",
-    },
-    {
-      name: "Institute of Technical Education and Research (ITER)",
-      tag: "Engineering & Technology",
-      icon: Cpu,
-      standing: "22nd in Engineering, NIRF 2025 (Up 4 spots) · 2nd in India in Times Engineering 2025 & 2026",
-      desc: "SOA’s premier engineering faculty ranked ahead of Amrita (#23), Jamia Millia (#24), and IIT Gandhinagar (#25). Hosts state-of-the-art Centres of Excellence with Tech Mahindra and LTTS with a 94.54% B.Tech placement rate.",
-      metric: "94.54% B.Tech Placement",
-      highlight: "₹46 LPA Peak Package",
-    },
-    {
-      name: "Institute of Dental Sciences (IDS)",
-      tag: "Dental Sciences",
-      icon: Award,
-      standing: "9th in India in Dental, NIRF 2025 · #1 in Odisha",
-      desc: "Consistently held a Top 10 national ranking for three consecutive years (2023, 2024, 2025). Features multi-chair specialized clinical labs and 95.52% BDS & MDS graduate placement velocity.",
-      metric: "95.52% Placement Rate",
-      highlight: "Ranked 9th Nationally",
-    },
-    {
-      name: "SOA National Institute of Law (SNIL)",
-      tag: "Legal Studies",
-      icon: Scale,
-      standing: "10th in India in Law, NIRF 2025 · #1 in Odisha",
-      desc: "Consistently ranked among the nation's Top 10 law schools. Features advanced moot court infrastructure, distinguished legal research chairs, and strong judicial clerkship placements across India.",
-      metric: "Top 10 in India",
-      highlight: "#1 Law School in Odisha",
-    },
-    {
-      name: "Institute of Business and Computer Studies (IBCS)",
-      tag: "Management & Computing",
-      icon: Briefcase,
-      standing: "25th in Business & Management Studies (#1 in Odisha) · 66th in MBA/PGDM, NIRF 2025",
-      desc: "Faculty of management education achieving 97.22% MBA placement rate. Strategic corporate recruiter relationships with Deloitte, EY, KPMG, PwC, ICICI, HDFC, and Reliance Industries.",
-      metric: "97.22% MBA Placement",
-      highlight: "#1 in Odisha (Business Studies)",
-    },
-    {
-      name: "Multi-Disciplinary Research & Global Footprint",
-      tag: "Research & Innovation",
-      icon: FlaskConical,
-      standing: "49th in Research, NIRF 2025 · 251–300 Globally in Science (THE 2026)",
-      desc: "Featuring 38 SOA researchers recognized in Stanford University’s World’s Top 2% Scientists list. Home to the AIC-SOA Foundation (Atal Incubation Centre under NITI Aayog) and scholars from 15+ countries.",
-      metric: "38 Stanford Top 2% Scientists",
-      highlight: "AIC-SOA Incubation Centre",
-    },
-  ];
-
   return (
     <div className="flex flex-col w-full bg-canvas text-content pb-0">
       {/* 1. EDITORIAL LUXE HERO SECTION */}
       <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 border-b border-line overflow-hidden">
         <HeroBackdrop />
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase">
@@ -149,11 +354,11 @@ export default function DiscoverSoaPage() {
               </h1>
 
               <p className="text-xl sm:text-2xl font-display text-content-muted italic">
-                Ranked 15th Nationally. A Premier Multi-Faculty Research Powerhouse.
+                Ranked 15th Nationally · NAAC A++ (CGPA 3.88) · UGC Category-I Graded Autonomy
               </p>
 
               <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal">
-                Siksha &lsquo;O&rsquo; Anusandhan (SOA) is recognized among India&apos;s top four institutions in the Times Higher Education World Reputation Rankings 2025—fostering 30,000+ students, 38 Stanford Top 2% scientists, and industry-embedded Centres of Excellence.
+                Siksha &lsquo;O&rsquo; Anusandhan (SOA) is recognized among India&apos;s leading institutions across NIRF, QS, and Times Higher Education—spanning 13 constituent institutes, 18 research centres, 30,000+ students, and 38 Stanford Top 2% scientists across a 127-acre campus.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
@@ -181,7 +386,7 @@ export default function DiscoverSoaPage() {
 
             <div className="lg:col-span-5 relative">
               <div className="relative rounded-3xl overflow-hidden bg-surface p-2.5 border border-line shadow-xl">
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-surface-3 on-media">
+                <div className="relative aspect-[16/11] sm:aspect-[4/3] rounded-2xl overflow-hidden bg-surface-3 on-media">
                   {universityHeroImages.map((slide, idx) => (
                     <div
                       key={slide.src}
@@ -199,7 +404,7 @@ export default function DiscoverSoaPage() {
                       />
                     </div>
                   ))}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-5 text-content">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-5 text-content">
                     <span className="text-[11px] font-bold font-heading text-[#E8D5A7] uppercase tracking-wider">
                       Khandagiri Square, Bhubaneswar
                     </span>
@@ -220,97 +425,501 @@ export default function DiscoverSoaPage() {
         </div>
       </section>
 
-      {/* 2. STAT COUNTERS */}
-      <section className="bg-surface border-b border-line py-10 px-6 sm:px-8 lg:px-12">
-        <div className="max-w-[1400px] mx-auto grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
-          {heroCounters.map((c) => (
-            <div key={c.label} className="p-5 flex flex-col items-center justify-center bg-surface-2 rounded-2xl border border-line">
-              <div className="text-3xl sm:text-4xl font-bold text-content tracking-tight">
-                {c.value}
+      {/* 2. NIRF INDIA RANKINGS - 2025 SECTION (Screenshot 1) */}
+      <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
+        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent/10 border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase">
+            <Trophy className="w-3.5 h-3.5" />
+            <span>Ministry of Education · Govt. of India</span>
+          </div>
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-content tracking-tight">
+            NIRF India Rankings — 2025
+          </h2>
+          <p className="text-base sm:text-lg text-accent font-semibold tracking-wide">
+            Consistently ranked at Top 25 Universities in all editions of NIRF.
+          </p>
+        </div>
+
+        {/* 7 Pentagon/Shield Cards */}
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 sm:gap-6">
+          {nirfRankings2025.map((item, idx) => (
+            <div
+              key={item.category}
+              className={`relative rounded-2xl p-5 sm:p-6 bg-gradient-to-b ${item.color} bg-surface-2 border backdrop-blur-md shadow-lg flex flex-col items-center justify-between text-center transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl group ${
+                idx === 6 ? "col-span-2 md:col-span-4 lg:col-span-1" : ""
+              }`}
+            >
+              <div className="w-full flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-content-muted">
+                <span>Rank</span>
+                <span className="text-accent font-mono font-bold">2025</span>
               </div>
-              <div className="text-xs text-content-muted font-medium mt-1.5 leading-snug">
-                {c.label}
+
+              {/* Prominent Gold Ranking Number */}
+              <div className="my-4 space-y-1">
+                <span className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-content drop-shadow-sm group-hover:scale-105 transition-transform inline-block">
+                  {item.rank}
+                </span>
+                <span className="block text-[11px] font-semibold text-accent uppercase tracking-wider">
+                  {item.highlight}
+                </span>
+              </div>
+
+              {/* Category Label */}
+              <div className="pt-3 border-t border-line/60 w-full space-y-1">
+                <h3 className="font-heading text-xs sm:text-sm font-bold text-content leading-snug">
+                  {item.category}
+                </h3>
+                <p className="text-[10px] text-content-muted line-clamp-1">
+                  {item.subtext}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* NIRF Benchmark Callout */}
+        <div className="mt-8 p-4 sm:p-6 rounded-2xl bg-surface-2 border border-line flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-xl bg-accent-subtle border border-accent/40 text-accent flex items-center justify-center shrink-0">
+              <Award className="w-5 h-5" />
+            </div>
+            <div>
+              <p className="font-heading text-sm font-bold text-content">
+                National Institutional Ranking Framework (NIRF)
+              </p>
+              <p className="text-xs text-content-muted">
+                Evaluated across Teaching, Learning & Resources, Research, Graduation Outcomes, Outreach, and Perception.
+              </p>
+            </div>
+          </div>
+          <button
+            type="button"
+            onClick={() => setSelectedSlide("/discover/nirf-rankings-2025.jpg")}
+            className="text-xs font-semibold text-accent hover:text-content inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-surface border border-line hover:border-accent transition-all shrink-0"
+          >
+            <span>View Official NIRF Slide</span>
+            <Maximize2 className="w-3.5 h-3.5" />
+          </button>
+        </div>
+      </section>
+
+      {/* 3. OTHER RANKINGS SECTION: QS & THE + SWACHHATA (Screenshot 2) */}
+      <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line bg-surface/50">
+        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
+            Global Benchmarking & Accolades
+          </span>
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-content tracking-tight">
+            International Rankings & Global Standing
+          </h2>
+          <p className="text-base text-content-muted leading-relaxed">
+            Ranked among the premier institutions in the world by Quacquarelli Symonds (QS) and Times Higher Education (THE).
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+          {/* QS World University Rankings Card */}
+          <div className="rounded-3xl p-8 bg-surface-2 border border-line hover:border-accent/60 transition-all shadow-xl space-y-6 flex flex-col justify-between">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between pb-4 border-b border-line">
+                <div>
+                  <span className="text-[11px] font-bold font-heading uppercase tracking-widest text-[#E8D5A7]">
+                    Quacquarelli Symonds
+                  </span>
+                  <h3 className="font-heading text-xl sm:text-2xl font-bold text-content mt-0.5">
+                    QS World University Rankings
+                  </h3>
+                </div>
+                <span className="px-3 py-1 rounded-full bg-accent/15 border border-accent/40 text-accent font-bold text-xs">
+                  Global
+                </span>
+              </div>
+
+              <div className="divide-y divide-line/60">
+                {qsRankings.map((r) => (
+                  <div key={r.metric} className="py-3 flex items-center justify-between text-xs sm:text-sm">
+                    <span className="text-content-secondary font-medium">{r.metric}</span>
+                    <span className="text-accent font-mono font-bold text-sm sm:text-base">
+                      {r.value}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="pt-4 border-t border-line flex items-center justify-between text-xs text-content-muted">
+              <span>Verified QS Intelligence Unit Data</span>
+              <span className="text-accent font-semibold">Ranked #80 in Southern Asia</span>
+            </div>
+          </div>
+
+          {/* THE World University Rankings Card */}
+          <div className="rounded-3xl p-8 bg-surface-2 border border-line hover:border-accent/60 transition-all shadow-xl space-y-6 flex flex-col justify-between">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between pb-4 border-b border-line">
+                <div>
+                  <span className="text-[11px] font-bold font-heading uppercase tracking-widest text-[#E8D5A7]">
+                    Times Higher Education
+                  </span>
+                  <h3 className="font-heading text-xl sm:text-2xl font-bold text-content mt-0.5">
+                    THE World University Rankings
+                  </h3>
+                </div>
+                <span className="px-3 py-1 rounded-full bg-accent/15 border border-accent/40 text-accent font-bold text-xs">
+                  Global
+                </span>
+              </div>
+
+              <div className="divide-y divide-line/60">
+                {theRankings.map((r) => (
+                  <div key={r.metric} className="py-3 flex items-center justify-between text-xs sm:text-sm">
+                    <span className="text-content-secondary font-medium">{r.metric}</span>
+                    <span className="text-accent font-mono font-bold text-sm sm:text-base">
+                      {r.value}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="pt-4 border-t border-line flex items-center justify-between text-xs text-content-muted">
+              <span>Top 4 in India in World Reputation Rankings</span>
+              <span className="text-accent font-semibold">201–300 Reputational</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Swachhata & QS I-GAUGE Row */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+          <div className="p-6 rounded-2xl bg-surface-2 border border-line flex items-center gap-5">
+            <div className="w-14 h-14 rounded-2xl bg-accent-subtle border border-accent/40 text-accent flex items-center justify-center shrink-0">
+              <Landmark className="w-7 h-7" />
+            </div>
+            <div className="space-y-1">
+              <span className="text-[10px] font-bold font-heading uppercase tracking-wider text-accent">
+                MHRD · Government of India
+              </span>
+              <h4 className="font-heading text-base font-bold text-content">
+                Swachhata India Rankings
+              </h4>
+              <p className="text-xs text-content-secondary">
+                Ranked <strong>3rd in 2018</strong> (Technical Institution category) &amp; <strong>5th in 2019</strong> (Residential University category).
+              </p>
+            </div>
+          </div>
+
+          <div className="p-6 rounded-2xl bg-surface-2 border border-line flex items-center gap-5">
+            <div className="w-14 h-14 rounded-2xl bg-accent-subtle border border-accent/40 text-accent flex items-center justify-center shrink-0 font-bold text-xl">
+              💎
+            </div>
+            <div className="space-y-1">
+              <span className="text-[10px] font-bold font-heading uppercase tracking-wider text-accent">
+                QS I-GAUGE Indian University Rating
+              </span>
+              <h4 className="font-heading text-base font-bold text-content">
+                Diamond Rated University
+              </h4>
+              <p className="text-xs text-content-secondary">
+                Conferred the prestigious <strong>Diamond Rating</strong> for excellence across teaching, facilities, governance, and graduate employability.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. ACCREDITATIONS & MAJOR RECOGNITIONS (Screenshots 3 & 4) */}
+      <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line">
+        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
+            National & International Certifications
+          </span>
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-content tracking-tight">
+            Accreditations & Major Recognitions
+          </h2>
+          <p className="text-base text-content-muted leading-relaxed">
+            Validated by national statutory authorities, healthcare boards, laboratory accreditors, and global standards bodies.
+          </p>
+        </div>
+
+        {/* Group A: Accreditations (6 Cards) */}
+        <div className="mb-14 space-y-6">
+          <div className="flex items-center justify-between pb-3 border-b border-line">
+            <div className="flex items-center gap-2.5">
+              <ShieldCheck className="w-5 h-5 text-accent" />
+              <h3 className="font-heading text-xl font-bold text-content">
+                Premier Accreditations
+              </h3>
+            </div>
+            <button
+              type="button"
+              onClick={() => setSelectedSlide("/discover/accreditations.jpg")}
+              className="text-xs font-semibold text-accent hover:text-content inline-flex items-center gap-1"
+            >
+              <span>View Accreditations Slide</span>
+              <Maximize2 className="w-3.5 h-3.5" />
+            </button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {accreditationsList.map((item) => (
+              <div
+                key={item.title}
+                className="p-6 rounded-2xl bg-surface-2 border border-line hover:border-accent transition-all space-y-3 group"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-bold font-heading uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-accent/15 border border-accent/40 text-accent">
+                    {item.tag}
+                  </span>
+                  <CheckCircle2 className="w-4 h-4 text-accent/80" />
+                </div>
+                <div>
+                  <h4 className="font-heading text-base font-bold text-content group-hover:text-accent transition-colors">
+                    {item.title}
+                  </h4>
+                  <p className="text-xs text-accent/90 font-medium mt-0.5">
+                    {item.sub}
+                  </p>
+                </div>
+                <p className="text-xs text-content-muted leading-relaxed">
+                  {item.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Group B: Other Major Recognitions (6 Cards) */}
+        <div className="space-y-6">
+          <div className="flex items-center justify-between pb-3 border-b border-line">
+            <div className="flex items-center gap-2.5">
+              <Award className="w-5 h-5 text-accent" />
+              <h3 className="font-heading text-xl font-bold text-content">
+                Other Major Recognitions & Status
+              </h3>
+            </div>
+            <button
+              type="button"
+              onClick={() => setSelectedSlide("/discover/major-recognitions.jpg")}
+              className="text-xs font-semibold text-accent hover:text-content inline-flex items-center gap-1"
+            >
+              <span>View Recognitions Slide</span>
+              <Maximize2 className="w-3.5 h-3.5" />
+            </button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {majorRecognitionsList.map((item) => (
+              <div
+                key={item.title}
+                className="p-6 rounded-2xl bg-surface-2 border border-line hover:border-accent transition-all space-y-3 group"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-bold font-heading uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-surface border border-line text-content-secondary">
+                    {item.pill}
+                  </span>
+                  <FileCheck2 className="w-4 h-4 text-accent/80" />
+                </div>
+                <div>
+                  <h4 className="font-heading text-base font-bold text-content group-hover:text-accent transition-colors">
+                    {item.title}
+                  </h4>
+                  <p className="text-xs text-[#E8D5A7] font-medium mt-0.5">
+                    {item.authority}
+                  </p>
+                </div>
+                <p className="text-xs text-content-muted leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. EVOLUTION & GROWTH (Screenshot 5) */}
+      <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line bg-surface/40">
+        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
+            Three Decades of Pioneering Education
+          </span>
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-content tracking-tight">
+            Evolution &amp; Growth Timeline
+          </h2>
+          <p className="text-base text-content-muted leading-relaxed">
+            From the pioneering inception of ITER in 1996 to modern pharmaceutical and veterinary super-centres in 2026.
+          </p>
+        </div>
+
+        {/* 2 Key Metric Pillars */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-14 text-center">
+          <div className="p-6 rounded-3xl bg-surface-2 border border-line flex flex-col items-center justify-center">
+            <span className="font-display text-5xl sm:text-6xl font-extrabold text-accent">
+              13
+            </span>
+            <span className="font-heading text-sm font-bold text-content mt-2 uppercase tracking-wider">
+              Constituent Institutes
+            </span>
+            <span className="text-xs text-content-muted mt-1">
+              Engineering, Medicine, Dental, Law, Management, Nursing, Pharmacy &amp; Agriculture
+            </span>
+          </div>
+
+          <div className="p-6 rounded-3xl bg-surface-2 border border-line flex flex-col items-center justify-center">
+            <span className="font-display text-5xl sm:text-6xl font-extrabold text-content">
+              18
+            </span>
+            <span className="font-heading text-sm font-bold text-content mt-2 uppercase tracking-wider">
+              State-of-the-Art Research Centres
+            </span>
+            <span className="text-xs text-content-muted mt-1">
+              Nanotechnology, Renewable Energy, Climate Studies, Biomechanics &amp; AI
+            </span>
+          </div>
+        </div>
+
+        {/* Chronological Milestone Timeline Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+          {/* Left Column (1996 to 2008) */}
+          <div className="space-y-4">
+            <h4 className="text-xs font-bold uppercase tracking-widest text-accent pb-2 border-b border-line">
+              Phase 1: Foundational Academics (1996 – 2008)
+            </h4>
+            {growthTimeline
+              .filter((t) => t.side === "left")
+              .map((item) => (
+                <div
+                  key={item.year}
+                  className="p-5 rounded-2xl bg-surface-2 border border-line hover:border-accent transition-all flex items-start gap-4"
+                >
+                  <div className="px-3 py-1.5 rounded-xl bg-accent/15 border border-accent/40 font-mono text-xs font-bold text-accent shrink-0 text-center">
+                    {item.year}
+                  </div>
+                  <div className="space-y-1">
+                    <h5 className="font-heading text-sm font-bold text-content">
+                      {item.title}
+                    </h5>
+                    <p className="text-xs text-[#E8D5A7] font-medium">
+                      {item.faculty}
+                    </p>
+                    <p className="text-xs text-content-muted leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+          </div>
+
+          {/* Right Column (2011 to 2026) */}
+          <div className="space-y-4">
+            <h4 className="text-xs font-bold uppercase tracking-widest text-accent pb-2 border-b border-line">
+              Phase 2: Advanced Sciences &amp; Expansions (2011 – 2026)
+            </h4>
+            {growthTimeline
+              .filter((t) => t.side === "right")
+              .map((item) => (
+                <div
+                  key={item.year}
+                  className="p-5 rounded-2xl bg-surface-2 border border-line hover:border-accent transition-all flex items-start gap-4"
+                >
+                  <div className="px-3 py-1.5 rounded-xl bg-accent/15 border border-accent/40 font-mono text-xs font-bold text-accent shrink-0 text-center">
+                    {item.year}
+                  </div>
+                  <div className="space-y-1">
+                    <h5 className="font-heading text-sm font-bold text-content">
+                      {item.title}
+                    </h5>
+                    <p className="text-xs text-[#E8D5A7] font-medium">
+                      {item.faculty}
+                    </p>
+                    <p className="text-xs text-content-muted leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+          </div>
+        </div>
+
+        <div className="mt-8 text-center">
+          <button
+            type="button"
+            onClick={() => setSelectedSlide("/discover/evolution-growth.jpg")}
+            className="text-xs font-semibold text-accent hover:text-content inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-surface-2 border border-line hover:border-accent transition-all"
+          >
+            <span>View Official Evolution &amp; Growth Diagram</span>
+            <Maximize2 className="w-3.5 h-3.5" />
+          </button>
+        </div>
+      </section>
+
+      {/* 6. OFFICIAL PRESENTATION SLIDES ARCHIVE */}
+      <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line">
+        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+          <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
+            Institutional Transparency
+          </span>
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-content tracking-tight">
+            Official Presentation Slides &amp; Records
+          </h2>
+          <p className="text-base text-content-muted leading-relaxed">
+            Click any official briefing slide below to inspect high-resolution accreditations and institutional rankings.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          {presentationSlides.map((slide) => (
+            <div
+              key={slide.id}
+              onClick={() => setSelectedSlide(slide.src)}
+              className="bg-surface-2 rounded-2xl overflow-hidden border border-line hover:border-accent transition-all group cursor-pointer flex flex-col justify-between"
+            >
+              <div className="aspect-[16/10] relative overflow-hidden bg-black/60">
+                <Image
+                  src={slide.src}
+                  alt={slide.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 20vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <span className="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-black/75 backdrop-blur-md text-accent border border-accent/30 text-[9px] font-bold uppercase tracking-wider">
+                  {slide.badge}
+                </span>
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <span className="px-3 py-1 rounded-full bg-accent text-on-accent text-xs font-bold inline-flex items-center gap-1 shadow-lg">
+                    <span>Enlarge</span>
+                    <Maximize2 className="w-3 h-3" />
+                  </span>
+                </div>
+              </div>
+              <div className="p-4 space-y-1">
+                <h4 className="font-heading text-xs sm:text-sm font-bold text-content group-hover:text-accent transition-colors">
+                  {slide.title}
+                </h4>
+                <p className="text-[11px] text-content-muted line-clamp-1">
+                  {slide.subtitle}
+                </p>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* 3. 6 CONSTITUENT FACULTIES */}
-      <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 max-w-[1400px] mx-auto w-full">
+      {/* 7. OFFICIAL CAMPUS INFRASTRUCTURE */}
+      <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line bg-surface/30">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
-            Academic & Clinical Infrastructure
+            127-Acre Campus Infrastructure
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-content tracking-tight">
-            Constituent Faculties & National Standing
+            Infrastructure &amp; Research Facilities
           </h2>
           <p className="text-base text-content-muted leading-relaxed">
-            Updated with official NIRF 2025, Times Engineering, and international accreditation data across SOA&apos;s premier faculties.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {constituentFaculties.map((f) => {
-            const Icon = f.icon;
-            return (
-              <div
-                key={f.name}
-                className="bg-surface rounded-3xl p-8 border border-line hover:border-accent transition-all flex flex-col justify-between space-y-6 group"
-              >
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-[10px] font-bold font-heading uppercase tracking-wider px-3 py-1 rounded-full bg-surface-2 text-content-secondary border border-line">
-                      {f.tag}
-                    </span>
-                    <div className="w-10 h-10 rounded-xl bg-surface-2 border border-line text-accent flex items-center justify-center">
-                      <Icon className="w-5 h-5" />
-                    </div>
-                  </div>
-
-                  <h3 className="font-heading text-lg font-bold text-content">
-                    {f.name}
-                  </h3>
-
-                  <div className="text-xs font-semibold text-content-secondary bg-surface-2 p-3 rounded-xl border border-line">
-                    {f.standing}
-                  </div>
-
-                  <p className="text-sm text-content-muted leading-relaxed font-normal">
-                    {f.desc}
-                  </p>
-                </div>
-
-                <div className="pt-4 border-t border-line flex items-center justify-between text-xs font-semibold">
-                  <span className="text-content-secondary bg-surface-2 border border-line px-2.5 py-1 rounded-lg">
-                    {f.metric}
-                  </span>
-                  <span className="text-accent font-bold">
-                    {f.highlight}
-                  </span>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* 4. OFFICIAL SOA CAMPUS INFRASTRUCTURE SHOWCASE */}
-      <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 max-w-[1400px] mx-auto w-full border-t border-line">
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
-            Official University Campus
-          </span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-content tracking-tight">
-            Infrastructure & Research Facilities
-          </h2>
-          <p className="text-base text-content-muted leading-relaxed">
-            Spanning over 127 acres in Bhubaneswar, SOA provides cutting-edge engineering laboratories, super-specialty hospitals, convention auditoriums, and high-performance computing centers.
+            Spanning cutting-edge engineering laboratories, multi-specialty hospitals, auditoriums, and high-performance computing centers in Bhubaneswar.
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="bg-surface rounded-3xl overflow-hidden border border-line hover:border-line-strong transition-all group">
+          <div className="bg-surface-2 rounded-3xl overflow-hidden border border-line hover:border-line-strong transition-all group">
             <div className="aspect-[4/3] overflow-hidden bg-surface-3 relative">
               <Image
                 src="/soa-campus-aerial.jpg"
@@ -326,12 +935,12 @@ export default function DiscoverSoaPage() {
             <div className="p-6 space-y-2">
               <h4 className="font-bold text-base text-content">Main University Campus</h4>
               <p className="text-xs text-content-muted leading-relaxed">
-                127-acre campus in Khandagiri Square with academic complexes, libraries, and hostels.
+                127-acre campus in Khandagiri Square with academic complexes, libraries, and central administrative headquarters.
               </p>
             </div>
           </div>
 
-          <div className="bg-surface rounded-3xl overflow-hidden border border-line hover:border-line-strong transition-all group">
+          <div className="bg-surface-2 rounded-3xl overflow-hidden border border-line hover:border-line-strong transition-all group">
             <div className="aspect-[4/3] overflow-hidden bg-surface-3 relative">
               <Image
                 src="/soa-iter-building.jpg"
@@ -347,12 +956,12 @@ export default function DiscoverSoaPage() {
             <div className="p-6 space-y-2">
               <h4 className="font-bold text-base text-content">ITER Engineering Faculty</h4>
               <p className="text-xs text-content-muted leading-relaxed">
-                Ranked 22nd in India (NIRF 2025) with Tech Mahindra and LTTS Centres of Excellence.
+                Ranked 22nd in India (NIRF 2025) with Tech Mahindra and LTTS Centres of Excellence and 94.54% placement.
               </p>
             </div>
           </div>
 
-          <div className="bg-surface rounded-3xl overflow-hidden border border-line hover:border-line-strong transition-all group">
+          <div className="bg-surface-2 rounded-3xl overflow-hidden border border-line hover:border-line-strong transition-all group">
             <div className="aspect-[4/3] overflow-hidden bg-surface-3 relative">
               <Image
                 src="/soa-auditorium.jpg"
@@ -368,12 +977,12 @@ export default function DiscoverSoaPage() {
             <div className="p-6 space-y-2">
               <h4 className="font-bold text-base text-content">University Auditorium</h4>
               <p className="text-xs text-content-muted leading-relaxed">
-                State-of-the-art auditorium seating thousands for conclaves, convocations, and symposia.
+                State-of-the-art auditorium seating thousands for ALLYSHIP++ conclaves, convocations, and global symposia.
               </p>
             </div>
           </div>
 
-          <div className="bg-surface rounded-3xl overflow-hidden border border-line hover:border-line-strong transition-all group">
+          <div className="bg-surface-2 rounded-3xl overflow-hidden border border-line hover:border-line-strong transition-all group">
             <div className="aspect-[4/3] overflow-hidden bg-surface-3 relative">
               <Image
                 src="/soa-campus-grounds.jpg"
@@ -387,37 +996,10 @@ export default function DiscoverSoaPage() {
               </span>
             </div>
             <div className="p-6 space-y-2">
-              <h4 className="font-bold text-base text-content">Academic Quads & R&D</h4>
+              <h4 className="font-bold text-base text-content">Academic Quads &amp; R&amp;D</h4>
               <p className="text-xs text-content-muted leading-relaxed">
-                Ranked 3rd nationally in Swachh Campus with green quads and research centers.
+                Ranked 3rd nationally in Swachh Campus with eco-friendly quads, solar grids, and high-performance labs.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. GLOBAL ACCREDITATIONS & REPUTATION */}
-      <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 max-w-[1400px] mx-auto w-full">
-        <div className="rounded-3xl p-8 sm:p-14 bg-gradient-to-br from-surface-2 via-surface to-canvas text-content shadow-2xl grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-center border border-line">
-          <div className="md:col-span-8 space-y-4">
-            <span className="text-xs font-bold font-heading tracking-widest text-accent uppercase">
-              Global Standards & Governance
-            </span>
-            <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl text-content font-bold leading-tight">
-              One of Only Four Indian Institutions in THE World Reputation Rankings 2025
-            </h2>
-            <p className="text-sm text-content-secondary leading-relaxed font-normal">
-              Siksha &lsquo;O&rsquo; Anusandhan was recognized alongside IISc Bengaluru, IIT Delhi, and IIT Madras in the prestigious Times Higher Education World Reputation Rankings 2025. With NAAC A++ (CGPA 3.88), UGC Category-I Graded Autonomy, and #3 Swachh Campus standing nationally, SOA provides corporate partners with world-class institutional stability and research credibility.
-            </p>
-          </div>
-          <div className="md:col-span-4 flex flex-col sm:flex-row md:flex-col gap-4">
-            <div className="p-6 rounded-2xl bg-glass border border-line text-center">
-              <span className="text-4xl font-bold text-accent">3.88</span>
-              <span className="text-xs text-content-secondary block font-medium mt-1">NAAC A++ Score</span>
-            </div>
-            <div className="p-6 rounded-2xl bg-glass border border-line text-center">
-              <span className="text-3xl font-bold text-content">Category-I</span>
-              <span className="text-xs text-content-secondary block font-medium mt-1">UGC Graded Autonomy</span>
             </div>
           </div>
         </div>
@@ -425,6 +1007,42 @@ export default function DiscoverSoaPage() {
 
       {/* Global Invitation Modal */}
       <GetInvitedModal isOpen={isInviteOpen} onClose={() => setIsInviteOpen(false)} />
+
+      {/* Presentation Slide Lightbox Modal */}
+      {selectedSlide && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 animate-in fade-in duration-200"
+          onClick={() => setSelectedSlide(null)}
+        >
+          <div
+            className="relative w-full max-w-5xl bg-surface-2 rounded-3xl overflow-hidden border border-line shadow-2xl p-3 sm:p-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between pb-3 px-2 border-b border-line text-content">
+              <span className="font-bold text-sm font-heading">Institutional Verification Slide</span>
+              <button
+                type="button"
+                onClick={() => setSelectedSlide(null)}
+                className="p-2 rounded-full hover:bg-glass-strong text-content-muted hover:text-content transition-colors"
+                aria-label="Close image viewer"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            <div className="relative aspect-[16/9] w-full rounded-2xl overflow-hidden bg-black mt-3">
+              <Image
+                src={selectedSlide}
+                alt="Official Institutional Ranking and Accreditation Slide"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Virtual Tour Modal */}
       {isTourOpen && (
@@ -435,11 +1053,12 @@ export default function DiscoverSoaPage() {
         >
           <div className="relative w-full max-w-4xl bg-surface rounded-3xl overflow-hidden border border-line shadow-2xl">
             <div className="flex items-center justify-between p-5 border-b border-line text-content">
-              <span className="font-bold text-sm font-heading">SOA University Campus & Research Labs Virtual Tour</span>
+              <span className="font-bold text-sm font-heading">SOA University Campus &amp; Research Labs Virtual Tour</span>
               <button
                 type="button"
                 onClick={() => setIsTourOpen(false)}
                 className="p-2 rounded-full hover:bg-glass-strong text-content-muted hover:text-content transition-colors"
+                aria-label="Close virtual tour"
               >
                 <X className="w-5 h-5" />
               </button>
