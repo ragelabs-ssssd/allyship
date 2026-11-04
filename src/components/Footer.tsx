@@ -33,7 +33,7 @@ export function Footer() {
 
   return (
     <footer className="bg-canvas text-content-secondary pt-20 pb-12 border-t border-line mt-auto">
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
+      <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-line">
           {/* Brand Column — 5 cols */}
           <div className="lg:col-span-5 space-y-6">

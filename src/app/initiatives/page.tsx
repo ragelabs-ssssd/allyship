@@ -39,7 +39,7 @@ export default function InitiativesPage() {
   });
 
   return (
-    <div className="flex flex-col gap-12 sm:gap-16 pb-12 max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 pt-24 sm:pt-32">
+    <div className="flex flex-col gap-12 sm:gap-16 pb-12 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 pt-24 sm:pt-32">
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto space-y-4">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-2 border border-line text-accent text-xs font-semibold font-heading uppercase tracking-wider">

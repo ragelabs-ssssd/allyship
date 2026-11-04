@@ -72,7 +72,7 @@ export default function DashboardPage() {
   };
 
   return (
-    <div className="flex flex-col gap-10 pb-12 max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 pt-10 sm:pt-14">
+    <div className="flex flex-col gap-10 pb-12 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 pt-10 sm:pt-14">
       {/* Top Profile / Welcome Header */}
       <div className="bg-surface rounded-3xl p-6 sm:p-8 border border-line shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div className="flex items-center gap-4">

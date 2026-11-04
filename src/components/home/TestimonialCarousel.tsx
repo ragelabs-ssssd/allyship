@@ -129,7 +129,7 @@ export function TestimonialCarousel() {
 
   return (
     <section className="py-24 lg:py-32 bg-canvas relative border-b border-line overflow-hidden">
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
+      <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
         {/* Header & Controls */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 pb-6 border-b border-line">
           <SectionReveal>

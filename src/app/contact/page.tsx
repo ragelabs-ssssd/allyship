@@ -94,7 +94,7 @@ export default function ContactPage() {
       {/* 1. EDITORIAL LUXE HERO */}
       <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 border-b border-line overflow-hidden">
         <HeroBackdrop />
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 text-center space-y-6">
+        <div className="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 text-center space-y-6">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase">
             <Mail className="w-3.5 h-3.5" />
             <span>Secretariat & Executive Desk</span>
@@ -112,8 +112,8 @@ export default function ContactPage() {
       </section>
 
       {/* 2. MAIN GRID: FORM & DETAILS */}
-      <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 max-w-[1400px] mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+      <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 2xl:gap-24 items-start">
           {/* Contact Form Column */}
           <div className="lg:col-span-7 bg-surface rounded-3xl p-8 sm:p-12 border border-line shadow-2xl space-y-6">
             <div>

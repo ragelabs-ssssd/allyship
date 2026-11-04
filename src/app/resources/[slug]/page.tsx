@@ -54,7 +54,7 @@ export default async function ResourceDetailPage({ params }: PageProps) {
   ).slice(0, 2);
 
   return (
-    <article className="flex flex-col gap-10 pb-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12">
+    <article className="flex flex-col gap-10 pb-24 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 pt-8 sm:pt-12">
       {/* Back button */}
       <div>
         <Link

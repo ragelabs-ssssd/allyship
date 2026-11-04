@@ -11,10 +11,10 @@ export function ChairmanVision() {
   return (
     <section className="py-24 lg:py-36 bg-surface-2 relative border-y border-line overflow-hidden">
       {/* Subtle luxury ambient pattern */}
-      <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 2xl:gap-24 items-center">
           {/* Left Column: Portrait */}
-          <SectionReveal className="lg:col-span-5 relative" direction="left">
+          <SectionReveal className="lg:col-span-5 xl:col-span-5 relative" direction="left">
             <div className="relative mx-auto max-w-md lg:max-w-none">
               <div className="relative rounded-2xl overflow-hidden bg-surface-3 shadow-2xl border border-line aspect-[4/5] on-media">
                 <Image
@@ -45,7 +45,7 @@ export function ChairmanVision() {
           </SectionReveal>
 
           {/* Right Column: Editorial Quote & Philosophy */}
-          <SectionReveal className="lg:col-span-7 space-y-8" direction="right">
+          <SectionReveal className="lg:col-span-7 xl:col-span-7 space-y-8" direction="right">
             <div className="space-y-4">
               <Quote className="w-12 h-12 text-accent opacity-80" />
               <blockquote className="font-serif italic font-normal tracking-normal text-2xl sm:text-3xl lg:text-4xl leading-[1.4] text-content">

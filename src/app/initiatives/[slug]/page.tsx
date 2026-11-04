@@ -53,7 +53,7 @@ export default async function InitiativeDetailPage({ params }: PageProps) {
   const relatedInitiatives = INITIATIVES.filter((i) => i.slug !== slug).slice(0, 2);
 
   return (
-    <div className="flex flex-col gap-12 sm:gap-16 pb-12 max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 pt-8 sm:pt-12">
+    <div className="flex flex-col gap-12 sm:gap-16 pb-12 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 pt-8 sm:pt-12">
       {/* Back button */}
       <div>
         <Link
@@ -116,7 +116,7 @@ export default async function InitiativeDetailPage({ params }: PageProps) {
       </div>
 
       {/* Main Content Layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 2xl:gap-24 items-start">
         {/* Left Column: Syllabus, Outcomes, Audience */}
         <div className="lg:col-span-7 space-y-12">
           {/* Key Learning Outcomes */}

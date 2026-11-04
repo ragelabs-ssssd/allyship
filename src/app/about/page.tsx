@@ -192,7 +192,7 @@ export default function AboutPage() {
         {/* Ambient gold background glow */}
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-[radial-gradient(ellipse_at_center,rgba(197,168,105,0.12),transparent_70%)] pointer-events-none" />
 
-        <div className="max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
+        <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase shadow-sm">
               <Sparkles className="w-3.5 h-3.5 text-accent" />
@@ -247,10 +247,10 @@ export default function AboutPage() {
       </section>
 
       {/* 2. INSTITUTIONAL NARRATIVE & THE CODE VISUAL BLOCK */}
-      <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 max-w-[1400px] mx-auto w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 2xl:gap-24 items-center">
           {/* Left Column: 3-Paragraph Narrative */}
-          <div className="lg:col-span-7 space-y-6">
+          <div className="lg:col-span-6 xl:col-span-6 space-y-6 text-left">
             <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
               The Genesis of Allyship++
             </span>
@@ -282,7 +282,8 @@ export default function AboutPage() {
           </div>
 
           {/* Right Column: Code visual block */}
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-6 xl:col-span-6 w-full flex justify-center lg:justify-end">
+            <div className="w-full max-w-xl lg:max-w-none xl:max-w-[640px] 2xl:max-w-[700px]">
             <div className="relative rounded-3xl bg-surface border border-line shadow-2xl overflow-hidden force-dark group hover:border-accent/40 transition-colors duration-300">
               {/* Window Header */}
               <div className="flex items-center justify-between px-5 py-3.5 bg-black/60 border-b border-line">
@@ -379,6 +380,7 @@ export default function AboutPage() {
               <div className="absolute top-0 left-0 w-5 h-5 border-t-2 border-l-2 border-accent pointer-events-none rounded-tl-3xl" />
               <div className="absolute bottom-0 right-0 w-5 h-5 border-b-2 border-r-2 border-accent pointer-events-none rounded-br-3xl" />
             </div>
+            </div>
           </div>
         </div>
       </section>
@@ -386,7 +388,7 @@ export default function AboutPage() {
       {/* 3. THE 7 ROLES OF WORKPLACE ALLYSHIP */}
       <section
         id="roles-framework"
-        className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 max-w-[1400px] mx-auto w-full border-t border-line"
+        className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line"
       >
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
@@ -481,7 +483,7 @@ export default function AboutPage() {
       {/* 4. THE 3-QUESTION AUTHENTICITY LITMUS TEST */}
       <section
         id="litmus-test"
-        className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 max-w-[1400px] mx-auto w-full border-t border-line"
+        className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line"
       >
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading uppercase tracking-widest">
@@ -538,7 +540,7 @@ export default function AboutPage() {
       {/* 5. SIX-STEP HR IMPLEMENTATION BLUEPRINT */}
       <section
         id="hr-blueprint"
-        className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 max-w-[1400px] mx-auto w-full border-t border-line"
+        className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line"
       >
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
@@ -584,11 +586,11 @@ export default function AboutPage() {
       {/* 6. THE BOARDROOM-TO-ARENA SYNTHESIS */}
       <section
         id="sports-synthesis"
-        className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 max-w-[1400px] mx-auto w-full border-t border-line"
+        className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line"
       >
         <div className="bg-gradient-to-br from-surface-2 via-surface to-surface-sunken text-content rounded-3xl p-8 sm:p-12 lg:p-16 border border-line shadow-2xl space-y-12">
           {/* Section Header */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-start">
             <div className="lg:col-span-7 space-y-4">
               <span className="text-xs font-bold font-heading tracking-widest text-accent uppercase">
                 The Sports-Corporate-Academia Triad
@@ -648,7 +650,7 @@ export default function AboutPage() {
       </section>
 
       {/* 7. INSTITUTIONAL CALL TO ACTION */}
-      <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 max-w-[1400px] mx-auto w-full">
+      <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
         <div className="relative rounded-3xl p-8 sm:p-14 lg:p-16 text-center border border-line shadow-2xl max-w-4xl mx-auto space-y-8 bg-gradient-to-b from-surface-2 to-surface overflow-hidden">
           {/* Subtle gold glow behind card */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-[radial-gradient(ellipse_at_center,rgba(197,168,105,0.15),transparent_70%)] pointer-events-none" />

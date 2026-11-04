@@ -163,9 +163,9 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
       {/* 1. EDITORIAL LUXE HERO SECTION */}
       <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 border-b border-line overflow-hidden">
         <HeroBackdrop />
-        <div className="relative z-10 max-w-[1400px] mx-auto px-6 sm:px-8 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            <div className="lg:col-span-7 space-y-6">
+        <div className="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 2xl:gap-24 items-center">
+            <div className="lg:col-span-6 xl:col-span-6 space-y-6 text-left">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase">
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Corporate Partnership Portal</span>
@@ -203,7 +203,8 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
               </div>
             </div>
 
-            <div className="lg:col-span-5 relative">
+            <div className="lg:col-span-6 xl:col-span-6 relative flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-xl lg:max-w-none xl:max-w-[640px] 2xl:max-w-[700px]">
               <div className="relative rounded-3xl overflow-hidden bg-surface p-2.5 border border-line shadow-xl">
                 <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-surface-3 on-media">
                   <Image
@@ -230,13 +231,14 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
                 <div className="absolute -top-1 -left-1 w-6 h-6 border-t-2 border-l-2 border-accent pointer-events-none" />
                 <div className="absolute -bottom-1 -right-1 w-6 h-6 border-b-2 border-r-2 border-accent pointer-events-none" />
               </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* 2. FOUR CORPORATE PARTNERSHIP PILLARS */}
-      <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 max-w-[1400px] mx-auto w-full">
+      <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             Four Strategic Avenues
@@ -282,7 +284,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
       </section>
 
       {/* 3. VERIFIED PLACEMENT VELOCITY DATA TABLE */}
-      <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 max-w-[1400px] mx-auto w-full border-t border-line">
+      <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line">
         <div className="max-w-3xl space-y-3 mb-16">
           <div className="flex items-center gap-2 text-accent">
             <Award className="w-5 h-5" />
@@ -341,8 +343,8 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
       </section>
 
       {/* 4. SUBMIT AN INDUSTRY CHALLENGE (INTERACTIVE FORM) */}
-      <section id="submit-challenge" className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 max-w-[1400px] mx-auto w-full scroll-mt-28 border-t border-line">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+      <section id="submit-challenge" className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full scroll-mt-28 border-t border-line">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 2xl:gap-24 items-start">
           <div className="lg:col-span-5 space-y-6">
             <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
               Direct Interface
