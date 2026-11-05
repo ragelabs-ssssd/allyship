@@ -184,7 +184,7 @@ export default function ImpactPage() {
               </p>
 
               <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal">
-                Across six chapters in five corporate capitals, Allyship++ has shifted industry-academia engagement from transactional placement drives to sustained leadership dialogue—generating national media coverage, multi-city Centres of Excellence, and actionable workplace frameworks for enterprise leaders.
+                Across six chapters in five corporate capitals, Allyship++ has shifted industry-academia engagement from transactional placement drives to sustained leadership dialogue—generating national media coverage, multi-city Centres of Excellence, and actionable workplace frameworks.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">

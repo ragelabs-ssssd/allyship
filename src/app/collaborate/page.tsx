@@ -179,7 +179,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
               </p>
 
               <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal">
-                From co-establishing specialized campus Centres of Excellence with Tech Mahindra and LTTS, to sponsoring challenge problem statements via the AIC-SOA Foundation, Siksha &lsquo;O&rsquo; Anusandhan offers corporate partners a structured, high-velocity collaboration ecosystem built for measurable industrial synergy.
+                From co-establishing specialized campus Centres of Excellence with Tech Mahindra and LTTS, to sponsoring challenge problem statements via the AIC-SOA Foundation, Siksha &lsquo;O&rsquo; Anusandhan offers corporate partners a high-velocity collaboration ecosystem built for industrial synergy.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
