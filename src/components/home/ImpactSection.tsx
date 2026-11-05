@@ -69,12 +69,12 @@ export function ImpactSection() {
         "Leaders from Microsoft, Dell, Deloitte, Zscaler, Tata Steel, and over 150+ multinational firms engaged in dialogue.",
     },
     {
-      value: 6,
+      value: 7,
       suffix: "",
       decimals: 0,
-      title: "Metropolitan Chapters",
+      title: "National Conclaves",
       description:
-        "High-impact conclaves across Bengaluru, Hyderabad, Kolkata, Mumbai, Chennai, and institutional headquarters.",
+        "High-impact leadership conclaves across Bengaluru, Hyderabad, Kolkata, Mumbai, Chennai, and institutional headquarters.",
     },
     {
       value: 94.54,
