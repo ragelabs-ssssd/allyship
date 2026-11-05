@@ -451,14 +451,14 @@ export default function DiscoverSoaPage() {
 
       {/* 3. OTHER RANKINGS SECTION: QS & THE + SWACHHATA (Screenshot 2) */}
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line bg-surface/50">
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
-            Global Benchmarking & Accolades
+            Global Benchmarking &amp; Accolades
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-content tracking-tight">
-            International Rankings & Global Standing
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight md:whitespace-nowrap">
+            International Rankings &amp; Global Standing
           </h2>
-          <p className="text-base text-content-muted leading-relaxed">
+          <p className="text-base text-content-muted leading-relaxed max-w-2xl mx-auto">
             Ranked among the premier institutions in the world by Quacquarelli Symonds (QS) and Times Higher Education (THE).
           </p>
         </div>
