@@ -575,14 +575,14 @@ export default function DiscoverSoaPage() {
 
       {/* 4. ACCREDITATIONS & MAJOR RECOGNITIONS (Screenshots 3 & 4) */}
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line">
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
-            National & International Certifications
+            National &amp; International Certifications
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-content tracking-tight">
-            Accreditations & Major Recognitions
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight md:whitespace-nowrap">
+            Accreditations &amp; Major Recognitions
           </h2>
-          <p className="text-base text-content-muted leading-relaxed">
+          <p className="text-base text-content-muted leading-relaxed max-w-2xl mx-auto">
             Validated by national statutory authorities, healthcare boards, laboratory accreditors, and global standards bodies.
           </p>
         </div>
@@ -791,14 +791,14 @@ export default function DiscoverSoaPage() {
 
       {/* 6. OFFICIAL CAMPUS INFRASTRUCTURE */}
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line bg-surface/30">
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             127-Acre Campus Infrastructure
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-content tracking-tight">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight md:whitespace-nowrap">
             Infrastructure &amp; Research Facilities
           </h2>
-          <p className="text-base text-content-muted leading-relaxed">
+          <p className="text-base text-content-muted leading-relaxed max-w-2xl mx-auto">
             Spanning cutting-edge engineering laboratories, multi-specialty hospitals, auditoriums, and high-performance computing centers in Bhubaneswar.
           </p>
         </div>

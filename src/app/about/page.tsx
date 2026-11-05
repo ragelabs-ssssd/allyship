@@ -392,14 +392,14 @@ export default function AboutPage() {
         id="journey-pillars"
         className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line"
       >
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             Institutional Blueprint &amp; Journey
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-content tracking-tight">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight md:whitespace-nowrap">
             The 7 Pillars of the SOA Allyship Journey
           </h2>
-          <p className="text-base text-content-secondary leading-relaxed font-normal">
+          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-3xl mx-auto">
             Pioneered by Siksha &lsquo;O&rsquo; Anusandhan and co-created with 500+ corporate CXOs and sporting luminaries across India, the Allyship++ journey redefines how higher education and global enterprises build future-ready leaders.
           </p>
         </div>
@@ -476,15 +476,15 @@ export default function AboutPage() {
         id="litmus-test"
         className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line"
       >
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading uppercase tracking-widest">
             <ShieldCheck className="w-3.5 h-3.5" />
             <span>Authenticity Guardrail</span>
           </div>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-content tracking-tight">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight md:whitespace-nowrap">
             The 3-Question Authenticity Litmus Test
           </h2>
-          <p className="text-base text-content-secondary leading-relaxed font-normal">
+          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
             Separating genuine institutional advocacy from performative optics. Grounded in research from 40+ CXO panels across India, every allyship initiative must satisfy three mandatory criteria.
           </p>
         </div>
@@ -533,14 +533,14 @@ export default function AboutPage() {
         id="hr-blueprint"
         className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line"
       >
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             Organizational Roadmap
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-content tracking-tight">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight md:whitespace-nowrap">
             Six-Step HR Implementation Blueprint
           </h2>
-          <p className="text-base text-content-secondary leading-relaxed font-normal">
+          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
             A practical roadmap for Chief Human Resources Officers, Talent Directors, and line leaders to institutionalize authentic allyship across enterprise units.
           </p>
         </div>
@@ -651,7 +651,7 @@ export default function AboutPage() {
               Executive Conclave Participation
             </span>
 
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-content tracking-tight">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight md:whitespace-nowrap">
               Connect with SOA University Leadership
             </h2>
 
