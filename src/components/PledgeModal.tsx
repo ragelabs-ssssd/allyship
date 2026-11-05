@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import { X, CheckCircle2, ShieldCheck, Heart, ArrowRight, Download, Check } from "lucide-react";
 import { savePledge, getStoredPledge } from "@/lib/storage";
 import confetti from "canvas-confetti";
-import Link from "next/link";
 import { useFocusTrap } from "@/lib/useFocusTrap";
 
 interface PledgeModalProps {
@@ -436,21 +435,14 @@ export function PledgeModal({ isOpen, onClose }: PledgeModalProps) {
                 </div>
               </div>
 
-              <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
-                <Link
-                  href="/dashboard"
-                  onClick={onClose}
-                  className="w-full sm:w-auto px-6 py-2.5 rounded-full bg-accent hover:bg-accent-hover text-on-accent text-xs font-semibold flex items-center justify-center gap-2 transition-all shadow-md"
-                >
-                  Go to Ally Dashboard
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
+              <div className="pt-2 flex items-center justify-center">
                 <button
                   type="button"
                   onClick={onClose}
-                  className="w-full sm:w-auto px-6 py-2.5 rounded-full bg-glass-strong hover:bg-glass-strong text-content-secondary text-xs font-semibold transition-colors"
+                  className="px-6 py-2.5 rounded-full bg-accent hover:bg-accent-hover text-on-accent text-xs font-semibold flex items-center justify-center gap-2 transition-all shadow-md"
                 >
                   Return to Website
+                  <ArrowRight className="w-3.5 h-3.5" />
                 </button>
               </div>
             </div>

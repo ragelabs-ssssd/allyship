@@ -26,9 +26,6 @@ export function Footer() {
     { name: "Impact & Outcomes", href: "/impact" },
     { name: "Discover SOA University", href: "/discover-soa" },
     { name: "Collaborate With Us", href: "/collaborate" },
-    { name: "Community Circles", href: "/community" },
-    { name: "Resource Library", href: "/resources" },
-    { name: "Member Dashboard", href: "/dashboard" },
   ];
 
   return (
