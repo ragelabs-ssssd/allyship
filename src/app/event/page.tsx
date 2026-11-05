@@ -678,31 +678,35 @@ function EventContent() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-surface rounded-3xl p-8 sm:p-10 border border-line shadow-xl space-y-4">
-                <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] px-3.5 py-1.5 rounded-full bg-surface-2 text-content-secondary border border-line">
-                  Phase I: Allyship++ 1.0 (2024–2025)
-                </span>
-                <h3 className="font-display text-xl sm:text-2xl font-bold tracking-normal text-content mt-2">
-                  Bridging Distance Between Campus and Industry
-                </h3>
-                <p className="font-sans text-sm font-normal tracking-[0.01em] text-content-muted leading-relaxed">
-                  SOA brought academic leadership from Bhubaneswar directly to Bengaluru, Hyderabad, Kolkata, and Mumbai. Gathering 60 to 70 corporate leaders, HR professionals, and sports icons in each city, the first cycle focused on building closer industry–academia relationships, strengthening workplace well-being, and fostering inclusive leadership.
-                </p>
+              <div className="bg-surface rounded-3xl p-8 sm:p-10 border border-line shadow-xl flex flex-col justify-between space-y-4">
+                <div className="space-y-4">
+                  <span className="inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.14em] px-3.5 py-1.5 rounded-full bg-surface-2 text-content-secondary border border-line">
+                    Phase I: Allyship++ 1.0 (2024–2025)
+                  </span>
+                  <h3 className="font-display text-xl sm:text-2xl font-bold tracking-normal text-content mt-2">
+                    Bridging Distance Between Campus and Industry
+                  </h3>
+                  <p className="font-sans text-sm font-normal tracking-[0.01em] text-content-muted leading-relaxed">
+                    SOA brought academic leadership from Bhubaneswar directly to Bengaluru, Hyderabad, Kolkata, and Mumbai. Gathering 60 to 70 corporate leaders, HR professionals, and sports icons in each city, the first cycle focused on building closer industry–academia relationships, strengthening workplace well-being, and fostering inclusive leadership.
+                  </p>
+                </div>
                 <div className="pt-4 border-t border-line font-sans text-xs text-content-muted tracking-[0.01em]">
                   Chapters: Bengaluru · Hyderabad · Kolkata · Mumbai
                 </div>
               </div>
 
-              <div className="bg-surface rounded-3xl p-8 sm:p-10 border border-line shadow-xl space-y-4">
-                <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] px-3.5 py-1.5 rounded-full bg-surface-2 text-accent border border-accent/30">
-                  Phase II: Allyship++ 2.0 (2025–2026)
-                </span>
-                <h3 className="font-display text-xl sm:text-2xl font-bold tracking-normal text-content mt-2">
-                  Practicing Allyship as a Leadership Responsibility
-                </h3>
-                <p className="font-sans text-sm font-normal tracking-[0.01em] text-content-muted leading-relaxed">
-                  Moving from why inclusion matters to how leaders practice it every day. Across return editions in Bengaluru and Hyderabad and the Chennai 2.0 chapter on <i>&lsquo;Practicing Allyship&rsquo;</i>, discussions centered on guiding emerging talent, coaching with empathy and discipline, and treating allyship as a core leadership responsibility that drives trust and sustainable growth.
-                </p>
+              <div className="bg-surface rounded-3xl p-8 sm:p-10 border border-line shadow-xl flex flex-col justify-between space-y-4">
+                <div className="space-y-4">
+                  <span className="inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.14em] px-3.5 py-1.5 rounded-full bg-surface-2 text-accent border border-accent/30">
+                    Phase II: Allyship++ 2.0 (2025–2026)
+                  </span>
+                  <h3 className="font-display text-xl sm:text-2xl font-bold tracking-normal text-content mt-2">
+                    Practicing Allyship as a Leadership Responsibility
+                  </h3>
+                  <p className="font-sans text-sm font-normal tracking-[0.01em] text-content-muted leading-relaxed">
+                    Moving from why inclusion matters to how leaders practice it every day. Across return editions in Bengaluru and Hyderabad and the Chennai 2.0 chapter on <i>&lsquo;Practicing Allyship&rsquo;</i>, discussions centered on guiding emerging talent, coaching with empathy and discipline, and treating allyship as a core leadership responsibility across modern teams.
+                  </p>
+                </div>
                 <div className="pt-4 border-t border-line font-sans text-xs text-content-muted tracking-[0.01em]">
                   Chapters: Bengaluru · Hyderabad · Chennai
                 </div>
