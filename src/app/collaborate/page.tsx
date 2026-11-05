@@ -283,17 +283,17 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
 
       {/* 3. VERIFIED PLACEMENT VELOCITY DATA TABLE */}
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line">
-        <div className="max-w-3xl space-y-3 mb-16">
+        <div className="max-w-5xl space-y-3 mb-16">
           <div className="flex items-center gap-2 text-accent">
             <Award className="w-5 h-5" />
             <span className="text-xs font-bold uppercase tracking-wider font-heading">
               Recruitment Velocity & Talent Quality
             </span>
           </div>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-content tracking-tight">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
             Multi-Year Placement Performance
           </h2>
-          <p className="text-base text-content-muted leading-relaxed">
+          <p className="text-base text-content-muted leading-relaxed max-w-2xl">
             SOA’s placement track record reflects deepened trust among Fortune 500 recruiters and global capability centres across engineering, management, clinical healthcare, and legal disciplines.
           </p>
         </div>

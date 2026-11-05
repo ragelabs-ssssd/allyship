@@ -373,15 +373,15 @@ export default function DiscoverSoaPage() {
 
       {/* 2. NIRF INDIA RANKINGS - 2025 SECTION (Screenshot 1) */}
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent/10 border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase">
             <Trophy className="w-3.5 h-3.5" />
             <span>Ministry of Education · Govt. of India</span>
           </div>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-content tracking-tight">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
             NIRF India Rankings — 2025
           </h2>
-          <p className="text-base sm:text-lg text-accent font-semibold tracking-wide">
+          <p className="text-base sm:text-lg text-accent font-semibold tracking-wide max-w-2xl mx-auto">
             Consistently ranked at Top 25 Universities in all editions of NIRF.
           </p>
         </div>
@@ -684,14 +684,14 @@ export default function DiscoverSoaPage() {
 
       {/* 5. EVOLUTION & GROWTH (Screenshot 5) */}
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line bg-surface/40">
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             Three Decades of Pioneering Education
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-content tracking-tight">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
             Evolution &amp; Growth Timeline
           </h2>
-          <p className="text-base text-content-muted leading-relaxed">
+          <p className="text-base text-content-muted leading-relaxed max-w-2xl mx-auto">
             From the pioneering inception of ITER in 1996 to modern pharmaceutical and veterinary super-centres in 2026.
           </p>
         </div>
