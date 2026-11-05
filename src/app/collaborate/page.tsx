@@ -168,20 +168,20 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase">
-                <span>Collaborate With SOA</span>
+                <span>Corporate Partnership Portal</span>
               </div>
 
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
-                Shared Leadership. <br />
-                <span className="italic font-normal whitespace-nowrap">Lasting Impact.</span>
+                Partner with <br />
+                <span className="italic font-normal whitespace-nowrap">Siksha &lsquo;O&rsquo; Anusandhan</span>
               </h1>
 
               <p className="text-lg sm:text-xl font-display text-content-muted italic sm:whitespace-nowrap">
-                Shape Future Curricula · Mentor Emerging Leaders · Build Talent Pipelines
+                Co-Innovate. Mentor Emerging Leaders. Build Strategic Pipelines.
               </p>
 
               <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal">
-                ALLYSHIP++ does not end when a conclave closes. Siksha &lsquo;O&rsquo; Anusandhan invites industry leaders to stay involved: guiding students, opening real problems to campus teams and building talent partnerships that last across every campus and industry discipline.
+                From co-establishing specialized campus Centres of Excellence with Tech Mahindra and LTTS, to sponsoring challenge problem statements via the AIC-SOA Foundation, Siksha &lsquo;O&rsquo; Anusandhan offers corporate partners a high-velocity collaboration ecosystem built for industrial synergy.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
