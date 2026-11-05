@@ -95,7 +95,7 @@ export function ImpactSection() {
             <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
               Quantifiable Distinction
             </span>
-            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-[-0.025em] leading-[1.1] text-content mt-2 sm:whitespace-nowrap">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight mt-2 sm:whitespace-nowrap">
               National Scale &amp; Measurable Impact
             </h2>
           </div>
@@ -117,14 +117,14 @@ export function ImpactSection() {
               className="flex flex-col justify-between space-y-4 p-8 sm:p-10 rounded-2xl bg-surface-3 border border-line hover:border-accent/50 transition-all duration-500 group"
             >
               <div>
-                <p className="font-display text-6xl sm:text-7xl lg:text-8xl font-extrabold text-content tracking-[-0.025em] leading-none mb-4 group-hover:text-accent transition-colors">
+                <p className="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-content tracking-tight leading-none mb-4 group-hover:text-accent transition-colors">
                   <AnimatedNumber
                     end={metric.value}
                     suffix={metric.suffix}
                     decimals={metric.decimals}
                   />
                 </p>
-                <h3 className="font-display text-lg sm:text-xl font-semibold tracking-normal text-content">
+                <h3 className="font-heading text-lg sm:text-xl font-bold tracking-tight text-content">
                   {metric.title}
                 </h3>
               </div>

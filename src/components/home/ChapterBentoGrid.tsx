@@ -46,7 +46,7 @@ export function ChapterBentoGrid() {
             <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
               The Conclave Journey
             </span>
-            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-[-0.025em] leading-[1.1] text-content mt-2 sm:whitespace-nowrap">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight mt-2 sm:whitespace-nowrap">
               Metro Chapter Archives
             </h2>
           </SectionReveal>

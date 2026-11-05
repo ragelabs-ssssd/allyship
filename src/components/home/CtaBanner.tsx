@@ -22,7 +22,7 @@ export function CtaBanner({ onOpenInvite }: CtaBannerProps) {
         </SectionReveal>
 
         <SectionReveal delay={0.1}>
-          <h2 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-[-0.03em] leading-[1.08] max-w-5xl mx-auto text-content">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.15] max-w-5xl mx-auto text-content">
             Join the Next Chapter of Industry–Academia Leadership.
           </h2>
         </SectionReveal>
