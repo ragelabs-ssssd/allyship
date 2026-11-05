@@ -351,7 +351,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
               Submit an Industry Problem Statement
             </h2>
             <p className="text-base text-content-secondary leading-relaxed font-normal">
-              Have an enterprise bottleneck, AI prototyping need, or clinical innovation challenge? Submit your problem brief directly to Dean Prof. (Dr.) Raj Kumar Hota and the Corporate Relations team.
+              Have an enterprise bottleneck, AI prototyping need, or clinical innovation challenge? Submit your problem brief directly to the Office of Corporate Relations and Placement team.
             </p>
 
             <div className="bg-surface rounded-2xl p-6 border border-line shadow-sm space-y-3">
@@ -359,7 +359,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
                 Direct Contact Office
               </span>
               <div className="text-xs text-content-muted space-y-2">
-                <div className="font-bold text-content">Dean of Corporate Relations and Placement</div>
+                <div className="font-bold text-content">Office of Corporate Relations and Placement</div>
                 <div>Siksha &lsquo;O&rsquo; Anusandhan (Deemed to be University)</div>
                 <div className="text-accent font-bold">Email: info@soa.ac.in</div>
                 <div>Khandagiri Square, Bhubaneswar, Odisha 751030</div>
@@ -500,7 +500,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
 
                   <div className="pt-2 flex flex-wrap items-center justify-between gap-4">
                     <span className="text-xs text-content-muted">
-                      Submissions reviewed by SOA Dean of Corporate Relations
+                      Submissions reviewed by the SOA Corporate Relations &amp; Placement Team
                     </span>
                     <button
                       type="submit"
