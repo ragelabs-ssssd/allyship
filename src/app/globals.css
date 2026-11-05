@@ -496,7 +496,6 @@
 @media (min-width: 640px) {
   .section-heading-unified {
     font-size: 1.875rem; /* 3xl */
-    white-space: nowrap;
   }
 }
 @media (min-width: 768px) {

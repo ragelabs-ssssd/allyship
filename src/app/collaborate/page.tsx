@@ -347,7 +347,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
             <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
               Direct Interface
             </span>
-            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
               Submit an Industry Problem Statement
             </h2>
             <p className="text-base text-content-secondary leading-relaxed font-normal">
