@@ -211,7 +211,7 @@ export default function AboutPage() {
             </p>
 
             <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl mx-auto font-normal">
-              Initiated by Siksha &lsquo;O&rsquo; Anusandhan (SOA), Allyship++ is a national leadership platform connecting corporate executives, HR leaders, academicians, and emerging talent. Together, we explore how leaders mentor young professionals, exchange knowledge, and build inclusive workplaces where everyone thrives.
+              Initiated by Siksha &lsquo;O&rsquo; Anusandhan (SOA), Allyship++ is a national leadership platform connecting corporate executives, HR leaders, academicians, and emerging talent to share knowledge, strengthen mentorship, and build inclusive workplaces where everyone can thrive.
             </p>
 
             {/* Quick-Nav Framework Pills */}

@@ -181,7 +181,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
               </p>
 
               <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal">
-                ALLYSHIP++ does not end when a conclave closes. Siksha &lsquo;O&rsquo; Anusandhan invites corporate leaders, HR heads, and domain experts to stay involved beyond the room—mentoring emerging talent, sharing real industry problem statements with campus teams, and building long-term partnerships.
+                ALLYSHIP++ does not end when a conclave closes. Siksha &lsquo;O&rsquo; Anusandhan invites corporate leaders, HR heads, and domain experts to stay involved beyond the room—guiding students, opening real industry problems to campus teams, and building talent partnerships that last.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">

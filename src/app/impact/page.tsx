@@ -184,7 +184,7 @@ export default function ImpactPage() {
               </p>
 
               <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal">
-                Across seven conclaves in five major Indian cities, Allyship++ has brought together corporate executives, CHROs, academicians, and celebrated sports icons to bridge higher education and the modern workplace—fostering campus Centres of Excellence, mentorship, and lasting industry–academia partnerships.
+                Across seven conclaves in five major Indian cities, Allyship++ has brought together corporate leaders, CHROs, academicians, and sports icons to strengthen the bridge between higher education and the modern workplace—fostering mentorship and lasting partnerships.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
