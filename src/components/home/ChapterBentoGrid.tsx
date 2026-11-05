@@ -19,6 +19,11 @@ export function ChapterBentoGrid() {
   const featured = filteredChapters[0];
   const remaining = filteredChapters.slice(1);
 
+  // Take up to 3 side chapters so that in Chapter 1.0, Mumbai fits directly under Kolkata
+  // and in All Chapters, 3 items fit in the side column and 3 in the bottom row.
+  const sideChapters = remaining.slice(0, 3);
+  const bottomChapters = remaining.slice(3);
+
   return (
     <section id="chapters" className="py-24 lg:py-32 bg-canvas relative">
       <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
@@ -137,15 +142,17 @@ export function ChapterBentoGrid() {
           )}
 
           {/* Remaining Chapters in Column/Grid — 5 Columns Wide */}
-          <div className="lg:col-span-5 flex flex-col gap-6">
-            {remaining.slice(0, 2).map((chapter, idx) => (
-              <SectionReveal key={chapter.id} delay={0.15 * (idx + 1)}>
+          <div className={`lg:col-span-5 flex flex-col ${sideChapters.length === 3 ? "gap-4 sm:gap-4.5 justify-between" : "gap-6"}`}>
+            {sideChapters.map((chapter, idx) => (
+              <SectionReveal key={chapter.id} delay={0.1 * (idx + 1)} className={sideChapters.length === 3 ? "flex-1 flex flex-col" : ""}>
                 <Link
                   href={`/event#${chapter.id}`}
-                  className="group block bg-surface-3 rounded-2xl overflow-hidden border border-line shadow-lg hover:border-accent/60 transition-all duration-300"
+                  className={`group block bg-surface-3 rounded-2xl overflow-hidden border border-line shadow-lg hover:border-accent/60 transition-all duration-300 ${
+                    sideChapters.length === 3 ? "flex-1 flex flex-col justify-between" : ""
+                  }`}
                 >
-                  <div className="grid grid-cols-1 sm:grid-cols-12 gap-0">
-                    <div className="sm:col-span-5 relative aspect-[16/10] sm:aspect-auto overflow-hidden bg-surface-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-12 gap-0 h-full">
+                    <div className="sm:col-span-5 relative aspect-[16/10] sm:aspect-auto overflow-hidden bg-surface-3 min-h-[130px] sm:min-h-0">
                       <Image
                         src={chapter.image}
                         alt={chapter.city}
@@ -161,9 +168,9 @@ export function ChapterBentoGrid() {
                         </div>
                       )}
                     </div>
-                    <div className="sm:col-span-7 p-5 flex flex-col justify-between space-y-3">
+                    <div className={`sm:col-span-7 ${sideChapters.length === 3 ? "p-4 sm:p-4.5" : "p-5"} flex flex-col justify-between space-y-2`}>
                       <div>
-                        <div className="flex items-center justify-between gap-2 mb-1.5">
+                        <div className="flex items-center justify-between gap-2 mb-1">
                           <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
                             {chapter.edition}
                           </span>
@@ -174,7 +181,7 @@ export function ChapterBentoGrid() {
                         <h4 className="font-display text-base font-semibold tracking-normal text-content group-hover:text-accent transition-colors line-clamp-1">
                           {chapter.city} Chapter
                         </h4>
-                        <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-muted mt-1 line-clamp-2">
+                        <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-muted mt-0.5 line-clamp-2">
                           {chapter.title}
                         </p>
                       </div>
@@ -194,9 +201,9 @@ export function ChapterBentoGrid() {
         </div>
 
         {/* Bottom Strip: Additional Chapters */}
-        {remaining.length > 2 && (
-          <div className={`grid grid-cols-1 ${remaining.slice(2).length === 1 ? "md:grid-cols-3" : remaining.slice(2).length === 4 ? "sm:grid-cols-2 lg:grid-cols-4" : "md:grid-cols-3"} gap-6 mt-8`}>
-            {remaining.slice(2).map((chapter, idx) => (
+        {bottomChapters.length > 0 && (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+            {bottomChapters.map((chapter, idx) => (
               <SectionReveal key={chapter.id} delay={0.1 * (idx + 1)}>
                 <Link
                   href={`/event#${chapter.id}`}
