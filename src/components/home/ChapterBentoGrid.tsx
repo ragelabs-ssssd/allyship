@@ -56,7 +56,7 @@ export function ChapterBentoGrid() {
                   : "text-content-muted hover:text-content"
               }`}
             >
-              Cycle 2.0 (Latest)
+              Chapter 2.0
               {activeCycle === "2.0" && (
                 <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent" />
               )}
@@ -69,7 +69,7 @@ export function ChapterBentoGrid() {
                   : "text-content-muted hover:text-content"
               }`}
             >
-              Cycle 1.0 (Foundational)
+              Chapter 1.0
               {activeCycle === "1.0" && (
                 <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent" />
               )}
@@ -153,6 +153,13 @@ export function ChapterBentoGrid() {
                         sizes="(max-width: 768px) 100vw, 33vw"
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />
+                      {chapter.id === "bengaluru-2" && (
+                        <div className="absolute bottom-2 left-2 right-2">
+                          <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-black/80 backdrop-blur-md text-accent border border-accent/40 block text-center truncate">
+                            Photos Updating Soon
+                          </span>
+                        </div>
+                      )}
                     </div>
                     <div className="sm:col-span-7 p-5 flex flex-col justify-between space-y-3">
                       <div>
@@ -188,7 +195,7 @@ export function ChapterBentoGrid() {
 
         {/* Bottom Strip: Additional Chapters */}
         {remaining.length > 2 && (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+          <div className={`grid grid-cols-1 ${remaining.slice(2).length === 1 ? "md:grid-cols-3" : remaining.slice(2).length === 4 ? "sm:grid-cols-2 lg:grid-cols-4" : "md:grid-cols-3"} gap-6 mt-8`}>
             {remaining.slice(2).map((chapter, idx) => (
               <SectionReveal key={chapter.id} delay={0.1 * (idx + 1)}>
                 <Link
@@ -208,6 +215,13 @@ export function ChapterBentoGrid() {
                         {chapter.city}
                       </span>
                     </div>
+                    {chapter.id === "bengaluru-2" && (
+                      <div className="absolute bottom-3 left-3">
+                        <span className="px-2.5 py-0.5 rounded-full font-sans text-[10px] uppercase tracking-[0.12em] bg-black/80 backdrop-blur-md text-accent font-semibold border border-accent/40">
+                          Photos Updating Soon
+                        </span>
+                      </div>
+                    )}
                   </div>
                   <div className="p-5 space-y-2">
                     <span className="font-sans text-[11px] text-content-muted uppercase tracking-[0.14em] block font-medium">

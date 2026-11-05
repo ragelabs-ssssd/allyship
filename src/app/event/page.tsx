@@ -122,7 +122,7 @@ function EventContent() {
               </h1>
 
               <p className="text-lg sm:text-xl font-display text-content-muted italic">
-                6 Conclaves Across 5 Metropolitan Capitals
+                7 Conclaves Across 5 Metropolitan Capitals
               </p>
 
               <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal">
@@ -323,7 +323,7 @@ function EventContent() {
                 <div className="font-sans text-xs text-content-secondary mt-1 font-medium">Corporate CXOs Engaged</div>
               </div>
               <div className="p-5 rounded-2xl bg-glass border border-line text-center">
-                <div className="text-3xl sm:text-4xl font-extrabold font-display text-content">6</div>
+                <div className="text-3xl sm:text-4xl font-extrabold font-display text-content">7</div>
                 <div className="font-sans text-xs text-content-secondary mt-1 font-medium">Metro Conclaves</div>
               </div>
               <div className="p-5 rounded-2xl bg-glass border border-line text-center">
@@ -410,7 +410,7 @@ function EventContent() {
                   : "bg-glass border border-line text-content-muted hover:text-content hover:bg-glass-strong"
               }`}
             >
-              {t === "Chapters" && "All 6 Chapters (1.0 & 2.0)"}
+              {t === "Chapters" && "All 7 Chapters (1.0 & 2.0)"}
               {t === "Speakers" && "Marquee Speakers Roster"}
               {t === "Themes" && "Strategic Themes & Evolution"}
               {t === "Videos" && "Official Conclave Videos"}
@@ -421,11 +421,11 @@ function EventContent() {
 
       {/* 4. MAIN TAB CONTENT */}
       <div id="tab-content" className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 py-8 sm:py-12 w-full scroll-mt-24 pt-8">
-        {/* TAB 1: ALL 6 CHAPTERS */}
+        {/* TAB 1: ALL 7 CHAPTERS */}
         {activeTab === "Chapters" && (
           <div id="chapter-details" className="space-y-10 scroll-mt-24 pt-4">
             {/* City Selector Buttons */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 scroll-mt-24">
+            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3 scroll-mt-24">
               {conclaves.map((c, idx) => (
                 <button
                   key={c.id}
@@ -444,7 +444,7 @@ function EventContent() {
                     {c.city}
                   </span>
                   <span className="font-sans text-xs text-content-muted block truncate mt-0.5">
-                    {c.edition.includes("2.0") ? "Edition 2.0" : "Edition 1.0"}
+                    {c.editionCycle === "2.0" ? "Chapter 2.0" : "Chapter 1.0"}
                   </span>
                 </button>
               ))}
@@ -581,7 +581,7 @@ function EventContent() {
                 Marquee Speakers & Leaders
               </h2>
               <p className="font-sans text-sm font-normal tracking-[0.01em] text-content-muted">
-                Over 40 distinguished corporate leaders, Olympic champions, and academic dignitaries across all six Allyship++ conclaves.
+                Over 40 distinguished corporate leaders, Olympic champions, and academic dignitaries across all seven Allyship++ conclaves.
               </p>
             </div>
 
@@ -698,7 +698,7 @@ function EventContent() {
                   Pivoting from <i>why</i> inclusion matters to <i>how</i> enterprises operationalize it daily. Moderated by IIT Delhi&apos;s Prof. Sanjay Dhir in Hyderabad and Standard Chartered&apos;s Global Head Archana Grover in Chennai, leaders addressed the expectations of Gen-Z digital natives—codifying allyship not as an isolated HR program, but as a core leadership responsibility driving psychological safety and innovation.
                 </p>
                 <div className="pt-4 border-t border-line font-sans text-xs text-content-muted tracking-[0.01em]">
-                  Chapters: Hyderabad 2.0 (May 2026) · Chennai 2.0 (July 2026)
+                  Chapters: Hyderabad 2.0 (May 2026) · Chennai 2.0 (July 2026) · Bengaluru 2.0 (2026)
                 </div>
               </div>
             </div>

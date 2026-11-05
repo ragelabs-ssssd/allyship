@@ -426,4 +426,63 @@ export const conclavesData: ConclaveChapter[] = [
     image: "/CON01670.JPG",
     youtubeId: "yD0eEo0oh7A",
   },
+  {
+    id: "bengaluru-2",
+    city: "Bengaluru (2.0)",
+    edition: "Allyship++ 2.0 — 3rd Edition",
+    editionCycle: "2.0",
+    date: "2026",
+    venue: "Bengaluru Metropolitan Executive Hub",
+    turnout: "~75 Corporate Leaders, CXOs & Tech Heads",
+    title: "Next-Gen Talent Synergy & High-Growth Engineering",
+    desc: "Expanding the national 2.0 conclave series to Bengaluru, this edition brings together top engineering leaders, global capability centre directors, and academic leadership to co-develop agile curricula, student mentorship frameworks, and sustained industry-academia partnerships.",
+    sportsGuests: [
+      {
+        name: "Olympic & Sports Mentors",
+        role: "National Athletics & High-Performance Mentors",
+        note: "Keynote on Resilience, Mental Stamina & Coach-Athlete Allyship",
+      },
+    ],
+    leadership: [
+      {
+        name: "Prof. (Dr.) Manojranjan Nayak",
+        role: "Founder President & Chairman, SOA / ITER (Institutional Keynote)",
+      },
+      {
+        name: "Prof. (Dr.) Raj Kumar Hota",
+        role: "Dean of Corporate Relations and Placement, Career Development and Industry Collaboration, SOA",
+      },
+      {
+        name: "Ms. Kajal Panda",
+        role: "Deputy Director, Corporate Relations, SOA",
+      },
+    ],
+    moderators: [
+      {
+        name: "Executive Leadership Council",
+        role: "Roundtable on Workforce Agility & Tech Leadership",
+      },
+    ],
+    panelists: [
+      {
+        name: "Dr. P.B. Kotur",
+        role: "Global Head, Engineering Academy, L&T Technology Services",
+      },
+      {
+        name: "C. Aparna",
+        role: "CHRO, Torry Harris Integration Solutions",
+      },
+      {
+        name: "Baliram Mutagekar",
+        role: "Vice President, BNY Mellon",
+      },
+      {
+        name: "Industry Capability Leaders",
+        role: "Engineering Directors & Global Capability Heads",
+      },
+    ],
+    organizations: ["Microsoft", "Dell", "L&T Technology Services", "Akamai", "BNY Mellon", "Standard Chartered"],
+    focus: "Next-gen talent readiness, corporate-academia CoEs, agile skill benchmarks, and mental wellness in tech.",
+    image: "/IMG_7849.jpg",
+  },
 ];
