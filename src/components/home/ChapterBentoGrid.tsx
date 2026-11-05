@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Calendar, MapPin, Users, Sparkles } from "lucide-react";
+import { ArrowUpRight, Calendar, MapPin, Users } from "lucide-react";
 import { conclavesData, ConclaveChapter } from "@/data/conclaves";
 import { SectionReveal } from "../animations/SectionReveal";
 

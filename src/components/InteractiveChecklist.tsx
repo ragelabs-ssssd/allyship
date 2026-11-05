@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Check, Sparkles, CheckCircle2, RotateCcw } from "lucide-react";
+import { Check, Target, CheckCircle2, RotateCcw } from "lucide-react";
 import { getChecklistState, toggleChecklistItem } from "@/lib/storage";
 
 interface ChecklistItem {
@@ -99,7 +99,7 @@ export function InteractiveChecklist() {
             {progressPercent === 100 ? (
               <CheckCircle2 className="w-8 h-8 text-success" />
             ) : (
-              <Sparkles className="w-6 h-6 text-accent" />
+              <Target className="w-6 h-6 text-accent" />
             )}
           </div>
         </div>

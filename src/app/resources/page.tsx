@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Search, Bookmark, Tag, BookOpen, Sparkles, Filter, X } from "lucide-react";
+import { Search, Bookmark, Tag, BookOpen, Filter, X } from "lucide-react";
 import { RESOURCES } from "@/data/resources";
 import { ResourceCard } from "@/components/ResourceCard";
 import { getSavedResourceIds } from "@/lib/storage";

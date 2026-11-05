@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import {
-  Sparkles,
+  Volume2,
   ShieldCheck,
   Compass,
   Building2,
@@ -52,7 +52,7 @@ export default function AboutPage() {
       action: "Ensuring credit is accurately attributed when ideas are voiced.",
       practice:
         "Intervening in meetings when a colleague's idea is overlooked or repeated by someone else—bringing the point back to the table and explicitly naming the individual who originated it.",
-      icon: Sparkles,
+      icon: Volume2,
     },
     {
       role: "04. Advocate",
@@ -195,7 +195,6 @@ export default function AboutPage() {
         <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase shadow-sm">
-              <Sparkles className="w-3.5 h-3.5 text-accent" />
               <span>About the Movement · Continuous Compounding Inclusion</span>
             </div>
 
@@ -657,7 +656,6 @@ export default function AboutPage() {
 
           <div className="relative z-10 space-y-4">
             <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full font-heading text-[11px] font-bold uppercase tracking-[0.14em] text-accent bg-surface-3 border border-accent/30 shadow-sm">
-              <Sparkles className="w-3.5 h-3.5 text-accent" />
               Executive Conclave Participation
             </span>
 

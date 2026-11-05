@@ -104,7 +104,7 @@ export const INITIATIVES: Initiative[] = [
     fullDescription: "Standard professional and academic environments are heavily tailored to neurotypical communication norms. This initiative brings together neurodivergent advocates and allies to co-create inclusive communication charters, sensory-friendly meeting practices, and flexible contribution models that allow every brain to excel.",
     category: "education",
     categoryLabel: "Neurodiversity & Education",
-    iconName: "Sparkles",
+    iconName: "Lightbulb",
     heroImage: "/images/initiatives/neurodiversity.jpg",
     duration: "Bi-weekly Ongoing Circle",
     format: "Virtual",

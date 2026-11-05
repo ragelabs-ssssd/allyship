@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ArrowRight, Sparkles, ShieldCheck } from "lucide-react";
+import { ArrowRight, ShieldCheck } from "lucide-react";
 import { SectionReveal } from "../animations/SectionReveal";
 
 interface CtaBannerProps {
@@ -17,7 +17,6 @@ export function CtaBanner({ onOpenInvite }: CtaBannerProps) {
       <div className="max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 text-center space-y-8">
         <SectionReveal>
           <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent bg-surface-3 border border-accent/30 shadow-sm">
-            <Sparkles className="w-3.5 h-3.5 text-accent" />
             Executive Participation
           </span>
         </SectionReveal>

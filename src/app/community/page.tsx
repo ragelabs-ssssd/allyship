@@ -7,7 +7,6 @@ import {
   Calendar,
   ShieldCheck,
   Heart,
-  Sparkles,
   MessageSquare,
   CheckCircle2,
   Lock,
@@ -106,7 +105,6 @@ export default function CommunityPage() {
             onClick={() => setIsPledgeModalOpen(true)}
             className="btn-primary"
           >
-            <Sparkles className="w-3.5 h-3.5 text-on-accent" />
             <span>Join the Community (Take Pledge)</span>
           </button>
           <a

@@ -6,7 +6,7 @@ import { Initiative } from "@/lib/types";
 import {
   Briefcase,
   ShieldAlert,
-  Sparkles,
+  Lightbulb,
   GraduationCap,
   Compass,
   FileCheck2,
@@ -24,14 +24,14 @@ interface InitiativeCardProps {
 const ICON_MAP: Record<string, React.ElementType> = {
   Briefcase,
   ShieldAlert,
-  Sparkles,
+  Lightbulb,
   GraduationCap,
   Compass,
   FileCheck2,
 };
 
 export function InitiativeCard({ initiative, variant = "detailed" }: InitiativeCardProps) {
-  const IconComponent = ICON_MAP[initiative.iconName] || Sparkles;
+  const IconComponent = ICON_MAP[initiative.iconName] || Compass;
 
   const categoryColor: Record<string, string> = {
     workplace: "bg-surface-2 text-accent border-line",

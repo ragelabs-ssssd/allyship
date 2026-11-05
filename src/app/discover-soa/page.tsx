@@ -11,7 +11,6 @@ import {
   Building2,
   Trophy,
   CheckCircle2,
-  Sparkles,
   X,
   Stethoscope,
   Cpu,
@@ -337,7 +336,6 @@ export default function DiscoverSoaPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase">
-                <Sparkles className="w-3.5 h-3.5" />
                 <span>Deemed to be University · Bhubaneswar, India</span>
               </div>
 

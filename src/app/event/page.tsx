@@ -7,7 +7,6 @@ import {
   Calendar,
   Clock,
   MapPin,
-  Sparkles,
   ArrowRight,
   Users,
   CheckCircle2,
@@ -114,7 +113,6 @@ function EventContent() {
             {/* Left Column: Editorial Headline & Copy */}
             <div className="lg:col-span-6 xl:col-span-6 space-y-6 text-left">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
-                <Sparkles className="w-3.5 h-3.5 text-accent" />
                 <span>Master Conclave Series · 2024–2026</span>
               </div>
 

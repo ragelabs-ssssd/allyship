@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { Search, Filter, Sparkles, BookOpen, Clock, Users, ArrowRight } from "lucide-react";
+import { Search, Filter, BookOpen, Clock, Users, ArrowRight } from "lucide-react";
 import { INITIATIVES } from "@/data/initiatives";
 import { InitiativeCard } from "@/components/InitiativeCard";
 import { InitiativeCategory } from "@/lib/types";
@@ -43,7 +43,6 @@ export default function InitiativesPage() {
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto space-y-4">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-2 border border-line text-accent text-xs font-semibold font-heading uppercase tracking-wider">
-          <Sparkles className="w-3.5 h-3.5 text-accent" />
           <span>Active Programs & Cohorts</span>
         </div>
 

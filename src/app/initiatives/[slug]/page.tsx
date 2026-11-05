@@ -12,7 +12,6 @@ import {
   ArrowRight,
   ShieldCheck,
   FileCheck2,
-  Sparkles,
   BookOpen,
 } from "lucide-react";
 import { INITIATIVES } from "@/data/initiatives";

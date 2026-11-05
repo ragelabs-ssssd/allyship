@@ -10,7 +10,6 @@ import {
   GraduationCap,
   Briefcase,
   ArrowRight,
-  Sparkles,
   ExternalLink,
   Newspaper,
   Award,
@@ -172,7 +171,6 @@ export default function ImpactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 2xl:gap-24 items-center">
             <div className="lg:col-span-6 xl:col-span-6 space-y-6 text-left">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase">
-                <Sparkles className="w-3.5 h-3.5" />
                 <span>Measurable Outcomes & Media Footprint</span>
               </div>
 

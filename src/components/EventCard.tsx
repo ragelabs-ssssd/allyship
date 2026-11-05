@@ -9,7 +9,6 @@ import {
   User,
   Users,
   CheckCircle2,
-  Sparkles,
 } from "lucide-react";
 import { getRegisteredEventIds, registerForEvent } from "@/lib/storage";
 
@@ -119,7 +118,6 @@ export function EventCard({ event }: EventCardProps) {
             onClick={handleRegister}
             className="inline-flex items-center justify-center gap-2 w-full bg-accent hover:bg-accent-hover text-on-accent font-sans text-xs font-medium tracking-normal py-2.5 px-4 rounded-full transition-colors duration-200 shadow-sm active:scale-95"
           >
-            <Sparkles className="w-3.5 h-3.5 text-on-accent" />
             <span>Register for This Session (Free)</span>
           </button>
         )}

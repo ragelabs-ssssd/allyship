@@ -1,12 +1,11 @@
 import Link from "next/link";
-import { ArrowLeft, Sparkles } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
 export default function NotFound() {
   return (
     <div className="min-h-[70vh] flex items-center justify-center bg-canvas px-6 py-24">
       <div className="text-center max-w-lg space-y-6">
         <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-2 border border-line text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
-          <Sparkles className="w-3.5 h-3.5" />
           Page Not Found
         </span>
 

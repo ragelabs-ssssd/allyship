@@ -11,7 +11,6 @@ import {
   BookOpen,
   CheckCircle2,
   Lightbulb,
-  Sparkles,
   Tag,
 } from "lucide-react";
 import { RESOURCES } from "@/data/resources";
@@ -107,7 +106,7 @@ export default async function ResourceDetailPage({ params }: PageProps) {
       {/* Key Takeaways Highlight Box */}
       <div className="p-6 sm:p-7 rounded-3xl bg-surface-2 border border-line space-y-3">
         <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-content">
-          <Sparkles className="w-4 h-4 text-accent" />
+          <Lightbulb className="w-4 h-4 text-accent" />
           <span>Core Key Takeaways</span>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">

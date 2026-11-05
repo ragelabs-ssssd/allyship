@@ -8,7 +8,6 @@ import {
   Send,
   CheckCircle2,
   AlertCircle,
-  Sparkles,
   HelpCircle,
   ShieldCheck,
   Phone,

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { X, CheckCircle2, ShieldCheck, Mail, Building2, User, Briefcase, Sparkles, ArrowRight } from "lucide-react";
+import { X, CheckCircle2, ShieldCheck, Mail, Building2, User, Briefcase, ArrowRight } from "lucide-react";
 import confetti from "canvas-confetti";
 import { useFocusTrap } from "@/lib/useFocusTrap";
 
@@ -95,7 +95,7 @@ export function GetInvitedModal({ isOpen, onClose }: GetInvitedModalProps) {
         <div className="bg-surface-2 p-6 sm:p-7 text-content flex items-center justify-between border-b border-line">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-glass-strong border border-accent/30 flex items-center justify-center text-accent">
-              <Sparkles className="w-5 h-5" />
+              <Building2 className="w-5 h-5" />
             </div>
             <div>
               <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent block">

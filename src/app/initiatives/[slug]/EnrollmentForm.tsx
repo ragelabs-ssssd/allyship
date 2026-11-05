@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { Initiative } from "@/lib/types";
-import { Sparkles, CheckCircle2, ShieldCheck, ArrowRight } from "lucide-react";
+import { CheckCircle2, ShieldCheck, ArrowRight } from "lucide-react";
 import confetti from "canvas-confetti";
 
 interface EnrollmentFormProps {
@@ -163,7 +163,6 @@ export function InitiativeEnrollmentForm({ initiative }: EnrollmentFormProps) {
             "Processing..."
           ) : (
             <>
-              <Sparkles className="w-3.5 h-3.5" />
               <span>Submit Enrollment Inquiry</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </>

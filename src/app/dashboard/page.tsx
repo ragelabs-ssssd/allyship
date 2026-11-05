@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import {
   User,
-  Sparkles,
   Bookmark,
   Calendar,
   CheckCircle2,
@@ -105,7 +104,7 @@ export default function DashboardPage() {
               onClick={() => setIsPledgeModalOpen(true)}
               className="px-6 py-2.5 rounded-full bg-accent hover:bg-accent-hover text-on-accent font-bold text-xs shadow-md flex items-center gap-2 transition-colors"
             >
-              <Sparkles className="w-3.5 h-3.5" />
+              <ShieldCheck className="w-3.5 h-3.5" />
               <span>Take the Allyship Pledge</span>
             </button>
           ) : (

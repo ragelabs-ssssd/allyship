@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { X, CheckCircle2, ShieldCheck, Heart, Sparkles, ArrowRight, Download, Check } from "lucide-react";
+import { X, CheckCircle2, ShieldCheck, Heart, ArrowRight, Download, Check } from "lucide-react";
 import { savePledge, getStoredPledge } from "@/lib/storage";
 import confetti from "canvas-confetti";
 import Link from "next/link";
@@ -165,7 +165,7 @@ export function PledgeModal({ isOpen, onClose }: PledgeModalProps) {
         <div className="bg-surface-2 text-content p-6 sm:p-8 flex items-center justify-between border-b border-line">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-accent-subtle border border-accent/30 flex items-center justify-center text-accent">
-              <Sparkles className="w-5 h-5" />
+              <ShieldCheck className="w-5 h-5" />
             </div>
             <div>
               <span className="text-xs font-semibold tracking-wider uppercase text-accent">
@@ -386,7 +386,7 @@ export function PledgeModal({ isOpen, onClose }: PledgeModalProps) {
                   className="px-6 py-2.5 rounded-full bg-accent hover:bg-accent-hover text-on-accent text-sm font-semibold flex items-center gap-2 transition-all shadow-md"
                 >
                   {isSubmitting ? "Generating..." : "Affirm & Take Pledge"}
-                  <Sparkles className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
             </form>
