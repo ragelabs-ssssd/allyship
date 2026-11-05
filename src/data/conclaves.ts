@@ -82,7 +82,7 @@ export const conclavesData: ConclaveChapter[] = [
     ],
     organizations: ["Microsoft", "Dell", "Zscaler", "L&T Technology Services", "BNY Mellon", "Tally Solutions"],
     focus: "Cross-disciplinary leadership, mitigating tech-worker burnout, engineering cultures, and hybrid global capability teams.",
-    image: "/IMG_7849.jpg",
+    image: "/bengaluru-1.jpg",
   },
   {
     id: "hyderabad-1",
