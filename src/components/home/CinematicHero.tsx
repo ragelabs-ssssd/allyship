@@ -406,18 +406,6 @@ export function CinematicHero({ onOpenInvite }: CinematicHeroProps) {
           </motion.div>
         </div>
       </div>
-
-      {/* Subtle Scroll Down Prompt */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-1.5 pointer-events-none text-content-faint">
-        <span className="text-[10px] uppercase tracking-widest font-semibold">Scroll</span>
-        <div className="w-4 h-7 rounded-full border border-line-strong flex items-start justify-center p-1">
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }}
-            className="w-1 h-1.5 rounded-full bg-accent"
-          />
-        </div>
-      </div>
     </section>
   );
 }
