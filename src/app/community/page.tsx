@@ -213,7 +213,7 @@ export default function CommunityPage() {
             <span>Safety, Moderation &amp; Privacy Charter</span>
           </div>
 
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-content tracking-tight">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
             How We Protect Vulnerability and Safety
           </h2>
 

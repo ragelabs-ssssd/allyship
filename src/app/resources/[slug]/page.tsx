@@ -123,7 +123,7 @@ export default async function ResourceDetailPage({ params }: PageProps) {
       <div className="space-y-10 text-content-secondary text-sm sm:text-base leading-relaxed pt-2">
         {resource.content.map((sec, idx) => (
           <section key={idx} className="space-y-4">
-            <h2 className="text-xl sm:text-2xl font-bold text-content tracking-tight">
+            <h2 className="font-heading text-xl sm:text-2xl font-bold text-content tracking-tight">
               {sec.heading}
             </h2>
             {sec.paragraphs.map((p, pIdx) => (
@@ -170,7 +170,7 @@ export default async function ResourceDetailPage({ params }: PageProps) {
       {/* Related Resources */}
       {relatedResources.length > 0 && (
         <div className="pt-12 border-t border-line space-y-6">
-          <h2 className="text-2xl font-bold text-content">Continue Learning</h2>
+          <h2 className="font-heading text-2xl font-bold text-content">Continue Learning</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {relatedResources.map((rel) => (
               <ResourceCard key={rel.id} resource={rel} />

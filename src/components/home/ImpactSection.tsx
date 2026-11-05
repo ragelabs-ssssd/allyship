@@ -95,7 +95,7 @@ export function ImpactSection() {
             <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
               Quantifiable Distinction
             </span>
-            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-[-0.025em] leading-[1.1] text-content mt-2">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-[-0.025em] leading-[1.1] text-content mt-2 sm:whitespace-nowrap">
               National Scale &amp; Measurable Impact
             </h2>
           </div>

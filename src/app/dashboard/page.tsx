@@ -80,7 +80,7 @@ export default function DashboardPage() {
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <h1 className="text-2xl font-bold text-content tracking-tight">
+              <h1 className="font-heading text-2xl font-bold text-content tracking-tight">
                 {pledge ? `Welcome back, ${pledge.name}` : "Ally Member Portal"}
               </h1>
               {pledge && (
@@ -169,7 +169,7 @@ export default function DashboardPage() {
                   <span className="text-[11px] font-bold uppercase tracking-widest text-accent">
                     Official Recognition
                   </span>
-                  <h2 className="text-3xl sm:text-4xl font-extrabold text-content mt-1">
+                  <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-content mt-1">
                     {pledge.name}
                   </h2>
                   <p className="text-xs sm:text-sm text-content-secondary mt-2 italic leading-relaxed">
@@ -198,7 +198,7 @@ export default function DashboardPage() {
               <div className="w-12 h-12 rounded-full bg-surface-2 text-accent flex items-center justify-center mx-auto border border-line">
                 <Award className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold text-content">No Active Pledge Yet</h3>
+              <h3 className="font-heading text-lg font-bold text-content">No Active Pledge Yet</h3>
               <p className="text-xs text-content-muted leading-relaxed">
                 Affirm your commitment to active solidarity, receive your personalized Certificate of Active Allyship, and unlock member recommendations.
               </p>
@@ -257,7 +257,7 @@ export default function DashboardPage() {
       {activeTab === "resources" && (
         <div className="space-y-6">
           <div className="flex items-center justify-between">
-            <h2 className="text-xl font-bold text-content">Your Saved Reading List</h2>
+            <h2 className="font-heading text-xl font-bold text-content">Your Saved Reading List</h2>
             <Link href="/resources" className="text-xs font-bold text-accent hover:underline">
               + Discover more resources
             </Link>
@@ -309,7 +309,7 @@ export default function DashboardPage() {
       {activeTab === "events" && (
         <div className="space-y-6">
           <div className="flex items-center justify-between">
-            <h2 className="text-xl font-bold text-content">Your Upcoming Registered Gatherings</h2>
+            <h2 className="font-heading text-xl font-bold text-content">Your Upcoming Registered Gatherings</h2>
             <Link href="/community" className="text-xs font-bold text-accent hover:underline">
               + Explore Community Calendar
             </Link>
@@ -328,7 +328,7 @@ export default function DashboardPage() {
                       ✓ Confirmed RSVP
                     </span>
                   </div>
-                  <h3 className="text-sm font-bold text-content">{evt.title}</h3>
+                  <h3 className="font-heading text-sm font-bold text-content">{evt.title}</h3>
                   <p className="text-xs text-content-muted">{evt.date} • {evt.time} ({evt.timezone})</p>
                 </div>
               ))}

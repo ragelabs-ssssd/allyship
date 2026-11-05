@@ -256,7 +256,7 @@ export default function AboutPage() {
             <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
               The Genesis of Allyship++
             </span>
-            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
               Industry and Academia, in the Same Room
             </h2>
 
@@ -586,7 +586,7 @@ export default function AboutPage() {
               <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
                 The Sports-Corporate-Academia Triad
               </span>
-              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
+              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
                 Why Sports Legends Anchor Allyship++
               </h2>
               <p className="text-sm sm:text-base text-content-secondary leading-relaxed font-normal">

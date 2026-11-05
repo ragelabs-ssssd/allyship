@@ -120,7 +120,7 @@ export default async function InitiativeDetailPage({ params }: PageProps) {
         <div className="lg:col-span-7 space-y-12">
           {/* Key Learning Outcomes */}
           <section className="bg-surface rounded-3xl p-7 sm:p-8 border border-line shadow-xl space-y-4">
-            <h2 className="text-xl font-bold text-content tracking-tight flex items-center gap-2">
+            <h2 className="font-heading text-xl font-bold text-content tracking-tight flex items-center gap-2">
               <CheckCircle2 className="w-5 h-5 text-success" />
               What You Will Achieve
             </h2>
@@ -142,7 +142,7 @@ export default async function InitiativeDetailPage({ params }: PageProps) {
               <span className="text-xs font-bold uppercase tracking-wider text-accent block mb-1">
                 Structured Pedagogy
               </span>
-              <h2 className="text-2xl font-bold text-content tracking-tight">
+              <h2 className="font-heading text-2xl font-bold text-content tracking-tight">
                 Curriculum & Cohort Syllabus
               </h2>
             </div>
@@ -168,7 +168,7 @@ export default async function InitiativeDetailPage({ params }: PageProps) {
 
           {/* Target Audience */}
           <section className="bg-surface-2 rounded-3xl p-7 border border-line space-y-4">
-            <h2 className="text-lg font-bold text-content">Who This Initiative Is Designed For</h2>
+            <h2 className="font-heading text-lg font-bold text-content">Who This Initiative Is Designed For</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
               {initiative.targetAudience.map((aud, idx) => (
                 <div key={idx} className="flex items-start gap-2 text-xs text-content-secondary">
@@ -202,7 +202,7 @@ export default async function InitiativeDetailPage({ params }: PageProps) {
       {/* Related Initiatives */}
       {relatedInitiatives.length > 0 && (
         <div className="pt-12 border-t border-line space-y-6">
-          <h2 className="text-2xl font-bold text-content">Other Active Initiatives</h2>
+          <h2 className="font-heading text-2xl font-bold text-content">Other Active Initiatives</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {relatedInitiatives.map((rel) => (
               <InitiativeCard key={rel.id} initiative={rel} variant="compact" />

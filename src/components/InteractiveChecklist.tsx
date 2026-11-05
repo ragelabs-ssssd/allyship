@@ -80,7 +80,7 @@ export function InteractiveChecklist() {
           <span className="text-[11px] font-bold uppercase tracking-wider text-accent">
             Interactive Tool
           </span>
-          <h3 className="text-xl font-bold text-content mt-0.5">
+          <h3 className="font-heading text-xl font-bold text-content mt-0.5">
             Everyday Ally Action Checklist
           </h3>
           <p className="text-xs text-content-muted mt-1">

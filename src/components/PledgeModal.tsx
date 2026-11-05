@@ -170,7 +170,7 @@ export function PledgeModal({ isOpen, onClose }: PledgeModalProps) {
               <span className="text-xs font-semibold tracking-wider uppercase text-accent">
                 Official Declaration
               </span>
-              <h2 id="pledge-modal-title" className="text-xl sm:text-2xl font-bold tracking-tight text-content">
+              <h2 id="pledge-modal-title" className="font-heading text-xl sm:text-2xl font-bold tracking-tight text-content">
                 The Allyship Pledge
               </h2>
             </div>
@@ -207,7 +207,7 @@ export function PledgeModal({ isOpen, onClose }: PledgeModalProps) {
           {step === 1 && (
             <div className="space-y-4">
               <div>
-                <h3 className="text-lg font-bold text-content">Where do you want to practice active allyship?</h3>
+                <h3 className="font-heading text-lg font-bold text-content">Where do you want to practice active allyship?</h3>
                 <p className="text-sm text-content-muted mt-1">
                   Choose one or more areas where you hold influence or wish to deepen your everyday solidarity.
                 </p>
@@ -258,7 +258,7 @@ export function PledgeModal({ isOpen, onClose }: PledgeModalProps) {
           {step === 2 && (
             <div className="space-y-4">
               <div>
-                <h3 className="text-lg font-bold text-content">Affirm Your Core Commitments</h3>
+                <h3 className="font-heading text-lg font-bold text-content">Affirm Your Core Commitments</h3>
                 <p className="text-sm text-content-muted mt-1">
                   Allyship is defined by consistent habits, not passive agreement. Affirm these principles:
                 </p>
@@ -317,7 +317,7 @@ export function PledgeModal({ isOpen, onClose }: PledgeModalProps) {
           {step === 3 && (
             <form onSubmit={handleCompletePledge} className="space-y-4">
               <div>
-                <h3 className="text-lg font-bold text-content">Personalize Your Allyship Declaration</h3>
+                <h3 className="font-heading text-lg font-bold text-content">Personalize Your Allyship Declaration</h3>
                 <p className="text-sm text-content-muted mt-1">
                   We generate your personalized Allyship Certificate and add your participation to your local device dashboard.
                 </p>
@@ -401,7 +401,7 @@ export function PledgeModal({ isOpen, onClose }: PledgeModalProps) {
                 <span className="text-xs uppercase font-bold tracking-widest text-success">
                   Pledge Confirmed
                 </span>
-                <h3 className="text-xl sm:text-2xl font-bold text-content mt-1">
+                <h3 className="font-heading text-xl sm:text-2xl font-bold text-content mt-1">
                   Thank You for Standing with Us, {fullName}!
                 </h3>
                 <p className="text-xs text-content-muted max-w-md mx-auto mt-1.5">
