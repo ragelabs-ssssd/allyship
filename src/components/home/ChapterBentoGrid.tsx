@@ -7,6 +7,19 @@ import { ArrowUpRight, Calendar, MapPin, Users } from "lucide-react";
 import { conclavesData, ConclaveChapter } from "@/data/conclaves";
 import { SectionReveal } from "../animations/SectionReveal";
 
+function getEditionLabel(edition: string, activeCycle: "all" | "2.0" | "1.0"): string {
+  if (activeCycle === "all") return edition;
+  return edition
+    .replace(/^ALLYSHIP\+\+\s*(1\.0|2\.0)\s*—\s*/i, "")
+    .replace(/\s*of\s*2\.0/i, "")
+    .trim();
+}
+
+function getCityLabel(city: string, activeCycle: "all" | "2.0" | "1.0"): string {
+  if (activeCycle === "all") return city;
+  return city.replace(/\s*\((1\.0|2\.0)\)/i, "").trim();
+}
+
 export function ChapterBentoGrid() {
   const [activeCycle, setActiveCycle] = useState<"all" | "2.0" | "1.0">("all");
 
@@ -103,7 +116,7 @@ export function ChapterBentoGrid() {
 
                   <div className="absolute top-4 left-4 flex items-center gap-2">
                     <span className="px-3 py-1 rounded-full font-sans text-[11px] font-semibold tracking-[0.14em] uppercase bg-black/70 backdrop-blur-md text-white border border-line">
-                      {featured.edition}
+                      {getEditionLabel(featured.edition, activeCycle)}
                     </span>
                     <span className="px-3 py-1 rounded-full font-sans text-[11px] font-semibold tracking-[0.14em] uppercase bg-accent text-on-accent">
                       Featured
@@ -120,7 +133,7 @@ export function ChapterBentoGrid() {
                       {featured.date} • {featured.venue}
                     </p>
                     <h3 className="font-display text-xl sm:text-2xl font-bold tracking-normal text-content leading-snug">
-                      {featured.city}: {featured.title}
+                      {getCityLabel(featured.city, activeCycle)}: {featured.title}
                     </h3>
                   </div>
                 </div>
@@ -177,14 +190,14 @@ export function ChapterBentoGrid() {
                       <div>
                         <div className="flex items-center justify-between gap-2 mb-1">
                           <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
-                            {chapter.edition}
+                            {getEditionLabel(chapter.edition, activeCycle)}
                           </span>
                           <span className="font-sans text-xs text-content-muted font-medium">
                             {chapter.date}
                           </span>
                         </div>
                         <h4 className="font-display text-base font-semibold tracking-normal text-content group-hover:text-accent transition-colors line-clamp-1">
-                          {chapter.city} Chapter
+                          {getCityLabel(chapter.city, activeCycle)} Chapter
                         </h4>
                         <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-muted mt-0.5 line-clamp-2">
                           {chapter.title}
@@ -224,7 +237,7 @@ export function ChapterBentoGrid() {
                     />
                     <div className="absolute top-3 left-3">
                       <span className="px-2.5 py-0.5 rounded-full font-sans text-[11px] uppercase tracking-[0.14em] bg-black/70 backdrop-blur-md text-white font-semibold border border-line">
-                        {chapter.city}
+                        {getCityLabel(chapter.city, activeCycle)}
                       </span>
                     </div>
                     {chapter.id === "bengaluru-2" && (
@@ -237,7 +250,7 @@ export function ChapterBentoGrid() {
                   </div>
                   <div className="p-5 space-y-2">
                     <span className="font-sans text-[11px] text-content-muted uppercase tracking-[0.14em] block font-medium">
-                      {chapter.date} • {chapter.edition}
+                      {chapter.date} • {getEditionLabel(chapter.edition, activeCycle)}
                     </span>
                     <h4 className="font-display text-base font-semibold tracking-normal text-content line-clamp-1 group-hover:text-accent transition-colors">
                       {chapter.title}
