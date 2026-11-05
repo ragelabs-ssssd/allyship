@@ -236,11 +236,11 @@ export default function ImpactPage() {
 
       {/* 2. THREE QUALITATIVE OUTCOME PILLARS */}
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div className="text-center max-w-5xl mx-auto mb-16 space-y-4">
           <span className="font-heading text-xs font-bold uppercase tracking-widest text-accent">
             Institutional Transformation
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-content tracking-tight">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight md:whitespace-nowrap">
             From Dialogue to Institutional Action
           </h2>
           <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl mx-auto">
