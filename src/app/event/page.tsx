@@ -148,7 +148,7 @@ function EventContent() {
             </div>
 
             {/* Right Column: Curated Photo Frame */}
-            <div className="lg:col-span-5 relative">
+            <div className="lg:col-span-5 relative lg:-translate-y-6">
               <div className="relative rounded-3xl overflow-hidden bg-surface p-1.5 border border-line shadow-xl">
                 <div className="relative aspect-[16/11] sm:aspect-[4/3] rounded-2xl overflow-hidden bg-surface-3 on-media">
                   {eventHeroImages.map((slide, idx) => (
