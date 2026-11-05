@@ -43,28 +43,28 @@ export default function CollaboratePage() {
 
   const partnershipPillars = [
     {
-      title: "Industry Challenges & Incubation",
+      title: "Industry Problem Statements",
       icon: Lightbulb,
-      desc: "Bring real-world engineering, clinical, or business challenges for faculty and student teams to prototype via the AIC-SOA Foundation (Atal Incubation Centre under NITI Aayog).",
-      action: "Submit Problem Statement",
+      desc: "Share a real engineering, clinical or business challenge. Faculty and student teams work on it, with support from the AIC-SOA Foundation (Atal Incubation Centre under NITI Aayog).",
+      action: "Submit a Problem Statement",
     },
     {
-      title: "Centres of Excellence & R&D",
+      title: "Guest Sessions",
       icon: Cpu,
-      desc: "Co-establish specialized labs modeled on SOA’s recent Centres of Excellence with Tech Mahindra (ServiceNow & Enterprise Tech at ITER) and L&T Technology Services (AI in Medicine & MedTech).",
-      action: "Explore CoE Models",
+      desc: "Spend an hour on campus or online. Talk with students and faculty about your industry, your work and the leadership lessons you have learned along the way.",
+      action: "Offer a Guest Session",
     },
     {
-      title: "Executive Mentorship & Curriculum Co-Design",
+      title: "Mentorship",
       icon: Users,
-      desc: "Shape flexible curricula and job-ready training tracks—building on SOA’s Talent Next and Mission10x alliances with Wipro Ltd and scholarships with Blue Star Foundation.",
-      action: "Join Advisory Boards",
+      desc: "Guide students and young professionals as they move from campus to workplace. Help shape what they learn, building on SOA’s existing industry alliances such as Wipro’s Talent Next and Mission10x.",
+      action: "Become a Mentor",
     },
     {
-      title: "High-Velocity Internships & Campus Hiring",
+      title: "Talent Partnerships",
       icon: TrendingUp,
-      desc: "Recruit from an ecosystem delivering 94.54% B.Tech and 97.22% MBA placement rates, ₹46 LPA peak packages, and record selections by global leaders like the London Stock Exchange Group (LSEG).",
-      action: "Initiate Recruitment",
+      desc: "Build a steady pipeline through internships and campus hiring across engineering, management, healthcare, law and pharmacy. SOA’s placement record is set out below.",
+      action: "Start a Talent Partnership",
     },
   ];
 
@@ -168,20 +168,20 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase">
-                <span>Corporate Partnership Portal</span>
+                <span>Collaborate With SOA</span>
               </div>
 
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
-                Partner with <br />
-                <span className="italic font-normal whitespace-nowrap">Siksha &lsquo;O&rsquo; Anusandhan</span>
+                Leadership That Connects. <br />
+                Collaboration That <span className="italic font-normal whitespace-nowrap">Creates Impact.</span>
               </h1>
 
               <p className="text-lg sm:text-xl font-display text-content-muted italic">
-                Co-Innovate. Mentor Emerging Leaders. Build Strategic Pipelines.
+                Mentor. Share a challenge. Grow future talent.
               </p>
 
               <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal">
-                From co-establishing specialized campus Centres of Excellence with Tech Mahindra and LTTS, to sponsoring challenge problem statements via the AIC-SOA Foundation, Siksha &lsquo;O&rsquo; Anusandhan offers corporate partners a high-velocity collaboration ecosystem built for industrial synergy.
+                ALLYSHIP++ does not end when a conclave closes. Siksha &lsquo;O&rsquo; Anusandhan invites industry leaders to stay involved: guiding students, opening real problems to campus teams and building talent partnerships that last.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
@@ -198,7 +198,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
                   onClick={() => setIsInviteOpen(true)}
                   className="btn-secondary"
                 >
-                  <span>Request Executive Visit</span>
+                  <span>Request an Invitation</span>
                 </button>
               </div>
             </div>
@@ -216,10 +216,10 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-5 text-content">
                     <span className="text-[11px] font-bold font-heading text-[#E8D5A7] uppercase tracking-wider">
-                      Institutional Synergy
+                      Industry and Academia
                     </span>
                     <span className="text-sm font-bold text-content mt-0.5">
-                      CoE Co-Creation & Recruitment Hubs
+                      Corporate Relations &amp; Placement, SOA
                     </span>
                     <span className="text-[11px] text-content-secondary mt-0.5">
                       Direct Corporate Relations · info@soa.ac.in
@@ -236,13 +236,13 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
         <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
-            Four Strategic Avenues
+            Four Ways to Take Part
           </span>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
-            How Corporate Leaders Collaborate with SOA
+            From Dialogue to Action
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
-            Move beyond transactional campus hiring into deep, reciprocal engagements that accelerate your engineering, research, and workforce transformation.
+            Each avenue is simple to start and grows with time. Choose the one that fits how you want to give back.
           </p>
         </div>
 
@@ -287,14 +287,14 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
           <div className="flex items-center gap-2 text-accent">
             <Award className="w-5 h-5" />
             <span className="text-xs font-bold uppercase tracking-wider font-heading">
-              Recruitment Velocity & Talent Quality
+              SOA Placement Record
             </span>
           </div>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
-            Multi-Year Placement Performance
+            SOA&apos;s Placement Record
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl">
-            SOA’s placement track record reflects deepened trust among Fortune 500 recruiters and global capability centres across engineering, management, clinical healthcare, and legal disciplines.
+            These figures are Siksha &lsquo;O&rsquo; Anusandhan&apos;s university placement results, not ALLYSHIP++ outcomes. They show the talent that talent partners can meet on campus.
           </p>
         </div>
 
@@ -308,7 +308,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
                   <th className="py-4 px-4 font-bold text-center">2023 Placement</th>
                   <th className="py-4 px-4 font-bold text-center text-accent">2024 (Latest)</th>
                   <th className="py-4 px-4 font-bold">Median / Peak Package</th>
-                  <th className="py-4 px-6 font-bold hidden lg:table-cell">Marquee Corporate Recruiters</th>
+                  <th className="py-4 px-6 font-bold hidden lg:table-cell">Recruiters Include</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-line">
@@ -345,18 +345,18 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 2xl:gap-24 items-start">
           <div className="lg:col-span-5 space-y-6">
             <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
-              Direct Interface
+              Share a Challenge
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
-              Submit an Industry Problem Statement
+              Bring Us a Real Problem
             </h2>
             <p className="text-base text-content-secondary leading-relaxed font-normal">
-              Have an enterprise bottleneck, AI prototyping need, or clinical innovation challenge? Submit your problem brief directly to Dean Prof. (Dr.) Raj Kumar Hota and the Corporate Relations team.
+              Tell us about a problem your team is working on. Your brief goes to Prof. (Dr.) Raj Kumar Hota, Dean, Corporate Relations &amp; Placement, and his team.
             </p>
 
             <div className="bg-surface rounded-2xl p-6 border border-line shadow-sm space-y-3">
               <span className="text-xs font-bold font-heading text-accent uppercase tracking-wider block">
-                Direct Contact Office
+                Contact Office
               </span>
               <div className="text-xs text-content-muted space-y-2">
                 <div className="font-bold text-content">Dean of Corporate Relations and Placement</div>
@@ -375,9 +375,9 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
                   <div className="space-y-2">
-                    <h3 className="font-heading text-2xl font-bold text-content">Challenge Brief Recorded!</h3>
+                    <h3 className="font-heading text-2xl font-bold text-content">Thank You. Your Brief Is In.</h3>
                     <p className="text-sm text-content-muted max-w-md mx-auto">
-                      Thank you for submitting your problem brief to SOA University. Our corporate relations committee will review it and initiate contact.
+                      The Corporate Relations team at SOA will review your brief and get in touch.
                     </p>
                     <div className="inline-block px-4 py-2 rounded-xl bg-surface-2 border border-line text-content text-xs font-bold mt-2">
                       Reference ID: {refId}
@@ -493,14 +493,14 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
                       rows={4}
                       value={challengeDesc}
                       onChange={(e) => setChallengeDesc(e.target.value)}
-                      placeholder="Describe the operational problem, prototype requirements, desired faculty domain, and expected project timeframe..."
+                      placeholder="What is the problem, what would a good result look like, and what timeframe do you have in mind?"
                       className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder-slate-500 text-xs focus:outline-none focus:border-accent transition-colors"
                     />
                   </div>
 
                   <div className="pt-2 flex flex-wrap items-center justify-between gap-4">
                     <span className="text-xs text-content-muted">
-                      Submissions reviewed by SOA Dean of Corporate Relations
+                      Reviewed by the SOA Corporate Relations team
                     </span>
                     <button
                       type="submit"

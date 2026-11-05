@@ -34,7 +34,7 @@ export const conclavesData: ConclaveChapter[] = [
     venue: "Bengaluru Metropolitan Hub",
     turnout: "~70 Corporate Leaders & Capability Heads",
     title: "Leadership and Collaboration Across Disciplines",
-    desc: "SOA Founder President & Chairman Prof. (Dr.) Manojranjan Nayak and institutional leadership delivered the inaugural address highlighting collaborative leadership, followed by an inspiring virtual keynote on 'Leadership in Sports' by Olympian and World Championship medalist Anju Bobby George. Senior engineering and people leaders from Microsoft, Dell, Zscaler, and global capability centres deliberated on engineering cultures, mitigating burnout, and nurturing hybrid global teams.",
+    desc: "The first Allyship++ chapter brought around 70 corporate leaders, HR professionals and industry experts together in Bengaluru. SOA Vice-Chancellor Prof. Pradipta Kumar Nanda opened the conclave, and Olympian Anju Bobby George addressed the gathering virtually on 'Leadership in Sports'. A panel of leaders from L&T Technology Services, Torry Harris, BNY Mellon and Tally Solutions examined where leadership and corporate relationships are heading next.",
     sportsGuests: [
       {
         name: "Anju Bobby George",
@@ -44,12 +44,12 @@ export const conclavesData: ConclaveChapter[] = [
     ],
     leadership: [
       {
-        name: "Prof. (Dr.) Manojranjan Nayak",
-        role: "Founder President & Chairman, SOA / ITER (Inaugural Address)",
+        name: "Prof. Pradipta Kumar Nanda",
+        role: "Vice-Chancellor, SOA (Inaugural Address)",
       },
       {
         name: "Prof. (Dr.) Raj Kumar Hota",
-        role: "Dean of Corporate Relations and Placement, Career Development and Industry Collaboration, SOA",
+        role: "Dean of Corporate Relations and Placement, SOA (Convener)",
       },
     ],
     moderators: [
@@ -81,7 +81,7 @@ export const conclavesData: ConclaveChapter[] = [
       },
     ],
     organizations: ["Microsoft", "Dell", "Zscaler", "L&T Technology Services", "BNY Mellon", "Tally Solutions"],
-    focus: "Cross-disciplinary leadership, mitigating tech-worker burnout, engineering cultures, and hybrid global capability teams.",
+    focus: "Bridging academia and industry, leadership in sports, and the changing expectations of modern workplaces.",
     image: "/bengaluru-1.jpg",
   },
   {
@@ -93,7 +93,7 @@ export const conclavesData: ConclaveChapter[] = [
     venue: "Hyderabad Tech Corridor",
     turnout: "60+ Corporate Leaders & HR Executives",
     title: "Practicing Allyship at the Organizational Level",
-    desc: "Former Indian Test cricketer Arshad Ayub joined as Chief Guest to illuminate leadership, mental stamina, and trust in dynamic business environments. Convened by Prof. (Dr.) Raj Kumar Hota alongside Prof. P.K. Patra, CXO advisors, engineering VPs, and CSIR scientists examined how to operationalize allyship at organizational and personal levels while accelerating joint R&D pipelines.",
+    desc: "Former Indian Test cricketer Arshad Ayub joined as Chief Guest to share lessons on leadership, composure, and trust in high-pressure environments. Convened by Prof. (Dr.) Raj Kumar Hota alongside Prof. P.K. Patra, corporate executives, HR leaders, and researchers discussed how organisations can practice allyship across teams while building closer research and talent ties with universities.",
     sportsGuests: [
       {
         name: "Arshad Ayub",
@@ -144,7 +144,7 @@ export const conclavesData: ConclaveChapter[] = [
       },
     ],
     organizations: ["UPS", "Kloudgin", "Innova Solutions", "CSIR", "Human Edge", "Integraminds"],
-    focus: "Practicing allyship across organizational tiers, closer academic-corporate R&D cooperation, and psychological safety.",
+    focus: "Practicing allyship across teams, closer academic–industry cooperation, and supportive workplace cultures.",
     image: "/hyderabad-1.jpg",
     youtubeId: "8wSGKsWyQwk",
   },
@@ -156,8 +156,8 @@ export const conclavesData: ConclaveChapter[] = [
     date: "September 2024",
     venue: "Kolkata City Hub",
     turnout: "Dual-Panel Conclave & Sports Legends Tribute",
-    title: "Bridging Legacy Business, Digital Transformation & DEI",
-    desc: "Featuring two powerhouse industry panels spanning cloud consulting, fintech, telecom, and Fortune 500 DEI advisory, the Kolkata chapter celebrated legendary sporting icons: 1964 Olympic hockey gold medalist Gurbux Singh, football maestro Gautam Sarkar ('Indian Beckenbauer'), and Satyaprakash Krishna (mentor to M.S. Dhoni), alongside senior IAS officer Smruti Ranjan Mohanty.",
+    title: "Leadership, Collaboration, and Workplace Inclusion",
+    desc: "The Kolkata conclave brought together corporate and HR leaders from PwC, Lexmark India, Vodafone, and Reliance Jio alongside sporting and public-service figures: 1964 Olympic hockey gold medalist Gurbux Singh, footballer Gautam Sarkar ('Indian Beckenbauer'), Satyaprakash Krishna (mentor to M.S. Dhoni), and senior IAS officer and SOA alumnus Smruti Ranjan Mohanty.",
     sportsGuests: [
       {
         name: "Gurbux Singh",
@@ -239,7 +239,7 @@ export const conclavesData: ConclaveChapter[] = [
       },
     ],
     organizations: ["PwC", "Lexmark", "Reliance Jio", "Vodafone", "NRI FinTech", "WICCI"],
-    focus: "Connecting legacy corporate practices with digital DEI standards, cloud transformation, and sports-inspired leadership.",
+    focus: "Supportive workplace environments, mentorship across generations, and closer ties between universities and industry.",
     image: "/kolkata-1.jpg",
   },
   {
@@ -251,7 +251,7 @@ export const conclavesData: ConclaveChapter[] = [
     venue: "Mumbai Financial Capital",
     turnout: "~60 Senior Leaders & HR Executives",
     title: "Building Inclusive and Empowered Workplaces",
-    desc: "Following an inaugural address on visionary leadership by SOA Chairman Prof. (Dr.) Manojranjan Nayak, former Indian Test cricketer Nilesh Kulkarni led a fireside discussion on sports education, resilience, and perseverance with Olympian Anand Menezes. Dr. P.B. Kotur moderated an executive panel on balancing quarterly growth with junior analyst well-being.",
+    desc: "In Mumbai, former Indian Test cricketer Nilesh Kulkarni and Olympian Anand Menezes spoke on resilience, discipline, and what sport teaches about supporting talent. Dr. P.B. Kotur moderated a conversation with senior HR and talent leaders on building inclusive workplaces where people can perform at their best.",
     sportsGuests: [
       {
         name: "Nilesh Kulkarni",
@@ -303,7 +303,7 @@ export const conclavesData: ConclaveChapter[] = [
       },
     ],
     organizations: ["Times Professional Learning", "Protiviti", "Business Next", "India Factoring", "AFI"],
-    focus: "Allyship: Building inclusive, high-empathy workplaces, balancing quarterly targets with mental wellness, and psychological safety.",
+    focus: "Inclusive leadership, workplace empathy, and long-term talent development.",
     image: "/mumbai-1.jpg",
   },
   {
@@ -314,8 +314,8 @@ export const conclavesData: ConclaveChapter[] = [
     date: "March 2026",
     venue: "Bengaluru Metropolitan Executive Hub",
     turnout: "~75 Corporate Leaders, CXOs & Tech Heads",
-    title: "Next-Gen Talent Synergy & High-Growth Engineering",
-    desc: "Inaugurating the national 2.0 conclave series in Bengaluru, this edition brings together top engineering leaders, global capability centre directors, and academic leadership to co-develop agile curricula, student mentorship frameworks, and sustained industry-academia partnerships.",
+    title: "Next-Gen Talent & Industry–Academia Collaboration",
+    desc: "Opening the second cycle of the conclave series in Bengaluru, engineering and HR leaders met with SOA faculty to discuss how universities and technology companies can prepare graduates for changing workplaces through mentorship and shared learning.",
     sportsGuests: [
       {
         name: "Olympic & Sports Mentors",
@@ -362,7 +362,7 @@ export const conclavesData: ConclaveChapter[] = [
       },
     ],
     organizations: ["Microsoft", "Dell", "L&T Technology Services", "Akamai", "BNY Mellon", "Standard Chartered"],
-    focus: "Next-gen talent readiness, corporate-academia CoEs, agile skill benchmarks, and mental wellness in tech.",
+    focus: "Graduate readiness, industry mentorship, and sustained collaboration between campus and workplace.",
     image: "/bengaluru-2.jpg",
   },
   {
@@ -373,8 +373,8 @@ export const conclavesData: ConclaveChapter[] = [
     date: "May 2026",
     venue: "Le Meridien, Gachibowli, Hyderabad",
     turnout: "Regional CXOs, Capability Heads & IIT Faculty",
-    title: "Practicing Allyship in Gen-Z Leadership",
-    desc: "Following the Bengaluru chapter, this conclave explored workforce transformation, learning agility, and the campus-to-corporate bridge for Gen-Z talent. Dr. G. Srinivas Patnaik (Secretary, Athletics Federation of India) presented principles on discipline and mutual trust, while IIT Delhi's Prof. Sanjay Dhir guided executive roundtables on empathetic management.",
+    title: "Practicing Allyship for Emerging Talent",
+    desc: "The second Hyderabad chapter examined how organisations welcome and guide early-career professionals. Dr. G. Srinivas Patnaik (Secretary, Athletics Federation of India) spoke on discipline and trust in developing young talent, and IIT Delhi's Prof. Sanjay Dhir moderated discussions with HR leaders on responsible management.",
     sportsGuests: [
       {
         name: "Dr. G. Srinivas Patnaik",
@@ -421,7 +421,7 @@ export const conclavesData: ConclaveChapter[] = [
       },
     ],
     organizations: ["Akamai Technologies", "Reckitt", "NCC Ltd", "Keolis Hyderabad", "IIT Delhi", "AFI"],
-    focus: "Practicing Allyship in Gen-Z Leadership; learning agility, campus-to-corporate transition, and empathetic leadership models.",
+    focus: "Guiding early-career professionals, campus-to-workplace transition, and empathetic leadership.",
     image: "/IMG_7873.jpg",
     youtubeId: "8wSGKsWyQwk",
   },
@@ -434,22 +434,22 @@ export const conclavesData: ConclaveChapter[] = [
     venue: "Chennai Executive Hub",
     turnout: "60+ Industry Leaders, HR Heads & Academicians",
     title: "Practicing Allyship as a Leadership Responsibility",
-    desc: "Headlined by a fireside chat with high-performance athletics coach Premanand J. (who trained the Indian national sprint squad for the Paris Olympics) on coach-athlete allyship, followed by an executive panel moderated by Standard Chartered's Global Head Archana Grover. Leaders united in asserting that allyship must be practiced as a continuous leadership duty.",
+    desc: "Over 60 industry leaders, HR professionals, and academicians gathered in Chennai around the theme 'Practicing Allyship'. Former international sprinter and Paris Olympics national sprint coach Premanand J. shared lessons on resilience, discipline, and mentorship, followed by a panel moderated by Standard Chartered's Archana Grover on how allyship builds trust, innovation, and lasting success.",
     sportsGuests: [
       {
         name: "Premanand J.",
         role: "Paris Olympics National Sprint Coach & Former International Sprinter",
-        note: "Fireside Chat on Discipline, Athletic Conditioning & Mentorship",
+        note: "Fireside Chat on Resilience, Discipline, Leadership & Mentorship",
       },
     ],
     leadership: [
       {
-        name: "Prof. (Dr.) Manojranjan Nayak",
-        role: "Founder President & Chairman, SOA / ITER (Address on Future-Ready Workplaces)",
+        name: "Prof. Pradipta Kumar Nanda",
+        role: "Vice-Chancellor, SOA",
       },
       {
         name: "Prof. (Dr.) Raj Kumar Hota",
-        role: "Dean of Corporate Relations and Placement, Career Development and Industry Collaboration, SOA",
+        role: "Dean of Corporate Relations and Placement, SOA (Convener)",
       },
     ],
     moderators: [
@@ -481,7 +481,7 @@ export const conclavesData: ConclaveChapter[] = [
       },
     ],
     organizations: ["Standard Chartered", "Mphasis", "Rocket India", "Foodhub", "KaarTech", "Nordex Group"],
-    focus: "Embedding allyship as an everyday leadership responsibility, establishing psychological trust, and expanding industry-academia talent pipelines.",
+    focus: "Practicing allyship as a leadership responsibility that builds trust, innovation, and future-ready workplaces.",
     image: "/CON01670.JPG",
     youtubeId: "yD0eEo0oh7A",
   },

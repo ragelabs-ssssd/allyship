@@ -41,22 +41,22 @@ export default function ImpactPage() {
 
   const outcomePillars = [
     {
-      title: "Curriculum & CoE Co-Creation",
-      badge: "Institutional Infrastructure",
-      desc: "Boardroom feedback from Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai has translated into specialized skill labs on campus—including the July 2026 Tech Mahindra Centre of Excellence at ITER and Wipro job-readiness tracks (Fast Forward, Talent Next, Mission10x).",
-      metric: "Active CoEs with Tech Mahindra & LTTS",
+      title: "Industry–Academia Skill Alignment",
+      badge: "Campus Collaboration",
+      desc: "Ongoing conversations with technology and business leaders help keep SOA’s academic programs connected to industry realities—complemented by campus initiatives such as the Tech Mahindra Centre of Excellence at ITER and Wipro readiness tracks.",
+      metric: "Campus Centres of Excellence & Skill Labs",
     },
     {
-      title: "Record-Breaking Graduate Absorption",
-      badge: "Career Velocity",
-      desc: "Deepened trust among global capability centres and Fortune 500 recruiters contributed to a 94.54% engineering placement rate, a 97.22% MBA placement rate, and London Stock Exchange Group (LSEG) selecting 11 SOA students in a single drive—its highest campus tally in India.",
-      metric: "11 Hired by LSEG · ₹46 LPA Peak",
+      title: "Stronger Graduate Career Outcomes",
+      badge: "SOA Placement Record",
+      desc: "Sustained engagement with corporate recruiters supports SOA’s university placement record, including a 94.54% engineering placement rate, a 97.22% MBA placement rate, and London Stock Exchange Group (LSEG) selecting 11 SOA students in a single campus drive.",
+      metric: "11 Hired by LSEG · ₹46 LPA Highest Offer",
     },
     {
-      title: "Gen-Z Leadership & HR Policy Adoption",
-      badge: "Workplace Cultural Reform",
-      desc: "Over 500 participating CHROs, VPs, and talent leaders across six conclaves have co-developed actionable playbooks on psychological safety, Upstander/Sponsor allyship roles, and empathetic Gen-Z onboarding for hybrid corporate environments.",
-      metric: "500+ Executives Engaged",
+      title: "Inclusive Leadership & Mentorship",
+      badge: "Workplace Dialogue",
+      desc: "Across seven conclaves in five cities, corporate leaders, CHROs, and sports icons have examined how mentorship, empathy, and everyday allyship help young professionals transition smoothly into modern teams.",
+      metric: "500+ Leaders & Delegates Across 7 Chapters",
     },
   ];
 
@@ -171,7 +171,7 @@ export default function ImpactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase">
-                <span>Measurable Outcomes & Media Footprint</span>
+                <span>Outcomes &amp; Press Coverage</span>
               </div>
 
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
@@ -180,11 +180,11 @@ export default function ImpactPage() {
               </h1>
 
               <p className="text-lg sm:text-xl font-display text-content-muted italic">
-                Conversations in the Boardroom · Transformations on Campus
+                Meaningful Conversations · Stronger Connections
               </p>
 
               <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal">
-                Across six chapters in five corporate capitals, Allyship++ has shifted industry-academia engagement from transactional placement drives to sustained leadership dialogue—generating national media coverage, multi-city Centres of Excellence, and actionable workplace frameworks.
+                Across seven conclaves in five major Indian cities, Allyship++ has brought together corporate leaders, academicians, and sports icons to strengthen the bridge between higher education and the modern workplace.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
@@ -193,14 +193,14 @@ export default function ImpactPage() {
                   onClick={() => setIsInviteOpen(true)}
                   className="btn-primary"
                 >
-                  <span>Request Executive Conclave Seat</span>
+                  <span>Join the Next Conclave</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
                 <a
                   href="#press-coverage"
                   className="btn-secondary"
                 >
-                  <span>Press Dossier</span>
+                  <span>Press Coverage</span>
                 </a>
               </div>
             </div>
@@ -218,13 +218,13 @@ export default function ImpactPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-5 text-content">
                     <span className="text-[11px] font-bold font-heading text-[#E8D5A7] uppercase tracking-wider">
-                      Partnership Outcomes
+                      Industry &amp; Academia
                     </span>
                     <span className="text-sm font-bold text-content mt-0.5">
-                      Centres of Excellence & Industry Transformation
+                      Shared Perspectives Across 5 Corporate Capitals
                     </span>
                     <span className="text-[11px] text-content-secondary mt-0.5">
-                      National Media Footprint · 6 Conclaves
+                      National Media Coverage · 7 Conclave Editions
                     </span>
                   </div>
                 </div>
@@ -238,13 +238,13 @@ export default function ImpactPage() {
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
         <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
-            Institutional Transformation
+            Shared Progress
           </span>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
-            From Dialogue to Institutional Action
+            From Dialogue to Action
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
-            How executive conclaves in Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai translate into concrete academic, research, and corporate talent outcomes.
+            How conversations across Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai support stronger relationships between SOA, industry partners, and emerging talent.
           </p>
         </div>
 

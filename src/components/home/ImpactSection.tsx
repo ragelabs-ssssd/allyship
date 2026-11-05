@@ -64,25 +64,25 @@ export function ImpactSection() {
       value: 500,
       suffix: "+",
       decimals: 0,
-      title: "CXOs & Capability Heads",
+      title: "Industry & Academic Voices",
       description:
-        "Leaders from Microsoft, Dell, Deloitte, Zscaler, Tata Steel, and over 150+ multinational firms engaged in dialogue.",
+        "Corporate executives, HR professionals, academicians, and sporting figures engaged across the conclave editions.",
     },
     {
       value: 7,
       suffix: "",
       decimals: 0,
-      title: "National Conclaves",
+      title: "Conclave Editions",
       description:
-        "High-impact leadership conclaves across Bengaluru, Hyderabad, Kolkata, Mumbai, Chennai, and institutional headquarters.",
+        "Chapters hosted across Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai to bring industry and academia closer.",
     },
     {
       value: 94.54,
       suffix: "%",
       decimals: 2,
-      title: "Placement Track Record",
+      title: "SOA Placement Record",
       description:
-        "Graduating cohort industry outcomes backed by Tier-1 corporate recruitment relationships and NIRF ranking.",
+        "Graduating cohort placement outcomes at Siksha ‘O’ Anusandhan, supported by long-term corporate partnerships.",
     },
   ];
 
@@ -93,10 +93,10 @@ export function ImpactSection() {
         <SectionReveal className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 pb-8 border-b border-line">
           <div>
             <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
-              Quantifiable Distinction
+              An Evolving Platform
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight mt-2 sm:whitespace-nowrap">
-              National Scale &amp; Measurable Impact
+              A Growing National Conversation
             </h2>
           </div>
           <Link

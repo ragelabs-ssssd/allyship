@@ -27,18 +27,18 @@ import { conclavesData } from "@/data/conclaves";
 const eventHeroImages = [
   {
     src: "/IMG_7492.jpg",
-    title: "Hyderabad Chapter Ballroom & Delegates",
-    subtitle: "Strategic Industry-Academia Leadership Conclave",
+    title: "Hyderabad Chapter: Delegates in Session",
+    subtitle: "Industry and Academia in One Room",
   },
   {
     src: "/CON01670.JPG",
-    title: "Chennai Chapter 2.0 Delegation Group",
-    subtitle: "Senior HR Directors, CHROs & Corporate Partners",
+    title: "Chennai 2.0: Delegates and Partners",
+    subtitle: "HR Leaders, Academicians and Industry Guests",
   },
   {
     src: "/CON01638.JPG",
-    title: "Chennai Chapter 2.0 Keynote & Stage Dignitaries",
-    subtitle: "Panels on Practicing Allyship & Talent Readiness",
+    title: "Chennai 2.0: On Stage",
+    subtitle: "Practicing Allyship",
   },
 ];
 
@@ -82,20 +82,20 @@ function EventContent() {
 
   const videos = [
     {
-      title: "Chennai Chapter 2.0 | Panel Discussion on Practicing Allyship",
-      desc: "Moderated by Standard Chartered's Global Head Archana Grover with talent heads from Rocket India, Foodhub, KaarTech, and Mphasis.",
+      title: "Chennai 2.0 | Panel: Practicing Allyship",
+      desc: "Moderated by Archana Grover of Standard Chartered, with leaders from Rocket India, Foodhub, Nordex, KaarTech and Mphasis.",
       youtubeId: "yD0eEo0oh7A",
       tag: "Chennai 2.0",
     },
     {
-      title: "Chennai Chapter | Fireside Chat with National Coach J. Premanand",
-      desc: "High-performance athletics coach for the Paris Olympics sprint team on connecting athletic resilience with Gen-Z mentorship.",
+      title: "Chennai 2.0 | Fireside Chat with Premanand J.",
+      desc: "Former international sprinter and Indian sprint coach for the Paris Olympics, on what sport teaches about leadership and mentorship.",
       youtubeId: "0vOCqqE4zbI",
-      tag: "Olympics & Leadership",
+      tag: "Sport & Leadership",
     },
     {
-      title: "Hyderabad Chapter | Allyship++ Conclave Film",
-      desc: "Official highlights from the Hyderabad conclave deliberating Gen-Z workforce expectations, learning agility, and industry-academia CoEs.",
+      title: "Hyderabad Chapter | Conclave Film",
+      desc: "Highlights from the Hyderabad conclave: conversations on leadership, young talent and industry–academia collaboration.",
       youtubeId: "8wSGKsWyQwk",
       tag: "Hyderabad Conclave",
     },
@@ -113,7 +113,7 @@ function EventContent() {
             {/* Left Column: Editorial Headline & Copy */}
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase">
-                <span>Master Conclave Series · 2024–2026</span>
+                <span>The Conclave Series · 2024–2026</span>
               </div>
 
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
@@ -122,11 +122,11 @@ function EventContent() {
               </h1>
 
               <p className="text-lg sm:text-xl font-display text-content-muted italic">
-                7 Conclaves Across 5 Metropolitan Capitals
+                One Conversation, Carried Across India
               </p>
 
               <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal">
-                From Bengaluru and Hyderabad to Kolkata, Mumbai, and Chennai, Siksha &lsquo;O&rsquo; Anusandhan has built a continuous national bridge uniting over 500 corporate CXOs, Olympic champions, and visionary scholars to co-create agile curricula and future-ready talent pipelines across India.
+                Siksha &lsquo;O&rsquo; Anusandhan takes Allyship++ to India&apos;s business cities. Each chapter brings corporate leaders, HR professionals, academicians and sporting voices together to talk about leadership, inclusion and the future of work.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
@@ -135,14 +135,14 @@ function EventContent() {
                   onClick={() => setIsInviteOpen(true)}
                   className="btn-primary"
                 >
-                  <span>Request Executive Invitation</span>
+                  <span>Request an Invitation</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
                 <a
                   href="#chapter-details"
                   className="btn-secondary"
                 >
-                  <span>Explore Archives</span>
+                  <span>Explore the Chapters</span>
                 </a>
               </div>
             </div>
@@ -170,13 +170,13 @@ function EventContent() {
                   ))}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-5 text-content">
                     <span className="text-[11px] font-bold font-heading text-[#E8D5A7] uppercase tracking-wider">
-                      Edition 1.0 & 2.0 Live Archive
+                      Editions 1.0 & 2.0
                     </span>
                     <span className="text-sm font-bold text-content mt-0.5">
                       {eventHeroImages[heroSlide].title}
                     </span>
                     <span className="text-[11px] text-content-secondary mt-0.5">
-                      5 Metropolitan Capitals · 500+ Corporate CXOs
+                      Bengaluru · Hyderabad · Kolkata · Mumbai · Chennai
                     </span>
                   </div>
                 </div>
@@ -190,15 +190,15 @@ function EventContent() {
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
         <div className="text-center max-w-5xl mx-auto space-y-3 mb-16">
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
-            The Institutional Mandate
+            Why Allyship++
           </span>
 
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
-            Why Allyship<span className="text-accent">++</span>?
+            One Platform. Many Perspectives.
           </h2>
 
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
-            In an era of rapid disruption, transactional placement is no longer sufficient. Siksha &lsquo;O&rsquo; Anusandhan moves academic leadership directly into corporate boardrooms—co-creating empathetic, resilient, and future-ready talent ecosystems.
+            In a fast-changing world of work, universities and organisations cannot operate in isolation. Siksha &lsquo;O&rsquo; Anusandhan brings academic leadership and corporate executives into the same room to align how talent is prepared, mentored, and supported.
           </p>
         </div>
 
@@ -211,19 +211,19 @@ function EventContent() {
               </div>
               <div>
                 <span className="font-sans text-[11px] font-semibold tracking-[0.14em] text-accent uppercase block">
-                  Beyond Campus Recruitment
+                  Industry–Academia Dialogue
                 </span>
                 <h3 className="font-display text-lg font-semibold tracking-normal text-content mt-1">
-                  Ending Transactional Hiring
+                  Bringing Academia to Industry
                 </h3>
               </div>
               <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-muted">
-                Conventional universities wait for annual placement cycles. Allyship++ engages Fortune 500 CHROs year-round to co-create academic curricula and practical skill benchmarks before students graduate.
+                Rather than limiting collaboration to annual placement seasons, SOA meets corporate leaders in their own cities to exchange ideas on curriculum relevance, emerging skills, and workplace readiness.
               </p>
             </div>
             <div className="pt-4 mt-6 border-t border-line flex items-center gap-2 font-sans text-xs font-semibold text-content-secondary">
               <CheckCircle2 className="w-4 h-4 text-accent shrink-0" />
-              <span>Curriculum aligned with CXO benchmarks</span>
+              <span>Continuous dialogue with industry leaders</span>
             </div>
           </div>
 
@@ -234,19 +234,19 @@ function EventContent() {
               </div>
               <div>
                 <span className="font-sans text-[11px] font-semibold tracking-[0.14em] text-accent uppercase block">
-                  The Athletic Crucible
+                  The Sporting Perspective
                 </span>
                 <h3 className="font-display text-lg font-semibold tracking-normal text-content mt-1">
-                  Why Sports Anchors Allyship
+                  Lessons From Sport
                 </h3>
               </div>
               <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-muted">
-                Olympic medalists and national coaches headline our stages because elite sports embodies unconditional trust, grit under pressure, and mental resilience—the exact attributes needed to prevent workplace burnout.
+                Olympians, former international athletes, and national coaches share first-hand insights on resilience, discipline, teamwork, and coaching—qualities that strengthen modern teams and young professionals.
               </p>
             </div>
             <div className="pt-4 mt-6 border-t border-line flex items-center gap-2 font-sans text-xs font-semibold text-content-secondary">
               <CheckCircle2 className="w-4 h-4 text-accent shrink-0" />
-              <span>Mentorship tested under Olympic pressure</span>
+              <span>Perspectives from Olympians &amp; national coaches</span>
             </div>
           </div>
 
@@ -257,19 +257,19 @@ function EventContent() {
               </div>
               <div>
                 <span className="font-sans text-[11px] font-semibold tracking-[0.14em] text-accent uppercase block">
-                  Workplace Cultural Shift
+                  Practicing Allyship
                 </span>
                 <h3 className="font-display text-lg font-semibold tracking-normal text-content mt-1">
-                  Everyday Duty Over Slogans
+                  Leadership Responsibility
                 </h3>
               </div>
               <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-muted">
-                Allyship is not a once-a-year compliance checkbox. In our Hyderabad and Chennai conclaves, leaders established that practicing allyship is an everyday duty—creating psychological safety for Gen-Z talent.
+                As highlighted across our Hyderabad and Chennai editions, allyship goes beyond policy statements. It is an everyday leadership responsibility that builds trust, psychological safety, and long-term growth.
               </p>
             </div>
             <div className="pt-4 mt-6 border-t border-line flex items-center gap-2 font-sans text-xs font-semibold text-content-secondary">
               <CheckCircle2 className="w-4 h-4 text-accent shrink-0" />
-              <span>Psychological safety in high-stress teams</span>
+              <span>Inclusive workplaces where talent thrives</span>
             </div>
           </div>
 
@@ -280,19 +280,19 @@ function EventContent() {
               </div>
               <div>
                 <span className="font-sans text-[11px] font-semibold tracking-[0.14em] text-accent uppercase block">
-                  Two-Way Enterprise Bridge
+                  Shared Progress
                 </span>
                 <h3 className="font-display text-lg font-semibold tracking-normal text-content mt-1">
-                  Co-Innovation & Living Labs
+                  Knowledge &amp; Mentorship
                 </h3>
               </div>
               <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-muted">
-                Allyship is reciprocal. Industry partners gain direct access to SOA’s NIRF Top-15 research faculty and labs—co-creating enterprise Centres of Excellence (like Tech Mahindra&apos;s ServiceNow & AI Labs).
+                Industry and academia grow stronger together. Corporate partners connect with SOA’s faculty, research ecosystem, and students through mentorship, guest lectures, and collaborative skill development.
               </p>
             </div>
             <div className="pt-4 mt-6 border-t border-line flex items-center gap-2 font-sans text-xs font-semibold text-content-secondary">
               <CheckCircle2 className="w-4 h-4 text-accent shrink-0" />
-              <span>Campus Centres of Excellence established</span>
+              <span>Academic collaboration &amp; campus engagement</span>
             </div>
           </div>
         </div>
@@ -302,13 +302,13 @@ function EventContent() {
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8 space-y-4">
               <span className="font-heading text-xs font-bold uppercase tracking-widest text-accent">
-                The Institutional Commitment
+                Our Purpose
               </span>
               <blockquote className="font-display italic font-normal tracking-normal text-2xl sm:text-3xl lg:text-4xl text-content leading-[1.35]">
-                &ldquo;We do not wait for industry to knock on our doors; we bring academic rigor directly into corporate boardrooms across India.&rdquo;
+                &ldquo;Rather than waiting for industry to visit our campus, we bring academic dialogue directly to the cities where corporate leadership shapes the future of work.&rdquo;
               </blockquote>
               <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-secondary">
-                Allyship++ is our pledge that every SOA graduate enters a modern enterprise where they are actively championed, psychologically protected, and empowered to lead India&apos;s knowledge-driven economy.
+                Through Allyship++, Siksha &lsquo;O&rsquo; Anusandhan works alongside corporate leaders to ensure young professionals enter workplaces that value mentorship, collaboration, and shared success.
               </p>
               <div className="pt-2 flex flex-wrap items-center gap-3 font-sans text-xs text-content-muted">
                 <span className="font-semibold text-content">Siksha &lsquo;O&rsquo; Anusandhan (Deemed to be University)</span>
@@ -320,19 +320,19 @@ function EventContent() {
             <div className="lg:col-span-4 grid grid-cols-2 gap-4">
               <div className="p-5 rounded-2xl bg-glass border border-line text-center">
                 <div className="text-3xl sm:text-4xl font-extrabold font-display text-accent">500+</div>
-                <div className="font-sans text-xs text-content-secondary mt-1 font-medium">Corporate CXOs Engaged</div>
+                <div className="font-sans text-xs text-content-secondary mt-1 font-medium">Leaders &amp; Delegates</div>
               </div>
               <div className="p-5 rounded-2xl bg-glass border border-line text-center">
                 <div className="text-3xl sm:text-4xl font-extrabold font-display text-content">7</div>
                 <div className="font-sans text-xs text-content-secondary mt-1 font-medium">Metro Conclaves</div>
               </div>
               <div className="p-5 rounded-2xl bg-glass border border-line text-center">
-                <div className="text-3xl sm:text-4xl font-extrabold font-display text-content">10+</div>
-                <div className="font-sans text-xs text-content-secondary mt-1 font-medium">Olympic & Sports Icons</div>
+                <div className="text-3xl sm:text-4xl font-extrabold font-display text-content">9+</div>
+                <div className="font-sans text-xs text-content-secondary mt-1 font-medium">Sports Icons &amp; Coaches</div>
               </div>
               <div className="p-5 rounded-2xl bg-glass border border-line text-center">
-                <div className="text-3xl sm:text-4xl font-extrabold font-display text-accent">100%</div>
-                <div className="font-sans text-xs text-content-secondary mt-1 font-medium">Reciprocal Engagement</div>
+                <div className="text-3xl sm:text-4xl font-extrabold font-display text-accent">5</div>
+                <div className="font-sans text-xs text-content-secondary mt-1 font-medium">Major Indian Cities</div>
               </div>
             </div>
           </div>
@@ -360,7 +360,7 @@ function EventContent() {
           <div className="md:col-span-7 space-y-5">
             <div className="space-y-1">
               <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
-                Convener&apos;s Perspective
+                Convener&apos;s Note
               </span>
               <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-[-0.025em] leading-[1.1] text-content">
                 Message from Prof. (Dr.) Raj Kumar Hota
@@ -368,11 +368,11 @@ function EventContent() {
             </div>
 
             <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-muted">
-              As Convener of every Allyship++ chapter across Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai, Prof. Hota has spearheaded the movement to bridge corporate leadership with academic research and youth development.
+              As Convener of the Allyship++ conclaves across Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai, Prof. (Dr.) Raj Kumar Hota leads SOA’s ongoing dialogue with corporate executives, HR leaders, and industry mentors.
             </p>
 
             <blockquote className="font-display italic font-normal tracking-normal text-base sm:text-lg text-content leading-relaxed border-l-2 border-accent pl-5 py-3 bg-surface-2 rounded-r-xl">
-              &ldquo;Allyship is not a transactional corporate gesture; it is the intentional, everyday commitment to guide, mentor, and sponsor young talent. When academia and corporate leadership unite with empathy and athletic grit, we create an environment where every graduate feels trusted, valued, and empowered to excel.&rdquo;
+              &ldquo;Allyship is a conscious commitment to guide, mentor, and support emerging talent. When academic institutions and corporate leaders work together with empathy, discipline, and shared purpose, we build workplaces where every young professional is trusted and prepared to succeed.&rdquo;
             </blockquote>
 
             <div className="pt-2 border-t border-line">
@@ -667,13 +667,13 @@ function EventContent() {
           <div id="themes-section" className="space-y-10 scroll-mt-24 pt-8">
             <div className="max-w-5xl space-y-3 mb-8">
               <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
-                Curricular Continuity
+                Evolution of the Platform
               </span>
               <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap scroll-mt-24">
-                The Strategic Arc: Allyship++
+                From Dialogue to Practice
               </h2>
               <p className="text-base text-content-muted max-w-2xl leading-relaxed">
-                How the conclave series evolved from establishing foundational corporate-academic trust to operationalizing daily allyship for Gen-Z talent.
+                How the Allyship++ series grew from opening conversations across India&apos;s corporate corridors to putting everyday allyship and mentorship into practice.
               </p>
             </div>
 
@@ -683,10 +683,10 @@ function EventContent() {
                   Phase I: Allyship++ 1.0 (2024–2025)
                 </span>
                 <h3 className="font-display text-xl sm:text-2xl font-bold tracking-normal text-content mt-2">
-                  Dismantling Geographical & Institutional Distance
+                  Bridging Distance Between Campus and Industry
                 </h3>
                 <p className="font-sans text-sm font-normal tracking-[0.01em] text-content-muted leading-relaxed">
-                  SOA University systematically brought an academic hub in Bhubaneswar directly into the corporate boardrooms of Bengaluru, Hyderabad, Kolkata, and Mumbai. Engaging 60 to 70 leaders per city, Phase I demonstrated that academic institutions must collaborate continuously with industry to navigate cloud engineering burnout, hybrid team dynamics, and Fortune 500 DEI mandates.
+                  SOA brought academic leadership from Bhubaneswar directly to Bengaluru, Hyderabad, Kolkata, and Mumbai. Gathering 60 to 70 corporate leaders, HR professionals, and sports icons in each city, the first cycle focused on building closer industry–academia relationships, strengthening workplace well-being, and fostering inclusive leadership.
                 </p>
                 <div className="pt-4 border-t border-line font-sans text-xs text-content-muted tracking-[0.01em]">
                   Chapters: Bengaluru · Hyderabad · Kolkata · Mumbai
@@ -695,13 +695,13 @@ function EventContent() {
 
               <div className="bg-surface rounded-3xl p-8 sm:p-10 border border-line shadow-xl space-y-4">
                 <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] px-3.5 py-1.5 rounded-full bg-surface-2 text-accent border border-accent/30">
-                  Phase II: Allyship++ 2.0 (2026)
+                  Phase II: Allyship++ 2.0 (2025–2026)
                 </span>
                 <h3 className="font-display text-xl sm:text-2xl font-bold tracking-normal text-content mt-2">
-                  Practicing Allyship: Gen-Z Mentorship & Daily Responsibility
+                  Practicing Allyship as a Leadership Responsibility
                 </h3>
                 <p className="font-sans text-sm font-normal tracking-[0.01em] text-content-muted leading-relaxed">
-                  Pivoting from <i>why</i> inclusion matters to <i>how</i> enterprises operationalize it daily. Moderated by IIT Delhi&apos;s Prof. Sanjay Dhir in Hyderabad and Standard Chartered&apos;s Global Head Archana Grover in Chennai, leaders addressed the expectations of Gen-Z digital natives—codifying allyship not as an isolated HR program, but as a core leadership responsibility driving psychological safety and innovation.
+                  Moving from why inclusion matters to how leaders practice it every day. Across return editions in Bengaluru and Hyderabad and the Chennai 2.0 chapter on <i>&lsquo;Practicing Allyship&rsquo;</i>, discussions centered on guiding emerging talent, coaching with empathy and discipline, and treating allyship as a core leadership responsibility that drives trust and sustainable growth.
                 </p>
                 <div className="pt-4 border-t border-line font-sans text-xs text-content-muted tracking-[0.01em]">
                   Chapters: Bengaluru · Hyderabad · Chennai

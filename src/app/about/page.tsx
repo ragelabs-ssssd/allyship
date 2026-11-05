@@ -31,62 +31,62 @@ import { HeroBackdrop } from "@/components/HeroBackdrop";
 export default function AboutPage() {
   const [isInviteOpen, setIsInviteOpen] = useState(false);
 
-  // The 7 Strategic Pillars of the SOA Allyship Journey
+  // The 7 principles Allyship++ stands for
   const soaJourneyPillars = [
     {
-      role: "01. Paradigm Shift",
-      badge: "Vision & Origin",
-      action: "Transitioning from transactional campus recruitment to lifelong institutional alliance.",
+      role: "01. Responsible Leadership",
+      badge: "Leadership",
+      action: "Leadership is measured by the people it lifts.",
       practice:
-        "Dismantling the archaic two-day placement model in favor of an active, year-round partnership where enterprise leaders co-own student capability development from day one.",
+        "We explore how leaders use their position to open doors, share credit and create room for others to grow. Allyship is treated as part of the job, not an extra.",
       icon: GraduationCap,
     },
     {
-      role: "02. Pan-India Footprint",
-      badge: "National Corridors",
-      action: "Taking Bhubaneswar's academic excellence directly into India's economic capitals.",
+      role: "02. Going to Industry",
+      badge: "Partnership",
+      action: "SOA goes to industry instead of waiting for it.",
       practice:
-        "Hosting 7 high-impact conclave editions across Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai—engaging corporate CXOs and capability directors on their home turf.",
+        "Each chapter takes the conversation to a different city, so the university listens to leaders where they work. The aim is a relationship that lasts beyond a single day.",
       icon: Compass,
     },
     {
-      role: "03. Boardroom & Arena Triad",
-      badge: "Athletic Resilience",
-      action: "Synthesizing executive acumen with Olympic championship resilience and coach-athlete allyship.",
+      role: "03. Lessons From Sport",
+      badge: "Mentorship",
+      action: "The field has much to teach the boardroom.",
       practice:
-        "Convening sporting legends including Nilesh Kulkarni, Anju Bobby George, Arshad Ayub, and Gurbux Singh to instill high-performance mindset, team cohesion, and mental endurance into future leaders.",
+        "Athletes and coaches share what they know about discipline, resilience and trust. Their stories make abstract ideas about leadership easy to see and remember.",
       icon: Trophy,
     },
     {
-      role: "04. Agile Curriculum Co-Creation",
-      badge: "Pedagogical Sync",
-      action: "Synchronizing university coursework with live enterprise tech stacks in real time.",
+      role: "04. Knowledge Exchange",
+      badge: "Academia & Industry",
+      action: "Classrooms and workplaces learn from each other.",
       practice:
-        "Inviting Chief Technology Officers and engineering VPs to review, update, and co-design syllabi around Generative AI, cloud infrastructure, cybersecurity, and modern industrial requirements.",
+        "Industry brings real challenges into the room. Academia brings research and fresh questions. Both leave with a clearer view of what the next generation needs.",
       icon: Layers,
     },
     {
-      role: "05. Executive CXO Sponsorship",
-      badge: "Direct Access",
-      action: "Opening executive pathways and closed-door mentorship for emerging talent.",
+      role: "05. Mentorship",
+      badge: "Emerging Talent",
+      action: "Experience is most valuable when it is shared.",
       practice:
-        "Connecting over 500+ CXOs and Talent Heads from Microsoft, Dell, Deloitte, L&T, and Tata Steel directly with students for masterclasses, panels, and priority career sponsorship.",
+        "We encourage senior leaders to guide young professionals and students directly. A single honest conversation can shape how someone sees their career.",
       icon: Users,
     },
     {
-      role: "06. Psychological Safety & Gen-Z",
+      role: "06. Inclusion",
       badge: "Workplace Culture",
-      action: "Fostering human-centered empathy to bridge academic expectations with corporate reality.",
+      action: "People do their best work when they feel safe and valued.",
       practice:
-        "Designing dialogues around workplace mental wellness, psychological safety, and multigenerational collaboration to help Gen-Z engineers adapt smoothly to high-pressure enterprise environments.",
+        "We ask how workplaces can welcome different backgrounds, generations and ways of thinking. Supportive cultures are built through everyday choices, not policies alone.",
       icon: ShieldCheck,
     },
     {
-      role: "07. Joint R&D & CoE Incubation",
-      badge: "Deep Tech & IP",
-      action: "Translating conclave dialogues into corporate-backed Centers of Excellence and patent research.",
+      role: "07. Future-Ready Workplaces",
+      badge: "Looking Ahead",
+      action: "Preparing people for work that is still taking shape.",
       practice:
-        "Leveraging SOA's 18 state-of-the-art research centers and 13 constituent institutes to execute industry-sponsored research, prototype development, and high-impact technology patents.",
+        "The way we work keeps changing. We bring industry and academia together to think about the skills, values and leadership that tomorrow's workplaces will need.",
       icon: Cpu,
     },
   ];
@@ -96,26 +96,26 @@ export default function AboutPage() {
     {
       id: "cost",
       number: "01",
-      title: "Personal Cost Test",
-      question: "Does it cost the leader comfort, time, or political capital?",
+      title: "Shared Responsibility",
+      question: "Do leaders invest their own time and attention in developing others?",
       rubric:
-        "If an action requires zero personal vulnerability or expenditure of political capital, it is brand management, not allyship. Authentic allies spend reputational currency to advocate for emerging talent when stakes are high.",
+        "Real allyship asks something of the leader. It means making time to mentor, sharing credit fairly, and backing emerging talent when important opportunities arise.",
     },
     {
       id: "outcome",
       number: "02",
-      title: "Outcome Shift Test",
-      question: "Does it tangibly change what happens to the colleague?",
+      title: "Visible Growth",
+      question: "Does it create real opportunities for colleagues to learn and advance?",
       rubric:
-        "Sympathetic intentions do not alter career trajectories; verifiable institutional outcomes do. Authentic allyship manifests in compensation parity, stretch assignments, and accelerated promotion velocity.",
+        "Good intentions matter, but progress is measured by what changes for people at work—clearer feedback, meaningful projects, and fair access to growth.",
     },
     {
       id: "integrity",
       number: "03",
-      title: "Unobserved Integrity Test",
-      question: "Would it still happen behind closed doors if no one were watching?",
+      title: "Everyday Consistency",
+      question: "Is the same standard practiced in everyday team decisions?",
       rubric:
-        "Public statements on LinkedIn mean nothing if a leader remains silent during closed-door talent calibration reviews. Authentic advocacy thrives in private boardrooms where there are zero applause points to gain.",
+        "Culture is built in ordinary moments: how meetings are run, how credit is given, and how people are supported when challenges arise.",
     },
   ];
 
@@ -123,33 +123,33 @@ export default function AboutPage() {
   const hrBlueprint = [
     {
       step: "01",
-      title: "Define Observable Behaviors",
-      desc: "Replace vague 'be an ally' slogans with 3 to 5 concrete habits—such as crediting ideas in meetings, recommending talent for stretch roles, and speaking up calmly when boundaries are crossed.",
+      title: "Set Clear Expectations",
+      desc: "Translate allyship into everyday habits—such as crediting ideas in meetings, recommending talent for stretch roles, and listening across perspectives.",
     },
     {
       step: "02",
-      title: "Train Managers First",
-      desc: "Prioritize line managers before the general workforce because managers control daily feedback, project visibility, and promotion velocity; focus on fair constructive feedback and inclusive meeting facilitation.",
+      title: "Equip Line Managers",
+      desc: "Support managers first, because they shape daily feedback, project visibility, and team culture. Focus on fair evaluation and constructive guidance.",
     },
     {
       step: "03",
-      title: "Institutionalize Psychological Safety",
-      desc: "Establish transparent reporting channels, guaranteed follow-up, and non-retaliation protections so employees can act as Upstanders and Confidantes without fear of career penalty.",
+      title: "Build Psychological Trust",
+      desc: "Create an environment where people can ask questions, share new ideas, and raise concerns openly with confidence that they will be heard.",
     },
     {
       step: "04",
-      title: "Support Employee Resource Groups (ERGs)",
-      desc: "Invite senior allies to attend ERG sessions with an explicit mandate to listen first and do their own learning, ensuring underrepresented colleagues are never burdened with unpaid teaching.",
+      title: "Listen Across Generations",
+      desc: "Encourage senior leaders to spend time listening to early-career professionals and students, turning generational differences into mutual learning.",
     },
     {
       step: "05",
-      title: "Recognize & Embed Allyship",
-      desc: "Weave inclusive mentorship and allyship behaviors into formal leadership expectations and performance appraisals rather than treating them as optional side initiatives.",
+      title: "Recognize Mentorship",
+      desc: "Value mentorship and collaborative leadership as core parts of how senior professionals contribute to the organisation's long-term strength.",
     },
     {
       step: "06",
-      title: "Measure, Act & Avoid Pitfalls",
-      desc: "Audit inclusion outcomes while avoiding legal and cultural pitfalls: never assume holiday or identity preferences, never collect intrusive personal data, and widen access via transparent criteria rather than group quotas.",
+      title: "Keep Learning Together",
+      desc: "Treat workplace culture as ongoing work—reviewing what helps teams succeed, staying open to feedback, and strengthening ties between campus and industry.",
     },
   ];
 
@@ -159,31 +159,31 @@ export default function AboutPage() {
       city: "Bengaluru Chapter",
       legend: "Anju Bobby George",
       role: "World Athletics Medalist & Olympian",
-      domain: "Resilience, grit, and creating psychological safety in high-performance squads.",
+      domain: "Leadership in sports, resilience, and the trust between coach and athlete.",
     },
     {
       city: "Hyderabad Chapter",
       legend: "Arshad Ayub",
-      role: "Former Test Cricketer & National Selector",
-      domain: "Patience in talent development and long-range institutional succession planning.",
+      role: "Former Indian Test Cricketer",
+      domain: "Composure, patience in nurturing talent, and trust in high-pressure environments.",
     },
     {
       city: "Kolkata Chapter",
       legend: "Gurbux Singh & Gautam Sarkar",
-      role: "Olympic Gold Medalist (Hockey) & Football Legend",
-      domain: "Cross-generational cohesion, humility, and trust under championship pressure.",
+      role: "1964 Olympic Gold Medalist & Football Icon",
+      domain: "Teamwork across generations, humility, and shared purpose under pressure.",
     },
     {
       city: "Mumbai Chapter",
       legend: "Nilesh Kulkarni & Anand Menezes",
-      role: "Test Cricketer & Olympian Sprinter",
-      domain: "Translating athletic rigor into enterprise culture and corporate leadership.",
+      role: "Former Test Cricketer & Olympian",
+      domain: "Sports education, perseverance, and bringing athletic discipline into workplace leadership.",
     },
     {
       city: "Chennai Chapter",
       legend: "Premanand J.",
-      role: "Paris Olympics 2024 National Sprint Coach",
-      domain: "Micro-coaching, high-precision feedback loops, and compounding incremental gains.",
+      role: "Paris Olympics National Sprint Coach",
+      domain: "Resilience, discipline, and how dedicated coaching helps talent reach its potential.",
     },
   ];
 
@@ -198,19 +198,19 @@ export default function AboutPage() {
         <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase shadow-sm">
-              <span>About the Movement · Continuous Compounding Inclusion</span>
+              <span>An SOA Leadership Initiative</span>
             </div>
 
             <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
-              Why &ldquo;Allyship<span className="text-accent">++</span>&rdquo;?
+              Beyond Conversations. Towards Collective <span className="text-accent">Progress.</span>
             </h1>
 
             <p className="text-xl sm:text-2xl font-heading text-content-secondary max-w-2xl mx-auto italic">
-              Continuous, compounding inclusion — moving from passive statements to daily leadership practice.
+              Bringing academia and industry closer together to shape inclusive, future-ready leadership.
             </p>
 
             <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-3xl mx-auto font-normal">
-              Allyship is the deliberate, ongoing practice in which leaders with institutional power work in active solidarity with emerging and underrepresented talent. The &ldquo;++&rdquo; signifies continuous evolution—incrementing inclusion day after day through observable action.
+              Initiated by Siksha &lsquo;O&rsquo; Anusandhan (SOA), Allyship++ is a leadership and collaboration platform that connects corporate executives, HR professionals, academicians, and emerging talent. Rather than treating allyship as a slogan, it explores how leaders support people, share knowledge, and build workplaces where everyone can thrive.
             </p>
 
             {/* Quick-Nav Framework Pills */}
@@ -220,28 +220,28 @@ export default function AboutPage() {
                 className="px-4 py-2 rounded-full bg-surface-3 hover:bg-surface-3 border border-line hover:border-accent/50 text-xs font-medium text-content-secondary hover:text-content transition-all flex items-center gap-1.5"
               >
                 <Layers className="w-3.5 h-3.5 text-accent" />
-                <span>7 Journey Pillars</span>
+                <span>7 Core Principles</span>
               </a>
               <a
                 href="#litmus-test"
                 className="px-4 py-2 rounded-full bg-surface-3 hover:bg-surface-3 border border-line hover:border-accent/50 text-xs font-medium text-content-secondary hover:text-content transition-all flex items-center gap-1.5"
               >
                 <ShieldCheck className="w-3.5 h-3.5 text-accent" />
-                <span>3-Question Litmus Test</span>
+                <span>Leadership Responsibility</span>
               </a>
               <a
                 href="#hr-blueprint"
                 className="px-4 py-2 rounded-full bg-surface-3 hover:bg-surface-3 border border-line hover:border-accent/50 text-xs font-medium text-content-secondary hover:text-content transition-all flex items-center gap-1.5"
               >
                 <Building2 className="w-3.5 h-3.5 text-accent" />
-                <span>6-Step HR Blueprint</span>
+                <span>Practical Workplace Habits</span>
               </a>
               <a
                 href="#sports-synthesis"
                 className="px-4 py-2 rounded-full bg-surface-3 hover:bg-surface-3 border border-line hover:border-accent/50 text-xs font-medium text-content-secondary hover:text-content transition-all flex items-center gap-1.5"
               >
                 <Trophy className="w-3.5 h-3.5 text-accent" />
-                <span>Boardroom &amp; Arena Triad</span>
+                <span>Lessons From Sport</span>
               </a>
             </div>
           </div>
@@ -254,30 +254,30 @@ export default function AboutPage() {
           {/* Left Column: 3-Paragraph Narrative */}
           <div className="lg:col-span-6 xl:col-span-6 space-y-6 text-left">
             <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
-              The Genesis of Allyship++
+              Why Allyship++ Exists
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
               Industry and Academia, in the Same Room
             </h2>
 
             <p className="max-w-[68ch] text-base text-content-secondary leading-relaxed font-normal">
-              For decades, university placement in India operated as a yearly, one-way transaction: institutions waited on campus for recruiters to arrive. Allyship++ reverses that equation. Siksha &lsquo;O&rsquo; Anusandhan travels directly to the corporate boardrooms of Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai to listen first. While a diversity policy states what an organisation intends on paper, allyship determines what happens on an ordinary Tuesday—who receives credit in a meeting, who is sponsored for a stretch project, and who speaks up when a boundary is crossed.
+              Workplaces are changing rapidly, and universities cannot prepare students in isolation from the organisations they will join. Siksha &lsquo;O&rsquo; Anusandhan initiated Allyship++ to take the university directly into India&apos;s major business centres—Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai—to listen to industry leaders and build lasting relationships.
             </p>
 
             <p className="max-w-[68ch] text-base text-content-secondary leading-relaxed font-normal">
-              The &ldquo;++&rdquo; carries a dual meaning rooted in engineering and organizational leadership: in programming, the <code className="text-accent bg-glass-strong px-2 py-0.5 rounded border border-line font-mono font-semibold">++</code> operator increments a value by one step at a time, and marks the historic leap from procedural C to object-oriented C++. Applied to corporate-academic leadership, Allyship++ represents a continuous, compounding upgrade—expanding traditional DEI to encompass generational allyship for Gen-Z professionals, psychological safety for junior analysts, and co-created curricula between universities and employers.
+              The <code className="text-accent bg-glass-strong px-2 py-0.5 rounded border border-line font-mono font-semibold">++</code> borrows from the increment operator in programming: a step-by-step commitment to improvement. In the workplace, allyship is not a single policy document; it is practiced in everyday leadership choices—how teams collaborate, how young professionals are guided, and how organisations create room for every voice.
             </p>
 
             <p className="max-w-[68ch] text-base text-content-secondary leading-relaxed font-normal">
-              Uniquely, every Allyship++ chapter pairs corporate HR and technology panels with India&apos;s sporting legends—from Olympic gold medalist Gurbux Singh and athletics pioneer Anju Bobby George to Test cricketers Arshad Ayub and Nilesh Kulkarni, and Paris Olympics sprint coach Premanand J.—proving that the mentorship, discipline, and trust that win medals in the arena are identical to the allyship that builds high-performing teams in the boardroom.
+              Each chapter brings corporate executives, HR leaders, and academicians together with accomplished sporting figures—including Olympian Anju Bobby George, 1964 Olympic hockey gold medalist Gurbux Singh, footballer Gautam Sarkar, former Test cricketers Arshad Ayub and Nilesh Kulkarni, and Paris Olympics sprint coach Premanand J.—connecting lessons from the field with leadership in the workplace.
             </p>
 
             <div className="pt-2">
               <a
-                href="#roles-framework"
+                href="#journey-pillars"
                 className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-accent hover:text-content transition-colors"
               >
-                <span>Explore the 7 Leadership Roles</span>
+                <span>Explore What Allyship++ Stands For</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>
@@ -394,13 +394,13 @@ export default function AboutPage() {
       >
         <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
-            Institutional Blueprint &amp; Journey
+            Core Principles
           </span>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
-            The 7 Pillars of the SOA Allyship Journey
+            What Allyship++ Stands For
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-3xl mx-auto">
-            Pioneered by Siksha &lsquo;O&rsquo; Anusandhan and co-created with 500+ corporate CXOs and sporting luminaries across India, the Allyship++ journey redefines how higher education and global enterprises build future-ready leaders.
+            Seven principles guide the platform—from bringing universities and employers closer together to encouraging responsible leadership, mentorship, and future-ready workplaces.
           </p>
         </div>
 
@@ -452,20 +452,20 @@ export default function AboutPage() {
           <div className="space-y-2 max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-subtle border border-accent/30 text-accent text-[11px] font-bold font-heading uppercase tracking-widest">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Measurable Outcome</span>
+              <span>Sustained Institutional Commitment</span>
             </div>
             <h3 className="font-heading text-xl sm:text-2xl font-bold text-content">
-              The Allyship Dividend: 94.54% Placement Velocity &amp; NIRF Top-15
+              Translating Conversations Into Lasting Relationships
             </h3>
             <p className="text-xs sm:text-sm text-content-secondary leading-relaxed font-normal">
-              SOA Allyship++ is not a symbolic forum—it is a compounding national movement driving permanent corporate recruitment relationships with 150+ global employers and premier research synergy across India.
+              Supported by SOA&apos;s national academic standing and long-term corporate relationships, Allyship++ creates a continuous bridge between university classrooms and industry boardrooms.
             </p>
           </div>
           <Link
             href="/event"
             className="btn-primary self-start lg:self-center whitespace-nowrap"
           >
-            <span>Explore All 7 Conclave Chapters</span>
+            <span>Explore Conclave Chapters</span>
             <ChevronRight className="w-4 h-4" />
           </Link>
         </div>
@@ -479,13 +479,13 @@ export default function AboutPage() {
         <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading uppercase tracking-widest">
             <ShieldCheck className="w-3.5 h-3.5" />
-            <span>Authenticity Guardrail</span>
+            <span>Practicing Allyship</span>
           </div>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
-            The 3-Question Authenticity Litmus Test
+            Allyship as a Leadership Responsibility
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
-            Separating genuine institutional advocacy from performative optics. Grounded in research from 40+ CXO panels across India, every allyship initiative must satisfy three mandatory criteria.
+            As discussions at the Chennai 2.0 chapter highlighted, allyship is a leadership responsibility that fosters trust, innovation, and sustainable success. Three questions help turn that commitment into daily practice.
           </p>
         </div>
 
@@ -535,13 +535,13 @@ export default function AboutPage() {
       >
         <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
-            Organizational Roadmap
+            From Principle to Practice
           </span>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
-            Six-Step HR Implementation Blueprint
+            Putting Allyship to Work
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
-            A practical roadmap for Chief Human Resources Officers, Talent Directors, and line leaders to institutionalize authentic allyship across enterprise units.
+            Six practical habits for HR leaders, team heads, and line managers looking to build supportive, future-ready workplaces.
           </p>
         </div>
 
@@ -584,26 +584,26 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-start">
             <div className="lg:col-span-7 space-y-4">
               <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
-                The Sports-Corporate-Academia Triad
+                Sport, Business &amp; Academia
               </span>
               <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
-                Why Sports Legends Anchor Allyship++
+                What the Field Teaches the Boardroom
               </h2>
               <p className="text-sm sm:text-base text-content-secondary leading-relaxed font-normal">
-                High-performance athletics represents the ultimate meritocratic arena in which psychological safety, coach-athlete allyship, discipline, and mutual trust under extreme pressure directly dictate collective triumph.
+                Competitive sport is a clear test of leadership under pressure—where preparation, mutual trust, and the bond between coach and athlete shape every result.
               </p>
               <p className="text-sm sm:text-base text-content-secondary leading-relaxed font-normal">
-                From Olympic podiums to global corporate boardrooms, SOA conclaves demonstrate that nurturing young talent requires the exact blend of discipline, empathy, and transformative mentorship practiced by elite national coaches.
+                Across every Allyship++ chapter, accomplished athletes and national coaches join corporate and academic leaders to share practical lessons on resilience, mentorship, and guiding young talent.
               </p>
             </div>
 
             <div className="lg:col-span-5 p-6 rounded-2xl bg-black/40 border border-line space-y-3 on-media">
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-accent">
                 <Medal className="w-4 h-4" />
-                <span>The Core Athletic Parallel</span>
+                <span>The Coaching Parallel</span>
               </div>
               <p className="text-xs text-content-secondary leading-relaxed">
-                &ldquo;A national coach does not run the sprint or bat the over; they eliminate barriers, build unshakeable confidence, and absorb external heat so the athlete can execute with complete focus. That is authentic corporate allyship.&rdquo;
+                &ldquo;A coach does not run the race or play the innings; they prepare the athlete, remove obstacles, and build the confidence needed to perform when it matters most. Great workplace leadership works the same way.&rdquo;
               </p>
             </div>
           </div>
@@ -648,15 +648,15 @@ export default function AboutPage() {
 
           <div className="relative z-10 space-y-4">
             <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full font-heading text-[11px] font-bold uppercase tracking-[0.14em] text-accent bg-surface-3 border border-accent/30 shadow-sm">
-              Executive Conclave Participation
+              Join the Platform
             </span>
 
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
-              Connect with SOA University Leadership
+              Start a Conversation With SOA
             </h2>
 
             <p className="text-base sm:text-lg text-content-secondary max-w-xl mx-auto leading-relaxed font-normal">
-              Corporate leaders, CHROs, and industrial partners are warmly invited to engage in our high-level roundtables, curriculum co-creation, and joint Centre of Excellence initiatives.
+              Corporate leaders, HR professionals, academicians, and industry partners are welcome to join upcoming chapters, mentor students, or explore collaboration with Siksha &lsquo;O&rsquo; Anusandhan.
             </p>
           </div>
 

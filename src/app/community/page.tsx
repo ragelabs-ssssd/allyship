@@ -25,47 +25,47 @@ export default function CommunityPage() {
 
   const workingCircles = [
     {
-      title: "Workplace & Technology Allies",
-      desc: "For engineers, managers, and designers tackling meeting equity, sponsorship pipelines, and hiring algorithms.",
+      title: "Engineering & Technology Leadership Circle",
+      desc: "Bringing together engineering leaders, architects, and faculty to discuss AI readiness, cloud skills, and mentoring young technologists.",
       cadence: "Bi-weekly Thursdays",
-      memberBadge: "Open Membership",
+      memberBadge: "Industry–Academia",
     },
     {
-      title: "Neurodiversity & Universal Design Circle",
-      desc: "Autistic, ADHD, and neurotypical professionals collaborating on sensory-friendly hybrid work norms.",
+      title: "Inclusive Workplace & People Leadership",
+      desc: "HR heads, talent leaders, and people managers sharing practical approaches to psychological safety, workplace well-being, and everyday allyship.",
       cadence: "1st & 3rd Wednesday",
-      memberBadge: "Safe Space",
+      memberBadge: "HR & Culture",
     },
     {
-      title: "First-Generation Scholars & Allies",
-      desc: "Pairing first-gen university scholars with industry mentors to navigate career advancement and financial equity.",
+      title: "Emerging Talent & Campus Mentorship",
+      desc: "Connecting graduating students and early-career professionals with industry mentors for career guidance, domain readiness, and workplace confidence.",
       cadence: "Monthly Weekends",
       memberBadge: "Mentorship Hub",
     },
     {
-      title: "Healthcare & Patient Advocacy Guild",
-      desc: "Clinicians and patient advocates examining disparities in clinical trials, maternal health, and diagnosis bias.",
+      title: "Healthcare, Research & Multidisciplinary Dialogue",
+      desc: "Clinicians, researchers, and industry specialists exploring collaborative innovation across medical sciences, biotechnology, and public health.",
       cadence: "Monthly Roundtables",
-      memberBadge: "Specialized Guild",
+      memberBadge: "Research & Practice",
     },
   ];
 
   const guidelines = [
     {
-      title: "1. The Chatham House Rule",
-      text: "Participants are free to use the information received, but neither the identity nor the affiliation of the speaker may be revealed.",
+      title: "1. Candid & Respectful Dialogue",
+      text: "Participants share insights openly so that industry leaders, faculty, and emerging professionals can learn from real workplace experiences.",
     },
     {
-      title: "2. Impact Over Intent",
-      text: "When called in on harmful language or assumptions, we listen with curiosity rather than prioritizing our good intentions.",
+      title: "2. Mentorship Over Hierarchy",
+      text: "Whether you are a senior executive, an academician, or a young professional, every conversation is grounded in mutual respect and curiosity.",
     },
     {
-      title: "3. Equal Airtime & No Dominance",
-      text: "Facilitators actively balance speaking time so that louder voices make room for quieter or marginalized participants.",
+      title: "3. Space for Every Voice",
+      text: "Sessions are moderated to ensure balanced participation and welcoming dialogue across industries, generations, and backgrounds.",
     },
     {
-      title: "4. Zero Tolerance for Harassment",
-      text: "Hate speech, personal attacks, doxxing, or tone policing result in immediate removal without appeal.",
+      title: "4. Commitment to Constructive Action",
+      text: "Discussions focus on practical takeaways—turning shared ideas into stronger mentorship, inclusive teams, and meaningful collaboration.",
     },
   ];
 
@@ -88,15 +88,15 @@ export default function CommunityPage() {
       <section className="text-center max-w-4xl mx-auto space-y-4">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase shadow-sm">
           <Users className="w-3.5 h-3.5 text-accent" />
-          <span>A Welcoming, Inclusive Community</span>
+          <span>The Allyship++ Network</span>
         </div>
 
         <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
-          Where Allies Connect, Learn &amp; Act
+          The People Behind the Conversation
         </h1>
 
         <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl mx-auto font-normal">
-          Welcome to the Allyship community space. Here, learners, advocates, and organizers assemble to share unvarnished experiences, practice bystander intervention, and foster mutual accountability.
+          Allyship++ brings together corporate executives, HR leaders, academicians, alumni, and emerging professionals who believe that stronger relationships between industry and academia build better workplaces.
         </p>
 
         <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
@@ -105,13 +105,13 @@ export default function CommunityPage() {
             onClick={() => setIsPledgeModalOpen(true)}
             className="btn-primary"
           >
-            <span>Join the Community (Take Pledge)</span>
+            <span>Join the Network (Take the Pledge)</span>
           </button>
           <a
             href="#events"
             className="btn-secondary"
           >
-            Explore Upcoming Events
+            Explore Upcoming Sessions
           </a>
         </div>
       </section>
@@ -120,13 +120,13 @@ export default function CommunityPage() {
       <section className="space-y-8">
         <div>
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block mb-2">
-            Peer Learning Groups
+            Ongoing Dialogue
           </span>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
-            Active Community Circles
+            Leadership &amp; Mentorship Circles
           </h2>
           <p className="text-sm sm:text-base text-content-muted mt-2 max-w-xl leading-relaxed">
-            Bi-weekly and monthly dialogue cohorts organized around specific domains of practice.
+            Focused discussion groups connecting corporate practitioners, SOA faculty, and emerging talent between conclave editions.
           </p>
         </div>
 
@@ -210,15 +210,15 @@ export default function CommunityPage() {
         <div className="max-w-3xl space-y-6">
           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-accent font-heading">
             <Lock className="w-4 h-4" />
-            <span>Safety, Moderation &amp; Privacy Charter</span>
+            <span>Principles of Engagement</span>
           </div>
 
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
-            How We Protect Vulnerability and Safety
+            How We Foster Open, Trusting Dialogue
           </h2>
 
           <p className="text-sm sm:text-base text-content-secondary leading-relaxed font-normal">
-            Meaningful discussion about systemic bias requires emotional vulnerability. We safeguard this space through strict, non-negotiable community norms.
+            Meaningful exchange between industry leaders, educators, and young professionals relies on trust, openness, and shared respect.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
@@ -231,9 +231,9 @@ export default function CommunityPage() {
           </div>
 
           <div className="pt-4 border-t border-line flex flex-wrap items-center justify-between text-xs text-content-muted gap-4">
-            <span>Moderated by trained restorative justice facilitators.</span>
+            <span>Facilitated by SOA Office of Corporate Relations &amp; Industry Collaboration.</span>
             <Link href="/contact" className="text-accent hover:underline">
-              Report a Safety or Conduct Concern
+              Connect With the Conclave Secretariat
             </Link>
           </div>
         </div>
@@ -244,16 +244,16 @@ export default function CommunityPage() {
         <div className="flex items-center gap-2">
           <MessageSquare className="w-5 h-5 text-accent" />
           <span className="text-xs font-bold uppercase tracking-wider text-content-muted font-heading">
-            Monthly Community Reflection Prompt
+            Leadership Reflection Prompt
           </span>
         </div>
 
         <h3 className="text-lg font-bold text-content font-heading">
-          “What is one unwritten rule in your industry that advantages people from certain backgrounds?”
+          “What is one leadership or mentorship practice that helped you most when transitioning into a new role or team?”
         </h3>
 
         <p className="text-xs text-content-muted leading-relaxed font-normal">
-          Take a moment to reflect. Responses are submitted anonymously to our internal learning team for quarterly case study synthesis.
+          Share a brief perspective. Selected insights help shape upcoming panel themes across future Allyship++ chapters.
         </p>
 
         {reflectionSubmitted ? (

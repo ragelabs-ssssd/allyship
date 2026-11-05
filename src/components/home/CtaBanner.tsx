@@ -17,20 +17,19 @@ export function CtaBanner({ onOpenInvite }: CtaBannerProps) {
       <div className="max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 text-center space-y-8">
         <SectionReveal>
           <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent bg-surface-3 border border-accent/30 shadow-sm">
-            Executive Participation
+            Join the Platform
           </span>
         </SectionReveal>
 
         <SectionReveal delay={0.1}>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.15] max-w-5xl mx-auto text-content">
-            Join the Next Chapter of Industry–Academia Leadership.
+            Be Part of the Next Conversation.
           </h2>
         </SectionReveal>
 
         <SectionReveal delay={0.2}>
           <p className="font-sans text-base sm:text-lg font-normal tracking-[0.01em] leading-relaxed text-content-secondary max-w-xl mx-auto">
-            Curated delegations for CHROs, GCC Managing Directors, and Corporate Strategists
-            seeking collaborative partnerships, applied research, and top-tier talent.
+            Whether you lead an organisation, shape people strategy, teach, or mentor emerging talent, Allyship++ welcomes your perspective.
           </p>
         </SectionReveal>
 
