@@ -136,13 +136,13 @@ export function TestimonialCarousel() {
             <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
               Voices of Conclave Luminaries
             </span>
-            <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-[-0.025em] leading-[1.1] text-content mt-2">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-[-0.025em] leading-[1.1] text-content mt-2 sm:whitespace-nowrap">
               Perspectives From the Conclave
             </h2>
           </SectionReveal>
 
           {/* Carousel Arrows */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 shrink-0">
             <button
               onClick={scrollPrev}
               aria-label="Previous testimonial"

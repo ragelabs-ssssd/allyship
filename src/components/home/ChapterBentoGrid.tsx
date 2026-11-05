@@ -46,13 +46,13 @@ export function ChapterBentoGrid() {
             <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
               The Conclave Journey
             </span>
-            <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-[-0.025em] leading-[1.1] text-content mt-2">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-[-0.025em] leading-[1.1] text-content mt-2 sm:whitespace-nowrap">
               Metro Chapter Archives
             </h2>
           </SectionReveal>
 
           {/* Underline Tabs */}
-          <div className="flex items-center gap-6 text-sm font-medium">
+          <div className="flex items-center gap-6 text-sm font-medium shrink-0">
             <button
               onClick={() => setActiveCycle("all")}
               className={`pb-2 relative transition-colors ${
