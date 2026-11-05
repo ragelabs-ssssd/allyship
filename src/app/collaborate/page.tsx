@@ -171,9 +171,9 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
                 <span>Corporate Partnership Portal</span>
               </div>
 
-              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
-                Collaborate for <br />
-                <span className="italic font-normal whitespace-nowrap">Shared Impact</span>
+              <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-[4.25rem] font-bold tracking-tight text-content leading-[1.06]">
+                <span className="block sm:whitespace-nowrap">Strategic Alliances</span>
+                <span className="block italic font-normal sm:whitespace-nowrap">For Tomorrow&rsquo;s Leaders</span>
               </h1>
 
               <p className="text-lg sm:text-xl font-display text-content-muted italic">
