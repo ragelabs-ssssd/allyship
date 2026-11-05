@@ -105,7 +105,7 @@ const conclavesData = [
     ],
     organizations: ["PwC", "Lexmark", "TCS", "ITC Infotech", "Cognizant"],
     focus: "Connecting high-performance athletic discipline with corporate leadership, workforce mental fitness, and university curriculum agility.",
-    image: "CON01638.JPG"
+    image: "kolkata-1.jpg"
   },
   {
     id: "mumbai-1",

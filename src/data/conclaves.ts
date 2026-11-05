@@ -240,7 +240,7 @@ export const conclavesData: ConclaveChapter[] = [
     ],
     organizations: ["PwC", "Lexmark", "Reliance Jio", "Vodafone", "NRI FinTech", "WICCI"],
     focus: "Connecting legacy corporate practices with digital DEI standards, cloud transformation, and sports-inspired leadership.",
-    image: "/CON01638.JPG",
+    image: "/kolkata-1.jpg",
   },
   {
     id: "mumbai-1",
