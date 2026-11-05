@@ -49,16 +49,20 @@ export function ChairmanVision() {
             <div className="space-y-4">
               <Quote className="w-12 h-12 text-accent opacity-80" />
               <blockquote className="font-serif italic font-normal tracking-normal text-2xl sm:text-3xl lg:text-4xl leading-[1.4] text-content">
-                &ldquo;Higher education reaches its full purpose when academic knowledge and industry leadership walk together—shaping professionals who lead with competence, empathy, and responsibility.&rdquo;
+                &ldquo;Allyship is not a transactional summit. It is an enduring covenant between
+                corporate boardrooms and academic halls — an obligation to sculpt talent that leads
+                with intellect, empathy, and technological resilience.&rdquo;
               </blockquote>
             </div>
 
             <div className="space-y-3 pt-4 border-t border-line text-sm sm:text-base text-content-secondary leading-relaxed">
               <p className="font-sans text-sm sm:text-base font-normal tracking-[0.01em] leading-relaxed text-content-secondary">
-                Under the vision of Founder President Prof. (Dr.) Manojranjan Nayak, Siksha &lsquo;O&rsquo; Anusandhan has grown into one of India&apos;s leading multidisciplinary universities (ranked 15th among universities in NIRF 2025 and accredited with NAAC A++), bringing nine constituent institutes and over 15,000 students into ongoing dialogue with global industry.
+                Under the stewardship of Prof. (Dr.) Manojranjan Nayak, SOA has evolved into a premier
+                Deemed-to-be University (NIRF Top 15 in University category and Top 27 in Overall India),
+                fostering nine constituent institutes, world-class teaching hospitals, and over 15,000 scholars.
               </p>
               <p className="font-sans text-xs text-content-muted uppercase tracking-[0.14em] font-medium">
-                Guiding SOA&apos;s Allyship++ Conclaves Across Bengaluru, Hyderabad, Kolkata, Mumbai &amp; Chennai
+                Inaugural addresses delivered across Bengaluru, Mumbai, Hyderabad &amp; Chennai Conclaves
               </p>
             </div>
 

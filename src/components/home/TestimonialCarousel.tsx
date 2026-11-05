@@ -134,10 +134,10 @@ export function TestimonialCarousel() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 pb-6 border-b border-line">
           <SectionReveal>
             <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
-              Perspectives From the Conclave
+              Voices of Conclave Luminaries
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight mt-2 sm:whitespace-nowrap">
-              Voices From the Room
+              Perspectives From the Conclave
             </h2>
           </SectionReveal>
 

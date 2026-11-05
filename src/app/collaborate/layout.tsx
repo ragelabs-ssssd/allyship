@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Collaborate With SOA",
+  title: "Collaborate With Us",
   description:
-    "Stay involved with ALLYSHIP++ beyond the conclave: mentor students, offer guest sessions, share industry problem statements and build talent partnerships with Siksha 'O' Anusandhan.",
+    "Partner with SOA University: submit industry challenges, co-build Centres of Excellence, co-design curriculum, and recruit from a 94.54% placement ecosystem.",
 };
 
 export default function CollaborateLayout({

@@ -12,41 +12,41 @@ interface CinematicHeroProps {
 
 const ROTATING_WORDS = [
   { text: "ACADEMIA", color: "text-accent" },    // Signature Champagne Gold
-  { text: "LEADERSHIP", color: "text-[#E8D5A7]" },  // Warm Platinum Champagne
-  { text: "INCLUSION", color: "text-accent" },    // Rich Metallic Gold
-  { text: "TALENT", color: "text-[#D4B97B]" },  // Muted Warm Bronze
-  { text: "POSSIBILITY", color: "text-[#E8D5A7]" },   // Soft Sunlit Brass
+  { text: "INNOVATION", color: "text-[#E8D5A7]" },  // Warm Platinum Champagne
+  { text: "RESEARCH", color: "text-accent" },    // Rich Metallic Gold
+  { text: "LEADERSHIP", color: "text-[#D4B97B]" },  // Muted Warm Bronze
+  { text: "FORESIGHT", color: "text-[#E8D5A7]" },   // Soft Sunlit Brass
 ];
 
 const HERO_SLIDES = [
   {
     chapter: "Hyderabad Chapter 2.0",
     description:
-      "Corporate leaders, HR heads, and faculty examine how organisations welcome and guide early-career professionals.",
+      "Over 80+ CXOs, Capability Center Heads, and academic leadership deliberate workforce transformation and applied research.",
     image: "/slides/IMG_7873.jpg",
   },
   {
     chapter: "Chennai Chapter 2.0",
     description:
-      "Practicing allyship as an everyday leadership responsibility that builds trust, innovation, and future-ready workplaces.",
+      "Embedding allyship as an everyday leadership responsibility, establishing psychological trust, and expanding talent pipelines.",
     image: "/slides/CON01670.jpg",
   },
   {
     chapter: "Mumbai Chapter 1.0",
     description:
-      "Senior HR leaders and sporting figures discuss inclusive workplaces, resilience, and long-term talent development.",
+      "Building inclusive, high-empathy workplaces, balancing quarterly targets with mental wellness and psychological safety.",
     image: "/slides/IMG_7577.jpg",
   },
   {
     chapter: "Bengaluru Chapter 1.0",
     description:
-      "Corporate leaders, HR professionals, and industry experts meet in Bengaluru to bridge academia and the workplace.",
+      "Senior engineering and people leaders from Microsoft, Dell, and Zscaler deliberate on engineering cultures and hybrid teams.",
     image: "/slides/IMG_7849.jpg",
   },
   {
     chapter: "Kolkata Chapter 1.0",
     description:
-      "Industry leaders from PwC, Lexmark, Vodafone, and Reliance Jio join sporting icons to explore mentorship and inclusion.",
+      "Bridging legacy enterprise leadership, digital transformation, and inclusive organizational growth across Eastern India.",
     image: "/slides/CON01638.jpg",
   },
 ];
@@ -114,7 +114,7 @@ export function CinematicHero({ onOpenInvite }: CinematicHeroProps) {
               className="flex items-center gap-3 flex-wrap"
             >
               <span className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-surface-2 border border-accent/30 shadow-sm font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
-                <span>An SOA Leadership Initiative</span>
+                <span>Siksha &lsquo;O&rsquo; Anusandhan Leadership Series</span>
               </span>
             </motion.div>
 
@@ -204,7 +204,7 @@ export function CinematicHero({ onOpenInvite }: CinematicHeroProps) {
                 transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                 className="font-sans text-base sm:text-lg font-normal tracking-[0.01em] leading-relaxed text-content-secondary max-w-xl"
               >
-                Allyship++ is a leadership and industry–academia platform initiated by Siksha &lsquo;O&rsquo; Anusandhan (SOA). It brings corporate executives, HR leaders, academicians, and emerging talent together to explore inclusive leadership, mentorship, and the changing world of work.
+                Where Boardroom Vision Meets Academic Foresight. An invitation-only national conclave series convening CHROs, GCC Managing Directors, and research visionaries across India&apos;s primary technology capitals.
               </motion.p>
             </div>
 
