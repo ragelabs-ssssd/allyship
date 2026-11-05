@@ -1,25 +1,33 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { useReducedMotion } from "framer-motion";
 
-const VIDEO_SRC = "/logos/mono/soa-video-background/SOA-University-Campus-SnapYT.App.mp4";
-/** Slower-than-normal playback rate for an ambient cinematic feel */
-const PLAYBACK_RATE = 0.75;
+const VIDEO_SRC = "/logos/mono/soa-video-background/soa-campus-compressed.mp4";
+const PLAYBACK_RATE = 0.85;
 
 export function HeroBackdrop({ scrimClassName = "" }: { scrimClassName?: string }) {
   const prefersReducedMotion = useReducedMotion();
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    if (prefersReducedMotion || !videoRef.current) return;
+    const video = videoRef.current;
+    if (!video || prefersReducedMotion) return;
+
     try {
-      videoRef.current.playbackRate = PLAYBACK_RATE;
+      video.playbackRate = PLAYBACK_RATE;
+      video.defaultMuted = true;
+      video.muted = true;
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          /* Autoplay policy fallback */
+        });
+      }
     } catch {
       /* ignore */
     }
-  }, [prefersReducedMotion, isLoaded]);
+  }, [prefersReducedMotion]);
 
   return (
     <div
@@ -34,10 +42,7 @@ export function HeroBackdrop({ scrimClassName = "" }: { scrimClassName?: string 
           muted
           playsInline
           preload="auto"
-          onLoadedData={() => setIsLoaded(true)}
-          className={`absolute left-1/2 top-1/2 h-[56.25vw] min-h-[100vh] w-[100vw] min-w-[177.78vh] -translate-x-1/2 -translate-y-1/2 object-cover border-0 brightness-[1.03] saturate-105 transition-opacity duration-1000 ${
-            isLoaded ? "opacity-100" : "opacity-0"
-          }`}
+          className="absolute left-1/2 top-1/2 h-[56.25vw] min-h-[100vh] w-[100vw] min-w-[177.78vh] -translate-x-1/2 -translate-y-1/2 object-cover border-0 brightness-[1.03] saturate-105"
         >
           <source src={VIDEO_SRC} type="video/mp4" />
         </video>
