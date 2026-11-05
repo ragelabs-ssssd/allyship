@@ -121,11 +121,6 @@ export function ChapterBentoGrid() {
                     <span className="px-3 py-1 rounded-full font-sans text-[11px] font-semibold tracking-[0.14em] uppercase bg-accent text-on-accent">
                       Featured
                     </span>
-                    {featured.id === "bengaluru-2" && (
-                      <span className="px-3 py-1 rounded-full font-sans text-[11px] font-semibold tracking-[0.12em] uppercase bg-black/80 backdrop-blur-md text-accent border border-accent/40">
-                        Photos Updating Soon
-                      </span>
-                    )}
                   </div>
 
                   <div className="absolute bottom-4 left-4 right-4 text-content">
@@ -178,13 +173,6 @@ export function ChapterBentoGrid() {
                         sizes="(max-width: 768px) 100vw, 33vw"
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />
-                      {chapter.id === "bengaluru-2" && (
-                        <div className="absolute bottom-2 left-2 right-2">
-                          <span className="px-2 py-0.5 rounded text-[10px] font-semibold bg-black/80 backdrop-blur-md text-accent border border-accent/40 block text-center truncate">
-                            Photos Updating Soon
-                          </span>
-                        </div>
-                      )}
                     </div>
                     <div className={`sm:col-span-7 ${sideChapters.length === 3 ? "p-4 sm:p-4.5" : "p-5"} flex flex-col justify-between space-y-2`}>
                       <div>
@@ -240,13 +228,6 @@ export function ChapterBentoGrid() {
                         {getCityLabel(chapter.city, activeCycle)}
                       </span>
                     </div>
-                    {chapter.id === "bengaluru-2" && (
-                      <div className="absolute bottom-3 left-3">
-                        <span className="px-2.5 py-0.5 rounded-full font-sans text-[10px] uppercase tracking-[0.12em] bg-black/80 backdrop-blur-md text-accent font-semibold border border-accent/40">
-                          Photos Updating Soon
-                        </span>
-                      </div>
-                    )}
                   </div>
                   <div className="p-5 space-y-2">
                     <span className="font-sans text-[11px] text-content-muted uppercase tracking-[0.14em] block font-medium">

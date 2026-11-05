@@ -363,7 +363,7 @@ export const conclavesData: ConclaveChapter[] = [
     ],
     organizations: ["Microsoft", "Dell", "L&T Technology Services", "Akamai", "BNY Mellon", "Standard Chartered"],
     focus: "Next-gen talent readiness, corporate-academia CoEs, agile skill benchmarks, and mental wellness in tech.",
-    image: "/IMG_7849.jpg",
+    image: "/bengaluru-2.jpg",
   },
   {
     id: "hyderabad-2",
