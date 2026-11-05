@@ -404,14 +404,17 @@ export default function AboutPage() {
           </p>
         </div>
 
-        {/* 7 Pillars Grid */}
+        {/* 7 Pillars Grid — Exactly 7 Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {soaJourneyPillars.map((r) => {
+          {soaJourneyPillars.map((r, index) => {
             const IconComponent = r.icon;
+            const isLastPillar = index === soaJourneyPillars.length - 1;
             return (
               <div
                 key={r.role}
-                className="rounded-3xl p-7 bg-surface text-content border border-line shadow-lg hover:border-accent/80 hover:shadow-[0_0_24px_rgba(201,169,110,0.15)] transition-all duration-300 flex flex-col justify-between group"
+                className={`rounded-3xl p-7 bg-surface text-content border border-line shadow-lg hover:border-accent/80 hover:shadow-[0_0_24px_rgba(201,169,110,0.15)] transition-all duration-300 flex flex-col justify-between group ${
+                  isLastPillar ? "md:col-span-2 lg:col-span-3 xl:col-span-2" : ""
+                }`}
               >
                 <div className="space-y-4">
                   {/* Top Bar: Icon + Badge */}
@@ -442,43 +445,29 @@ export default function AboutPage() {
               </div>
             );
           })}
+        </div>
 
-          {/* 8th Slot: Executive Journey Summary Card */}
-          <div className="rounded-3xl p-7 bg-surface text-content border border-line shadow-lg flex flex-col justify-between hover:border-accent/80 transition-all">
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <div className="w-10 h-10 rounded-2xl bg-accent-subtle border border-accent/30 flex items-center justify-center text-accent">
-                  <Sparkles className="w-5 h-5" />
-                </div>
-                <span className="text-[10px] font-bold font-heading uppercase tracking-wider px-3 py-1 rounded-full bg-glass text-accent border border-accent/20">
-                  Measurable Outcome
-                </span>
-              </div>
-
-              <div>
-                <h3 className="font-heading text-lg font-bold text-content">
-                  The Allyship Dividend
-                </h3>
-                <p className="text-xs font-semibold text-accent mt-1">
-                  From Dialogue to Quantifiable National Impact
-                </p>
-              </div>
-
-              <p className="text-xs leading-relaxed text-content-secondary font-normal">
-                SOA Allyship++ is not a symbolic forum—it is a compounding movement driving our 94.54% placement track record, NIRF Top-15 national standing, and enduring relationships with 150+ global employers.
-              </p>
+        {/* Measurable Outcome Milestone Banner */}
+        <div className="mt-10 p-8 sm:p-10 rounded-3xl bg-surface border border-line flex flex-col lg:flex-row lg:items-center justify-between gap-6 hover:border-accent/40 transition-colors shadow-lg">
+          <div className="space-y-2 max-w-3xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-subtle border border-accent/30 text-accent text-[11px] font-bold font-heading uppercase tracking-widest">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Measurable Outcome</span>
             </div>
-
-            <div className="pt-4 border-t border-line">
-              <Link
-                href="/event"
-                className="text-xs font-bold text-accent hover:text-content flex items-center gap-1 transition-colors"
-              >
-                <span>Explore All 7 Conclave Chapters</span>
-                <ChevronRight className="w-3.5 h-3.5" />
-              </Link>
-            </div>
+            <h3 className="font-heading text-xl sm:text-2xl font-bold text-content">
+              The Allyship Dividend: 94.54% Placement Velocity &amp; NIRF Top-15
+            </h3>
+            <p className="text-xs sm:text-sm text-content-secondary leading-relaxed font-normal">
+              SOA Allyship++ is not a symbolic forum—it is a compounding national movement driving permanent corporate recruitment relationships with 150+ global employers and premier research synergy across India.
+            </p>
           </div>
+          <Link
+            href="/event"
+            className="btn-primary self-start lg:self-center whitespace-nowrap"
+          >
+            <span>Explore All 7 Conclave Chapters</span>
+            <ChevronRight className="w-4 h-4" />
+          </Link>
         </div>
       </section>
 
