@@ -163,22 +163,22 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
       <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 border-b border-line overflow-hidden">
         <HeroBackdrop />
         <div className="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 2xl:gap-24 items-center">
-            <div className="lg:col-span-6 xl:col-span-6 space-y-6 text-left">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase">
                 <span>Corporate Partnership Portal</span>
               </div>
 
-              <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
+              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
                 Partner with <br />
                 <span className="italic font-normal">Siksha &lsquo;O&rsquo; Anusandhan</span>
               </h1>
 
-              <p className="text-xl sm:text-2xl font-heading text-content-secondary italic">
+              <p className="text-xl sm:text-2xl font-display text-content-muted italic">
                 Co-Innovate. Mentor Emerging Leaders. Build Strategic Pipelines.
               </p>
 
-              <p className="text-base sm:text-lg text-content-muted leading-relaxed max-w-2xl font-normal">
+              <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal">
                 From co-establishing specialized campus Centres of Excellence with Tech Mahindra and LTTS, to sponsoring challenge problem statements via the AIC-SOA Foundation, Siksha &lsquo;O&rsquo; Anusandhan offers corporate partners a structured, high-velocity collaboration ecosystem.
               </p>
 
@@ -187,7 +187,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
                   href="#submit-challenge"
                   className="btn-primary"
                 >
-                  <span>Submit an Industry Challenge</span>
+                  <span>Submit Industry Challenge</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>
 
@@ -196,15 +196,15 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
                   onClick={() => setIsInviteOpen(true)}
                   className="btn-secondary"
                 >
-                  <span>Request Executive Conclave Seat</span>
+                  <span>Request Executive Visit</span>
+                  <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
             </div>
 
-            <div className="lg:col-span-6 xl:col-span-6 relative flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-xl lg:max-w-none xl:max-w-[640px] 2xl:max-w-[700px]">
-              <div className="relative rounded-3xl overflow-hidden bg-surface p-2.5 border border-line shadow-xl">
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-surface-3 on-media">
+            <div className="lg:col-span-5 relative">
+              <div className="relative rounded-3xl overflow-hidden bg-surface p-1.5 border border-line shadow-xl">
+                <div className="relative aspect-[16/11] sm:aspect-[4/3] rounded-2xl overflow-hidden bg-surface-3 on-media">
                   <Image
                     src="/soa-auditorium.jpg"
                     alt="SOA University Auditorium and Corporate Partner Gathering"
@@ -213,7 +213,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
                     sizes="(max-width: 1024px) 100vw, 40vw"
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-5 text-content">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-5 text-content">
                     <span className="text-[11px] font-bold font-heading text-[#E8D5A7] uppercase tracking-wider">
                       Institutional Synergy
                     </span>
@@ -225,10 +225,6 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
                     </span>
                   </div>
                 </div>
-
-                <div className="absolute -top-1 -left-1 w-6 h-6 border-t-2 border-l-2 border-accent pointer-events-none" />
-                <div className="absolute -bottom-1 -right-1 w-6 h-6 border-b-2 border-r-2 border-accent pointer-events-none" />
-              </div>
               </div>
             </div>
           </div>

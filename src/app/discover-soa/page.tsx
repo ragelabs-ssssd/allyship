@@ -376,7 +376,7 @@ export default function DiscoverSoaPage() {
             </div>
 
             <div className="lg:col-span-5 relative">
-              <div className="relative rounded-3xl overflow-hidden bg-surface p-2.5 border border-line shadow-xl">
+              <div className="relative rounded-3xl overflow-hidden bg-surface p-1.5 border border-line shadow-xl">
                 <div className="relative aspect-[16/11] sm:aspect-[4/3] rounded-2xl overflow-hidden bg-surface-3 on-media">
                   {universityHeroImages.map((slide, idx) => (
                     <div
@@ -407,9 +407,6 @@ export default function DiscoverSoaPage() {
                     </span>
                   </div>
                 </div>
-
-                <div className="absolute -top-1 -left-1 w-6 h-6 border-t-2 border-l-2 border-accent pointer-events-none" />
-                <div className="absolute -bottom-1 -right-1 w-6 h-6 border-b-2 border-r-2 border-accent pointer-events-none" />
               </div>
             </div>
           </div>
