@@ -339,7 +339,7 @@ export default function DiscoverSoaPage() {
                 <span>Deemed to be University · Bhubaneswar, India</span>
               </div>
 
-              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
+              <h1 className="font-display text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-content leading-[1.08]">
                 Discover <br />
                 <span className="italic font-normal">Siksha &lsquo;O&rsquo; Anusandhan</span>
               </h1>
