@@ -168,18 +168,18 @@ export default function ImpactPage() {
       <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 border-b border-line overflow-hidden">
         <HeroBackdrop />
         <div className="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 2xl:gap-24 items-center">
-            <div className="lg:col-span-6 xl:col-span-6 space-y-6 text-left">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase">
                 <span>Measurable Outcomes & Media Footprint</span>
               </div>
 
-              <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
+              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
                 The Impact of <br />
-                <span>ALLYSHIP</span><span className="text-accent">++</span>
+                <span className="italic font-normal">Allyship<span className="text-accent not-italic">++</span></span>
               </h1>
 
-              <p className="text-xl sm:text-2xl font-heading text-content-secondary">
+              <p className="text-xl sm:text-2xl font-display text-content-muted italic">
                 Conversations in the Boardroom. Structural Transformations on Campus.
               </p>
 
@@ -200,15 +200,14 @@ export default function ImpactPage() {
                   href="#press-coverage"
                   className="btn-secondary"
                 >
-                  Press Dossier
+                  <span>Press Dossier</span>
                 </a>
               </div>
             </div>
 
-            <div className="lg:col-span-6 xl:col-span-6 relative flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-xl lg:max-w-none xl:max-w-[640px] 2xl:max-w-[700px]">
-              <div className="relative rounded-3xl overflow-hidden bg-surface p-2.5 border border-line shadow-2xl">
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-surface-3 on-media">
+            <div className="lg:col-span-5 relative">
+              <div className="relative rounded-3xl overflow-hidden bg-surface p-2.5 border border-line shadow-xl">
+                <div className="relative aspect-[16/11] sm:aspect-[4/3] rounded-2xl overflow-hidden bg-surface-3 on-media">
                   <Image
                     src="/IMG_7873.jpg"
                     alt="Allyship++ National Conclave Live Delegation and Leadership"
@@ -217,19 +216,21 @@ export default function ImpactPage() {
                     sizes="(max-width: 1024px) 100vw, 40vw"
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-5 text-content">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-5 text-content">
                     <span className="text-[11px] font-bold font-heading text-[#E8D5A7] uppercase tracking-wider">
                       Partnership Outcomes
                     </span>
                     <span className="text-sm font-bold text-content mt-0.5">
                       Centres of Excellence & Industry Transformation
                     </span>
+                    <span className="text-[11px] text-content-secondary mt-0.5">
+                      National Media Footprint · 6 Conclaves
+                    </span>
                   </div>
                 </div>
 
                 <div className="absolute -top-1 -left-1 w-6 h-6 border-t-2 border-l-2 border-accent pointer-events-none" />
                 <div className="absolute -bottom-1 -right-1 w-6 h-6 border-b-2 border-r-2 border-accent pointer-events-none" />
-              </div>
               </div>
             </div>
           </div>
@@ -238,14 +239,14 @@ export default function ImpactPage() {
 
       {/* 2. THREE QUALITATIVE OUTCOME PILLARS */}
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
+        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <span className="font-heading text-xs font-bold uppercase tracking-widest text-accent">
             Institutional Transformation
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-content tracking-tight">
             From Dialogue to Institutional Action
           </h2>
-          <p className="text-base text-content-secondary leading-relaxed">
+          <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl mx-auto">
             How executive conclaves in Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai translate into concrete academic, research, and corporate talent outcomes.
           </p>
         </div>
@@ -277,17 +278,15 @@ export default function ImpactPage() {
 
       {/* 3. IN THE PRESS — 9 NEWSPAPER & MEDIA CLIPPINGS */}
       <section id="press-coverage" className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line">
-        <div className="max-w-3xl space-y-3 mb-16">
-          <div className="flex items-center gap-2 text-accent">
-            <Newspaper className="w-5 h-5" />
-            <span className="text-xs font-bold uppercase tracking-wider">
-              National & Regional Media Chronicle
-            </span>
+        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent/10 border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase">
+            <Newspaper className="w-3.5 h-3.5" />
+            <span>National & Regional Media Chronicle</span>
           </div>
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-content tracking-tight">
             In the Press
           </h2>
-          <p className="text-base text-content-secondary leading-relaxed">
+          <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl mx-auto">
             National and regional print and digital publications—including Deccan Chronicle, The Statesman, Prameya News, OdishaBytes, The Sakala, Samaya, Around Odisha, Orissa Today, and The Sanchar—have chronicled SOA’s Allyship++ journey across India. Click any clipping to inspect the full report.
           </p>
         </div>

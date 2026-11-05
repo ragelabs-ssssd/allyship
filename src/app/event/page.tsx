@@ -109,23 +109,23 @@ function EventContent() {
       <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 border-b border-line overflow-hidden">
         <HeroBackdrop />
         <div className="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 2xl:gap-24 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Left Column: Editorial Headline & Copy */}
-            <div className="lg:col-span-6 xl:col-span-6 space-y-6 text-left">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
+            <div className="lg:col-span-7 space-y-6">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase">
                 <span>Master Conclave Series · 2024–2026</span>
               </div>
 
-              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-[-0.025em] leading-[1.1] text-content">
-                The Metro <br className="hidden sm:inline" />
-                <span className="font-serif italic font-normal text-content">Conclaves</span>
+              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
+                The Metro <br />
+                <span className="italic font-normal">Conclaves</span>
               </h1>
 
-              <p className="font-sans text-xl sm:text-2xl font-medium tracking-normal text-content-secondary">
+              <p className="text-xl sm:text-2xl font-display text-content-muted italic">
                 6 Conclaves Across 5 Metropolitan Capitals
               </p>
 
-              <p className="font-sans text-base sm:text-lg font-normal tracking-[0.01em] leading-relaxed text-content-secondary max-w-2xl">
+              <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal">
                 From Bengaluru and Hyderabad to Kolkata, Mumbai, and Chennai, Siksha &lsquo;O&rsquo; Anusandhan has built a continuous national bridge connecting over 500 corporate CXOs, Olympic champions, and academic visionaries.
               </p>
 
@@ -133,27 +133,24 @@ function EventContent() {
                 <button
                   type="button"
                   onClick={() => setIsInviteOpen(true)}
-                  className="inline-flex items-center gap-3 rounded-full bg-accent hover:bg-accent-hover text-on-accent font-sans font-medium text-sm px-6 py-3.5 transition-colors duration-200 shadow-sm"
+                  className="btn-primary"
                 >
                   <span>Request Executive Invitation</span>
-                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-black/80 text-white text-xs">
-                    →
-                  </span>
+                  <ArrowRight className="w-4 h-4" />
                 </button>
                 <a
                   href="#chapter-details"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full font-sans text-sm font-semibold text-content-secondary hover:text-content bg-surface-3 hover:bg-surface-3 border border-line hover:border-line-strong transition-all duration-300"
+                  className="btn-secondary"
                 >
-                  Explore Archives
+                  <span>Explore Archives</span>
                 </a>
               </div>
             </div>
 
             {/* Right Column: Curated Photo Frame */}
-            <div className="lg:col-span-6 xl:col-span-6 relative flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-xl lg:max-w-none xl:max-w-[640px] 2xl:max-w-[700px]">
+            <div className="lg:col-span-5 relative">
               <div className="relative rounded-3xl overflow-hidden bg-surface p-2.5 border border-line shadow-xl">
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-surface-3 on-media">
+                <div className="relative aspect-[16/11] sm:aspect-[4/3] rounded-2xl overflow-hidden bg-surface-3 on-media">
                   {eventHeroImages.map((slide, idx) => (
                     <div
                       key={slide.src}
@@ -171,23 +168,22 @@ function EventContent() {
                       />
                     </div>
                   ))}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-
-                  {/* Caption */}
-                  <div className="absolute bottom-4 left-4 right-4 text-content">
-                    <span className="text-[11px] tracking-widest text-[#E8D5A7] uppercase font-semibold">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-5 text-content">
+                    <span className="text-[11px] font-bold font-heading text-[#E8D5A7] uppercase tracking-wider">
                       Edition 1.0 & 2.0 Live Archive
                     </span>
-                    <p className="text-sm font-medium mt-0.5 truncate text-content">
+                    <span className="text-sm font-bold text-content mt-0.5">
                       {eventHeroImages[heroSlide].title}
-                    </p>
+                    </span>
+                    <span className="text-[11px] text-content-secondary mt-0.5">
+                      5 Metropolitan Capitals · 500+ Corporate CXOs
+                    </span>
                   </div>
                 </div>
 
                 {/* Corner accents */}
                 <div className="absolute -top-1 -left-1 w-6 h-6 border-t-2 border-l-2 border-accent pointer-events-none" />
                 <div className="absolute -bottom-1 -right-1 w-6 h-6 border-b-2 border-r-2 border-accent pointer-events-none" />
-              </div>
               </div>
             </div>
           </div>
@@ -197,15 +193,15 @@ function EventContent() {
       {/* 2. INSTITUTIONAL PHILOSOPHY & MANDATE */}
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <span className="font-sans text-[11px] font-semibold tracking-[0.14em] text-accent uppercase">
+          <span className="font-heading text-xs font-bold tracking-widest text-accent uppercase">
             The Institutional Mandate
           </span>
 
-          <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-[-0.025em] leading-[1.1] text-content">
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-content tracking-tight">
             Why Allyship<span className="text-accent">++</span>?
           </h2>
 
-          <p className="font-sans text-base sm:text-lg font-normal tracking-[0.01em] leading-relaxed text-content-muted">
+          <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl mx-auto">
             In an era of rapid disruption, transactional placement is no longer sufficient. Siksha &lsquo;O&rsquo; Anusandhan moves academic leadership directly into corporate boardrooms—co-creating empathetic, resilient, and future-ready talent ecosystems.
           </p>
         </div>
@@ -309,10 +305,10 @@ function EventContent() {
         <div className="mt-14 rounded-3xl p-8 sm:p-12 bg-gradient-to-br from-surface-2 via-surface to-canvas text-content shadow-2xl relative overflow-hidden border border-line">
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8 space-y-4">
-              <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
+              <span className="font-heading text-xs font-bold uppercase tracking-widest text-accent">
                 The Institutional Commitment
               </span>
-              <blockquote className="font-serif italic font-normal tracking-normal text-2xl sm:text-3xl lg:text-4xl text-content leading-[1.4]">
+              <blockquote className="font-display italic font-normal tracking-normal text-2xl sm:text-3xl lg:text-4xl text-content leading-[1.35]">
                 &ldquo;We do not wait for industry to knock on our doors; we bring academic rigor directly into corporate boardrooms across India.&rdquo;
               </blockquote>
               <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-secondary">
@@ -379,7 +375,7 @@ function EventContent() {
               As Convener of every Allyship++ chapter across Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai, Prof. Hota has spearheaded the movement to bridge corporate leadership with academic research and youth development.
             </p>
 
-            <blockquote className="font-serif italic font-normal tracking-normal text-base sm:text-lg text-content leading-[1.4] border-l-2 border-accent pl-5 py-3 bg-surface-2 rounded-r-xl">
+            <blockquote className="font-display italic font-normal tracking-normal text-base sm:text-lg text-content leading-relaxed border-l-2 border-accent pl-5 py-3 bg-surface-2 rounded-r-xl">
               &ldquo;Allyship is not a transactional corporate gesture; it is the intentional, everyday commitment to guide, mentor, and sponsor young talent. When academia and corporate leadership unite with empathy and athletic grit, we create an environment where every graduate feels trusted, valued, and empowered to excel.&rdquo;
             </blockquote>
 
