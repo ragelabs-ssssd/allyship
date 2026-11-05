@@ -199,7 +199,6 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
                   className="btn-secondary"
                 >
                   <span>Request Executive Visit</span>
-                  <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
             </div>

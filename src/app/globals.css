@@ -371,18 +371,22 @@
 .btn-primary {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.75rem;
   padding: 0.875rem 1.75rem;
+  min-height: 3rem;
   background-color: var(--t-accent);
   color: var(--t-on-accent);
   font-family: var(--font-sans), sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.875rem;
+  line-height: 1.25rem;
   letter-spacing: 0em;
   border-radius: var(--radius-full);
-  transition: background-color var(--duration-fast) ease, transform var(--duration-fast) ease;
+  transition: background-color var(--duration-fast) ease, transform var(--duration-fast) ease, box-shadow var(--duration-fast) ease;
   border: 1px solid transparent;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  white-space: nowrap;
 }
 
 .btn-primary:hover {
@@ -394,22 +398,26 @@
 .btn-secondary {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   padding: 0.875rem 1.75rem;
+  min-height: 3rem;
   background-color: var(--t-surface-3);
-  color: var(--t-content-secondary);
+  color: #FFFFFF;
   font-family: var(--font-sans), sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.875rem;
+  line-height: 1.25rem;
   letter-spacing: 0em;
   border-radius: var(--radius-full);
   border: 1px solid var(--t-line-strong);
   transition: all var(--duration-fast) ease;
+  white-space: nowrap;
 }
 
 .btn-secondary:hover {
   background-color: var(--t-surface-2);
-  color: var(--t-content);
+  color: #FFFFFF;
   border-color: var(--t-line-strong);
   transform: translateY(-1px);
 }

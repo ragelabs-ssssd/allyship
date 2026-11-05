@@ -358,10 +358,8 @@ export default function DiscoverSoaPage() {
                   onClick={() => setIsTourOpen(true)}
                   className="btn-primary"
                 >
-                  <div className="w-5 h-5 rounded-full bg-glass-strong flex items-center justify-center">
-                    <Play className="w-2.5 h-2.5 fill-white ml-0.5" />
-                  </div>
                   <span>Take Virtual Tour</span>
+                  <ArrowRight className="w-4 h-4" />
                 </button>
 
                 <button
@@ -370,7 +368,6 @@ export default function DiscoverSoaPage() {
                   className="btn-secondary"
                 >
                   <span>Request Executive Visit</span>
-                  <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
             </div>
