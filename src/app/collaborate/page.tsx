@@ -21,8 +21,8 @@ import {
   Phone,
   Award,
   Lightbulb,
-  Rocket,
-  Atom,
+  Cpu,
+  TrendingUp,
 } from "lucide-react";
 import { GetInvitedModal } from "@/components/GetInvitedModal";
 import { HeroBackdrop } from "@/components/HeroBackdrop";
@@ -44,25 +44,25 @@ export default function CollaboratePage() {
   const partnershipPillars = [
     {
       title: "Industry Challenges & Incubation",
-      icon: Rocket,
+      icon: Lightbulb,
       desc: "Bring real-world engineering, clinical, or business challenges for faculty and student teams to prototype via the AIC-SOA Foundation (Atal Incubation Centre under NITI Aayog).",
       action: "Submit Problem Statement",
     },
     {
       title: "Centres of Excellence & R&D",
-      icon: Atom,
+      icon: Cpu,
       desc: "Co-establish specialized labs modeled on SOA’s recent Centres of Excellence with Tech Mahindra (ServiceNow & Enterprise Tech at ITER) and L&T Technology Services (AI in Medicine & MedTech).",
       action: "Explore CoE Models",
     },
     {
       title: "Executive Mentorship & Curriculum Co-Design",
-      icon: GraduationCap,
+      icon: Users,
       desc: "Shape flexible curricula and job-ready training tracks—building on SOA’s Talent Next and Mission10x alliances with Wipro Ltd and scholarships with Blue Star Foundation.",
       action: "Join Advisory Boards",
     },
     {
       title: "High-Velocity Internships & Campus Hiring",
-      icon: Briefcase,
+      icon: TrendingUp,
       desc: "Recruit from an ecosystem delivering 94.54% B.Tech and 97.22% MBA placement rates, ₹46 LPA peak packages, and record selections by global leaders like the London Stock Exchange Group (LSEG).",
       action: "Initiate Recruitment",
     },
@@ -234,14 +234,14 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
 
       {/* 2. FOUR CORPORATE PARTNERSHIP PILLARS */}
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             Four Strategic Avenues
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-content tracking-tight">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight md:whitespace-nowrap">
             How Corporate Leaders Collaborate with SOA
           </h2>
-          <p className="text-base text-content-muted leading-relaxed">
+          <p className="text-base text-content-muted leading-relaxed max-w-2xl mx-auto">
             Move beyond transactional campus hiring into deep, reciprocal engagements that accelerate your engineering, research, and workforce transformation.
           </p>
         </div>
