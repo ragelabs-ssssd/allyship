@@ -698,7 +698,7 @@ function EventContent() {
                   Pivoting from <i>why</i> inclusion matters to <i>how</i> enterprises operationalize it daily. Moderated by IIT Delhi&apos;s Prof. Sanjay Dhir in Hyderabad and Standard Chartered&apos;s Global Head Archana Grover in Chennai, leaders addressed the expectations of Gen-Z digital natives—codifying allyship not as an isolated HR program, but as a core leadership responsibility driving psychological safety and innovation.
                 </p>
                 <div className="pt-4 border-t border-line font-sans text-xs text-content-muted tracking-[0.01em]">
-                  Chapters: Hyderabad 2.0 (May 2026) · Chennai 2.0 (July 2026) · Bengaluru 2.0 (2026)
+                  Chapters: Bengaluru 2.0 (2026) · Hyderabad 2.0 (May 2026) · Chennai 2.0 (July 2026)
                 </div>
               </div>
             </div>

@@ -108,6 +108,11 @@ export function ChapterBentoGrid() {
                     <span className="px-3 py-1 rounded-full font-sans text-[11px] font-semibold tracking-[0.14em] uppercase bg-accent text-on-accent">
                       Featured
                     </span>
+                    {featured.id === "bengaluru-2" && (
+                      <span className="px-3 py-1 rounded-full font-sans text-[11px] font-semibold tracking-[0.12em] uppercase bg-black/80 backdrop-blur-md text-accent border border-accent/40">
+                        Photos Updating Soon
+                      </span>
+                    )}
                   </div>
 
                   <div className="absolute bottom-4 left-4 right-4 text-content">
