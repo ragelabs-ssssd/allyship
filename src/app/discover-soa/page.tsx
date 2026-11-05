@@ -786,16 +786,7 @@ export default function DiscoverSoaPage() {
           </div>
         </div>
 
-        <div className="mt-8 text-center">
-          <button
-            type="button"
-            onClick={() => setSelectedSlide("/discover/evolution-growth.jpg")}
-            className="text-xs font-semibold text-accent hover:text-content inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-surface-2 border border-line hover:border-accent transition-all"
-          >
-            <span>View Official Evolution &amp; Growth Diagram</span>
-            <Maximize2 className="w-3.5 h-3.5" />
-          </button>
-        </div>
+
       </section>
 
       {/* 6. OFFICIAL CAMPUS INFRASTRUCTURE */}
