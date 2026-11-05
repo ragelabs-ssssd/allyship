@@ -21,6 +21,8 @@ import {
   Phone,
   Award,
   Lightbulb,
+  Rocket,
+  Atom,
 } from "lucide-react";
 import { GetInvitedModal } from "@/components/GetInvitedModal";
 import { HeroBackdrop } from "@/components/HeroBackdrop";
@@ -42,25 +44,25 @@ export default function CollaboratePage() {
   const partnershipPillars = [
     {
       title: "Industry Challenges & Incubation",
-      symbol: "✦",
+      icon: Rocket,
       desc: "Bring real-world engineering, clinical, or business challenges for faculty and student teams to prototype via the AIC-SOA Foundation (Atal Incubation Centre under NITI Aayog).",
       action: "Submit Problem Statement",
     },
     {
       title: "Centres of Excellence & R&D",
-      symbol: "⚗",
+      icon: Atom,
       desc: "Co-establish specialized labs modeled on SOA’s recent Centres of Excellence with Tech Mahindra (ServiceNow & Enterprise Tech at ITER) and L&T Technology Services (AI in Medicine & MedTech).",
       action: "Explore CoE Models",
     },
     {
       title: "Executive Mentorship & Curriculum Co-Design",
-      symbol: "◎",
+      icon: GraduationCap,
       desc: "Shape flexible curricula and job-ready training tracks—building on SOA’s Talent Next and Mission10x alliances with Wipro Ltd and scholarships with Blue Star Foundation.",
       action: "Join Advisory Boards",
     },
     {
       title: "High-Velocity Internships & Campus Hiring",
-      symbol: "✉",
+      icon: Briefcase,
       desc: "Recruit from an ecosystem delivering 94.54% B.Tech and 97.22% MBA placement rates, ₹46 LPA peak packages, and record selections by global leaders like the London Stock Exchange Group (LSEG).",
       action: "Initiate Recruitment",
     },
@@ -246,34 +248,37 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {partnershipPillars.map((p) => (
-            <div
-              key={p.title}
-              className="bg-surface rounded-3xl p-8 border border-line hover:border-accent transition-all flex flex-col justify-between space-y-6 group"
-            >
-              <div className="space-y-4">
-                <div className="w-12 h-12 rounded-xl bg-surface-2 border border-line flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-on-accent transition-colors text-xl font-bold">
-                  {p.symbol}
+          {partnershipPillars.map((p) => {
+            const Icon = p.icon;
+            return (
+              <div
+                key={p.title}
+                className="bg-surface rounded-3xl p-8 border border-line hover:border-accent transition-all flex flex-col justify-between space-y-6 group"
+              >
+                <div className="space-y-4">
+                  <div className="w-12 h-12 rounded-xl bg-surface-2 border border-line flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-on-accent transition-colors">
+                    <Icon className="w-6 h-6 transition-transform duration-300 group-hover:scale-110" />
+                  </div>
+                  <h3 className="font-heading text-lg font-bold text-content">
+                    {p.title}
+                  </h3>
+                  <p className="text-sm text-content-muted leading-relaxed font-normal">
+                    {p.desc}
+                  </p>
                 </div>
-                <h3 className="font-heading text-lg font-bold text-content">
-                  {p.title}
-                </h3>
-                <p className="text-sm text-content-muted leading-relaxed font-normal">
-                  {p.desc}
-                </p>
-              </div>
 
-              <div className="pt-4 border-t border-line">
-                <a
-                  href="#submit-challenge"
-                  className="text-xs font-bold text-content hover:text-accent flex items-center gap-1.5 transition-colors"
-                >
-                  <span>{p.action}</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-accent" />
-                </a>
+                <div className="pt-4 border-t border-line">
+                  <a
+                    href="#submit-challenge"
+                    className="text-xs font-bold text-content hover:text-accent flex items-center gap-1.5 transition-colors"
+                  >
+                    <span>{p.action}</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform text-accent" />
+                  </a>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
