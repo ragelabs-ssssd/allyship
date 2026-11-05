@@ -54,45 +54,6 @@ const universityHeroImages = [
   },
 ];
 
-// Official Presentation Slides
-const presentationSlides = [
-  {
-    id: "nirf",
-    title: "NIRF India Rankings 2025",
-    subtitle: "Ministry of Education, Govt. of India",
-    src: "/discover/nirf-rankings-2025.jpg",
-    badge: "National Standing",
-  },
-  {
-    id: "qs-the",
-    title: "QS & THE World Rankings",
-    subtitle: "Global Benchmarks & Swachhata Accolades",
-    src: "/discover/qs-the-other-rankings.jpg",
-    badge: "International Impact",
-  },
-  {
-    id: "recognitions",
-    title: "Other Major Recognitions",
-    subtitle: "UGC Graded Autonomy, DSIR, Cochrane & ISO",
-    src: "/discover/major-recognitions.jpg",
-    badge: "Regulatory Authority",
-  },
-  {
-    id: "accreditations",
-    title: "Accreditations",
-    subtitle: "NAAC A++, NBA, ICAR, NABH & NABL",
-    src: "/discover/accreditations.jpg",
-    badge: "Quality Certifications",
-  },
-  {
-    id: "growth",
-    title: "Evolution & Growth",
-    subtitle: "13 Constituent Institutes & 18 Research Centres",
-    src: "/discover/evolution-growth.jpg",
-    badge: "30-Year Milestones",
-  },
-];
-
 // 1. NIRF Rankings 2025 Data
 const nirfRankings2025 = [
   {
@@ -837,59 +798,7 @@ export default function DiscoverSoaPage() {
         </div>
       </section>
 
-      {/* 6. OFFICIAL PRESENTATION SLIDES ARCHIVE */}
-      <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line">
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-          <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
-            Institutional Transparency
-          </span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-content tracking-tight">
-            Official Presentation Slides &amp; Records
-          </h2>
-          <p className="text-base text-content-muted leading-relaxed">
-            Click any official briefing slide below to inspect high-resolution accreditations and institutional rankings.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-          {presentationSlides.map((slide) => (
-            <div
-              key={slide.id}
-              onClick={() => setSelectedSlide(slide.src)}
-              className="bg-surface-2 rounded-2xl overflow-hidden border border-line hover:border-accent transition-all group cursor-pointer flex flex-col justify-between"
-            >
-              <div className="aspect-[16/10] relative overflow-hidden bg-black/60">
-                <Image
-                  src={slide.src}
-                  alt={slide.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 20vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <span className="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-black/75 backdrop-blur-md text-accent border border-accent/30 text-[9px] font-bold uppercase tracking-wider">
-                  {slide.badge}
-                </span>
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <span className="px-3 py-1 rounded-full bg-accent text-on-accent text-xs font-bold inline-flex items-center gap-1 shadow-lg">
-                    <span>Enlarge</span>
-                    <Maximize2 className="w-3 h-3" />
-                  </span>
-                </div>
-              </div>
-              <div className="p-4 space-y-1">
-                <h4 className="font-heading text-xs sm:text-sm font-bold text-content group-hover:text-accent transition-colors">
-                  {slide.title}
-                </h4>
-                <p className="text-[11px] text-content-muted line-clamp-1">
-                  {slide.subtitle}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* 7. OFFICIAL CAMPUS INFRASTRUCTURE */}
+      {/* 6. OFFICIAL CAMPUS INFRASTRUCTURE */}
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line bg-surface/30">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
