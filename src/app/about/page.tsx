@@ -396,7 +396,7 @@ export default function AboutPage() {
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             Institutional Blueprint &amp; Journey
           </span>
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight md:whitespace-nowrap">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
             The 7 Pillars of the SOA Allyship Journey
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-3xl mx-auto">
@@ -481,7 +481,7 @@ export default function AboutPage() {
             <ShieldCheck className="w-3.5 h-3.5" />
             <span>Authenticity Guardrail</span>
           </div>
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight md:whitespace-nowrap">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
             The 3-Question Authenticity Litmus Test
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
@@ -537,7 +537,7 @@ export default function AboutPage() {
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             Organizational Roadmap
           </span>
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight md:whitespace-nowrap">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
             Six-Step HR Implementation Blueprint
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
@@ -651,7 +651,7 @@ export default function AboutPage() {
               Executive Conclave Participation
             </span>
 
-            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight md:whitespace-nowrap">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
               Connect with SOA University Leadership
             </h2>
 

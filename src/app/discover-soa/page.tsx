@@ -455,7 +455,7 @@ export default function DiscoverSoaPage() {
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             Global Benchmarking &amp; Accolades
           </span>
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight md:whitespace-nowrap">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
             International Rankings &amp; Global Standing
           </h2>
           <p className="text-base text-content-muted leading-relaxed max-w-2xl mx-auto">
@@ -579,7 +579,7 @@ export default function DiscoverSoaPage() {
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             National &amp; International Certifications
           </span>
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight md:whitespace-nowrap">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
             Accreditations &amp; Major Recognitions
           </h2>
           <p className="text-base text-content-muted leading-relaxed max-w-2xl mx-auto">
@@ -795,7 +795,7 @@ export default function DiscoverSoaPage() {
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             127-Acre Campus Infrastructure
           </span>
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight md:whitespace-nowrap">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
             Infrastructure &amp; Research Facilities
           </h2>
           <p className="text-base text-content-muted leading-relaxed max-w-2xl mx-auto">

@@ -238,7 +238,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             Four Strategic Avenues
           </span>
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight md:whitespace-nowrap">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
             How Corporate Leaders Collaborate with SOA
           </h2>
           <p className="text-base text-content-muted leading-relaxed max-w-2xl mx-auto">

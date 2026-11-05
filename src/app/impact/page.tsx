@@ -240,7 +240,7 @@ export default function ImpactPage() {
           <span className="font-heading text-xs font-bold uppercase tracking-widest text-accent">
             Institutional Transformation
           </span>
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight md:whitespace-nowrap">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
             From Dialogue to Institutional Action
           </h2>
           <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl mx-auto">
