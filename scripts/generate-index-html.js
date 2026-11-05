@@ -131,7 +131,7 @@ const conclavesData = [
     ],
     organizations: ["L&T Technology Services", "HDFC Bank", "ICICI Securities", "Tata Consultancy Services"],
     focus: "Corporate resilience, bridging technical education with financial technology demands, and employee health.",
-    image: "IMG_7577.jpg"
+    image: "mumbai-1.jpg"
   },
   {
     id: "hyderabad-2",

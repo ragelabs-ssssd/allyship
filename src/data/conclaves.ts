@@ -304,7 +304,7 @@ export const conclavesData: ConclaveChapter[] = [
     ],
     organizations: ["Times Professional Learning", "Protiviti", "Business Next", "India Factoring", "AFI"],
     focus: "Allyship: Building inclusive, high-empathy workplaces, balancing quarterly targets with mental wellness, and psychological safety.",
-    image: "/IMG_7577.jpg",
+    image: "/mumbai-1.jpg",
   },
   {
     id: "bengaluru-2",
