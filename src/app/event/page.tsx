@@ -664,7 +664,7 @@ function EventContent() {
           <div id="themes-section" className="space-y-10 scroll-mt-24 pt-8">
             <div className="max-w-3xl space-y-2">
               <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-[-0.025em] leading-[1.1] text-content scroll-mt-24">
-                The Strategic Arc: Allyship++ 1.0 to 2.0
+                The Strategic Arc: Allyship++
               </h2>
               <p className="font-sans text-sm font-normal tracking-[0.01em] text-content-muted">
                 How the conclave series evolved from establishing foundational corporate-academic trust to operationalizing daily allyship for Gen-Z talent.
@@ -683,7 +683,7 @@ function EventContent() {
                   SOA University systematically brought an academic hub in Bhubaneswar directly into the corporate boardrooms of Bengaluru, Hyderabad, Kolkata, and Mumbai. Engaging 60 to 70 leaders per city, Phase I demonstrated that academic institutions must collaborate continuously with industry to navigate cloud engineering burnout, hybrid team dynamics, and Fortune 500 DEI mandates.
                 </p>
                 <div className="pt-4 border-t border-line font-sans text-xs text-content-muted tracking-[0.01em]">
-                  Chapters: Bengaluru · Hyderabad 1.0 · Kolkata · Mumbai
+                  Chapters: Bengaluru · Hyderabad · Kolkata · Mumbai
                 </div>
               </div>
 
@@ -698,7 +698,7 @@ function EventContent() {
                   Pivoting from <i>why</i> inclusion matters to <i>how</i> enterprises operationalize it daily. Moderated by IIT Delhi&apos;s Prof. Sanjay Dhir in Hyderabad and Standard Chartered&apos;s Global Head Archana Grover in Chennai, leaders addressed the expectations of Gen-Z digital natives—codifying allyship not as an isolated HR program, but as a core leadership responsibility driving psychological safety and innovation.
                 </p>
                 <div className="pt-4 border-t border-line font-sans text-xs text-content-muted tracking-[0.01em]">
-                  Chapters: Bengaluru 2.0 (March 2026) · Hyderabad 2.0 (May 2026) · Chennai 2.0 (July 2026)
+                  Chapters: Bengaluru · Hyderabad · Chennai
                 </div>
               </div>
             </div>
