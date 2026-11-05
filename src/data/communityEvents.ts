@@ -40,7 +40,7 @@ export const COMMUNITY_EVENTS: CommunityEvent[] = [
     date: "2026-11-28",
     time: "5:30 PM – 7:00 PM",
     timezone: "IST",
-    format: "In-Person Panel",
+    format: "Discussion Forum",
     location: "Live Panel & Q&A",
     facilitator: "Allyship++ Leadership Forum",
     facilitatorRole: "SOA University",

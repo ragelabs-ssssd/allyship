@@ -126,7 +126,7 @@ function EventContent() {
               </p>
 
               <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal">
-                Siksha &lsquo;O&rsquo; Anusandhan takes Allyship++ to India&apos;s business cities. Each chapter brings corporate leaders, HR professionals, academicians and sporting voices together to talk about leadership, inclusion and the future of work.
+                Siksha &lsquo;O&rsquo; Anusandhan takes Allyship++ directly to India&apos;s major business hubs. Across seven editions in five cities, each chapter convenes corporate leaders, HR heads, academicians, and celebrated sports icons to explore inclusive leadership, mentorship, and the changing world of work.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">

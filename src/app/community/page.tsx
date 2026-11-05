@@ -92,11 +92,12 @@ export default function CommunityPage() {
         </div>
 
         <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
-          The People Behind the Conversation
+          Where Leaders <br />
+          <span className="text-accent whitespace-nowrap">Connect &amp; Mentor.</span>
         </h1>
 
         <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl mx-auto font-normal">
-          Allyship++ brings together corporate executives, HR leaders, academicians, alumni, and emerging professionals who believe that stronger relationships between industry and academia build better workplaces.
+          Allyship++ brings together corporate executives, HR leaders, academicians, alumni, and emerging professionals across India. Between conclave editions, our working circles and interactive sessions create space to exchange ideas, mentor young talent, and build inclusive workplaces together.
         </p>
 
         <div className="pt-2 flex flex-wrap items-center justify-center gap-3">

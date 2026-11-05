@@ -202,15 +202,16 @@ export default function AboutPage() {
             </div>
 
             <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
-              Beyond Conversations. Towards Collective <span className="text-accent">Progress.</span>
+              Beyond Dialogue. <br />
+              <span className="text-accent whitespace-nowrap">Collective Progress.</span>
             </h1>
 
             <p className="text-xl sm:text-2xl font-heading text-content-secondary max-w-2xl mx-auto italic">
               Bringing academia and industry closer together to shape inclusive, future-ready leadership.
             </p>
 
-            <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-3xl mx-auto font-normal">
-              Initiated by Siksha &lsquo;O&rsquo; Anusandhan (SOA), Allyship++ is a leadership and collaboration platform that connects corporate executives, HR professionals, academicians, and emerging talent. Rather than treating allyship as a slogan, it explores how leaders support people, share knowledge, and build workplaces where everyone can thrive.
+            <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl mx-auto font-normal">
+              Initiated by Siksha &lsquo;O&rsquo; Anusandhan (SOA), Allyship++ is a national leadership platform connecting corporate executives, HR leaders, academicians, and emerging talent. Together, we explore how leaders mentor young professionals, exchange knowledge, and build inclusive workplaces where everyone thrives.
             </p>
 
             {/* Quick-Nav Framework Pills */}

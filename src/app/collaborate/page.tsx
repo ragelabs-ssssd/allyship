@@ -172,8 +172,8 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
               </div>
 
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
-                Leadership That Connects. <br />
-                Collaboration That <span className="italic font-normal whitespace-nowrap">Creates Impact.</span>
+                Shared Leadership. <br />
+                <span className="italic font-normal whitespace-nowrap">Lasting Impact.</span>
               </h1>
 
               <p className="text-lg sm:text-xl font-display text-content-muted italic">
@@ -181,7 +181,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
               </p>
 
               <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal">
-                ALLYSHIP++ does not end when a conclave closes. Siksha &lsquo;O&rsquo; Anusandhan invites industry leaders to stay involved: guiding students, opening real problems to campus teams and building talent partnerships that last.
+                ALLYSHIP++ does not end when a conclave closes. Siksha &lsquo;O&rsquo; Anusandhan invites corporate leaders, HR heads, and domain experts to stay involved beyond the room—mentoring emerging talent, sharing real industry problem statements with campus teams, and building long-term partnerships.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
