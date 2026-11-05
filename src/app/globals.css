@@ -228,12 +228,59 @@
     color: inherit;
   }
 
-  /* Headings global reset */
-  h1, h2, h3, h4, h5, h6 {
+  /* Global Typography Hierarchy Standard */
+  h1 {
     font-family: var(--font-display);
-    line-height: 1.15;
-    letter-spacing: -0.02em;
+    font-size: clamp(2.25rem, 5vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    color: var(--t-content);
     text-wrap: balance;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 3.5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    color: var(--t-content);
+    text-wrap: balance;
+  }
+
+  h3 {
+    font-family: var(--font-display);
+    font-size: clamp(1.125rem, 2vw, 1.375rem);
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    color: var(--t-content);
+  }
+
+  h4 {
+    font-family: var(--font-display);
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+    color: var(--t-content);
+  }
+
+  h5 {
+    font-family: var(--font-display);
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--t-content);
+  }
+
+  h6 {
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--t-content-muted);
   }
 }
 
