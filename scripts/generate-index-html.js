@@ -77,7 +77,7 @@ const conclavesData = [
     ],
     organizations: ["UPS India", "Human Edge", "CSIR-CCMB", "Bodhtree Consulting", "Greenwave"],
     focus: "Bridging the gap between corporate practice and university research, executive well-being, and organizational empathy.",
-    image: "IMG_7873.jpg"
+    image: "hyderabad-1.jpg"
   },
   {
     id: "kolkata-1",

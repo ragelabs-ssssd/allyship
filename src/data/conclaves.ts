@@ -145,7 +145,7 @@ export const conclavesData: ConclaveChapter[] = [
     ],
     organizations: ["UPS", "Kloudgin", "Innova Solutions", "CSIR", "Human Edge", "Integraminds"],
     focus: "Practicing allyship across organizational tiers, closer academic-corporate R&D cooperation, and psychological safety.",
-    image: "/IMG_7492.jpg",
+    image: "/hyderabad-1.jpg",
     youtubeId: "8wSGKsWyQwk",
   },
   {
