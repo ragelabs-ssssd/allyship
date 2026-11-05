@@ -179,8 +179,8 @@ export default function ImpactPage() {
                 <span className="italic font-normal">Allyship<span className="text-accent not-italic">++</span></span>
               </h1>
 
-              <p className="text-lg sm:text-xl font-display text-content-muted italic">
-                Meaningful Conversations · Stronger Connections
+              <p className="text-lg sm:text-xl font-display text-content-muted italic sm:whitespace-nowrap">
+                From Boardroom Dialogue to Campus Innovation &amp; Career Excellence
               </p>
 
               <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal">

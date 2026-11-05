@@ -121,8 +121,8 @@ function EventContent() {
                 <span className="italic font-normal">Conclaves</span>
               </h1>
 
-              <p className="text-lg sm:text-xl font-display text-content-muted italic">
-                One Conversation, Carried Across India
+              <p className="text-lg sm:text-xl font-display text-content-muted italic sm:whitespace-nowrap">
+                Where Corporate Vision Meets Sporting Grit &amp; Academic Leadership
               </p>
 
               <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal">

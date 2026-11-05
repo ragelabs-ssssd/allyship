@@ -176,8 +176,8 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
                 <span className="italic font-normal whitespace-nowrap">Lasting Impact.</span>
               </h1>
 
-              <p className="text-lg sm:text-xl font-display text-content-muted italic">
-                Mentor. Share a challenge. Grow future talent.
+              <p className="text-lg sm:text-xl font-display text-content-muted italic sm:whitespace-nowrap">
+                Shape Future Curricula · Mentor Emerging Leaders · Build Talent Pipelines
               </p>
 
               <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal">
