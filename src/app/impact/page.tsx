@@ -41,22 +41,22 @@ export default function ImpactPage() {
 
   const outcomePillars = [
     {
-      title: "Industry–Academia Skill Alignment",
-      badge: "Campus Collaboration",
-      desc: "Ongoing conversations with technology and business leaders help keep SOA’s academic programs connected to industry realities—complemented by campus initiatives such as the Tech Mahindra Centre of Excellence at ITER and Wipro readiness tracks.",
-      metric: "Campus Centres of Excellence & Skill Labs",
+      title: "Curriculum & CoE Co-Creation",
+      badge: "Institutional Infrastructure",
+      desc: "Boardroom feedback from Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai has translated into specialized skill labs on campus—including the Tech Mahindra Centre of Excellence at ITER and Wipro readiness tracks.",
+      metric: "Active CoEs with Tech Mahindra & LTTS",
     },
     {
-      title: "Stronger Graduate Career Outcomes",
-      badge: "SOA Placement Record",
-      desc: "Sustained engagement with corporate recruiters supports SOA’s university placement record, including a 94.54% engineering placement rate, a 97.22% MBA placement rate, and London Stock Exchange Group (LSEG) selecting 11 SOA students in a single campus drive.",
-      metric: "11 Hired by LSEG · ₹46 LPA Highest Offer",
+      title: "Record-Breaking Graduate Absorption",
+      badge: "Career Velocity",
+      desc: "Deepened trust among global capability centres and Fortune 500 recruiters contributed to a 94.54% engineering placement rate, a 97.22% MBA placement rate, and LSEG selecting 11 SOA students in a single drive.",
+      metric: "11 Hired by LSEG · ₹46 LPA Peak",
     },
     {
-      title: "Inclusive Leadership & Mentorship",
-      badge: "Workplace Dialogue",
-      desc: "Across seven conclaves in five cities, corporate leaders, CHROs, and sports icons have examined how mentorship, empathy, and everyday allyship help young professionals transition smoothly into modern teams.",
-      metric: "500+ Leaders & Delegates Across 7 Chapters",
+      title: "Gen-Z Leadership & HR Policy Adoption",
+      badge: "Workplace Cultural Reform",
+      desc: "Over 500 participating CHROs, VPs, and talent leaders across seven conclaves have co-developed actionable frameworks on psychological safety, mentorship roles, and empathetic Gen-Z onboarding for modern teams.",
+      metric: "500+ Executives Engaged",
     },
   ];
 
@@ -255,7 +255,7 @@ export default function ImpactPage() {
               className="bg-surface rounded-3xl p-8 border border-line shadow-lg hover:border-accent/80 hover:shadow-[0_0_24px_rgba(201,169,110,0.15)] transition-all flex flex-col justify-between space-y-6 text-content"
             >
               <div className="space-y-4">
-                <span className="text-[10px] font-bold font-heading uppercase tracking-wider px-3 py-1 rounded-full bg-glass-strong text-accent border border-accent/30">
+                <span className="inline-block text-[10px] font-bold font-heading uppercase tracking-wider px-3 py-1 rounded-full bg-glass-strong text-accent border border-accent/30">
                   {p.badge}
                 </span>
                 <h3 className="font-heading text-xl font-bold text-content">

@@ -609,7 +609,7 @@ function EventContent() {
                   { name: "Premanand J.", chapter: "Chennai 2.0", role: "Paris Olympics National Sprint Coach", note: "Discipline, Mentorship & Gen-Z Leadership" },
                 ].map((s) => (
                   <div key={s.name} className="p-6 rounded-2xl bg-surface border border-line shadow-sm hover:shadow-md hover:border-accent transition-all">
-                    <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent bg-surface-2 border border-line px-2.5 py-1 rounded-full">
+                    <span className="inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent bg-surface-2 border border-line px-2.5 py-1 rounded-full">
                       {s.chapter}
                     </span>
                     <h4 className="font-display text-base font-semibold tracking-normal text-content mt-3">{s.name}</h4>
@@ -650,7 +650,7 @@ function EventContent() {
                   { name: "M.D. Joshua David", role: "India Campus Head, Mphasis", chapter: "Chennai 2.0" },
                 ].map((c) => (
                   <div key={c.name} className="p-5 rounded-2xl bg-surface border border-line shadow-sm hover:shadow-md hover:border-accent transition-all">
-                    <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-content-muted bg-surface-2 border border-line px-2.5 py-1 rounded-full">
+                    <span className="inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-content-muted bg-surface-2 border border-line px-2.5 py-1 rounded-full">
                       {c.chapter}
                     </span>
                     <h4 className="font-display text-base font-semibold tracking-normal text-content mt-3">{c.name}</h4>
