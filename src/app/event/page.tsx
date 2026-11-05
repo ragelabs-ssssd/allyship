@@ -121,12 +121,12 @@ function EventContent() {
                 <span className="italic font-normal">Conclaves</span>
               </h1>
 
-              <p className="text-xl sm:text-2xl font-display text-content-muted italic">
+              <p className="text-lg sm:text-xl font-display text-content-muted italic">
                 6 Conclaves Across 5 Metropolitan Capitals
               </p>
 
               <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal">
-                From Bengaluru and Hyderabad to Kolkata, Mumbai, and Chennai, Siksha &lsquo;O&rsquo; Anusandhan has built a continuous national bridge connecting over 500 corporate CXOs, Olympic champions, and academic visionaries.
+                From Bengaluru and Hyderabad to Kolkata, Mumbai, and Chennai, Siksha &lsquo;O&rsquo; Anusandhan has built a continuous national bridge uniting over 500 corporate CXOs, Olympic champions, and visionary scholars to co-create agile curricula and future-ready talent pipelines across India.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">

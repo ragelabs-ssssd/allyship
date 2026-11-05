@@ -344,12 +344,12 @@ export default function DiscoverSoaPage() {
                 <span className="italic font-normal">Siksha &lsquo;O&rsquo; Anusandhan</span>
               </h1>
 
-              <p className="text-xl sm:text-2xl font-display text-content-muted italic">
-                Ranked 15th Nationally · NAAC A++ (CGPA 3.88) · UGC Category-I Graded Autonomy
+              <p className="text-lg sm:text-xl font-display text-content-muted italic">
+                Ranked 15th Nationally · NAAC A++ · UGC Category-I Autonomy
               </p>
 
               <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal">
-                Siksha &lsquo;O&rsquo; Anusandhan (SOA) is recognized among India&apos;s leading institutions across NIRF, QS, and Times Higher Education—spanning 13 constituent institutes, 18 research centres, 30,000+ students, and 38 Stanford Top 2% scientists across a 127-acre campus.
+                Siksha &lsquo;O&rsquo; Anusandhan (SOA) is recognized among India&apos;s leading institutions across NIRF, QS, and Times Higher Education—spanning 13 constituent institutes, 18 research centres, 30,000+ students, and 38 Stanford Top 2% scientists across an expansive 127-acre multidisciplinary campus in Bhubaneswar.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">

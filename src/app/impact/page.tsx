@@ -179,12 +179,12 @@ export default function ImpactPage() {
                 <span className="italic font-normal">Allyship<span className="text-accent not-italic">++</span></span>
               </h1>
 
-              <p className="text-xl sm:text-2xl font-display text-content-muted italic">
-                Conversations in the Boardroom. Structural Transformations on Campus.
+              <p className="text-lg sm:text-xl font-display text-content-muted italic">
+                Conversations in the Boardroom · Transformations on Campus
               </p>
 
               <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal">
-                Across six chapters in five corporate capitals, Allyship++ has shifted industry-academia engagement from transactional placement drives to sustained leadership dialogue—generating national media coverage, new Centres of Excellence, and actionable workplace frameworks.
+                Across six chapters in five corporate capitals, Allyship++ has shifted industry-academia engagement from transactional placement drives to sustained leadership dialogue—generating national media coverage, multi-city Centres of Excellence, and actionable workplace frameworks for enterprise leaders.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
