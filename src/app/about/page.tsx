@@ -21,6 +21,9 @@ import {
   ChevronRight,
   Layers,
   HelpCircle,
+  Cpu,
+  Sparkles,
+  Globe,
 } from "lucide-react";
 import { GetInvitedModal } from "@/components/GetInvitedModal";
 import { HeroBackdrop } from "@/components/HeroBackdrop";
@@ -28,63 +31,63 @@ import { HeroBackdrop } from "@/components/HeroBackdrop";
 export default function AboutPage() {
   const [isInviteOpen, setIsInviteOpen] = useState(false);
 
-  // The 7 Roles of Workplace Allyship (Karen Catlin Framework)
-  const allyshipRoles = [
+  // The 7 Strategic Pillars of the SOA Allyship Journey
+  const soaJourneyPillars = [
     {
-      role: "01. Sponsor",
-      badge: "Institutional Clout",
-      action: "Using institutional clout to open doors behind closed doors.",
+      role: "01. Paradigm Shift",
+      badge: "Vision & Origin",
+      action: "Transitioning from transactional campus recruitment to lifelong institutional alliance.",
       practice:
-        "Recommending qualified junior associates, Gen-Z hires, or underrepresented colleagues for high-visibility stretch projects, leadership panels, and promotions, backed by specific performance evidence.",
-      icon: Award,
-    },
-    {
-      role: "02. Champion",
-      badge: "Public Advocacy",
-      action: "Publicly backing and endorsing emerging talent in high-stakes forums.",
-      practice:
-        "Actively introducing junior engineers and analysts to senior stakeholders during town halls, client reviews, and cross-functional summits so their expertise is visible across the enterprise.",
-      icon: ShieldCheck,
-    },
-    {
-      role: "03. Amplifier",
-      badge: "Credit Attribution",
-      action: "Ensuring credit is accurately attributed when ideas are voiced.",
-      practice:
-        "Intervening in meetings when a colleague's idea is overlooked or repeated by someone else—bringing the point back to the table and explicitly naming the individual who originated it.",
-      icon: Volume2,
-    },
-    {
-      role: "04. Advocate",
-      badge: "Structural Reform",
-      action: "Leveraging positional authority to remove structural barriers.",
-      practice:
-        "Auditing hiring criteria, hybrid work policies, and performance evaluation rubrics to widen access and eliminate systemic bias across engineering and business teams.",
-      icon: Scale,
-    },
-    {
-      role: "05. Scholar",
-      badge: "Continuous Learning",
-      action: "Taking personal responsibility for learning about workplace barriers.",
-      practice:
-        "Independently researching generational shifts, neurodiversity, and inclusion challenges—listening first in Employee Resource Groups (ERGs) so marginalized staff are not forced to do the teaching.",
+        "Dismantling the archaic two-day placement model in favor of an active, year-round partnership where enterprise leaders co-own student capability development from day one.",
       icon: GraduationCap,
     },
     {
-      role: "06. Upstander",
-      badge: "Real-time Intervention",
-      action: "Speaking up calmly and immediately when a comment or action crosses a line.",
+      role: "02. Pan-India Footprint",
+      badge: "National Corridors",
+      action: "Taking Bhubaneswar's academic excellence directly into India's economic capitals.",
       practice:
-        "Rejecting bystander silence during microaggressions or unfair criticism in real time, then checking in privately with the affected colleague to ask what form of support they prefer.",
-      icon: Target,
+        "Hosting 7 high-impact conclave editions across Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai—engaging corporate CXOs and capability directors on their home turf.",
+      icon: Compass,
     },
     {
-      role: "07. Confidante",
-      badge: "Psychological Safety",
-      action: "Creating a trusted environment of psychological safety and active listening.",
+      role: "03. Boardroom & Arena Triad",
+      badge: "Athletic Resilience",
+      action: "Synthesizing executive acumen with Olympic championship resilience and coach-athlete allyship.",
       practice:
-        "Designing team cultures where Gen-Z professionals, junior analysts, and diverse team members feel safe to voice concerns, admit knowledge gaps, and seek mentorship without fear of retaliation.",
-      icon: Compass,
+        "Convening sporting legends including Nilesh Kulkarni, Anju Bobby George, Arshad Ayub, and Gurbux Singh to instill high-performance mindset, team cohesion, and mental endurance into future leaders.",
+      icon: Trophy,
+    },
+    {
+      role: "04. Agile Curriculum Co-Creation",
+      badge: "Pedagogical Sync",
+      action: "Synchronizing university coursework with live enterprise tech stacks in real time.",
+      practice:
+        "Inviting Chief Technology Officers and engineering VPs to review, update, and co-design syllabi around Generative AI, cloud infrastructure, cybersecurity, and modern industrial requirements.",
+      icon: Layers,
+    },
+    {
+      role: "05. Executive CXO Sponsorship",
+      badge: "Direct Access",
+      action: "Opening executive pathways and closed-door mentorship for emerging talent.",
+      practice:
+        "Connecting over 500+ CXOs and Talent Heads from Microsoft, Dell, Deloitte, L&T, and Tata Steel directly with students for masterclasses, panels, and priority career sponsorship.",
+      icon: Users,
+    },
+    {
+      role: "06. Psychological Safety & Gen-Z",
+      badge: "Workplace Culture",
+      action: "Fostering human-centered empathy to bridge academic expectations with corporate reality.",
+      practice:
+        "Designing dialogues around workplace mental wellness, psychological safety, and multigenerational collaboration to help Gen-Z engineers adapt smoothly to high-pressure enterprise environments.",
+      icon: ShieldCheck,
+    },
+    {
+      role: "07. Joint R&D & CoE Incubation",
+      badge: "Deep Tech & IP",
+      action: "Translating conclave dialogues into corporate-backed Centers of Excellence and patent research.",
+      practice:
+        "Leveraging SOA's 18 state-of-the-art research centers and 13 constituent institutes to execute industry-sponsored research, prototype development, and high-impact technology patents.",
+      icon: Cpu,
     },
   ];
 
@@ -213,11 +216,11 @@ export default function AboutPage() {
             {/* Quick-Nav Framework Pills */}
             <div className="pt-4 flex flex-wrap items-center justify-center gap-3">
               <a
-                href="#roles-framework"
+                href="#journey-pillars"
                 className="px-4 py-2 rounded-full bg-surface-3 hover:bg-surface-3 border border-line hover:border-accent/50 text-xs font-medium text-content-secondary hover:text-content transition-all flex items-center gap-1.5"
               >
                 <Layers className="w-3.5 h-3.5 text-accent" />
-                <span>7 Allyship Roles</span>
+                <span>7 Journey Pillars</span>
               </a>
               <a
                 href="#litmus-test"
@@ -384,26 +387,26 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 3. THE 7 ROLES OF WORKPLACE ALLYSHIP */}
+      {/* 3. THE 7 PILLARS OF THE SOA ALLYSHIP JOURNEY */}
       <section
-        id="roles-framework"
+        id="journey-pillars"
         className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line"
       >
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
-            Behavioral Framework &amp; Governance
+            Institutional Blueprint &amp; Journey
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-content tracking-tight">
-            The 7 Roles of Workplace Allyship
+            The 7 Pillars of the SOA Allyship Journey
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal">
-            Grounded in Karen Catlin&apos;s <i>Better Allies</i> framework and synthesized from 40+ CXO panelists across SOA&apos;s national conclaves, authentic allyship is defined by seven observable leadership practices.
+            Pioneered by Siksha &lsquo;O&rsquo; Anusandhan and co-created with 500+ corporate CXOs and sporting luminaries across India, the Allyship++ journey redefines how higher education and global enterprises build future-ready leaders.
           </p>
         </div>
 
-        {/* 7 Roles Grid */}
+        {/* 7 Pillars Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {allyshipRoles.map((r) => {
+          {soaJourneyPillars.map((r) => {
             const IconComponent = r.icon;
             return (
               <div
@@ -440,40 +443,40 @@ export default function AboutPage() {
             );
           })}
 
-          {/* 8th Slot: Executive Framework Summary Card */}
-          <div className="rounded-3xl p-7 bg-surface text-content border border-line shadow-lg flex flex-col justify-between">
+          {/* 8th Slot: Executive Journey Summary Card */}
+          <div className="rounded-3xl p-7 bg-surface text-content border border-line shadow-lg flex flex-col justify-between hover:border-accent/80 transition-all">
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <div className="w-10 h-10 rounded-2xl bg-accent-subtle border border-accent/30 flex items-center justify-center text-accent">
-                  <ShieldCheck className="w-5 h-5" />
+                  <Sparkles className="w-5 h-5" />
                 </div>
                 <span className="text-[10px] font-bold font-heading uppercase tracking-wider px-3 py-1 rounded-full bg-glass text-accent border border-accent/20">
-                  Evaluation Standard
+                  Measurable Outcome
                 </span>
               </div>
 
               <div>
                 <h3 className="font-heading text-lg font-bold text-content">
-                  Framework Governance
+                  The Allyship Dividend
                 </h3>
                 <p className="text-xs font-semibold text-accent mt-1">
-                  From Slogans to Measurable Practice
+                  From Dialogue to Quantifiable National Impact
                 </p>
               </div>
 
               <p className="text-xs leading-relaxed text-content-secondary font-normal">
-                Authentic allyship rejects performative lip service. Every behavior in this framework must be backed by transparent accountability and pass the three-question authenticity rubric below.
+                SOA Allyship++ is not a symbolic forum—it is a compounding movement driving our 94.54% placement track record, NIRF Top-15 national standing, and enduring relationships with 150+ global employers.
               </p>
             </div>
 
             <div className="pt-4 border-t border-line">
-              <a
-                href="#litmus-test"
+              <Link
+                href="/event"
                 className="text-xs font-bold text-accent hover:text-content flex items-center gap-1 transition-colors"
               >
-                <span>Explore the 3-Question Test</span>
+                <span>Explore All 7 Conclave Chapters</span>
                 <ChevronRight className="w-3.5 h-3.5" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>
