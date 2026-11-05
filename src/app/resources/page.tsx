@@ -52,19 +52,19 @@ export default function ResourcesPage() {
   });
 
   return (
-    <div className="flex flex-col gap-12 sm:gap-16 pb-12 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 pt-24 sm:pt-32">
+    <div className="flex flex-col gap-12 sm:gap-16 pb-16 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 pt-32 sm:pt-36 lg:pt-40">
       {/* Header */}
-      <div className="text-center max-w-3xl mx-auto space-y-4">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-2 border border-line text-accent text-xs font-semibold font-heading uppercase tracking-wider">
+      <div className="text-center max-w-4xl mx-auto space-y-4">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase shadow-sm">
           <BookOpen className="w-3.5 h-3.5 text-accent" />
           <span>Open Educational Repository</span>
         </div>
 
-        <h1 className="text-4xl sm:text-5xl font-bold text-content tracking-tight font-heading">
-          Resource Library & Toolkits
+        <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
+          Resource Library &amp; Toolkits
         </h1>
 
-        <p className="text-sm sm:text-base text-content-muted leading-relaxed font-normal">
+        <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl mx-auto font-normal">
           Peer-reviewed guides, real-time intervention scripts, meeting checklists, and research briefings. Free to read, download, and share.
         </p>
       </div>

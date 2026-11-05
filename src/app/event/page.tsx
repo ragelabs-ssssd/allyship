@@ -188,16 +188,16 @@ function EventContent() {
 
       {/* 2. INSTITUTIONAL PHILOSOPHY & MANDATE */}
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <span className="font-heading text-xs font-bold tracking-widest text-accent uppercase">
+        <div className="text-center max-w-5xl mx-auto space-y-3 mb-16">
+          <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             The Institutional Mandate
           </span>
 
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-content tracking-tight">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
             Why Allyship<span className="text-accent">++</span>?
           </h2>
 
-          <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl mx-auto">
+          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
             In an era of rapid disruption, transactional placement is no longer sufficient. Siksha &lsquo;O&rsquo; Anusandhan moves academic leadership directly into corporate boardrooms—co-creating empathetic, resilient, and future-ready talent ecosystems.
           </p>
         </div>
@@ -576,11 +576,14 @@ function EventContent() {
         {/* TAB 2: MARQUEE SPEAKERS ROSTER */}
         {activeTab === "Speakers" && (
           <div id="speakers-section" className="space-y-10 scroll-mt-24 pt-8">
-            <div className="max-w-3xl space-y-2">
-              <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-[-0.025em] leading-[1.1] text-content scroll-mt-24">
-                Marquee Speakers & Leaders
+            <div className="max-w-5xl space-y-3 mb-8">
+              <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
+                Luminary Roster
+              </span>
+              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap scroll-mt-24">
+                Marquee Speakers &amp; Leaders
               </h2>
-              <p className="font-sans text-sm font-normal tracking-[0.01em] text-content-muted">
+              <p className="text-base text-content-muted max-w-2xl leading-relaxed">
                 Over 40 distinguished corporate leaders, Olympic champions, and academic dignitaries across all seven Allyship++ conclaves.
               </p>
             </div>
@@ -662,11 +665,14 @@ function EventContent() {
         {/* TAB 3: THEMES & STRATEGIC EVOLUTION */}
         {activeTab === "Themes" && (
           <div id="themes-section" className="space-y-10 scroll-mt-24 pt-8">
-            <div className="max-w-3xl space-y-2">
-              <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-[-0.025em] leading-[1.1] text-content scroll-mt-24">
+            <div className="max-w-5xl space-y-3 mb-8">
+              <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
+                Curricular Continuity
+              </span>
+              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap scroll-mt-24">
                 The Strategic Arc: Allyship++
               </h2>
-              <p className="font-sans text-sm font-normal tracking-[0.01em] text-content-muted">
+              <p className="text-base text-content-muted max-w-2xl leading-relaxed">
                 How the conclave series evolved from establishing foundational corporate-academic trust to operationalizing daily allyship for Gen-Z talent.
               </p>
             </div>
@@ -708,11 +714,14 @@ function EventContent() {
         {/* TAB 4: OFFICIAL CONCLAVE VIDEOS */}
         {activeTab === "Videos" && (
           <div id="videos-section" className="space-y-10 scroll-mt-24 pt-8">
-            <div className="max-w-3xl space-y-2">
-              <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-[-0.025em] leading-[1.1] text-content scroll-mt-24">
+            <div className="max-w-5xl space-y-3 mb-8">
+              <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
+                Digital Archives
+              </span>
+              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap scroll-mt-24">
                 Official Conclave Video Recordings
               </h2>
-              <p className="font-sans text-sm font-normal tracking-[0.01em] text-content-muted">
+              <p className="text-base text-content-muted max-w-2xl leading-relaxed">
                 Watch full panel deliberations and keynote fireside chats from the Chennai, Hyderabad, and national chapters.
               </p>
             </div>

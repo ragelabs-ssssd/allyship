@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <div className="bg-canvas min-h-screen pt-24 sm:pt-32 pb-12">
+    <div className="bg-canvas min-h-screen pt-32 sm:pt-36 lg:pt-40 pb-16">
       <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 space-y-10">
         <div>
           <Link
@@ -23,11 +23,11 @@ export default function PrivacyPage() {
         </div>
 
         <div className="space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-2 text-accent text-xs font-semibold border border-accent/30 font-heading">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase shadow-sm">
             <ShieldCheck className="w-3.5 h-3.5" />
-            <span>Privacy & Institutional Data Ethics</span>
+            <span>Privacy &amp; Institutional Data Ethics</span>
           </div>
-          <h1 className="font-heading text-4xl sm:text-5xl font-bold text-content tracking-tight">
+          <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-content tracking-tight leading-[1.05]">
             Privacy Policy
           </h1>
           <p className="text-xs text-content-muted">
@@ -35,9 +35,9 @@ export default function PrivacyPage() {
           </p>
         </div>
 
-        <div className="bg-surface rounded-3xl p-8 sm:p-12 border border-line shadow-xl space-y-8 text-sm text-content-secondary leading-relaxed font-normal">
+        <div className="bg-surface rounded-3xl p-8 sm:p-12 border border-line shadow-xl space-y-8 text-sm sm:text-base text-content-secondary leading-relaxed font-normal">
           <section className="space-y-3">
-            <h2 className="font-heading text-lg font-bold text-content">
+            <h2 className="font-heading text-lg sm:text-xl font-bold text-content">
               1. Our Core Privacy Philosophy
             </h2>
             <p>

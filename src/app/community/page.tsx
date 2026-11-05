@@ -83,19 +83,19 @@ export default function CommunityPage() {
       : COMMUNITY_EVENTS.filter((e) => e.format.includes(selectedFormat));
 
   return (
-    <div className="flex flex-col gap-16 sm:gap-24 pb-12 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 pt-24 sm:pt-32">
+    <div className="flex flex-col gap-16 sm:gap-24 pb-16 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 pt-32 sm:pt-36 lg:pt-40">
       {/* 1. Header */}
-      <section className="text-center max-w-3xl mx-auto space-y-4">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-2 border border-line text-accent text-xs font-semibold font-heading uppercase tracking-wider">
+      <section className="text-center max-w-4xl mx-auto space-y-4">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase shadow-sm">
           <Users className="w-3.5 h-3.5 text-accent" />
           <span>A Welcoming, Inclusive Community</span>
         </div>
 
-        <h1 className="text-4xl sm:text-5xl font-bold text-content tracking-tight font-heading">
-          Where Allies Connect, Learn & Act
+        <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
+          Where Allies Connect, Learn &amp; Act
         </h1>
 
-        <p className="text-base text-content-muted leading-relaxed font-normal">
+        <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl mx-auto font-normal">
           Welcome to the Allyship community space. Here, learners, advocates, and organizers assemble to share unvarnished experiences, practice bystander intervention, and foster mutual accountability.
         </p>
 
@@ -119,13 +119,13 @@ export default function CommunityPage() {
       {/* 2. Community Working Circles */}
       <section className="space-y-8">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wider text-accent block mb-1 font-heading">
+          <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block mb-2">
             Peer Learning Groups
           </span>
-          <h2 className="text-2xl sm:text-3xl font-bold text-content tracking-tight font-heading">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
             Active Community Circles
           </h2>
-          <p className="text-sm text-content-muted mt-1 max-w-xl">
+          <p className="text-sm sm:text-base text-content-muted mt-2 max-w-xl leading-relaxed">
             Bi-weekly and monthly dialogue cohorts organized around specific domains of practice.
           </p>
         </div>
@@ -169,13 +169,13 @@ export default function CommunityPage() {
       <section id="events" className="space-y-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-accent block mb-1 font-heading">
+            <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block mb-2">
               Interactive Gatherings
             </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-content tracking-tight font-heading">
-              Upcoming Events & Workshops
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
+              Upcoming Events &amp; Workshops
             </h2>
-            <p className="text-sm text-content-muted mt-1">
+            <p className="text-sm sm:text-base text-content-muted mt-2 max-w-xl leading-relaxed">
               RSVP to participate in live, moderated workshops. Free and open to registered allies.
             </p>
           </div>
@@ -210,14 +210,14 @@ export default function CommunityPage() {
         <div className="max-w-3xl space-y-6">
           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-accent font-heading">
             <Lock className="w-4 h-4" />
-            Safety, Moderation & Privacy Charter
+            <span>Safety, Moderation &amp; Privacy Charter</span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl font-bold text-content tracking-tight font-heading">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-content tracking-tight">
             How We Protect Vulnerability and Safety
           </h2>
 
-          <p className="text-xs sm:text-sm text-content-secondary leading-relaxed font-normal">
+          <p className="text-sm sm:text-base text-content-secondary leading-relaxed font-normal">
             Meaningful discussion about systemic bias requires emotional vulnerability. We safeguard this space through strict, non-negotiable community norms.
           </p>
 

@@ -236,14 +236,14 @@ export default function ImpactPage() {
 
       {/* 2. THREE QUALITATIVE OUTCOME PILLARS */}
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
-        <div className="text-center max-w-5xl mx-auto mb-16 space-y-4">
-          <span className="font-heading text-xs font-bold uppercase tracking-widest text-accent">
+        <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
+          <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             Institutional Transformation
           </span>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
             From Dialogue to Institutional Action
           </h2>
-          <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl mx-auto">
+          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
             How executive conclaves in Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai translate into concrete academic, research, and corporate talent outcomes.
           </p>
         </div>
@@ -275,15 +275,15 @@ export default function ImpactPage() {
 
       {/* 3. IN THE PRESS — 9 NEWSPAPER & MEDIA CLIPPINGS */}
       <section id="press-coverage" className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line">
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent/10 border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase">
+        <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase shadow-sm">
             <Newspaper className="w-3.5 h-3.5" />
-            <span>National & Regional Media Chronicle</span>
+            <span>National &amp; Regional Media Chronicle</span>
           </div>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-content tracking-tight">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
             In the Press
           </h2>
-          <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl mx-auto">
+          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
             National and regional print and digital publications—including Deccan Chronicle, The Statesman, Prameya News, OdishaBytes, The Sakala, Samaya, Around Odisha, Orissa Today, and The Sanchar—have chronicled SOA’s Allyship++ journey across India. Click any clipping to inspect the full report.
           </p>
         </div>

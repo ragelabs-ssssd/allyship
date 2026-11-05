@@ -241,7 +241,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
             How Corporate Leaders Collaborate with SOA
           </h2>
-          <p className="text-base text-content-muted leading-relaxed max-w-2xl mx-auto">
+          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
             Move beyond transactional campus hiring into deep, reciprocal engagements that accelerate your engineering, research, and workforce transformation.
           </p>
         </div>
@@ -293,7 +293,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
             Multi-Year Placement Performance
           </h2>
-          <p className="text-base text-content-muted leading-relaxed max-w-2xl">
+          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl">
             SOA’s placement track record reflects deepened trust among Fortune 500 recruiters and global capability centres across engineering, management, clinical healthcare, and legal disciplines.
           </p>
         </div>
@@ -347,10 +347,10 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
             <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
               Direct Interface
             </span>
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-content tracking-tight">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-content tracking-tight">
               Submit an Industry Problem Statement
             </h2>
-            <p className="text-base text-content-muted leading-relaxed">
+            <p className="text-base text-content-secondary leading-relaxed font-normal">
               Have an enterprise bottleneck, AI prototyping need, or clinical innovation challenge? Submit your problem brief directly to Dean Prof. (Dr.) Raj Kumar Hota and the Corporate Relations team.
             </p>
 

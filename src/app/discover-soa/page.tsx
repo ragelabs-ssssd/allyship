@@ -458,7 +458,7 @@ export default function DiscoverSoaPage() {
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
             International Rankings &amp; Global Standing
           </h2>
-          <p className="text-base text-content-muted leading-relaxed max-w-2xl mx-auto">
+          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
             Ranked among the premier institutions in the world by Quacquarelli Symonds (QS) and Times Higher Education (THE).
           </p>
         </div>
@@ -582,7 +582,7 @@ export default function DiscoverSoaPage() {
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
             Accreditations &amp; Major Recognitions
           </h2>
-          <p className="text-base text-content-muted leading-relaxed max-w-2xl mx-auto">
+          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
             Validated by national statutory authorities, healthcare boards, laboratory accreditors, and global standards bodies.
           </p>
         </div>
@@ -691,7 +691,7 @@ export default function DiscoverSoaPage() {
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
             Evolution &amp; Growth Timeline
           </h2>
-          <p className="text-base text-content-muted leading-relaxed max-w-2xl mx-auto">
+          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
             From the pioneering inception of ITER in 1996 to modern pharmaceutical and veterinary super-centres in 2026.
           </p>
         </div>
@@ -798,7 +798,7 @@ export default function DiscoverSoaPage() {
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
             Infrastructure &amp; Research Facilities
           </h2>
-          <p className="text-base text-content-muted leading-relaxed max-w-2xl mx-auto">
+          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
             Spanning cutting-edge engineering laboratories, multi-specialty hospitals, auditoriums, and high-performance computing centers in Bhubaneswar.
           </p>
         </div>

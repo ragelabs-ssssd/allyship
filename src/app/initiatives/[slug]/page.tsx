@@ -78,7 +78,7 @@ export default async function InitiativeDetailPage({ params }: PageProps) {
             </span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-content leading-tight">
+          <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-content leading-[1.1]">
             {initiative.title}
           </h1>
 

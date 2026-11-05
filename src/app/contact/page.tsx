@@ -326,11 +326,11 @@ export default function ContactPage() {
 
         {/* Frequently Asked Questions */}
         <div className="mt-20 pt-16 border-t border-line space-y-10">
-          <div className="text-center max-w-xl mx-auto space-y-2">
+          <div className="text-center max-w-5xl mx-auto space-y-3 mb-12">
             <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
               Instant Answers
             </span>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-content tracking-tight">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
               Frequently Asked Questions
             </h2>
           </div>

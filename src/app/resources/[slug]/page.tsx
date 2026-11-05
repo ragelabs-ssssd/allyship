@@ -74,7 +74,7 @@ export default async function ResourceDetailPage({ params }: PageProps) {
           <ResourceActions resourceId={resource.id} resourceTitle={resource.title} />
         </div>
 
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-content tracking-tight leading-tight">
+        <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-content tracking-tight leading-[1.1]">
           {resource.title}
         </h1>
 
