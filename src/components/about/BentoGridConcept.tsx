@@ -170,7 +170,7 @@ export function BentoGridConcept() {
               Industry-Powered Centres of Excellence
             </h3>
             <p className="text-xs sm:text-sm text-content-secondary leading-relaxed font-normal">
-              Dedicated on-campus innovation hubs co-established with Tech Mahindra, LTTS, and Wipro immerse students in live ServiceNow enterprise workflows, medical AI, and cloud architectures starting in their second year.
+              Dedicated on-campus innovation hubs co-established with Tech Mahindra, LTTS, Blue Star, and Wipro immerse students in live ServiceNow workflows, smart HVAC climatech systems, and medical AI architectures starting in their second year.
             </p>
           </div>
 

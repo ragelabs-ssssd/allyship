@@ -773,7 +773,7 @@ export default function DiscoverSoaPage() {
             <div className="p-6 space-y-2">
               <h4 className="font-bold text-base text-content">ITER Engineering Faculty</h4>
               <p className="text-xs text-content-muted leading-relaxed">
-                Ranked 22nd in India (NIRF 2025) with Tech Mahindra and LTTS Centres of Excellence and 94.54% placement.
+                Ranked 22nd in India (NIRF 2025) featuring enterprise Centres of Excellence with Tech Mahindra, LTTS, and the Blue Star HVAC Skill Development Centre with 94.54% placement.
               </p>
             </div>
           </div>

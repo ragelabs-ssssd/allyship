@@ -50,7 +50,7 @@ export default function CollaboratePage() {
     {
       title: "Centres of Excellence & R&D",
       icon: Cpu,
-      desc: "Co-establish specialized labs modeled on SOA’s recent Centres of Excellence with Tech Mahindra (ServiceNow & Enterprise Tech at ITER) and L&T Technology Services (AI in Medicine & MedTech).",
+      desc: "Co-establish specialized industry hubs modeled on SOA’s on-campus Centres of Excellence with Tech Mahindra (ServiceNow & Enterprise Cloud), L&T Technology Services (Medical AI & Embedded Systems), and the Blue Star Limited Skill Development Centre (HVAC, Smart Refrigeration & Thermal Engineering at ITER).",
       action: "Explore CoE Models",
     },
     {
