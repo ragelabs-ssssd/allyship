@@ -103,10 +103,10 @@ export function BentoGridConcept() {
 
           <div className="pt-4 border-t border-line">
             <div className="text-[11px] font-semibold text-content">
-              Athletic Mentors in Active Dialogue:
+              Executive Takeaway:
             </div>
             <p className="text-xs text-accent mt-0.5">
-              Anju Bobby George · Gurbux Singh · Nilesh Kulkarni · Arshad Ayub
+              Championship grit, setback recovery protocols, and high-pressure psychological safety embedded into student mentorship.
             </p>
           </div>
         </div>

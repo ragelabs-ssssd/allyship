@@ -76,7 +76,7 @@ export default function AboutPage() {
         <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 relative z-10 w-full translate-y-8 lg:translate-y-10">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase shadow-sm">
-              <span>About the Movement · Continuous Compounding Inclusion</span>
+              <span>Institutional Framework · From Policy to Practice</span>
             </div>
 
             <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
@@ -84,11 +84,11 @@ export default function AboutPage() {
             </h1>
 
             <p className="text-xl sm:text-2xl font-heading text-content-secondary max-w-2xl mx-auto italic">
-              Continuous, compounding inclusion — moving from passive statements to daily leadership practice.
+              Bridging Corporate Capital with Regional Potential Through Daily Executive Sponsorship.
             </p>
 
             <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-3xl mx-auto font-normal">
-              Allyship is the deliberate, executive discipline where leaders with institutional capital open doors, share unearned privilege, and actively sponsor emerging regional talent. The &ldquo;++&rdquo; operator signifies continuous compounding: incrementing inclusion day after day through verifiable outcomes.
+              Allyship is the deliberate discipline where leaders with institutional power actively open doors, absorb political risk, and sponsor emerging talent. The &ldquo;++&rdquo; operator denotes measurable, incremental execution—converting passive diversity commitments into verifiable daily outcomes.
             </p>
 
           </div>
@@ -116,7 +116,7 @@ export default function AboutPage() {
             </p>
 
             <p className="max-w-[68ch] text-base text-content-secondary leading-relaxed font-normal">
-              Uniquely, every Allyship++ chapter pairs corporate HR and technology panels with India&apos;s sporting legends—from Olympic gold medalist Gurbux Singh and athletics pioneer Anju Bobby George to Test cricketers Arshad Ayub and Nilesh Kulkarni, and Paris Olympics sprint coach Premanand J.—proving that the mentorship, discipline, and trust that win medals in the arena are identical to the allyship that builds high-performing teams in the boardroom.
+              Uniquely, every ALLYSHIP++ conclave pairs corporate talent strategists with Olympic and national athletic coaches. This cross-domain synthesis demonstrates that the radical psychological safety, high-stakes feedback loops, and coach-athlete sponsorship required to reach world podiums are the exact leadership disciplines needed to build resilient enterprise teams.
             </p>
 
             <div className="pt-2">
@@ -312,20 +312,20 @@ export default function AboutPage() {
 
             <div className="space-y-4">
               <div className="p-4 rounded-2xl bg-surface-2 border border-line">
-                <div className="text-3xl font-bold font-heading text-content">500+</div>
-                <div className="text-xs text-content-secondary mt-1">Corporate CXOs in Standing Conclave Dialogue</div>
+                <div className="text-3xl font-bold font-heading text-content">100%</div>
+                <div className="text-xs text-content-secondary mt-1">Sovereign Peer Governance · Zero Commercial Sponsorship</div>
               </div>
               <div className="p-4 rounded-2xl bg-surface-2 border border-line">
-                <div className="text-3xl font-bold font-heading text-accent">94.54%</div>
-                <div className="text-xs text-content-secondary mt-1">Verified Engineering Placement Velocity (ITER &apos;24)</div>
+                <div className="text-3xl font-bold font-heading text-accent">Zero-Day</div>
+                <div className="text-xs text-content-secondary mt-1">Production Readiness · Curriculum Co-Designed with Tier-1 CXOs</div>
               </div>
               <div className="p-4 rounded-2xl bg-surface-2 border border-line">
-                <div className="text-3xl font-bold font-heading text-content">18 CoEs</div>
-                <div className="text-xs text-content-secondary mt-1">Dedicated On-Campus Research &amp; Delivery Hubs</div>
+                <div className="text-3xl font-bold font-heading text-content">40:1</div>
+                <div className="text-xs text-content-secondary mt-1">Curated Executive Dialogue Ratio · Closed-Door Roundtables</div>
               </div>
               <div className="p-4 rounded-2xl bg-surface-2 border border-line">
-                <div className="text-3xl font-bold font-heading text-accent">5 Capitals</div>
-                <div className="text-xs text-content-secondary mt-1">Annual Conclave Corridors: BLR, HYD, BOM, MAA, CCU</div>
+                <div className="text-3xl font-bold font-heading text-accent">Tier-1</div>
+                <div className="text-xs text-content-secondary mt-1">Enterprise Integration · Active Labs with TechM, LTTS &amp; Wipro</div>
               </div>
             </div>
           </div>
