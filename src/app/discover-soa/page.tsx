@@ -30,6 +30,7 @@ import {
 } from "lucide-react";
 import { GetInvitedModal } from "@/components/GetInvitedModal";
 import { HeroBackdrop, SOA_VIDEO_SRC } from "@/components/HeroBackdrop";
+import { NirfRankingsShowcase } from "@/components/discover/NirfRankingsShowcase";
 
 // 1. NIRF Rankings 2025 Data
 const nirfRankings2025 = [
@@ -318,67 +319,8 @@ export default function DiscoverSoaPage() {
           </p>
         </div>
 
-        {/* 7 Clean Uniform Cards */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 sm:gap-6">
-          {nirfRankings2025.map((item, idx) => (
-            <div
-              key={item.category}
-              className={`relative rounded-2xl p-5 sm:p-6 bg-surface-2 border border-line hover:border-accent/80 transition-all duration-300 hover:-translate-y-1.5 shadow-md hover:shadow-2xl flex flex-col items-center justify-between text-center group ${
-                idx === 6 ? "col-span-2 md:col-span-4 lg:col-span-1" : ""
-              }`}
-            >
-              <div className="w-full flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-content-muted">
-                <span>Rank</span>
-                <span className="text-accent font-mono font-bold">2025</span>
-              </div>
-
-              {/* Prominent Gold Ranking Number */}
-              <div className="my-4 space-y-1">
-                <span className="font-display text-4xl sm:text-5xl font-extrabold tracking-tight text-content group-hover:text-accent transition-colors drop-shadow-sm inline-block">
-                  {item.rank}
-                </span>
-                <span className="block text-[11px] font-semibold text-accent uppercase tracking-wider">
-                  {item.highlight}
-                </span>
-              </div>
-
-              {/* Category Label */}
-              <div className="pt-3 border-t border-line/60 w-full space-y-1">
-                <h3 className="font-heading text-xs sm:text-sm font-bold text-content leading-snug">
-                  {item.category}
-                </h3>
-                <p className="text-[10px] text-content-muted line-clamp-1">
-                  {item.subtext}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* NIRF Benchmark Callout */}
-        <div className="mt-8 p-4 sm:p-6 rounded-2xl bg-surface-2 border border-line flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-accent-subtle border border-accent/40 text-accent flex items-center justify-center shrink-0">
-              <Award className="w-5 h-5" />
-            </div>
-            <div>
-              <p className="font-heading text-sm font-bold text-content">
-                National Institutional Ranking Framework (NIRF)
-              </p>
-              <p className="text-xs text-content-muted">
-                Evaluated across Teaching, Learning & Resources, Research, Graduation Outcomes, Outreach, and Perception.
-              </p>
-            </div>
-          </div>
-          <button
-            type="button"
-            onClick={() => setSelectedSlide("/discover/nirf-rankings-2025.jpg")}
-            className="text-xs font-semibold text-accent hover:text-content inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-surface border border-line hover:border-accent transition-all shrink-0"
-          >
-            <span>View Official NIRF Slide</span>
-            <Maximize2 className="w-3.5 h-3.5" />
-          </button>
-        </div>
+        {/* NIRF Showcase with Proper Presentable Hierarchy */}
+        <NirfRankingsShowcase onOpenSlide={() => setSelectedSlide("/discover/nirf-rankings-2025.jpg")} />
       </section>
 
       {/* 3. OTHER RANKINGS SECTION: QS & THE + SWACHHATA (Screenshot 2) */}
