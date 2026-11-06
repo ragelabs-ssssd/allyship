@@ -125,8 +125,8 @@ function EventContent() {
                 Where Corporate Vision Meets Sporting Grit &amp; Academic Leadership
               </p>
 
-              <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal">
-                Siksha &lsquo;O&rsquo; Anusandhan anchors ALLYSHIP++ across India&apos;s premier commercial corridors. Each standing chapter convenes enterprise CXOs, talent strategists, Olympic coaches, and university leadership to co-author institutional pipelines, de-bias hiring architectures, and accelerate regional talent into national leadership.
+              <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-3xl font-normal">
+                Siksha &lsquo;O&rsquo; Anusandhan anchors ALLYSHIP++ across India&apos;s premier commercial corridors. Each standing chapter convenes enterprise CXOs, talent strategists, Olympic coaches, and university leadership to co-author institutional pipelines, de-bias hiring, and accelerate regional talent into national leadership.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
