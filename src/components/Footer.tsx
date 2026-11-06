@@ -41,20 +41,9 @@ export function Footer() {
   return (
     <footer className="bg-canvas text-content-secondary border-t border-line mt-auto relative overflow-hidden">
       {/* ══════════════════════════════════════════════════════════════
-          TOP ARCHITECTURAL WATERMARK (LUXE EDITORIAL)
-          ══════════════════════════════════════════════════════════════ */}
-      <div className="border-b border-line/60 pt-10 pb-6 overflow-hidden select-none pointer-events-none">
-        <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
-          <div className="font-display text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tighter text-content/[0.04] uppercase whitespace-nowrap">
-            ALLYSHIP++ · SIKSHA &lsquo;O&rsquo; ANUSANDHAN UNIVERSITY · NATIONAL CONCLAVE
-          </div>
-        </div>
-      </div>
-
-      {/* ══════════════════════════════════════════════════════════════
           MAIN EDITORIAL GRID
           ══════════════════════════════════════════════════════════════ */}
-      <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 pt-14 pb-12">
+      <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 pt-16 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-14 pb-14 border-b border-line">
           {/* Col 1: Institutional Essence (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
