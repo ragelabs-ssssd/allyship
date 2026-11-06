@@ -85,12 +85,14 @@ export function BentoGridConcept() {
         {/* Card 2: The Olympic Crucible (4 cols) */}
         <div className="lg:col-span-4 rounded-3xl p-8 bg-surface border border-line shadow-xl flex flex-col justify-between space-y-6 group hover:border-accent/60 transition-all duration-300">
           <div className="space-y-4">
-            <div className="w-12 h-12 rounded-2xl bg-accent-subtle border border-accent/30 flex items-center justify-center text-accent group-hover:scale-105 transition-transform">
-              <Trophy className="w-6 h-6" />
+            <div className="flex items-center justify-between">
+              <div className="w-10 h-10 rounded-xl bg-accent-subtle border border-accent/30 flex items-center justify-center text-accent group-hover:scale-105 transition-transform">
+                <Trophy className="w-5 h-5" />
+              </div>
+              <span className="text-[10px] font-bold font-heading uppercase tracking-widest text-accent">
+                Championship Psychology
+              </span>
             </div>
-            <span className="text-[10px] font-bold font-heading uppercase tracking-widest text-accent block">
-              Championship Psychology
-            </span>
             <h3 className="font-heading text-xl font-bold text-content">
               The Olympic Crucible: Grit for the C-Suite
             </h3>
@@ -156,12 +158,14 @@ export function BentoGridConcept() {
         {/* Card 4: Industry-Powered Centres of Excellence (4 cols) */}
         <div className="lg:col-span-4 rounded-3xl p-8 bg-surface border border-line shadow-xl flex flex-col justify-between space-y-6 group hover:border-accent/60 transition-all duration-300">
           <div className="space-y-4">
-            <div className="w-10 h-10 rounded-xl bg-accent-subtle border border-accent/30 flex items-center justify-center text-accent">
-              <Cpu className="w-5 h-5" />
+            <div className="flex items-center justify-between">
+              <div className="w-10 h-10 rounded-xl bg-accent-subtle border border-accent/30 flex items-center justify-center text-accent">
+                <Cpu className="w-5 h-5" />
+              </div>
+              <span className="text-[10px] font-bold font-heading uppercase tracking-widest text-accent">
+                Enterprise-Anchored Labs
+              </span>
             </div>
-            <span className="text-[10px] font-bold font-heading uppercase tracking-widest text-accent block">
-              Enterprise-Anchored Labs
-            </span>
             <h3 className="font-heading text-xl font-bold text-content">
               Industry-Powered Centres of Excellence
             </h3>
@@ -181,12 +185,14 @@ export function BentoGridConcept() {
         {/* Card 5: The Radical Psychological Safety Pact (4 cols) */}
         <div className="lg:col-span-4 rounded-3xl p-8 bg-surface border border-line shadow-xl flex flex-col justify-between space-y-6 group hover:border-accent/60 transition-all duration-300">
           <div className="space-y-4">
-            <div className="w-10 h-10 rounded-xl bg-accent-subtle border border-accent/30 flex items-center justify-center text-accent">
-              <ShieldCheck className="w-5 h-5" />
+            <div className="flex items-center justify-between">
+              <div className="w-10 h-10 rounded-xl bg-accent-subtle border border-accent/30 flex items-center justify-center text-accent">
+                <ShieldCheck className="w-5 h-5" />
+              </div>
+              <span className="text-[10px] font-bold font-heading uppercase tracking-widest text-accent">
+                Generational Power Shift
+              </span>
             </div>
-            <span className="text-[10px] font-bold font-heading uppercase tracking-widest text-accent block">
-              Generational Power Shift
-            </span>
             <h3 className="font-heading text-xl font-bold text-content">
               The Radical Psychological Safety Pact
             </h3>
@@ -196,10 +202,10 @@ export function BentoGridConcept() {
           </div>
 
           <Link
-            href="#litmus-test"
+            href="#manifesto"
             className="inline-flex items-center gap-1.5 text-xs font-bold text-accent hover:underline pt-2"
           >
-            <span>Explore 3-Question Litmus Test</span>
+            <span>Explore Anti-Performative Thesis</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>
