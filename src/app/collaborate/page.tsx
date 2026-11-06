@@ -25,7 +25,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { GetInvitedModal } from "@/components/GetInvitedModal";
-import { HeroBackdrop } from "@/components/HeroBackdrop";
+import { HeroBackdrop, SOA_VIDEO_SRC } from "@/components/HeroBackdrop";
 
 export default function CollaboratePage() {
   const [isInviteOpen, setIsInviteOpen] = useState(false);
@@ -163,7 +163,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
     <div className="flex flex-col w-full bg-canvas text-content pb-0">
       {/* 1. EDITORIAL LUXE HERO SECTION */}
       <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 border-b border-line overflow-hidden">
-        <HeroBackdrop />
+        <HeroBackdrop videoSrc={SOA_VIDEO_SRC} />
         <div className="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             <div className="lg:col-span-7 space-y-6">
