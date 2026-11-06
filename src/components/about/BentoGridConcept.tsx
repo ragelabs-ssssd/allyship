@@ -33,8 +33,8 @@ export function BentoGridConcept() {
           <Sparkles className="w-3.5 h-3.5" />
           <span>The Long-Horizon Vision · Co-Engineered with 500+ CXOs</span>
         </div>
-        <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-content tracking-tight">
-          The Horizon Blueprint: <span className="text-accent">Architecting Generational Impact</span>
+        <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
+          The Architecture of <span className="text-accent">Generational Impact</span>
         </h2>
         <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
           Transcending traditional hiring: a multi-dimensional ecosystem engineered for placement velocity, pan-India executive corridors, Olympic athletic grit, and psychological safety.
