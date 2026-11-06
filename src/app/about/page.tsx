@@ -411,8 +411,8 @@ export default function AboutPage() {
               Executive Conclave Participation
             </span>
 
-            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
-              Connect with SOA University Leadership
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-content tracking-tight">
+              Connect with SOA Leadership
             </h2>
 
             <p className="text-base sm:text-lg text-content-secondary max-w-xl mx-auto leading-relaxed font-normal">
