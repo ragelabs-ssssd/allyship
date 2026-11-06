@@ -183,8 +183,8 @@ export default function ImpactPage() {
                 From Boardroom Dialogue to Campus Innovation &amp; Career Excellence
               </p>
 
-              <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal">
-                Across seven national conclaves spanning India&apos;s core commercial hubs, ALLYSHIP++ has converted boardroom commitments into concrete academic transformation—anchoring dedicated corporate Centres of Excellence, de-biasing hiring pipelines, and achieving a 94.54% engineering placement velocity.
+              <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-3xl font-normal">
+                Across seven national conclaves spanning India&apos;s core commercial hubs, ALLYSHIP++ has converted boardroom commitments into concrete academic transformation—anchoring corporate Centres of Excellence, de-biasing hiring pipelines, and achieving a 94.54% engineering placement velocity.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
