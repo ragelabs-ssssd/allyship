@@ -44,7 +44,7 @@ export default function CollaboratePage() {
     {
       title: "Industry Challenges & Incubation",
       icon: Lightbulb,
-      desc: "Bring real-world engineering, clinical, or business challenges for faculty and student teams to prototype via the AIC-SOA Foundation (Atal Incubation Centre under NITI Aayog).",
+      desc: "Sponsor real-world engineering, clinical, or digital transformation challenges for faculty-led research cohorts to prototype and scale through the AIC-SOA Atal Incubation Centre under NITI Aayog.",
       action: "Submit Problem Statement",
     },
     {
@@ -179,7 +179,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
             </p>
 
             <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal text-right ml-auto">
-              From co-establishing specialized campus Centres of Excellence with Tech Mahindra and LTTS, to sponsoring challenge problem statements via the AIC-SOA Foundation, Siksha &lsquo;O&rsquo; Anusandhan offers corporate partners a high-velocity collaboration ecosystem built for industrial synergy.
+              From co-founding advanced campus Centres of Excellence with Tech Mahindra and LTTS, to sponsoring high-impact R&D challenges through the AIC-SOA Foundation under NITI Aayog, Siksha &lsquo;O&rsquo; Anusandhan offers global enterprises an agile, co-creative talent ecosystem built for verified technical velocity.
             </p>
 
             <div className="pt-2 flex flex-wrap items-center justify-end gap-4">
@@ -213,7 +213,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
             How Corporate Leaders Collaborate with SOA
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
-            Move beyond transactional campus hiring into deep, reciprocal engagements that accelerate your engineering, research, and workforce transformation.
+            Transcend seasonal campus recruitment through high-trust, bilateral engagements that accelerate your enterprise engineering velocity and talent resilience.
           </p>
         </div>
 

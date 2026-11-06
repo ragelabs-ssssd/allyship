@@ -105,7 +105,7 @@ export default function ContactPage() {
           </h1>
 
           <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl mx-auto font-normal">
-            Have an inquiry regarding upcoming Allyship++ conclave invitations, industry problem statements, Centre of Excellence partnerships, or campus talent collaborations with Siksha &lsquo;O&rsquo; Anusandhan? Connect directly with our Office of Corporate Relations and Placement in Bhubaneswar.
+            Whether inquiring about delegation seats for upcoming national conclaves, submitting enterprise challenge briefs, or co-establishing on-campus Centres of Excellence, the SOA Conclave Secretariat and Corporate Relations Directorate are at your service.
           </p>
         </div>
       </section>
