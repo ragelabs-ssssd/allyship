@@ -31,34 +31,6 @@ import { BentoGridConcept } from "@/components/about/BentoGridConcept";
 export default function AboutPage() {
   const [isInviteOpen, setIsInviteOpen] = useState(false);
 
-  // The 3-Question Litmus Test Rubric
-  const litmusTestQuestions = [
-    {
-      id: "cost",
-      number: "01",
-      title: "Personal Cost Test",
-      question: "Does it cost the leader comfort, time, or political capital?",
-      rubric:
-        "If an action requires zero personal vulnerability or expenditure of political capital, it is brand management, not allyship. Authentic allies spend reputational currency to advocate for emerging talent when stakes are high.",
-    },
-    {
-      id: "outcome",
-      number: "02",
-      title: "Outcome Shift Test",
-      question: "Does it tangibly change what happens to the colleague?",
-      rubric:
-        "Sympathetic intentions do not alter career trajectories; verifiable institutional outcomes do. Authentic allyship manifests in compensation parity, stretch assignments, and accelerated promotion velocity.",
-    },
-    {
-      id: "integrity",
-      number: "03",
-      title: "Unobserved Integrity Test",
-      question: "Would it still happen behind closed doors if no one were watching?",
-      rubric:
-        "Public statements on LinkedIn mean nothing if a leader remains silent during closed-door talent calibration reviews. Authentic advocacy thrives in private boardrooms where there are zero applause points to gain.",
-    },
-  ];
-
   // Sports Legends Regional Conclaves
   const sportsAnchors = [
     {
@@ -270,60 +242,95 @@ export default function AboutPage() {
         <BentoGridConcept />
       </section>
 
-      {/* 4. THE 3-QUESTION AUTHENTICITY LITMUS TEST */}
+      {/* 4. THE MONOLITH MANIFESTO & CONCLAVE TELEMETRY */}
       <section
-        id="litmus-test"
+        id="manifesto"
         className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line"
       >
-        <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading uppercase tracking-widest">
-            <ShieldCheck className="w-3.5 h-3.5" />
-            <span>Authenticity Guardrail</span>
-          </div>
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
-            The 3-Question Authenticity Litmus Test
-          </h2>
-          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
-            Separating genuine institutional advocacy from performative optics. Grounded in research from 40+ CXO panels across India, every allyship initiative must satisfy three mandatory criteria.
-          </p>
-        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+          {/* Massive Serif Manifesto (7 cols) */}
+          <div className="lg:col-span-7 space-y-6">
+            <span className="text-[11px] font-bold font-heading uppercase tracking-[0.25em] text-accent block">
+              The Anti-Performative Thesis
+            </span>
+            <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-content leading-[1.08] tracking-tight">
+              We do not sign pledges.<br />
+              <span className="text-accent italic font-normal">We alter trajectories.</span>
+            </h2>
 
-        {/* 3 Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {litmusTestQuestions.map((q) => (
-            <div
-              key={q.id}
-              className="relative rounded-3xl p-8 bg-surface border border-line shadow-xl hover:border-accent/60 transition-all flex flex-col justify-between group"
-            >
-              {/* Large watermark number */}
-              <span className="absolute top-6 right-8 text-5xl font-heading font-black text-content/5 pointer-events-none group-hover:text-accent/10 transition-colors">
-                {q.number}
-              </span>
+            <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal max-w-xl">
+              In an ecosystem flooded with superficial corporate declarations, Allyship++ is anchored in observable, non-negotiable institutional reality:
+            </p>
 
-              <div className="space-y-4 relative z-10">
-                <span className="text-[11px] font-bold font-heading text-accent bg-glass border border-line px-3 py-1 rounded-full inline-block">
-                  Criterion {q.number}
+            <div className="space-y-4 pt-2">
+              <div className="flex items-start gap-4 p-4 rounded-2xl bg-surface border border-line hover:border-accent/40 transition-colors">
+                <span className="w-7 h-7 rounded-full bg-accent text-canvas font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                  1
                 </span>
-
-                <h3 className="font-heading text-xl font-bold text-content">
-                  {q.title}
-                </h3>
-
-                <p className="text-sm font-semibold text-accent-light italic">
-                  &ldquo;{q.question}&rdquo;
-                </p>
-
-                <p className="text-xs sm:text-sm text-content-secondary leading-relaxed font-normal pt-2 border-t border-white/5">
-                  {q.rubric}
-                </p>
+                <div>
+                  <h3 className="text-sm font-bold text-content font-heading">Personal Cost over Optics</h3>
+                  <p className="text-xs sm:text-sm text-content-secondary leading-relaxed mt-0.5">
+                    If advocacy costs the executive zero reputational currency or political capital, it is brand management, not allyship. True allies spend their own credibility to open doors.
+                  </p>
+                </div>
               </div>
 
-              <div className="pt-6 mt-6 border-t border-line flex items-center gap-2 text-xs text-content-muted font-medium">
-                <CheckCircle2 className="w-4 h-4 text-success" />
-                <span>Mandatory Leadership Benchmark</span>
+              <div className="flex items-start gap-4 p-4 rounded-2xl bg-surface border border-line hover:border-accent/40 transition-colors">
+                <span className="w-7 h-7 rounded-full bg-accent text-canvas font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                  2
+                </span>
+                <div>
+                  <h3 className="text-sm font-bold text-content font-heading">Verifiable Career Dividend</h3>
+                  <p className="text-xs sm:text-sm text-content-secondary leading-relaxed mt-0.5">
+                    Sympathetic intentions do not alter career trajectories; compensation parity, stretch assignments, and accelerated promotion velocity do.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4 p-4 rounded-2xl bg-surface border border-line hover:border-accent/40 transition-colors">
+                <span className="w-7 h-7 rounded-full bg-accent text-canvas font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                  3
+                </span>
+                <div>
+                  <h3 className="text-sm font-bold text-content font-heading">Unobserved Closed-Door Integrity</h3>
+                  <p className="text-xs sm:text-sm text-content-secondary leading-relaxed mt-0.5">
+                    What matters most is what a leader defends behind closed doors in confidential talent calibrations when there are zero public applause points to gain.
+                  </p>
+                </div>
               </div>
             </div>
-          ))}
+          </div>
+
+          {/* Reactive Telemetry Column (5 cols) */}
+          <div className="lg:col-span-5 p-8 sm:p-10 rounded-3xl bg-surface border border-line shadow-2xl space-y-6 relative overflow-hidden">
+            <div className="flex items-center justify-between border-b border-line pb-4">
+              <span className="text-xs font-mono text-accent uppercase tracking-widest font-bold">
+                Living Conclave Telemetry
+              </span>
+              <span className="text-[10px] font-mono text-content-muted">
+                VERIFIED 2024–2026
+              </span>
+            </div>
+
+            <div className="space-y-4">
+              <div className="p-4 rounded-2xl bg-surface-2 border border-line">
+                <div className="text-3xl font-bold font-heading text-content">500+</div>
+                <div className="text-xs text-content-secondary mt-1">Corporate CXOs in Standing Conclave Dialogue</div>
+              </div>
+              <div className="p-4 rounded-2xl bg-surface-2 border border-line">
+                <div className="text-3xl font-bold font-heading text-accent">94.54%</div>
+                <div className="text-xs text-content-secondary mt-1">Verified Engineering Placement Velocity (ITER &apos;24)</div>
+              </div>
+              <div className="p-4 rounded-2xl bg-surface-2 border border-line">
+                <div className="text-3xl font-bold font-heading text-content">18 CoEs</div>
+                <div className="text-xs text-content-secondary mt-1">Dedicated On-Campus Research &amp; Delivery Hubs</div>
+              </div>
+              <div className="p-4 rounded-2xl bg-surface-2 border border-line">
+                <div className="text-3xl font-bold font-heading text-accent">5 Capitals</div>
+                <div className="text-xs text-content-secondary mt-1">Annual Conclave Corridors: BLR, HYD, BOM, MAA, CCU</div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
