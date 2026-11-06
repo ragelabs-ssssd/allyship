@@ -60,40 +60,6 @@ export default function AboutPage() {
     },
   ];
 
-  // Six-Step HR Implementation Blueprint
-  const hrBlueprint = [
-    {
-      step: "01",
-      title: "Define Observable Behaviors",
-      desc: "Replace vague 'be an ally' slogans with 3 to 5 concrete habits—such as crediting ideas in meetings, recommending talent for stretch roles, and speaking up calmly when boundaries are crossed.",
-    },
-    {
-      step: "02",
-      title: "Train Managers First",
-      desc: "Prioritize line managers before the general workforce because managers control daily feedback, project visibility, and promotion velocity; focus on fair constructive feedback and inclusive meeting facilitation.",
-    },
-    {
-      step: "03",
-      title: "Institutionalize Psychological Safety",
-      desc: "Establish transparent reporting channels, guaranteed follow-up, and non-retaliation protections so employees can act as Upstanders and Confidantes without fear of career penalty.",
-    },
-    {
-      step: "04",
-      title: "Support Employee Resource Groups (ERGs)",
-      desc: "Invite senior allies to attend ERG sessions with an explicit mandate to listen first and do their own learning, ensuring underrepresented colleagues are never burdened with unpaid teaching.",
-    },
-    {
-      step: "05",
-      title: "Recognize & Embed Allyship",
-      desc: "Weave inclusive mentorship and allyship behaviors into formal leadership expectations and performance appraisals rather than treating them as optional side initiatives.",
-    },
-    {
-      step: "06",
-      title: "Measure, Act & Avoid Pitfalls",
-      desc: "Audit inclusion outcomes while avoiding legal and cultural pitfalls: never assume holiday or identity preferences, never collect intrusive personal data, and widen access via transparent criteria rather than group quotas.",
-    },
-  ];
-
   // Sports Legends Regional Conclaves
   const sportsAnchors = [
     {
@@ -357,52 +323,6 @@ export default function AboutPage() {
                 <CheckCircle2 className="w-4 h-4 text-success" />
                 <span>Mandatory Leadership Benchmark</span>
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* 5. SIX-STEP HR IMPLEMENTATION BLUEPRINT */}
-      <section
-        id="hr-blueprint"
-        className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line"
-      >
-        <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
-          <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
-            Organizational Roadmap
-          </span>
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
-            Six-Step HR Implementation Blueprint
-          </h2>
-          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
-            A practical roadmap for Chief Human Resources Officers, Talent Directors, and line leaders to institutionalize authentic allyship across enterprise units.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {hrBlueprint.map((b) => (
-            <div
-              key={b.step}
-              className="relative bg-surface p-8 rounded-3xl border border-line shadow-lg hover:border-accent/50 transition-all space-y-4 text-content group"
-            >
-              {/* Step number watermark */}
-              <span className="absolute top-6 right-7 text-4xl font-heading font-extrabold text-content/5 group-hover:text-accent/15 transition-colors">
-                {b.step}
-              </span>
-
-              <div className="flex items-center gap-2">
-                <span className="text-[11px] font-bold font-heading text-accent bg-accent-subtle border border-accent/30 px-3 py-1 rounded-full">
-                  Step {b.step}
-                </span>
-              </div>
-
-              <h3 className="font-heading text-lg font-bold text-content group-hover:text-accent-light transition-colors">
-                {b.title}
-              </h3>
-
-              <p className="text-xs sm:text-sm text-content-secondary leading-relaxed font-normal">
-                {b.desc}
-              </p>
             </div>
           ))}
         </div>
