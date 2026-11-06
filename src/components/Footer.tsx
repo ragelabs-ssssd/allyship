@@ -149,7 +149,7 @@ export function Footer() {
               </form>
             )}
 
-            <div className="pt-4 border-t border-line/50">
+            <div className="pt-4">
               <div className="text-[10px] font-sans uppercase tracking-wider text-content-faint mb-1.5">
                 Secretariat Direct
               </div>
