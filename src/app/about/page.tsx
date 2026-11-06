@@ -304,12 +304,9 @@ export default function AboutPage() {
 
           {/* Reactive Telemetry Column (5 cols) */}
           <div className="lg:col-span-5 p-8 sm:p-10 rounded-3xl bg-surface border border-line shadow-2xl space-y-6 relative overflow-hidden">
-            <div className="flex items-center justify-between border-b border-line pb-4">
-              <span className="text-xs font-mono text-accent uppercase tracking-widest font-bold">
+            <div className="border-b border-line pb-4">
+              <span className="text-xs font-mono text-accent uppercase tracking-widest font-bold block">
                 Living Conclave Telemetry
-              </span>
-              <span className="text-[10px] font-mono text-content-muted">
-                VERIFIED 2024–2026
               </span>
             </div>
 
