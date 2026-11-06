@@ -75,10 +75,7 @@ export function Footer() {
               &ldquo;Where academic rigour meets executive foresight, nurturing industry-ready talent through sustained corporate allyship.&rdquo;
             </blockquote>
 
-            <p className="font-sans text-xs text-content-muted leading-relaxed max-w-md">
-              Anchored under the Directorate of Corporate Relations & Placement under the leadership of{" "}
-              <strong className="text-content font-semibold">Prof. (Dr.) Raj Kumar Hota</strong>.
-            </p>
+
 
             <div className="flex flex-wrap gap-2 pt-1 text-xs font-sans">
               <span className="px-3 py-1 rounded-full bg-surface-2 border border-line text-content-secondary font-medium text-[11px]">
