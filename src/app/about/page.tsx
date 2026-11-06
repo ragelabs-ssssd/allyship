@@ -88,7 +88,7 @@ export default function AboutPage() {
             </p>
 
             <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-3xl mx-auto font-normal">
-              Allyship is the deliberate, ongoing practice in which leaders with institutional power work in active solidarity with emerging and underrepresented talent. The &ldquo;++&rdquo; signifies continuous evolution—incrementing inclusion day after day through observable action.
+              Allyship is the deliberate, executive discipline where leaders with institutional capital open doors, share unearned privilege, and actively sponsor emerging regional talent. The &ldquo;++&rdquo; operator signifies continuous compounding: incrementing inclusion day after day through verifiable outcomes.
             </p>
 
           </div>
@@ -121,10 +121,10 @@ export default function AboutPage() {
 
             <div className="pt-2">
               <a
-                href="#roles-framework"
+                href="#journey-pillars"
                 className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-accent hover:text-content transition-colors"
               >
-                <span>Explore the 7 Leadership Roles</span>
+                <span>Explore the Institutional Architecture</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>
@@ -171,7 +171,7 @@ export default function AboutPage() {
                   </div>
                   <div className="table-row">
                     <span className="table-cell pr-4 text-right text-content-faint select-none text-[11px] w-8">05</span>
-                    <span className="table-cell text-content-faint italic">{"// The SOA Allyship++ Upgrade (Continuous & Co-Created)"}</span>
+                    <span className="table-cell text-content-faint italic">{"// The SOA Allyship++ Protocol (Bilateral & Compounding)"}</span>
                   </div>
                   <div className="table-row">
                     <span className="table-cell pr-4 text-right text-content-faint select-none text-[11px] w-8">06</span>
@@ -179,7 +179,7 @@ export default function AboutPage() {
                   </div>
                   <div className="table-row">
                     <span className="table-cell pr-4 text-right text-content-faint select-none text-[11px] w-8">07</span>
-                    <span className="table-cell pl-4"><span className="text-accent font-bold">allyship++</span>; <span className="text-content-faint italic">{"// Daily compounding increment"}</span></span>
+                    <span className="table-cell pl-4"><span className="text-accent font-bold">allyship++</span>; <span className="text-content-faint italic">{"// Compounding institutional return"}</span></span>
                   </div>
                   <div className="table-row">
                     <span className="table-cell pr-4 text-right text-content-faint select-none text-[11px] w-8">08</span>
@@ -342,10 +342,10 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-start">
             <div className="lg:col-span-7 space-y-4">
               <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
-                The Sports-Corporate-Academia Triad
+                Championship Psychology in the Boardroom
               </span>
               <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
-                Why Sports Legends Anchor Allyship++
+                Why Olympic Champions Anchor Allyship++
               </h2>
               <p className="text-sm sm:text-base text-content-secondary leading-relaxed font-normal">
                 High-performance athletics represents the ultimate meritocratic arena in which psychological safety, coach-athlete allyship, discipline, and mutual trust under extreme pressure directly dictate collective triumph.
@@ -361,7 +361,7 @@ export default function AboutPage() {
                 <span>The Core Athletic Parallel</span>
               </div>
               <p className="text-xs text-content-secondary leading-relaxed">
-                &ldquo;A national coach does not run the sprint or bat the over; they eliminate barriers, build unshakeable confidence, and absorb external heat so the athlete can execute with complete focus. That is authentic corporate allyship.&rdquo;
+                &ldquo;An Olympic coach doesn&apos;t run the anchor leg; they eliminate friction, absorb external pressure, and build unshakeable psychological safety so emerging talent can execute without fear under championship stakes. That is the definition of executive allyship.&rdquo;
               </p>
             </div>
           </div>
@@ -414,7 +414,7 @@ export default function AboutPage() {
             </h2>
 
             <p className="text-base sm:text-lg text-content-secondary max-w-xl mx-auto leading-relaxed font-normal">
-              Corporate leaders, CHROs, and industrial partners are warmly invited to engage in our high-level roundtables, curriculum co-creation, and joint Centre of Excellence initiatives.
+              Corporate directors, talent strategists, and engineering leaders are invited to join our closed-door conclaves, co-author live curricula, and co-establish dedicated campus Centres of Excellence.
             </p>
           </div>
 

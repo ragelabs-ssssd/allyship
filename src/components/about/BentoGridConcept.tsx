@@ -89,7 +89,7 @@ export function BentoGridConcept() {
               <div className="w-10 h-10 rounded-xl bg-accent-subtle border border-accent/30 flex items-center justify-center text-accent group-hover:scale-105 transition-transform">
                 <Trophy className="w-5 h-5" />
               </div>
-              <span className="text-[10px] font-bold font-heading uppercase tracking-widest text-accent">
+              <span className="text-[11px] font-bold font-heading uppercase tracking-widest px-3 py-1 rounded-full bg-accent-subtle text-accent border border-accent/30">
                 Championship Psychology
               </span>
             </div>
@@ -118,7 +118,7 @@ export function BentoGridConcept() {
               <div className="w-10 h-10 rounded-xl bg-accent-subtle border border-accent/30 flex items-center justify-center text-accent">
                 <MapPin className="w-5 h-5" />
               </div>
-              <span className="text-[10px] font-bold font-heading uppercase tracking-widest text-accent">
+              <span className="text-[11px] font-bold font-heading uppercase tracking-widest px-3 py-1 rounded-full bg-accent-subtle text-accent border border-accent/30">
                 7 Standing Conclaves
               </span>
             </div>
@@ -162,7 +162,7 @@ export function BentoGridConcept() {
               <div className="w-10 h-10 rounded-xl bg-accent-subtle border border-accent/30 flex items-center justify-center text-accent">
                 <Cpu className="w-5 h-5" />
               </div>
-              <span className="text-[10px] font-bold font-heading uppercase tracking-widest text-accent">
+              <span className="text-[11px] font-bold font-heading uppercase tracking-widest px-3 py-1 rounded-full bg-accent-subtle text-accent border border-accent/30">
                 Enterprise-Anchored Labs
               </span>
             </div>
@@ -189,7 +189,7 @@ export function BentoGridConcept() {
               <div className="w-10 h-10 rounded-xl bg-accent-subtle border border-accent/30 flex items-center justify-center text-accent">
                 <ShieldCheck className="w-5 h-5" />
               </div>
-              <span className="text-[10px] font-bold font-heading uppercase tracking-widest text-accent">
+              <span className="text-[11px] font-bold font-heading uppercase tracking-widest px-3 py-1 rounded-full bg-accent-subtle text-accent border border-accent/30">
                 Generational Power Shift
               </span>
             </div>
