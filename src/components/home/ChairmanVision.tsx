@@ -57,9 +57,9 @@ export function ChairmanVision() {
 
             <div className="space-y-3 pt-4 border-t border-line text-sm sm:text-base text-content-secondary leading-relaxed">
               <p className="font-sans text-sm sm:text-base font-normal tracking-[0.01em] leading-relaxed text-content-secondary">
-                Under the stewardship of Prof. (Dr.) Manojranjan Nayak, SOA has evolved into a premier
-                Deemed-to-be University (NIRF Top 15 in University category and Top 27 in Overall India),
-                fostering nine constituent institutes, world-class teaching hospitals, and over 15,000 scholars.
+                Founded on the conviction that eastern talent deserves equal national access, Prof. (Dr.) Manojranjan Nayak built Siksha &lsquo;O&rsquo; Anusandhan into a top-15 national university (NIRF #15)—anchoring 15,000 scholars, dual super-specialty hospitals, and bilateral industry conduits with global technology leaders.
+
+
               </p>
               <p className="font-sans text-xs text-content-muted uppercase tracking-[0.14em] font-medium">
                 Inaugural addresses delivered across Bengaluru, Mumbai, Hyderabad &amp; Chennai Conclaves

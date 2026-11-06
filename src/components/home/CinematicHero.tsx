@@ -204,7 +204,7 @@ export function CinematicHero({ onOpenInvite }: CinematicHeroProps) {
                 transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                 className="font-sans text-base sm:text-lg font-normal tracking-[0.01em] leading-relaxed text-content-secondary max-w-xl"
               >
-                Where Boardroom Vision Meets Academic Foresight. An invitation-only national conclave series convening CHROs, GCC Managing Directors, and research visionaries across India&apos;s primary technology capitals.
+                Where Boardroom Decisions Meet Academic Reality. An executive alliance convening CHROs, Global Capability Center heads, and engineering leaders to co-create curricula, sponsor emerging talent, and institutionalize day-one career velocity.
               </motion.p>
             </div>
 

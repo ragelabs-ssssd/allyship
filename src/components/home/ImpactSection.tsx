@@ -66,7 +66,7 @@ export function ImpactSection() {
       decimals: 0,
       title: "CXOs & Capability Heads",
       description:
-        "Leaders from Microsoft, Dell, Deloitte, Zscaler, Tata Steel, and over 150+ multinational firms engaged in dialogue.",
+        "Enterprise directors from Microsoft, Amazon, Dell, Deloitte, and 150+ multinationals actively co-designing talent pipelines and leadership benchmarks.",
     },
     {
       value: 7,
@@ -80,9 +80,9 @@ export function ImpactSection() {
       value: 94.54,
       suffix: "%",
       decimals: 2,
-      title: "Placement Track Record",
+      title: "Placement Velocity Engine",
       description:
-        "Graduating cohort industry outcomes backed by Tier-1 corporate recruitment relationships and NIRF ranking.",
+        "1,802 of 1,903 engineering graduates placed with zero-day ramp-up, verified by Tier-1 corporate partners and NIRF #15 ranking.",
     },
   ];
 
@@ -93,10 +93,10 @@ export function ImpactSection() {
         <SectionReveal className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 pb-8 border-b border-line">
           <div>
             <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
-              Quantifiable Distinction
+              Proven Institutional Dividends
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight mt-2 sm:whitespace-nowrap">
-              National Scale &amp; Measurable Impact
+              The Architecture of Measurable Velocity
             </h2>
           </div>
           <Link

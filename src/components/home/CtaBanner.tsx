@@ -23,14 +23,14 @@ export function CtaBanner({ onOpenInvite }: CtaBannerProps) {
 
         <SectionReveal delay={0.1}>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.15] max-w-5xl mx-auto text-content">
-            Join the Next Chapter of Industry–Academia Leadership.
+            Architect the Next Decade of Enterprise Leadership.
           </h2>
         </SectionReveal>
 
         <SectionReveal delay={0.2}>
           <p className="font-sans text-base sm:text-lg font-normal tracking-[0.01em] leading-relaxed text-content-secondary max-w-xl mx-auto">
-            Curated delegations for CHROs, GCC Managing Directors, and Corporate Strategists
-            seeking collaborative partnerships, applied research, and top-tier talent.
+            A strictly curated boardroom delegation for CHROs, Managing Directors, and Technology Leaders
+            establishing high-velocity talent pipelines and campus Centres of Excellence.
           </p>
         </SectionReveal>
 
