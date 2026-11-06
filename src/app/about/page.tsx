@@ -190,7 +190,7 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col w-full bg-canvas text-content pb-12">
       {/* 1. EDITORIAL LUXE HERO SECTION */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 border-b border-line overflow-hidden">
+      <section className="relative pt-32 pb-32 lg:pt-40 lg:pb-52 min-h-[660px] lg:min-h-[760px] border-b border-line overflow-hidden">
         <HeroBackdrop />
         {/* Ambient gold background glow */}
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-[radial-gradient(ellipse_at_center,rgba(197,168,105,0.12),transparent_70%)] pointer-events-none" />
