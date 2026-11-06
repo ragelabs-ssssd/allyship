@@ -27,6 +27,7 @@ import {
 import { GetInvitedModal } from "@/components/GetInvitedModal";
 import { HeroBackdrop } from "@/components/HeroBackdrop";
 import { BentoGridConcept } from "@/components/about/BentoGridConcept";
+import { ManifestoShowcase } from "@/components/about/ManifestoShowcase";
 
 export default function AboutPage() {
   const [isInviteOpen, setIsInviteOpen] = useState(false);
@@ -239,95 +240,8 @@ export default function AboutPage() {
         <BentoGridConcept />
       </section>
 
-      {/* 4. THE MONOLITH MANIFESTO & CONCLAVE TELEMETRY */}
-      <section
-        id="manifesto"
-        className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line"
-      >
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
-          {/* Massive Serif Manifesto (7 cols) */}
-          <div className="lg:col-span-7 space-y-6">
-            <span className="text-[11px] font-bold font-heading uppercase tracking-[0.25em] text-accent block">
-              The Anti-Performative Thesis
-            </span>
-            <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-content leading-[1.08] tracking-tight">
-              We do not sign pledges.<br />
-              <span className="text-accent italic font-normal">We alter trajectories.</span>
-            </h2>
-
-            <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal max-w-2xl">
-              <span className="sm:block">In an ecosystem flooded with superficial corporate declarations,</span>
-              <span className="sm:block">Allyship++ is anchored in observable, non-negotiable reality:</span>
-            </p>
-
-            <div className="space-y-3 pt-2">
-              <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-surface border border-line hover:border-accent/40 transition-colors group">
-                <div className="w-6 h-6 rounded-lg bg-accent/15 border border-accent/40 flex items-center justify-center text-accent shrink-0 mt-0.5">
-                  <CheckCircle2 className="w-4 h-4" />
-                </div>
-                <div className="space-y-0.5">
-                  <h3 className="text-sm font-bold text-content font-heading">Personal Capital Test</h3>
-                  <p className="text-xs text-content-secondary leading-relaxed">
-                    Executive reputation and political currency spent to open doors—not safe brand management.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-surface border border-line hover:border-accent/40 transition-colors group">
-                <div className="w-6 h-6 rounded-lg bg-accent/15 border border-accent/40 flex items-center justify-center text-accent shrink-0 mt-0.5">
-                  <CheckCircle2 className="w-4 h-4" />
-                </div>
-                <div className="space-y-0.5">
-                  <h3 className="text-sm font-bold text-content font-heading">Measurable Dividend Test</h3>
-                  <p className="text-xs text-content-secondary leading-relaxed">
-                    Direct compensation parity, high-visibility stretch projects, and accelerated promotion velocity.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-surface border border-line hover:border-accent/40 transition-colors group">
-                <div className="w-6 h-6 rounded-lg bg-accent/15 border border-accent/40 flex items-center justify-center text-accent shrink-0 mt-0.5">
-                  <CheckCircle2 className="w-4 h-4" />
-                </div>
-                <div className="space-y-0.5">
-                  <h3 className="text-sm font-bold text-content font-heading">Closed-Door Integrity Test</h3>
-                  <p className="text-xs text-content-secondary leading-relaxed">
-                    Uncompromising advocacy inside confidential talent calibrations when zero applause points exist.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Reactive Telemetry Column (5 cols) */}
-          <div className="lg:col-span-5 p-8 sm:p-10 rounded-3xl bg-surface border border-line shadow-2xl space-y-6 relative overflow-hidden">
-            <div className="border-b border-line pb-4">
-              <span className="text-xs font-mono text-accent uppercase tracking-widest font-bold block">
-                Living Conclave Telemetry
-              </span>
-            </div>
-
-            <div className="space-y-4">
-              <div className="p-4 rounded-2xl bg-surface-2 border border-line">
-                <div className="text-3xl font-bold font-heading text-content">100%</div>
-                <div className="text-xs text-content-secondary mt-1">Sovereign Peer Governance · Zero Commercial Sponsorship</div>
-              </div>
-              <div className="p-4 rounded-2xl bg-surface-2 border border-line">
-                <div className="text-3xl font-bold font-heading text-accent">Zero-Day</div>
-                <div className="text-xs text-content-secondary mt-1">Production Readiness · Curriculum Co-Designed with Tier-1 CXOs</div>
-              </div>
-              <div className="p-4 rounded-2xl bg-surface-2 border border-line">
-                <div className="text-3xl font-bold font-heading text-content">40:1</div>
-                <div className="text-xs text-content-secondary mt-1">Curated Executive Dialogue Ratio · Closed-Door Roundtables</div>
-              </div>
-              <div className="p-4 rounded-2xl bg-surface-2 border border-line">
-                <div className="text-3xl font-bold font-heading text-accent">Tier-1</div>
-                <div className="text-xs text-content-secondary mt-1">Enterprise Integration · Active Labs with TechM, LTTS &amp; Wipro</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* 4. THE MONOLITH MANIFESTO & TELEMETRY SHOWCASE (5 OUT-OF-THE-BOX OPTIONS) */}
+      <ManifestoShowcase />
 
       {/* 6. THE BOARDROOM-TO-ARENA SYNTHESIS */}
       <section
