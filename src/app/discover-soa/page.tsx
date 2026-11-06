@@ -31,29 +31,6 @@ import {
 import { GetInvitedModal } from "@/components/GetInvitedModal";
 import { HeroBackdrop, SOA_VIDEO_SRC } from "@/components/HeroBackdrop";
 
-const universityHeroImages = [
-  {
-    src: "/soa-campus-aerial.jpg",
-    title: "Siksha 'O' Anusandhan Main Campus Aerial Panorama",
-    subtitle: "Bhubaneswar, Odisha · 127+ Acres of Multi-Faculty Infrastructure",
-  },
-  {
-    src: "/soa-iter-building.jpg",
-    title: "Institute of Technical Education and Research (ITER)",
-    subtitle: "Premier Engineering Faculty · Ranked 22nd in NIRF 2025 · 94.54% Placement Rate",
-  },
-  {
-    src: "/soa-auditorium.jpg",
-    title: "SOA University Central Convention Centre & Auditorium",
-    subtitle: "Host to National Conclaves, Scientific Congresses & Global Symposia",
-  },
-  {
-    src: "/soa-campus-grounds.jpg",
-    title: "SOA Academic Quads & Innovation Labs",
-    subtitle: "Times Higher Education World Top 4 Indian Institution · NAAC A++ (3.88 CGPA)",
-  },
-];
-
 // 1. NIRF Rankings 2025 Data
 const nirfRankings2025 = [
   {
@@ -278,94 +255,49 @@ const growthTimeline = [
 export default function DiscoverSoaPage() {
   const [isInviteOpen, setIsInviteOpen] = useState(false);
   const [isTourOpen, setIsTourOpen] = useState(false);
-  const [heroSlide, setHeroSlide] = useState(0);
   const [selectedSlide, setSelectedSlide] = useState<string | null>(null);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setHeroSlide((prev) => (prev + 1) % universityHeroImages.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
 
   return (
     <div className="flex flex-col w-full bg-canvas text-content pb-0">
       {/* 1. EDITORIAL LUXE HERO SECTION */}
-      <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 border-b border-line overflow-hidden">
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 min-h-[640px] lg:min-h-[720px] flex items-center border-b border-line overflow-hidden">
         <HeroBackdrop videoSrc={SOA_VIDEO_SRC} />
         <div className="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase">
-                <span>Deemed to be University · Bhubaneswar, India</span>
-              </div>
-
-              <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
-                Discover <br />
-                <span className="italic font-normal whitespace-nowrap">Siksha &lsquo;O&rsquo; Anusandhan</span>
-              </h1>
-
-              <p className="text-lg sm:text-xl font-display text-content-muted italic">
-                Ranked 15th Nationally · NAAC A++ · UGC Category-I Autonomy
-              </p>
-
-              <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal">
-                Siksha &lsquo;O&rsquo; Anusandhan (SOA) is recognized among India&apos;s leading institutions across NIRF, QS, and Times Higher Education—spanning 13 constituent institutes, 18 research centres, 30,000+ students, and 38 Stanford Top 2% scientists across an expansive 127-acre campus.
-              </p>
-
-              <div className="pt-2 flex flex-wrap items-center gap-4">
-                <button
-                  type="button"
-                  onClick={() => setIsTourOpen(true)}
-                  className="btn-primary"
-                >
-                  <span>Take Virtual Tour</span>
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-
-                <button
-                  type="button"
-                  onClick={() => setIsInviteOpen(true)}
-                  className="btn-secondary"
-                >
-                  <span>Request Executive Visit</span>
-                </button>
-              </div>
+          <div className="max-w-3xl space-y-6">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase">
+              <span>Deemed to be University · Bhubaneswar, India</span>
             </div>
 
-            <div className="lg:col-span-5 relative lg:-translate-y-6">
-              <div className="relative rounded-3xl overflow-hidden bg-surface p-1.5 border border-line shadow-xl">
-                <div className="relative aspect-[16/11] sm:aspect-[4/3] rounded-2xl overflow-hidden bg-surface-3 on-media">
-                  {universityHeroImages.map((slide, idx) => (
-                    <div
-                      key={slide.src}
-                      className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-                        idx === heroSlide ? "opacity-100 scale-100" : "opacity-0 scale-105 pointer-events-none"
-                      }`}
-                    >
-                      <Image
-                        src={slide.src}
-                        alt={slide.title}
-                        fill
-                        priority={idx === 0}
-                        sizes="(max-width: 1024px) 100vw, 40vw"
-                        className="object-cover object-center"
-                      />
-                    </div>
-                  ))}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-5 text-content">
-                    <span className="text-[11px] font-bold font-heading text-[#E8D5A7] uppercase tracking-wider">
-                      Khandagiri Square, Bhubaneswar
-                    </span>
-                    <span className="text-sm font-bold text-content mt-0.5">
-                      SOA Deemed to be University Main Campus
-                    </span>
-                    <span className="text-[11px] text-content-secondary mt-0.5">
-                      NAAC A++ (CGPA 3.88) · NIRF #15 University in India
-                    </span>
-                  </div>
-                </div>
-              </div>
+            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
+              Discover <br />
+              <span className="italic font-normal whitespace-nowrap">Siksha &lsquo;O&rsquo; Anusandhan</span>
+            </h1>
+
+            <p className="text-lg sm:text-xl font-display text-content-muted italic">
+              Ranked 15th Nationally · NAAC A++ · UGC Category-I Autonomy
+            </p>
+
+            <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal">
+              Siksha &lsquo;O&rsquo; Anusandhan (SOA) is recognized among India&apos;s leading institutions across NIRF, QS, and Times Higher Education—spanning 13 constituent institutes, 18 research centres, 30,000+ students, and 38 Stanford Top 2% scientists across an expansive 127-acre campus.
+            </p>
+
+            <div className="pt-2 flex flex-wrap items-center gap-4">
+              <button
+                type="button"
+                onClick={() => setIsTourOpen(true)}
+                className="btn-primary"
+              >
+                <span>Take Virtual Tour</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setIsInviteOpen(true)}
+                className="btn-secondary"
+              >
+                <span>Request Executive Visit</span>
+              </button>
             </div>
           </div>
         </div>
