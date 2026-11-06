@@ -32,9 +32,9 @@ const testimonials: Testimonial[] = [
       "Leadership in elite athletics mirrors corporate allyship. You cannot expect extraordinary execution without relentless trust, psychological conditioning, and mutual respect between mentors and performers.",
     author: "Anju Bobby George",
     role: "Olympian & World Championship Medalist",
-    organization: "Athletics Federation of India",
+    organization: "Anju Bobby Sports Foundation",
     chapter: "Bengaluru Chapter 1.0 Keynote",
-    highlight: "Keynote Luminary",
+    highlight: "Khel Ratna Luminary",
     image: "/testimonials/anju-bobby-george.jpg",
   },
   {
@@ -92,9 +92,9 @@ const testimonials: Testimonial[] = [
       "Young professionals don’t need perfect success stories, they need real ones. Talking about my setbacks here reminded me why struggle, when shared, becomes the most powerful form of mentorship.",
     author: "Dr. G. Srinivas Patnaik",
     role: "Secretary, Athletics Federation of India",
-    organization: "Athletics Federation of India",
+    organization: "Athletics Federation of India (AFI)",
     chapter: "Hyderabad Chapter 2.0",
-    highlight: "AFI Secretary",
+    highlight: "AFI Governance",
     image: "/testimonials/srinivas-patnaik.jpg",
   },
 ];
