@@ -95,11 +95,10 @@ export function Footer() {
 
           {/* Col 2: Dossier Index (4 cols) */}
           <div className="lg:col-span-4 space-y-4">
-            <div className="flex items-center justify-between pb-2 border-b border-line">
+            <div className="pb-2 border-b border-line">
               <h4 className="font-sans text-[11px] font-semibold uppercase tracking-[0.16em] text-accent">
                 Explore Dossiers
               </h4>
-              <span className="text-[10px] text-content-faint font-mono">06 SECTIONS</span>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6 text-sm pt-2">
               {navLinks.map((link) => (
