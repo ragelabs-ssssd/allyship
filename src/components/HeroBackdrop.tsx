@@ -11,10 +11,12 @@ export function HeroBackdrop({
   scrimClassName = "",
   videoSrc,
   playbackRate,
+  align = "left",
 }: {
   scrimClassName?: string;
   videoSrc?: string;
   playbackRate?: number;
+  align?: "left" | "right";
 }) {
   const pathname = usePathname();
   const prefersReducedMotion = useReducedMotion();
@@ -71,7 +73,13 @@ export function HeroBackdrop({
 
       {/* Theme-aware scrims: gentle ambient overlay ensuring readability of copy */}
       <div className={`absolute inset-0 bg-canvas/40 ${scrimClassName}`} />
-      <div className="absolute inset-0 bg-gradient-to-r from-canvas/90 via-canvas/50 to-canvas/10" />
+      <div
+        className={`absolute inset-0 ${
+          align === "right"
+            ? "bg-gradient-to-l from-canvas/90 via-canvas/60 to-canvas/10"
+            : "bg-gradient-to-r from-canvas/90 via-canvas/50 to-canvas/10"
+        }`}
+      />
       <div className="absolute inset-0 bg-gradient-to-t from-canvas/75 via-transparent to-canvas/25" />
     </div>
   );
