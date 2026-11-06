@@ -97,12 +97,12 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col w-full bg-canvas text-content pb-12">
       {/* 1. EDITORIAL LUXE HERO SECTION */}
-      <section className="relative pt-32 pb-32 lg:pt-40 lg:pb-52 min-h-[660px] lg:min-h-[760px] border-b border-line overflow-hidden">
+      <section className="relative pt-28 pb-24 sm:pt-32 sm:pb-28 lg:pt-36 lg:pb-36 min-h-[660px] lg:min-h-[760px] flex items-center justify-center border-b border-line overflow-hidden">
         <HeroBackdrop />
         {/* Ambient gold background glow */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-[radial-gradient(ellipse_at_center,rgba(197,168,105,0.12),transparent_70%)] pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-[radial-gradient(ellipse_at_center,rgba(197,168,105,0.12),transparent_70%)] pointer-events-none" />
 
-        <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 relative z-10">
+        <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 relative z-10 w-full">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase shadow-sm">
               <span>About the Movement · Continuous Compounding Inclusion</span>
