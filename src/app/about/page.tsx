@@ -258,8 +258,9 @@ export default function AboutPage() {
               <span className="text-accent italic font-normal">We alter trajectories.</span>
             </h2>
 
-            <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal max-w-xl">
-              In an ecosystem flooded with superficial corporate declarations, Allyship++ is anchored in observable, non-negotiable institutional reality:
+            <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal max-w-2xl">
+              <span className="sm:block">In an ecosystem flooded with superficial corporate declarations,</span>
+              <span className="sm:block">Allyship++ is anchored in observable, non-negotiable reality:</span>
             </p>
 
             <div className="space-y-4 pt-2">
