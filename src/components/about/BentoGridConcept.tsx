@@ -31,13 +31,13 @@ export function BentoGridConcept() {
       <div className="text-center max-w-4xl mx-auto space-y-4">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase">
           <Sparkles className="w-3.5 h-3.5" />
-          <span>Institutional Value Architecture · Co-Engineered with 500+ CXOs</span>
+          <span>The Long-Horizon Vision · Co-Engineered with 500+ CXOs</span>
         </div>
         <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-content tracking-tight">
-          The Enterprise Value <span className="text-accent">Bento Matrix</span>
+          The Horizon Blueprint: <span className="text-accent">Architecting Generational Impact</span>
         </h2>
         <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
-          A multi-dimensional breakdown of tangible institutional value: placement velocity, national executive corridors, curriculum co-authoring, athletic grit, and psychological safety.
+          Transcending traditional hiring: a multi-dimensional ecosystem engineered for placement velocity, pan-India executive corridors, Olympic athletic grit, and psychological safety.
         </p>
       </div>
 
