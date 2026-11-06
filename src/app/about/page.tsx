@@ -87,8 +87,8 @@ export default function AboutPage() {
               Bridging Corporate Capital with Regional Potential Through Daily Executive Sponsorship.
             </p>
 
-            <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-3xl mx-auto font-normal">
-              Allyship is the deliberate discipline where leaders with institutional power actively open doors, absorb political risk, and sponsor emerging talent. The &ldquo;++&rdquo; operator denotes measurable, incremental execution—converting passive diversity commitments into verifiable daily outcomes.
+            <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-4xl mx-auto font-normal">
+              Allyship is the deliberate discipline where leaders with institutional power open doors, absorb political risk, and sponsor emerging talent.
             </p>
 
           </div>
