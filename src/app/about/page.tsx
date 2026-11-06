@@ -27,69 +27,10 @@ import {
 } from "lucide-react";
 import { GetInvitedModal } from "@/components/GetInvitedModal";
 import { HeroBackdrop } from "@/components/HeroBackdrop";
+import { BentoGridConcept } from "@/components/about/BentoGridConcept";
 
 export default function AboutPage() {
   const [isInviteOpen, setIsInviteOpen] = useState(false);
-
-  // The 7 Strategic Pillars of the SOA Allyship Journey
-  const soaJourneyPillars = [
-    {
-      role: "01. Paradigm Shift",
-      badge: "Vision & Origin",
-      action: "Transitioning from transactional campus recruitment to lifelong institutional alliance.",
-      practice:
-        "Dismantling the archaic two-day placement model in favor of an active, year-round partnership where enterprise leaders co-own student capability development from day one.",
-      icon: GraduationCap,
-    },
-    {
-      role: "02. Pan-India Footprint",
-      badge: "National Corridors",
-      action: "Taking Bhubaneswar's academic excellence directly into India's economic capitals.",
-      practice:
-        "Hosting 7 high-impact conclave editions across Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai—engaging corporate CXOs and capability directors on their home turf.",
-      icon: Compass,
-    },
-    {
-      role: "03. Boardroom & Arena Triad",
-      badge: "Athletic Resilience",
-      action: "Synthesizing executive acumen with Olympic championship resilience and coach-athlete allyship.",
-      practice:
-        "Convening sporting legends including Nilesh Kulkarni, Anju Bobby George, Arshad Ayub, and Gurbux Singh to instill high-performance mindset, team cohesion, and mental endurance into future leaders.",
-      icon: Trophy,
-    },
-    {
-      role: "04. Agile Curriculum Co-Creation",
-      badge: "Pedagogical Sync",
-      action: "Synchronizing university coursework with live enterprise tech stacks in real time.",
-      practice:
-        "Inviting Chief Technology Officers and engineering VPs to review, update, and co-design syllabi around Generative AI, cloud infrastructure, cybersecurity, and modern industrial requirements.",
-      icon: Layers,
-    },
-    {
-      role: "05. Executive CXO Sponsorship",
-      badge: "Direct Access",
-      action: "Opening executive pathways and closed-door mentorship for emerging talent.",
-      practice:
-        "Connecting over 500+ CXOs and Talent Heads from Microsoft, Dell, Deloitte, L&T, and Tata Steel directly with students for masterclasses, panels, and priority career sponsorship.",
-      icon: Users,
-    },
-    {
-      role: "06. Psychological Safety & Gen-Z",
-      badge: "Workplace Culture",
-      action: "Fostering human-centered empathy to bridge academic expectations with corporate reality.",
-      practice:
-        "Designing dialogues around workplace mental wellness, psychological safety, and multigenerational collaboration to help Gen-Z engineers adapt smoothly to high-pressure enterprise environments.",
-      icon: ShieldCheck,
-    },
-    {
-      role: "07. Joint R&D & CoE Incubation",
-      badge: "Deep Tech & IP",
-      action: "Translating conclave dialogues into corporate-backed Centers of Excellence and patent research.",
-      practice:
-        "Leveraging SOA's 18 state-of-the-art research centers and 13 constituent institutes to execute industry-sponsored research, prototype development, and high-impact technology patents.",
-      icon: Cpu,
-    },
-  ];
 
   // The 3-Question Litmus Test Rubric
   const litmusTestQuestions = [
@@ -213,37 +154,6 @@ export default function AboutPage() {
               Allyship is the deliberate, ongoing practice in which leaders with institutional power work in active solidarity with emerging and underrepresented talent. The &ldquo;++&rdquo; signifies continuous evolution—incrementing inclusion day after day through observable action.
             </p>
 
-            {/* Quick-Nav Framework Pills */}
-            <div className="pt-4 flex flex-wrap items-center justify-center gap-3">
-              <a
-                href="#journey-pillars"
-                className="px-4 py-2 rounded-full bg-surface-3 hover:bg-surface-3 border border-line hover:border-accent/50 text-xs font-medium text-content-secondary hover:text-content transition-all flex items-center gap-1.5"
-              >
-                <Layers className="w-3.5 h-3.5 text-accent" />
-                <span>7 Journey Pillars</span>
-              </a>
-              <a
-                href="#litmus-test"
-                className="px-4 py-2 rounded-full bg-surface-3 hover:bg-surface-3 border border-line hover:border-accent/50 text-xs font-medium text-content-secondary hover:text-content transition-all flex items-center gap-1.5"
-              >
-                <ShieldCheck className="w-3.5 h-3.5 text-accent" />
-                <span>3-Question Litmus Test</span>
-              </a>
-              <a
-                href="#hr-blueprint"
-                className="px-4 py-2 rounded-full bg-surface-3 hover:bg-surface-3 border border-line hover:border-accent/50 text-xs font-medium text-content-secondary hover:text-content transition-all flex items-center gap-1.5"
-              >
-                <Building2 className="w-3.5 h-3.5 text-accent" />
-                <span>6-Step HR Blueprint</span>
-              </a>
-              <a
-                href="#sports-synthesis"
-                className="px-4 py-2 rounded-full bg-surface-3 hover:bg-surface-3 border border-line hover:border-accent/50 text-xs font-medium text-content-secondary hover:text-content transition-all flex items-center gap-1.5"
-              >
-                <Trophy className="w-3.5 h-3.5 text-accent" />
-                <span>Boardroom &amp; Arena Triad</span>
-              </a>
-            </div>
           </div>
         </div>
       </section>
@@ -387,88 +297,12 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 3. THE 7 PILLARS OF THE SOA ALLYSHIP JOURNEY */}
+      {/* 3. RE-IMAGINED INSTITUTIONAL ARCHITECTURE (5 INTERACTIVE CONCEPTS) */}
       <section
         id="journey-pillars"
         className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line"
       >
-        <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
-          <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
-            Institutional Blueprint &amp; Journey
-          </span>
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
-            The 7 Pillars of the SOA Allyship Journey
-          </h2>
-          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-3xl mx-auto">
-            Pioneered by Siksha &lsquo;O&rsquo; Anusandhan and co-created with 500+ corporate CXOs and sporting luminaries across India, the Allyship++ journey redefines how higher education and global enterprises build future-ready leaders.
-          </p>
-        </div>
-
-        {/* 7 Pillars Grid — Exactly 7 Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {soaJourneyPillars.map((r, index) => {
-            const IconComponent = r.icon;
-            const isLastPillar = index === soaJourneyPillars.length - 1;
-            return (
-              <div
-                key={r.role}
-                className={`rounded-3xl p-7 bg-surface text-content border border-line shadow-lg hover:border-accent/80 hover:shadow-[0_0_24px_rgba(201,169,110,0.15)] transition-all duration-300 flex flex-col justify-between group ${
-                  isLastPillar ? "md:col-span-2 lg:col-span-3 xl:col-span-2" : ""
-                }`}
-              >
-                <div className="space-y-4">
-                  {/* Top Bar: Icon + Badge */}
-                  <div className="flex items-center justify-between">
-                    <div className="w-10 h-10 rounded-2xl bg-accent-subtle border border-accent/30 flex items-center justify-center text-accent group-hover:scale-110 transition-transform">
-                      <IconComponent className="w-5 h-5" />
-                    </div>
-                    <span className="text-[10px] font-bold font-heading uppercase tracking-wider px-3 py-1 rounded-full bg-glass text-accent border border-accent/20">
-                      {r.badge}
-                    </span>
-                  </div>
-
-                  {/* Title & Tagline */}
-                  <div>
-                    <h3 className="font-heading text-lg font-bold text-content group-hover:text-accent-light transition-colors">
-                      {r.role}
-                    </h3>
-                    <p className="text-xs font-semibold text-accent mt-1">
-                      {r.action}
-                    </p>
-                  </div>
-
-                  {/* Practice Description */}
-                  <p className="text-xs leading-relaxed text-content-secondary font-normal">
-                    {r.practice}
-                  </p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Measurable Outcome Milestone Banner */}
-        <div className="mt-10 p-8 sm:p-10 rounded-3xl bg-surface border border-line flex flex-col lg:flex-row lg:items-center justify-between gap-6 hover:border-accent/40 transition-colors shadow-lg">
-          <div className="space-y-2 max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-subtle border border-accent/30 text-accent text-[11px] font-bold font-heading uppercase tracking-widest">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Measurable Outcome</span>
-            </div>
-            <h3 className="font-heading text-xl sm:text-2xl font-bold text-content">
-              The Allyship Dividend: 94.54% Placement Velocity &amp; NIRF Top-15
-            </h3>
-            <p className="text-xs sm:text-sm text-content-secondary leading-relaxed font-normal">
-              SOA Allyship++ is not a symbolic forum—it is a compounding national movement driving permanent corporate recruitment relationships with 150+ global employers and premier research synergy across India.
-            </p>
-          </div>
-          <Link
-            href="/event"
-            className="btn-primary self-start lg:self-center whitespace-nowrap"
-          >
-            <span>Explore All 7 Conclave Chapters</span>
-            <ChevronRight className="w-4 h-4" />
-          </Link>
-        </div>
+        <BentoGridConcept />
       </section>
 
       {/* 4. THE 3-QUESTION AUTHENTICITY LITMUS TEST */}
