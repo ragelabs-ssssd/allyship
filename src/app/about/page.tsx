@@ -247,7 +247,7 @@ export default function AboutPage() {
         id="manifesto"
         className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
           {/* Massive Serif Manifesto (7 cols) */}
           <div className="lg:col-span-7 space-y-6">
             <span className="text-[11px] font-bold font-heading uppercase tracking-[0.25em] text-accent block">
@@ -263,39 +263,48 @@ export default function AboutPage() {
               <span className="sm:block">Allyship++ is anchored in observable, non-negotiable reality:</span>
             </p>
 
-            <div className="space-y-4 pt-2">
-              <div className="flex items-start gap-4 p-4 rounded-2xl bg-surface border border-line hover:border-accent/40 transition-colors">
-                <span className="w-7 h-7 rounded-full bg-accent text-canvas font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
-                  1
-                </span>
-                <div>
-                  <h3 className="text-sm font-bold text-content font-heading">Personal Cost over Optics</h3>
-                  <p className="text-xs sm:text-sm text-content-secondary leading-relaxed mt-0.5">
-                    If advocacy costs the executive zero reputational currency or political capital, it is brand management, not allyship. True allies spend their own credibility to open doors.
+            <div className="space-y-3 pt-2">
+              <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-surface border border-line hover:border-accent/40 transition-colors group">
+                <div className="w-6 h-6 rounded-lg bg-accent/15 border border-accent/40 flex items-center justify-center text-accent shrink-0 mt-0.5">
+                  <CheckCircle2 className="w-4 h-4" />
+                </div>
+                <div className="space-y-0.5">
+                  <div className="flex items-center gap-2">
+                    <h3 className="text-sm font-bold text-content font-heading">Personal Capital Test</h3>
+                    <span className="text-[10px] font-mono text-accent uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-accent-subtle border border-accent/30">Check 01</span>
+                  </div>
+                  <p className="text-xs text-content-secondary leading-relaxed">
+                    Executive reputation and political currency spent to open doors—not safe brand management.
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 p-4 rounded-2xl bg-surface border border-line hover:border-accent/40 transition-colors">
-                <span className="w-7 h-7 rounded-full bg-accent text-canvas font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
-                  2
-                </span>
-                <div>
-                  <h3 className="text-sm font-bold text-content font-heading">Verifiable Career Dividend</h3>
-                  <p className="text-xs sm:text-sm text-content-secondary leading-relaxed mt-0.5">
-                    Sympathetic intentions do not alter career trajectories; compensation parity, stretch assignments, and accelerated promotion velocity do.
+              <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-surface border border-line hover:border-accent/40 transition-colors group">
+                <div className="w-6 h-6 rounded-lg bg-accent/15 border border-accent/40 flex items-center justify-center text-accent shrink-0 mt-0.5">
+                  <CheckCircle2 className="w-4 h-4" />
+                </div>
+                <div className="space-y-0.5">
+                  <div className="flex items-center gap-2">
+                    <h3 className="text-sm font-bold text-content font-heading">Measurable Dividend Test</h3>
+                    <span className="text-[10px] font-mono text-accent uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-accent-subtle border border-accent/30">Check 02</span>
+                  </div>
+                  <p className="text-xs text-content-secondary leading-relaxed">
+                    Direct compensation parity, high-visibility stretch projects, and accelerated promotion velocity.
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 p-4 rounded-2xl bg-surface border border-line hover:border-accent/40 transition-colors">
-                <span className="w-7 h-7 rounded-full bg-accent text-canvas font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
-                  3
-                </span>
-                <div>
-                  <h3 className="text-sm font-bold text-content font-heading">Unobserved Closed-Door Integrity</h3>
-                  <p className="text-xs sm:text-sm text-content-secondary leading-relaxed mt-0.5">
-                    What matters most is what a leader defends behind closed doors in confidential talent calibrations when there are zero public applause points to gain.
+              <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-surface border border-line hover:border-accent/40 transition-colors group">
+                <div className="w-6 h-6 rounded-lg bg-accent/15 border border-accent/40 flex items-center justify-center text-accent shrink-0 mt-0.5">
+                  <CheckCircle2 className="w-4 h-4" />
+                </div>
+                <div className="space-y-0.5">
+                  <div className="flex items-center gap-2">
+                    <h3 className="text-sm font-bold text-content font-heading">Closed-Door Integrity Test</h3>
+                    <span className="text-[10px] font-mono text-accent uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-accent-subtle border border-accent/30">Check 03</span>
+                  </div>
+                  <p className="text-xs text-content-secondary leading-relaxed">
+                    Uncompromising advocacy inside confidential talent calibrations when zero applause points exist.
                   </p>
                 </div>
               </div>
