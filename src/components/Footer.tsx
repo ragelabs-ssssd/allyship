@@ -148,9 +148,7 @@ export function Footer() {
                     Join
                   </button>
                 </div>
-                <p className="font-sans text-[11px] text-content-faint">
-                  Strict confidentiality. One-click unsubscribe.
-                </p>
+
               </form>
             )}
 
