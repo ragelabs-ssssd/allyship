@@ -269,10 +269,7 @@ export default function AboutPage() {
                   <CheckCircle2 className="w-4 h-4" />
                 </div>
                 <div className="space-y-0.5">
-                  <div className="flex items-center gap-2">
-                    <h3 className="text-sm font-bold text-content font-heading">Personal Capital Test</h3>
-                    <span className="text-[10px] font-mono text-accent uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-accent-subtle border border-accent/30">Check 01</span>
-                  </div>
+                  <h3 className="text-sm font-bold text-content font-heading">Personal Capital Test</h3>
                   <p className="text-xs text-content-secondary leading-relaxed">
                     Executive reputation and political currency spent to open doors—not safe brand management.
                   </p>
@@ -284,10 +281,7 @@ export default function AboutPage() {
                   <CheckCircle2 className="w-4 h-4" />
                 </div>
                 <div className="space-y-0.5">
-                  <div className="flex items-center gap-2">
-                    <h3 className="text-sm font-bold text-content font-heading">Measurable Dividend Test</h3>
-                    <span className="text-[10px] font-mono text-accent uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-accent-subtle border border-accent/30">Check 02</span>
-                  </div>
+                  <h3 className="text-sm font-bold text-content font-heading">Measurable Dividend Test</h3>
                   <p className="text-xs text-content-secondary leading-relaxed">
                     Direct compensation parity, high-visibility stretch projects, and accelerated promotion velocity.
                   </p>
@@ -299,10 +293,7 @@ export default function AboutPage() {
                   <CheckCircle2 className="w-4 h-4" />
                 </div>
                 <div className="space-y-0.5">
-                  <div className="flex items-center gap-2">
-                    <h3 className="text-sm font-bold text-content font-heading">Closed-Door Integrity Test</h3>
-                    <span className="text-[10px] font-mono text-accent uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-accent-subtle border border-accent/30">Check 03</span>
-                  </div>
+                  <h3 className="text-sm font-bold text-content font-heading">Closed-Door Integrity Test</h3>
                   <p className="text-xs text-content-secondary leading-relaxed">
                     Uncompromising advocacy inside confidential talent calibrations when zero applause points exist.
                   </p>
