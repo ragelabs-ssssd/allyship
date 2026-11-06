@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import {
-  Sparkles,
   TrendingUp,
   Cpu,
   Trophy,
@@ -30,7 +29,6 @@ export function BentoGridConcept() {
       {/* Header */}
       <div className="text-center max-w-4xl mx-auto space-y-4">
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase">
-          <Sparkles className="w-3.5 h-3.5" />
           <span>The Long-Horizon Vision · Co-Engineered with 500+ CXOs</span>
         </div>
         <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">

@@ -22,7 +22,6 @@ import {
   Layers,
   HelpCircle,
   Cpu,
-  Sparkles,
   Globe,
 } from "lucide-react";
 import { GetInvitedModal } from "@/components/GetInvitedModal";
