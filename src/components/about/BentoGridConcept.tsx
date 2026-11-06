@@ -14,11 +14,11 @@ import {
 import Link from "next/link";
 
 const METRO_CITIES = [
-  { name: "Bengaluru", edition: "1.0 & 2.0", focus: "Cloud & AI Innovation" },
-  { name: "Hyderabad", edition: "2.0 Conclave", focus: "GCCs & Capability Centers" },
-  { name: "Mumbai", edition: "1.0 Conclave", focus: "BFSI & High-Empathy Culture" },
-  { name: "Chennai", edition: "2.0 Conclave", focus: "Deep Tech & Automotive" },
-  { name: "Kolkata", edition: "1.0 Conclave", focus: "Enterprise Digital Growth" },
+  { name: "Bengaluru", edition: "1.0 & 2.0", focus: "Cloud & Sovereign AI Innovation" },
+  { name: "Hyderabad", edition: "2.0 Conclave", focus: "Strategic GCCs & Capability Hubs" },
+  { name: "Mumbai", edition: "1.0 Conclave", focus: "BFSI & High-Empathy Governance" },
+  { name: "Chennai", edition: "2.0 Conclave", focus: "Deep Tech, MedTech & Systems" },
+  { name: "Kolkata", edition: "1.0 Conclave", focus: "Enterprise Digital Scale" },
 ];
 
 export function BentoGridConcept() {
@@ -82,34 +82,34 @@ export function BentoGridConcept() {
           </div>
         </div>
 
-        {/* Card 2: Boardroom & Arena Triad (4 cols) */}
+        {/* Card 2: The Olympic Crucible (4 cols) */}
         <div className="lg:col-span-4 rounded-3xl p-8 bg-surface border border-line shadow-xl flex flex-col justify-between space-y-6 group hover:border-accent/60 transition-all duration-300">
           <div className="space-y-4">
             <div className="w-12 h-12 rounded-2xl bg-accent-subtle border border-accent/30 flex items-center justify-center text-accent group-hover:scale-105 transition-transform">
               <Trophy className="w-6 h-6" />
             </div>
             <span className="text-[10px] font-bold font-heading uppercase tracking-widest text-accent block">
-              High-Performance Mindset
+              Championship Psychology
             </span>
             <h3 className="font-heading text-xl font-bold text-content">
-              Boardroom &amp; Arena Triad
+              The Olympic Crucible: Grit for the C-Suite
             </h3>
             <p className="text-xs sm:text-sm text-content-secondary leading-relaxed font-normal">
-              Olympic medalists and sporting icons train engineering students in the psychology of handling failure, high-stakes pressure, and relentless resilience.
+              Technical brilliance gets graduates hired; emotional stamina creates CXOs. Olympic medalists and sporting legends mentor students in the psychology of catastrophic setbacks and enduring high-stakes boardroom pressure.
             </p>
           </div>
 
           <div className="pt-4 border-t border-line">
             <div className="text-[11px] font-semibold text-content">
-              Featured Sporting Luminaries:
+              Athletic Mentors in Active Dialogue:
             </div>
             <p className="text-xs text-accent mt-0.5">
-              Anju Bobby George · Nilesh Kulkarni · Arshad Ayub
+              Anju Bobby George · Gurbux Singh · Nilesh Kulkarni · Arshad Ayub
             </p>
           </div>
         </div>
 
-        {/* Card 3: 5-City Executive Corridors (4 cols) */}
+        {/* Card 3: Pan-India Executive Diplomacy (4 cols) */}
         <div className="lg:col-span-4 rounded-3xl p-8 bg-surface border border-line shadow-xl flex flex-col justify-between space-y-6 group hover:border-accent/60 transition-all duration-300">
           <div className="space-y-4">
             <div className="flex items-center justify-between">
@@ -117,14 +117,14 @@ export function BentoGridConcept() {
                 <MapPin className="w-5 h-5" />
               </div>
               <span className="text-[10px] font-bold font-heading uppercase tracking-widest text-accent">
-                7 Conclave Editions
+                7 Standing Conclaves
               </span>
             </div>
             <h3 className="font-heading text-xl font-bold text-content">
-              Pan-India Metro Corridors
+              Pan-India Executive Diplomacy
             </h3>
             <p className="text-xs sm:text-sm text-content-secondary leading-relaxed font-normal">
-              Instead of expecting corporate leaders to travel to Bhubaneswar, SOA takes the movement directly into India&apos;s 5 commercial capitals.
+              Dismantling campus isolation: SOA projects talent directly into corporate boardrooms across 5 commercial capitals, converting hiring into continuous policy co-authorship.
             </p>
           </div>
 
@@ -153,45 +153,45 @@ export function BentoGridConcept() {
           </div>
         </div>
 
-        {/* Card 4: Curriculum Co-Engineering (4 cols) */}
+        {/* Card 4: Co-Creating Sovereign Enterprise IP (4 cols) */}
         <div className="lg:col-span-4 rounded-3xl p-8 bg-surface border border-line shadow-xl flex flex-col justify-between space-y-6 group hover:border-accent/60 transition-all duration-300">
           <div className="space-y-4">
             <div className="w-10 h-10 rounded-xl bg-accent-subtle border border-accent/30 flex items-center justify-center text-accent">
               <Cpu className="w-5 h-5" />
             </div>
             <span className="text-[10px] font-bold font-heading uppercase tracking-widest text-accent block">
-              Pedagogical Agility
+              The Post-Syntax Economy
             </span>
             <h3 className="font-heading text-xl font-bold text-content">
-              Bi-Annual Curriculum Sprints
+              Co-Creating Sovereign Enterprise IP
             </h3>
             <p className="text-xs sm:text-sm text-content-secondary leading-relaxed font-normal">
-              Corporate CTOs and engineering directors co-sign and refresh engineering syllabi every 6 months to match live generative AI, cloud, and cyber stacks.
+              Beyond textbook code: corporate CTOs, Tech Mahindra, and LTTS embed live production sandboxes and patent incubators—training engineers to architect generative AI systems rather than memorize syntax.
             </p>
           </div>
 
           <div className="p-3.5 rounded-xl bg-surface-2 border border-line space-y-1">
-            <div className="text-xs font-bold text-content">No Simulated Labs</div>
+            <div className="text-xs font-bold text-content">Zero Simulated Sandbox Policy</div>
             <div className="text-[11px] text-content-secondary">
-              Students build on live enterprise production tooling and sandboxes.
+              Students build directly on live enterprise production stacks via AIC-SOA under NITI Aayog.
             </div>
           </div>
         </div>
 
-        {/* Card 5: Psychological Safety & Litmus Test (4 cols) */}
+        {/* Card 5: The Radical Psychological Safety Pact (4 cols) */}
         <div className="lg:col-span-4 rounded-3xl p-8 bg-surface border border-line shadow-xl flex flex-col justify-between space-y-6 group hover:border-accent/60 transition-all duration-300">
           <div className="space-y-4">
             <div className="w-10 h-10 rounded-xl bg-accent-subtle border border-accent/30 flex items-center justify-center text-accent">
               <ShieldCheck className="w-5 h-5" />
             </div>
             <span className="text-[10px] font-bold font-heading uppercase tracking-widest text-accent block">
-              Gen-Z Workplace Culture
+              Generational Power Shift
             </span>
             <h3 className="font-heading text-xl font-bold text-content">
-              Psychological Safety Protocol
+              The Radical Psychological Safety Pact
             </h3>
             <p className="text-xs sm:text-sm text-content-secondary leading-relaxed font-normal">
-              Bridging academic theory with corporate pressure: teaching young talent to speak up, challenge assumptions, and lead without imposter syndrome.
+              De-weaponizing workplace hierarchy for emerging talent: coaching Gen-Z professionals to challenge assumptions with integrity, speak truth to power, and eliminate imposter syndrome before Day 1.
             </p>
           </div>
 
