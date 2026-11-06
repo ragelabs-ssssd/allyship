@@ -278,7 +278,7 @@ export default function DiscoverSoaPage() {
             </p>
 
             <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal">
-              Siksha &lsquo;O&rsquo; Anusandhan (SOA) is recognized among India&apos;s leading institutions across NIRF, QS, and Times Higher Education—spanning 13 constituent institutes, 18 research centres, 30,000+ students, and 38 Stanford Top 2% scientists across an expansive 127-acre campus.
+              Siksha &lsquo;O&rsquo; Anusandhan (SOA) is one of eastern India&apos;s preeminent multi-disciplinary research universities—bridging regional talent with global industry through 13 constituent faculties, 18 specialized research centres, 30,000+ scholars, and 38 Stanford-indexed Top 2% world scientists across a unified 127-acre academic biome.
             </p>
 
             <div className="pt-2 flex flex-wrap items-center gap-4">
@@ -314,7 +314,7 @@ export default function DiscoverSoaPage() {
             NIRF India Rankings — 2025
           </h2>
           <p className="text-base sm:text-lg text-accent font-semibold tracking-wide max-w-2xl mx-auto">
-            Consistently ranked at Top 25 Universities in all editions of NIRF.
+            Consistently ranked among India&apos;s Top 25 Universities across every edition of the National Institutional Ranking Framework.
           </p>
         </div>
 
@@ -618,13 +618,13 @@ export default function DiscoverSoaPage() {
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line bg-surface/40">
         <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
-            Three Decades of Pioneering Education
+            Three Decades of Institutional Nation-Building
           </span>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
             Evolution &amp; Growth Timeline
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
-            From the pioneering inception of ITER in 1996 to modern pharmaceutical and veterinary super-centres in 2026.
+            From the founding of ITER in 1996 to modern pharmaceutical super-centres, advanced medical campuses, and sovereign AI labs in 2026.
           </p>
         </div>
 
@@ -731,7 +731,7 @@ export default function DiscoverSoaPage() {
             Infrastructure &amp; Research Facilities
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
-            Spanning cutting-edge engineering laboratories, multi-specialty hospitals, auditoriums, and high-performance computing centers in Bhubaneswar.
+            A state-of-the-art academic biome in Bhubaneswar encompassing enterprise-anchored engineering labs, 2,000+ bed teaching hospitals, solar micro-grids, and high-performance sovereign computing hubs.
           </p>
         </div>
 
@@ -794,7 +794,7 @@ export default function DiscoverSoaPage() {
             <div className="p-6 space-y-2">
               <h4 className="font-bold text-base text-content">University Auditorium</h4>
               <p className="text-xs text-content-muted leading-relaxed">
-                State-of-the-art auditorium seating thousands for ALLYSHIP++ conclaves, convocations, and global symposia.
+                A 1,400+ seat civic and intellectual auditorium anchoring ALLYSHIP++ national executive roundtables, convocation ceremonies, and international scientific symposia.
               </p>
             </div>
           </div>
