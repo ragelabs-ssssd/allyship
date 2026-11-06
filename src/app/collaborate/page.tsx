@@ -164,25 +164,25 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
       <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 min-h-[640px] lg:min-h-[720px] flex items-center border-b border-line overflow-hidden">
         <HeroBackdrop videoSrc={SOA_VIDEO_SRC} align="right" />
         <div className="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full flex justify-end">
-          <div className="max-w-3xl space-y-6 text-left">
+          <div className="max-w-3xl space-y-6 text-right flex flex-col items-end">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase">
               <span>Corporate Partnership Portal</span>
             </div>
 
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-[4.25rem] font-bold tracking-tight text-content leading-[1.06]">
+            <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-[4.25rem] font-bold tracking-tight text-content leading-[1.06] text-right">
               <span className="block sm:whitespace-nowrap">Strategic Alliances</span>
               <span className="block italic font-normal sm:whitespace-nowrap">for Tomorrow&rsquo;s Leaders</span>
             </h1>
 
-            <p className="text-lg sm:text-xl font-display text-content-muted italic">
+            <p className="text-lg sm:text-xl font-display text-content-muted italic text-right">
               Co-Innovate. Mentor Emerging Leaders. Build Strategic Pipelines.
             </p>
 
-            <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal">
+            <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal text-right ml-auto">
               From co-establishing specialized campus Centres of Excellence with Tech Mahindra and LTTS, to sponsoring challenge problem statements via the AIC-SOA Foundation, Siksha &lsquo;O&rsquo; Anusandhan offers corporate partners a high-velocity collaboration ecosystem built for industrial synergy.
             </p>
 
-            <div className="pt-2 flex flex-wrap items-center gap-4">
+            <div className="pt-2 flex flex-wrap items-center justify-end gap-4">
               <a
                 href="#submit-challenge"
                 className="btn-primary"
