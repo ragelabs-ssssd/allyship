@@ -11,6 +11,7 @@ import {
   HelpCircle,
   ShieldCheck,
   Phone,
+  ExternalLink,
 } from "lucide-react";
 import { FAQS } from "@/data/faqs";
 import { FaqAccordion } from "@/components/FaqAccordion";
@@ -273,6 +274,33 @@ export default function ContactPage() {
 
           {/* Organizational Info Column */}
           <div className="lg:col-span-5 space-y-6">
+            {/* Executive Leadership Desk Card */}
+            <div className="bg-surface rounded-3xl p-8 sm:p-10 border border-line shadow-2xl space-y-4">
+              <span className="text-[10px] font-bold font-heading uppercase tracking-widest text-accent px-3 py-1 rounded-full bg-accent-subtle border border-accent/30 block w-fit">
+                Conclave Leadership &amp; Corporate Relations
+              </span>
+              <div>
+                <h4 className="font-heading text-lg font-bold text-content">
+                  Prof. (Dr.) Raj Kumar Hota
+                </h4>
+                <p className="text-xs text-content-secondary mt-0.5">
+                  Dean of Corporate Relations &amp; Placement · Convener, ALLYSHIP++
+                </p>
+              </div>
+              <p className="text-xs text-content-muted leading-relaxed">
+                Directing strategic corporate alliances, enterprise Centres of Excellence, and conclave delegations across Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai.
+              </p>
+              <a
+                href="https://www.linkedin.com/in/prof-dr-raj-kumar-hota-11147418a/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-xs font-semibold text-accent hover:text-content transition-colors pt-1"
+              >
+                <span>Connect with Dean Hota on LinkedIn</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            </div>
+
             <div className="bg-surface rounded-3xl p-8 sm:p-10 border border-line shadow-2xl space-y-6">
               <h3 className="font-heading text-xl font-bold text-content tracking-tight">
                 Secretariat Coordinates

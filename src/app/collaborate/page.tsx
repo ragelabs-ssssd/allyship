@@ -250,6 +250,28 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
             );
           })}
         </div>
+
+
+        {/* Directorate Governance Callout */}
+        <div className="mt-12 p-6 sm:p-8 rounded-3xl bg-surface-2 border border-line flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div className="space-y-1 max-w-3xl">
+            <span className="text-[10px] font-bold font-heading uppercase tracking-widest text-accent">
+              Partnership Governance &amp; Executive Oversight
+            </span>
+            <p className="text-xs sm:text-sm text-content-secondary leading-relaxed">
+              All enterprise Centres of Excellence, curricula co-creation pacts, and campus hiring agreements are directly anchored by the Directorate of Corporate Relations &amp; Placement under the leadership of <strong className="text-content">Prof. (Dr.) Raj Kumar Hota</strong>.
+            </p>
+          </div>
+          <a
+            href="https://www.linkedin.com/in/prof-dr-raj-kumar-hota-11147418a/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-accent text-canvas font-bold text-xs hover:bg-accent-hover transition-colors shrink-0"
+          >
+            <span>Connect on LinkedIn</span>
+            <ExternalLink className="w-3.5 h-3.5" />
+          </a>
+        </div>
       </section>
 
       {/* 3. VERIFIED PLACEMENT VELOCITY DATA TABLE */}
