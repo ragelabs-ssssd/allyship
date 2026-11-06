@@ -1,87 +1,46 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
-import { ArrowRight, ShieldCheck, Award, Building2 } from "lucide-react";
+import Image from "next/image";
 
 export function ManifestoShowcase() {
   return (
     <section
       id="manifesto"
-      className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line scroll-mt-24"
+      className="py-12 lg:py-16 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line scroll-mt-24"
     >
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-        {/* Monumental Typographic Sculpture (5 cols) */}
-        <div className="lg:col-span-5 space-y-6">
-          <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-accent block">
-            04 // THE DOCTRINE
-          </span>
-          <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-content uppercase tracking-tight leading-[1.02]">
-            NOT A SUMMIT.<br />
-            <span className="text-accent italic font-serif font-light">A LIVING</span><br />
-            COVENANT.
-          </h2>
-          <div className="w-16 h-0.5 bg-accent" />
-          <p className="font-serif italic text-base sm:text-lg text-content-secondary leading-relaxed">
-            &ldquo;Where academic integrity and executive foresight converge to eliminate career friction for India&apos;s next generation.&rdquo;
-          </p>
-
-          <div className="pt-2 flex flex-wrap gap-2 text-xs">
-            <span className="px-3 py-1 rounded-full bg-surface-2 border border-line text-content-secondary text-[11px] font-medium">
-              NIRF #15 in Universities
-            </span>
-            <span className="px-3 py-1 rounded-full bg-surface-2 border border-line text-content-secondary text-[11px] font-medium">
-              NAAC A++ Grade
-            </span>
-            <span className="px-3 py-1 rounded-full bg-surface-2 border border-line text-accent text-[11px] font-medium">
-              Category-1 Autonomy
-            </span>
-          </div>
+      <div className="relative rounded-3xl overflow-hidden border border-line aspect-[21/9] min-h-[420px] flex items-center justify-center text-center p-8 sm:p-14 group">
+        {/* Background Image with Cinematic Grading */}
+        <div className="absolute inset-0">
+          <Image
+            src="/CON01670.JPG"
+            alt="Allyship++ National Conclave Dialogue"
+            fill
+            className="object-cover object-center brightness-[0.3] group-hover:scale-105 transition-transform duration-1000 ease-out"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-canvas via-transparent to-canvas" />
+          <div className="absolute inset-0 bg-gradient-to-t from-canvas via-transparent to-canvas" />
         </div>
 
-        {/* 3 Hairline Rows (7 cols) */}
-        <div className="lg:col-span-7 divide-y divide-line">
-          <div className="py-7 first:pt-0 group flex items-start gap-6">
-            <span className="font-mono text-xl sm:text-2xl text-accent font-bold shrink-0 pt-0.5">
-              01
-            </span>
-            <div className="space-y-1.5">
-              <h3 className="text-lg sm:text-xl font-bold text-content font-heading group-hover:text-accent transition-colors">
-                Personal Capital over Safe Branding
-              </h3>
-              <p className="text-xs sm:text-sm text-content-muted leading-relaxed">
-                Senior executives spend political and institutional capital to open career doors—not performative public statements or generic brand pledges.
-              </p>
-            </div>
-          </div>
+        {/* Letterbox Gold Accent Hairlines */}
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent/60 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent/60 to-transparent" />
 
-          <div className="py-7 group flex items-start gap-6">
-            <span className="font-mono text-xl sm:text-2xl text-accent font-bold shrink-0 pt-0.5">
-              02
-            </span>
-            <div className="space-y-1.5">
-              <h3 className="text-lg sm:text-xl font-bold text-content font-heading group-hover:text-accent transition-colors">
-                Syllabi Co-Created Every Semester
-              </h3>
-              <p className="text-xs sm:text-sm text-content-muted leading-relaxed">
-                Zero academic lag. Courses, campus labs, and evaluation frameworks updated directly in consultation with tier-1 engineering and corporate leadership.
-              </p>
-            </div>
-          </div>
+        {/* Content Overlay */}
+        <div className="relative z-10 max-w-3xl mx-auto space-y-5">
+          <span className="text-[11px] font-mono uppercase tracking-[0.3em] text-accent font-bold block">
+            THE CONCLAVE MANDATE
+          </span>
 
-          <div className="py-7 last:pb-0 group flex items-start gap-6">
-            <span className="font-mono text-xl sm:text-2xl text-accent font-bold shrink-0 pt-0.5">
-              03
-            </span>
-            <div className="space-y-1.5">
-              <h3 className="text-lg sm:text-xl font-bold text-content font-heading group-hover:text-accent transition-colors">
-                Audited 94.54% Career Trajectory
-              </h3>
-              <p className="text-xs sm:text-sm text-content-muted leading-relaxed">
-                Verified compensation parity, zero-day production deployment, and sustained high-growth trajectories across India&apos;s primary commercial corridors.
-              </p>
-            </div>
-          </div>
+          <h2 className="font-heading text-4xl sm:text-6xl lg:text-7xl font-black text-white uppercase tracking-tight leading-[0.98]">
+            We Do Not Sign Pledges.<br />
+            <span className="text-accent italic font-serif font-light">We Alter</span> Trajectories.
+          </h2>
+
+          <p className="text-xs sm:text-sm font-mono text-neutral-300 uppercase tracking-widest pt-2">
+            7 National Conclaves · 500+ Boardroom CXOs · Zero Commercial Sponsorship
+          </p>
         </div>
       </div>
     </section>
