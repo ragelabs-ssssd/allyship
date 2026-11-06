@@ -27,7 +27,6 @@ import {
 import { GetInvitedModal } from "@/components/GetInvitedModal";
 import { HeroBackdrop } from "@/components/HeroBackdrop";
 import { BentoGridConcept } from "@/components/about/BentoGridConcept";
-import { LitmusConceptSwitcher } from "@/components/about/LitmusConceptSwitcher";
 
 export default function AboutPage() {
   const [isInviteOpen, setIsInviteOpen] = useState(false);
@@ -271,12 +270,61 @@ export default function AboutPage() {
         <BentoGridConcept />
       </section>
 
-      {/* 4. THE AUTHENTICITY LITMUS TEST (5 INTERACTIVE CONCEPTS) */}
+      {/* 4. THE 3-QUESTION AUTHENTICITY LITMUS TEST */}
       <section
         id="litmus-test"
         className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line"
       >
-        <LitmusConceptSwitcher questions={litmusTestQuestions} />
+        <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading uppercase tracking-widest">
+            <ShieldCheck className="w-3.5 h-3.5" />
+            <span>Authenticity Guardrail</span>
+          </div>
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
+            The 3-Question Authenticity Litmus Test
+          </h2>
+          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
+            Separating genuine institutional advocacy from performative optics. Grounded in research from 40+ CXO panels across India, every allyship initiative must satisfy three mandatory criteria.
+          </p>
+        </div>
+
+        {/* 3 Columns */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {litmusTestQuestions.map((q) => (
+            <div
+              key={q.id}
+              className="relative rounded-3xl p-8 bg-surface border border-line shadow-xl hover:border-accent/60 transition-all flex flex-col justify-between group"
+            >
+              {/* Large watermark number */}
+              <span className="absolute top-6 right-8 text-5xl font-heading font-black text-content/5 pointer-events-none group-hover:text-accent/10 transition-colors">
+                {q.number}
+              </span>
+
+              <div className="space-y-4 relative z-10">
+                <span className="text-[11px] font-bold font-heading text-accent bg-glass border border-line px-3 py-1 rounded-full inline-block">
+                  Criterion {q.number}
+                </span>
+
+                <h3 className="font-heading text-xl font-bold text-content">
+                  {q.title}
+                </h3>
+
+                <p className="text-sm font-semibold text-accent-light italic">
+                  &ldquo;{q.question}&rdquo;
+                </p>
+
+                <p className="text-xs sm:text-sm text-content-secondary leading-relaxed font-normal pt-2 border-t border-white/5">
+                  {q.rubric}
+                </p>
+              </div>
+
+              <div className="pt-6 mt-6 border-t border-line flex items-center gap-2 text-xs text-content-muted font-medium">
+                <CheckCircle2 className="w-4 h-4 text-success" />
+                <span>Mandatory Leadership Benchmark</span>
+              </div>
+            </div>
+          ))}
+        </div>
       </section>
 
       {/* 6. THE BOARDROOM-TO-ARENA SYNTHESIS */}
