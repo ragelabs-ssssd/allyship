@@ -153,27 +153,27 @@ export function BentoGridConcept() {
           </div>
         </div>
 
-        {/* Card 4: Co-Creating Sovereign Enterprise IP (4 cols) */}
+        {/* Card 4: Industry-Powered Centres of Excellence (4 cols) */}
         <div className="lg:col-span-4 rounded-3xl p-8 bg-surface border border-line shadow-xl flex flex-col justify-between space-y-6 group hover:border-accent/60 transition-all duration-300">
           <div className="space-y-4">
             <div className="w-10 h-10 rounded-xl bg-accent-subtle border border-accent/30 flex items-center justify-center text-accent">
               <Cpu className="w-5 h-5" />
             </div>
             <span className="text-[10px] font-bold font-heading uppercase tracking-widest text-accent block">
-              The Post-Syntax Economy
+              Enterprise-Anchored Labs
             </span>
             <h3 className="font-heading text-xl font-bold text-content">
-              Co-Creating Sovereign Enterprise IP
+              Industry-Powered Centres of Excellence
             </h3>
             <p className="text-xs sm:text-sm text-content-secondary leading-relaxed font-normal">
-              Beyond textbook code: corporate CTOs, Tech Mahindra, and LTTS embed live production sandboxes and patent incubators—training engineers to architect generative AI systems rather than memorize syntax.
+              Dedicated on-campus innovation hubs co-established with Tech Mahindra, LTTS, and Wipro immerse students in live ServiceNow enterprise workflows, medical AI, and cloud architectures starting in their second year.
             </p>
           </div>
 
           <div className="p-3.5 rounded-xl bg-surface-2 border border-line space-y-1">
-            <div className="text-xs font-bold text-content">Zero Simulated Sandbox Policy</div>
+            <div className="text-xs font-bold text-content">18 Specialized Research Hubs</div>
             <div className="text-[11px] text-content-secondary">
-              Students build directly on live enterprise production stacks via AIC-SOA under NITI Aayog.
+              Supported by the AIC-SOA Foundation under NITI Aayog to tackle real-world industrial challenges.
             </div>
           </div>
         </div>
