@@ -126,7 +126,7 @@ function EventContent() {
               </p>
 
               <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal">
-                Siksha &lsquo;O&rsquo; Anusandhan takes Allyship++ to India&apos;s business cities. Each chapter brings corporate leaders, HR professionals, academicians and sporting voices together to talk about leadership, inclusion and the future of work, mentorship, and shared progress.
+                Siksha &lsquo;O&rsquo; Anusandhan anchors ALLYSHIP++ across India&apos;s premier commercial corridors. Each standing chapter convenes enterprise CXOs, talent strategists, Olympic coaches, and university leadership to co-author institutional pipelines, de-bias hiring architectures, and accelerate regional talent into national leadership.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
@@ -218,7 +218,7 @@ function EventContent() {
                 </h3>
               </div>
               <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-muted">
-                Conventional universities wait for annual placement cycles. Allyship++ engages Fortune 500 CHROs year-round to co-create academic curricula and practical skill benchmarks before students graduate.
+                Conventional higher education relies on transactional placement weeks. ALLYSHIP++ integrates Fortune 500 enterprise directors and capability heads year-round to co-design curricula, validate hands-on lab competencies, and co-author technical standards before graduation.
               </p>
             </div>
             <div className="pt-4 mt-6 border-t border-line flex items-center gap-2 font-sans text-xs font-semibold text-content-secondary">
@@ -241,7 +241,7 @@ function EventContent() {
                 </h3>
               </div>
               <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-muted">
-                Olympic medalists and national coaches headline our stages because elite sports embodies unconditional trust, grit under pressure, and mental resilience—the exact attributes needed to prevent workplace burnout.
+                Olympic medalists and national sprint coaches anchor our conclaves because elite championship sports embodies radical accountability, coach-athlete sponsorship, and emotional fortitude under extreme public pressure.
               </p>
             </div>
             <div className="pt-4 mt-6 border-t border-line flex items-center gap-2 font-sans text-xs font-semibold text-content-secondary">
@@ -264,7 +264,7 @@ function EventContent() {
                 </h3>
               </div>
               <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-muted">
-                Allyship is not a once-a-year compliance checkbox. In our Hyderabad and Chennai conclaves, leaders established that practicing allyship is an everyday duty—creating psychological safety for Gen-Z talent.
+                Allyship is not performative compliance. Across our national conclaves, corporate directors established that genuine executive allyship is an operational duty—de-weaponizing hierarchy and safeguarding psychological safety for early-career professionals.
               </p>
             </div>
             <div className="pt-4 mt-6 border-t border-line flex items-center gap-2 font-sans text-xs font-semibold text-content-secondary">
