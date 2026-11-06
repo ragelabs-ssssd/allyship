@@ -375,24 +375,13 @@ function EventContent() {
               &ldquo;Allyship is a conscious commitment to guide, mentor, and support emerging talent. When academic institutions and corporate leaders work together with empathy, discipline, and shared purpose, we build workplaces where every young professional is trusted and prepared to succeed.&rdquo;
             </blockquote>
 
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-3 border-t border-line">
-              <div>
-                <h4 className="font-display text-base font-semibold tracking-normal text-content">
-                  Prof. (Dr.) Raj Kumar Hota
-                </h4>
-                <p className="font-sans text-xs font-normal tracking-[0.01em] leading-relaxed text-content-muted">
-                  Dean of Corporate Relations and Placement · Convener, ALLYSHIP++ National Conclaves
-                </p>
-              </div>
-              <a
-                href="https://www.linkedin.com/in/prof-dr-raj-kumar-hota-11147418a/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent hover:bg-accent hover:text-canvas transition-colors text-xs font-semibold shrink-0"
-              >
-                <span>Connect on LinkedIn</span>
-                <ExternalLink className="w-3.5 h-3.5" />
-              </a>
+            <div className="pt-3 border-t border-line">
+              <h4 className="font-display text-base font-semibold tracking-normal text-content">
+                Prof. (Dr.) Raj Kumar Hota
+              </h4>
+              <p className="font-sans text-xs font-normal tracking-[0.01em] leading-relaxed text-content-muted">
+                Dean of Corporate Relations and Placement · Convener, ALLYSHIP++ National Conclaves
+              </p>
             </div>
           </div>
         </div>
