@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { CheckCircle2, ArrowRight } from "lucide-react";
+import { ArrowRight, Mail, CheckCircle2 } from "lucide-react";
 
 export function Footer() {
   const [email, setEmail] = useState("");
@@ -26,120 +26,199 @@ export function Footer() {
     { name: "Impact & Outcomes", href: "/impact" },
     { name: "Discover SOA University", href: "/discover-soa" },
     { name: "Collaborate With Us", href: "/collaborate" },
+    { name: "Contact Secretariat", href: "/contact" },
+  ];
+
+  const corridors = [
+    { name: "Bhubaneswar", role: "National HQ" },
+    { name: "Bengaluru", role: "Chapter 1.0 & 2.0" },
+    { name: "Hyderabad", role: "Chapter 2.0" },
+    { name: "Kolkata", role: "Active Corridor" },
+    { name: "Mumbai", role: "Active Corridor" },
+    { name: "Chennai", role: "Active Corridor" },
   ];
 
   return (
-    <footer className="bg-canvas text-content-secondary pt-20 pb-12 border-t border-line mt-auto">
-      <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-line">
-          {/* Brand Column — 5 cols */}
+    <footer className="bg-canvas text-content-secondary border-t border-line mt-auto relative overflow-hidden">
+      {/* ══════════════════════════════════════════════════════════════
+          TOP ARCHITECTURAL WATERMARK (LUXE EDITORIAL)
+          ══════════════════════════════════════════════════════════════ */}
+      <div className="border-b border-line/60 pt-10 pb-6 overflow-hidden select-none pointer-events-none">
+        <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
+          <div className="font-display text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tighter text-content/[0.04] uppercase whitespace-nowrap">
+            ALLYSHIP++ · SIKSHA &lsquo;O&rsquo; ANUSANDHAN UNIVERSITY · NATIONAL CONCLAVE
+          </div>
+        </div>
+      </div>
+
+      {/* ══════════════════════════════════════════════════════════════
+          MAIN EDITORIAL GRID
+          ══════════════════════════════════════════════════════════════ */}
+      <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 pt-14 pb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-14 pb-14 border-b border-line">
+          {/* Col 1: Institutional Essence (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
             <Link href="/" className="inline-flex items-center gap-3.5 group">
-              <div className="w-12 h-12 relative flex items-center justify-center rounded-full bg-glass-strong p-1.5 shadow-md border border-line-strong group-hover:border-accent transition-colors">
+              <div className="w-12 h-12 relative flex items-center justify-center rounded-2xl bg-glass-strong p-2 border border-line-strong group-hover:border-accent transition-colors shadow-md">
                 <img
                   src="/soa-logo.png"
-                  alt="Siksha 'O' Anusandhan (SOA) University Logo"
+                  alt="Siksha 'O' Anusandhan (SOA) Crest"
                   className="w-full h-full object-contain filter brightness-105"
                 />
               </div>
               <div className="flex flex-col">
-                <span className="font-display text-lg font-extrabold tracking-tight text-content leading-none inline-flex items-start">
+                <span className="font-display text-xl font-extrabold tracking-tight text-content leading-none inline-flex items-start">
                   ALLYSHIP
-                  <span className="text-accent text-[0.62em] font-bold ml-0.5 -mt-0.5">
+                  <span className="text-accent text-[0.62em] font-bold ml-1 -mt-0.5">
                     ++
                   </span>
                 </span>
-                <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.18em] text-accent mt-1">
+                <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.2em] text-accent mt-1">
                   Siksha &lsquo;O&rsquo; Anusandhan
                 </span>
-                <span className="font-sans text-[9px] font-medium tracking-[0.04em] text-content/90 mt-0.5">
-                  (Deemed to be University)
+                <span className="font-sans text-[9px] font-medium tracking-[0.04em] text-content-muted mt-0.5">
+                  Deemed to be University · Category-1 Autonomy
                 </span>
               </div>
             </Link>
 
-            <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-muted max-w-md">
-              An invitation-only national conclave series bridging corporate leadership,
-              emerging industry demands, and higher education excellence across India&apos;s
-              major economic centers.
+            <blockquote className="font-serif italic text-base sm:text-lg text-content-secondary leading-relaxed max-w-lg border-l-2 border-accent/40 pl-4">
+              &ldquo;Where academic rigour meets executive foresight, nurturing industry-ready talent through sustained corporate allyship.&rdquo;
+            </blockquote>
+
+            <p className="font-sans text-xs text-content-muted leading-relaxed max-w-md">
+              Anchored under the Directorate of Corporate Relations & Placement under the leadership of{" "}
+              <strong className="text-content font-semibold">Prof. (Dr.) Raj Kumar Hota</strong>.
             </p>
 
-            <div className="font-sans text-xs font-normal tracking-[0.01em] text-content-muted space-y-1">
-              <p>NIRF Category: Top 15 in Universities • Top 27 Overall India</p>
-              <p>Bhubaneswar • Bengaluru • Hyderabad • Kolkata • Mumbai • Chennai</p>
+            <div className="flex flex-wrap gap-2 pt-1 text-xs font-sans">
+              <span className="px-3 py-1 rounded-full bg-surface-2 border border-line text-content-secondary font-medium text-[11px]">
+                NIRF #15 in Universities
+              </span>
+              <span className="px-3 py-1 rounded-full bg-surface-2 border border-line text-content-secondary font-medium text-[11px]">
+                NAAC A++ Grade
+              </span>
+              <span className="px-3 py-1 rounded-full bg-surface-2 border border-line text-content-secondary font-medium text-[11px]">
+                Top 27 Overall India
+              </span>
             </div>
           </div>
 
-          {/* Navigation Links — 3 cols */}
-          <div className="lg:col-span-3 space-y-4">
-            <h4 className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
-              Explore Dossiers
-            </h4>
-            <ul className="space-y-3 text-sm">
+          {/* Col 2: Dossier Index (4 cols) */}
+          <div className="lg:col-span-4 space-y-4">
+            <div className="flex items-center justify-between pb-2 border-b border-line">
+              <h4 className="font-sans text-[11px] font-semibold uppercase tracking-[0.16em] text-accent">
+                Explore Dossiers
+              </h4>
+              <span className="text-[10px] text-content-faint font-mono">06 SECTIONS</span>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6 text-sm pt-2">
               {navLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="font-sans text-sm text-content-secondary hover:text-content transition-colors duration-200"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="font-sans text-xs text-content-secondary hover:text-accent transition-colors py-1 border-b border-line/30 hover:border-accent inline-flex items-center justify-between group"
+                >
+                  <span>{link.name}</span>
+                  <span className="text-accent opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                </Link>
               ))}
-            </ul>
+            </div>
           </div>
 
-          {/* Newsletter Column — 4 cols */}
-          <div className="lg:col-span-4 space-y-4">
-            <h4 className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
+          {/* Col 3: Executive Briefing & Direct Secretariat Dispatch (3 cols) */}
+          <div className="lg:col-span-3 space-y-4">
+            <h4 className="font-sans text-[11px] font-semibold uppercase tracking-[0.16em] text-accent">
               Executive Briefings
             </h4>
-            <p className="font-sans text-xs font-normal tracking-[0.01em] text-content-muted leading-relaxed">
-              Receive periodic policy digests, conclave executive summaries, and research
-              collaboration opportunities directly to your inbox.
+            <p className="font-sans text-xs text-content-muted leading-relaxed">
+              Curated conclave executive summaries, policy digests, and Centre of Excellence opportunities.
             </p>
 
             {subscribed ? (
-              <div className="p-4 bg-glass border border-accent/30 rounded-xl flex items-center gap-3 text-xs text-content-secondary">
+              <div className="p-3 bg-accent-subtle/40 border border-accent/40 rounded-xl flex items-center gap-2.5 text-xs text-content">
                 <CheckCircle2 className="w-4 h-4 text-accent shrink-0" />
-                <span>You are subscribed to ALLYSHIP++ executive briefings.</span>
+                <span>Subscribed to ALLYSHIP++ executive briefings.</span>
               </div>
             ) : (
-              <form onSubmit={handleSubscribe} className="space-y-2">
-                <div className="relative flex items-center">
+              <form onSubmit={handleSubscribe} className="space-y-2 pt-1">
+                <div className="border-b border-line focus-within:border-accent transition-colors pb-2 flex items-center gap-2">
                   <input
                     type="email"
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Enter corporate email"
-                    className="w-full pl-4 pr-12 py-3 rounded-xl bg-glass border border-line text-xs text-content placeholder-slate-400 focus:outline-none focus:border-accent transition-colors"
+                    placeholder="Enter corporate email..."
+                    className="w-full bg-transparent text-xs text-content placeholder-content-faint focus:outline-none py-1"
                   />
                   <button
                     type="submit"
                     disabled={isLoading}
                     aria-label="Subscribe"
-                    className="absolute right-1.5 p-2 rounded-lg bg-accent text-on-accent hover:bg-accent-hover transition-colors disabled:opacity-50"
+                    className="text-accent hover:text-accent-hover text-xs font-bold uppercase tracking-wider shrink-0 cursor-pointer disabled:opacity-50"
                   >
-                    <ArrowRight className="w-4 h-4" />
+                    Join
                   </button>
                 </div>
+                <p className="font-sans text-[11px] text-content-faint">
+                  Strict confidentiality. One-click unsubscribe.
+                </p>
               </form>
             )}
+
+            <div className="pt-4 border-t border-line/50">
+              <div className="text-[10px] font-sans uppercase tracking-wider text-content-faint mb-1.5">
+                Secretariat Direct
+              </div>
+              <Link
+                href="/contact"
+                className="font-sans text-xs text-content-secondary hover:text-accent transition-colors flex items-center gap-2 group"
+              >
+                <Mail className="w-3.5 h-3.5 text-accent shrink-0" />
+                <span>Contact Secretariat Desk</span>
+                <ArrowRight className="w-3 h-3 text-content-faint group-hover:text-accent group-hover:translate-x-0.5 transition-all ml-auto" />
+              </Link>
+            </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
+        {/* ══════════════════════════════════════════════════════════════
+            CORRIDOR RIBBON (6 ECONOMIC HUBS)
+            ══════════════════════════════════════════════════════════════ */}
+        <div className="py-6 border-b border-line flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs">
+          <div className="flex items-center gap-2 text-accent">
+            <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+            <span className="font-sans text-[11px] uppercase font-bold tracking-widest text-accent">
+              Active Chapter Footprint
+            </span>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-3 sm:gap-5 text-content-muted text-xs">
+            {corridors.map((c, i) => (
+              <span key={c.name} className="flex items-center gap-2">
+                <span className="font-medium text-content">{c.name}</span>
+                <span className="text-[10px] text-content-faint font-mono">({c.role})</span>
+                {i < corridors.length - 1 && (
+                  <span className="text-line-strong hidden sm:inline">•</span>
+                )}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* ══════════════════════════════════════════════════════════════
+            BOTTOM BAR (LEGAL & GOVERNANCE)
+            ══════════════════════════════════════════════════════════════ */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-content-muted">
           <p>© 2026 Siksha &lsquo;O&rsquo; Anusandhan (Deemed to be University). All rights reserved.</p>
           <div className="flex items-center gap-6">
-            <Link href="/privacy" className="hover:text-content-secondary transition-colors">
+            <Link href="/privacy" className="hover:text-content transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="hover:text-content-secondary transition-colors">
+            <Link href="/terms" className="hover:text-content transition-colors">
               Terms of Engagement
             </Link>
-            <Link href="/contact" className="hover:text-content-secondary transition-colors">
+            <Link href="/contact" className="hover:text-accent font-medium transition-colors">
               Contact Secretariat
             </Link>
           </div>
