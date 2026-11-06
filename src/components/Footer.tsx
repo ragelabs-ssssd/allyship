@@ -30,12 +30,12 @@ export function Footer() {
   ];
 
   const corridors = [
-    { name: "Bhubaneswar", role: "National HQ" },
-    { name: "Bengaluru", role: "Chapter 1.0 & 2.0" },
-    { name: "Hyderabad", role: "Chapter 2.0" },
-    { name: "Kolkata", role: "Active Corridor" },
-    { name: "Mumbai", role: "Active Corridor" },
-    { name: "Chennai", role: "Active Corridor" },
+    "Bhubaneswar",
+    "Bengaluru",
+    "Hyderabad",
+    "Kolkata",
+    "Mumbai",
+    "Chennai",
   ];
 
   return (
@@ -179,13 +179,12 @@ export function Footer() {
             </span>
           </div>
 
-          <div className="flex flex-wrap items-center gap-3 sm:gap-5 text-content-muted text-xs">
-            {corridors.map((c, i) => (
-              <span key={c.name} className="flex items-center gap-2">
-                <span className="font-medium text-content">{c.name}</span>
-                <span className="text-[10px] text-content-faint font-mono">({c.role})</span>
+          <div className="flex flex-wrap items-center gap-2.5 sm:gap-3.5 text-xs text-content-muted">
+            {corridors.map((city, i) => (
+              <span key={city} className="flex items-center gap-2.5 sm:gap-3.5">
+                <span className="font-medium text-content">{city}</span>
                 {i < corridors.length - 1 && (
-                  <span className="text-line-strong hidden sm:inline">•</span>
+                  <span className="text-content-faint select-none font-light">/</span>
                 )}
               </span>
             ))}
