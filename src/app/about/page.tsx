@@ -75,16 +75,13 @@ export default function AboutPage() {
 
         <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 relative z-10 w-full translate-y-8 lg:translate-y-10">
           <div className="max-w-4xl mx-auto text-center space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase shadow-sm">
-              <span>Institutional Framework · From Policy to Practice</span>
-            </div>
 
             <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
               Why &ldquo;Allyship<span className="text-accent">++</span>&rdquo;?
             </h1>
 
             <p className="text-xl sm:text-2xl font-heading text-content-secondary max-w-2xl mx-auto italic">
-              Bridging Corporate Capital with Regional Potential Through Daily Executive Sponsorship.
+              Bridging Corporate Corridors with Regional Talent Through Active Leadership and Mutual Trust.
             </p>
 
             <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-4xl mx-auto font-normal">
