@@ -277,8 +277,8 @@ export default function DiscoverSoaPage() {
               Ranked 15th Nationally · NAAC A++ · UGC Category-I Autonomy
             </p>
 
-            <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal">
-              Siksha &lsquo;O&rsquo; Anusandhan (SOA) is one of eastern India&apos;s preeminent multi-disciplinary research universities—bridging regional talent with global industry through 13 constituent faculties, 18 specialized research centres, 30,000+ scholars, and 38 Stanford-indexed Top 2% world scientists across a unified 127-acre academic biome.
+            <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-3xl font-normal">
+              Siksha &lsquo;O&rsquo; Anusandhan (SOA) is eastern India&apos;s preeminent multi-disciplinary research university—bridging regional talent with global industry through 13 constituent faculties, 18 specialized research centres, 30,000+ scholars, and 38 Stanford-indexed Top 2% scientists across a unified 127-acre academic biome.
             </p>
 
             <div className="pt-2 flex flex-wrap items-center gap-4">
