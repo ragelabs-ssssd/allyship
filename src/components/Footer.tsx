@@ -47,15 +47,15 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-14 pb-14 border-b border-line">
           {/* Col 1: Institutional Essence (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
-            <Link href="/" className="inline-flex items-center gap-3.5 group">
-              <div className="w-12 h-12 relative flex items-center justify-center rounded-full bg-glass-strong p-2 border border-line-strong group-hover:border-accent transition-colors shadow-md">
+            <Link href="/" className="inline-flex items-center gap-3.5 sm:gap-4 group">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 relative flex items-center justify-center rounded-full bg-glass-strong p-2 border border-line-strong group-hover:border-accent transition-colors shadow-md shrink-0 -mt-1">
                 <img
                   src="/soa-logo.png"
                   alt="Siksha 'O' Anusandhan (SOA) Crest"
                   className="w-full h-full object-contain filter brightness-105"
                 />
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col justify-center">
                 <span className="font-display text-xl font-extrabold tracking-tight text-content leading-none inline-flex items-start">
                   ALLYSHIP
                   <span className="text-accent text-[0.62em] font-bold ml-1 -mt-0.5">
