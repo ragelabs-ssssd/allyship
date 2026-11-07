@@ -37,7 +37,7 @@ const eventHeroImages = [
   },
   {
     src: "/photos-1/CON01524.jpg",
-    title: "Chennai 2.0: Honouring Sporting Excellence",
+    title: "Honouring Sporting Excellence",
     subtitle: "Indian Olympic Sprint Coach Premanand J. & SOA Leadership",
     objectPosition: "52% 20%",
     kbOrigin: "center 20%",
@@ -45,7 +45,7 @@ const eventHeroImages = [
   },
   {
     src: "/photos-1/IMG_7536.jpg",
-    title: "Hyderabad 2.0: Fireside Conversation",
+    title: "Executive Fireside Conversation",
     subtitle: "Boardroom Foresight & Talent Transformation",
     objectPosition: "58% 24%",
     kbOrigin: "60% 25%",
@@ -53,7 +53,7 @@ const eventHeroImages = [
   },
   {
     src: "/photos-1/IMG_7502.jpg",
-    title: "Hyderabad 2.0: Executive Guest Felicitation",
+    title: "Executive Guest Felicitation",
     subtitle: "Strengthening Bilateral Industry-Academia Ties",
     objectPosition: "48% 18%",
     kbOrigin: "center 20%",
@@ -61,7 +61,7 @@ const eventHeroImages = [
   },
   {
     src: "/photos-1/IE_04142.jpg",
-    title: "Hyderabad Chapter: Leadership Conclave",
+    title: "Leadership Conclave Delegation",
     subtitle: "Senior Delegates & University Leadership",
     objectPosition: "48% 36%",
     kbOrigin: "center 35%",
@@ -109,8 +109,8 @@ const eventHeroImages = [
   },
   {
     src: "/photos-1/IMG_7900.jpg",
-    title: "Hyderabad 2.0: Community & Camaraderie",
-    subtitle: "Moments from the Executive Conclave Floor",
+    title: "Executive Community & Camaraderie",
+    subtitle: "Moments from the Leadership Conclave Floor",
     objectPosition: "48% 18%",
     kbOrigin: "center 20%",
     kbMotion: { scale: [1.02, 1.08], x: ["0%", "1.4%"], y: ["0%", "-0.8%"] },
@@ -345,7 +345,7 @@ function EventContent() {
                           {eventHeroImages[heroSlide].title}
                         </p>
                         <p className="text-[11px] text-content-secondary mt-0.5">
-                          {eventHeroImages[heroSlide].subtitle} · Bengaluru · Hyderabad · Kolkata · Mumbai · Chennai
+                          {eventHeroImages[heroSlide].subtitle}
                         </p>
                       </motion.div>
                     </AnimatePresence>
