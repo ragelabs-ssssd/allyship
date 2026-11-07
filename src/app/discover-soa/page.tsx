@@ -31,6 +31,7 @@ import {
 import { GetInvitedModal } from "@/components/GetInvitedModal";
 import { HeroBackdrop, SOA_VIDEO_SRC } from "@/components/HeroBackdrop";
 import { NirfRankingsShowcase } from "@/components/discover/NirfRankingsShowcase";
+import { AccreditationsShowcase } from "@/components/discover/AccreditationsShowcase";
 
 // 1. NIRF Rankings 2025 Data
 const nirfRankings2025 = [
@@ -461,99 +462,8 @@ export default function DiscoverSoaPage() {
           </p>
         </div>
 
-        {/* Group A: Accreditations (6 Cards) */}
-        <div className="mb-14 space-y-6">
-          <div className="flex items-center justify-between pb-3 border-b border-line">
-            <div className="flex items-center gap-2.5">
-              <ShieldCheck className="w-5 h-5 text-accent" />
-              <h3 className="font-heading text-xl font-bold text-content">
-                Premier Accreditations
-              </h3>
-            </div>
-            <button
-              type="button"
-              onClick={() => setSelectedSlide("/discover/accreditations.jpg")}
-              className="text-xs font-semibold text-accent hover:text-content inline-flex items-center gap-1"
-            >
-              <span>View Accreditations Slide</span>
-              <Maximize2 className="w-3.5 h-3.5" />
-            </button>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {accreditationsList.map((item) => (
-              <div
-                key={item.title}
-                className="p-6 rounded-2xl bg-surface-2 border border-line hover:border-accent transition-all space-y-3 group"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-bold font-heading uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-accent/15 border border-accent/40 text-accent">
-                    {item.tag}
-                  </span>
-                  <CheckCircle2 className="w-4 h-4 text-accent/80" />
-                </div>
-                <div>
-                  <h4 className="font-heading text-base font-bold text-content group-hover:text-accent transition-colors">
-                    {item.title}
-                  </h4>
-                  <p className="text-xs text-accent/90 font-medium mt-0.5">
-                    {item.sub}
-                  </p>
-                </div>
-                <p className="text-xs text-content-muted leading-relaxed">
-                  {item.body}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Group B: Other Major Recognitions (6 Cards) */}
-        <div className="space-y-6">
-          <div className="flex items-center justify-between pb-3 border-b border-line">
-            <div className="flex items-center gap-2.5">
-              <Award className="w-5 h-5 text-accent" />
-              <h3 className="font-heading text-xl font-bold text-content">
-                Other Major Recognitions & Status
-              </h3>
-            </div>
-            <button
-              type="button"
-              onClick={() => setSelectedSlide("/discover/major-recognitions.jpg")}
-              className="text-xs font-semibold text-accent hover:text-content inline-flex items-center gap-1"
-            >
-              <span>View Recognitions Slide</span>
-              <Maximize2 className="w-3.5 h-3.5" />
-            </button>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {majorRecognitionsList.map((item) => (
-              <div
-                key={item.title}
-                className="p-6 rounded-2xl bg-surface-2 border border-line hover:border-accent transition-all space-y-3 group"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-bold font-heading uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-surface border border-line text-content-secondary">
-                    {item.pill}
-                  </span>
-                  <FileCheck2 className="w-4 h-4 text-accent/80" />
-                </div>
-                <div>
-                  <h4 className="font-heading text-base font-bold text-content group-hover:text-accent transition-colors">
-                    {item.title}
-                  </h4>
-                  <p className="text-xs text-[#E8D5A7] font-medium mt-0.5">
-                    {item.authority}
-                  </p>
-                </div>
-                <p className="text-xs text-content-muted leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
+        {/* Dynamic Showcase with 5 Out-of-the-Box Layouts */}
+        <AccreditationsShowcase onOpenSlide={(url) => setSelectedSlide(url)} />
       </section>
 
       {/* 5. EVOLUTION & GROWTH (Screenshot 5) */}
