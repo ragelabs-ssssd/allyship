@@ -224,9 +224,8 @@ export function AccreditationsShowcase({ onOpenSlide }: AccreditationsShowcasePr
             </p>
           </div>
 
-          <div className="pt-4 border-t border-line/80 relative z-10 flex items-center justify-between text-xs font-mono">
-            <span className="text-content-muted">Section 12(B) Central Assistance Fit</span>
-            <span className="text-accent font-semibold">UGC Act 1956 Validated</span>
+          <div className="pt-4 border-t border-line/80 relative z-10 text-xs font-mono text-content-muted">
+            Section 12(B) Central Assistance Fit
           </div>
         </div>
 
@@ -264,9 +263,8 @@ export function AccreditationsShowcase({ onOpenSlide }: AccreditationsShowcasePr
             </p>
           </div>
 
-          <div className="pt-4 border-t border-line/80 relative z-10 flex items-center justify-between text-xs font-mono">
-            <span className="text-content-muted">Top Tier in Indian Higher Education</span>
-            <span className="text-accent font-semibold">CGPA 3.88 Validated</span>
+          <div className="pt-4 border-t border-line/80 relative z-10 text-xs font-mono text-content-muted">
+            Top Tier in Indian Higher Education
           </div>
         </div>
       </div>
