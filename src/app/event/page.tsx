@@ -708,11 +708,11 @@ function EventContent() {
         </div>
       </section>
 
-      {/* 3. STICKY EDITORIAL TAB SWITCHER */}
-      <div className="sticky top-20 lg:top-24 z-30 bg-gradient-to-b from-canvas via-canvas/95 to-transparent pt-4 pb-6">
+      {/* 3. EDITORIAL TAB SWITCHER (CONSTANT POSITION) */}
+      <div className="pt-10 pb-2">
         <nav
           aria-label="Conclave sections"
-          className="py-2.5 px-4 mx-auto w-fit max-w-[calc(100vw-2rem)] rounded-full bg-canvas/90 backdrop-blur-md border border-line shadow-2xl flex items-center justify-start sm:justify-center gap-2 sm:gap-3 overflow-x-auto"
+          className="py-2.5 px-4 mx-auto w-fit max-w-[calc(100vw-2rem)] rounded-full bg-surface border border-line shadow-lg flex items-center justify-start sm:justify-center gap-2 sm:gap-3 overflow-x-auto"
         >
           {(["Chapters", "Speakers", "Videos"] as const).map((t) => (
             <button
@@ -722,10 +722,6 @@ function EventContent() {
                 setActiveTab(t);
                 if (t === "Videos") {
                   setSelectedMediaCity(null);
-                }
-                const el = document.getElementById("tab-content");
-                if (el && typeof window !== "undefined" && window.scrollY > el.offsetTop) {
-                  el.scrollIntoView({ behavior: "smooth" });
                 }
               }}
               className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full font-sans text-xs sm:text-sm font-medium tracking-wide transition-all whitespace-nowrap ${
