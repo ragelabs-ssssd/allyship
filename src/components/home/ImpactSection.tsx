@@ -72,7 +72,7 @@ export function ImpactSection() {
       value: 7,
       suffix: "",
       decimals: 0,
-      title: "National Conclaves",
+      title: "National Leadership Conclaves",
       description:
         "High-impact leadership conclaves across Bengaluru, Hyderabad, Kolkata, Mumbai, Chennai, and institutional headquarters.",
     },
