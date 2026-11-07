@@ -2,9 +2,7 @@
 
 import React from "react";
 import {
-  Award,
   Trophy,
-  Maximize2,
   ShieldCheck,
   CheckCircle2,
   ArrowUpRight,
@@ -184,34 +182,6 @@ export function NirfRankingsShowcase({ onOpenSlide }: NirfRankingsShowcaseProps)
             </div>
           ))}
         </div>
-      </div>
-
-      {/* Official NIRF Benchmark Footer Callout */}
-      <div className="p-5 sm:p-6 rounded-2xl bg-surface-2 border border-line flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-accent/10 border border-accent/40 text-accent flex items-center justify-center shrink-0">
-            <Award className="w-5 h-5" />
-          </div>
-          <div>
-            <p className="font-heading text-sm font-bold text-content">
-              National Institutional Ranking Framework (NIRF)
-            </p>
-            <p className="text-xs text-content-muted">
-              Evaluated across Teaching, Learning &amp; Resources, Research, Graduation Outcomes, Outreach, and Perception.
-            </p>
-          </div>
-        </div>
-
-        {onOpenSlide && (
-          <button
-            type="button"
-            onClick={onOpenSlide}
-            className="text-xs font-semibold text-accent hover:text-content inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-surface border border-line hover:border-accent transition-all shrink-0"
-          >
-            <span>View Official NIRF Slide</span>
-            <Maximize2 className="w-3.5 h-3.5" />
-          </button>
-        )}
       </div>
     </div>
   );
