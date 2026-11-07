@@ -169,81 +169,81 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
   "bengaluru-2": {
     id: "bengaluru-2",
     cycle: "2.0",
-    city: "Bengaluru (2.0)",
+    city: "Bengaluru",
     date: "March 2026",
-    editionBadge: "Allyship++ 2.0 — 1st Edition",
+    editionBadge: "Allyship++ — 1st Edition",
     coverImage: "/bengaluru-2.jpg",
     coverPosition: "50% 25%",
     subtitle:
       "Next-Gen Talent & Industry–Academia Collaboration — Executive roundtable insights, mentorship dialogues, and chapter moments from Bengaluru.",
     videos: [],
-    photos: create24PhotoSlots("Bengaluru 2.0"),
+    photos: create24PhotoSlots("Bengaluru"),
   },
   "hyderabad-2": {
     id: "hyderabad-2",
     cycle: "2.0",
-    city: "Hyderabad (2.0)",
+    city: "Hyderabad",
     date: "May 2026",
-    editionBadge: "Allyship++ 2.0 — 2nd Edition",
+    editionBadge: "Allyship++ — 2nd Edition",
     coverImage: "/slides/IMG_7873.jpg",
     coverPosition: "50% 25%",
     subtitle:
       "Practicing Allyship for Emerging Talent — Keynote deliberations, campus-to-corporate transitions, and curated moments from Gachibowli.",
     videos: [
       {
-        title: "Hyderabad 2.0 Chapter | Conclave Film",
+        title: "Hyderabad Chapter | Conclave Film",
         desc: "Conversations on guiding early-career professionals, campus-to-workplace transition, and empathetic leadership.",
         youtubeId: "8wSGKsWyQwk",
-        tag: "Hyderabad 2.0",
+        tag: "Hyderabad",
       },
     ],
-    photos: create24PhotoSlots("Hyderabad 2.0"),
+    photos: create24PhotoSlots("Hyderabad"),
   },
   "chennai-2": {
     id: "chennai-2",
     cycle: "2.0",
-    city: "Chennai (2.0)",
+    city: "Chennai",
     date: "July 2026",
-    editionBadge: "Allyship++ 2.0 — 3rd Edition",
+    editionBadge: "Allyship++ — 3rd Edition",
     coverImage: "/slides/CON01670.jpg",
     coverPosition: "50% 28%",
     subtitle:
       "Practicing Allyship as a Leadership Responsibility — Full panel deliberations, Olympic fireside conversation, and chapter gallery from Chennai.",
     videos: [
       {
-        title: "Chennai 2.0 | Panel: Practicing Allyship",
+        title: "Chennai | Panel: Practicing Allyship",
         desc: "Moderated by Archana Grover of Standard Chartered, with leaders from Rocket India, Foodhub, Nordex, KaarTech and Mphasis.",
         youtubeId: "yD0eEo0oh7A",
-        tag: "Chennai 2.0 Panel",
+        tag: "Chennai Panel",
       },
       {
-        title: "Chennai 2.0 | Fireside Chat with Premanand J.",
+        title: "Chennai | Fireside Chat with Premanand J.",
         desc: "Former international sprinter and Indian sprint coach for the Paris Olympics, on what sport teaches about leadership and mentorship.",
         youtubeId: "0vOCqqE4zbI",
         tag: "Sport & Leadership",
       },
     ],
-    photos: create24PhotoSlots("Chennai 2.0"),
+    photos: create24PhotoSlots("Chennai"),
   },
   "bengaluru-1": {
     id: "bengaluru-1",
     cycle: "1.0",
-    city: "Bengaluru (1.0)",
+    city: "Bengaluru",
     date: "June 2024",
-    editionBadge: "Allyship++ 1.0 — 1st Edition",
+    editionBadge: "Allyship++ — 1st Edition",
     coverImage: "/bengaluru-1.jpg",
     coverPosition: "50% 25%",
     subtitle:
       "Leadership and Collaboration Across Disciplines — Inaugural conclave dialogues with corporate and engineering leaders in Bengaluru.",
     videos: [],
-    photos: create24PhotoSlots("Bengaluru 1.0"),
+    photos: create24PhotoSlots("Bengaluru"),
   },
   "hyderabad-1": {
     id: "hyderabad-1",
     cycle: "1.0",
-    city: "Hyderabad (1.0)",
+    city: "Hyderabad",
     date: "July 2024",
-    editionBadge: "Allyship++ 1.0 — 2nd Edition",
+    editionBadge: "Allyship++ — 2nd Edition",
     coverImage: "/hyderabad-1.jpg",
     coverPosition: "50% 25%",
     subtitle:
@@ -253,36 +253,36 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
         title: "Hyderabad Chapter | Official Conclave Film",
         desc: "Highlights from the Hyderabad conclave: conversations on leadership, young talent, and industry–academia collaboration.",
         youtubeId: "8wSGKsWyQwk",
-        tag: "Hyderabad 1.0",
+        tag: "Hyderabad",
       },
     ],
-    photos: create24PhotoSlots("Hyderabad 1.0"),
+    photos: create24PhotoSlots("Hyderabad"),
   },
   "kolkata-1": {
     id: "kolkata-1",
     cycle: "1.0",
-    city: "Kolkata (1.0)",
+    city: "Kolkata",
     date: "September 2024",
-    editionBadge: "Allyship++ 1.0 — 3rd Edition",
+    editionBadge: "Allyship++ — 3rd Edition",
     coverImage: "/kolkata-1.jpg",
     coverPosition: "50% 25%",
     subtitle:
       "Leadership, Collaboration, and Workplace Inclusion — Dual-panel deliberations and sports legends tribute from the Kolkata chapter.",
     videos: [],
-    photos: create24PhotoSlots("Kolkata 1.0"),
+    photos: create24PhotoSlots("Kolkata"),
   },
   "mumbai-1": {
     id: "mumbai-1",
     cycle: "1.0",
-    city: "Mumbai (1.0)",
+    city: "Mumbai",
     date: "October 2025",
-    editionBadge: "Allyship++ 1.0 — 4th Edition",
+    editionBadge: "Allyship++ — 4th Edition",
     coverImage: "/mumbai-1.jpg",
     coverPosition: "50% 25%",
     subtitle:
       "Building Inclusive and Empowered Workplaces — High-performance culture and talent transformation insights from Mumbai.",
     videos: [],
-    photos: create24PhotoSlots("Mumbai 1.0"),
+    photos: create24PhotoSlots("Mumbai"),
   },
 };
 
@@ -1014,7 +1014,7 @@ function EventContent() {
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {(["bengaluru-2", "hyderabad-2", "chennai-2"] as const).map((chapterKey, idx) => {
+                    {(["bengaluru-2", "hyderabad-2", "chennai-2"] as const).map((chapterKey) => {
                       const archive = CHAPTER_ARCHIVES[chapterKey];
                       return (
                         <button
@@ -1050,7 +1050,7 @@ function EventContent() {
                           <div className="p-6 space-y-4 flex-1 flex flex-col justify-between">
                             <div>
                               <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent block mb-1">
-                                {archive.editionBadge} · Chapter 0{idx + 1}
+                                {archive.editionBadge}
                               </span>
                               <h4 className="font-display text-lg sm:text-xl font-bold tracking-normal text-content leading-snug group-hover:text-accent transition-colors">
                                 {archive.city} | Conclave Moments
@@ -1086,7 +1086,7 @@ function EventContent() {
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
-                    {(["bengaluru-1", "hyderabad-1", "kolkata-1", "mumbai-1"] as const).map((chapterKey, idx) => {
+                    {(["bengaluru-1", "hyderabad-1", "kolkata-1", "mumbai-1"] as const).map((chapterKey) => {
                       const archive = CHAPTER_ARCHIVES[chapterKey];
                       return (
                         <button
@@ -1122,7 +1122,7 @@ function EventContent() {
                           <div className="p-6 space-y-4 flex-1 flex flex-col justify-between">
                             <div>
                               <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent block mb-1">
-                                {archive.editionBadge} · Chapter 0{idx + 1}
+                                {archive.editionBadge}
                               </span>
                               <h4 className="font-display text-base sm:text-lg font-bold tracking-normal text-content leading-snug group-hover:text-accent transition-colors">
                                 {archive.city} | Conclave Moments
