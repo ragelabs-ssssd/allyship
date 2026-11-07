@@ -279,11 +279,6 @@ export function TimelineShowcase() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-surface-dark/95 via-surface-dark/20 to-transparent" />
 
-                {/* Highway Exit Sign Stamp */}
-                <div className="absolute top-4 left-4 px-3 py-1.5 rounded-lg bg-emerald-600 text-white font-mono text-xs font-black tracking-wider uppercase shadow-lg border border-emerald-400/40 flex items-center gap-1.5">
-                  <span>{node.exitNumber}</span>
-                </div>
-
                 <div className="absolute bottom-3 left-4 right-4">
                   <span className="text-sm font-mono text-[#F4E8C1] font-bold block">
                     {node.acronym}
