@@ -1,15 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
-import {
-  ArrowRight,
-  Maximize2,
-  MapPin,
-  Building2,
-  Calendar,
-  Layers,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export interface InstitutionNode {
   id: string;
@@ -214,8 +207,6 @@ export const INSTITUTION_NODES: InstitutionNode[] = [
 ];
 
 export function TimelineShowcase() {
-  const [lightboxImg, setLightboxImg] = useState<string | null>(null);
-
   return (
     <div id="timeline" className="space-y-12 scroll-mt-28">
       {/* 2 Key Metric Pillars */}
@@ -278,15 +269,12 @@ export function TimelineShowcase() {
             {/* Gantry Billboard Card */}
             <div className="rounded-3xl bg-surface-2 border border-line hover:border-accent overflow-hidden transition-all duration-300 shadow-xl grid grid-cols-1 lg:grid-cols-12 items-stretch">
               {/* Photo Billboard */}
-              <div
-                onClick={() => setLightboxImg(node.image)}
-                className="lg:col-span-5 relative min-h-[240px] sm:min-h-[280px] bg-surface-3 cursor-pointer group/photo overflow-hidden"
-              >
+              <div className="lg:col-span-5 relative min-h-[240px] sm:min-h-[280px] bg-surface-3 overflow-hidden">
                 <Image
                   src={node.image}
                   alt={node.title}
                   fill
-                  className="object-cover group-hover/photo:scale-105 transition-transform duration-500"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 1024px) 100vw, 42vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-surface-dark/95 via-surface-dark/20 to-transparent" />
@@ -296,12 +284,9 @@ export function TimelineShowcase() {
                   <span>{node.exitNumber}</span>
                 </div>
 
-                <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between">
-                  <span className="text-sm font-mono text-[#F4E8C1] font-bold">
+                <div className="absolute bottom-3 left-4 right-4">
+                  <span className="text-sm font-mono text-[#F4E8C1] font-bold block">
                     {node.acronym}
-                  </span>
-                  <span className="text-[10px] font-mono text-white/90 bg-black/70 backdrop-blur-sm px-2.5 py-1 rounded-md border border-white/20">
-                    Expand Photo ↗
                   </span>
                 </div>
               </div>
@@ -341,40 +326,6 @@ export function TimelineShowcase() {
           </div>
         ))}
       </div>
-
-      {/* Lightbox Zoom Modal */}
-      {lightboxImg && (
-        <div
-          className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-8 animate-fadeIn"
-          onClick={() => setLightboxImg(null)}
-        >
-          <div
-            className="relative max-w-5xl w-full max-h-[85vh] bg-surface-2 rounded-2xl overflow-hidden border border-line shadow-2xl flex flex-col"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="p-4 border-b border-line flex items-center justify-between">
-              <span className="font-mono text-xs text-accent font-bold">
-                CAMPUS ARCHITECTURAL PHOTOGRAPH
-              </span>
-              <button
-                onClick={() => setLightboxImg(null)}
-                className="text-xs font-mono px-3 py-1 rounded-lg bg-surface-3 hover:bg-surface border border-line text-content"
-              >
-                Close ✕
-              </button>
-            </div>
-            <div className="relative w-full h-[65vh] bg-black">
-              <Image
-                src={lightboxImg}
-                alt="Institutional campus photograph"
-                fill
-                className="object-contain"
-                sizes="100vw"
-              />
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
