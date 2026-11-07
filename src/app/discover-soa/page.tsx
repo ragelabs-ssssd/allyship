@@ -33,6 +33,7 @@ import { HeroBackdrop, SOA_VIDEO_SRC } from "@/components/HeroBackdrop";
 import { NirfRankingsShowcase } from "@/components/discover/NirfRankingsShowcase";
 import { AccreditationsShowcase } from "@/components/discover/AccreditationsShowcase";
 import { TimelineShowcase } from "@/components/discover/TimelineShowcase";
+import { GlobalRankingsShowcase } from "@/components/discover/GlobalRankingsShowcase";
 
 // 1. NIRF Rankings 2025 Data
 const nirfRankings2025 = [
@@ -339,114 +340,7 @@ export default function DiscoverSoaPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-          {/* QS World University Rankings Card */}
-          <div className="rounded-3xl p-8 bg-surface-2 border border-line hover:border-accent/60 transition-all shadow-xl space-y-6 flex flex-col justify-between">
-            <div className="space-y-4">
-              <div className="flex items-center justify-between pb-4 border-b border-line">
-                <div>
-                  <span className="text-[11px] font-bold font-heading uppercase tracking-widest text-[#E8D5A7]">
-                    Quacquarelli Symonds
-                  </span>
-                  <h3 className="font-heading text-xl sm:text-2xl font-bold text-content mt-0.5">
-                    QS World University Rankings
-                  </h3>
-                </div>
-                <span className="px-3 py-1 rounded-full bg-accent/15 border border-accent/40 text-accent font-bold text-xs">
-                  Global
-                </span>
-              </div>
-
-              <div className="divide-y divide-line/60">
-                {qsRankings.map((r) => (
-                  <div key={r.metric} className="py-3 flex items-center justify-between text-xs sm:text-sm">
-                    <span className="text-content-secondary font-medium">{r.metric}</span>
-                    <span className="text-accent font-mono font-bold text-sm sm:text-base">
-                      {r.value}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="pt-4 border-t border-line flex items-center justify-between text-xs text-content-muted">
-              <span>Verified QS Intelligence Unit Data</span>
-              <span className="text-accent font-semibold">Ranked #80 in Southern Asia</span>
-            </div>
-          </div>
-
-          {/* THE World University Rankings Card */}
-          <div className="rounded-3xl p-8 bg-surface-2 border border-line hover:border-accent/60 transition-all shadow-xl space-y-6 flex flex-col justify-between">
-            <div className="space-y-4">
-              <div className="flex items-center justify-between pb-4 border-b border-line">
-                <div>
-                  <span className="text-[11px] font-bold font-heading uppercase tracking-widest text-[#E8D5A7]">
-                    Times Higher Education
-                  </span>
-                  <h3 className="font-heading text-xl sm:text-2xl font-bold text-content mt-0.5">
-                    THE World University Rankings
-                  </h3>
-                </div>
-                <span className="px-3 py-1 rounded-full bg-accent/15 border border-accent/40 text-accent font-bold text-xs">
-                  Global
-                </span>
-              </div>
-
-              <div className="divide-y divide-line/60">
-                {theRankings.map((r) => (
-                  <div key={r.metric} className="py-3 flex items-center justify-between text-xs sm:text-sm">
-                    <span className="text-content-secondary font-medium">{r.metric}</span>
-                    <span className="text-accent font-mono font-bold text-sm sm:text-base">
-                      {r.value}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="pt-4 border-t border-line flex items-center justify-between text-xs text-content-muted">
-              <span>Top 4 in India in World Reputation Rankings</span>
-              <span className="text-accent font-semibold">201–300 Reputational</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Swachhata & QS I-GAUGE Row */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-          <div className="p-6 rounded-2xl bg-surface-2 border border-line flex items-center gap-5">
-            <div className="w-14 h-14 rounded-2xl bg-accent-subtle border border-accent/40 text-accent flex items-center justify-center shrink-0">
-              <Landmark className="w-7 h-7" />
-            </div>
-            <div className="space-y-1">
-              <span className="text-[10px] font-bold font-heading uppercase tracking-wider text-accent">
-                MHRD · Government of India
-              </span>
-              <h4 className="font-heading text-base font-bold text-content">
-                Swachhata India Rankings
-              </h4>
-              <p className="text-xs text-content-secondary">
-                Ranked <strong>3rd in 2018</strong> (Technical Institution category) &amp; <strong>5th in 2019</strong> (Residential University category).
-              </p>
-            </div>
-          </div>
-
-          <div className="p-6 rounded-2xl bg-surface-2 border border-line flex items-center gap-5">
-            <div className="w-14 h-14 rounded-2xl bg-accent-subtle border border-accent/40 text-accent flex items-center justify-center shrink-0 font-bold text-xl">
-              💎
-            </div>
-            <div className="space-y-1">
-              <span className="text-[10px] font-bold font-heading uppercase tracking-wider text-accent">
-                QS I-GAUGE Indian University Rating
-              </span>
-              <h4 className="font-heading text-base font-bold text-content">
-                Diamond Rated University
-              </h4>
-              <p className="text-xs text-content-secondary">
-                Conferred the prestigious <strong>Diamond Rating</strong> for excellence across teaching, facilities, governance, and graduate employability.
-              </p>
-            </div>
-          </div>
-        </div>
+        <GlobalRankingsShowcase />
       </section>
 
       {/* 4. ACCREDITATIONS & MAJOR RECOGNITIONS (Screenshots 3 & 4) */}
