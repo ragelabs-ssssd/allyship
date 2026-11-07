@@ -564,7 +564,7 @@ function EventContent() {
           aria-label="Conclave sections"
           className="py-2.5 px-4 mx-auto w-fit max-w-[calc(100vw-2rem)] rounded-full bg-canvas/90 backdrop-blur-md border border-line shadow-2xl flex items-center justify-start sm:justify-center gap-2 sm:gap-3 overflow-x-auto"
         >
-          {(["Chapters", "Speakers", "Themes", "Videos"] as const).map((t) => (
+          {(["Chapters", "Speakers", "Videos", "Themes"] as const).map((t) => (
             <button
               key={t}
               type="button"
