@@ -2,12 +2,8 @@
 
 import React, { useState } from "react";
 import {
-  ShieldCheck,
-  Award,
   CheckCircle2,
-  Maximize2,
   Sparkles,
-  ArrowUpRight,
   Star,
 } from "lucide-react";
 
@@ -230,15 +226,7 @@ export function AccreditationsShowcase({ onOpenSlide }: AccreditationsShowcasePr
 
           <div className="pt-4 border-t border-line/80 relative z-10 flex items-center justify-between text-xs font-mono">
             <span className="text-content-muted">Section 12(B) Central Assistance Fit</span>
-            {onOpenSlide && (
-              <button
-                onClick={() => onOpenSlide("/discover/major-recognitions.jpg")}
-                className="text-accent hover:underline inline-flex items-center gap-1 font-semibold"
-              >
-                <span>View Official UGC Slide</span>
-                <ArrowUpRight className="w-3.5 h-3.5" />
-              </button>
-            )}
+            <span className="text-accent font-semibold">UGC Act 1956 Validated</span>
           </div>
         </div>
 
@@ -278,15 +266,7 @@ export function AccreditationsShowcase({ onOpenSlide }: AccreditationsShowcasePr
 
           <div className="pt-4 border-t border-line/80 relative z-10 flex items-center justify-between text-xs font-mono">
             <span className="text-content-muted">Top Tier in Indian Higher Education</span>
-            {onOpenSlide && (
-              <button
-                onClick={() => onOpenSlide("/discover/accreditations.jpg")}
-                className="text-accent hover:underline inline-flex items-center gap-1 font-semibold"
-              >
-                <span>View NAAC Certificate</span>
-                <ArrowUpRight className="w-3.5 h-3.5" />
-              </button>
-            )}
+            <span className="text-accent font-semibold">CGPA 3.88 Validated</span>
           </div>
         </div>
       </div>
