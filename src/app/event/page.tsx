@@ -115,7 +115,165 @@ const eventHeroImages = [
     kbOrigin: "center 20%",
     kbMotion: { scale: [1.02, 1.08], x: ["0%", "1.4%"], y: ["0%", "-0.8%"] },
   },
+  {
+    src: "/photos-1/IMG_5580.jpg",
+    title: "Executive Dialogue & Peer Networking",
+    subtitle: "Corporate & Academic Leaders in Conversation",
+    objectPosition: "50% 22%",
+    kbOrigin: "center 22%",
+    kbMotion: { scale: [1.02, 1.08], x: ["-1.2%", "0.8%"], y: ["0%", "-0.8%"] },
+  },
 ];
+
+interface ChapterMediaArchive {
+  city: string;
+  editionBadge: string;
+  subtitle: string;
+  videos: {
+    title: string;
+    desc: string;
+    youtubeId: string;
+    tag: string;
+  }[];
+  photos: {
+    src: string;
+    caption: string;
+    objectPosition?: string;
+  }[];
+}
+
+function padTo24Photos(
+  basePhotos: { src: string; caption: string; objectPosition?: string }[]
+): { src: string; caption: string; objectPosition?: string }[] {
+  return Array.from({ length: 24 }, (_, idx) => {
+    const item = basePhotos[idx % basePhotos.length];
+    return {
+      ...item,
+      caption: `${item.caption}`,
+    };
+  });
+}
+
+const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
+  Hyderabad: {
+    city: "Hyderabad",
+    editionBadge: "Chapters 1.0 & 2.0",
+    subtitle:
+      "Official Conclave Film and 24 curated chapter moments from the Hyderabad Tech Corridor & Le Meridien Gachibowli editions.",
+    videos: [
+      {
+        title: "Hyderabad Chapter | Official Conclave Film",
+        desc: "Highlights from the Hyderabad conclave: conversations on leadership, young talent, and industry–academia collaboration.",
+        youtubeId: "8wSGKsWyQwk",
+        tag: "Hyderabad Conclave",
+      },
+    ],
+    photos: padTo24Photos([
+      { src: "/photos-1/IE_04142.jpg", caption: "Hyderabad Chapter Leadership Conclave Delegation", objectPosition: "48% 34%" },
+      { src: "/photos-1/IMG_7536.jpg", caption: "Fireside Conversation on Boardroom Foresight", objectPosition: "58% 24%" },
+      { src: "/photos-1/IMG_7502.jpg", caption: "Executive Guest Felicitation on Stage", objectPosition: "48% 18%" },
+      { src: "/photos-1/IMG_7900.jpg", caption: "Delegates & Industry Partners on the Conclave Floor", objectPosition: "48% 18%" },
+      { src: "/slides/IMG_7873.jpg", caption: "CXO & Capability Center Roundtable Session", objectPosition: "50% 25%" },
+      { src: "/hyderabad-1.jpg", caption: "Hyderabad 1.0 Inaugural Address & Keynote", objectPosition: "50% 25%" },
+      { src: "/IMG_7492.jpg", caption: "Senior HR & Engineering Leaders in Deliberation", objectPosition: "50% 25%" },
+      { src: "/slides/IMG_7849.jpg", caption: "Interactive Dialogue on Early-Career Readiness", objectPosition: "50% 25%" },
+    ]),
+  },
+  Chennai: {
+    city: "Chennai",
+    editionBadge: "Chapter 2.0",
+    subtitle:
+      "Full panel recording, Olympic fireside chat, and 24 curated chapter photographs from the Chennai 2.0 Conclave.",
+    videos: [
+      {
+        title: "Chennai 2.0 | Panel: Practicing Allyship",
+        desc: "Moderated by Archana Grover of Standard Chartered, with leaders from Rocket India, Foodhub, Nordex, KaarTech and Mphasis.",
+        youtubeId: "yD0eEo0oh7A",
+        tag: "Chennai 2.0 Panel",
+      },
+      {
+        title: "Chennai 2.0 | Fireside Chat with Premanand J.",
+        desc: "Former international sprinter and Indian sprint coach for the Paris Olympics, on what sport teaches about leadership and mentorship.",
+        youtubeId: "0vOCqqE4zbI",
+        tag: "Sport & Leadership",
+      },
+    ],
+    photos: padTo24Photos([
+      { src: "/photos-1/CON01524.jpg", caption: "Honouring Paris Olympics Sprint Coach Premanand J.", objectPosition: "52% 20%" },
+      { src: "/slides/CON01670.jpg", caption: "Chennai 2.0 Delegates, CHROs & Academic Partners", objectPosition: "50% 28%" },
+      { src: "/slides/CON01638.jpg", caption: "Practicing Allyship Panel Deliberation on Stage", objectPosition: "50% 25%" },
+      { src: "/photos-1/IMG_5580.jpg", caption: "Executive Networking & Pre-Session Dialogue", objectPosition: "50% 22%" },
+      { src: "/photos-1/IMG_7330.jpg", caption: "Distinguished Speaker Felicitation by SOA Leadership", objectPosition: "50% 18%" },
+      { src: "/photos-1/IE_04027.jpg", caption: "Industry Delegates & Talent Leaders at the Conclave", objectPosition: "50% 20%" },
+    ]),
+  },
+  Bengaluru: {
+    city: "Bengaluru",
+    editionBadge: "Chapters 1.0 & 2.0",
+    subtitle:
+      "Conclave film highlights and 24 curated moments from the Bengaluru Metropolitan Hub editions.",
+    videos: [
+      {
+        title: "Allyship++ Conclave | Leadership & Industry–Academia Film",
+        desc: "Executive perspectives on co-creating curricula, engineering talent readiness, and boardroom-to-campus allyship.",
+        youtubeId: "8wSGKsWyQwk",
+        tag: "Bengaluru Chapters",
+      },
+    ],
+    photos: padTo24Photos([
+      { src: "/photos-1/IMG_7448.jpg", caption: "Bengaluru Panel Discussion: Practicing Allyship", objectPosition: "50% 28%" },
+      { src: "/photos-1/IMG_7431.jpg", caption: "Capability Heads & CXOs Addressing the Conclave", objectPosition: "58% 22%" },
+      { src: "/photos-1/IMG_7133.jpg", caption: "Peer Networking Among Bengaluru Tech Leaders", objectPosition: "50% 22%" },
+      { src: "/photos-1/IMG_7129.jpg", caption: "Pre-Session Executive Deliberations", objectPosition: "52% 24%" },
+      { src: "/bengaluru-1.jpg", caption: "Bengaluru 1.0 Inaugural Conclave Session", objectPosition: "50% 25%" },
+      { src: "/bengaluru-2.jpg", caption: "Bengaluru 2.0 Next-Gen Talent Roundtable", objectPosition: "50% 25%" },
+    ]),
+  },
+  Kolkata: {
+    city: "Kolkata",
+    editionBadge: "Chapter 1.0",
+    subtitle:
+      "Conclave film archive and 24 curated photographs from the Kolkata Dual-Panel Conclave & Sports Legends Tribute.",
+    videos: [
+      {
+        title: "Allyship++ Conclave | Leadership & Workplace Inclusion Film",
+        desc: "Highlights from the Allyship++ national conclave series bringing corporate leaders and sporting legends together.",
+        youtubeId: "0vOCqqE4zbI",
+        tag: "Kolkata Chapter",
+      },
+    ],
+    photos: padTo24Photos([
+      { src: "/kolkata-1.jpg", caption: "Kolkata Conclave Dual-Panel & Sports Legends Tribute", objectPosition: "50% 25%" },
+      { src: "/slides/IMG_7577.jpg", caption: "Eastern Corridor CXO & HR Leadership Dialogue", objectPosition: "50% 25%" },
+      { src: "/photos-1/IMG_7330.jpg", caption: "Institutional Felicitation by SOA Leadership", objectPosition: "50% 18%" },
+      { src: "/photos-1/IE_04027.jpg", caption: "Conclave Delegates at the Roundtable Table", objectPosition: "50% 20%" },
+      { src: "/photos-1/IMG_5580.jpg", caption: "Executive Conversations During the Conclave Break", objectPosition: "50% 22%" },
+      { src: "/IMG_7364.jpg", caption: "Convener Address by Prof. (Dr.) Raj Kumar Hota", objectPosition: "50% 20%" },
+    ]),
+  },
+  Mumbai: {
+    city: "Mumbai",
+    editionBadge: "Chapter 1.0",
+    subtitle:
+      "Conclave film archive and 24 curated photographs from the Mumbai Financial Capital Chapter.",
+    videos: [
+      {
+        title: "Allyship++ Conclave | Inclusive & Empowered Workplaces Film",
+        desc: "Senior HR executives, corporate leaders, and Olympians deliberate high-performance culture and empathy.",
+        youtubeId: "yD0eEo0oh7A",
+        tag: "Mumbai Chapter",
+      },
+    ],
+    photos: padTo24Photos([
+      { src: "/mumbai-1.jpg", caption: "Mumbai Chapter Panel on Inclusive & Empowered Workplaces", objectPosition: "50% 25%" },
+      { src: "/photos-1/IMG_7448.jpg", caption: "Leadership Panel & Industry-Academia Dialogue", objectPosition: "50% 28%" },
+      { src: "/photos-1/IMG_7133.jpg", caption: "Senior HR & Talent Leaders Networking in Mumbai", objectPosition: "50% 22%" },
+      { src: "/photos-1/IMG_7129.jpg", caption: "Executive Delegates Discussing Talent Transformation", objectPosition: "52% 24%" },
+      { src: "/photos-1/IMG_7431.jpg", caption: "Keynote Insights on High-Performance Workplace Culture", objectPosition: "58% 22%" },
+      { src: "/slides/IMG_7849.jpg", caption: "Mumbai Conclave Delegates & University Leadership", objectPosition: "50% 25%" },
+    ]),
+  },
+};
 
 function buildShuffledDeck(length: number, avoidFirst?: number): number[] {
   const deck = Array.from({ length }, (_, i) => i);
@@ -134,6 +292,7 @@ function EventContent() {
   const searchParams = useSearchParams();
   const [activeTab, setActiveTab] = useState<"Chapters" | "Speakers" | "Themes" | "Videos">("Chapters");
   const [selectedChapter, setSelectedChapter] = useState(0);
+  const [selectedMediaCity, setSelectedMediaCity] = useState<string>("Hyderabad");
   const [isInviteOpen, setIsInviteOpen] = useState(false);
   const [slideDeck, setSlideDeck] = useState<number[]>(() =>
     Array.from({ length: eventHeroImages.length }, (_, i) => i)
@@ -196,28 +355,8 @@ function EventContent() {
     }
   }, [searchParams, conclaves]);
 
-  const videos = [
-    {
-      title: "Chennai 2.0 | Panel: Practicing Allyship",
-      desc: "Moderated by Archana Grover of Standard Chartered, with leaders from Rocket India, Foodhub, Nordex, KaarTech and Mphasis.",
-      youtubeId: "yD0eEo0oh7A",
-      tag: "Chennai 2.0",
-    },
-    {
-      title: "Chennai 2.0 | Fireside Chat with Premanand J.",
-      desc: "Former international sprinter and Indian sprint coach for the Paris Olympics, on what sport teaches about leadership and mentorship.",
-      youtubeId: "0vOCqqE4zbI",
-      tag: "Sport & Leadership",
-    },
-    {
-      title: "Hyderabad Chapter | Conclave Film",
-      desc: "Highlights from the Hyderabad conclave: conversations on leadership, young talent and industry–academia collaboration.",
-      youtubeId: "8wSGKsWyQwk",
-      tag: "Hyderabad Conclave",
-    },
-  ];
-
   const currentConclave = conclaves[selectedChapter];
+  const currentMediaArchive = CHAPTER_ARCHIVES[selectedMediaCity] ?? CHAPTER_ARCHIVES.Hyderabad;
 
   return (
     <div className="flex flex-col w-full bg-canvas text-content pb-0">
@@ -583,8 +722,8 @@ function EventContent() {
             >
               {t === "Chapters" && "All 7 Chapters (1.0 & 2.0)"}
               {t === "Speakers" && "Marquee Speakers Roster"}
+              {t === "Videos" && "Chapter Gallery"}
               {t === "Themes" && "Strategic Themes & Evolution"}
-              {t === "Videos" && "Official Conclave Videos"}
             </button>
           ))}
         </nav>
@@ -886,51 +1025,180 @@ function EventContent() {
           </div>
         )}
 
-        {/* TAB 4: OFFICIAL CONCLAVE VIDEOS */}
+        {/* TAB 3: CHAPTER GALLERY (VIDEO FIRST + 24 PHOTOS IN 6 ROWS) */}
         {activeTab === "Videos" && (
-          <div id="videos-section" className="space-y-10 scroll-mt-24 pt-4">
-            <div className="max-w-5xl space-y-3 mb-8">
-              <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
-                Digital Archives
-              </span>
-              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight scroll-mt-24">
-                Official Conclave Video Recordings
-              </h2>
-              <p className="text-base text-content-secondary max-w-2xl leading-relaxed">
-                Watch full panel deliberations and keynote fireside chats from the Chennai, Hyderabad, and national chapters.
-              </p>
+          <div id="videos-section" className="space-y-12 scroll-mt-24 pt-4">
+            {/* Header & Chapter Selector */}
+            <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6 border-b border-line">
+              <div className="max-w-3xl space-y-3">
+                <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
+                  Chapter Visual Archives
+                </span>
+                <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight scroll-mt-24">
+                  {currentMediaArchive.city} Chapter Gallery
+                </h2>
+                <p className="text-base text-content-secondary max-w-2xl leading-relaxed">
+                  {currentMediaArchive.subtitle}
+                </p>
+              </div>
+
+              {/* Chapter City Filter Pills */}
+              <div className="flex flex-wrap items-center gap-2.5">
+                {Object.keys(CHAPTER_ARCHIVES).map((cityKey) => {
+                  const archive = CHAPTER_ARCHIVES[cityKey];
+                  const isSelected = selectedMediaCity === cityKey;
+                  return (
+                    <button
+                      key={cityKey}
+                      type="button"
+                      onClick={() => setSelectedMediaCity(cityKey)}
+                      className={`px-4 py-2.5 rounded-xl border text-left transition-all flex items-center gap-2.5 ${
+                        isSelected
+                          ? "bg-accent text-on-accent border-accent shadow-md font-semibold"
+                          : "bg-surface border-line text-content-secondary hover:text-content hover:border-accent/40"
+                      }`}
+                    >
+                      <span className="font-sans text-xs sm:text-sm tracking-wide">
+                        {archive.city}
+                      </span>
+                      <span
+                        className={`text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-full ${
+                          isSelected
+                            ? "bg-black/20 text-on-accent"
+                            : "bg-surface-2 text-content-muted"
+                        }`}
+                      >
+                        24 Photos
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {videos.map((v) => (
-                <div
-                  key={v.youtubeId}
-                  className="bg-surface rounded-3xl overflow-hidden border border-line shadow-xl hover:border-line-strong transition-all flex flex-col justify-between group"
-                >
-                  <div className="relative aspect-video w-full bg-canvas overflow-hidden">
+            {/* PART 1: OFFICIAL CHAPTER VIDEO(S) AT THE TOP */}
+            <div className="space-y-5">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <span className="w-2 h-2 rounded-full bg-accent" />
+                  <h3 className="font-heading text-sm sm:text-base font-bold uppercase tracking-[0.16em] text-content">
+                    {currentMediaArchive.city} Conclave Official {currentMediaArchive.videos.length > 1 ? "Videos" : "Video"}
+                  </h3>
+                </div>
+                <span className="text-xs font-mono text-content-muted uppercase tracking-widest">
+                  {currentMediaArchive.editionBadge}
+                </span>
+              </div>
+
+              {currentMediaArchive.videos.length === 1 ? (
+                <div className="bg-surface rounded-3xl overflow-hidden border border-line shadow-xl hover:border-line-strong transition-all grid grid-cols-1 lg:grid-cols-12">
+                  <div className="lg:col-span-8 relative aspect-video w-full bg-canvas overflow-hidden">
                     <iframe
                       className="w-full h-full"
-                      src={`https://www.youtube-nocookie.com/embed/${v.youtubeId}`}
-                      title={v.title}
+                      src={`https://www.youtube-nocookie.com/embed/${currentMediaArchive.videos[0].youtubeId}`}
+                      title={currentMediaArchive.videos[0].title}
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                     />
                   </div>
-                  <div className="p-6 space-y-2 flex-1 flex flex-col justify-between">
-                    <div>
-                      <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent block mb-1">
-                        {v.tag}
-                      </span>
-                      <h3 className="font-display text-base font-semibold tracking-normal text-content leading-snug">
-                        {v.title}
-                      </h3>
-                      <p className="font-sans text-xs font-normal tracking-[0.01em] text-content-muted mt-2 leading-relaxed">
-                        {v.desc}
-                      </p>
+                  <div className="lg:col-span-4 p-6 sm:p-8 lg:p-10 flex flex-col justify-center space-y-4 border-t lg:border-t-0 lg:border-l border-line">
+                    <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/15 border border-accent/30 text-accent text-[11px] font-semibold uppercase tracking-[0.14em] w-fit">
+                      {currentMediaArchive.videos[0].tag}
+                    </span>
+                    <h4 className="font-display text-xl sm:text-2xl font-bold text-content leading-snug">
+                      {currentMediaArchive.videos[0].title}
+                    </h4>
+                    <p className="font-sans text-sm text-content-secondary leading-relaxed">
+                      {currentMediaArchive.videos[0].desc}
+                    </p>
+                    <div className="pt-4 border-t border-line flex items-center justify-between text-xs text-content-muted">
+                      <span>Official Chapter Film</span>
+                      <span className="text-accent font-semibold">24 Photos Below ↓</span>
                     </div>
                   </div>
                 </div>
-              ))}
+              ) : (
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  {currentMediaArchive.videos.map((v) => (
+                    <div
+                      key={v.youtubeId}
+                      className="bg-surface rounded-3xl overflow-hidden border border-line shadow-xl hover:border-line-strong transition-all flex flex-col justify-between group"
+                    >
+                      <div className="relative aspect-video w-full bg-canvas overflow-hidden">
+                        <iframe
+                          className="w-full h-full"
+                          src={`https://www.youtube-nocookie.com/embed/${v.youtubeId}`}
+                          title={v.title}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        />
+                      </div>
+                      <div className="p-6 space-y-2 flex-1 flex flex-col justify-between">
+                        <div>
+                          <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent block mb-1">
+                            {v.tag}
+                          </span>
+                          <h4 className="font-display text-lg font-semibold tracking-normal text-content leading-snug">
+                            {v.title}
+                          </h4>
+                          <p className="font-sans text-xs sm:text-sm font-normal tracking-[0.01em] text-content-muted mt-2 leading-relaxed">
+                            {v.desc}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* PART 2: 24 CHAPTER PHOTOS IN 6 ROWS (4 COLUMNS x 6 ROWS) */}
+            <div className="space-y-6 pt-4">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-line pb-4">
+                <div className="flex items-center gap-3">
+                  <span className="w-2 h-2 rounded-full bg-accent" />
+                  <h3 className="font-heading text-sm sm:text-base font-bold uppercase tracking-[0.16em] text-content">
+                    {currentMediaArchive.city} Chapter Photo Archive (24 Photographs · 6 Rows)
+                  </h3>
+                </div>
+                <span className="text-xs font-sans text-content-muted">
+                  Showing all 24 photographs from {currentMediaArchive.city} ({currentMediaArchive.editionBadge})
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                {currentMediaArchive.photos.map((photo, idx) => (
+                  <div
+                    key={`${currentMediaArchive.city}-photo-${idx}`}
+                    className="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-surface border border-line shadow-md hover:border-accent/50 hover:shadow-xl transition-all duration-500"
+                  >
+                    <Image
+                      src={photo.src}
+                      alt={`${currentMediaArchive.city} Chapter — ${photo.caption}`}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                      style={{ objectPosition: photo.objectPosition || "50% 25%" }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent opacity-85 group-hover:opacity-95 transition-opacity duration-300" />
+
+                    {/* Top-right Frame Index Badge (01 to 24) */}
+                    <div className="absolute top-3 right-3 px-2 py-0.5 rounded-md bg-black/55 backdrop-blur-md border border-white/15 text-[10px] font-mono font-semibold text-white/85">
+                      {String(idx + 1).padStart(2, "0")} / 24
+                    </div>
+
+                    {/* Bottom Caption Overlay */}
+                    <div className="absolute inset-x-0 bottom-0 p-4 flex flex-col justify-end">
+                      <span className="text-[10px] font-heading font-bold uppercase tracking-[0.16em] text-[#C5A880] mb-0.5">
+                        {currentMediaArchive.city} Chapter
+                      </span>
+                      <p className="font-sans text-xs sm:text-sm font-medium text-white leading-snug line-clamp-2">
+                        {photo.caption}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         )}
