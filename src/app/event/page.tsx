@@ -26,19 +26,59 @@ import { conclavesData } from "@/data/conclaves";
 
 const eventHeroImages = [
   {
-    src: "/IMG_7492.jpg",
-    title: "Hyderabad Chapter: Delegates in Session",
-    subtitle: "Industry and Academia in One Room",
+    src: "/photos-1/IMG_7448.jpg",
+    title: "Executive Panel Discussion: Practicing Allyship",
+    subtitle: "Industry Leaders & Academic Leadership on Stage",
   },
   {
-    src: "/CON01670.JPG",
-    title: "Chennai 2.0: Delegates and Partners",
-    subtitle: "HR Leaders, Academicians and Industry Guests",
+    src: "/photos-1/CON01524.jpg",
+    title: "Chennai 2.0: Honouring Sporting Excellence",
+    subtitle: "Indian Olympic Sprint Coach Premanand J. & SOA Leadership",
   },
   {
-    src: "/CON01638.JPG",
-    title: "Chennai 2.0: On Stage",
-    subtitle: "Practicing Allyship",
+    src: "/photos-1/IMG_7536.jpg",
+    title: "Hyderabad 2.0: Fireside Conversation",
+    subtitle: "Boardroom Foresight & Talent Transformation",
+  },
+  {
+    src: "/photos-1/IMG_7502.jpg",
+    title: "Hyderabad 2.0: Executive Guest Felicitation",
+    subtitle: "Strengthening Bilateral Industry-Academia Ties",
+  },
+  {
+    src: "/photos-1/IE_04142.jpg",
+    title: "Hyderabad Chapter: Leadership Conclave",
+    subtitle: "Senior Delegates & University Leadership",
+  },
+  {
+    src: "/photos-1/IMG_7431.jpg",
+    title: "Conclave Panel: Future-Ready Talent Ecosystems",
+    subtitle: "CXOs & Capability Heads in Deliberation",
+  },
+  {
+    src: "/photos-1/IMG_7330.jpg",
+    title: "Distinguished Speaker Felicitation",
+    subtitle: "Siksha 'O' Anusandhan Leadership Conclave",
+  },
+  {
+    src: "/photos-1/IMG_7133.jpg",
+    title: "Executive Networking & Peer Dialogue",
+    subtitle: "CHROs, Engineering Heads & Academic Leaders",
+  },
+  {
+    src: "/photos-1/IMG_7129.jpg",
+    title: "Pre-Session Executive Deliberations",
+    subtitle: "Building Long-Term Institutional Pipelines",
+  },
+  {
+    src: "/photos-1/IE_04027.jpg",
+    title: "Conclave Delegates & Industry Partners",
+    subtitle: "Collaborative Dialogue Across Commercial Hubs",
+  },
+  {
+    src: "/photos-1/IMG_7900.jpg",
+    title: "Hyderabad 2.0: Community & Camaraderie",
+    subtitle: "Moments from the Executive Conclave Floor",
   },
 ];
 
