@@ -1,11 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  CheckCircle2,
-  Sparkles,
-  Star,
-} from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 
 export interface RecognitionItem {
   id: string;
@@ -203,9 +199,8 @@ export function AccreditationsShowcase({ onOpenSlide }: AccreditationsShowcasePr
 
           <div className="space-y-5 relative z-10">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-mono uppercase tracking-widest text-accent font-bold px-3 py-1 rounded-full bg-accent/10 border border-accent/40 flex items-center gap-1.5">
-                <Star className="w-3.5 h-3.5 fill-accent" />
-                <span>APEX STATUTORY AUTONOMY</span>
+              <span className="text-xs font-mono uppercase tracking-widest text-accent font-bold px-3 py-1 rounded-full bg-accent/10 border border-accent/40">
+                APEX STATUTORY AUTONOMY
               </span>
               <span className="text-xs font-mono text-content-muted font-bold">GOVT. OF INDIA</span>
             </div>
@@ -235,9 +230,8 @@ export function AccreditationsShowcase({ onOpenSlide }: AccreditationsShowcasePr
 
           <div className="space-y-5 relative z-10">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-mono uppercase tracking-widest text-accent font-bold px-3 py-1 rounded-full bg-accent/10 border border-accent/40 flex items-center gap-1.5">
-                <Sparkles className="w-3.5 h-3.5" />
-                <span>NATIONAL ACCREDITATION COUNCIL</span>
+              <span className="text-xs font-mono uppercase tracking-widest text-accent font-bold px-3 py-1 rounded-full bg-accent/10 border border-accent/40">
+                NATIONAL ACCREDITATION COUNCIL
               </span>
               <span className="text-xs font-mono text-accent font-bold px-2.5 py-1 rounded-lg bg-surface-3 border border-line">
                 GRADE A++ · CGPA 3.88

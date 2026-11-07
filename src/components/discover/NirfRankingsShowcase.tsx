@@ -8,7 +8,6 @@ import {
   ShieldCheck,
   CheckCircle2,
   ArrowUpRight,
-  Sparkles,
   ChevronRight,
   TrendingUp,
   Cpu,
