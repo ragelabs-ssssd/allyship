@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState, useEffect, Suspense } from "react";
+import React, { useState, useEffect, useCallback, Suspense } from "react";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Calendar,
   Clock,
@@ -16,6 +17,7 @@ import {
   Award,
   Medal,
   ExternalLink,
+  ChevronLeft,
   ChevronRight,
   ShieldCheck,
   Video,
@@ -29,56 +31,89 @@ const eventHeroImages = [
     src: "/photos-1/IMG_7448.jpg",
     title: "Executive Panel Discussion: Practicing Allyship",
     subtitle: "Industry Leaders & Academic Leadership on Stage",
+    objectPosition: "50% 28%",
+    kbOrigin: "center 30%",
+    kbMotion: { scale: [1.02, 1.09], x: ["0%", "-1.5%"], y: ["0%", "-1%"] },
   },
   {
     src: "/photos-1/CON01524.jpg",
     title: "Chennai 2.0: Honouring Sporting Excellence",
     subtitle: "Indian Olympic Sprint Coach Premanand J. & SOA Leadership",
+    objectPosition: "52% 20%",
+    kbOrigin: "center 20%",
+    kbMotion: { scale: [1.02, 1.08], x: ["0%", "1.2%"], y: ["0%", "-1%"] },
   },
   {
     src: "/photos-1/IMG_7536.jpg",
     title: "Hyderabad 2.0: Fireside Conversation",
     subtitle: "Boardroom Foresight & Talent Transformation",
+    objectPosition: "58% 24%",
+    kbOrigin: "60% 25%",
+    kbMotion: { scale: [1.03, 1.1], x: ["0%", "-1.5%"], y: ["0%", "1%"] },
   },
   {
     src: "/photos-1/IMG_7502.jpg",
     title: "Hyderabad 2.0: Executive Guest Felicitation",
     subtitle: "Strengthening Bilateral Industry-Academia Ties",
+    objectPosition: "48% 18%",
+    kbOrigin: "center 20%",
+    kbMotion: { scale: [1.02, 1.08], x: ["0%", "1%"], y: ["0%", "-1.2%"] },
   },
   {
     src: "/photos-1/IE_04142.jpg",
     title: "Hyderabad Chapter: Leadership Conclave",
     subtitle: "Senior Delegates & University Leadership",
+    objectPosition: "48% 36%",
+    kbOrigin: "center 35%",
+    kbMotion: { scale: [1.08, 1.01], x: ["-1%", "0%"], y: ["-1%", "0%"] },
   },
   {
     src: "/photos-1/IMG_7431.jpg",
     title: "Conclave Panel: Future-Ready Talent Ecosystems",
     subtitle: "CXOs & Capability Heads in Deliberation",
+    objectPosition: "58% 22%",
+    kbOrigin: "60% 25%",
+    kbMotion: { scale: [1.02, 1.09], x: ["0%", "-1.5%"], y: ["0%", "-0.8%"] },
   },
   {
     src: "/photos-1/IMG_7330.jpg",
     title: "Distinguished Speaker Felicitation",
     subtitle: "Siksha 'O' Anusandhan Leadership Conclave",
+    objectPosition: "50% 16%",
+    kbOrigin: "center 18%",
+    kbMotion: { scale: [1.02, 1.08], x: ["0%", "1%"], y: ["0%", "-1%"] },
   },
   {
     src: "/photos-1/IMG_7133.jpg",
     title: "Executive Networking & Peer Dialogue",
     subtitle: "CHROs, Engineering Heads & Academic Leaders",
+    objectPosition: "50% 22%",
+    kbOrigin: "center 22%",
+    kbMotion: { scale: [1.02, 1.08], x: ["-1%", "1%"], y: ["0%", "-0.8%"] },
   },
   {
     src: "/photos-1/IMG_7129.jpg",
     title: "Pre-Session Executive Deliberations",
     subtitle: "Building Long-Term Institutional Pipelines",
+    objectPosition: "52% 24%",
+    kbOrigin: "center 24%",
+    kbMotion: { scale: [1.02, 1.08], x: ["1%", "-1%"], y: ["0%", "-1%"] },
   },
   {
     src: "/photos-1/IE_04027.jpg",
     title: "Conclave Delegates & Industry Partners",
     subtitle: "Collaborative Dialogue Across Commercial Hubs",
+    objectPosition: "50% 20%",
+    kbOrigin: "center 20%",
+    kbMotion: { scale: [1.02, 1.09], x: ["0%", "-1.2%"], y: ["0%", "-1%"] },
   },
   {
     src: "/photos-1/IMG_7900.jpg",
     title: "Hyderabad 2.0: Community & Camaraderie",
     subtitle: "Moments from the Executive Conclave Floor",
+    objectPosition: "48% 18%",
+    kbOrigin: "center 20%",
+    kbMotion: { scale: [1.02, 1.08], x: ["0%", "1.4%"], y: ["0%", "-0.8%"] },
   },
 ];
 
@@ -88,13 +123,30 @@ function EventContent() {
   const [selectedChapter, setSelectedChapter] = useState(0);
   const [isInviteOpen, setIsInviteOpen] = useState(false);
   const [heroSlide, setHeroSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const pickRandomNextSlide = useCallback((current: number) => {
+    if (eventHeroImages.length <= 1) return 0;
+    let next = current;
+    while (next === current) {
+      next = Math.floor(Math.random() * eventHeroImages.length);
+    }
+    return next;
+  }, []);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setHeroSlide((prev) => (prev + 1) % eventHeroImages.length);
-    }, 5000);
-    return () => clearInterval(timer);
+    // Start on a random slide after client hydration for organic variety
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- client-only random seed on mount
+    setHeroSlide(Math.floor(Math.random() * eventHeroImages.length));
   }, []);
+
+  useEffect(() => {
+    if (isPaused) return;
+    const timer = setInterval(() => {
+      setHeroSlide((prev) => pickRandomNextSlide(prev));
+    }, 5200);
+    return () => clearInterval(timer);
+  }, [isPaused, pickRandomNextSlide]);
 
   const conclaves = conclavesData;
 
@@ -187,37 +239,105 @@ function EventContent() {
               </div>
             </div>
 
-            {/* Right Column: Curated Photo Frame */}
+            {/* Right Column: Curated Cinematic Photo Frame */}
             <div className="lg:col-span-5 relative">
-              <div className="relative rounded-3xl overflow-hidden bg-surface p-1.5 border border-line shadow-xl">
+              <div
+                onMouseEnter={() => setIsPaused(true)}
+                onMouseLeave={() => setIsPaused(false)}
+                className="group relative rounded-3xl overflow-hidden bg-surface p-1.5 border border-line shadow-[0_24px_60px_rgba(0,0,0,0.65)]"
+              >
                 <div className="relative aspect-[16/11] sm:aspect-[4/3] rounded-2xl overflow-hidden bg-surface-3 on-media">
-                  {eventHeroImages.map((slide, idx) => (
-                    <div
-                      key={slide.src}
-                      className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-                        idx === heroSlide ? "opacity-100 scale-100" : "opacity-0 scale-105 pointer-events-none"
-                      }`}
+                  <AnimatePresence mode="popLayout">
+                    <motion.div
+                      key={eventHeroImages[heroSlide].src}
+                      initial={{ opacity: 0, filter: "blur(6px)" }}
+                      animate={{ opacity: 1, filter: "blur(0px)" }}
+                      exit={{ opacity: 0, filter: "blur(4px)" }}
+                      transition={{ duration: 1.15, ease: [0.22, 1, 0.36, 1] }}
+                      className="absolute inset-0"
                     >
-                      <Image
-                        src={slide.src}
-                        alt={slide.title}
-                        fill
-                        priority={idx === 0}
-                        sizes="(max-width: 1024px) 100vw, 40vw"
-                        className="object-cover object-center"
+                      <motion.div
+                        initial={{
+                          scale: eventHeroImages[heroSlide].kbMotion.scale[0],
+                          x: eventHeroImages[heroSlide].kbMotion.x[0],
+                          y: eventHeroImages[heroSlide].kbMotion.y[0],
+                        }}
+                        animate={{
+                          scale: eventHeroImages[heroSlide].kbMotion.scale[1],
+                          x: eventHeroImages[heroSlide].kbMotion.x[1],
+                          y: eventHeroImages[heroSlide].kbMotion.y[1],
+                        }}
+                        transition={{ duration: 6.2, ease: "easeOut" }}
+                        style={{ transformOrigin: eventHeroImages[heroSlide].kbOrigin }}
+                        className="relative w-full h-full will-change-transform"
+                      >
+                        <Image
+                          src={eventHeroImages[heroSlide].src}
+                          alt={eventHeroImages[heroSlide].title}
+                          fill
+                          priority
+                          sizes="(max-width: 1024px) 100vw, 42vw"
+                          style={{ objectPosition: eventHeroImages[heroSlide].objectPosition }}
+                          className="object-cover"
+                        />
+                      </motion.div>
+                    </motion.div>
+                  </AnimatePresence>
+
+                  {/* Top-Right Manual Shuffle / Navigation Controls */}
+                  <div className="absolute top-3.5 right-3.5 z-20 flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <button
+                      type="button"
+                      onClick={() =>
+                        setHeroSlide((prev) => (prev - 1 + eventHeroImages.length) % eventHeroImages.length)
+                      }
+                      aria-label="Previous slide"
+                      className="w-8 h-8 rounded-full bg-black/55 hover:bg-black/80 text-white border border-white/15 backdrop-blur-md flex items-center justify-center transition-colors"
+                    >
+                      <ChevronLeft className="w-4 h-4" />
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setHeroSlide((prev) => pickRandomNextSlide(prev))}
+                      aria-label="Random next slide"
+                      className="w-8 h-8 rounded-full bg-black/55 hover:bg-black/80 text-white border border-white/15 backdrop-blur-md flex items-center justify-center transition-colors"
+                    >
+                      <ChevronRight className="w-4 h-4" />
+                    </button>
+                  </div>
+
+                  {/* Cinematic Vignette & Animated Caption Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/10 flex flex-col justify-end p-5 sm:p-6 text-content pointer-events-none">
+                    <span className="text-[11px] font-bold font-heading text-accent-light uppercase tracking-[0.16em]">
+                      Editions 1.0 &amp; 2.0
+                    </span>
+                    <AnimatePresence mode="wait">
+                      <motion.div
+                        key={eventHeroImages[heroSlide].title}
+                        initial={{ opacity: 0, y: 8 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -6 }}
+                        transition={{ duration: 0.45, ease: "easeOut" }}
+                      >
+                        <p className="text-sm sm:text-base font-bold text-content mt-0.5 leading-snug">
+                          {eventHeroImages[heroSlide].title}
+                        </p>
+                        <p className="text-[11px] text-content-secondary mt-0.5">
+                          {eventHeroImages[heroSlide].subtitle} · Bengaluru · Hyderabad · Kolkata · Mumbai · Chennai
+                        </p>
+                      </motion.div>
+                    </AnimatePresence>
+
+                    {/* Animated Gold Progress Sweep */}
+                    <div className="mt-3.5 h-[2px] w-full bg-white/15 rounded-full overflow-hidden">
+                      <motion.div
+                        key={`${heroSlide}-${isPaused}`}
+                        initial={{ width: "0%" }}
+                        animate={{ width: isPaused ? "0%" : "100%" }}
+                        transition={{ duration: 5.2, ease: "linear" }}
+                        className="h-full bg-accent"
                       />
                     </div>
-                  ))}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-5 text-content">
-                    <span className="text-[11px] font-bold font-heading text-accent-light uppercase tracking-wider">
-                      Editions 1.0 & 2.0
-                    </span>
-                    <span className="text-sm font-bold text-content mt-0.5">
-                      {eventHeroImages[heroSlide].title}
-                    </span>
-                    <span className="text-[11px] text-content-secondary mt-0.5">
-                      Bengaluru · Hyderabad · Kolkata · Mumbai · Chennai
-                    </span>
                   </div>
                 </div>
               </div>
