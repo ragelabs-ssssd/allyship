@@ -264,7 +264,7 @@ function EventContent() {
                 </h3>
               </div>
               <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-muted">
-                Allyship is not performative compliance. Across our national conclaves, corporate directors established that genuine executive allyship is an operational duty—de-weaponizing hierarchy and safeguarding psychological safety for early-career professionals.
+                Allyship is not performative compliance. Across our national conclaves, corporate leaders establish that genuine executive allyship is an operational duty dismantling hierarchical barriers and safeguarding psychological safety for early-career professionals.
               </p>
             </div>
             <div className="pt-4 mt-6 border-t border-line flex items-center gap-2 font-sans text-xs font-semibold text-content-secondary">
