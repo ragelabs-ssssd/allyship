@@ -117,36 +117,60 @@ const eventHeroImages = [
   },
 ];
 
+function buildShuffledDeck(length: number, avoidFirst?: number): number[] {
+  const deck = Array.from({ length }, (_, i) => i);
+  for (let i = deck.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [deck[i], deck[j]] = [deck[j], deck[i]];
+  }
+  if (length > 1 && avoidFirst !== undefined && deck[0] === avoidFirst) {
+    const swapIdx = 1 + Math.floor(Math.random() * (length - 1));
+    [deck[0], deck[swapIdx]] = [deck[swapIdx], deck[0]];
+  }
+  return deck;
+}
+
 function EventContent() {
   const searchParams = useSearchParams();
   const [activeTab, setActiveTab] = useState<"Chapters" | "Speakers" | "Themes" | "Videos">("Chapters");
   const [selectedChapter, setSelectedChapter] = useState(0);
   const [isInviteOpen, setIsInviteOpen] = useState(false);
-  const [heroSlide, setHeroSlide] = useState(0);
+  const [slideDeck, setSlideDeck] = useState<number[]>(() =>
+    Array.from({ length: eventHeroImages.length }, (_, i) => i)
+  );
+  const [deckPos, setDeckPos] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
-  const pickRandomNextSlide = useCallback((current: number) => {
-    if (eventHeroImages.length <= 1) return 0;
-    let next = current;
-    while (next === current) {
-      next = Math.floor(Math.random() * eventHeroImages.length);
+  const heroSlide = slideDeck[deckPos] ?? 0;
+
+  const advanceDeckSlide = useCallback(() => {
+    if (deckPos + 1 < slideDeck.length) {
+      setDeckPos(deckPos + 1);
+    } else {
+      const lastShown = slideDeck[slideDeck.length - 1];
+      setSlideDeck(buildShuffledDeck(eventHeroImages.length, lastShown));
+      setDeckPos(0);
     }
-    return next;
-  }, []);
+  }, [deckPos, slideDeck]);
+
+  const previousDeckSlide = useCallback(() => {
+    setDeckPos((prev) => (prev - 1 + slideDeck.length) % slideDeck.length);
+  }, [slideDeck.length]);
 
   useEffect(() => {
-    // Start on a random slide after client hydration for organic variety
-    // eslint-disable-next-line react-hooks/set-state-in-effect -- client-only random seed on mount
-    setHeroSlide(Math.floor(Math.random() * eventHeroImages.length));
+    // Shuffle full deck on client hydration so all 11 photos play in random order before repeating
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- client-only random deck shuffle on mount
+    setSlideDeck(buildShuffledDeck(eventHeroImages.length));
+    setDeckPos(0);
   }, []);
 
   useEffect(() => {
     if (isPaused) return;
     const timer = setInterval(() => {
-      setHeroSlide((prev) => pickRandomNextSlide(prev));
+      advanceDeckSlide();
     }, 5200);
     return () => clearInterval(timer);
-  }, [isPaused, pickRandomNextSlide]);
+  }, [isPaused, advanceDeckSlide]);
 
   const conclaves = conclavesData;
 
@@ -288,9 +312,7 @@ function EventContent() {
                   <div className="absolute top-3.5 right-3.5 z-20 flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <button
                       type="button"
-                      onClick={() =>
-                        setHeroSlide((prev) => (prev - 1 + eventHeroImages.length) % eventHeroImages.length)
-                      }
+                      onClick={previousDeckSlide}
                       aria-label="Previous slide"
                       className="w-8 h-8 rounded-full bg-black/55 hover:bg-black/80 text-white border border-white/15 backdrop-blur-md flex items-center justify-center transition-colors"
                     >
@@ -298,8 +320,8 @@ function EventContent() {
                     </button>
                     <button
                       type="button"
-                      onClick={() => setHeroSlide((prev) => pickRandomNextSlide(prev))}
-                      aria-label="Random next slide"
+                      onClick={advanceDeckSlide}
+                      aria-label="Next slide in shuffled sequence"
                       className="w-8 h-8 rounded-full bg-black/55 hover:bg-black/80 text-white border border-white/15 backdrop-blur-md flex items-center justify-center transition-colors"
                     >
                       <ChevronRight className="w-4 h-4" />
