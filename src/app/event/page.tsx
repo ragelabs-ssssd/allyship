@@ -237,11 +237,11 @@ function EventContent() {
                   The Athletic Crucible
                 </span>
                 <h3 className="font-display text-lg font-semibold tracking-normal text-content mt-1">
-                  Why Sports Anchors Allyship
+                  How Athletics Anchors Allyship
                 </h3>
               </div>
               <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-muted">
-                Olympic medalists and national sprint coaches anchor our conclaves because elite championship sports embodies radical accountability, coach-athlete sponsorship, and emotional fortitude under extreme public pressure.
+                Olympic medalists and national sprint coaches anchor our conclaves because elite championship sports embody radical accountability, mentorship under pressure, and emotional fortitude.
               </p>
             </div>
             <div className="pt-4 mt-6 border-t border-line flex items-center gap-2 font-sans text-xs font-semibold text-content-secondary">
