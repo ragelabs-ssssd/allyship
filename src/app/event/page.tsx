@@ -1040,7 +1040,7 @@ function EventContent() {
                               className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                               style={{ objectPosition: archive.coverPosition || "50% 25%" }}
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/10 group-hover:from-black/70 transition-colors" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent group-hover:from-black/50 transition-colors" />
 
                             <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[10px] font-heading font-bold uppercase tracking-[0.14em] text-[#C5A880]">
                               Edition 2.0 · {archive.date}
@@ -1048,12 +1048,6 @@ function EventContent() {
 
                             <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[10px] font-mono font-semibold text-white/90">
                               Film &amp; Gallery
-                            </div>
-
-                            <div className="absolute inset-0 flex items-center justify-center">
-                              <div className="w-14 h-14 rounded-full bg-accent/90 text-on-accent flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
-                                <Play className="w-6 h-6 fill-current ml-0.5" />
-                              </div>
                             </div>
                           </div>
 
@@ -1122,7 +1116,7 @@ function EventContent() {
                               className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                               style={{ objectPosition: archive.coverPosition || "50% 25%" }}
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/10 group-hover:from-black/70 transition-colors" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent group-hover:from-black/50 transition-colors" />
 
                             <div className="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[10px] font-heading font-bold uppercase tracking-[0.14em] text-[#C5A880]">
                               Edition 1.0 · {archive.date}
@@ -1130,12 +1124,6 @@ function EventContent() {
 
                             <div className="absolute top-3.5 right-3.5 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[10px] font-mono font-semibold text-white/90">
                               Film &amp; Gallery
-                            </div>
-
-                            <div className="absolute inset-0 flex items-center justify-center">
-                              <div className="w-12 h-12 rounded-full bg-accent/90 text-on-accent flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
-                                <Play className="w-5 h-5 fill-current ml-0.5" />
-                              </div>
                             </div>
                           </div>
 
