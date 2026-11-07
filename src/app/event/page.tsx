@@ -722,7 +722,7 @@ function EventContent() {
             >
               {t === "Chapters" && "All 7 Chapters (1.0 & 2.0)"}
               {t === "Speakers" && "Marquee Speakers Roster"}
-              {t === "Videos" && "Chapter Gallery"}
+              {t === "Videos" && "Conclave Moments"}
               {t === "Themes" && "Strategic Themes & Evolution"}
             </button>
           ))}
@@ -1025,17 +1025,17 @@ function EventContent() {
           </div>
         )}
 
-        {/* TAB 3: CHAPTER GALLERY (VIDEO FIRST + 24 PHOTOS IN 6 ROWS) */}
+        {/* TAB 3: CONCLAVE MOMENTS (VIDEO FIRST + 24 PHOTOS IN 6 ROWS) */}
         {activeTab === "Videos" && (
           <div id="videos-section" className="space-y-12 scroll-mt-24 pt-4">
             {/* Header & Chapter Selector */}
             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6 border-b border-line">
               <div className="max-w-3xl space-y-3">
                 <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
-                  Chapter Visual Archives
+                  Conclave Moments
                 </span>
                 <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight scroll-mt-24">
-                  {currentMediaArchive.city} Chapter Gallery
+                  {currentMediaArchive.city} Conclave Moments
                 </h2>
                 <p className="text-base text-content-secondary max-w-2xl leading-relaxed">
                   {currentMediaArchive.subtitle}
