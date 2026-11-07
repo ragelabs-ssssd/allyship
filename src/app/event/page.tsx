@@ -1003,11 +1003,9 @@ function EventContent() {
                 <div className="space-y-6">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-line">
                     <div className="flex items-center gap-3">
-                      <span className="px-3 py-1 rounded-full bg-accent text-on-accent font-heading text-[10px] font-bold uppercase tracking-[0.16em]">
-                        Allyship++ 2.0
-                      </span>
+                      <span className="w-2 h-2 rounded-full bg-accent shrink-0" />
                       <h3 className="font-display text-lg sm:text-xl font-bold text-content tracking-tight">
-                        Second Edition Chapters (2026 Cycle)
+                        Allyship++ 2.0 — Practicing Allyship
                       </h3>
                     </div>
                     <span className="text-xs font-sans text-content-muted">
@@ -1087,11 +1085,9 @@ function EventContent() {
                 <div className="space-y-6 pt-4">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-line">
                     <div className="flex items-center gap-3">
-                      <span className="px-3 py-1 rounded-full bg-surface-2 border border-line text-content-secondary font-heading text-[10px] font-bold uppercase tracking-[0.16em]">
-                        Allyship++ 1.0
-                      </span>
+                      <span className="w-2 h-2 rounded-full bg-accent shrink-0" />
                       <h3 className="font-display text-lg sm:text-xl font-bold text-content tracking-tight">
-                        Inaugural Edition Chapters (2024–2025 Cycle)
+                        Allyship++ 1.0 — Bridging Campus &amp; Industry
                       </h3>
                     </div>
                     <span className="text-xs font-sans text-content-muted">
