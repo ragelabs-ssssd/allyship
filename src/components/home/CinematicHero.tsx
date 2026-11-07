@@ -204,7 +204,7 @@ export function CinematicHero({ onOpenInvite }: CinematicHeroProps) {
                 transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                 className="font-sans text-base sm:text-lg font-normal tracking-[0.01em] leading-relaxed text-content-secondary max-w-xl"
               >
-                Where Boardroom Decisions Meet Academic Reality. An executive alliance convening CHROs, Global Capability Center heads, and engineering leaders to co-create curricula, sponsor emerging talent, and institutionalize day-one career velocity.
+                An executive alliance that brings together CHROs, Global Capability Center (GCC) leaders and engineering leaders to co-create curricula, nurture emerging talent and institutionalize day-one career readiness.
               </motion.p>
             </div>
 
