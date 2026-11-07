@@ -127,6 +127,7 @@ const eventHeroImages = [
 
 interface ChapterMediaArchive {
   id: string;
+  cycle: "1.0" | "2.0";
   city: string;
   date: string;
   editionBadge: string;
@@ -165,82 +166,29 @@ function create24PhotoSlots(
 }
 
 const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
-  "bengaluru-1": {
-    id: "bengaluru-1",
-    city: "Bengaluru (1.0)",
-    date: "June 2024",
-    editionBadge: "Allyship++ 1.0 — 1st Edition",
-    coverImage: "/bengaluru-1.jpg",
-    coverPosition: "50% 25%",
-    subtitle:
-      "Leadership and Collaboration Across Disciplines — Official chapter video space and 24 conclave photo slots.",
-    videos: [],
-    photos: create24PhotoSlots("Bengaluru 1.0"),
-  },
-  "hyderabad-1": {
-    id: "hyderabad-1",
-    city: "Hyderabad (1.0)",
-    date: "July 2024",
-    editionBadge: "Allyship++ 1.0 — 2nd Edition",
-    coverImage: "/hyderabad-1.jpg",
-    coverPosition: "50% 25%",
-    subtitle:
-      "Practicing Allyship at the Organizational Level — Official chapter video and 24 conclave photo slots.",
-    videos: [
-      {
-        title: "Hyderabad Chapter | Official Conclave Film",
-        desc: "Highlights from the Hyderabad conclave: conversations on leadership, young talent, and industry–academia collaboration.",
-        youtubeId: "8wSGKsWyQwk",
-        tag: "Hyderabad 1.0",
-      },
-    ],
-    photos: create24PhotoSlots("Hyderabad 1.0"),
-  },
-  "kolkata-1": {
-    id: "kolkata-1",
-    city: "Kolkata (1.0)",
-    date: "September 2024",
-    editionBadge: "Allyship++ 1.0 — 3rd Edition",
-    coverImage: "/kolkata-1.jpg",
-    coverPosition: "50% 25%",
-    subtitle:
-      "Leadership, Collaboration, and Workplace Inclusion — Official chapter video space and 24 conclave photo slots.",
-    videos: [],
-    photos: create24PhotoSlots("Kolkata 1.0"),
-  },
-  "mumbai-1": {
-    id: "mumbai-1",
-    city: "Mumbai (1.0)",
-    date: "October 2025",
-    editionBadge: "Allyship++ 1.0 — 4th Edition",
-    coverImage: "/mumbai-1.jpg",
-    coverPosition: "50% 25%",
-    subtitle:
-      "Building Inclusive and Empowered Workplaces — Official chapter video space and 24 conclave photo slots.",
-    videos: [],
-    photos: create24PhotoSlots("Mumbai 1.0"),
-  },
   "bengaluru-2": {
     id: "bengaluru-2",
+    cycle: "2.0",
     city: "Bengaluru (2.0)",
     date: "March 2026",
     editionBadge: "Allyship++ 2.0 — 1st Edition",
     coverImage: "/bengaluru-2.jpg",
     coverPosition: "50% 25%",
     subtitle:
-      "Next-Gen Talent & Industry–Academia Collaboration — Official chapter video space and 24 conclave photo slots.",
+      "Next-Gen Talent & Industry–Academia Collaboration — Executive roundtable insights, mentorship dialogues, and chapter moments from Bengaluru.",
     videos: [],
     photos: create24PhotoSlots("Bengaluru 2.0"),
   },
   "hyderabad-2": {
     id: "hyderabad-2",
+    cycle: "2.0",
     city: "Hyderabad (2.0)",
     date: "May 2026",
     editionBadge: "Allyship++ 2.0 — 2nd Edition",
     coverImage: "/slides/IMG_7873.jpg",
     coverPosition: "50% 25%",
     subtitle:
-      "Practicing Allyship for Emerging Talent — Official chapter video and 24 conclave photo slots.",
+      "Practicing Allyship for Emerging Talent — Keynote deliberations, campus-to-corporate transitions, and curated moments from Gachibowli.",
     videos: [
       {
         title: "Hyderabad 2.0 Chapter | Conclave Film",
@@ -253,13 +201,14 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
   },
   "chennai-2": {
     id: "chennai-2",
+    cycle: "2.0",
     city: "Chennai (2.0)",
     date: "July 2026",
     editionBadge: "Allyship++ 2.0 — 3rd Edition",
     coverImage: "/slides/CON01670.jpg",
     coverPosition: "50% 28%",
     subtitle:
-      "Practicing Allyship as a Leadership Responsibility — Official panel & fireside videos and 24 conclave photo slots.",
+      "Practicing Allyship as a Leadership Responsibility — Full panel deliberations, Olympic fireside conversation, and chapter gallery from Chennai.",
     videos: [
       {
         title: "Chennai 2.0 | Panel: Practicing Allyship",
@@ -275,6 +224,65 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
     ],
     photos: create24PhotoSlots("Chennai 2.0"),
+  },
+  "bengaluru-1": {
+    id: "bengaluru-1",
+    cycle: "1.0",
+    city: "Bengaluru (1.0)",
+    date: "June 2024",
+    editionBadge: "Allyship++ 1.0 — 1st Edition",
+    coverImage: "/bengaluru-1.jpg",
+    coverPosition: "50% 25%",
+    subtitle:
+      "Leadership and Collaboration Across Disciplines — Inaugural conclave dialogues with corporate and engineering leaders in Bengaluru.",
+    videos: [],
+    photos: create24PhotoSlots("Bengaluru 1.0"),
+  },
+  "hyderabad-1": {
+    id: "hyderabad-1",
+    cycle: "1.0",
+    city: "Hyderabad (1.0)",
+    date: "July 2024",
+    editionBadge: "Allyship++ 1.0 — 2nd Edition",
+    coverImage: "/hyderabad-1.jpg",
+    coverPosition: "50% 25%",
+    subtitle:
+      "Practicing Allyship at the Organizational Level — CXO and scientific leadership conversations from the Hyderabad Tech Corridor.",
+    videos: [
+      {
+        title: "Hyderabad Chapter | Official Conclave Film",
+        desc: "Highlights from the Hyderabad conclave: conversations on leadership, young talent, and industry–academia collaboration.",
+        youtubeId: "8wSGKsWyQwk",
+        tag: "Hyderabad 1.0",
+      },
+    ],
+    photos: create24PhotoSlots("Hyderabad 1.0"),
+  },
+  "kolkata-1": {
+    id: "kolkata-1",
+    cycle: "1.0",
+    city: "Kolkata (1.0)",
+    date: "September 2024",
+    editionBadge: "Allyship++ 1.0 — 3rd Edition",
+    coverImage: "/kolkata-1.jpg",
+    coverPosition: "50% 25%",
+    subtitle:
+      "Leadership, Collaboration, and Workplace Inclusion — Dual-panel deliberations and sports legends tribute from the Kolkata chapter.",
+    videos: [],
+    photos: create24PhotoSlots("Kolkata 1.0"),
+  },
+  "mumbai-1": {
+    id: "mumbai-1",
+    cycle: "1.0",
+    city: "Mumbai (1.0)",
+    date: "October 2025",
+    editionBadge: "Allyship++ 1.0 — 4th Edition",
+    coverImage: "/mumbai-1.jpg",
+    coverPosition: "50% 25%",
+    subtitle:
+      "Building Inclusive and Empowered Workplaces — High-performance culture and talent transformation insights from Mumbai.",
+    videos: [],
+    photos: create24PhotoSlots("Mumbai 1.0"),
   },
 };
 
@@ -977,93 +985,191 @@ function EventContent() {
           </div>
         )}
 
-        {/* TAB 3: CONCLAVE MOMENTS (ALL 7 CHAPTER CARDS -> INSIDE CARD: VIDEO FIRST + 24 PHOTO SLOTS IN 6 ROWS) */}
+        {/* TAB 3: CONCLAVE MOMENTS (PARTITIONED: 2.0 AT TOP, 1.0 AT BOTTOM) */}
         {activeTab === "Videos" && (
-          <div id="videos-section" className="space-y-10 scroll-mt-24 pt-4">
+          <div id="videos-section" className="space-y-12 scroll-mt-24 pt-4">
             <div className="max-w-5xl space-y-3">
               <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
-                Conclave Moments · All 7 Editions
+                Conclave Moments
               </span>
-              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight scroll-mt-24">
-                Chapter-Wise Conclave Moments (7 Chapters)
+              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap scroll-mt-24">
+                Chapter-Wise Conclave Moments
               </h2>
               <p className="text-base text-content-secondary max-w-2xl leading-relaxed">
-                Select any of the 7 chapter cards below to open its official conclave video space and 24 chapter photo slots inside.
+                Explore official conclave films, keynote conversations, and curated chapter photography across India&apos;s premier corporate hubs.
               </p>
             </div>
 
             {!currentMediaArchive ? (
-              /* INITIAL VIEW: 7 CHAPTER CARDS GRID (NO LOOSE VIDEO OR PHOTOS OUTSIDE) */
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {Object.keys(CHAPTER_ARCHIVES).map((chapterKey, index) => {
-                  const archive = CHAPTER_ARCHIVES[chapterKey];
-                  return (
-                    <button
-                      key={chapterKey}
-                      type="button"
-                      onClick={() => {
-                        setSelectedMediaCity(chapterKey);
-                        const el = document.getElementById("videos-section");
-                        if (el) {
-                          setTimeout(() => {
-                            el.scrollIntoView({ behavior: "smooth", block: "start" });
-                          }, 50);
-                        }
-                      }}
-                      className="bg-surface rounded-3xl overflow-hidden border border-line shadow-xl hover:border-accent/60 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between text-left group cursor-pointer"
-                    >
-                      {/* Card Cover Thumbnail */}
-                      <div className="relative aspect-video w-full bg-canvas overflow-hidden">
-                        <Image
-                          src={archive.coverImage}
-                          alt={`${archive.city} Chapter Cover`}
-                          fill
-                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                          className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                          style={{ objectPosition: archive.coverPosition || "50% 25%" }}
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/10 group-hover:from-black/70 transition-colors" />
+              /* INITIAL VIEW: PARTITIONED CHAPTER CARDS (ALLYSHIP++ 2.0 AT TOP, ALLYSHIP++ 1.0 AT BOTTOM) */
+              <div className="space-y-14">
+                {/* TOP PARTITION: ALLYSHIP++ 2.0 CHAPTERS */}
+                <div className="space-y-6">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-line">
+                    <div className="flex items-center gap-3">
+                      <span className="px-3 py-1 rounded-full bg-accent text-on-accent font-heading text-[10px] font-bold uppercase tracking-[0.16em]">
+                        Allyship++ 2.0
+                      </span>
+                      <h3 className="font-display text-lg sm:text-xl font-bold text-content tracking-tight">
+                        Second Edition Chapters (2026 Cycle)
+                      </h3>
+                    </div>
+                    <span className="text-xs font-sans text-content-muted">
+                      Bengaluru · Hyderabad · Chennai
+                    </span>
+                  </div>
 
-                        {/* Top-left Edition Badge */}
-                        <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[10px] font-heading font-bold uppercase tracking-[0.14em] text-[#C5A880]">
-                          Chapter {String(index + 1).padStart(2, "0")} · {archive.date}
-                        </div>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {(["bengaluru-2", "hyderabad-2", "chennai-2"] as const).map((chapterKey, idx) => {
+                      const archive = CHAPTER_ARCHIVES[chapterKey];
+                      return (
+                        <button
+                          key={chapterKey}
+                          type="button"
+                          onClick={() => {
+                            setSelectedMediaCity(chapterKey);
+                            const el = document.getElementById("videos-section");
+                            if (el) {
+                              setTimeout(() => {
+                                el.scrollIntoView({ behavior: "smooth", block: "start" });
+                              }, 50);
+                            }
+                          }}
+                          className="bg-surface rounded-3xl overflow-hidden border border-line shadow-xl hover:border-accent/60 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between text-left group cursor-pointer"
+                        >
+                          <div className="relative aspect-video w-full bg-canvas overflow-hidden">
+                            <Image
+                              src={archive.coverImage}
+                              alt={`${archive.city} Chapter Cover`}
+                              fill
+                              sizes="(max-width: 768px) 100vw, 33vw"
+                              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                              style={{ objectPosition: archive.coverPosition || "50% 25%" }}
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/10 group-hover:from-black/70 transition-colors" />
 
-                        {/* Top-right Count Pill */}
-                        <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[10px] font-mono font-semibold text-white/90">
-                          {archive.videos.length > 0 ? `${archive.videos.length} Video${archive.videos.length > 1 ? "s" : ""}` : "1 Video Space"} · 24 Photos
-                        </div>
+                            <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[10px] font-heading font-bold uppercase tracking-[0.14em] text-[#C5A880]">
+                              Edition 2.0 · {archive.date}
+                            </div>
 
-                        {/* Center Play / Open Indicator */}
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="w-14 h-14 rounded-full bg-accent/90 text-on-accent flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
-                            <Play className="w-6 h-6 fill-current ml-0.5" />
+                            <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[10px] font-mono font-semibold text-white/90">
+                              Film &amp; Gallery
+                            </div>
+
+                            <div className="absolute inset-0 flex items-center justify-center">
+                              <div className="w-14 h-14 rounded-full bg-accent/90 text-on-accent flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                                <Play className="w-6 h-6 fill-current ml-0.5" />
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                      </div>
 
-                      {/* Card Body */}
-                      <div className="p-6 space-y-4 flex-1 flex flex-col justify-between">
-                        <div>
-                          <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent block mb-1">
-                            {archive.editionBadge}
-                          </span>
-                          <h3 className="font-display text-lg sm:text-xl font-bold tracking-normal text-content leading-snug group-hover:text-accent transition-colors">
-                            {archive.city} | Conclave Moments
-                          </h3>
-                          <p className="font-sans text-xs sm:text-sm font-normal tracking-[0.01em] text-content-muted mt-2 leading-relaxed">
-                            {archive.subtitle}
-                          </p>
-                        </div>
+                          <div className="p-6 space-y-4 flex-1 flex flex-col justify-between">
+                            <div>
+                              <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent block mb-1">
+                                {archive.editionBadge} · Chapter 0{idx + 1}
+                              </span>
+                              <h4 className="font-display text-lg sm:text-xl font-bold tracking-normal text-content leading-snug group-hover:text-accent transition-colors">
+                                {archive.city} | Conclave Moments
+                              </h4>
+                              <p className="font-sans text-xs sm:text-sm font-normal tracking-[0.01em] text-content-muted mt-2 leading-relaxed">
+                                {archive.subtitle}
+                              </p>
+                            </div>
 
-                        <div className="pt-4 border-t border-line flex items-center justify-between text-xs font-semibold text-accent">
-                          <span>Open Chapter Card (Video + 24 Photos)</span>
-                          <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                        </div>
-                      </div>
-                    </button>
-                  );
-                })}
+                            <div className="pt-4 border-t border-line flex items-center justify-between text-xs font-semibold text-accent">
+                              <span>Explore Chapter Moments</span>
+                              <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                            </div>
+                          </div>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* BOTTOM PARTITION: ALLYSHIP++ 1.0 CHAPTERS */}
+                <div className="space-y-6 pt-4">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-line">
+                    <div className="flex items-center gap-3">
+                      <span className="px-3 py-1 rounded-full bg-surface-2 border border-line text-content-secondary font-heading text-[10px] font-bold uppercase tracking-[0.16em]">
+                        Allyship++ 1.0
+                      </span>
+                      <h3 className="font-display text-lg sm:text-xl font-bold text-content tracking-tight">
+                        Inaugural Edition Chapters (2024–2025 Cycle)
+                      </h3>
+                    </div>
+                    <span className="text-xs font-sans text-content-muted">
+                      Bengaluru · Hyderabad · Kolkata · Mumbai
+                    </span>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
+                    {(["bengaluru-1", "hyderabad-1", "kolkata-1", "mumbai-1"] as const).map((chapterKey, idx) => {
+                      const archive = CHAPTER_ARCHIVES[chapterKey];
+                      return (
+                        <button
+                          key={chapterKey}
+                          type="button"
+                          onClick={() => {
+                            setSelectedMediaCity(chapterKey);
+                            const el = document.getElementById("videos-section");
+                            if (el) {
+                              setTimeout(() => {
+                                el.scrollIntoView({ behavior: "smooth", block: "start" });
+                              }, 50);
+                            }
+                          }}
+                          className="bg-surface rounded-3xl overflow-hidden border border-line shadow-xl hover:border-accent/60 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between text-left group cursor-pointer"
+                        >
+                          <div className="relative aspect-video w-full bg-canvas overflow-hidden">
+                            <Image
+                              src={archive.coverImage}
+                              alt={`${archive.city} Chapter Cover`}
+                              fill
+                              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                              style={{ objectPosition: archive.coverPosition || "50% 25%" }}
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/10 group-hover:from-black/70 transition-colors" />
+
+                            <div className="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[10px] font-heading font-bold uppercase tracking-[0.14em] text-[#C5A880]">
+                              Edition 1.0 · {archive.date}
+                            </div>
+
+                            <div className="absolute top-3.5 right-3.5 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[10px] font-mono font-semibold text-white/90">
+                              Film &amp; Gallery
+                            </div>
+
+                            <div className="absolute inset-0 flex items-center justify-center">
+                              <div className="w-12 h-12 rounded-full bg-accent/90 text-on-accent flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                                <Play className="w-5 h-5 fill-current ml-0.5" />
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="p-6 space-y-4 flex-1 flex flex-col justify-between">
+                            <div>
+                              <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent block mb-1">
+                                {archive.editionBadge} · Chapter 0{idx + 1}
+                              </span>
+                              <h4 className="font-display text-base sm:text-lg font-bold tracking-normal text-content leading-snug group-hover:text-accent transition-colors">
+                                {archive.city} | Conclave Moments
+                              </h4>
+                              <p className="font-sans text-xs font-normal tracking-[0.01em] text-content-muted mt-2 leading-relaxed">
+                                {archive.subtitle}
+                              </p>
+                            </div>
+
+                            <div className="pt-4 border-t border-line flex items-center justify-between text-xs font-semibold text-accent">
+                              <span>Explore Chapter Moments</span>
+                              <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                            </div>
+                          </div>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
             ) : (
               /* OPENED CHAPTER CARD: EVERYTHING (VIDEO SPACE FIRST + 24 PHOTO SLOTS IN 6 ROWS) INSIDE THE CARD */
@@ -1077,7 +1183,7 @@ function EventContent() {
                       className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-2 hover:bg-accent hover:text-on-accent text-content font-sans text-xs font-semibold border border-line transition-colors cursor-pointer"
                     >
                       <ChevronLeft className="w-4 h-4" />
-                      All 7 Chapter Cards
+                      All Chapter Cards
                     </button>
                     <span className="px-3 py-1 rounded-full bg-accent/15 border border-accent/30 text-accent font-sans text-[11px] font-semibold uppercase tracking-[0.14em]">
                       {currentMediaArchive.editionBadge} · {currentMediaArchive.date}
@@ -1113,7 +1219,7 @@ function EventContent() {
                     {currentMediaArchive.editionBadge}
                   </span>
                   <h3 className="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-content tracking-tight">
-                    {currentMediaArchive.city} — Official Video &amp; 24 Conclave Moments
+                    {currentMediaArchive.city} — Conclave Moments
                   </h3>
                   <p className="font-sans text-sm sm:text-base text-content-secondary max-w-3xl leading-relaxed">
                     {currentMediaArchive.subtitle}
@@ -1126,33 +1232,30 @@ function EventContent() {
                     <div className="flex items-center gap-2.5">
                       <Video className="w-4 h-4 text-accent" />
                       <h4 className="font-heading text-xs sm:text-sm font-bold uppercase tracking-[0.16em] text-content">
-                        1. {currentMediaArchive.city} Conclave Video
+                        {currentMediaArchive.city} Conclave Film
                       </h4>
                     </div>
-                    <span className="text-xs font-mono text-content-muted">
-                      Folder: public/conclave-moments/{currentMediaArchive.id}/
+                    <span className="text-xs font-sans text-content-muted">
+                      Official Video Archive
                     </span>
                   </div>
 
                   {currentMediaArchive.videos.length === 0 ? (
-                    /* Dedicated 16:9 Video Upload Space */
-                    <div className="bg-surface-2/70 rounded-2xl overflow-hidden border-2 border-dashed border-accent/35 grid grid-cols-1 lg:grid-cols-12">
+                    /* Dedicated 16:9 Video Showcase Frame */
+                    <div className="bg-surface-2/70 rounded-2xl overflow-hidden border border-line grid grid-cols-1 lg:grid-cols-12">
                       <div className="lg:col-span-8 relative aspect-video w-full bg-canvas/60 flex flex-col items-center justify-center p-8 text-center space-y-4">
                         <div className="w-16 h-16 rounded-full bg-accent/15 border border-accent/40 text-accent flex items-center justify-center shadow-inner">
                           <Video className="w-7 h-7" />
                         </div>
                         <div className="space-y-1.5 max-w-md">
-                          <span className="text-[11px] font-mono uppercase tracking-[0.18em] text-accent block">
-                            Official Video Space · 16:9 Frame
+                          <span className="text-[11px] font-heading font-bold uppercase tracking-[0.18em] text-accent block">
+                            Official Conclave Film
                           </span>
                           <h5 className="font-display text-lg sm:text-xl font-bold text-content">
-                            {currentMediaArchive.city} Conclave Video Slot
+                            {currentMediaArchive.city} Chapter Film
                           </h5>
                           <p className="font-sans text-xs text-content-muted leading-relaxed">
-                            Drop your chapter video or YouTube link into{" "}
-                            <code className="px-1.5 py-0.5 rounded bg-surface border border-line text-accent font-mono">
-                              public/conclave-moments/{currentMediaArchive.id}/
-                            </code>
+                            Official chapter highlight film and keynote deliberations for {currentMediaArchive.city}.
                           </p>
                         </div>
                       </div>
@@ -1164,7 +1267,7 @@ function EventContent() {
                           {currentMediaArchive.city} | Official Conclave Film
                         </h5>
                         <p className="font-sans text-xs sm:text-sm text-content-secondary leading-relaxed">
-                          Reserved top showcase space for the {currentMediaArchive.city} conclave video recording.
+                          Highlights from the {currentMediaArchive.city} chapter featuring corporate leaders, HR executives, and academic dignitaries.
                         </p>
                       </div>
                     </div>
@@ -1242,25 +1345,24 @@ function EventContent() {
                     <div className="flex items-center gap-2.5">
                       <span className="w-2 h-2 rounded-full bg-accent" />
                       <h4 className="font-heading text-xs sm:text-sm font-bold uppercase tracking-[0.16em] text-content">
-                        2. {currentMediaArchive.city} Chapter Photographs (24 Photo Spaces · 6 Rows)
+                        {currentMediaArchive.city} Chapter Photo Gallery
                       </h4>
                     </div>
-                    <span className="text-xs font-mono text-content-muted">
-                      4 columns × 6 rows = 24 photos · public/conclave-moments/{currentMediaArchive.id}/
+                    <span className="text-xs font-sans text-content-muted">
+                      24 Curated Chapter Photographs
                     </span>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
                     {currentMediaArchive.photos.map((photo, idx) => {
                       const slotNumber = String(idx + 1).padStart(2, "0");
-                      const rowNumber = Math.floor(idx / 4) + 1;
                       return (
                         <div
                           key={`${currentMediaArchive.id}-photo-${idx}`}
                           className={`group relative aspect-[4/3] rounded-2xl overflow-hidden transition-all duration-500 ${
                             photo.src
                               ? "bg-surface-2 border border-line shadow-sm hover:border-accent/50 hover:shadow-lg"
-                              : "bg-surface-2/60 border-2 border-dashed border-line hover:border-accent/45 flex flex-col items-center justify-center p-4 text-center"
+                              : "bg-surface-2/60 border border-line hover:border-accent/40 flex flex-col items-center justify-center p-4 text-center"
                           }`}
                         >
                           {photo.src ? (
@@ -1291,23 +1393,17 @@ function EventContent() {
                               </div>
                             </>
                           ) : (
-                            /* Clean Dedicated 4:3 Photo Slot Space Ready for Upload */
+                            /* Clean Dedicated 4:3 Photo Frame Space */
                             <>
-                              <div className="absolute top-3 left-3 px-2 py-0.5 rounded-md bg-surface border border-line text-[10px] font-mono text-content-muted">
-                                Row {rowNumber}
-                              </div>
                               <div className="absolute top-3 right-3 px-2 py-0.5 rounded-md bg-accent/15 border border-accent/30 text-[10px] font-mono font-semibold text-accent">
                                 {slotNumber} / 24
                               </div>
-                              <div className="space-y-1.5 mt-2">
+                              <div className="space-y-1">
                                 <div className="text-xs font-heading font-bold uppercase tracking-[0.14em] text-content">
-                                  Photo Slot {slotNumber}
+                                  Conclave Moment {slotNumber}
                                 </div>
                                 <div className="text-[11px] font-sans text-content-muted">
                                   {currentMediaArchive.city}
-                                </div>
-                                <div className="text-[10px] font-mono text-accent/80 pt-1">
-                                  photo-{slotNumber}.jpg
                                 </div>
                               </div>
                             </>

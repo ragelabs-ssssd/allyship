@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -311,7 +312,108 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
         </div>
       </section>
 
-      {/* 4. SUBMIT AN INDUSTRY CHALLENGE (INTERACTIVE FORM) */}
+      {/* 4. OFFICIAL CAMPUS INFRASTRUCTURE */}
+      <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line">
+        <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
+          <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
+            127-Acre Campus Infrastructure
+          </span>
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
+            Infrastructure &amp; Research Facilities
+          </h2>
+          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
+            A state-of-the-art academic biome in Bhubaneswar encompassing enterprise-anchored engineering labs, 2,000+ bed teaching hospitals, solar micro-grids, and high-performance sovereign computing hubs.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="bg-surface-2 rounded-3xl overflow-hidden border border-line hover:border-accent/60 shadow-lg transition-all group flex flex-col">
+            <div className="aspect-[4/3] overflow-hidden bg-surface-3 relative">
+              <Image
+                src="/soa-campus-aerial.jpg"
+                alt="SOA University Main Campus Aerial View"
+                fill
+                sizes="(max-width: 768px) 100vw, 25vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-2 text-content border border-line text-[10px] font-bold font-heading uppercase tracking-wider">
+                Main Campus
+              </span>
+            </div>
+            <div className="p-6 space-y-2">
+              <h3 className="font-display font-bold text-base sm:text-lg text-content group-hover:text-accent transition-colors">Main University Campus</h3>
+              <p className="text-sm text-content-secondary leading-relaxed">
+                127-acre campus in Khandagiri Square with academic complexes, libraries, and central administrative headquarters.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-surface-2 rounded-3xl overflow-hidden border border-line hover:border-accent/60 shadow-lg transition-all group flex flex-col">
+            <div className="aspect-[4/3] overflow-hidden bg-surface-3 relative">
+              <Image
+                src="/soa-iter-building.jpg"
+                alt="ITER Engineering Campus Building"
+                fill
+                sizes="(max-width: 768px) 100vw, 25vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-2 text-content border border-line text-[10px] font-bold font-heading uppercase tracking-wider">
+                ITER Engineering
+              </span>
+            </div>
+            <div className="p-6 space-y-2">
+              <h3 className="font-display font-bold text-base sm:text-lg text-content group-hover:text-accent transition-colors">ITER Engineering Faculty</h3>
+              <p className="text-sm text-content-secondary leading-relaxed">
+                Ranked 22nd in India (NIRF 2025) featuring enterprise Centres of Excellence with Tech Mahindra, LTTS, and the Blue Star HVAC Skill Development Centre with 94.54% placement.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-surface-2 rounded-3xl overflow-hidden border border-line hover:border-accent/60 shadow-lg transition-all group flex flex-col">
+            <div className="aspect-[4/3] overflow-hidden bg-surface-3 relative">
+              <Image
+                src="/soa-auditorium.jpg"
+                alt="SOA Convention Auditorium"
+                fill
+                sizes="(max-width: 768px) 100vw, 25vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-2 text-content border border-line text-[10px] font-bold font-heading uppercase tracking-wider">
+                Convention Hall
+              </span>
+            </div>
+            <div className="p-6 space-y-2">
+              <h3 className="font-display font-bold text-base sm:text-lg text-content group-hover:text-accent transition-colors">University Auditorium</h3>
+              <p className="text-sm text-content-secondary leading-relaxed">
+                A 1,400+ seat civic and intellectual auditorium anchoring ALLYSHIP++ national executive roundtables, convocation ceremonies, and international scientific symposia.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-surface-2 rounded-3xl overflow-hidden border border-line hover:border-accent/60 shadow-lg transition-all group flex flex-col">
+            <div className="aspect-[4/3] overflow-hidden bg-surface-3 relative">
+              <Image
+                src="/soa-campus-grounds.jpg"
+                alt="SOA Academic Grounds and Labs"
+                fill
+                sizes="(max-width: 768px) 100vw, 25vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-2 text-content border border-line text-[10px] font-bold font-heading uppercase tracking-wider">
+                Innovation Labs
+              </span>
+            </div>
+            <div className="p-6 space-y-2">
+              <h3 className="font-display font-bold text-base sm:text-lg text-content group-hover:text-accent transition-colors">Academic Quads &amp; R&amp;D</h3>
+              <p className="text-sm text-content-secondary leading-relaxed">
+                Ranked 3rd nationally in Swachh Campus with eco-friendly quads, solar grids, and high-performance labs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. SUBMIT AN INDUSTRY CHALLENGE (INTERACTIVE FORM) */}
       <section id="submit-challenge" className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full scroll-mt-28 border-t border-line">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 2xl:gap-24 items-start">
           <div className="lg:col-span-5 space-y-6">
