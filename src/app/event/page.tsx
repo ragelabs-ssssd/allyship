@@ -349,17 +349,6 @@ function EventContent() {
                         </p>
                       </motion.div>
                     </AnimatePresence>
-
-                    {/* Animated Gold Progress Sweep */}
-                    <div className="mt-3.5 h-[2px] w-full bg-white/15 rounded-full overflow-hidden">
-                      <motion.div
-                        key={`${heroSlide}-${isPaused}`}
-                        initial={{ width: "0%" }}
-                        animate={{ width: isPaused ? "0%" : "100%" }}
-                        transition={{ duration: 5.2, ease: "linear" }}
-                        className="h-full bg-accent"
-                      />
-                    </div>
                   </div>
                 </div>
               </div>
