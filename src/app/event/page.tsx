@@ -372,7 +372,7 @@ function EventContent() {
             </p>
 
             <blockquote className="font-display italic font-normal tracking-normal text-base sm:text-lg text-content leading-relaxed border-l-2 border-accent pl-5 py-3 bg-surface-2 rounded-r-xl">
-              &ldquo;Allyship is a conscious commitment to guide, mentor, and support emerging talent. When academic institutions and corporate leaders work together with empathy, discipline, and shared purpose, we build workplaces where every young professional is trusted and prepared to succeed.&rdquo;
+              &ldquo;True allyship bridges the gap between campus and career. By grounding corporate-academic partnerships in discipline and shared purpose, we create environments where young professionals thrive from day one.&rdquo;
             </blockquote>
 
             <div className="pt-3 border-t border-line">
