@@ -219,8 +219,9 @@ export function AccreditationsShowcase({ onOpenSlide }: AccreditationsShowcasePr
             </p>
           </div>
 
-          <div className="pt-4 border-t border-line/80 relative z-10 text-xs font-mono text-content-muted">
-            Section 12(B) Central Assistance Fit
+          <div className="pt-4 border-t border-line/80 relative z-10 flex items-center justify-between text-xs font-mono">
+            <span className="text-content-muted">Section 12(B) Central Assistance Fit</span>
+            <span className="text-accent font-semibold">UGC Act 1956 Validated</span>
           </div>
         </div>
 
@@ -234,7 +235,7 @@ export function AccreditationsShowcase({ onOpenSlide }: AccreditationsShowcasePr
                 NATIONAL ACCREDITATION COUNCIL
               </span>
               <span className="text-xs font-mono text-accent font-bold px-2.5 py-1 rounded-lg bg-surface-3 border border-line">
-                GRADE A++ · CGPA 3.88
+                CYCLE-3 ACCREDITED
               </span>
             </div>
 
@@ -253,12 +254,13 @@ export function AccreditationsShowcase({ onOpenSlide }: AccreditationsShowcasePr
             </div>
 
             <p className="text-sm text-content-secondary leading-relaxed font-sans">
-              Validated with an extraordinary CGPA of 3.88 on a 4.0 scale—the highest accreditation bracket reflecting gold-standard pedagogy, research, and infrastructure.
+              Conferred the apex accreditation tier on a 4.0 scale—reflecting gold-standard pedagogy, multi-disciplinary research, and world-class academic infrastructure.
             </p>
           </div>
 
-          <div className="pt-4 border-t border-line/80 relative z-10 text-xs font-mono text-content-muted">
-            Top Tier in Indian Higher Education
+          <div className="pt-4 border-t border-line/80 relative z-10 flex items-center justify-between text-xs font-mono">
+            <span className="text-content-muted">Top Tier in Indian Higher Education</span>
+            <span className="text-accent font-semibold">CGPA 3.88 Validated</span>
           </div>
         </div>
       </div>
