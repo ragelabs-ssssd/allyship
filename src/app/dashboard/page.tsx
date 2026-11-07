@@ -71,16 +71,16 @@ export default function DashboardPage() {
   };
 
   return (
-    <div className="flex flex-col gap-10 pb-12 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 pt-10 sm:pt-14">
+    <div className="flex flex-col gap-10 pb-20 sm:pb-24 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 pt-28 sm:pt-32 lg:pt-36">
       {/* Top Profile / Welcome Header */}
       <div className="bg-surface rounded-3xl p-6 sm:p-8 border border-line shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div className="flex items-center gap-4">
-          <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-surface-2 to-canvas border border-line text-content flex items-center justify-center font-bold text-xl shadow-md">
+          <div className="w-16 h-16 shrink-0 rounded-2xl bg-gradient-to-br from-surface-2 to-canvas border border-line text-content flex items-center justify-center font-heading font-bold text-xl shadow-md">
             {pledge ? pledge.name.charAt(0).toUpperCase() : <User className="w-7 h-7" />}
           </div>
           <div>
-            <div className="flex items-center gap-2">
-              <h1 className="font-heading text-2xl font-bold text-content tracking-tight">
+            <div className="flex flex-wrap items-center gap-2.5">
+              <h1 className="font-heading text-2xl sm:text-3xl font-bold text-content tracking-tight">
                 {pledge ? `Welcome back, ${pledge.name}` : "Ally Member Portal"}
               </h1>
               {pledge && (
@@ -141,8 +141,8 @@ export default function DashboardPage() {
             <span>{tab.label}</span>
             {tab.count && (
               <span
-                className={`px-1.5 py-0.2 rounded-full text-[10px] ${
-                  activeTab === tab.id ? "bg-black/20 text-content" : "bg-glass-strong text-content-secondary"
+                className={`px-1.5 py-0.5 rounded-full text-[10px] ${
+                  activeTab === tab.id ? "bg-black/15 text-on-accent" : "bg-glass-strong text-content-secondary"
                 }`}
               >
                 {tab.count}
@@ -160,7 +160,7 @@ export default function DashboardPage() {
               <div className="absolute top-0 right-0 w-80 h-80 bg-accent-subtle rounded-full blur-3xl pointer-events-none" />
 
               <div className="relative z-10 max-w-2xl space-y-6">
-                <div className="flex items-center justify-between text-xs text-[#E8D5A7]">
+                <div className="flex items-center justify-between text-xs text-accent font-semibold">
                   <span>ALLYSHIP++ · SOA UNIVERSITY</span>
                   <span className="font-bold">{pledge.certificateNumber}</span>
                 </div>
@@ -256,7 +256,7 @@ export default function DashboardPage() {
       {/* Tab 2: Saved Resources */}
       {activeTab === "resources" && (
         <div className="space-y-6">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-wrap items-center justify-between gap-2">
             <h2 className="font-heading text-xl font-bold text-content">Your Saved Reading List</h2>
             <Link href="/resources" className="text-xs font-bold text-accent hover:underline">
               + Discover more resources
@@ -308,7 +308,7 @@ export default function DashboardPage() {
       {/* Tab 3: Registered Events */}
       {activeTab === "events" && (
         <div className="space-y-6">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-wrap items-center justify-between gap-2">
             <h2 className="font-heading text-xl font-bold text-content">Your Upcoming Registered Gatherings</h2>
             <Link href="/community" className="text-xs font-bold text-accent hover:underline">
               + Explore Community Calendar

@@ -38,15 +38,15 @@ export function ChapterBentoGrid() {
   const bottomChapters = remaining.slice(3);
 
   return (
-    <section id="chapters" className="py-24 lg:py-32 bg-canvas relative">
+    <section id="chapters" className="py-20 lg:py-28 bg-canvas relative">
       <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 pb-6 border-b border-line">
+        <div className="flex flex-col xl:flex-row xl:items-end justify-between gap-6 mb-16 pb-6 border-b border-line">
           <SectionReveal>
             <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
               Standing National Corridors
             </span>
-            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight mt-2 sm:whitespace-nowrap">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight mt-2">
               The 5-City Executive Conclave Chronicles
             </h2>
           </SectionReveal>
@@ -155,7 +155,7 @@ export function ChapterBentoGrid() {
           )}
 
           {/* Remaining Chapters in Column/Grid — 5 Columns Wide */}
-          <div className={`lg:col-span-5 flex flex-col ${sideChapters.length === 3 ? "gap-4 sm:gap-4.5 justify-between" : "gap-6"}`}>
+          <div className={`lg:col-span-5 flex flex-col ${sideChapters.length === 3 ? "gap-4 sm:gap-5 justify-between" : "gap-6"}`}>
             {sideChapters.map((chapter, idx) => (
               <SectionReveal key={chapter.id} delay={0.1 * (idx + 1)} className={sideChapters.length === 3 ? "flex-1 flex flex-col" : ""}>
                 <Link
@@ -174,7 +174,7 @@ export function ChapterBentoGrid() {
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                     </div>
-                    <div className={`sm:col-span-7 ${sideChapters.length === 3 ? "p-4 sm:p-4.5" : "p-5"} flex flex-col justify-between space-y-2`}>
+                    <div className={`sm:col-span-7 ${sideChapters.length === 3 ? "p-4 sm:p-5" : "p-5"} flex flex-col justify-between space-y-2`}>
                       <div>
                         <div className="flex items-center justify-between gap-2 mb-1">
                           <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
@@ -193,7 +193,7 @@ export function ChapterBentoGrid() {
                       </div>
 
                       <div className="flex items-center justify-between pt-2 border-t border-line text-[11px]">
-                        <span className="font-sans text-xs text-content-muted truncate max-w-[160px]">
+                        <span className="font-sans text-xs text-content-muted truncate pr-2 flex-1">
                           {chapter.venue}
                         </span>
                         <ArrowUpRight className="w-3.5 h-3.5 text-content-muted group-hover:text-accent group-hover:translate-x-0.5 transition-all" />

@@ -95,7 +95,7 @@ export function ImpactSection() {
             <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
               Proven Institutional Dividends
             </span>
-            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight mt-2 sm:whitespace-nowrap">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight mt-2">
               The Architecture of Measurable Velocity
             </h2>
           </div>

@@ -10,7 +10,7 @@ interface CtaBannerProps {
 
 export function CtaBanner({ onOpenInvite }: CtaBannerProps) {
   return (
-    <section className="py-24 lg:py-36 bg-canvas text-content relative overflow-hidden border-t border-line">
+    <section className="py-20 lg:py-28 bg-canvas text-content relative overflow-hidden border-t border-line">
       {/* Subtle gold ambient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[rgba(201,169,110,0.12)] rounded-full blur-3xl pointer-events-none" />
 
@@ -37,7 +37,7 @@ export function CtaBanner({ onOpenInvite }: CtaBannerProps) {
         <SectionReveal delay={0.3} className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
             onClick={onOpenInvite}
-            className="inline-flex items-center gap-3 rounded-full bg-accent hover:bg-accent-hover text-on-accent font-sans font-medium text-sm px-6 py-3.5 transition-colors duration-200 shadow-sm"
+            className="inline-flex items-center gap-3 rounded-full bg-accent hover:bg-accent-hover text-on-accent font-sans font-semibold text-sm px-6 py-3.5 transition-colors duration-200 shadow-sm"
           >
             <span>Request Executive Invitation</span>
             <span className="flex h-6 w-6 items-center justify-center rounded-full bg-black/80 text-white text-xs">

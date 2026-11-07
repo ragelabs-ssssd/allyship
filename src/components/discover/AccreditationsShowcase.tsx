@@ -198,7 +198,7 @@ export function AccreditationsShowcase({ onOpenSlide }: AccreditationsShowcasePr
           <div className="absolute top-0 right-0 w-80 h-80 bg-accent/15 rounded-full blur-3xl pointer-events-none group-hover:bg-accent/25 transition-all duration-700" />
 
           <div className="space-y-5 relative z-10">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-wrap gap-2 items-center justify-between">
               <span className="text-xs font-mono uppercase tracking-widest text-accent font-bold px-3 py-1 rounded-full bg-accent/10 border border-accent/40">
                 APEX STATUTORY AUTONOMY
               </span>
@@ -206,7 +206,7 @@ export function AccreditationsShowcase({ onOpenSlide }: AccreditationsShowcasePr
             </div>
 
             <div>
-              <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-content uppercase tracking-tight leading-tight">
+              <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-extrabold text-content tracking-tight leading-tight">
                 Category-I Graded Autonomy Status
               </h3>
               <span className="text-xs sm:text-sm font-semibold text-accent uppercase tracking-wider block mt-1">
@@ -230,7 +230,7 @@ export function AccreditationsShowcase({ onOpenSlide }: AccreditationsShowcasePr
           <div className="absolute top-0 right-0 w-80 h-80 bg-accent/15 rounded-full blur-3xl pointer-events-none group-hover:bg-accent/25 transition-all duration-700" />
 
           <div className="space-y-5 relative z-10">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-wrap gap-2 items-center justify-between">
               <span className="text-xs font-mono uppercase tracking-widest text-accent font-bold px-3 py-1 rounded-full bg-accent/10 border border-accent/40">
                 NATIONAL ACCREDITATION COUNCIL
               </span>
@@ -239,8 +239,8 @@ export function AccreditationsShowcase({ onOpenSlide }: AccreditationsShowcasePr
               </span>
             </div>
 
-            <div className="flex items-baseline gap-4">
-              <span className="font-heading text-6xl sm:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-accent via-[#F4E8C1] to-accent-light leading-none">
+            <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4">
+              <span className="font-heading text-6xl sm:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-accent via-accent-light to-accent leading-none">
                 A++
               </span>
               <div>
@@ -280,7 +280,7 @@ export function AccreditationsShowcase({ onOpenSlide }: AccreditationsShowcasePr
               onClick={() => setActiveFilter(f.key)}
               className={`px-3.5 py-1.5 rounded-full text-xs font-mono transition-all ${
                 activeFilter === f.key
-                  ? "bg-accent text-surface-dark font-bold shadow-sm"
+                  ? "bg-accent text-on-accent font-bold shadow-sm"
                   : "bg-surface-2 hover:bg-surface-3 text-content-secondary border border-line"
               }`}
             >
@@ -307,6 +307,8 @@ export function AccreditationsShowcase({ onOpenSlide }: AccreditationsShowcasePr
                   className={`text-[10px] font-mono uppercase font-bold px-2.5 py-0.5 rounded-full border ${
                     item.badgeType === "gold"
                       ? "bg-accent/15 border-accent/40 text-accent"
+                      : item.badgeType === "accent"
+                      ? "bg-accent-subtle border-accent/30 text-accent"
                       : "bg-surface-3 border-line text-content-secondary"
                   }`}
                 >
@@ -319,7 +321,7 @@ export function AccreditationsShowcase({ onOpenSlide }: AccreditationsShowcasePr
                 <h4 className="font-heading text-base sm:text-lg font-bold text-content group-hover:text-accent transition-colors leading-snug">
                   {item.title}
                 </h4>
-                <p className="text-xs text-accent/90 font-medium mt-0.5 font-mono">
+                <p className="text-xs text-accent/90 font-medium mt-0.5 font-sans">
                   {item.authority}
                 </p>
               </div>
@@ -330,7 +332,7 @@ export function AccreditationsShowcase({ onOpenSlide }: AccreditationsShowcasePr
             </div>
 
             <div className="pt-3 border-t border-line/60 flex items-center justify-between text-[11px] font-mono text-content-muted">
-              <span className="uppercase text-[9px] tracking-wider text-accent/90">
+              <span className="uppercase text-[10px] tracking-wider text-accent/90">
                 {item.categoryLabel}
               </span>
               {item.stat && (

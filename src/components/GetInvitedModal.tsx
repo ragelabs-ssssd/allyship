@@ -176,7 +176,7 @@ export function GetInvitedModal({ isOpen, onClose }: GetInvitedModalProps) {
                       value={fullName}
                       onChange={(e) => setFullName(e.target.value)}
                       placeholder="e.g. Anand Mahindra"
-                      className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-line font-sans text-sm focus:outline-none focus:border-accent text-content bg-surface-2 placeholder-zinc-500"
+                      className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-line font-sans text-base sm:text-sm focus:outline-none focus:border-accent text-content bg-surface-2 placeholder:text-content-faint"
                     />
                   </div>
                 </div>
@@ -199,7 +199,7 @@ export function GetInvitedModal({ isOpen, onClose }: GetInvitedModalProps) {
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="executive@organization.com"
-                      className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-line font-sans text-sm focus:outline-none focus:border-accent text-content bg-surface-2 placeholder-zinc-500"
+                      className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-line font-sans text-base sm:text-sm focus:outline-none focus:border-accent text-content bg-surface-2 placeholder:text-content-faint"
                     />
                   </div>
                 </div>
@@ -224,7 +224,7 @@ export function GetInvitedModal({ isOpen, onClose }: GetInvitedModalProps) {
                       value={company}
                       onChange={(e) => setCompany(e.target.value)}
                       placeholder="e.g. Microsoft India"
-                      className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-line font-sans text-sm focus:outline-none focus:border-accent text-content bg-surface-2 placeholder-zinc-500"
+                      className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-line font-sans text-base sm:text-sm focus:outline-none focus:border-accent text-content bg-surface-2 placeholder:text-content-faint"
                     />
                   </div>
                 </div>
@@ -244,7 +244,7 @@ export function GetInvitedModal({ isOpen, onClose }: GetInvitedModalProps) {
                       value={designation}
                       onChange={(e) => setDesignation(e.target.value)}
                       placeholder="e.g. Chief People Officer"
-                      className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-line font-sans text-sm focus:outline-none focus:border-accent text-content bg-surface-2 placeholder-zinc-500"
+                      className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-line font-sans text-base sm:text-sm focus:outline-none focus:border-accent text-content bg-surface-2 placeholder:text-content-faint"
                     />
                   </div>
                 </div>
@@ -286,11 +286,11 @@ export function GetInvitedModal({ isOpen, onClose }: GetInvitedModalProps) {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="e.g. Executive panel participation, sponsored research labs, student hiring..."
-                  className="w-full p-3 rounded-xl border border-line font-sans text-sm focus:outline-none focus:border-accent text-content bg-surface-2 placeholder-zinc-500 resize-none"
+                  className="w-full p-3 rounded-xl border border-line font-sans text-base sm:text-sm focus:outline-none focus:border-accent text-content bg-surface-2 placeholder:text-content-faint resize-none"
                 />
               </div>
 
-              <div className="pt-2 flex items-center justify-between gap-4">
+              <div className="pt-2 flex flex-col-reverse sm:flex-row items-center justify-between gap-4">
                 <div className="flex items-center gap-1.5 font-sans text-[11px] text-content-muted">
                   <ShieldCheck className="w-3.5 h-3.5 text-accent" />
                   <span>Complimentary • By Invitation Only</span>

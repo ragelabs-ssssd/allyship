@@ -61,7 +61,7 @@ export function InitiativeEnrollmentForm({ initiative }: EnrollmentFormProps) {
         <div className="w-12 h-12 rounded-full bg-success-bg text-success mx-auto flex items-center justify-center border border-success-border">
           <CheckCircle2 className="w-6 h-6" />
         </div>
-        <h3 className="text-base font-bold text-content">Application Recorded!</h3>
+        <h3 className="font-heading text-base sm:text-lg font-bold text-content">Application Recorded!</h3>
         <p className="text-xs text-content-muted">
           Thank you, <strong className="text-content">{name}</strong>. Your enrollment inquiry for{" "}
           <strong className="text-content">{initiative.title}</strong> has been logged under reference{" "}
@@ -71,7 +71,7 @@ export function InitiativeEnrollmentForm({ initiative }: EnrollmentFormProps) {
           <button
             type="button"
             onClick={() => setSubmitted(false)}
-            className="text-xs font-semibold text-success hover:text-success underline transition-colors"
+            className="text-xs font-semibold text-success hover:opacity-80 underline transition-colors"
           >
             Submit another application
           </button>
@@ -83,7 +83,7 @@ export function InitiativeEnrollmentForm({ initiative }: EnrollmentFormProps) {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div>
-        <h3 className="text-base font-bold text-content">Enroll or Inquire for Next Cohort</h3>
+        <h3 className="font-heading text-base sm:text-lg font-bold text-content">Enroll or Inquire for Next Cohort</h3>
         <p className="text-xs text-content-muted mt-0.5">
           Reserve a seat in this upcoming learning track. All core materials are free.
         </p>
@@ -106,7 +106,7 @@ export function InitiativeEnrollmentForm({ initiative }: EnrollmentFormProps) {
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="e.g. Maya Chen"
-          className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder-zinc-500 text-sm focus:outline-none focus:border-accent transition-colors"
+          className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder:text-content-faint text-base sm:text-sm focus:outline-none focus:border-accent transition-colors"
         />
       </div>
 
@@ -121,7 +121,7 @@ export function InitiativeEnrollmentForm({ initiative }: EnrollmentFormProps) {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="maya@example.com"
-          className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder-zinc-500 text-sm focus:outline-none focus:border-accent transition-colors"
+          className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder:text-content-faint text-base sm:text-sm focus:outline-none focus:border-accent transition-colors"
         />
       </div>
 
@@ -135,7 +135,7 @@ export function InitiativeEnrollmentForm({ initiative }: EnrollmentFormProps) {
           value={role}
           onChange={(e) => setRole(e.target.value)}
           placeholder="e.g. Software Engineer / Student"
-          className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder-zinc-500 text-sm focus:outline-none focus:border-accent transition-colors"
+          className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder:text-content-faint text-base sm:text-sm focus:outline-none focus:border-accent transition-colors"
         />
       </div>
 
@@ -149,7 +149,7 @@ export function InitiativeEnrollmentForm({ initiative }: EnrollmentFormProps) {
           value={motivation}
           onChange={(e) => setMotivation(e.target.value)}
           placeholder="Share your goals or challenges..."
-          className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder-zinc-500 text-sm focus:outline-none focus:border-accent transition-colors resize-none"
+          className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder:text-content-faint text-base sm:text-sm focus:outline-none focus:border-accent transition-colors resize-none"
         />
       </div>
 
@@ -157,7 +157,7 @@ export function InitiativeEnrollmentForm({ initiative }: EnrollmentFormProps) {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full py-3 rounded-full bg-accent hover:bg-accent-hover text-on-accent font-bold text-xs tracking-wide shadow-md transition-all flex items-center justify-center gap-2"
+          className="w-full py-3 rounded-full bg-accent hover:bg-accent-hover text-on-accent font-bold text-xs tracking-wide shadow-md transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isSubmitting ? (
             "Processing..."

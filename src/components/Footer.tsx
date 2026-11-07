@@ -48,7 +48,7 @@ export function Footer() {
           {/* Col 1: Institutional Essence (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
             <Link href="/" className="inline-flex items-center gap-3.5 group">
-              <div className="w-12 h-12 relative flex items-center justify-center rounded-2xl bg-glass-strong p-2 border border-line-strong group-hover:border-accent transition-colors shadow-md">
+              <div className="w-12 h-12 relative flex items-center justify-center rounded-full bg-glass-strong p-2 border border-line-strong group-hover:border-accent transition-colors shadow-md">
                 <img
                   src="/soa-logo.png"
                   alt="Siksha 'O' Anusandhan (SOA) Crest"

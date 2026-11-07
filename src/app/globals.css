@@ -20,6 +20,7 @@
   --color-surface-2: var(--t-surface-2);
   --color-surface-3: var(--t-surface-3);
   --color-surface-sunken: var(--t-surface-sunken);
+  --color-surface-dark: var(--t-canvas);
   --color-content: var(--t-content);
   --color-content-secondary: var(--t-content-secondary);
   --color-content-muted: var(--t-content-muted);
@@ -607,7 +608,7 @@
   padding: 0.875rem 1.75rem;
   min-height: 3rem;
   background-color: var(--t-surface-3);
-  color: #FFFFFF;
+  color: var(--t-content);
   font-family: var(--font-sans), sans-serif;
   font-weight: 600;
   font-size: 0.875rem;
@@ -621,7 +622,7 @@
 
 .btn-secondary:hover {
   background-color: var(--t-surface-2);
-  color: #FFFFFF;
+  color: var(--t-content);
   border-color: var(--t-line-strong);
   transform: translateY(-1px);
 }

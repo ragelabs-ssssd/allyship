@@ -52,12 +52,12 @@ export default async function InitiativeDetailPage({ params }: PageProps) {
   const relatedInitiatives = INITIATIVES.filter((i) => i.slug !== slug).slice(0, 2);
 
   return (
-    <div className="flex flex-col gap-12 sm:gap-16 pb-12 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 pt-8 sm:pt-12">
+    <div className="flex flex-col gap-12 sm:gap-16 pb-20 sm:pb-24 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 pt-28 sm:pt-32 lg:pt-36">
       {/* Back button */}
       <div>
         <Link
           href="/initiatives"
-          className="inline-flex items-center gap-2 text-xs font-bold text-content-muted hover:text-accent transition-colors"
+          className="inline-flex items-center gap-2 text-xs font-bold text-content-muted hover:text-accent transition-colors uppercase tracking-wider font-heading"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to All Initiatives</span>
@@ -120,7 +120,7 @@ export default async function InitiativeDetailPage({ params }: PageProps) {
         <div className="lg:col-span-7 space-y-12">
           {/* Key Learning Outcomes */}
           <section className="bg-surface rounded-3xl p-7 sm:p-8 border border-line shadow-xl space-y-4">
-            <h2 className="font-heading text-xl font-bold text-content tracking-tight flex items-center gap-2">
+            <h2 className="font-heading text-xl sm:text-2xl font-bold text-content tracking-tight flex items-center gap-2">
               <CheckCircle2 className="w-5 h-5 text-success" />
               What You Will Achieve
             </h2>
@@ -142,7 +142,7 @@ export default async function InitiativeDetailPage({ params }: PageProps) {
               <span className="text-xs font-bold uppercase tracking-wider text-accent block mb-1">
                 Structured Pedagogy
               </span>
-              <h2 className="font-heading text-2xl font-bold text-content tracking-tight">
+              <h2 className="font-heading text-2xl sm:text-3xl font-bold text-content tracking-tight">
                 Curriculum & Cohort Syllabus
               </h2>
             </div>
@@ -168,10 +168,10 @@ export default async function InitiativeDetailPage({ params }: PageProps) {
 
           {/* Target Audience */}
           <section className="bg-surface-2 rounded-3xl p-7 border border-line space-y-4">
-            <h2 className="font-heading text-lg font-bold text-content">Who This Initiative Is Designed For</h2>
+            <h2 className="font-heading text-xl sm:text-2xl font-bold text-content tracking-tight">Who This Initiative Is Designed For</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
               {initiative.targetAudience.map((aud, idx) => (
-                <div key={idx} className="flex items-start gap-2 text-xs text-content-secondary">
+                <div key={idx} className="flex items-start gap-2 text-xs sm:text-sm leading-relaxed text-content-secondary">
                   <span className="text-accent font-bold">•</span>
                   <span>{aud}</span>
                 </div>
@@ -181,7 +181,7 @@ export default async function InitiativeDetailPage({ params }: PageProps) {
         </div>
 
         {/* Right Column: Meeting Schedule & Interactive Enrollment Form */}
-        <div className="lg:col-span-5 space-y-6 sticky top-28">
+        <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
           <div className="bg-surface rounded-3xl p-6 sm:p-7 border border-line shadow-xl space-y-6">
             <div className="border-b border-line pb-4">
               <span className="text-[11px] font-bold uppercase tracking-wider text-content-muted block mb-1">
@@ -202,7 +202,7 @@ export default async function InitiativeDetailPage({ params }: PageProps) {
       {/* Related Initiatives */}
       {relatedInitiatives.length > 0 && (
         <div className="pt-12 border-t border-line space-y-6">
-          <h2 className="font-heading text-2xl font-bold text-content">Other Active Initiatives</h2>
+          <h2 className="font-heading text-2xl sm:text-3xl font-bold text-content tracking-tight">Other Active Initiatives</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {relatedInitiatives.map((rel) => (
               <InitiativeCard key={rel.id} initiative={rel} variant="compact" />

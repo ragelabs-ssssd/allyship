@@ -186,12 +186,10 @@ export function Navbar() {
                     setIsMobileMenuOpen(false);
                     setIsInviteOpen(true);
                   }}
-                  className="inline-flex items-center justify-center gap-3 w-full rounded-full bg-accent hover:bg-accent-hover text-on-accent font-sans font-medium text-sm py-3.5 transition-colors duration-200 shadow-sm"
+                  className="inline-flex items-center justify-center gap-3 w-full rounded-full bg-accent hover:bg-accent-hover text-on-accent font-sans font-semibold text-sm py-3.5 transition-colors duration-200 shadow-sm"
                 >
                   <span>Request Executive Invitation</span>
-                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-black/80 text-white text-xs">
-                    →
-                  </span>
+                  <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
             </div>

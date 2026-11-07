@@ -52,10 +52,10 @@ export default function ResourcesPage() {
   });
 
   return (
-    <div className="flex flex-col gap-12 sm:gap-16 pb-16 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 pt-32 sm:pt-36 lg:pt-40">
+    <div className="flex flex-col gap-12 sm:gap-16 pb-20 sm:pb-24 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 pt-32 sm:pt-36 lg:pt-40">
       {/* Header */}
       <div className="text-center max-w-4xl mx-auto space-y-4">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase shadow-sm">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-[11px] font-bold font-heading tracking-[0.14em] uppercase shadow-sm">
           <BookOpen className="w-3.5 h-3.5 text-accent" />
           <span>Open Educational Repository</span>
         </div>
@@ -80,7 +80,7 @@ export default function ResourcesPage() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search guides, topics (e.g. microaggressions, listening, meetings)..."
-              className="w-full pl-11 pr-4 py-2.5 rounded-full bg-surface-2 border border-line text-sm text-content placeholder-slate-500 focus:outline-none focus:border-accent transition-all"
+              className="w-full pl-11 pr-4 py-2.5 rounded-full bg-surface-2 border border-line text-sm text-content placeholder:text-content-faint focus:outline-none focus:border-accent transition-all"
             />
           </div>
 
@@ -90,11 +90,11 @@ export default function ResourcesPage() {
             onClick={() => setShowSavedOnly(!showSavedOnly)}
             className={`px-4 py-2.5 rounded-full text-xs font-bold transition-all flex items-center justify-center gap-2 border font-heading ${
               showSavedOnly
-                ? "bg-accent text-on-accent border-accent shadow-xs"
+                ? "bg-accent text-on-accent border-accent shadow-sm"
                 : "bg-surface-2 border-line text-content-secondary hover:bg-glass-strong"
             }`}
           >
-            <Bookmark className={`w-3.5 h-3.5 ${showSavedOnly ? "fill-[#0A0A0A]" : ""}`} />
+            <Bookmark className={`w-3.5 h-3.5 ${showSavedOnly ? "fill-current" : ""}`} />
             <span>Saved ({savedIds.length})</span>
           </button>
         </div>
@@ -111,7 +111,7 @@ export default function ResourcesPage() {
               onClick={() => setSelectedCategory(cat.id)}
               className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all font-heading ${
                 selectedCategory === cat.id
-                  ? "bg-accent text-on-accent shadow-xs font-bold"
+                  ? "bg-accent text-on-accent shadow-sm font-bold"
                   : "bg-surface-2 text-content-secondary hover:bg-glass-strong border border-line"
               }`}
             >
@@ -134,7 +134,7 @@ export default function ResourcesPage() {
                 onClick={() => setSelectedTag(isTagActive ? null : tag)}
                 className={`text-[11px] font-medium px-2.5 py-1 rounded-lg transition-all ${
                   isTagActive
-                    ? "bg-accent text-on-accent shadow-xs font-bold"
+                    ? "bg-accent text-on-accent shadow-sm font-bold"
                     : "bg-surface-2 text-content-muted hover:text-content border border-line"
                 }`}
               >
@@ -193,7 +193,7 @@ export default function ResourcesPage() {
               setSelectedTag(null);
               setShowSavedOnly(false);
             }}
-            className="px-5 py-2 rounded-full bg-accent hover:bg-accent-hover text-on-accent text-xs font-semibold transition-colors"
+            className="btn-primary"
           >
             Reset Filters
           </button>

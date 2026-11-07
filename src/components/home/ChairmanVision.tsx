@@ -9,7 +9,7 @@ import { ArrowUpRight } from "lucide-react";
 
 export function ChairmanVision() {
   return (
-    <section className="py-24 lg:py-36 bg-surface-2 relative border-y border-line overflow-hidden">
+    <section className="py-20 lg:py-28 bg-surface-2 relative border-y border-line overflow-hidden">
       {/* Subtle luxury ambient pattern */}
       <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 2xl:gap-24 items-center">
@@ -33,7 +33,7 @@ export function ChairmanVision() {
                   <h4 className="font-display text-base font-semibold tracking-normal text-content leading-snug">
                     Prof. (Dr.) Manojranjan Nayak
                   </h4>
-                  <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-muted">
+                  <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-secondary">
                     Founder President &amp; Chairman, Siksha &lsquo;O&rsquo; Anusandhan
                   </p>
                 </div>
@@ -47,6 +47,7 @@ export function ChairmanVision() {
           {/* Right Column: Editorial Quote & Philosophy */}
           <SectionReveal className="lg:col-span-7 xl:col-span-7 space-y-8" direction="right">
             <div className="space-y-4">
+              <span className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-accent block">Institutional Stewardship</span>
               <Quote className="w-12 h-12 text-accent opacity-80" />
               <blockquote className="font-serif italic font-normal tracking-normal text-2xl sm:text-3xl lg:text-4xl leading-[1.4] text-content">
                 &ldquo;Allyship is not a transactional summit. It is an enduring covenant between

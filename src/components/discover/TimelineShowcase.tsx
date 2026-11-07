@@ -218,19 +218,19 @@ export function TimelineShowcase() {
           <span className="font-heading text-sm font-bold text-content mt-2 uppercase tracking-wider">
             Constituent Institutes
           </span>
-          <span className="text-xs text-content-muted mt-1 font-mono">
+          <span className="text-xs text-content-muted mt-1 font-sans">
             Engineering, Medicine, Dental, Law, Management, Nursing, Pharmacy &amp; Agriculture
           </span>
         </div>
 
         <div className="p-6 sm:p-8 rounded-3xl bg-surface-2 border border-line hover:border-accent transition-all flex flex-col items-center justify-center">
-          <span className="font-display text-5xl sm:text-6xl font-extrabold text-content">
+          <span className="font-display text-5xl sm:text-6xl font-extrabold text-accent">
             18
           </span>
           <span className="font-heading text-sm font-bold text-content mt-2 uppercase tracking-wider">
             State-of-the-Art Research Centres
           </span>
-          <span className="text-xs text-content-muted mt-1 font-mono">
+          <span className="text-xs text-content-muted mt-1 font-sans">
             Nanotechnology, Renewable Energy, Climate Studies, Biomechanics &amp; AI
           </span>
         </div>
@@ -246,7 +246,7 @@ export function TimelineShowcase() {
             The 30-Mile Academic Expressway (Mile 0 → Mile 30)
           </h3>
         </div>
-        <div className="flex items-center gap-2 text-xs font-mono text-content-muted self-start sm:self-auto">
+        <div className="flex flex-wrap items-center gap-2 text-xs font-mono text-content-muted self-start sm:self-auto">
           <span className="px-3 py-1.5 rounded-full bg-accent/15 border border-accent/40 text-accent font-bold">
             ORIGIN: 1996 ITER
           </span>
@@ -262,7 +262,7 @@ export function TimelineShowcase() {
         {INSTITUTION_NODES.map((node, idx) => (
           <div key={node.id} className="relative group">
             {/* Highway Milepost Marker Pin */}
-            <div className="absolute -left-[37px] sm:-left-[61px] top-6 w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-surface-dark border-2 border-accent text-accent font-mono text-xs font-black flex items-center justify-center shadow-lg group-hover:bg-accent group-hover:text-surface-dark transition-colors">
+            <div className="absolute -left-[42px] sm:-left-[68px] top-6 w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-canvas border-2 border-accent text-accent font-mono text-xs font-black flex items-center justify-center shadow-lg group-hover:bg-accent group-hover:text-on-accent transition-colors">
               {idx + 1}
             </div>
 
@@ -277,7 +277,7 @@ export function TimelineShowcase() {
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 1024px) 100vw, 42vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-surface-dark/95 via-surface-dark/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
 
                 <div className="absolute bottom-3 left-4 right-4">
                   <span className="text-sm font-mono text-[#F4E8C1] font-bold block">
@@ -302,7 +302,7 @@ export function TimelineShowcase() {
                     <h4 className="font-heading text-xl sm:text-2xl font-bold text-content group-hover:text-accent transition-colors leading-snug">
                       {node.title}
                     </h4>
-                    <p className="text-xs sm:text-sm font-mono text-accent font-semibold mt-1">
+                    <p className="text-xs sm:text-sm font-sans text-accent font-semibold mt-1">
                       {node.faculty}
                     </p>
                   </div>

@@ -12,10 +12,10 @@ interface CinematicHeroProps {
 
 const ROTATING_WORDS = [
   { text: "ACADEMIA", color: "text-accent" },    // Signature Champagne Gold
-  { text: "INNOVATION", color: "text-[#E8D5A7]" },  // Warm Platinum Champagne
+  { text: "INNOVATION", color: "text-accent-light" },  // Warm Platinum Champagne
   { text: "RESEARCH", color: "text-accent" },    // Rich Metallic Gold
-  { text: "LEADERSHIP", color: "text-[#D4B97B]" },  // Muted Warm Bronze
-  { text: "FORESIGHT", color: "text-[#E8D5A7]" },   // Soft Sunlit Brass
+  { text: "LEADERSHIP", color: "text-accent-hover" },  // Muted Warm Bronze
+  { text: "FORESIGHT", color: "text-accent-light" },   // Soft Sunlit Brass
 ];
 
 const HERO_SLIDES = [
@@ -241,7 +241,7 @@ export function CinematicHero({ onOpenInvite }: CinematicHeroProps) {
             >
               <button
                 onClick={onOpenInvite}
-                className="inline-flex items-center gap-3 rounded-full bg-accent hover:bg-accent-hover text-on-accent font-sans font-medium text-sm px-6 py-3.5 transition-colors duration-200 shadow-sm"
+                className="inline-flex items-center gap-3 rounded-full bg-accent hover:bg-accent-hover text-on-accent font-sans font-semibold text-sm px-7 py-3.5 min-h-[48px] transition-colors duration-200 shadow-sm"
               >
                 <span>Request Executive Invitation</span>
                 <span className="flex h-6 w-6 items-center justify-center rounded-full bg-black/80 text-white text-xs">
@@ -251,7 +251,7 @@ export function CinematicHero({ onOpenInvite }: CinematicHeroProps) {
 
               <a
                 href="#chapters"
-                className="inline-flex items-center gap-2 px-6 py-4 rounded-full text-sm font-semibold text-content-secondary hover:text-content bg-surface-3 hover:bg-surface-3 border border-line hover:border-line-strong transition-all duration-300"
+                className="inline-flex items-center gap-2 px-7 py-3.5 min-h-[48px] rounded-full text-sm font-semibold text-content-secondary hover:text-content bg-surface-3 hover:bg-surface-2 border border-line hover:border-line-strong transition-all duration-300"
               >
                 <span>Explore Metro Chapters</span>
                 <ChevronDown className="w-4 h-4 text-accent" />
@@ -391,14 +391,14 @@ export function CinematicHero({ onOpenInvite }: CinematicHeroProps) {
                 className="absolute -bottom-4 -right-2 sm:-right-4 bg-surface-2/95 backdrop-blur-md px-4 py-3 rounded-xl border border-line shadow-2xl hidden sm:flex items-center gap-3 z-20"
               >
                 <div className="w-10 h-10 rounded-full bg-accent-subtle border border-accent/30 flex items-center justify-center font-display font-bold text-base text-accent">
-                  6+
+                  7
                 </div>
                 <div>
                   <p className="font-display text-xs font-semibold text-content leading-tight">
-                    Metro Chapters
+                    National Conclaves
                   </p>
                   <p className="font-sans text-[11px] text-content-muted">
-                    Across 5 Tech Hubs
+                    Across 6 Tech Hubs
                   </p>
                 </div>
               </motion.div>

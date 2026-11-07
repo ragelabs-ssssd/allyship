@@ -185,17 +185,17 @@ export function PledgeModal({ isOpen, onClose }: PledgeModalProps) {
         </div>
 
         {/* Progress Tracker */}
-        <div className="bg-surface-sunken px-6 py-3 border-b border-line flex items-center justify-between text-xs text-content-muted font-medium">
+        <div className="bg-surface-sunken px-4 sm:px-6 py-3 border-b border-line flex items-center justify-between text-xs text-content-muted font-medium">
           <div className="flex items-center gap-2">
             <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[11px] font-bold ${step >= 1 ? 'bg-accent text-on-accent' : 'bg-glass-strong text-content-muted'}`}>1</span>
             <span className={step === 1 ? 'text-content font-semibold' : ''}>Focus Areas</span>
           </div>
-          <div className="w-8 h-[2px] bg-glass-strong" />
+          <div className="w-3 sm:w-8 h-[2px] shrink-0 bg-glass-strong" />
           <div className="flex items-center gap-2">
             <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[11px] font-bold ${step >= 2 ? 'bg-accent text-on-accent' : 'bg-glass-strong text-content-muted'}`}>2</span>
             <span className={step === 2 ? 'text-content font-semibold' : ''}>Commitments</span>
           </div>
-          <div className="w-8 h-[2px] bg-glass-strong" />
+          <div className="w-3 sm:w-8 h-[2px] shrink-0 bg-glass-strong" />
           <div className="flex items-center gap-2">
             <span className={`w-5 h-5 rounded-full flex items-center justify-center text-[11px] font-bold ${step >= 3 ? 'bg-accent text-on-accent' : 'bg-glass-strong text-content-muted'}`}>3</span>
             <span className={step === 3 ? 'text-content font-semibold' : ''}>Affirmation</span>
@@ -341,7 +341,7 @@ export function PledgeModal({ isOpen, onClose }: PledgeModalProps) {
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
                     placeholder="e.g. Jordan Bennett"
-                    className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder-zinc-500 text-sm focus:outline-none focus:border-accent transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder:text-content-faint text-base sm:text-sm focus:outline-none focus:border-accent transition-colors"
                   />
                 </div>
 
@@ -356,7 +356,7 @@ export function PledgeModal({ isOpen, onClose }: PledgeModalProps) {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="jordan@example.com"
-                    className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder-zinc-500 text-sm focus:outline-none focus:border-accent transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder:text-content-faint text-base sm:text-sm focus:outline-none focus:border-accent transition-colors"
                   />
                   <p className="text-[11px] text-content-muted mt-1">
                     Used strictly to store your certificate in your browser. We never sell or spam your data.
@@ -412,7 +412,7 @@ export function PledgeModal({ isOpen, onClose }: PledgeModalProps) {
               {/* Certificate Preview Card */}
               <div className="p-6 rounded-2xl bg-gradient-to-br from-surface-2 via-surface to-canvas text-content text-left relative overflow-hidden border border-line shadow-xl">
                 <div className="absolute top-0 right-0 w-36 h-36 bg-accent-subtle rounded-full blur-2xl pointer-events-none" />
-                <div className="flex items-center justify-between text-xs text-[#E8D5A7]">
+                <div className="flex items-center justify-between text-xs text-accent font-semibold">
                   <span>ALLYSHIP++ · SOA UNIVERSITY</span>
                   <span>{certificateId}</span>
                 </div>

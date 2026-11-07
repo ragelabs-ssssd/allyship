@@ -170,7 +170,7 @@ export default function ImpactPage() {
         <div className="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-[11px] font-bold font-heading tracking-[0.14em] uppercase">
                 <span>In the Headlines · Measured Reputational Capital</span>
               </div>
 
@@ -179,7 +179,7 @@ export default function ImpactPage() {
                 <span className="italic font-normal">Allyship<span className="text-accent not-italic">++</span></span>
               </h1>
 
-              <p className="text-lg sm:text-xl font-display text-content-muted italic sm:whitespace-nowrap">
+              <p className="text-lg sm:text-xl font-display text-content-muted italic">
                 From Boardroom Dialogue to Campus Innovation &amp; Career Excellence
               </p>
 
@@ -205,7 +205,7 @@ export default function ImpactPage() {
               </div>
             </div>
 
-            <div className="lg:col-span-5 relative lg:-translate-y-6">
+            <div className="lg:col-span-5 relative">
               <div className="relative rounded-3xl overflow-hidden bg-surface p-1.5 border border-line shadow-xl">
                 <div className="relative aspect-[16/11] sm:aspect-[4/3] rounded-2xl overflow-hidden bg-surface-3 on-media">
                   <Image
@@ -217,7 +217,7 @@ export default function ImpactPage() {
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-5 text-content">
-                    <span className="text-[11px] font-bold font-heading text-[#E8D5A7] uppercase tracking-wider">
+                    <span className="text-[11px] font-bold font-heading text-accent-light uppercase tracking-wider">
                       Industry &amp; Academia
                     </span>
                     <span className="text-sm font-bold text-content mt-0.5">
@@ -240,7 +240,7 @@ export default function ImpactPage() {
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             Shared Progress
           </span>
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
             From Dialogue to Action
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
@@ -280,7 +280,7 @@ export default function ImpactPage() {
             <Newspaper className="w-3.5 h-3.5" />
             <span>National &amp; Regional Media Chronicle</span>
           </div>
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
             In the Press
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
@@ -292,7 +292,15 @@ export default function ImpactPage() {
           {pressClippings.map((c) => (
             <div
               key={c.id}
+              role="button"
+              tabIndex={0}
               onClick={() => setSelectedClipping(c)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  setSelectedClipping(c);
+                }
+              }}
               className="bg-surface rounded-3xl overflow-hidden border border-line shadow-lg hover:border-accent/80 hover:shadow-[0_0_24px_rgba(201,169,110,0.15)] cursor-pointer flex flex-col justify-between group transition-all text-content"
             >
               <div className="relative aspect-[16/10] w-full bg-surface-3 overflow-hidden on-media">
@@ -303,7 +311,7 @@ export default function ImpactPage() {
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100"
                 />
-                <div className="absolute top-4 left-4 bg-black/80 backdrop-blur-md text-accent border border-accent/30 text-[10px] font-bold px-3 py-1 rounded-full">
+                <div className="absolute top-4 left-4 bg-black/80 backdrop-blur-md text-accent border border-accent/30 text-[10px] font-bold font-heading uppercase tracking-[0.14em] px-3 py-1 rounded-full">
                   {c.outlet}
                 </div>
               </div>
@@ -313,10 +321,10 @@ export default function ImpactPage() {
                   <span className="text-[11px] text-content-muted">
                     {c.date}
                   </span>
-                  <h3 className="text-base font-bold text-content group-hover:text-accent transition-colors mt-1 line-clamp-2">
+                  <h3 className="font-display leading-snug text-base font-bold text-content group-hover:text-accent transition-colors mt-1 line-clamp-2">
                     {c.title}
                   </h3>
-                  <p className="text-xs text-content-secondary mt-2 line-clamp-3 leading-relaxed">
+                  <p className="text-sm text-content-secondary mt-2 line-clamp-3 leading-relaxed">
                     {c.summary}
                   </p>
                 </div>
@@ -336,9 +344,13 @@ export default function ImpactPage() {
         <div
           role="dialog"
           aria-modal="true"
+          onClick={() => setSelectedClipping(null)}
           className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 animate-in fade-in duration-200"
         >
-          <div className="relative w-full max-w-2xl bg-surface text-content rounded-3xl overflow-hidden shadow-2xl border border-line p-6 sm:p-8 space-y-6 animate-in zoom-in-95">
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="relative w-full max-w-2xl bg-surface text-content rounded-3xl max-h-[90vh] overflow-y-auto shadow-2xl border border-line p-6 sm:p-8 space-y-6 animate-in zoom-in-95"
+          >
             <div className="flex items-start justify-between gap-4 border-b border-line pb-4">
               <div>
                 <span className="text-xs font-bold font-heading text-accent bg-glass-strong px-3 py-1 rounded-full border border-line">

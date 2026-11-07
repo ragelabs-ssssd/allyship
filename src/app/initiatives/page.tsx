@@ -39,10 +39,10 @@ export default function InitiativesPage() {
   });
 
   return (
-    <div className="flex flex-col gap-12 sm:gap-16 pb-16 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 pt-32 sm:pt-36 lg:pt-40">
+    <div className="flex flex-col gap-12 sm:gap-16 pb-20 sm:pb-24 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 pt-32 sm:pt-36 lg:pt-40">
       {/* Header */}
       <div className="text-center max-w-4xl mx-auto space-y-4">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase shadow-sm">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-[11px] font-bold font-heading tracking-[0.14em] uppercase shadow-sm">
           <span>Active Programs &amp; Cohorts</span>
         </div>
 
@@ -56,7 +56,7 @@ export default function InitiativesPage() {
       </div>
 
       {/* Search and Filters Bar */}
-      <div className="bg-surface rounded-3xl p-6 border border-line shadow-xl space-y-4">
+      <div className="bg-surface rounded-3xl p-6 sm:p-7 border border-line shadow-xl space-y-4">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-3">
           {/* Search Input */}
           <div className="md:col-span-8 relative">
@@ -66,7 +66,7 @@ export default function InitiativesPage() {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Search initiatives by keyword, topic, or role..."
-              className="w-full pl-11 pr-4 py-2.5 rounded-full bg-surface-2 border border-line text-sm text-content placeholder-slate-500 focus:outline-none focus:border-accent transition-all"
+              className="w-full pl-11 pr-4 py-2.5 rounded-full bg-surface-2 border border-line text-sm text-content placeholder:text-content-faint focus:outline-none focus:border-accent transition-all"
             />
           </div>
 
@@ -76,12 +76,13 @@ export default function InitiativesPage() {
             <select
               value={selectedFormat}
               onChange={(e) => setSelectedFormat(e.target.value)}
-              className="w-full py-2.5 px-3.5 rounded-full bg-surface-2 border border-line text-xs text-content-secondary focus:outline-none focus:border-accent font-semibold"
+              className="w-full py-2.5 px-4 rounded-full bg-surface-2 border border-line text-sm text-content-secondary focus:outline-none focus:border-accent font-semibold"
             >
               <option value="all" className="bg-surface-2 text-content">All Formats (Virtual / Hybrid)</option>
               <option value="Virtual" className="bg-surface-2 text-content">Virtual Interactive</option>
               <option value="Hybrid" className="bg-surface-2 text-content">Hybrid Cohort</option>
               <option value="In-Person" className="bg-surface-2 text-content">In-Person Intensive</option>
+              <option value="Self-Paced" className="bg-surface-2 text-content">Self-Paced</option>
             </select>
           </div>
         </div>
@@ -98,7 +99,7 @@ export default function InitiativesPage() {
               onClick={() => setSelectedCategory(c.id)}
               className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all font-heading ${
                 selectedCategory === c.id
-                  ? "bg-accent text-on-accent shadow-xs font-bold"
+                  ? "bg-accent text-on-accent shadow-sm font-bold"
                   : "bg-surface-2 text-content-secondary hover:bg-glass-strong border border-line"
               }`}
             >
@@ -141,7 +142,7 @@ export default function InitiativesPage() {
             <Search className="w-6 h-6" />
           </div>
           <h3 className="text-lg font-bold text-content font-heading">No initiatives found</h3>
-          <p className="text-xs text-content-muted">
+          <p className="text-sm text-content-muted">
             No active programs matched your current search and filter settings. Try adjusting your query or category.
           </p>
           <button

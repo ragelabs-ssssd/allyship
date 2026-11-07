@@ -112,7 +112,7 @@ function EventContent() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Left Column: Editorial Headline & Copy */}
             <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-[11px] font-bold font-heading tracking-[0.14em] uppercase">
                 <span>Conversations That Outlive the Room</span>
               </div>
 
@@ -121,7 +121,7 @@ function EventContent() {
                 <span className="italic font-normal">Conclaves</span>
               </h1>
 
-              <p className="text-lg sm:text-xl font-display text-content-muted italic sm:whitespace-nowrap">
+              <p className="text-lg sm:text-xl font-display text-content-muted italic">
                 Where Corporate Vision Meets Sporting Grit &amp; Academic Leadership
               </p>
 
@@ -148,7 +148,7 @@ function EventContent() {
             </div>
 
             {/* Right Column: Curated Photo Frame */}
-            <div className="lg:col-span-5 relative lg:-translate-y-6">
+            <div className="lg:col-span-5 relative">
               <div className="relative rounded-3xl overflow-hidden bg-surface p-1.5 border border-line shadow-xl">
                 <div className="relative aspect-[16/11] sm:aspect-[4/3] rounded-2xl overflow-hidden bg-surface-3 on-media">
                   {eventHeroImages.map((slide, idx) => (
@@ -169,7 +169,7 @@ function EventContent() {
                     </div>
                   ))}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-5 text-content">
-                    <span className="text-[11px] font-bold font-heading text-[#E8D5A7] uppercase tracking-wider">
+                    <span className="text-[11px] font-bold font-heading text-accent-light uppercase tracking-wider">
                       Editions 1.0 & 2.0
                     </span>
                     <span className="text-sm font-bold text-content mt-0.5">
@@ -193,7 +193,7 @@ function EventContent() {
             The Institutional Mandate
           </span>
 
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
             Why Allyship<span className="text-accent">++</span>?
           </h2>
 
@@ -210,14 +210,14 @@ function EventContent() {
                 <Users className="w-6 h-6" />
               </div>
               <div>
-                <span className="font-sans text-[11px] font-semibold tracking-[0.14em] text-accent uppercase block">
+                <span className="font-display text-[11px] font-bold tracking-[0.14em] text-accent uppercase block">
                   Beyond Campus Recruitment
                 </span>
-                <h3 className="font-display text-lg font-semibold tracking-normal text-content mt-1">
+                <h3 className="font-display text-lg font-bold tracking-tight text-content mt-1">
                   Ending Transactional Hiring
                 </h3>
               </div>
-              <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-muted">
+              <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-secondary">
                 Conventional higher education relies on short placement drives. ALLYSHIP++ integrates Fortune 500 enterprise directors and capability heads year-round to co-design curricula, validate hands-on lab competencies, and co-establish technical standards before graduation.
               </p>
             </div>
@@ -233,14 +233,14 @@ function EventContent() {
                 <Medal className="w-6 h-6" />
               </div>
               <div>
-                <span className="font-sans text-[11px] font-semibold tracking-[0.14em] text-accent uppercase block">
+                <span className="font-display text-[11px] font-bold tracking-[0.14em] text-accent uppercase block">
                   The Athletic Crucible
                 </span>
-                <h3 className="font-display text-lg font-semibold tracking-normal text-content mt-1">
+                <h3 className="font-display text-lg font-bold tracking-tight text-content mt-1">
                   How Athletics Anchors Allyship
                 </h3>
               </div>
-              <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-muted">
+              <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-secondary">
                 Olympic medalists and national sprint coaches anchor our conclaves because elite championship sports embody radical accountability, mentorship under pressure, and emotional fortitude.
               </p>
             </div>
@@ -256,14 +256,14 @@ function EventContent() {
                 <ShieldCheck className="w-6 h-6" />
               </div>
               <div>
-                <span className="font-sans text-[11px] font-semibold tracking-[0.14em] text-accent uppercase block">
+                <span className="font-display text-[11px] font-bold tracking-[0.14em] text-accent uppercase block">
                   Workplace Cultural Shift
                 </span>
-                <h3 className="font-display text-lg font-semibold tracking-normal text-content mt-1">
+                <h3 className="font-display text-lg font-bold tracking-tight text-content mt-1">
                   Everyday Duty Over Slogans
                 </h3>
               </div>
-              <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-muted">
+              <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-secondary">
                 Allyship is not performative compliance. Across our national conclaves, corporate leaders establish that genuine executive allyship is an operational duty dismantling hierarchical barriers and safeguarding psychological safety for early-career professionals.
               </p>
             </div>
@@ -279,14 +279,14 @@ function EventContent() {
                 <Building className="w-6 h-6" />
               </div>
               <div>
-                <span className="font-sans text-[11px] font-semibold tracking-[0.14em] text-accent uppercase block">
+                <span className="font-display text-[11px] font-bold tracking-[0.14em] text-accent uppercase block">
                   Two-Way Enterprise Bridge
                 </span>
-                <h3 className="font-display text-lg font-semibold tracking-normal text-content mt-1">
+                <h3 className="font-display text-lg font-bold tracking-tight text-content mt-1">
                   Co-Innovation &amp; Living Labs
                 </h3>
               </div>
-              <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-muted">
+              <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-secondary">
                 Allyship is reciprocal. Industry partners gain direct access to SOA’s NIRF Top-15 research faculty and labs—co-creating enterprise Centres of Excellence (like Tech Mahindra&apos;s ServiceNow &amp; AI Labs).
               </p>
             </div>
@@ -318,19 +318,19 @@ function EventContent() {
             </div>
 
             <div className="lg:col-span-4 grid grid-cols-2 gap-4">
-              <div className="p-5 rounded-2xl bg-glass border border-line text-center">
+              <div className="p-5 rounded-2xl bg-glass border border-line text-center flex flex-col items-center justify-center h-full">
                 <div className="text-3xl sm:text-4xl font-extrabold font-display text-accent">500+</div>
                 <div className="font-sans text-xs text-content-secondary mt-1 font-medium">Leaders &amp; Delegates</div>
               </div>
-              <div className="p-5 rounded-2xl bg-glass border border-line text-center">
+              <div className="p-5 rounded-2xl bg-glass border border-line text-center flex flex-col items-center justify-center h-full">
                 <div className="text-3xl sm:text-4xl font-extrabold font-display text-content">7</div>
                 <div className="font-sans text-xs text-content-secondary mt-1 font-medium">Metro Conclaves</div>
               </div>
-              <div className="p-5 rounded-2xl bg-glass border border-line text-center">
+              <div className="p-5 rounded-2xl bg-glass border border-line text-center flex flex-col items-center justify-center h-full">
                 <div className="text-3xl sm:text-4xl font-extrabold font-display text-content">9+</div>
                 <div className="font-sans text-xs text-content-secondary mt-1 font-medium">Sports Icons &amp; Coaches</div>
               </div>
-              <div className="p-5 rounded-2xl bg-glass border border-line text-center">
+              <div className="p-5 rounded-2xl bg-glass border border-line text-center flex flex-col items-center justify-center h-full">
                 <div className="text-3xl sm:text-4xl font-extrabold font-display text-accent">5</div>
                 <div className="font-sans text-xs text-content-secondary mt-1 font-medium">Major Indian Cities</div>
               </div>
@@ -359,10 +359,10 @@ function EventContent() {
 
           <div className="md:col-span-7 space-y-5">
             <div className="space-y-1">
-              <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
+              <span className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-accent block">
                 Convener&apos;s Note
               </span>
-              <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-[-0.025em] leading-[1.1] text-content">
+              <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-[1.15] text-content">
                 Message from Prof. (Dr.) Raj Kumar Hota
               </h2>
             </div>
@@ -388,10 +388,10 @@ function EventContent() {
       </section>
 
       {/* 3. STICKY EDITORIAL TAB SWITCHER */}
-      <div className="sticky top-0 z-30 bg-gradient-to-b from-canvas via-canvas/95 to-transparent pt-4 pb-6 backdrop-blur-md">
+      <div className="sticky top-20 lg:top-24 z-30 bg-gradient-to-b from-canvas via-canvas/95 to-transparent pt-4 pb-6">
         <nav
           aria-label="Conclave sections"
-          className="py-2.5 px-4 mx-auto w-fit max-w-[calc(100vw-2rem)] rounded-full bg-canvas/90 border border-line shadow-2xl flex items-center justify-start sm:justify-center gap-2 sm:gap-3 overflow-x-auto"
+          className="py-2.5 px-4 mx-auto w-fit max-w-[calc(100vw-2rem)] rounded-full bg-canvas/90 backdrop-blur-md border border-line shadow-2xl flex items-center justify-start sm:justify-center gap-2 sm:gap-3 overflow-x-auto"
         >
           {(["Chapters", "Speakers", "Themes", "Videos"] as const).map((t) => (
             <button
@@ -420,7 +420,7 @@ function EventContent() {
       </div>
 
       {/* 4. MAIN TAB CONTENT */}
-      <div id="tab-content" className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 py-8 sm:py-12 w-full scroll-mt-24 pt-8">
+      <div id="tab-content" className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 py-8 sm:py-12 w-full scroll-mt-24">
         {/* TAB 1: ALL 7 CHAPTERS */}
         {activeTab === "Chapters" && (
           <div id="chapter-details" className="space-y-10 scroll-mt-24 pt-4">
@@ -490,7 +490,7 @@ function EventContent() {
 
               {/* Narrative Description */}
               <div className="space-y-3">
-                <h3 className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
+                <h3 className="font-display text-xs font-bold uppercase tracking-[0.16em] text-accent">
                   Conclave Overview & Strategic Dialogue
                 </h3>
                 <p className="font-sans text-base text-content-secondary leading-relaxed font-normal tracking-[0.01em]">
@@ -507,7 +507,7 @@ function EventContent() {
               <div id="sports-guests" className="space-y-4 pt-6 border-t border-line scroll-mt-24">
                 <div className="flex items-center gap-2 text-accent">
                   <Medal className="w-4 h-4" />
-                  <h3 className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-content-secondary">
+                  <h3 className="font-display text-xs font-bold uppercase tracking-[0.16em] text-content-secondary">
                     Sports Icons & Keynote Guests
                   </h3>
                 </div>
@@ -526,14 +526,14 @@ function EventContent() {
               <div id="chapter-panelists" className="space-y-4 pt-6 border-t border-line scroll-mt-24">
                 <div className="flex items-center gap-2">
                   <Users className="w-4 h-4 text-accent" />
-                  <h3 className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-content-secondary">
+                  <h3 className="font-display text-xs font-bold uppercase tracking-[0.16em] text-content-secondary">
                     Moderator & Corporate Panelists
                   </h3>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {currentConclave.moderators.map((m) => (
-                    <div key={m.name} className="p-5 rounded-2xl bg-surface-2 border border-line">
+                    <div key={m.name} className="p-5 rounded-2xl bg-surface-2 border border-line hover:border-accent/60 transition-colors">
                       <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">Moderator</span>
                       <h4 className="font-display text-base font-semibold tracking-normal text-content mt-1">{m.name}</h4>
                       <div className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-muted mt-0.5">{m.role}</div>
@@ -543,7 +543,7 @@ function EventContent() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-2">
                   {currentConclave.panelists.map((p) => (
-                    <div key={p.name} className="p-4 rounded-xl bg-surface-2 border border-line hover:border-accent transition-colors">
+                    <div key={p.name} className="p-5 rounded-2xl bg-surface-2 border border-line hover:border-accent/60 transition-colors">
                       <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-content-muted">Panelist</span>
                       <h4 className="font-display text-base font-semibold tracking-normal text-content mt-1">{p.name}</h4>
                       <div className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-muted mt-0.5">{p.role}</div>
@@ -556,7 +556,7 @@ function EventContent() {
               <div id="leadership-delegation" className="space-y-4 pt-6 border-t border-line scroll-mt-24">
                 <div className="flex items-center gap-2">
                   <Building className="w-4 h-4 text-accent" />
-                  <h3 className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-content-secondary">
+                  <h3 className="font-display text-xs font-bold uppercase tracking-[0.16em] text-content-secondary">
                     SOA University Institutional Delegation
                   </h3>
                 </div>
@@ -575,15 +575,15 @@ function EventContent() {
 
         {/* TAB 2: MARQUEE SPEAKERS ROSTER */}
         {activeTab === "Speakers" && (
-          <div id="speakers-section" className="space-y-10 scroll-mt-24 pt-8">
+          <div id="speakers-section" className="space-y-10 scroll-mt-24 pt-4">
             <div className="max-w-5xl space-y-3 mb-8">
               <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
                 Luminary Roster
               </span>
-              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap scroll-mt-24">
+              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight scroll-mt-24">
                 Marquee Speakers &amp; Leaders
               </h2>
-              <p className="text-base text-content-muted max-w-2xl leading-relaxed">
+              <p className="text-base text-content-secondary max-w-2xl leading-relaxed">
                 Over 40 distinguished corporate leaders, Olympic champions, and academic dignitaries across all seven Allyship++ conclaves.
               </p>
             </div>
@@ -592,7 +592,7 @@ function EventContent() {
             <div className="space-y-4 scroll-mt-24">
               <div className="flex items-center gap-2">
                 <Medal className="w-5 h-5 text-accent" />
-                <h3 className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-content-secondary">
+                <h3 className="font-display text-xs font-bold uppercase tracking-[0.16em] text-content-secondary">
                   Olympic Champions & Indian Sports Legends
                 </h3>
               </div>
@@ -608,8 +608,8 @@ function EventContent() {
                   { name: "Dr. G. Srinivas Patnaik", chapter: "Hyderabad 2.0", role: "Secretary, Athletics Federation of India", note: "Mentorship & Resilience in Young Talent" },
                   { name: "Premanand J.", chapter: "Chennai 2.0", role: "Paris Olympics National Sprint Coach", note: "Discipline, Mentorship & Gen-Z Leadership" },
                 ].map((s) => (
-                  <div key={s.name} className="p-6 rounded-2xl bg-surface border border-line shadow-sm hover:shadow-md hover:border-accent transition-all">
-                    <span className="inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent bg-surface-2 border border-line px-2.5 py-1 rounded-full">
+                  <div key={s.name} className="p-6 rounded-2xl bg-surface border border-line shadow-sm hover:shadow-md hover:border-accent transition-all flex flex-col justify-between h-full">
+                    <span className="inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent bg-surface-2 border border-line px-2.5 py-1 rounded-full w-fit">
                       {s.chapter}
                     </span>
                     <h4 className="font-display text-base font-semibold tracking-normal text-content mt-3">{s.name}</h4>
@@ -624,7 +624,7 @@ function EventContent() {
             <div className="space-y-4 pt-8 border-t border-line scroll-mt-24">
               <div className="flex items-center gap-2">
                 <Users className="w-5 h-5 text-accent" />
-                <h3 className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-content-secondary">
+                <h3 className="font-display text-xs font-bold uppercase tracking-[0.16em] text-content-secondary">
                   Corporate CXOs, CHROs & Capability Heads
                 </h3>
               </div>
@@ -649,8 +649,8 @@ function EventContent() {
                   { name: "R.K. Ramachandran", role: "Global Talent Head, KaarTech", chapter: "Chennai 2.0" },
                   { name: "M.D. Joshua David", role: "India Campus Head, Mphasis", chapter: "Chennai 2.0" },
                 ].map((c) => (
-                  <div key={c.name} className="p-5 rounded-2xl bg-surface border border-line shadow-sm hover:shadow-md hover:border-accent transition-all">
-                    <span className="inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-content-muted bg-surface-2 border border-line px-2.5 py-1 rounded-full">
+                  <div key={c.name} className="p-6 rounded-2xl bg-surface border border-line shadow-sm hover:shadow-md hover:border-accent transition-all flex flex-col justify-between h-full">
+                    <span className="inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-content-muted bg-surface-2 border border-line px-2.5 py-1 rounded-full w-fit">
                       {c.chapter}
                     </span>
                     <h4 className="font-display text-base font-semibold tracking-normal text-content mt-3">{c.name}</h4>
@@ -664,15 +664,15 @@ function EventContent() {
 
         {/* TAB 3: THEMES & STRATEGIC EVOLUTION */}
         {activeTab === "Themes" && (
-          <div id="themes-section" className="space-y-10 scroll-mt-24 pt-8">
+          <div id="themes-section" className="space-y-10 scroll-mt-24 pt-4">
             <div className="max-w-5xl space-y-3 mb-8">
               <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
                 Evolution of the Platform
               </span>
-              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap scroll-mt-24">
+              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight scroll-mt-24">
                 From Dialogue to Practice
               </h2>
-              <p className="text-base text-content-muted max-w-2xl leading-relaxed">
+              <p className="text-base text-content-secondary max-w-2xl leading-relaxed">
                 How the Allyship++ series grew from opening conversations across India&apos;s corporate corridors to putting everyday allyship and mentorship into practice.
               </p>
             </div>
@@ -717,15 +717,15 @@ function EventContent() {
 
         {/* TAB 4: OFFICIAL CONCLAVE VIDEOS */}
         {activeTab === "Videos" && (
-          <div id="videos-section" className="space-y-10 scroll-mt-24 pt-8">
+          <div id="videos-section" className="space-y-10 scroll-mt-24 pt-4">
             <div className="max-w-5xl space-y-3 mb-8">
               <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
                 Digital Archives
               </span>
-              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap scroll-mt-24">
+              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight scroll-mt-24">
                 Official Conclave Video Recordings
               </h2>
-              <p className="text-base text-content-muted max-w-2xl leading-relaxed">
+              <p className="text-base text-content-secondary max-w-2xl leading-relaxed">
                 Watch full panel deliberations and keynote fireside chats from the Chennai, Hyderabad, and national chapters.
               </p>
             </div>

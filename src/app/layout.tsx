@@ -99,7 +99,7 @@ export default function RootLayout({
 
         <Suspense
           fallback={
-            <div className="h-16 bg-canvas/90 border-b border-line" />
+            <div className="h-20 sm:h-22 lg:h-24 bg-canvas/90 border-b border-line" />
           }
         >
           <Navbar />

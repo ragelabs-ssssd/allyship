@@ -7,9 +7,9 @@ export function ManifestoShowcase() {
   return (
     <section
       id="manifesto"
-      className="py-12 lg:py-16 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line scroll-mt-24"
+      className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line scroll-mt-24"
     >
-      <div className="relative rounded-3xl overflow-hidden border border-line aspect-[21/9] min-h-[420px] flex items-center justify-center text-center p-8 sm:p-14 group">
+      <div className="relative rounded-3xl overflow-hidden border border-line aspect-[21/9] min-h-[420px] flex items-center justify-center text-center p-6 sm:p-14 group force-dark">
         {/* Background Image with Cinematic Grading */}
         <div className="absolute inset-0">
           <Image
@@ -33,12 +33,12 @@ export function ManifestoShowcase() {
             THE CONCLAVE MANDATE
           </span>
 
-          <h2 className="font-heading text-4xl sm:text-6xl lg:text-7xl font-black text-white uppercase tracking-tight leading-[0.98]">
+          <h2 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-content uppercase tracking-tight leading-[0.98]">
             We Do Not Sign Pledges.<br />
             <span className="text-accent italic font-serif font-light">We Alter</span> Trajectories.
           </h2>
 
-          <p className="text-xs sm:text-sm font-mono text-neutral-300 uppercase tracking-widest pt-2">
+          <p className="text-xs sm:text-sm font-mono text-content-secondary uppercase tracking-widest pt-2">
             7 National Conclaves · 500+ Boardroom CXOs · Zero Commercial Sponsorship
           </p>
         </div>

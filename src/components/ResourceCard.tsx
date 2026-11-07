@@ -35,9 +35,9 @@ export function ResourceCard({ resource }: ResourceCardProps) {
 
   const categoryColor: Record<string, string> = {
     guides: "bg-surface-2 text-accent border-line",
-    toolkits: "bg-surface-2 text-[#E8D5A7] border-line",
-    frameworks: "bg-surface-2 text-indigo-300 border-line",
-    research: "bg-surface-2 text-purple-300 border-line",
+    toolkits: "bg-surface-2 text-accent-light border-line",
+    frameworks: "bg-surface-2 text-indigo-700 dark:text-indigo-300 border-line",
+    research: "bg-surface-2 text-purple-700 dark:text-purple-300 border-line",
     checklists: "bg-surface-2 text-success border-line",
   };
 
@@ -84,7 +84,7 @@ export function ResourceCard({ resource }: ResourceCardProps) {
         </Link>
 
         {/* Description */}
-        <p className="text-xs text-content-muted mt-2.5 line-clamp-3 leading-relaxed font-normal">
+        <p className="text-sm text-content-muted mt-2.5 line-clamp-3 leading-relaxed font-normal">
           {resource.description}
         </p>
 

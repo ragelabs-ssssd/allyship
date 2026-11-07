@@ -1,32 +1,11 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import {
-  Play,
   ArrowRight,
-  GraduationCap,
-  Award,
-  Globe,
-  Building2,
   Trophy,
-  CheckCircle2,
   X,
-  Stethoscope,
-  Cpu,
-  Scale,
-  Briefcase,
-  FlaskConical,
-  ShieldCheck,
-  TrendingUp,
-  Maximize2,
-  Check,
-  FileCheck2,
-  Landmark,
-  HeartPulse,
-  Heart,
-  ChevronRight,
-  ExternalLink,
 } from "lucide-react";
 import { GetInvitedModal } from "@/components/GetInvitedModal";
 import { HeroBackdrop, SOA_VIDEO_SRC } from "@/components/HeroBackdrop";
@@ -34,227 +13,6 @@ import { NirfRankingsShowcase } from "@/components/discover/NirfRankingsShowcase
 import { AccreditationsShowcase } from "@/components/discover/AccreditationsShowcase";
 import { TimelineShowcase } from "@/components/discover/TimelineShowcase";
 import { GlobalRankingsShowcase } from "@/components/discover/GlobalRankingsShowcase";
-
-// 1. NIRF Rankings 2025 Data
-const nirfRankings2025 = [
-  {
-    rank: "15th",
-    category: "University Category",
-    subtext: "Ranked #1 in Odisha",
-    highlight: "Top 15 Nationally",
-  },
-  {
-    rank: "22nd",
-    category: "Engineering Category",
-    subtext: "ITER Faculty of Engineering",
-    highlight: "Ahead of Top IITs/NITs",
-  },
-  {
-    rank: "15th",
-    category: "Medical Category",
-    subtext: "IMS & SUM Hospital",
-    highlight: "Climbed 6 Ranks",
-  },
-  {
-    rank: "9th",
-    category: "Dental Category",
-    subtext: "Institute of Dental Sciences",
-    highlight: "Top 10 in India",
-  },
-  {
-    rank: "10th",
-    category: "Law Category",
-    subtext: "SOA National Institute of Law",
-    highlight: "Top 10 Nationally",
-  },
-  {
-    rank: "66th",
-    category: "Management Category",
-    subtext: "IBCS Faculty of Management",
-    highlight: "#1 in Odisha (Business)",
-  },
-  {
-    rank: "25th",
-    category: "Overall Category",
-    subtext: "Across All Indian Institutions",
-    highlight: "Consistently in Top 25",
-  },
-];
-
-// 2. Global QS & THE Rankings Data
-const qsRankings = [
-  { metric: "QS World Rankings", value: "1201–1400" },
-  { metric: "QS Asia Rankings", value: "332" },
-  { metric: "QS Southern Asia Rankings", value: "80" },
-  { metric: "Computer Science & Info Systems", value: "751–850" },
-  { metric: "Engineering & Technology", value: "401–450" },
-  { metric: "Medicine", value: "701–850" },
-  { metric: "Social Sciences & Management", value: "451–500" },
-];
-
-const theRankings = [
-  { metric: "THE World University Rankings", value: "801–1000" },
-  { metric: "THE World Reputational Rankings", value: "201–300" },
-  { metric: "THE Asia University Rankings", value: "251–300" },
-  { metric: "Engineering & Technology", value: "501–600" },
-  { metric: "Computer Science", value: "801–1000" },
-  { metric: "Medical & Health Sciences", value: "601–800" },
-  { metric: "Young University", value: "201–250" },
-];
-
-// 3. Accreditations
-const accreditationsList = [
-  {
-    title: "NAAC Accredited with Grade ‘A++’",
-    sub: "3rd Cycle · CGPA 3.88",
-    body: "Highest possible grade awarded by the National Assessment and Accreditation Council for institutional excellence.",
-    tag: "NAAC A++",
-  },
-  {
-    title: "NBA Accredited Programmes",
-    sub: "National Board of Accreditation",
-    body: "Engineering, Hospitality Management, Management & Pharmacy Programmes rigorously accredited for quality.",
-    tag: "NBA Tier-1",
-  },
-  {
-    title: "Accredited by ICAR",
-    sub: "Indian Council of Agricultural Research",
-    body: "Recognized agricultural programs fostering regional crop resilience, modern agronomy, and rural livelihoods.",
-    tag: "ICAR Approved",
-  },
-  {
-    title: "NABH Accredited Hospital",
-    sub: "IMS & SUM Hospital",
-    body: "National Accreditation Board for Hospitals & Healthcare Providers certification for patient safety and clinical excellence.",
-    tag: "NABH Hospital",
-  },
-  {
-    title: "International Accreditation Organisation",
-    sub: "IAO Global Certification",
-    body: "Global verification ensuring curriculum delivery meets international quality, pedagogy, and faculty standards.",
-    tag: "IAO Certified",
-  },
-  {
-    title: "NABL Accredited Medical Laboratories",
-    sub: "National Accreditation Board for Testing Labs",
-    body: "Certified diagnostic testing and clinical reference laboratories upholding gold-standard precision.",
-    tag: "NABL Laboratories",
-  },
-];
-
-// 4. Other Major Recognitions
-const majorRecognitionsList = [
-  {
-    title: "Category-I Graded Autonomy Status",
-    authority: "UGC (University Grants Commission)",
-    desc: "Granted highest level of academic and operational freedom by Ministry of Education, Govt. of India.",
-    pill: "UGC Category-I",
-  },
-  {
-    title: "UGC 12(B) Status",
-    authority: "University Grants Commission",
-    desc: "Declared fit to receive central assistance and research grants under Section 12(B) of the UGC Act.",
-    pill: "UGC 12(B)",
-  },
-  {
-    title: "DSIR (SIRO) Recognized",
-    authority: "Dept. of Science & Technology, Govt. of India",
-    desc: "Formally recognized as a Scientific and Industrial Research Organization (SIRO) driving indigenous innovation.",
-    pill: "DSIR / SIRO",
-  },
-  {
-    title: "QS I-GAUGE E-LEAD Certified",
-    authority: "QS I-GAUGE",
-    desc: "E-Learning Excellence for Academic Digitization certified for world-class hybrid digital infrastructure.",
-    pill: "E-LEAD Certified",
-  },
-  {
-    title: "COCHRANE (UK) Affiliated Centre",
-    authority: "Cochrane Global Network",
-    desc: "International network producing high-quality systematic medical evidence and clinical health syntheses.",
-    pill: "Cochrane Centre",
-  },
-  {
-    title: "ISO 9001 : 2015 Certified",
-    authority: "United Registrar of Systems (URS)",
-    desc: "Certified Quality Management System across higher education, healthcare delivery, and administrative services.",
-    pill: "ISO 9001:2015",
-  },
-];
-
-// 5. Evolution & Growth Timeline
-const growthTimeline = [
-  {
-    year: "1996–97",
-    title: "Engineering & Technology",
-    faculty: "ITER (Institute of Technical Education and Research)",
-    desc: "Founding faculty that pioneered technical education in Eastern India; now NIRF #22 nationally.",
-    side: "left",
-  },
-  {
-    year: "1997–98",
-    title: "Management Sciences",
-    faculty: "IBCS (Institute of Business and Computer Studies)",
-    desc: "Established premier corporate management and business analytics education in Odisha.",
-    side: "left",
-  },
-  {
-    year: "2004–05",
-    title: "Nursing | Hotel Management | Pharmacy",
-    faculty: "SNC · SHM · SPS",
-    desc: "Triple expansion into professional healthcare, hospitality management, and pharmaceutical chemistry.",
-    side: "left",
-  },
-  {
-    year: "2006–07",
-    title: "Dental Sciences",
-    faculty: "IDS (Institute of Dental Sciences)",
-    desc: "Ranked #9 in India by NIRF 2025; premier multi-chair dental surgery and maxillofacial center.",
-    side: "left",
-  },
-  {
-    year: "2007–08",
-    title: "Medical Sciences",
-    faculty: "IMS & SUM Hospital",
-    desc: "Super-specialty medical college and hospital ranked #15 nationally with 2,000+ clinical beds.",
-    side: "left",
-  },
-  {
-    year: "2011–12",
-    title: "Legal Studies",
-    faculty: "SNIL (SOA National Institute of Law)",
-    desc: "Consistently ranked in India's Top 10 Law Schools (#10 in NIRF 2025) with high court judicial clerkships.",
-    side: "right",
-  },
-  {
-    year: "2013–14",
-    title: "Agricultural Sciences",
-    faculty: "Institute of Agricultural Sciences (IAS)",
-    desc: "ICAR-accredited agricultural research training next-generation agronomists and climate scientists.",
-    side: "right",
-  },
-  {
-    year: "2022–23",
-    title: "Veterinary Sciences",
-    faculty: "Institute of Veterinary Sciences & Animal Husbandry",
-    desc: "Modern clinical animal hospital and research facility serving veterinary care and livestock science.",
-    side: "right",
-  },
-  {
-    year: "2024–25",
-    title: "Medical Sciences - II | Nursing Sciences - II",
-    faculty: "SUM Hospital Campus 2 & College of Nursing 2",
-    desc: "Major healthcare expansion adding specialized regional referral capacity and advanced patient wings.",
-    side: "right",
-  },
-  {
-    year: "2025–26",
-    title: "Pharmaceutical Sciences - II",
-    faculty: "School of Pharmaceutical Sciences (Phase II)",
-    desc: "Cutting-edge biopharmaceutical R&D facility focusing on drug discovery, genomics, and clinical pharmacology.",
-    side: "right",
-  },
-];
 
 export default function DiscoverSoaPage() {
   const [isInviteOpen, setIsInviteOpen] = useState(false);
@@ -268,13 +26,13 @@ export default function DiscoverSoaPage() {
         <HeroBackdrop videoSrc={SOA_VIDEO_SRC} />
         <div className="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full">
           <div className="max-w-3xl space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-[11px] font-bold font-heading tracking-[0.14em] uppercase">
               <span>Deemed to be University · Bhubaneswar, India</span>
             </div>
 
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
               Discover <br />
-              <span className="italic font-normal whitespace-nowrap">Siksha &lsquo;O&rsquo; Anusandhan</span>
+              <span className="italic font-normal sm:whitespace-nowrap">Siksha &lsquo;O&rsquo; Anusandhan</span>
             </h1>
 
             <p className="text-lg sm:text-xl font-display text-content-muted italic">
@@ -310,14 +68,14 @@ export default function DiscoverSoaPage() {
       {/* 2. NIRF INDIA RANKINGS - 2025 SECTION (Screenshot 1) */}
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
         <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent/10 border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent/10 border border-accent/30 text-accent text-[11px] font-bold font-heading tracking-[0.14em] uppercase">
             <Trophy className="w-3.5 h-3.5" />
             <span>Ministry of Education · Govt. of India</span>
           </div>
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
             NIRF India Rankings — 2025
           </h2>
-          <p className="text-base sm:text-lg text-accent font-semibold tracking-wide max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
             Consistently ranked among India&apos;s Top 25 Universities across every edition of the National Institutional Ranking Framework.
           </p>
         </div>
@@ -327,12 +85,12 @@ export default function DiscoverSoaPage() {
       </section>
 
       {/* 3. OTHER RANKINGS SECTION: QS & THE + SWACHHATA (Screenshot 2) */}
-      <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line bg-surface/50">
+      <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line">
         <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             Global Benchmarking &amp; Accolades
           </span>
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
             International Rankings &amp; Global Standing
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
@@ -349,7 +107,7 @@ export default function DiscoverSoaPage() {
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             National &amp; International Certifications
           </span>
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
             Accreditations &amp; Major Recognitions
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
@@ -362,12 +120,12 @@ export default function DiscoverSoaPage() {
       </section>
 
       {/* 5. EVOLUTION & GROWTH (Screenshot 5) */}
-      <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line bg-surface/40">
+      <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line">
         <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             Three Decades of Institutional Nation-Building
           </span>
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
             Evolution &amp; Growth Timeline
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
@@ -379,12 +137,12 @@ export default function DiscoverSoaPage() {
       </section>
 
       {/* 6. OFFICIAL CAMPUS INFRASTRUCTURE */}
-      <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line bg-surface/30">
+      <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line">
         <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             127-Acre Campus Infrastructure
           </span>
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
             Infrastructure &amp; Research Facilities
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
@@ -393,7 +151,7 @@ export default function DiscoverSoaPage() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="bg-surface-2 rounded-3xl overflow-hidden border border-line hover:border-line-strong transition-all group">
+          <div className="bg-surface-2 rounded-3xl overflow-hidden border border-line hover:border-accent/60 shadow-lg transition-all group flex flex-col">
             <div className="aspect-[4/3] overflow-hidden bg-surface-3 relative">
               <Image
                 src="/soa-campus-aerial.jpg"
@@ -407,14 +165,14 @@ export default function DiscoverSoaPage() {
               </span>
             </div>
             <div className="p-6 space-y-2">
-              <h4 className="font-bold text-base text-content">Main University Campus</h4>
-              <p className="text-xs text-content-muted leading-relaxed">
+              <h3 className="font-display font-bold text-base sm:text-lg text-content group-hover:text-accent transition-colors">Main University Campus</h3>
+              <p className="text-sm text-content-secondary leading-relaxed">
                 127-acre campus in Khandagiri Square with academic complexes, libraries, and central administrative headquarters.
               </p>
             </div>
           </div>
 
-          <div className="bg-surface-2 rounded-3xl overflow-hidden border border-line hover:border-line-strong transition-all group">
+          <div className="bg-surface-2 rounded-3xl overflow-hidden border border-line hover:border-accent/60 shadow-lg transition-all group flex flex-col">
             <div className="aspect-[4/3] overflow-hidden bg-surface-3 relative">
               <Image
                 src="/soa-iter-building.jpg"
@@ -428,14 +186,14 @@ export default function DiscoverSoaPage() {
               </span>
             </div>
             <div className="p-6 space-y-2">
-              <h4 className="font-bold text-base text-content">ITER Engineering Faculty</h4>
-              <p className="text-xs text-content-muted leading-relaxed">
+              <h3 className="font-display font-bold text-base sm:text-lg text-content group-hover:text-accent transition-colors">ITER Engineering Faculty</h3>
+              <p className="text-sm text-content-secondary leading-relaxed">
                 Ranked 22nd in India (NIRF 2025) featuring enterprise Centres of Excellence with Tech Mahindra, LTTS, and the Blue Star HVAC Skill Development Centre with 94.54% placement.
               </p>
             </div>
           </div>
 
-          <div className="bg-surface-2 rounded-3xl overflow-hidden border border-line hover:border-line-strong transition-all group">
+          <div className="bg-surface-2 rounded-3xl overflow-hidden border border-line hover:border-accent/60 shadow-lg transition-all group flex flex-col">
             <div className="aspect-[4/3] overflow-hidden bg-surface-3 relative">
               <Image
                 src="/soa-auditorium.jpg"
@@ -449,14 +207,14 @@ export default function DiscoverSoaPage() {
               </span>
             </div>
             <div className="p-6 space-y-2">
-              <h4 className="font-bold text-base text-content">University Auditorium</h4>
-              <p className="text-xs text-content-muted leading-relaxed">
+              <h3 className="font-display font-bold text-base sm:text-lg text-content group-hover:text-accent transition-colors">University Auditorium</h3>
+              <p className="text-sm text-content-secondary leading-relaxed">
                 A 1,400+ seat civic and intellectual auditorium anchoring ALLYSHIP++ national executive roundtables, convocation ceremonies, and international scientific symposia.
               </p>
             </div>
           </div>
 
-          <div className="bg-surface-2 rounded-3xl overflow-hidden border border-line hover:border-line-strong transition-all group">
+          <div className="bg-surface-2 rounded-3xl overflow-hidden border border-line hover:border-accent/60 shadow-lg transition-all group flex flex-col">
             <div className="aspect-[4/3] overflow-hidden bg-surface-3 relative">
               <Image
                 src="/soa-campus-grounds.jpg"
@@ -470,8 +228,8 @@ export default function DiscoverSoaPage() {
               </span>
             </div>
             <div className="p-6 space-y-2">
-              <h4 className="font-bold text-base text-content">Academic Quads &amp; R&amp;D</h4>
-              <p className="text-xs text-content-muted leading-relaxed">
+              <h3 className="font-display font-bold text-base sm:text-lg text-content group-hover:text-accent transition-colors">Academic Quads &amp; R&amp;D</h3>
+              <p className="text-sm text-content-secondary leading-relaxed">
                 Ranked 3rd nationally in Swachh Campus with eco-friendly quads, solar grids, and high-performance labs.
               </p>
             </div>

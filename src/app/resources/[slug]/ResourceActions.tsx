@@ -42,7 +42,7 @@ export function ResourceActions({ resourceId, resourceTitle }: ResourceActionsPr
   };
 
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex flex-wrap items-center gap-2">
       <button
         type="button"
         onClick={handleSave}
@@ -52,7 +52,7 @@ export function ResourceActions({ resourceId, resourceTitle }: ResourceActionsPr
             : "bg-surface-2 border-line text-content-secondary hover:bg-glass-strong"
         }`}
       >
-        <Bookmark className={`w-3.5 h-3.5 ${isSaved ? "fill-[#0A0A0A]" : ""}`} />
+        <Bookmark className={`w-3.5 h-3.5 ${isSaved ? "fill-current" : ""}`} />
         <span>{isSaved ? "Saved" : "Save Guide"}</span>
       </button>
 
@@ -78,7 +78,8 @@ export function ResourceActions({ resourceId, resourceTitle }: ResourceActionsPr
         type="button"
         onClick={handlePrint}
         title="Print or Save as PDF"
-        className="p-2 rounded-full bg-surface-2 border border-line text-content-muted hover:bg-glass-strong transition-colors"
+        aria-label="Print or Save as PDF"
+        className="p-2 rounded-full bg-surface-2 border border-line text-content-muted hover:text-content hover:bg-glass-strong transition-colors"
       >
         <Printer className="w-4 h-4" />
       </button>

@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <div className="bg-canvas min-h-screen pt-32 sm:pt-36 lg:pt-40 pb-16">
-      <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 space-y-10">
+    <div className="bg-canvas min-h-screen pt-32 sm:pt-36 lg:pt-40 pb-20 sm:pb-24">
+      <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 space-y-10">
         <div>
           <Link
             href="/"
@@ -23,7 +23,7 @@ export default function TermsPage() {
         </div>
 
         <div className="space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase shadow-sm">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-[11px] font-bold font-heading tracking-[0.14em] uppercase shadow-sm">
             <FileCheck className="w-3.5 h-3.5" />
             <span>Governance &amp; Engagement Charter</span>
           </div>
@@ -37,7 +37,7 @@ export default function TermsPage() {
 
         <div className="bg-surface rounded-3xl p-8 sm:p-12 border border-line shadow-xl space-y-8 text-sm sm:text-base text-content-secondary leading-relaxed font-normal">
           <section className="space-y-3">
-            <h2 className="font-heading text-lg sm:text-xl font-bold text-content">
+            <h2 className="font-heading text-lg sm:text-xl font-bold text-content tracking-tight">
               1. Executive Conclave Participation
             </h2>
             <p>
@@ -46,7 +46,7 @@ export default function TermsPage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="font-heading text-lg font-bold text-content">
+            <h2 className="font-heading text-lg sm:text-xl font-bold text-content tracking-tight">
               2. Centre of Excellence & Incubation Terms
             </h2>
             <p>
@@ -55,7 +55,7 @@ export default function TermsPage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="font-heading text-lg font-bold text-content">
+            <h2 className="font-heading text-lg sm:text-xl font-bold text-content tracking-tight">
               3. Intellectual Property & Research Output
             </h2>
             <p>
@@ -64,7 +64,7 @@ export default function TermsPage() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="font-heading text-lg font-bold text-content">
+            <h2 className="font-heading text-lg sm:text-xl font-bold text-content tracking-tight">
               4. Code of Conclave Conduct
             </h2>
             <p>

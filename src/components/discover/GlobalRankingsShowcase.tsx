@@ -43,7 +43,7 @@ export function GlobalRankingsShowcase() {
           <div className="absolute top-0 right-0 w-80 h-80 bg-accent/15 rounded-full blur-3xl pointer-events-none group-hover:bg-accent/25 transition-all duration-700" />
 
           <div className="space-y-6 relative z-10">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-wrap gap-2 items-center justify-between">
               <span className="text-xs font-mono uppercase tracking-widest text-accent font-bold px-3 py-1 rounded-full bg-accent/10 border border-accent/40">
                 QUACQUARELLI SYMONDS
               </span>
@@ -62,7 +62,7 @@ export function GlobalRankingsShowcase() {
                   Ranked #80 in Southern Asia
                 </h3>
               </div>
-              <div className="font-heading text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-accent via-[#F4E8C1] to-accent-light shrink-0">
+              <div className="font-heading text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-accent via-accent-light to-accent shrink-0">
                 #80
               </div>
             </div>
@@ -86,7 +86,7 @@ export function GlobalRankingsShowcase() {
                         {m.value}
                       </span>
                       {m.highlight && (
-                        <span className="text-[9px] font-mono text-content-muted uppercase">
+                        <span className="text-[10px] font-mono text-content-muted uppercase">
                           {m.highlight}
                         </span>
                       )}
@@ -108,7 +108,7 @@ export function GlobalRankingsShowcase() {
           <div className="absolute top-0 right-0 w-80 h-80 bg-accent/15 rounded-full blur-3xl pointer-events-none group-hover:bg-accent/25 transition-all duration-700" />
 
           <div className="space-y-6 relative z-10">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-wrap gap-2 items-center justify-between">
               <span className="text-xs font-mono uppercase tracking-widest text-accent font-bold px-3 py-1 rounded-full bg-accent/10 border border-accent/40">
                 TIMES HIGHER EDUCATION
               </span>
@@ -127,7 +127,7 @@ export function GlobalRankingsShowcase() {
                   Top 4 in India · World Reputation
                 </h3>
               </div>
-              <div className="font-heading text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-accent via-[#F4E8C1] to-accent-light shrink-0">
+              <div className="font-heading text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-accent via-accent-light to-accent shrink-0">
                 Top 4
               </div>
             </div>
@@ -151,7 +151,7 @@ export function GlobalRankingsShowcase() {
                         {m.value}
                       </span>
                       {m.highlight && (
-                        <span className="text-[9px] font-mono text-content-muted uppercase">
+                        <span className="text-[10px] font-mono text-content-muted uppercase">
                           {m.highlight}
                         </span>
                       )}
@@ -171,7 +171,7 @@ export function GlobalRankingsShowcase() {
 
       {/* Bottom Dual Honorary Accolades */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="p-6 rounded-3xl bg-surface-2 border border-line hover:border-accent transition-all flex items-center gap-5">
+        <div className="p-6 rounded-3xl bg-surface-2 border border-line hover:border-accent transition-all flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5">
           <div className="w-14 h-14 rounded-2xl bg-accent/15 border border-accent/40 text-accent flex items-center justify-center shrink-0">
             <Trophy className="w-7 h-7" />
           </div>
@@ -188,7 +188,7 @@ export function GlobalRankingsShowcase() {
           </div>
         </div>
 
-        <div className="p-6 rounded-3xl bg-surface-2 border border-line hover:border-accent transition-all flex items-center gap-5">
+        <div className="p-6 rounded-3xl bg-surface-2 border border-line hover:border-accent transition-all flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5">
           <div className="w-14 h-14 rounded-2xl bg-accent/15 border border-accent/40 text-accent flex items-center justify-center shrink-0">
             <Gem className="w-7 h-7 text-accent" />
           </div>

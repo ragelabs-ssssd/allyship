@@ -115,7 +115,7 @@ export function NirfRankingsShowcase({ onOpenSlide }: NirfRankingsShowcaseProps)
             </div>
 
             <div>
-              <span className="font-heading text-7xl sm:text-9xl font-black text-accent block leading-none tracking-tight">
+              <span className="font-heading text-6xl sm:text-7xl lg:text-8xl font-black text-accent block leading-none tracking-tight">
                 15th
               </span>
               <h3 className="font-heading text-2xl sm:text-3xl font-extrabold text-content mt-2">
@@ -131,15 +131,15 @@ export function NirfRankingsShowcase({ onOpenSlide }: NirfRankingsShowcaseProps)
             </p>
 
             <div className="p-5 rounded-2xl bg-surface-3/80 border border-line space-y-2 text-xs font-mono">
-              <div className="flex justify-between py-1 border-b border-line/60">
+              <div className="flex flex-wrap gap-2 justify-between py-1 border-b border-line/60">
                 <span className="text-content-muted">Overall National Composite:</span>
                 <span className="text-content font-bold">25th in India</span>
               </div>
-              <div className="flex justify-between py-1 border-b border-line/60">
+              <div className="flex flex-wrap gap-2 justify-between py-1 border-b border-line/60">
                 <span className="text-content-muted">Top 10 Disciplines:</span>
                 <span className="text-accent font-bold">Dental (#9) &amp; Law (#10)</span>
               </div>
-              <div className="flex justify-between py-1">
+              <div className="flex flex-wrap gap-2 justify-between py-1">
                 <span className="text-content-muted">Engineering Standing:</span>
                 <span className="text-content font-bold">22nd Nationally</span>
               </div>
@@ -177,7 +177,7 @@ export function NirfRankingsShowcase({ onOpenSlide }: NirfRankingsShowcaseProps)
 
               <div className="pt-2 border-t border-line/60 text-xs text-content-muted">
                 <span className="text-content font-semibold block">{item.faculty}</span>
-                <span className="line-clamp-1">{item.subtext}</span>
+                <span>{item.subtext}</span>
               </div>
             </div>
           ))}

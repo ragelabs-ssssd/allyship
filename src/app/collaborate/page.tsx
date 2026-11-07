@@ -164,25 +164,25 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
       <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 min-h-[640px] lg:min-h-[720px] flex items-center border-b border-line overflow-hidden">
         <HeroBackdrop videoSrc={SOA_VIDEO_SRC} align="right" />
         <div className="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full flex justify-end">
-          <div className="max-w-3xl space-y-6 text-right flex flex-col items-end">
+          <div className="max-w-3xl space-y-6 text-left sm:text-right flex flex-col items-start sm:items-end">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase">
               <span>Corporate Partnership Portal</span>
             </div>
 
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-[4.25rem] font-bold tracking-tight text-content leading-[1.06] text-right">
+            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05] text-left sm:text-right">
               <span className="block sm:whitespace-nowrap">Strategic Alliances</span>
               <span className="block italic font-normal sm:whitespace-nowrap">for Tomorrow&rsquo;s Leaders</span>
             </h1>
 
-            <p className="text-lg sm:text-xl font-display text-content-muted italic text-right">
+            <p className="text-lg sm:text-xl font-display text-content-muted italic text-left sm:text-right">
               Co-Innovate. Mentor Emerging Leaders. Build Strategic Pipelines.
             </p>
 
-            <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-3xl font-normal text-right ml-auto">
+            <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-3xl font-normal text-left sm:text-right ml-auto">
               From co-founding advanced campus Centres of Excellence with Tech Mahindra and LTTS, to sponsoring R&D challenges through the AIC-SOA Foundation under NITI Aayog, Siksha &lsquo;O&rsquo; Anusandhan offers global enterprises an agile, co-creative talent ecosystem built for technical velocity.
             </p>
 
-            <div className="pt-2 flex flex-wrap items-center justify-end gap-4">
+            <div className="pt-2 flex flex-wrap items-center justify-start sm:justify-end gap-4">
               <a
                 href="#submit-challenge"
                 className="btn-primary"
@@ -209,7 +209,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             Four Strategic Avenues
           </span>
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
             How Corporate Leaders Collaborate with SOA
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
@@ -217,13 +217,13 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 xl:gap-8">
           {partnershipPillars.map((p) => {
             const Icon = p.icon;
             return (
               <div
                 key={p.title}
-                className="bg-surface rounded-3xl p-8 border border-line hover:border-accent transition-all flex flex-col justify-between space-y-6 group"
+                className="bg-surface rounded-3xl p-7 xl:p-8 border border-line hover:border-accent transition-all flex flex-col justify-between space-y-6 group"
               >
                 <div className="space-y-4">
                   <div className="w-12 h-12 rounded-xl bg-surface-2 border border-line flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-on-accent transition-colors">
@@ -261,7 +261,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
               Recruitment Velocity & Talent Quality
             </span>
           </div>
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
             Multi-Year Placement Performance
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl">
@@ -271,15 +271,15 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
 
         <div className="bg-surface rounded-3xl overflow-hidden border border-line shadow-xl">
           <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse text-xs sm:text-sm">
+            <table className="w-full min-w-[720px] text-left border-collapse text-xs sm:text-sm">
               <thead>
                 <tr className="bg-surface-2 border-b border-line text-content text-xs uppercase tracking-wider font-heading">
-                  <th className="py-4 px-6 font-bold">Faculty / Program</th>
-                  <th className="py-4 px-4 font-bold text-center">2022 Placement</th>
-                  <th className="py-4 px-4 font-bold text-center">2023 Placement</th>
-                  <th className="py-4 px-4 font-bold text-center text-accent">2024 (Latest)</th>
-                  <th className="py-4 px-4 font-bold">Median / Peak Package</th>
-                  <th className="py-4 px-6 font-bold hidden lg:table-cell">Marquee Corporate Recruiters</th>
+                  <th className="py-4 px-6 font-bold whitespace-nowrap">Faculty / Program</th>
+                  <th className="py-4 px-4 font-bold text-center whitespace-nowrap">2022 Placement</th>
+                  <th className="py-4 px-4 font-bold text-center whitespace-nowrap">2023 Placement</th>
+                  <th className="py-4 px-4 font-bold text-center text-accent whitespace-nowrap">2024 (Latest)</th>
+                  <th className="py-4 px-4 font-bold whitespace-nowrap">Median / Peak Package</th>
+                  <th className="py-4 px-6 font-bold hidden lg:table-cell whitespace-nowrap">Marquee Corporate Recruiters</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-line">
@@ -332,7 +332,9 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
               <div className="text-xs text-content-muted space-y-2">
                 <div className="font-bold text-content">Office of Corporate Relations and Placement</div>
                 <div>Siksha &lsquo;O&rsquo; Anusandhan (Deemed to be University)</div>
-                <div className="text-accent font-bold">Email: info@soa.ac.in</div>
+                <div className="text-accent font-bold">
+                  Email: <a href="mailto:info@soa.ac.in" className="hover:underline">info@soa.ac.in</a>
+                </div>
                 <div>Khandagiri Square, Bhubaneswar, Odisha 751030</div>
               </div>
             </div>
@@ -393,7 +395,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
                         value={contactName}
                         onChange={(e) => setContactName(e.target.value)}
                         placeholder="e.g. Anand Sharma"
-                        className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder-slate-500 text-xs focus:outline-none focus:border-accent transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder:text-content-faint text-base sm:text-sm focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors"
                       />
                     </div>
                     <div>
@@ -410,7 +412,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
                         value={contactEmail}
                         onChange={(e) => setContactEmail(e.target.value)}
                         placeholder="e.g. anand@enterprise.com"
-                        className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder-slate-500 text-xs focus:outline-none focus:border-accent transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder:text-content-faint text-base sm:text-sm focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors"
                       />
                     </div>
                   </div>
@@ -430,7 +432,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
                         value={challengeTitle}
                         onChange={(e) => setChallengeTitle(e.target.value)}
                         placeholder="e.g. AI-driven defect detection in manufacturing"
-                        className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder-slate-500 text-xs focus:outline-none focus:border-accent transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder:text-content-faint text-base sm:text-sm focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors"
                       />
                     </div>
                     <div>
@@ -446,7 +448,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
                         value={industrySector}
                         onChange={(e) => setIndustrySector(e.target.value)}
                         placeholder="e.g. Technology, Automotive, Healthcare"
-                        className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder-slate-500 text-xs focus:outline-none focus:border-accent transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder:text-content-faint text-base sm:text-sm focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors"
                       />
                     </div>
                   </div>
@@ -465,7 +467,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
                       value={challengeDesc}
                       onChange={(e) => setChallengeDesc(e.target.value)}
                       placeholder="Describe the operational problem, prototype requirements, desired faculty domain, and expected project timeframe..."
-                      className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder-slate-500 text-xs focus:outline-none focus:border-accent transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder:text-content-faint text-base sm:text-sm focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors"
                     />
                   </div>
 

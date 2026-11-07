@@ -95,12 +95,12 @@ export default function ContactPage() {
       <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 border-b border-line overflow-hidden">
         <HeroBackdrop />
         <div className="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 text-center space-y-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-[11px] font-bold font-heading tracking-[0.14em] uppercase">
             <Mail className="w-3.5 h-3.5" />
             <span>Secretariat & Executive Desk</span>
           </div>
 
-          <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
+          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
             Contact the <br />
             <span className="text-accent">Conclave Secretariat</span>
           </h1>
@@ -163,7 +163,7 @@ export default function ContactPage() {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="e.g. Dr. Jordan Rivera"
-                    className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder-slate-500 text-xs focus:outline-none focus:border-accent transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder:text-content-faint text-base sm:text-sm focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors"
                   />
                 </div>
 
@@ -178,7 +178,7 @@ export default function ContactPage() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="jordan@enterprise.com"
-                    className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder-slate-500 text-xs focus:outline-none focus:border-accent transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder:text-content-faint text-base sm:text-sm focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors"
                   />
                 </div>
               </div>
@@ -192,7 +192,7 @@ export default function ContactPage() {
                     id="contact-category"
                     value={category}
                     onChange={(e) => setCategory(e.target.value)}
-                    className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content text-xs focus:outline-none focus:border-accent font-medium"
+                    className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder:text-content-faint text-base sm:text-sm focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 font-medium"
                   >
                     <option value="General">General Inquiry</option>
                     <option value="Partnership">Corporate / CoE Partnership</option>
@@ -212,7 +212,7 @@ export default function ContactPage() {
                     value={organization}
                     onChange={(e) => setOrganization(e.target.value)}
                     placeholder="e.g. Global Tech Enterprise"
-                    className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder-slate-500 text-xs focus:outline-none focus:border-accent transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder:text-content-faint text-base sm:text-sm focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors"
                   />
                 </div>
               </div>
@@ -227,7 +227,7 @@ export default function ContactPage() {
                   value={subject}
                   onChange={(e) => setSubject(e.target.value)}
                   placeholder="Summary of inquiry or proposal..."
-                  className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder-slate-500 text-xs focus:outline-none focus:border-accent transition-colors"
+                  className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder:text-content-faint text-base sm:text-sm focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-colors"
                 />
               </div>
 
@@ -242,7 +242,7 @@ export default function ContactPage() {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Please include details regarding your proposal, chapter preferences, or timeline..."
-                  className="w-full p-4 rounded-xl bg-surface-2 border border-line text-content placeholder-slate-500 text-xs focus:outline-none focus:border-accent resize-none leading-relaxed transition-colors"
+                  className="w-full px-4 py-3 rounded-xl bg-surface-2 border border-line text-content placeholder:text-content-faint text-base sm:text-sm focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 resize-none leading-relaxed transition-colors"
                 />
               </div>
 
@@ -276,13 +276,13 @@ export default function ContactPage() {
           <div className="lg:col-span-5 space-y-6">
             {/* Executive Leadership Desk Card */}
             <div className="bg-surface rounded-3xl p-8 sm:p-10 border border-line shadow-2xl space-y-4">
-              <span className="text-[10px] font-bold font-heading uppercase tracking-widest text-accent px-3 py-1 rounded-full bg-accent-subtle border border-accent/30 block w-fit">
+              <span className="text-[11px] font-bold font-heading uppercase tracking-[0.14em] text-accent px-3 py-1 rounded-full bg-accent-subtle border border-accent/30 block w-fit">
                 Conclave Leadership &amp; Corporate Relations
               </span>
               <div>
-                <h4 className="font-heading text-lg font-bold text-content">
+                <h3 className="font-display text-xl font-bold text-content tracking-tight">
                   Prof. (Dr.) Raj Kumar Hota
-                </h4>
+                </h3>
                 <p className="text-xs text-content-secondary mt-0.5">
                   Dean of Corporate Relations &amp; Placement · Convener, ALLYSHIP++
                 </p>
@@ -358,12 +358,14 @@ export default function ContactPage() {
             <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
               Instant Answers
             </span>
-            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
               Frequently Asked Questions
             </h2>
           </div>
 
-          <FaqAccordion faqs={FAQS} allowFilter={true} />
+          <div className="max-w-4xl mx-auto w-full">
+            <FaqAccordion faqs={FAQS} allowFilter={true} />
+          </div>
         </div>
       </section>
     </div>

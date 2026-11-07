@@ -35,10 +35,10 @@ export function InitiativeCard({ initiative, variant = "detailed" }: InitiativeC
 
   const categoryColor: Record<string, string> = {
     workplace: "bg-surface-2 text-accent border-line",
-    education: "bg-surface-2 text-[#E8D5A7] border-line",
+    education: "bg-surface-2 text-accent-light border-line",
     community: "bg-surface-2 text-success border-line",
-    advocacy: "bg-surface-2 text-purple-400 border-line",
-    mentorship: "bg-surface-2 text-rose-400 border-line",
+    advocacy: "bg-surface-2 text-purple-700 dark:text-purple-300 border-line",
+    mentorship: "bg-surface-2 text-rose-700 dark:text-rose-300 border-line",
   };
 
   return (

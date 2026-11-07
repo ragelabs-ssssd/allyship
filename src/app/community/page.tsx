@@ -83,24 +83,24 @@ export default function CommunityPage() {
       : COMMUNITY_EVENTS.filter((e) => e.format.includes(selectedFormat));
 
   return (
-    <div className="flex flex-col gap-16 sm:gap-24 pb-16 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 pt-32 sm:pt-36 lg:pt-40">
+    <div className="flex flex-col gap-16 sm:gap-24 pb-20 sm:pb-24 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 pt-32 sm:pt-36 lg:pt-40">
       {/* 1. Header */}
       <section className="text-center max-w-4xl mx-auto space-y-4">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase shadow-sm">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-[11px] font-bold font-heading tracking-[0.14em] uppercase shadow-sm">
           <Users className="w-3.5 h-3.5 text-accent" />
           <span>The Allyship++ Network</span>
         </div>
 
         <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
           Where Leaders <br />
-          <span className="text-accent whitespace-nowrap">Connect &amp; Mentor.</span>
+          <span className="text-accent sm:whitespace-nowrap">Connect &amp; Mentor.</span>
         </h1>
 
         <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl mx-auto font-normal">
           Allyship++ brings together corporate executives, HR leaders, academicians, alumni, and emerging professionals across India. Between conclave editions, our working circles and interactive sessions create space to exchange ideas, mentor young talent, and build inclusive workplaces together.
         </p>
 
-        <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
+        <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
           <button
             type="button"
             onClick={() => setIsPledgeModalOpen(true)}
@@ -123,10 +123,10 @@ export default function CommunityPage() {
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block mb-2">
             Ongoing Dialogue
           </span>
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
             Leadership &amp; Mentorship Circles
           </h2>
-          <p className="text-sm sm:text-base text-content-muted mt-2 max-w-xl leading-relaxed">
+          <p className="text-sm sm:text-base text-content-secondary max-w-2xl mt-2 leading-relaxed">
             Focused discussion groups connecting corporate practitioners, SOA faculty, and emerging talent between conclave editions.
           </p>
         </div>
@@ -138,15 +138,15 @@ export default function CommunityPage() {
               className="bg-surface rounded-3xl p-6 sm:p-7 border border-line shadow-xl hover:border-accent transition-all flex flex-col justify-between"
             >
               <div>
-                <div className="flex items-center justify-between mb-3">
+                <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
                   <span className="text-[11px] font-bold font-heading uppercase tracking-wider px-3 py-1 rounded-full bg-surface-2 text-accent border border-line">
                     {circle.memberBadge}
                   </span>
                   <span className="text-xs text-content-muted font-medium">{circle.cadence}</span>
                 </div>
 
-                <h3 className="text-lg font-bold text-content font-heading">{circle.title}</h3>
-                <p className="text-xs sm:text-sm text-content-muted mt-2 leading-relaxed font-normal">
+                <h3 className="font-heading text-lg sm:text-xl font-bold text-content tracking-tight leading-snug">{circle.title}</h3>
+                <p className="text-sm text-content-secondary mt-2 leading-relaxed font-normal">
                   {circle.desc}
                 </p>
               </div>
@@ -168,12 +168,12 @@ export default function CommunityPage() {
 
       {/* 3. Upcoming Events Calendar */}
       <section id="events" className="space-y-8">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
           <div>
             <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block mb-2">
               Interactive Gatherings
             </span>
-            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
               Upcoming Events &amp; Workshops
             </h2>
             <p className="text-sm sm:text-base text-content-muted mt-2 max-w-xl leading-relaxed">
@@ -181,7 +181,7 @@ export default function CommunityPage() {
             </p>
           </div>
 
-          <div className="flex items-center gap-1.5">
+          <div className="flex flex-wrap items-center gap-2">
             {["All", "Workshop", "Circle", "Discussion"].map((fmt) => (
               <button
                 key={fmt}
@@ -189,7 +189,7 @@ export default function CommunityPage() {
                 onClick={() => setSelectedFormat(fmt)}
                 className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all font-heading ${
                   selectedFormat === fmt
-                    ? "bg-accent text-on-accent shadow-xs font-bold"
+                    ? "bg-accent text-on-accent shadow-sm font-bold"
                     : "bg-surface-2 text-content-secondary hover:bg-glass-strong border border-line"
                 }`}
               >
@@ -269,7 +269,7 @@ export default function CommunityPage() {
               value={reflectionInput}
               onChange={(e) => setReflectionInput(e.target.value)}
               placeholder="Share an anonymous observation or lived reflection..."
-              className="w-full p-4 rounded-2xl border border-line text-xs text-content focus:outline-none focus:border-accent resize-none bg-surface-2 placeholder-slate-500"
+              className="w-full p-4 rounded-2xl border border-line text-base sm:text-sm text-content focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 resize-none bg-surface-2 placeholder:text-content-faint"
             />
             <div className="flex justify-end">
               <button

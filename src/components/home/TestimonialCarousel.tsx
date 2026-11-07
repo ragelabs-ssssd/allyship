@@ -128,7 +128,7 @@ export function TestimonialCarousel() {
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="py-24 lg:py-32 bg-canvas relative border-b border-line overflow-hidden">
+    <section className="py-20 lg:py-28 bg-canvas relative border-b border-line overflow-hidden">
       <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
         {/* Header & Controls */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 pb-6 border-b border-line">
@@ -136,7 +136,7 @@ export function TestimonialCarousel() {
             <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
               Voices of Conclave Luminaries
             </span>
-            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight mt-2 sm:whitespace-nowrap">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight mt-2">
               Perspectives From the Conclave
             </h2>
           </SectionReveal>
@@ -190,7 +190,7 @@ export function TestimonialCarousel() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
 
                     {item.highlight && (
-                      <span className="absolute top-3 right-3 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-sans text-[10px] font-semibold uppercase tracking-[0.14em] bg-black/70 text-amber-400/90 border border-amber-400/30 backdrop-blur-md">
+                      <span className="absolute top-3 right-3 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-sans text-[10px] font-semibold uppercase tracking-[0.14em] bg-black/70 text-accent-light border border-accent/40 backdrop-blur-md">
                         <Award className="w-3 h-3" />
                         {item.highlight}
                       </span>

@@ -3,26 +3,10 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import {
-  Volume2,
   ShieldCheck,
-  Compass,
-  Building2,
-  GraduationCap,
-  Target,
   ArrowRight,
-  Award,
   Terminal,
-  Scale,
-  CheckCircle2,
-  Trophy,
   Medal,
-  Users,
-  ExternalLink,
-  ChevronRight,
-  Layers,
-  HelpCircle,
-  Cpu,
-  Globe,
 } from "lucide-react";
 import { GetInvitedModal } from "@/components/GetInvitedModal";
 import { HeroBackdrop } from "@/components/HeroBackdrop";
@@ -69,19 +53,22 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col w-full bg-canvas text-content pb-12">
       {/* 1. EDITORIAL LUXE HERO SECTION */}
-      <section className="relative pt-28 pb-24 sm:pt-32 sm:pb-28 lg:pt-36 lg:pb-36 min-h-[660px] lg:min-h-[760px] flex items-center justify-center border-b border-line overflow-hidden">
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 min-h-[640px] lg:min-h-[720px] flex items-center justify-center border-b border-line overflow-hidden">
         <HeroBackdrop />
         {/* Ambient gold background glow */}
         <div className="absolute top-[calc(50%+36px)] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-[radial-gradient(ellipse_at_center,rgba(197,168,105,0.12),transparent_70%)] pointer-events-none" />
 
-        <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 relative z-10 w-full translate-y-8 lg:translate-y-10">
+        <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 relative z-10 w-full">
           <div className="max-w-4xl mx-auto text-center space-y-6">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-[11px] font-bold font-heading tracking-[0.14em] uppercase shadow-sm">
+              <span>Institutional Philosophy &amp; Mandate</span>
+            </div>
 
             <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
               Why &ldquo;Allyship<span className="text-accent">++</span>&rdquo;?
             </h1>
 
-            <p className="text-xl sm:text-2xl font-heading text-content-secondary max-w-2xl mx-auto italic">
+            <p className="text-lg sm:text-xl font-display text-content-muted max-w-2xl mx-auto italic">
               Bridging Corporate Corridors with Regional Talent Through Active Leadership and Mutual Trust.
             </p>
 
@@ -98,12 +85,14 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 2xl:gap-24 items-center">
           {/* Left Column: 3-Paragraph Narrative */}
           <div className="lg:col-span-6 xl:col-span-6 space-y-6 text-left">
-            <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
-              The Genesis of Allyship++
-            </span>
-            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
-              Industry and Academia, in the Same Room
-            </h2>
+            <div className="space-y-2">
+              <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
+                The Genesis of Allyship++
+              </span>
+              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
+                Industry and Academia, in the Same Room
+              </h2>
+            </div>
 
             <p className="max-w-[68ch] text-base text-content-secondary leading-relaxed font-normal">
               For decades, university placement in India operated as a yearly, one-way transaction: institutions waited on campus for recruiters to arrive. Allyship++ reverses that equation. Siksha &lsquo;O&rsquo; Anusandhan travels directly to the corporate boardrooms of Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai to listen first. While a diversity policy states what an organisation intends on paper, allyship determines what happens on an ordinary Tuesday—who receives credit in a meeting, who is sponsored for a stretch project, and who speaks up when a boundary is crossed.
@@ -143,7 +132,7 @@ export default function AboutPage() {
                   <Terminal className="w-4 h-4 text-accent" />
                   <span>AllyshipIncrement.ts</span>
                 </div>
-                <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-glass text-content-muted border border-white/5">
+                <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-glass text-content-muted border border-line">
                   TypeScript
                 </span>
               </div>
@@ -215,7 +204,7 @@ export default function AboutPage() {
               </div>
 
               {/* Status footer */}
-              <div className="px-5 py-2.5 bg-black/40 border-t border-white/5 flex items-center justify-between text-[11px] text-content-muted font-mono">
+              <div className="px-5 py-2.5 bg-black/40 border-t border-line flex items-center justify-between text-[11px] text-content-muted font-mono">
                 <span className="flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                   Compiled cleanly · Compounding inclusion active
@@ -266,12 +255,12 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="lg:col-span-5 p-6 rounded-2xl bg-black/40 border border-line space-y-3 on-media">
+            <div className="lg:col-span-5 p-6 rounded-2xl bg-surface-3 border border-accent/30 space-y-3">
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-accent">
                 <Medal className="w-4 h-4" />
                 <span>The Core Athletic Parallel</span>
               </div>
-              <p className="text-xs text-content-secondary leading-relaxed">
+              <p className="text-sm text-content-secondary leading-relaxed italic">
                 &ldquo;An Olympic coach doesn&apos;t run the anchor leg; they eliminate friction, absorb external pressure, and build unshakeable psychological safety so emerging talent can execute without fear under championship stakes. That is the definition of executive allyship.&rdquo;
               </p>
             </div>
@@ -279,9 +268,9 @@ export default function AboutPage() {
 
           {/* 5 City Regional Chapters Grid */}
           <div className="space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-content-muted font-heading">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-content-muted font-heading">
               National Conclave Sports Anchors &amp; Mentorship Themes
-            </h4>
+            </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
               {sportsAnchors.map((sa) => (
                 <div
@@ -292,14 +281,14 @@ export default function AboutPage() {
                     <span className="text-[10px] font-bold font-heading uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-glass text-accent border border-line block w-fit">
                       {sa.city}
                     </span>
-                    <h5 className="font-heading text-sm font-bold text-content group-hover:text-accent transition-colors">
+                    <h4 className="font-heading text-sm font-bold text-content group-hover:text-accent transition-colors">
                       {sa.legend}
-                    </h5>
+                    </h4>
                     <p className="text-[11px] font-medium text-content-muted">
                       {sa.role}
                     </p>
                   </div>
-                  <p className="text-[11px] text-content-secondary leading-relaxed pt-2 border-t border-white/5 font-normal">
+                  <p className="text-[11px] text-content-secondary leading-relaxed pt-2 border-t border-line font-normal">
                     {sa.domain}
                   </p>
                 </div>
