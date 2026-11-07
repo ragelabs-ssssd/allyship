@@ -1011,7 +1011,7 @@ function EventContent() {
                       </h3>
                     </div>
                     <span className="text-xs font-sans text-content-muted">
-                      Bengaluru · Hyderabad · Chennai
+                      Bengaluru / Hyderabad / Chennai
                     </span>
                   </div>
 
@@ -1095,7 +1095,7 @@ function EventContent() {
                       </h3>
                     </div>
                     <span className="text-xs font-sans text-content-muted">
-                      Bengaluru · Hyderabad · Kolkata · Mumbai
+                      Bengaluru / Hyderabad / Kolkata / Mumbai
                     </span>
                   </div>
 
