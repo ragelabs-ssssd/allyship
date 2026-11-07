@@ -292,7 +292,7 @@ function EventContent() {
   const searchParams = useSearchParams();
   const [activeTab, setActiveTab] = useState<"Chapters" | "Speakers" | "Themes" | "Videos">("Chapters");
   const [selectedChapter, setSelectedChapter] = useState(0);
-  const [selectedMediaCity, setSelectedMediaCity] = useState<string>("Hyderabad");
+  const [selectedMediaCity, setSelectedMediaCity] = useState<string | null>(null);
   const [isInviteOpen, setIsInviteOpen] = useState(false);
   const [slideDeck, setSlideDeck] = useState<number[]>(() =>
     Array.from({ length: eventHeroImages.length }, (_, i) => i)
@@ -356,7 +356,7 @@ function EventContent() {
   }, [searchParams, conclaves]);
 
   const currentConclave = conclaves[selectedChapter];
-  const currentMediaArchive = CHAPTER_ARCHIVES[selectedMediaCity] ?? CHAPTER_ARCHIVES.Hyderabad;
+  const currentMediaArchive = selectedMediaCity ? CHAPTER_ARCHIVES[selectedMediaCity] : null;
 
   return (
     <div className="flex flex-col w-full bg-canvas text-content pb-0">
@@ -709,6 +709,9 @@ function EventContent() {
               type="button"
               onClick={() => {
                 setActiveTab(t);
+                if (t === "Videos") {
+                  setSelectedMediaCity(null);
+                }
                 const el = document.getElementById("tab-content");
                 if (el && typeof window !== "undefined" && window.scrollY > el.offsetTop) {
                   el.scrollIntoView({ behavior: "smooth" });
@@ -1025,181 +1028,266 @@ function EventContent() {
           </div>
         )}
 
-        {/* TAB 3: CONCLAVE MOMENTS (VIDEO FIRST + 24 PHOTOS IN 6 ROWS) */}
+        {/* TAB 3: CONCLAVE MOMENTS (CHAPTER CARDS -> INSIDE CARD: VIDEO FIRST + 24 PHOTOS IN 6 ROWS) */}
         {activeTab === "Videos" && (
-          <div id="videos-section" className="space-y-12 scroll-mt-24 pt-4">
-            {/* Header & Chapter Selector */}
-            <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6 border-b border-line">
-              <div className="max-w-3xl space-y-3">
-                <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
-                  Conclave Moments
-                </span>
-                <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight scroll-mt-24">
-                  {currentMediaArchive.city} Conclave Moments
-                </h2>
-                <p className="text-base text-content-secondary max-w-2xl leading-relaxed">
-                  {currentMediaArchive.subtitle}
-                </p>
-              </div>
+          <div id="videos-section" className="space-y-10 scroll-mt-24 pt-4">
+            <div className="max-w-5xl space-y-3">
+              <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
+                Conclave Moments
+              </span>
+              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight scroll-mt-24">
+                Chapter-Wise Conclave Moments
+              </h2>
+              <p className="text-base text-content-secondary max-w-2xl leading-relaxed">
+                Select a chapter card below to open its official conclave video and 24 chapter photographs inside.
+              </p>
+            </div>
 
-              {/* Chapter City Filter Pills */}
-              <div className="flex flex-wrap items-center gap-2.5">
+            {!currentMediaArchive ? (
+              /* INITIAL VIEW: CHAPTER CARDS GRID (NO LOOSE VIDEO OR PHOTOS OUTSIDE) */
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {Object.keys(CHAPTER_ARCHIVES).map((cityKey) => {
                   const archive = CHAPTER_ARCHIVES[cityKey];
-                  const isSelected = selectedMediaCity === cityKey;
+                  const coverPhoto = archive.photos[0];
                   return (
                     <button
                       key={cityKey}
                       type="button"
-                      onClick={() => setSelectedMediaCity(cityKey)}
-                      className={`px-4 py-2.5 rounded-xl border text-left transition-all flex items-center gap-2.5 ${
-                        isSelected
-                          ? "bg-accent text-on-accent border-accent shadow-md font-semibold"
-                          : "bg-surface border-line text-content-secondary hover:text-content hover:border-accent/40"
-                      }`}
+                      onClick={() => {
+                        setSelectedMediaCity(cityKey);
+                        const el = document.getElementById("videos-section");
+                        if (el) {
+                          setTimeout(() => {
+                            el.scrollIntoView({ behavior: "smooth", block: "start" });
+                          }, 50);
+                        }
+                      }}
+                      className="bg-surface rounded-3xl overflow-hidden border border-line shadow-xl hover:border-accent/60 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between text-left group cursor-pointer"
                     >
-                      <span className="font-sans text-xs sm:text-sm tracking-wide">
-                        {archive.city}
-                      </span>
-                      <span
-                        className={`text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-full ${
-                          isSelected
-                            ? "bg-black/20 text-on-accent"
-                            : "bg-surface-2 text-content-muted"
-                        }`}
-                      >
-                        24 Photos
-                      </span>
+                      {/* Card Cover Thumbnail */}
+                      <div className="relative aspect-video w-full bg-canvas overflow-hidden">
+                        <Image
+                          src={coverPhoto.src}
+                          alt={`${archive.city} Chapter Cover`}
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                          style={{ objectPosition: coverPhoto.objectPosition || "50% 25%" }}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/10 group-hover:from-black/70 transition-colors" />
+
+                        {/* Top-left Edition Badge */}
+                        <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[10px] font-heading font-bold uppercase tracking-[0.14em] text-[#C5A880]">
+                          {archive.editionBadge}
+                        </div>
+
+                        {/* Top-right Count Pill */}
+                        <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[10px] font-mono font-semibold text-white/90">
+                          {archive.videos.length} {archive.videos.length > 1 ? "Videos" : "Video"} · 24 Photos
+                        </div>
+
+                        {/* Center Play / Open Indicator */}
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="w-14 h-14 rounded-full bg-accent/90 text-on-accent flex items-center justify-center shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                            <Play className="w-6 h-6 fill-current ml-0.5" />
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Card Body */}
+                      <div className="p-6 space-y-4 flex-1 flex flex-col justify-between">
+                        <div>
+                          <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent block mb-1">
+                            {archive.city} Conclave
+                          </span>
+                          <h3 className="font-display text-lg sm:text-xl font-bold tracking-normal text-content leading-snug group-hover:text-accent transition-colors">
+                            {archive.city} Chapter | Conclave Moments
+                          </h3>
+                          <p className="font-sans text-xs sm:text-sm font-normal tracking-[0.01em] text-content-muted mt-2 leading-relaxed">
+                            {archive.subtitle}
+                          </p>
+                        </div>
+
+                        <div className="pt-4 border-t border-line flex items-center justify-between text-xs font-semibold text-accent">
+                          <span>Open Chapter Card (Video + 24 Photos)</span>
+                          <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
+                        </div>
+                      </div>
                     </button>
                   );
                 })}
               </div>
-            </div>
-
-            {/* PART 1: OFFICIAL CHAPTER VIDEO(S) AT THE TOP */}
-            <div className="space-y-5">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <span className="w-2 h-2 rounded-full bg-accent" />
-                  <h3 className="font-heading text-sm sm:text-base font-bold uppercase tracking-[0.16em] text-content">
-                    {currentMediaArchive.city} Conclave Official {currentMediaArchive.videos.length > 1 ? "Videos" : "Video"}
-                  </h3>
-                </div>
-                <span className="text-xs font-mono text-content-muted uppercase tracking-widest">
-                  {currentMediaArchive.editionBadge}
-                </span>
-              </div>
-
-              {currentMediaArchive.videos.length === 1 ? (
-                <div className="bg-surface rounded-3xl overflow-hidden border border-line shadow-xl hover:border-line-strong transition-all grid grid-cols-1 lg:grid-cols-12">
-                  <div className="lg:col-span-8 relative aspect-video w-full bg-canvas overflow-hidden">
-                    <iframe
-                      className="w-full h-full"
-                      src={`https://www.youtube-nocookie.com/embed/${currentMediaArchive.videos[0].youtubeId}`}
-                      title={currentMediaArchive.videos[0].title}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
-                  </div>
-                  <div className="lg:col-span-4 p-6 sm:p-8 lg:p-10 flex flex-col justify-center space-y-4 border-t lg:border-t-0 lg:border-l border-line">
-                    <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/15 border border-accent/30 text-accent text-[11px] font-semibold uppercase tracking-[0.14em] w-fit">
-                      {currentMediaArchive.videos[0].tag}
+            ) : (
+              /* OPENED CHAPTER CARD: EVERYTHING (VIDEO FIRST + 24 PHOTOS IN 6 ROWS) INSIDE THE CARD */
+              <div className="bg-surface rounded-3xl p-6 sm:p-10 lg:p-12 border border-line shadow-2xl space-y-10">
+                {/* Card Top Navigation & Chapter Header */}
+                <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-line">
+                  <div className="flex flex-wrap items-center gap-3">
+                    <button
+                      type="button"
+                      onClick={() => setSelectedMediaCity(null)}
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-surface-2 hover:bg-accent hover:text-on-accent text-content font-sans text-xs font-semibold border border-line transition-colors cursor-pointer"
+                    >
+                      <ChevronLeft className="w-4 h-4" />
+                      All Chapter Cards
+                    </button>
+                    <span className="px-3 py-1 rounded-full bg-accent/15 border border-accent/30 text-accent font-sans text-[11px] font-semibold uppercase tracking-[0.14em]">
+                      {currentMediaArchive.editionBadge}
                     </span>
-                    <h4 className="font-display text-xl sm:text-2xl font-bold text-content leading-snug">
-                      {currentMediaArchive.videos[0].title}
-                    </h4>
-                    <p className="font-sans text-sm text-content-secondary leading-relaxed">
-                      {currentMediaArchive.videos[0].desc}
-                    </p>
-                    <div className="pt-4 border-t border-line flex items-center justify-between text-xs text-content-muted">
-                      <span>Official Chapter Film</span>
-                      <span className="text-accent font-semibold">24 Photos Below ↓</span>
+                  </div>
+
+                  {/* Quick Switcher Between Chapter Cards */}
+                  <div className="flex flex-wrap items-center gap-2">
+                    {Object.keys(CHAPTER_ARCHIVES).map((cityKey) => {
+                      const isSelected = selectedMediaCity === cityKey;
+                      return (
+                        <button
+                          key={cityKey}
+                          type="button"
+                          onClick={() => setSelectedMediaCity(cityKey)}
+                          className={`px-3.5 py-1.5 rounded-full font-sans text-xs font-medium transition-all cursor-pointer ${
+                            isSelected
+                              ? "bg-accent text-on-accent font-semibold shadow-sm"
+                              : "bg-surface-2 border border-line text-content-muted hover:text-content"
+                          }`}
+                        >
+                          {cityKey}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                {/* Opened Card Title */}
+                <div className="space-y-2">
+                  <span className="text-[11px] font-bold font-heading uppercase tracking-[0.18em] text-accent block">
+                    {currentMediaArchive.city} Conclave Archive
+                  </span>
+                  <h3 className="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-content tracking-tight">
+                    {currentMediaArchive.city} Chapter — Video &amp; 24 Conclave Moments
+                  </h3>
+                  <p className="font-sans text-sm sm:text-base text-content-secondary max-w-3xl leading-relaxed">
+                    {currentMediaArchive.subtitle}
+                  </p>
+                </div>
+
+                {/* INSIDE CARD PART 1: OFFICIAL CHAPTER VIDEO(S) FIRST */}
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2.5">
+                      <Video className="w-4 h-4 text-accent" />
+                      <h4 className="font-heading text-xs sm:text-sm font-bold uppercase tracking-[0.16em] text-content">
+                        1. Official {currentMediaArchive.city} Conclave {currentMediaArchive.videos.length > 1 ? "Videos" : "Video"}
+                      </h4>
                     </div>
                   </div>
-                </div>
-              ) : (
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  {currentMediaArchive.videos.map((v) => (
-                    <div
-                      key={v.youtubeId}
-                      className="bg-surface rounded-3xl overflow-hidden border border-line shadow-xl hover:border-line-strong transition-all flex flex-col justify-between group"
-                    >
-                      <div className="relative aspect-video w-full bg-canvas overflow-hidden">
+
+                  {currentMediaArchive.videos.length === 1 ? (
+                    <div className="bg-surface-2 rounded-2xl overflow-hidden border border-line grid grid-cols-1 lg:grid-cols-12">
+                      <div className="lg:col-span-8 relative aspect-video w-full bg-canvas overflow-hidden">
                         <iframe
                           className="w-full h-full"
-                          src={`https://www.youtube-nocookie.com/embed/${v.youtubeId}`}
-                          title={v.title}
+                          src={`https://www.youtube-nocookie.com/embed/${currentMediaArchive.videos[0].youtubeId}`}
+                          title={currentMediaArchive.videos[0].title}
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                           allowFullScreen
                         />
                       </div>
-                      <div className="p-6 space-y-2 flex-1 flex flex-col justify-between">
-                        <div>
-                          <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent block mb-1">
-                            {v.tag}
+                      <div className="lg:col-span-4 p-6 sm:p-8 flex flex-col justify-center space-y-3 border-t lg:border-t-0 lg:border-l border-line">
+                        <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/15 border border-accent/30 text-accent text-[10px] font-semibold uppercase tracking-[0.14em] w-fit">
+                          {currentMediaArchive.videos[0].tag}
+                        </span>
+                        <h5 className="font-display text-lg sm:text-xl font-bold text-content leading-snug">
+                          {currentMediaArchive.videos[0].title}
+                        </h5>
+                        <p className="font-sans text-xs sm:text-sm text-content-secondary leading-relaxed">
+                          {currentMediaArchive.videos[0].desc}
+                        </p>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                      {currentMediaArchive.videos.map((v) => (
+                        <div
+                          key={v.youtubeId}
+                          className="bg-surface-2 rounded-2xl overflow-hidden border border-line flex flex-col justify-between"
+                        >
+                          <div className="relative aspect-video w-full bg-canvas overflow-hidden">
+                            <iframe
+                              className="w-full h-full"
+                              src={`https://www.youtube-nocookie.com/embed/${v.youtubeId}`}
+                              title={v.title}
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                            />
+                          </div>
+                          <div className="p-5 space-y-1.5">
+                            <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.14em] text-accent block">
+                              {v.tag}
+                            </span>
+                            <h5 className="font-display text-base sm:text-lg font-semibold text-content leading-snug">
+                              {v.title}
+                            </h5>
+                            <p className="font-sans text-xs text-content-muted leading-relaxed">
+                              {v.desc}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* INSIDE CARD PART 2: 24 CHAPTER PHOTOS IN 6 ROWS BELOW THE VIDEO */}
+                <div className="space-y-5 pt-6 border-t border-line">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <div className="flex items-center gap-2.5">
+                      <span className="w-2 h-2 rounded-full bg-accent" />
+                      <h4 className="font-heading text-xs sm:text-sm font-bold uppercase tracking-[0.16em] text-content">
+                        2. {currentMediaArchive.city} Chapter Photographs (24 Photos · 6 Rows)
+                      </h4>
+                    </div>
+                    <span className="text-xs font-sans text-content-muted">
+                      4 columns × 6 rows · 24 curated chapter moments
+                    </span>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                    {currentMediaArchive.photos.map((photo, idx) => (
+                      <div
+                        key={`${currentMediaArchive.city}-photo-${idx}`}
+                        className="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-surface-2 border border-line shadow-sm hover:border-accent/50 hover:shadow-lg transition-all duration-500"
+                      >
+                        <Image
+                          src={photo.src}
+                          alt={`${currentMediaArchive.city} Chapter — ${photo.caption}`}
+                          fill
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                          className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                          style={{ objectPosition: photo.objectPosition || "50% 25%" }}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent opacity-85 group-hover:opacity-95 transition-opacity duration-300" />
+
+                        {/* Top-right Frame Index Badge (01 to 24) */}
+                        <div className="absolute top-3 right-3 px-2 py-0.5 rounded-md bg-black/55 backdrop-blur-md border border-white/15 text-[10px] font-mono font-semibold text-white/85">
+                          {String(idx + 1).padStart(2, "0")} / 24
+                        </div>
+
+                        {/* Bottom Caption Overlay */}
+                        <div className="absolute inset-x-0 bottom-0 p-4 flex flex-col justify-end">
+                          <span className="text-[10px] font-heading font-bold uppercase tracking-[0.16em] text-[#C5A880] mb-0.5">
+                            {currentMediaArchive.city} Chapter
                           </span>
-                          <h4 className="font-display text-lg font-semibold tracking-normal text-content leading-snug">
-                            {v.title}
-                          </h4>
-                          <p className="font-sans text-xs sm:text-sm font-normal tracking-[0.01em] text-content-muted mt-2 leading-relaxed">
-                            {v.desc}
+                          <p className="font-sans text-xs sm:text-sm font-medium text-white leading-snug line-clamp-2">
+                            {photo.caption}
                           </p>
                         </div>
                       </div>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* PART 2: 24 CHAPTER PHOTOS IN 6 ROWS (4 COLUMNS x 6 ROWS) */}
-            <div className="space-y-6 pt-4">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-line pb-4">
-                <div className="flex items-center gap-3">
-                  <span className="w-2 h-2 rounded-full bg-accent" />
-                  <h3 className="font-heading text-sm sm:text-base font-bold uppercase tracking-[0.16em] text-content">
-                    {currentMediaArchive.city} Chapter Photo Archive (24 Photographs · 6 Rows)
-                  </h3>
-                </div>
-                <span className="text-xs font-sans text-content-muted">
-                  Showing all 24 photographs from {currentMediaArchive.city} ({currentMediaArchive.editionBadge})
-                </span>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                {currentMediaArchive.photos.map((photo, idx) => (
-                  <div
-                    key={`${currentMediaArchive.city}-photo-${idx}`}
-                    className="group relative aspect-[4/3] rounded-2xl overflow-hidden bg-surface border border-line shadow-md hover:border-accent/50 hover:shadow-xl transition-all duration-500"
-                  >
-                    <Image
-                      src={photo.src}
-                      alt={`${currentMediaArchive.city} Chapter — ${photo.caption}`}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                      style={{ objectPosition: photo.objectPosition || "50% 25%" }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent opacity-85 group-hover:opacity-95 transition-opacity duration-300" />
-
-                    {/* Top-right Frame Index Badge (01 to 24) */}
-                    <div className="absolute top-3 right-3 px-2 py-0.5 rounded-md bg-black/55 backdrop-blur-md border border-white/15 text-[10px] font-mono font-semibold text-white/85">
-                      {String(idx + 1).padStart(2, "0")} / 24
-                    </div>
-
-                    {/* Bottom Caption Overlay */}
-                    <div className="absolute inset-x-0 bottom-0 p-4 flex flex-col justify-end">
-                      <span className="text-[10px] font-heading font-bold uppercase tracking-[0.16em] text-[#C5A880] mb-0.5">
-                        {currentMediaArchive.city} Chapter
-                      </span>
-                      <p className="font-sans text-xs sm:text-sm font-medium text-white leading-snug line-clamp-2">
-                        {photo.caption}
-                      </p>
-                    </div>
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
-            </div>
+            )}
           </div>
         )}
       </div>
