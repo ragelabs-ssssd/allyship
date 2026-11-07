@@ -71,9 +71,9 @@ export function Footer() {
               </div>
             </Link>
 
-            <blockquote className="font-serif italic text-base sm:text-lg text-content-secondary leading-relaxed max-w-lg border-l-2 border-accent/40 pl-4">
-              &ldquo;Where academic rigour meets executive foresight, nurturing industry-ready talent through sustained corporate allyship.&rdquo;
-            </blockquote>
+            <p className="font-sans text-sm sm:text-base font-normal tracking-[0.01em] text-content-secondary leading-relaxed max-w-lg border-l-2 border-accent/40 pl-4">
+              Where academic rigour meets executive foresight, nurturing industry-ready talent through sustained corporate allyship.
+            </p>
 
 
 
