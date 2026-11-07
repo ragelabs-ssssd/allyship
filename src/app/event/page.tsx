@@ -1043,7 +1043,7 @@ function EventContent() {
                             <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent group-hover:from-black/50 transition-colors" />
 
                             <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[10px] font-heading font-bold uppercase tracking-[0.14em] text-[#C5A880]">
-                              Edition 2.0 · {archive.date}
+                              {archive.date}
                             </div>
                           </div>
 
@@ -1115,7 +1115,7 @@ function EventContent() {
                             <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent group-hover:from-black/50 transition-colors" />
 
                             <div className="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[10px] font-heading font-bold uppercase tracking-[0.14em] text-[#C5A880]">
-                              Edition 1.0 · {archive.date}
+                              {archive.date}
                             </div>
                           </div>
 
