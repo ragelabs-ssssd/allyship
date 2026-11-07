@@ -1045,10 +1045,6 @@ function EventContent() {
                             <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[10px] font-heading font-bold uppercase tracking-[0.14em] text-[#C5A880]">
                               Edition 2.0 · {archive.date}
                             </div>
-
-                            <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[10px] font-mono font-semibold text-white/90">
-                              Film &amp; Gallery
-                            </div>
                           </div>
 
                           <div className="p-6 space-y-4 flex-1 flex flex-col justify-between">
@@ -1120,10 +1116,6 @@ function EventContent() {
 
                             <div className="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[10px] font-heading font-bold uppercase tracking-[0.14em] text-[#C5A880]">
                               Edition 1.0 · {archive.date}
-                            </div>
-
-                            <div className="absolute top-3.5 right-3.5 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[10px] font-mono font-semibold text-white/90">
-                              Film &amp; Gallery
                             </div>
                           </div>
 
