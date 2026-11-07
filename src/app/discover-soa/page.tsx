@@ -32,6 +32,7 @@ import { GetInvitedModal } from "@/components/GetInvitedModal";
 import { HeroBackdrop, SOA_VIDEO_SRC } from "@/components/HeroBackdrop";
 import { NirfRankingsShowcase } from "@/components/discover/NirfRankingsShowcase";
 import { AccreditationsShowcase } from "@/components/discover/AccreditationsShowcase";
+import { TimelineShowcase } from "@/components/discover/TimelineShowcase";
 
 // 1. NIRF Rankings 2025 Data
 const nirfRankings2025 = [
@@ -480,97 +481,7 @@ export default function DiscoverSoaPage() {
           </p>
         </div>
 
-        {/* 2 Key Metric Pillars */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto mb-14 text-center">
-          <div className="p-6 rounded-3xl bg-surface-2 border border-line flex flex-col items-center justify-center">
-            <span className="font-display text-5xl sm:text-6xl font-extrabold text-accent">
-              13
-            </span>
-            <span className="font-heading text-sm font-bold text-content mt-2 uppercase tracking-wider">
-              Constituent Institutes
-            </span>
-            <span className="text-xs text-content-muted mt-1">
-              Engineering, Medicine, Dental, Law, Management, Nursing, Pharmacy &amp; Agriculture
-            </span>
-          </div>
-
-          <div className="p-6 rounded-3xl bg-surface-2 border border-line flex flex-col items-center justify-center">
-            <span className="font-display text-5xl sm:text-6xl font-extrabold text-content">
-              18
-            </span>
-            <span className="font-heading text-sm font-bold text-content mt-2 uppercase tracking-wider">
-              State-of-the-Art Research Centres
-            </span>
-            <span className="text-xs text-content-muted mt-1">
-              Nanotechnology, Renewable Energy, Climate Studies, Biomechanics &amp; AI
-            </span>
-          </div>
-        </div>
-
-        {/* Chronological Milestone Timeline Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
-          {/* Left Column (1996 to 2008) */}
-          <div className="space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-accent pb-2 border-b border-line">
-              Phase 1: Foundational Academics (1996 – 2008)
-            </h4>
-            {growthTimeline
-              .filter((t) => t.side === "left")
-              .map((item) => (
-                <div
-                  key={item.year}
-                  className="p-5 rounded-2xl bg-surface-2 border border-line hover:border-accent transition-all flex items-start gap-4"
-                >
-                  <div className="px-3 py-1.5 rounded-xl bg-accent/15 border border-accent/40 font-mono text-xs font-bold text-accent shrink-0 text-center">
-                    {item.year}
-                  </div>
-                  <div className="space-y-1">
-                    <h5 className="font-heading text-sm font-bold text-content">
-                      {item.title}
-                    </h5>
-                    <p className="text-xs text-[#E8D5A7] font-medium">
-                      {item.faculty}
-                    </p>
-                    <p className="text-xs text-content-muted leading-relaxed">
-                      {item.desc}
-                    </p>
-                  </div>
-                </div>
-              ))}
-          </div>
-
-          {/* Right Column (2011 to 2026) */}
-          <div className="space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-accent pb-2 border-b border-line">
-              Phase 2: Advanced Sciences &amp; Expansions (2011 – 2026)
-            </h4>
-            {growthTimeline
-              .filter((t) => t.side === "right")
-              .map((item) => (
-                <div
-                  key={item.year}
-                  className="p-5 rounded-2xl bg-surface-2 border border-line hover:border-accent transition-all flex items-start gap-4"
-                >
-                  <div className="px-3 py-1.5 rounded-xl bg-accent/15 border border-accent/40 font-mono text-xs font-bold text-accent shrink-0 text-center">
-                    {item.year}
-                  </div>
-                  <div className="space-y-1">
-                    <h5 className="font-heading text-sm font-bold text-content">
-                      {item.title}
-                    </h5>
-                    <p className="text-xs text-[#E8D5A7] font-medium">
-                      {item.faculty}
-                    </p>
-                    <p className="text-xs text-content-muted leading-relaxed">
-                      {item.desc}
-                    </p>
-                  </div>
-                </div>
-              ))}
-          </div>
-        </div>
-
-
+        <TimelineShowcase />
       </section>
 
       {/* 6. OFFICIAL CAMPUS INFRASTRUCTURE */}
