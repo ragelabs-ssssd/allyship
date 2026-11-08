@@ -116,15 +116,15 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Right Column: The Conclave Mandate Banner Visual */}
+          {/* Right Column: The Conclave Mandate Banner Visual (exact proportions of the previous code box) */}
           <div id="manifesto" className="lg:col-span-6 xl:col-span-6 w-full flex justify-center lg:justify-end scroll-mt-28">
-            <div className="w-full max-w-xl lg:max-w-none xl:max-w-[680px] 2xl:max-w-[720px]">
-              <div className="relative rounded-3xl bg-surface border border-line shadow-2xl overflow-hidden force-dark group hover:border-accent/50 transition-all duration-300 aspect-[1024/414] min-h-[260px] sm:min-h-[300px]">
+            <div className="w-full max-w-xl lg:max-w-none xl:max-w-[640px] 2xl:max-w-[700px]">
+              <div className="relative rounded-3xl bg-[#0A0A0A] border border-line shadow-2xl overflow-hidden force-dark group hover:border-accent/50 transition-all duration-300 h-[380px] sm:h-[440px] md:h-[480px] lg:h-[500px] xl:h-[520px] 2xl:h-[540px]">
                 <Image
                   src="/conclave-mandate-delegation.jpg"
                   alt="The Conclave Mandate — We Do Not Sign Pledges. We Alter Trajectories."
                   fill
-                  className="object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+                  className="object-contain sm:object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
                   priority
                 />
 
