@@ -116,25 +116,42 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Right Column: The Conclave Mandate Banner Visual (exact proportions of the previous code box) */}
+          {/* Right Column: The Conclave Mandate Banner Visual (Chennai Conclave high-res background with blur & razor-sharp typography) */}
           <div id="manifesto" className="lg:col-span-6 xl:col-span-6 w-full flex justify-center lg:justify-end scroll-mt-28">
             <div className="w-full max-w-xl lg:max-w-none xl:max-w-[640px] 2xl:max-w-[700px]">
-              <div className="relative rounded-3xl bg-[#0A0A0A] border border-line shadow-2xl overflow-hidden force-dark group hover:border-accent/50 transition-all duration-300 h-[380px] sm:h-[440px] md:h-[480px] lg:h-[500px] xl:h-[520px] 2xl:h-[540px]">
-                <Image
-                  src="/conclave-mandate-delegation.jpg"
-                  alt="The Conclave Mandate — We Do Not Sign Pledges. We Alter Trajectories."
-                  fill
-                  className="object-contain sm:object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
-                  priority
-                />
+              <div className="relative rounded-3xl bg-[#0A0A0A] border border-white/10 shadow-2xl overflow-hidden force-dark group hover:border-accent/40 transition-all duration-500 h-[380px] sm:h-[440px] md:h-[480px] lg:h-[500px] xl:h-[520px] 2xl:h-[540px] flex items-center justify-center p-6 sm:p-10 lg:p-12 text-center select-none">
+                {/* Background Image: High-Resolution Chennai Conclave Delegation with Cinematic Blur */}
+                <div className="absolute inset-0">
+                  <Image
+                    src="/slides/CON01670.jpg"
+                    alt="Allyship++ Chennai Conclave Delegation"
+                    fill
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-1000 ease-out"
+                    priority
+                  />
+                  {/* Subtle blur overlay + dark cinematic grade */}
+                  <div className="absolute inset-0 bg-black/65 backdrop-blur-[2px]" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/80" />
+                  <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_transparent_15%,_rgba(0,0,0,0.85)_100%)]" />
+                </div>
 
-                {/* Letterbox Gold Accent Hairlines */}
-                <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-accent/60 to-transparent pointer-events-none" />
-                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-accent/60 to-transparent pointer-events-none" />
+                {/* Razor-Sharp Vector Typography (Exact Conclave Mandate Concept) */}
+                <div className="relative z-10 max-w-lg mx-auto flex flex-col items-center justify-center space-y-4 sm:space-y-5">
+                  <span className="text-[10px] sm:text-[11px] font-heading font-bold uppercase tracking-[0.3em] text-accent block">
+                    The Conclave Mandate
+                  </span>
 
-                {/* Corner Gold Accent Brackets */}
-                <div className="absolute top-0 left-0 w-5 h-5 border-t-2 border-l-2 border-accent pointer-events-none rounded-tl-3xl" />
-                <div className="absolute bottom-0 right-0 w-5 h-5 border-b-2 border-r-2 border-accent pointer-events-none rounded-br-3xl" />
+                  <h3 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-[38px] xl:text-[42px] font-black text-white uppercase tracking-tight leading-[1.08] drop-shadow-lg">
+                    We Do Not<br />
+                    Sign Pledges.<br />
+                    <span className="text-accent italic font-serif font-light lowercase capitalize">We Alter</span><br />
+                    Trajectories.
+                  </h3>
+
+                  <p className="text-[10px] sm:text-[11px] md:text-xs font-mono text-content-secondary uppercase tracking-[0.18em] pt-1 sm:pt-2 text-white/80 max-w-md leading-relaxed">
+                    7 National Conclaves &middot; 500+ Boardroom CXOs &middot; Zero Commercial Sponsorship
+                  </p>
+                </div>
               </div>
             </div>
           </div>
