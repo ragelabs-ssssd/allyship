@@ -543,8 +543,8 @@ export const INSTITUTION_NODES: InstitutionNode[] = [
     acronym: "SUM Campus 2",
     desc: "Mega quaternary healthcare expansion adding specialized oncology towers, organ transplant suites, and advanced critical care wings.",
     category: "Mega Quaternary Hospital",
-    image: "/slides/CON01638.jpg",
-    imageAlt: "SUM Hospital Campus 2 High-Rise",
+    image: "/campus2-options/campus2-option-2.jpg",
+    imageAlt: "SUM Hospital Multi-Tower Quaternary Expansion",
     badge: "Campus-2 Expansion",
     achievement: "Oncology & Organ Transplant Citadel",
     exitNumber: "EXIT 09 · MILE 28",
@@ -576,13 +576,11 @@ export function TimelineShowcase() {
   const [selectedShmPhoto, setSelectedShmPhoto] = useState(0);
   const [selectedIdsPhoto, setSelectedIdsPhoto] = useState(0);
   const [selectedImsPhoto, setSelectedImsPhoto] = useState(0);
-  const [selectedCampus2Photo, setSelectedCampus2Photo] = useState(0);
   const [selectedPharma2Photo, setSelectedPharma2Photo] = useState(0);
 
   const currentShmPhoto = SHM_PHOTO_OPTIONS[selectedShmPhoto] ?? SHM_PHOTO_OPTIONS[0];
   const currentIdsPhoto = IDS_PHOTO_OPTIONS[selectedIdsPhoto] ?? IDS_PHOTO_OPTIONS[0];
   const currentImsPhoto = IMS_PHOTO_OPTIONS[selectedImsPhoto] ?? IMS_PHOTO_OPTIONS[0];
-  const currentCampus2Photo = CAMPUS2_PHOTO_OPTIONS[selectedCampus2Photo] ?? CAMPUS2_PHOTO_OPTIONS[0];
   const currentPharma2Photo = PHARMA2_PHOTO_OPTIONS[selectedPharma2Photo] ?? PHARMA2_PHOTO_OPTIONS[0];
 
   const getNodePhotoData = (nodeId: string) => {
@@ -611,15 +609,6 @@ export function TimelineShowcase() {
         options: IMS_PHOTO_OPTIONS,
         selected: selectedImsPhoto,
         onSelect: setSelectedImsPhoto,
-      };
-    }
-    if (nodeId === "campus2-2024") {
-      return {
-        src: currentCampus2Photo.src,
-        caption: currentCampus2Photo.caption,
-        options: CAMPUS2_PHOTO_OPTIONS,
-        selected: selectedCampus2Photo,
-        onSelect: setSelectedCampus2Photo,
       };
     }
     if (nodeId === "pharma2-2025") {
