@@ -1,34 +1,16 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import {
   Cpu,
   Trophy,
   MapPin,
   ShieldCheck,
   ArrowRight,
-  ExternalLink,
 } from "lucide-react";
 import Link from "next/link";
-import {
-  Option1CommandMatrix,
-  Option2DiplomaticCorridor,
-  Option3CinematicDeck,
-  Option4AccordionStack,
-  Option5SplitDashboard,
-} from "@/components/about/BentoCityOptions";
-
-const METRO_CITIES = [
-  { name: "Bengaluru", edition: "1.0 & 2.0", focus: "Cloud & Sovereign AI Innovation" },
-  { name: "Hyderabad", edition: "2.0 Conclave", focus: "Strategic GCCs & Capability Hubs" },
-  { name: "Mumbai", edition: "1.0 Conclave", focus: "BFSI & High-Empathy Governance" },
-  { name: "Chennai", edition: "2.0 Conclave", focus: "Deep Tech, MedTech & Systems" },
-  { name: "Kolkata", edition: "1.0 Conclave", focus: "Enterprise Digital Scale" },
-];
 
 export function BentoGridConcept() {
-  const [selectedCity, setSelectedCity] = useState(0);
-  const [conceptOption, setConceptOption] = useState<number>(1);
 
   return (
     <div className="space-y-12">
@@ -136,70 +118,22 @@ export function BentoGridConcept() {
             </p>
           </div>
 
-          {/* Interactive Concept Switcher for Review */}
-          <div className="space-y-3 pt-3 border-t border-line/60">
-            <div className="flex items-center justify-between">
-              <span className="text-[10px] font-mono uppercase tracking-wider text-accent font-bold">
-                Design Option {conceptOption} of 5
-              </span>
-              <Link
-                href="/review/bento-cities"
-                className="text-[10px] font-mono text-content-muted hover:text-accent flex items-center gap-1 transition-colors underline"
-              >
-                <span>Compare All 5</span>
-                <ExternalLink className="w-2.5 h-2.5" />
-              </Link>
+          {/* Pan-India Metro Corridor Cities */}
+          <div className="pt-4 border-t border-line space-y-1.5">
+            <div className="text-[11px] font-semibold text-content">
+              Regional Chapter Corridors:
             </div>
-
-            {/* Quick 5-Option Pill Selector */}
-            <div className="grid grid-cols-5 gap-1 p-1 rounded-xl bg-surface-2/70 border border-line text-[10px] font-mono">
-              {[1, 2, 3, 4, 5].map((optNum) => (
-                <button
-                  key={optNum}
-                  type="button"
-                  onClick={() => setConceptOption(optNum)}
-                  className={`py-1 rounded-lg transition-all font-bold text-center ${
-                    conceptOption === optNum
-                      ? "bg-accent text-on-accent shadow-sm"
-                      : "text-content-secondary hover:text-content hover:bg-surface-3"
-                  }`}
-                >
-                  Opt {optNum}
-                </button>
-              ))}
-            </div>
-
-            {/* Rendered Active Option */}
-            {conceptOption === 1 && (
-              <Option1CommandMatrix
-                selectedCity={selectedCity}
-                setSelectedCity={setSelectedCity}
-              />
-            )}
-            {conceptOption === 2 && (
-              <Option2DiplomaticCorridor
-                selectedCity={selectedCity}
-                setSelectedCity={setSelectedCity}
-              />
-            )}
-            {conceptOption === 3 && (
-              <Option3CinematicDeck
-                selectedCity={selectedCity}
-                setSelectedCity={setSelectedCity}
-              />
-            )}
-            {conceptOption === 4 && (
-              <Option4AccordionStack
-                selectedCity={selectedCity}
-                setSelectedCity={setSelectedCity}
-              />
-            )}
-            {conceptOption === 5 && (
-              <Option5SplitDashboard
-                selectedCity={selectedCity}
-                setSelectedCity={setSelectedCity}
-              />
-            )}
+            <p className="text-xs sm:text-sm font-mono font-bold text-accent tracking-wider flex flex-wrap items-center gap-x-2 gap-y-1">
+              <span>Bengaluru</span>
+              <span className="text-content-muted/60 select-none">/</span>
+              <span>Hyderabad</span>
+              <span className="text-content-muted/60 select-none">/</span>
+              <span>Mumbai</span>
+              <span className="text-content-muted/60 select-none">/</span>
+              <span>Chennai</span>
+              <span className="text-content-muted/60 select-none">/</span>
+              <span>Kolkata</span>
+            </p>
           </div>
         </div>
 
