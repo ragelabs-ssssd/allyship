@@ -4,36 +4,102 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
-const TRIPLE_PHOTO_OPTIONS = [
+const SNC_PHOTO_OPTIONS = [
   {
     id: 1,
-    label: "Photo 1 (SNC Building)",
-    caption: "Official SUM Nursing College (SNC) Building & Rooftop Sign (soa.ac.in/snc)",
-    src: "/triple-options/triple-option-1.jpg",
+    label: "Photo 1 (SNC Facade)",
+    caption: "Official SUM Nursing College (SNC) Building with Red Rooftop Sign (soa.ac.in/snc)",
+    src: "/snc-options/snc-option-1.jpg",
   },
   {
     id: 2,
-    label: "Photo 2 (SPS Building)",
-    caption: "Official School of Pharmaceutical Sciences (SPS) Building (soa.ac.in/sps)",
-    src: "/triple-options/triple-option-5.jpg",
+    label: "Photo 2 (SNC Campus)",
+    caption: "SNC Campus Quadrangle & Athletic Courts (soa.ac.in/snc)",
+    src: "/snc-options/snc-option-2.jpg",
+  },
+  {
+    id: 3,
+    label: "Photo 3 (SNC Block)",
+    caption: "SNC Nursing Sciences Academic Block (soa.ac.in/academics-at-soa)",
+    src: "/snc-options/snc-option-3.jpg",
+  },
+  {
+    id: 4,
+    label: "Photo 4 (Clinical Ward)",
+    caption: "SNC Clinical Simulation & Practical Training Facility (soa.ac.in)",
+    src: "/snc-options/snc-option-4.jpg",
+  },
+  {
+    id: 5,
+    label: "Photo 5 (SNAI Delegation)",
+    caption: "State Biennial Student Nurses Association (SNAI) Delegation (soa.ac.in)",
+    src: "/snc-options/snc-option-5.jpg",
+  },
+];
+
+const SHM_PHOTO_OPTIONS = [
+  {
+    id: 1,
+    label: "Photo 1 (SHM Entrance)",
+    caption: "Official School of Hotel Management (SHM) Red Portal Entrance (soa.ac.in/shm)",
+    src: "/shm-options/shm-option-1.jpg",
+  },
+  {
+    id: 2,
+    label: "Photo 2 (Culinary Suite)",
+    caption: "School of Hotel Management (SHM) Chef Uniform Cohort (soa.ac.in/shm)",
+    src: "/shm-options/shm-option-2.jpg",
   },
   {
     id: 3,
     label: "Photo 3 (SHM Building)",
-    caption: "Official School of Hotel Management (SHM) Entrance Facade (soa.ac.in/shm)",
-    src: "/triple-options/triple-option-3.jpg",
+    caption: "SHM Hospitality Campus Wing (soa.ac.in/academics-at-soa)",
+    src: "/shm-options/shm-option-3.jpg",
   },
   {
     id: 4,
-    label: "Photo 4 (SNC Campus)",
-    caption: "SUM Nursing College (SNC) Campus Complex & Courts (soa.ac.in/snc)",
-    src: "/triple-options/triple-option-2.jpg",
+    label: "Photo 4 (Patisserie Event)",
+    caption: "SHM Annual Artisanal Hospitality Ceremony (soa.ac.in)",
+    src: "/shm-options/shm-option-4.jpg",
   },
   {
     id: 5,
-    label: "Photo 5 (SHM Culinary)",
-    caption: "School of Hotel Management (SHM) Culinary Cohort (soa.ac.in/shm)",
-    src: "/triple-options/triple-option-4.jpg",
+    label: "Photo 5 (Hospitality Seminar)",
+    caption: "SHM National Hospitality & Tourism Symposium (soa.ac.in)",
+    src: "/shm-options/shm-option-5.jpg",
+  },
+];
+
+const SPS_PHOTO_OPTIONS = [
+  {
+    id: 1,
+    label: "Photo 1 (SPS Facade)",
+    caption: "Official School of Pharmaceutical Sciences (SPS) High-Rise (soa.ac.in/sps)",
+    src: "/sps-options/sps-option-1.jpg",
+  },
+  {
+    id: 2,
+    label: "Photo 2 (SPS Aerial)",
+    caption: "SPS Pharmaceutical Research Campus Aerial View (soa.ac.in/sps)",
+    src: "/sps-options/sps-option-2.jpg",
+  },
+  {
+    id: 3,
+    label: "Photo 3 (Pharma Wing)",
+    caption: "SPS Formulations & Pharmacology Research Wing (soa.ac.in/academics-at-soa)",
+    src: "/sps-options/sps-option-3.jpg",
+  },
+  {
+    id: 4,
+    label: "Photo 4 (Research Lab)",
+    caption: "SPS Advanced Analytical Instrumentation Lab (soa.ac.in)",
+    src: "/sps-options/sps-option-4.jpg",
+  },
+  {
+    id: 5,
+    label: "Photo 5 (Pharmacist Day)",
+    caption: "World Pharmacist Day Celebration at SPS SOA (soa.ac.in)",
+    src: "/sps-options/sps-option-5.jpg",
   },
 ];
 
@@ -94,21 +160,57 @@ export const INSTITUTION_NODES: InstitutionNode[] = [
     laneName: "Commerce & Policy Line",
   },
   {
-    id: "triple-2004",
+    id: "snc-2004",
     year: "2004–05",
     yearNum: 2004,
-    title: "Nursing · Hotel Mgmt · Pharmacy",
-    faculty: "School of Nursing (SNC) · Hotel Mgmt (SHM) · Pharmacy (SPS)",
-    acronym: "SNC · SHM · SPS",
-    desc: "Simultaneous triple expansion into professional bedside clinical healthcare, five-star hospitality operations, and pharmaceutical formulation chemistry.",
-    category: "Clinical & Hospitality",
-    image: "/triple-options/triple-option-1.jpg",
-    imageAlt: "SNC, SHM & SPS Campus Buildings",
-    badge: "Triple Sector Expansion",
-    achievement: "Clinical & Hospitality Tri-Center",
-    exitNumber: "EXIT 03 · MILE 8",
-    stationCode: "STN-TRI",
+    title: "Nursing Sciences",
+    faculty: "School of Nursing / SUM Nursing College",
+    acronym: "SNC",
+    desc: "Pioneered professional bedside clinical nursing, critical care patient management, and advanced healthcare pedagogy in Eastern India with extensive hospital residency training.",
+    category: "Nursing Sciences",
+    image: "/snc-options/snc-option-1.jpg",
+    imageAlt: "SUM Nursing College Building",
+    badge: "INC Accredited",
+    achievement: "Bedside Clinical & Intensive Nursing Citadel",
+    exitNumber: "EXIT 03 · MILE 6",
+    stationCode: "STN-SNC",
     laneColor: "#10B981",
+    laneName: "Healthcare & Life Sciences Line",
+  },
+  {
+    id: "shm-2004",
+    year: "2004–05",
+    yearNum: 2004,
+    title: "Hospitality Management",
+    faculty: "School of Hotel Management",
+    acronym: "SHM",
+    desc: "Premier institution for five-star hotel operations, international culinary arts, luxury hospitality, and tourism leadership with state-of-the-art training suites.",
+    category: "Hospitality & Tourism",
+    image: "/shm-options/shm-option-1.jpg",
+    imageAlt: "School of Hotel Management Entrance",
+    badge: "NCHMCT Aligned",
+    achievement: "Five-Star Culinary & Hospitality Center",
+    exitNumber: "EXIT 04 · MILE 7",
+    stationCode: "STN-SHM",
+    laneColor: "#F59E0B",
+    laneName: "Commerce & Policy Line",
+  },
+  {
+    id: "sps-2004",
+    year: "2004–05",
+    yearNum: 2004,
+    title: "Pharmaceutical Sciences",
+    faculty: "School of Pharmaceutical Sciences",
+    acronym: "SPS",
+    desc: "Consistently ranked among India's elite pharmacy faculties (NIRF #13 in Pharmacy); advances drug design, novel formulation technologies, and pharmacological synthesis.",
+    category: "Pharmaceutical Sciences",
+    image: "/sps-options/sps-option-1.jpg",
+    imageAlt: "School of Pharmaceutical Sciences Building",
+    badge: "NIRF #13 Pharmacy",
+    achievement: "Drug Discovery & Novel Formulation Hub",
+    exitNumber: "EXIT 05 · MILE 8",
+    stationCode: "STN-SPS",
+    laneColor: "#06B6D4",
     laneName: "Healthcare & Life Sciences Line",
   },
   {
@@ -240,8 +342,44 @@ export const INSTITUTION_NODES: InstitutionNode[] = [
 ];
 
 export function TimelineShowcase() {
-  const [selectedTriplePhoto, setSelectedTriplePhoto] = useState(0);
-  const currentTriplePhoto = TRIPLE_PHOTO_OPTIONS[selectedTriplePhoto] ?? TRIPLE_PHOTO_OPTIONS[0];
+  const [selectedSncPhoto, setSelectedSncPhoto] = useState(0);
+  const [selectedShmPhoto, setSelectedShmPhoto] = useState(0);
+  const [selectedSpsPhoto, setSelectedSpsPhoto] = useState(0);
+
+  const currentSncPhoto = SNC_PHOTO_OPTIONS[selectedSncPhoto] ?? SNC_PHOTO_OPTIONS[0];
+  const currentShmPhoto = SHM_PHOTO_OPTIONS[selectedShmPhoto] ?? SHM_PHOTO_OPTIONS[0];
+  const currentSpsPhoto = SPS_PHOTO_OPTIONS[selectedSpsPhoto] ?? SPS_PHOTO_OPTIONS[0];
+
+  const getNodePhotoData = (nodeId: string) => {
+    if (nodeId === "snc-2004") {
+      return {
+        src: currentSncPhoto.src,
+        caption: currentSncPhoto.caption,
+        options: SNC_PHOTO_OPTIONS,
+        selected: selectedSncPhoto,
+        onSelect: setSelectedSncPhoto,
+      };
+    }
+    if (nodeId === "shm-2004") {
+      return {
+        src: currentShmPhoto.src,
+        caption: currentShmPhoto.caption,
+        options: SHM_PHOTO_OPTIONS,
+        selected: selectedShmPhoto,
+        onSelect: setSelectedShmPhoto,
+      };
+    }
+    if (nodeId === "sps-2004") {
+      return {
+        src: currentSpsPhoto.src,
+        caption: currentSpsPhoto.caption,
+        options: SPS_PHOTO_OPTIONS,
+        selected: selectedSpsPhoto,
+        onSelect: setSelectedSpsPhoto,
+      };
+    }
+    return null;
+  };
 
   return (
     <div id="timeline" className="space-y-12 scroll-mt-28">
@@ -295,91 +433,95 @@ export function TimelineShowcase() {
 
       {/* Expressway Roadway with Cantilever Gantry Billboards */}
       <div className="space-y-8 relative pl-6 sm:pl-12 border-l-4 border-dashed border-accent/40">
-        {INSTITUTION_NODES.map((node, idx) => (
-          <div key={node.id} className="relative group">
-            {/* Highway Milepost Marker Pin */}
-            <div className="absolute -left-[42px] sm:-left-[68px] top-6 w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-canvas border-2 border-accent text-accent font-mono text-xs font-black flex items-center justify-center shadow-lg group-hover:bg-accent group-hover:text-on-accent transition-colors">
-              {idx + 1}
-            </div>
+        {INSTITUTION_NODES.map((node, idx) => {
+          const photoData = getNodePhotoData(node.id);
 
-            {/* Gantry Billboard Card */}
-            <div className="rounded-3xl bg-surface-2 border border-line hover:border-accent overflow-hidden transition-all duration-300 shadow-xl grid grid-cols-1 lg:grid-cols-12 items-stretch">
-              {/* Photo Billboard */}
-              <div className="lg:col-span-5 relative min-h-[240px] sm:min-h-[280px] bg-surface-3 overflow-hidden">
-                <Image
-                  src={node.id === "triple-2004" ? currentTriplePhoto.src : node.image}
-                  alt={node.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 1024px) 100vw, 42vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
-
-                {node.id === "triple-2004" && (
-                  <div className="absolute top-3 left-3 right-3 flex flex-wrap items-center gap-1.5 z-10">
-                    {TRIPLE_PHOTO_OPTIONS.map((opt, optIdx) => (
-                      <button
-                        key={opt.id}
-                        type="button"
-                        onClick={() => setSelectedTriplePhoto(optIdx)}
-                        className={`px-2.5 py-1 rounded-full text-[10px] font-mono font-bold transition-all cursor-pointer ${
-                          selectedTriplePhoto === optIdx
-                            ? "bg-accent text-on-accent shadow-md"
-                            : "bg-black/65 backdrop-blur-md text-white/85 border border-white/20 hover:bg-black/85"
-                        }`}
-                      >
-                        {opt.label}
-                      </button>
-                    ))}
-                  </div>
-                )}
-
-                <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between gap-2">
-                  <span className="text-sm font-mono text-[#F4E8C1] font-bold block">
-                    {node.acronym}
-                  </span>
-                  {node.id === "triple-2004" && (
-                    <span className="text-[10px] font-sans text-white/80 truncate">
-                      {currentTriplePhoto.caption}
-                    </span>
-                  )}
-                </div>
+          return (
+            <div key={node.id} className="relative group">
+              {/* Highway Milepost Marker Pin */}
+              <div className="absolute -left-[42px] sm:-left-[68px] top-6 w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-canvas border-2 border-accent text-accent font-mono text-xs font-black flex items-center justify-center shadow-lg group-hover:bg-accent group-hover:text-on-accent transition-colors">
+                {idx + 1}
               </div>
 
-              {/* Highway Dossier Information */}
-              <div className="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between space-y-4">
-                <div className="space-y-3">
-                  <div className="flex flex-wrap items-center justify-between gap-2">
-                    <span className="font-mono text-xs font-bold text-accent px-3 py-1 rounded-full bg-accent/15 border border-accent/40">
-                      {node.year}
-                    </span>
-                    <span className="text-xs font-mono uppercase text-content-muted font-bold">
-                      {node.badge}
-                    </span>
-                  </div>
+              {/* Gantry Billboard Card */}
+              <div className="rounded-3xl bg-surface-2 border border-line hover:border-accent overflow-hidden transition-all duration-300 shadow-xl grid grid-cols-1 lg:grid-cols-12 items-stretch">
+                {/* Photo Billboard */}
+                <div className="lg:col-span-5 relative min-h-[240px] sm:min-h-[280px] bg-surface-3 overflow-hidden">
+                  <Image
+                    src={photoData ? photoData.src : node.image}
+                    alt={node.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 1024px) 100vw, 42vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
 
-                  <div>
-                    <h4 className="font-heading text-xl sm:text-2xl font-bold text-content group-hover:text-accent transition-colors leading-snug">
-                      {node.title}
-                    </h4>
-                    <p className="text-xs sm:text-sm font-sans text-accent font-semibold mt-1">
-                      {node.faculty}
+                  {photoData && (
+                    <div className="absolute top-3 left-3 right-3 flex flex-wrap items-center gap-1.5 z-10">
+                      {photoData.options.map((opt, optIdx) => (
+                        <button
+                          key={opt.id}
+                          type="button"
+                          onClick={() => photoData.onSelect(optIdx)}
+                          className={`px-2.5 py-1 rounded-full text-[10px] font-mono font-bold transition-all cursor-pointer ${
+                            photoData.selected === optIdx
+                              ? "bg-accent text-on-accent shadow-md"
+                              : "bg-black/65 backdrop-blur-md text-white/85 border border-white/20 hover:bg-black/85"
+                          }`}
+                        >
+                          {opt.label}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+
+                  <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between gap-2">
+                    <span className="text-sm font-mono text-[#F4E8C1] font-bold block">
+                      {node.acronym}
+                    </span>
+                    {photoData && (
+                      <span className="text-[10px] font-sans text-white/80 truncate">
+                        {photoData.caption}
+                      </span>
+                    )}
+                  </div>
+                </div>
+
+                {/* Highway Dossier Information */}
+                <div className="lg:col-span-7 p-6 sm:p-8 flex flex-col justify-between space-y-4">
+                  <div className="space-y-3">
+                    <div className="flex flex-wrap items-center justify-between gap-2">
+                      <span className="font-mono text-xs font-bold text-accent px-3 py-1 rounded-full bg-accent/15 border border-accent/40">
+                        {node.year}
+                      </span>
+                      <span className="text-xs font-mono uppercase text-content-muted font-bold">
+                        {node.badge}
+                      </span>
+                    </div>
+
+                    <div>
+                      <h4 className="font-heading text-xl sm:text-2xl font-bold text-content group-hover:text-accent transition-colors leading-snug">
+                        {node.title}
+                      </h4>
+                      <p className="text-xs sm:text-sm font-sans text-accent font-semibold mt-1">
+                        {node.faculty}
+                      </p>
+                    </div>
+
+                    <p className="text-sm text-content-secondary leading-relaxed font-sans pt-1">
+                      {node.desc}
                     </p>
                   </div>
 
-                  <p className="text-sm text-content-secondary leading-relaxed font-sans pt-1">
-                    {node.desc}
-                  </p>
-                </div>
-
-                <div className="pt-4 border-t border-line/60 flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-content-muted">
-                  <span>Expressway Corridor: {node.laneName}</span>
-                  <span className="text-accent font-bold">{node.achievement}</span>
+                  <div className="pt-4 border-t border-line/60 flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-content-muted">
+                    <span>Expressway Corridor: {node.laneName}</span>
+                    <span className="text-accent font-bold">{node.achievement}</span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
