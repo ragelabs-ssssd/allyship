@@ -235,7 +235,15 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
     coverPosition: "50% 25%",
     subtitle:
       "Leadership and Collaboration Across Disciplines — Inaugural conclave dialogues with corporate and engineering leaders in Bengaluru.",
-    videos: [],
+    videos: [
+      {
+        title: "Allyship++ Conclave Film",
+        desc: "Keynote deliberations, corporate roundtable conversations, and inaugural chapter moments from the conclave floor.",
+        videoSrc: "/discover/soa-allyship-hyd-compressed.mp4",
+        youtubeId: "8wSGKsWyQwk",
+        tag: "Conclave Film",
+      },
+    ],
     photos: create24PhotoSlots("Bengaluru", [
       {
         src: "/conclave-moments/bengaluru-1/bengaluru-1-01.jpg",
@@ -373,6 +381,7 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       {
         title: "Hyderabad Chapter | Official Conclave Film",
         desc: "Highlights from the Hyderabad conclave: conversations on leadership, young talent, and industry–academia collaboration.",
+        videoSrc: "/discover/soa-allyship-hyd-compressed.mp4",
         youtubeId: "8wSGKsWyQwk",
         tag: "Hyderabad",
       },
@@ -1371,6 +1380,8 @@ function EventContent() {
                           <video
                             src={currentMediaArchive.videos[0].videoSrc}
                             controls
+                            playsInline
+                            preload="metadata"
                             className="w-full h-full object-cover"
                           />
                         ) : (
@@ -1404,7 +1415,13 @@ function EventContent() {
                         >
                           <div className="relative aspect-video w-full bg-canvas overflow-hidden">
                             {v.videoSrc ? (
-                              <video src={v.videoSrc} controls className="w-full h-full object-cover" />
+                              <video
+                                src={v.videoSrc}
+                                controls
+                                playsInline
+                                preload="metadata"
+                                className="w-full h-full object-cover"
+                              />
                             ) : (
                               <iframe
                                 className="w-full h-full"
