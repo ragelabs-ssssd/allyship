@@ -4,36 +4,36 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
-const IBCS_PHOTO_OPTIONS = [
+const TRIPLE_PHOTO_OPTIONS = [
   {
     id: 1,
-    label: "Photo 1 (IBCS Building 1)",
-    caption: "Official IBCS Main Building & Lawn (Drone View 1 — soa.ac.in/ibcs)",
-    src: "/ibcs-options/ibcs-option-1.jpg",
+    label: "Photo 1 (SNC Building)",
+    caption: "Official SUM Nursing College (SNC) Building & Rooftop Sign (soa.ac.in/snc)",
+    src: "/triple-options/triple-option-1.jpg",
   },
   {
     id: 2,
-    label: "Photo 2 (IBCS Building 2)",
-    caption: "Official IBCS Campus Complex & Courtyard (Drone View 2 — soa.ac.in/ibcs)",
-    src: "/ibcs-options/ibcs-option-2.jpg",
+    label: "Photo 2 (SPS Building)",
+    caption: "Official School of Pharmaceutical Sciences (SPS) Building (soa.ac.in/sps)",
+    src: "/triple-options/triple-option-5.jpg",
   },
   {
     id: 3,
-    label: "Photo 3 (Previous)",
-    caption: "SOA Campus 2 Auditorium / Convention Centre (Previous Photo)",
-    src: "/soa-auditorium.jpg",
+    label: "Photo 3 (SHM Building)",
+    caption: "Official School of Hotel Management (SHM) Entrance Facade (soa.ac.in/shm)",
+    src: "/triple-options/triple-option-3.jpg",
   },
   {
     id: 4,
-    label: "Photo 4",
-    caption: "SOA Academic Blocks & Courtyard (soa.ac.in/academics-at-soa)",
-    src: "/ibcs-options/ibcs-option-5.jpg",
+    label: "Photo 4 (SNC Campus)",
+    caption: "SUM Nursing College (SNC) Campus Complex & Courts (soa.ac.in/snc)",
+    src: "/triple-options/triple-option-2.jpg",
   },
   {
     id: 5,
-    label: "Photo 5",
-    caption: "IBCS National Management Conference Auditorium (soa.ac.in)",
-    src: "/ibcs-options/ibcs-option-3.jpg",
+    label: "Photo 5 (SHM Culinary)",
+    caption: "School of Hotel Management (SHM) Culinary Cohort (soa.ac.in/shm)",
+    src: "/triple-options/triple-option-4.jpg",
   },
 ];
 
@@ -102,8 +102,8 @@ export const INSTITUTION_NODES: InstitutionNode[] = [
     acronym: "SNC · SHM · SPS",
     desc: "Simultaneous triple expansion into professional bedside clinical healthcare, five-star hospitality operations, and pharmaceutical formulation chemistry.",
     category: "Clinical & Hospitality",
-    image: "/slides/IMG_7849.jpg",
-    imageAlt: "Multidisciplinary Campus Complex",
+    image: "/triple-options/triple-option-1.jpg",
+    imageAlt: "SNC, SHM & SPS Campus Buildings",
     badge: "Triple Sector Expansion",
     achievement: "Clinical & Hospitality Tri-Center",
     exitNumber: "EXIT 03 · MILE 8",
@@ -240,8 +240,8 @@ export const INSTITUTION_NODES: InstitutionNode[] = [
 ];
 
 export function TimelineShowcase() {
-  const [selectedIbcsPhoto, setSelectedIbcsPhoto] = useState(0);
-  const currentIbcsPhoto = IBCS_PHOTO_OPTIONS[selectedIbcsPhoto] ?? IBCS_PHOTO_OPTIONS[0];
+  const [selectedTriplePhoto, setSelectedTriplePhoto] = useState(0);
+  const currentTriplePhoto = TRIPLE_PHOTO_OPTIONS[selectedTriplePhoto] ?? TRIPLE_PHOTO_OPTIONS[0];
 
   return (
     <div id="timeline" className="space-y-12 scroll-mt-28">
@@ -307,7 +307,7 @@ export function TimelineShowcase() {
               {/* Photo Billboard */}
               <div className="lg:col-span-5 relative min-h-[240px] sm:min-h-[280px] bg-surface-3 overflow-hidden">
                 <Image
-                  src={node.id === "ibcs-1997" ? currentIbcsPhoto.src : node.image}
+                  src={node.id === "triple-2004" ? currentTriplePhoto.src : node.image}
                   alt={node.title}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -315,15 +315,15 @@ export function TimelineShowcase() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
 
-                {node.id === "ibcs-1997" && (
+                {node.id === "triple-2004" && (
                   <div className="absolute top-3 left-3 right-3 flex flex-wrap items-center gap-1.5 z-10">
-                    {IBCS_PHOTO_OPTIONS.map((opt, optIdx) => (
+                    {TRIPLE_PHOTO_OPTIONS.map((opt, optIdx) => (
                       <button
                         key={opt.id}
                         type="button"
-                        onClick={() => setSelectedIbcsPhoto(optIdx)}
+                        onClick={() => setSelectedTriplePhoto(optIdx)}
                         className={`px-2.5 py-1 rounded-full text-[10px] font-mono font-bold transition-all cursor-pointer ${
-                          selectedIbcsPhoto === optIdx
+                          selectedTriplePhoto === optIdx
                             ? "bg-accent text-on-accent shadow-md"
                             : "bg-black/65 backdrop-blur-md text-white/85 border border-white/20 hover:bg-black/85"
                         }`}
@@ -338,9 +338,9 @@ export function TimelineShowcase() {
                   <span className="text-sm font-mono text-[#F4E8C1] font-bold block">
                     {node.acronym}
                   </span>
-                  {node.id === "ibcs-1997" && (
+                  {node.id === "triple-2004" && (
                     <span className="text-[10px] font-sans text-white/80 truncate">
-                      {currentIbcsPhoto.caption}
+                      {currentTriplePhoto.caption}
                     </span>
                   )}
                 </div>
