@@ -70,36 +70,234 @@ const SHM_PHOTO_OPTIONS = [
   },
 ];
 
-const SPS_PHOTO_OPTIONS = [
+const IDS_PHOTO_OPTIONS = [
   {
     id: 1,
-    label: "Photo 1 (SPS Facade)",
-    caption: "Official School of Pharmaceutical Sciences (SPS) High-Rise (soa.ac.in/sps)",
-    src: "/sps-options/sps-option-1.jpg",
+    label: "Photo 1 (IDS High-Rise)",
+    caption: "Official Institute of Dental Sciences (IDS) High-Rise Hospital (soa.ac.in/ids)",
+    src: "/ids-options/ids-option-1.jpg",
   },
   {
     id: 2,
-    label: "Photo 2 (SPS Aerial)",
-    caption: "SPS Pharmaceutical Research Campus Aerial View (soa.ac.in/sps)",
-    src: "/sps-options/sps-option-2.jpg",
+    label: "Photo 2 (IDS Campus)",
+    caption: "IDS Dental Sciences Hospital Complex & Quadrangle (soa.ac.in)",
+    src: "/ids-options/ids-option-2.jpg",
   },
   {
     id: 3,
-    label: "Photo 3 (Pharma Wing)",
-    caption: "SPS Formulations & Pharmacology Research Wing (soa.ac.in/academics-at-soa)",
-    src: "/sps-options/sps-option-3.jpg",
+    label: "Photo 3 (Clinical Suite)",
+    caption: "IDS Advanced Digital Prosthodontics & Operatory Suite (soa.ac.in/ids-gallery)",
+    src: "/ids-options/ids-option-4.jpg",
   },
   {
     id: 4,
-    label: "Photo 4 (Research Lab)",
-    caption: "SPS Advanced Analytical Instrumentation Lab (soa.ac.in)",
-    src: "/sps-options/sps-option-4.jpg",
+    label: "Photo 4 (Surgical Ward)",
+    caption: "IDS Maxillofacial Surgical & Clinical Training Centre (soa.ac.in/ids-gallery)",
+    src: "/ids-options/ids-option-5.jpg",
   },
   {
     id: 5,
-    label: "Photo 5 (Pharmacist Day)",
-    caption: "World Pharmacist Day Celebration at SPS SOA (soa.ac.in)",
-    src: "/sps-options/sps-option-5.jpg",
+    label: "Photo 5 (IDS Facade)",
+    caption: "IDS Academic & Hospital Wing (soa.ac.in/academics-at-soa)",
+    src: "/ids-options/ids-option-3.jpg",
+  },
+];
+
+const IMS_PHOTO_OPTIONS = [
+  {
+    id: 1,
+    label: "Photo 1 (SUM High-Rise)",
+    caption: "IMS & SUM Hospital Super-Specialty Medical High-Rise (soa.ac.in/healthcare-at-soa)",
+    src: "/ims-options/ims-option-1.jpg",
+  },
+  {
+    id: 2,
+    label: "Photo 2 (Hospital Aerial)",
+    caption: "IMS & SUM Hospital Quaternary Care Medical Complex (soa.ac.in)",
+    src: "/ims-options/ims-option-2.jpg",
+  },
+  {
+    id: 3,
+    label: "Photo 3 (Medical Block)",
+    caption: "Institute of Medical Sciences Academic & Research Wing (soa.ac.in)",
+    src: "/ims-options/ims-option-3.jpg",
+  },
+  {
+    id: 4,
+    label: "Photo 4 (Clinical Center)",
+    caption: "IMS & SUM 2,000+ Bed Quaternary Hospital Center (soa.ac.in)",
+    src: "/ims-options/ims-option-4.jpg",
+  },
+  {
+    id: 5,
+    label: "Photo 5 (Medical Citadel)",
+    caption: "SUM Hospital Medical Campus & Emergency Wing (soa.ac.in)",
+    src: "/ims-options/ims-option-5.jpg",
+  },
+];
+
+const SNIL_PHOTO_OPTIONS = [
+  {
+    id: 1,
+    label: "Photo 1 (SNIL Court Hall)",
+    caption: "SNIL High Court Style Ceremonial Moot Court Hall (soa.ac.in/snil)",
+    src: "/snil-options/snil-option-1.jpg",
+  },
+  {
+    id: 2,
+    label: "Photo 2 (SNIL Building)",
+    caption: "SOA National Institute of Law (SNIL) Academic High-Rise (soa.ac.in/snil)",
+    src: "/snil-options/snil-option-2.jpg",
+  },
+  {
+    id: 3,
+    label: "Photo 3 (SNIL Facade)",
+    caption: "SNIL Law School Main Entrance & Faculty Wing (soa.ac.in)",
+    src: "/snil-options/snil-option-3.jpg",
+  },
+  {
+    id: 4,
+    label: "Photo 4 (Apex Lecture)",
+    caption: "Supreme Court & High Court Jurists Addressing SNIL Law Students (soa.ac.in)",
+    src: "/snil-options/snil-option-4.jpg",
+  },
+  {
+    id: 5,
+    label: "Photo 5 (Law Quadrangle)",
+    caption: "SNIL Law Campus Quadrangle & Research Library (soa.ac.in)",
+    src: "/snil-options/snil-option-5.jpg",
+  },
+];
+
+const IAS_PHOTO_OPTIONS = [
+  {
+    id: 1,
+    label: "Photo 1 (IAS Building)",
+    caption: "Institute of Agricultural Sciences (IAS) Main Academic Building (soa.ac.in/ias)",
+    src: "/ias-options/ias-option-1.jpg",
+  },
+  {
+    id: 2,
+    label: "Photo 2 (Agronomy Drone)",
+    caption: "IAS Agricultural Research Biome & Experimental Farms (soa.ac.in/ias)",
+    src: "/ias-options/ias-option-2.jpg",
+  },
+  {
+    id: 3,
+    label: "Photo 3 (IAS Block)",
+    caption: "IAS Crop Sciences & Agronomy Laboratory Complex (soa.ac.in)",
+    src: "/ias-options/ias-option-3.jpg",
+  },
+  {
+    id: 4,
+    label: "Photo 4 (IAS Convocation)",
+    caption: "IAS Agricultural Science Graduation Ceremony (soa.ac.in)",
+    src: "/ias-options/ias-option-4.jpg",
+  },
+  {
+    id: 5,
+    label: "Photo 5 (Agritech Outreach)",
+    caption: "IAS Farmers Scientific Agriculture & Outreach Program (soa.ac.in)",
+    src: "/ias-options/ias-option-5.jpg",
+  },
+];
+
+const IVS_PHOTO_OPTIONS = [
+  {
+    id: 1,
+    label: "Photo 1 (IVS Building)",
+    caption: "Institute of Veterinary Sciences & Animal Husbandry (IVS-AH) Building (soa.ac.in/ivsah)",
+    src: "/ivs-options/ivs-option-1.jpg",
+  },
+  {
+    id: 2,
+    label: "Photo 2 (IVS Drone View)",
+    caption: "IVS-AH Clinical Veterinary Complex & Campus Drone View (soa.ac.in/ivsah)",
+    src: "/ivs-options/ivs-option-2.jpg",
+  },
+  {
+    id: 3,
+    label: "Photo 3 (IVS Hospital)",
+    caption: "IVS Veterinary Surgery & Animal Healthcare Citadel (soa.ac.in)",
+    src: "/ivs-options/ivs-option-3.jpg",
+  },
+  {
+    id: 4,
+    label: "Photo 4 (Animal Biome)",
+    caption: "IVS Livestock Care & Clinical Diagnostic Labs (soa.ac.in)",
+    src: "/ivs-options/ivs-option-4.jpg",
+  },
+  {
+    id: 5,
+    label: "Photo 5 (Surgical Suites)",
+    caption: "IVS Clinical Veterinary Surgery & Pet Grooming Centre (soa.ac.in)",
+    src: "/ivs-options/ivs-option-5.jpg",
+  },
+];
+
+const CAMPUS2_PHOTO_OPTIONS = [
+  {
+    id: 1,
+    label: "Photo 1 (Phulnakhara)",
+    caption: "SUM Hospital Campus 2 Mega Quaternary Hospital High-Rise (Phulnakhara, Bhubaneswar)",
+    src: "/campus2-options/campus2-option-1.jpg",
+  },
+  {
+    id: 2,
+    label: "Photo 2 (Sitalapalli)",
+    caption: "SUM Hospital Multi-Tower Quaternary Expansion (Sitalapalli, Ganjam)",
+    src: "/campus2-options/campus2-option-2.jpg",
+  },
+  {
+    id: 3,
+    label: "Photo 3 (Kalinga Nagar)",
+    caption: "SUM Hospital & Oncology Citadel (Kalinga Nagar, Bhubaneswar)",
+    src: "/campus2-options/campus2-option-3.jpg",
+  },
+  {
+    id: 4,
+    label: "Photo 4 (Hospital Towers)",
+    caption: "SUM Hospital Quaternary Oncology & Critical Care Towers (soa.ac.in)",
+    src: "/campus2-options/campus2-option-4.jpg",
+  },
+  {
+    id: 5,
+    label: "Photo 5 (Medical Expansion)",
+    caption: "IMS & SUM Hospital Quaternary Infrastructure & Wings (soa.ac.in)",
+    src: "/campus2-options/campus2-option-5.jpg",
+  },
+];
+
+const PHARMA2_PHOTO_OPTIONS = [
+  {
+    id: 1,
+    label: "Photo 1 (Pharma Towers)",
+    caption: "SPS Phase-II Advanced High-Throughput Drug Discovery Complex (soa.ac.in/sps)",
+    src: "/pharma2-options/pharma2-option-1.jpg",
+  },
+  {
+    id: 2,
+    label: "Photo 2 (Drone Aerial)",
+    caption: "SPS Phase-II Pharmaceutical & Sovereign AI Research Campus (soa.ac.in/sps)",
+    src: "/pharma2-options/pharma2-option-2.jpg",
+  },
+  {
+    id: 3,
+    label: "Photo 3 (Molecular Labs)",
+    caption: "SPS Phase-II High-Throughput Screening & Bio-Pharma Labs (soa.ac.in)",
+    src: "/pharma2-options/pharma2-option-3.jpg",
+  },
+  {
+    id: 4,
+    label: "Photo 4 (Analytical Wing)",
+    caption: "SPS Advanced Pharmacology & Molecular Discovery Facility (soa.ac.in)",
+    src: "/pharma2-options/pharma2-option-4.jpg",
+  },
+  {
+    id: 5,
+    label: "Photo 5 (Pharma Conclave)",
+    caption: "SPS Biopharmaceutical & Computational Biology Research Apex (soa.ac.in)",
+    src: "/pharma2-options/pharma2-option-5.jpg",
   },
 ];
 
@@ -204,7 +402,7 @@ export const INSTITUTION_NODES: InstitutionNode[] = [
     acronym: "SPS",
     desc: "Consistently ranked among India's elite pharmacy faculties (NIRF #13 in Pharmacy); advances drug design, novel formulation technologies, and pharmacological synthesis.",
     category: "Pharmaceutical Sciences",
-    image: "/sps-options/sps-option-1.jpg",
+    image: "/sps-options/sps-option-2.jpg",
     imageAlt: "School of Pharmaceutical Sciences Building",
     badge: "NIRF #13 Pharmacy",
     achievement: "Drug Discovery & Novel Formulation Hub",
@@ -344,11 +542,23 @@ export const INSTITUTION_NODES: InstitutionNode[] = [
 export function TimelineShowcase() {
   const [selectedSncPhoto, setSelectedSncPhoto] = useState(0);
   const [selectedShmPhoto, setSelectedShmPhoto] = useState(0);
-  const [selectedSpsPhoto, setSelectedSpsPhoto] = useState(0);
+  const [selectedIdsPhoto, setSelectedIdsPhoto] = useState(0);
+  const [selectedImsPhoto, setSelectedImsPhoto] = useState(0);
+  const [selectedSnilPhoto, setSelectedSnilPhoto] = useState(0);
+  const [selectedIasPhoto, setSelectedIasPhoto] = useState(0);
+  const [selectedIvsPhoto, setSelectedIvsPhoto] = useState(0);
+  const [selectedCampus2Photo, setSelectedCampus2Photo] = useState(0);
+  const [selectedPharma2Photo, setSelectedPharma2Photo] = useState(0);
 
   const currentSncPhoto = SNC_PHOTO_OPTIONS[selectedSncPhoto] ?? SNC_PHOTO_OPTIONS[0];
   const currentShmPhoto = SHM_PHOTO_OPTIONS[selectedShmPhoto] ?? SHM_PHOTO_OPTIONS[0];
-  const currentSpsPhoto = SPS_PHOTO_OPTIONS[selectedSpsPhoto] ?? SPS_PHOTO_OPTIONS[0];
+  const currentIdsPhoto = IDS_PHOTO_OPTIONS[selectedIdsPhoto] ?? IDS_PHOTO_OPTIONS[0];
+  const currentImsPhoto = IMS_PHOTO_OPTIONS[selectedImsPhoto] ?? IMS_PHOTO_OPTIONS[0];
+  const currentSnilPhoto = SNIL_PHOTO_OPTIONS[selectedSnilPhoto] ?? SNIL_PHOTO_OPTIONS[0];
+  const currentIasPhoto = IAS_PHOTO_OPTIONS[selectedIasPhoto] ?? IAS_PHOTO_OPTIONS[0];
+  const currentIvsPhoto = IVS_PHOTO_OPTIONS[selectedIvsPhoto] ?? IVS_PHOTO_OPTIONS[0];
+  const currentCampus2Photo = CAMPUS2_PHOTO_OPTIONS[selectedCampus2Photo] ?? CAMPUS2_PHOTO_OPTIONS[0];
+  const currentPharma2Photo = PHARMA2_PHOTO_OPTIONS[selectedPharma2Photo] ?? PHARMA2_PHOTO_OPTIONS[0];
 
   const getNodePhotoData = (nodeId: string) => {
     if (nodeId === "snc-2004") {
@@ -369,13 +579,67 @@ export function TimelineShowcase() {
         onSelect: setSelectedShmPhoto,
       };
     }
-    if (nodeId === "sps-2004") {
+    if (nodeId === "ids-2006") {
       return {
-        src: currentSpsPhoto.src,
-        caption: currentSpsPhoto.caption,
-        options: SPS_PHOTO_OPTIONS,
-        selected: selectedSpsPhoto,
-        onSelect: setSelectedSpsPhoto,
+        src: currentIdsPhoto.src,
+        caption: currentIdsPhoto.caption,
+        options: IDS_PHOTO_OPTIONS,
+        selected: selectedIdsPhoto,
+        onSelect: setSelectedIdsPhoto,
+      };
+    }
+    if (nodeId === "ims-2007") {
+      return {
+        src: currentImsPhoto.src,
+        caption: currentImsPhoto.caption,
+        options: IMS_PHOTO_OPTIONS,
+        selected: selectedImsPhoto,
+        onSelect: setSelectedImsPhoto,
+      };
+    }
+    if (nodeId === "snil-2011") {
+      return {
+        src: currentSnilPhoto.src,
+        caption: currentSnilPhoto.caption,
+        options: SNIL_PHOTO_OPTIONS,
+        selected: selectedSnilPhoto,
+        onSelect: setSelectedSnilPhoto,
+      };
+    }
+    if (nodeId === "ias-2013") {
+      return {
+        src: currentIasPhoto.src,
+        caption: currentIasPhoto.caption,
+        options: IAS_PHOTO_OPTIONS,
+        selected: selectedIasPhoto,
+        onSelect: setSelectedIasPhoto,
+      };
+    }
+    if (nodeId === "ivs-2022") {
+      return {
+        src: currentIvsPhoto.src,
+        caption: currentIvsPhoto.caption,
+        options: IVS_PHOTO_OPTIONS,
+        selected: selectedIvsPhoto,
+        onSelect: setSelectedIvsPhoto,
+      };
+    }
+    if (nodeId === "campus2-2024") {
+      return {
+        src: currentCampus2Photo.src,
+        caption: currentCampus2Photo.caption,
+        options: CAMPUS2_PHOTO_OPTIONS,
+        selected: selectedCampus2Photo,
+        onSelect: setSelectedCampus2Photo,
+      };
+    }
+    if (nodeId === "pharma2-2025") {
+      return {
+        src: currentPharma2Photo.src,
+        caption: currentPharma2Photo.caption,
+        options: PHARMA2_PHOTO_OPTIONS,
+        selected: selectedPharma2Photo,
+        onSelect: setSelectedPharma2Photo,
       };
     }
     return null;
