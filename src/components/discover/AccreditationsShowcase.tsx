@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { CheckCircle2 } from "lucide-react";
+import { CheckCircle2, ChevronDown, ChevronUp } from "lucide-react";
 
 export interface RecognitionItem {
   id: string;
@@ -183,11 +183,15 @@ interface AccreditationsShowcaseProps {
 
 export function AccreditationsShowcase({ onOpenSlide }: AccreditationsShowcaseProps) {
   const [activeFilter, setActiveFilter] = useState<string>("all");
+  const [showAll, setShowAll] = useState<boolean>(false);
 
   const filteredItems =
     activeFilter === "all"
       ? ALL_RECOGNITIONS
       : ALL_RECOGNITIONS.filter((item) => item.category === activeFilter);
+
+  const displayedItems = showAll ? filteredItems : filteredItems.slice(0, 6);
+  const hasMore = filteredItems.length > 6;
 
   return (
     <div id="accreditations" className="space-y-8 scroll-mt-28">
@@ -268,7 +272,7 @@ export function AccreditationsShowcase({ onOpenSlide }: AccreditationsShowcasePr
       {/* Interactive Filter Pills */}
       <div className="flex flex-wrap items-center gap-2 pt-4 border-t border-line">
         {[
-          { key: "all", label: "All 12 Certifications" },
+          { key: "all", label: "All Certifications" },
           { key: "statutory", label: "Statutory & Autonomy" },
           { key: "academic", label: "Academic Accreditations" },
           { key: "healthcare", label: "Hospital & Clinical" },
@@ -276,7 +280,10 @@ export function AccreditationsShowcase({ onOpenSlide }: AccreditationsShowcasePr
         ].map((f) => (
           <button
             key={f.key}
-            onClick={() => setActiveFilter(f.key)}
+            onClick={() => {
+              setActiveFilter(f.key);
+              setShowAll(false);
+            }}
             className={`px-3.5 py-1.5 rounded-full text-xs font-mono transition-all ${
               activeFilter === f.key
                 ? "bg-accent text-on-accent font-bold shadow-sm"
@@ -288,9 +295,9 @@ export function AccreditationsShowcase({ onOpenSlide }: AccreditationsShowcasePr
         ))}
       </div>
 
-      {/* Remaining Certifications in Dynamic Responsive Mosaic */}
+      {/* Remaining Certifications in Dynamic Responsive Mosaic (Showing 6 by default) */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {filteredItems.map((item) => (
+        {displayedItems.map((item) => (
           <div
             key={item.id}
             className="rounded-2xl p-6 bg-surface-2 border border-line hover:border-accent hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between space-y-4 group"
@@ -336,6 +343,27 @@ export function AccreditationsShowcase({ onOpenSlide }: AccreditationsShowcasePr
           </div>
         ))}
       </div>
+
+      {/* View All / Show Less Toggle Button */}
+      {hasMore && (
+        <div className="flex justify-center pt-2">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-surface-2 hover:bg-surface-3 border border-line hover:border-accent text-xs font-mono uppercase tracking-wider font-bold text-accent hover:text-content transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+          >
+            <span>
+              {showAll
+                ? "Show Less"
+                : `View All ${filteredItems.length} Certifications`}
+            </span>
+            {showAll ? (
+              <ChevronUp className="w-4 h-4" />
+            ) : (
+              <ChevronDown className="w-4 h-4" />
+            )}
+          </button>
+        </div>
+      )}
     </div>
   );
 }
