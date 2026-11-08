@@ -236,7 +236,128 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
     subtitle:
       "Leadership and Collaboration Across Disciplines — Inaugural conclave dialogues with corporate and engineering leaders in Bengaluru.",
     videos: [],
-    photos: create24PhotoSlots("Bengaluru"),
+    photos: create24PhotoSlots("Bengaluru", [
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-01.jpg",
+        caption: "Executive Panel Discussion on Practicing Allyship & Talent Strategy",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-02.jpg",
+        caption: "Inaugural Dignitaries & Academic Leadership on the Dais",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-03.jpg",
+        caption: "Keynote Address by Dr. P.B. Kotur, Head, L&T Global Engineering Academy",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-04.jpg",
+        caption: "Executive Peer Dialogue & Industry-Academia Networking",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-05.jpg",
+        caption: "Commemorative Memento Presentation to Industry Dignitaries",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-06.jpg",
+        caption: "Boardroom CXOs & Capability Heads in Conclave Deliberations",
+        objectPosition: "50% 35%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-07.jpg",
+        caption: "Panel Discourse on Building Future-Ready Talent Ecosystems",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-08.jpg",
+        caption: "Welcome & Conclave Framing Address by Prof. (Dr.) Raj Kumar Hota",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-09.jpg",
+        caption: "Inaugural Address by Vice-Chancellor Prof. Pradipta Kumar Nanda",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-10.jpg",
+        caption: "Strategic Collaboration Dialogue Between Corporate Leaders & Faculty",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-11.jpg",
+        caption: "Distinguished Guest Felicitation on Stage by University Leadership",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-12.jpg",
+        caption: "Interactive Session Dialogue & Q&A with Industry Delegates",
+        objectPosition: "50% 35%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-13.jpg",
+        caption: "Workforce Readiness & Curriculum Agility Panel Session",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-14.jpg",
+        caption: "Industry Address by Dr. S.J. Naganagouda, Chief People Officer, Tally Solutions",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-15.jpg",
+        caption: "Leadership Alignment & Conclave Overview from the Dais",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-16.jpg",
+        caption: "Executive Camaraderie & Informal Exchanges at Bengaluru Conclave",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-17.jpg",
+        caption: "Conclave Stage Recognition & Institutional Partnership Honor",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-18.jpg",
+        caption: "Keynote Perspectives: Aligning Corporate Corridors with Campus Talent",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-19.jpg",
+        caption: "Cross-Industry Panel Deliberations on Engineering & Leadership",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-20.jpg",
+        caption: "Corporate Foresight Address on Evolving Tech Corridors",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-21.jpg",
+        caption: "Conclave Delegates & Engineering Leaders Engaged in Deliberation",
+        objectPosition: "50% 35%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-22.jpg",
+        caption: "Felicitation of Distinguished Guests with Traditional Uttariya & Memento",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-23.jpg",
+        caption: "Applied Innovation & Emerging Tech Skills Dialogue",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-24.jpg",
+        caption: "Academic & Industry Leadership Synthesis on the Dais",
+        objectPosition: "50% 30%",
+      },
+    ]),
   },
   "hyderabad-1": {
     id: "hyderabad-1",
