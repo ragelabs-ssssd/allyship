@@ -238,33 +238,33 @@ const IAS_PHOTO_OPTIONS = [
 const IVS_PHOTO_OPTIONS = [
   {
     id: 1,
-    label: "Photo 1 (IVS Building)",
-    caption: "Institute of Veterinary Sciences & Animal Husbandry (IVS-AH) Building (soa.ac.in/ivsah)",
+    label: "Photo 1 (IVS Campus Facade)",
+    caption: "Official Institute of Veterinary Sciences & Animal Husbandry (IVS-AH) Modern Facade",
     src: "/ivs-options/ivs-option-1.jpg",
   },
   {
     id: 2,
-    label: "Photo 2 (IVS Drone View)",
-    caption: "IVS-AH Clinical Veterinary Complex & Campus Drone View (soa.ac.in/ivsah)",
-    src: "/ivs-options/ivs-option-2.jpg",
+    label: "Photo 2 (Clinical Complex Portal)",
+    caption: "IVS-AH Veterinary Clinical Complex Entrance Portal (soa.ac.in/ivsah)",
+    src: "/ivs-options/ivs-option-clinical.png",
   },
   {
     id: 3,
-    label: "Photo 3 (IVS Hospital)",
-    caption: "IVS Veterinary Surgery & Animal Healthcare Citadel (soa.ac.in)",
-    src: "/ivs-options/ivs-option-3.jpg",
+    label: "Photo 3 (Drone Campus Aerial)",
+    caption: "IVS-AH Clinical Veterinary Complex & Campus Drone Aerial (soa.ac.in/ivsah)",
+    src: "/ivs-options/ivs-option-2.jpg",
   },
   {
     id: 4,
-    label: "Photo 4 (Animal Biome)",
-    caption: "IVS Livestock Care & Clinical Diagnostic Labs (soa.ac.in)",
-    src: "/ivs-options/ivs-option-4.jpg",
+    label: "Photo 4 (Pet Care & Surgery)",
+    caption: "IVS-AH Clinical Veterinary Surgery & Pet Grooming Services (soa.ac.in)",
+    src: "/ivs-options/ivs-option-petspa.jpg",
   },
   {
     id: 5,
-    label: "Photo 5 (Surgical Suites)",
-    caption: "IVS Clinical Veterinary Surgery & Pet Grooming Centre (soa.ac.in)",
-    src: "/ivs-options/ivs-option-5.jpg",
+    label: "Photo 5 (Veterinary Biome)",
+    caption: "IVS-AH Veterinary Hospital & Regional Animal Healthcare Wing (soa.ac.in)",
+    src: "/ivs-options/ivs-option-3.jpg",
   },
 ];
 
@@ -576,11 +576,13 @@ export function TimelineShowcase() {
   const [selectedShmPhoto, setSelectedShmPhoto] = useState(0);
   const [selectedIdsPhoto, setSelectedIdsPhoto] = useState(0);
   const [selectedImsPhoto, setSelectedImsPhoto] = useState(0);
+  const [selectedIvsPhoto, setSelectedIvsPhoto] = useState(0);
   const [selectedPharma2Photo, setSelectedPharma2Photo] = useState(0);
 
   const currentShmPhoto = SHM_PHOTO_OPTIONS[selectedShmPhoto] ?? SHM_PHOTO_OPTIONS[0];
   const currentIdsPhoto = IDS_PHOTO_OPTIONS[selectedIdsPhoto] ?? IDS_PHOTO_OPTIONS[0];
   const currentImsPhoto = IMS_PHOTO_OPTIONS[selectedImsPhoto] ?? IMS_PHOTO_OPTIONS[0];
+  const currentIvsPhoto = IVS_PHOTO_OPTIONS[selectedIvsPhoto] ?? IVS_PHOTO_OPTIONS[0];
   const currentPharma2Photo = PHARMA2_PHOTO_OPTIONS[selectedPharma2Photo] ?? PHARMA2_PHOTO_OPTIONS[0];
 
   const getNodePhotoData = (nodeId: string) => {
@@ -609,6 +611,15 @@ export function TimelineShowcase() {
         options: IMS_PHOTO_OPTIONS,
         selected: selectedImsPhoto,
         onSelect: setSelectedImsPhoto,
+      };
+    }
+    if (nodeId === "ivs-2022") {
+      return {
+        src: currentIvsPhoto.src,
+        caption: currentIvsPhoto.caption,
+        options: IVS_PHOTO_OPTIONS,
+        selected: selectedIvsPhoto,
+        onSelect: setSelectedIvsPhoto,
       };
     }
     if (nodeId === "pharma2-2025") {
