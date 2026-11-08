@@ -13,14 +13,14 @@ export function ManifestoShowcase() {
         {/* Background Image with Cinematic Grading */}
         <div className="absolute inset-0">
           <Image
-            src="/CON01670.JPG"
-            alt="Allyship++ National Conclave Dialogue"
+            src="/bengaluru-2.jpg"
+            alt="Allyship++ National Conclave Delegation"
             fill
-            className="object-cover object-center brightness-[0.3] group-hover:scale-105 transition-transform duration-1000 ease-out"
+            className="object-cover object-center brightness-[0.28] group-hover:scale-105 transition-transform duration-1000 ease-out"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-canvas via-transparent to-canvas" />
-          <div className="absolute inset-0 bg-gradient-to-t from-canvas via-transparent to-canvas" />
+          <div className="absolute inset-0 bg-gradient-to-r from-canvas/90 via-transparent to-canvas/90" />
+          <div className="absolute inset-0 bg-gradient-to-t from-canvas via-transparent to-canvas/80" />
         </div>
 
         {/* Letterbox Gold Accent Hairlines */}
