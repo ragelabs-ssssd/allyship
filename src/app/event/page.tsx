@@ -1459,32 +1459,14 @@ function EventContent() {
                           }`}
                         >
                           {photo.src ? (
-                            <>
-                              <Image
-                                src={photo.src}
-                                alt={`${currentMediaArchive.city} — ${photo.caption}`}
-                                fill
-                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                                style={{ objectPosition: photo.objectPosition || "50% 25%" }}
-                              />
-                              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent opacity-85 group-hover:opacity-95 transition-opacity duration-300" />
-
-                              {/* Top-right Frame Index Badge (01 to 24) */}
-                              <div className="absolute top-3 right-3 px-2 py-0.5 rounded-md bg-black/55 backdrop-blur-md border border-white/15 text-[10px] font-mono font-semibold text-white/85">
-                                {slotNumber} / 24
-                              </div>
-
-                              {/* Bottom Caption Overlay */}
-                              <div className="absolute inset-x-0 bottom-0 p-4 flex flex-col justify-end text-left">
-                                <span className="text-[10px] font-heading font-bold uppercase tracking-[0.16em] text-[#C5A880] mb-0.5">
-                                  {currentMediaArchive.city}
-                                </span>
-                                <p className="font-sans text-xs sm:text-sm font-medium text-white leading-snug line-clamp-2">
-                                  {photo.caption}
-                                </p>
-                              </div>
-                            </>
+                            <Image
+                              src={photo.src}
+                              alt={`${currentMediaArchive.city} — ${photo.caption}`}
+                              fill
+                              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                              style={{ objectPosition: photo.objectPosition || "50% 25%" }}
+                            />
                           ) : (
                             /* Clean Dedicated 4:3 Photo Frame Space */
                             <>
