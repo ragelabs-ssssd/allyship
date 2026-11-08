@@ -573,7 +573,6 @@ export const INSTITUTION_NODES: InstitutionNode[] = [
 ];
 
 export function TimelineShowcase() {
-  const [selectedSncPhoto, setSelectedSncPhoto] = useState(0);
   const [selectedShmPhoto, setSelectedShmPhoto] = useState(0);
   const [selectedSpsPhoto, setSelectedSpsPhoto] = useState(0);
   const [selectedIdsPhoto, setSelectedIdsPhoto] = useState(0);
@@ -581,7 +580,6 @@ export function TimelineShowcase() {
   const [selectedCampus2Photo, setSelectedCampus2Photo] = useState(0);
   const [selectedPharma2Photo, setSelectedPharma2Photo] = useState(0);
 
-  const currentSncPhoto = SNC_PHOTO_OPTIONS[selectedSncPhoto] ?? SNC_PHOTO_OPTIONS[0];
   const currentShmPhoto = SHM_PHOTO_OPTIONS[selectedShmPhoto] ?? SHM_PHOTO_OPTIONS[0];
   const currentSpsPhoto = SPS_PHOTO_OPTIONS[selectedSpsPhoto] ?? SPS_PHOTO_OPTIONS[0];
   const currentIdsPhoto = IDS_PHOTO_OPTIONS[selectedIdsPhoto] ?? IDS_PHOTO_OPTIONS[0];
@@ -590,15 +588,6 @@ export function TimelineShowcase() {
   const currentPharma2Photo = PHARMA2_PHOTO_OPTIONS[selectedPharma2Photo] ?? PHARMA2_PHOTO_OPTIONS[0];
 
   const getNodePhotoData = (nodeId: string) => {
-    if (nodeId === "snc-2004") {
-      return {
-        src: currentSncPhoto.src,
-        caption: currentSncPhoto.caption,
-        options: SNC_PHOTO_OPTIONS,
-        selected: selectedSncPhoto,
-        onSelect: setSelectedSncPhoto,
-      };
-    }
     if (nodeId === "shm-2004") {
       return {
         src: currentShmPhoto.src,
