@@ -266,32 +266,26 @@ export function AccreditationsShowcase({ onOpenSlide }: AccreditationsShowcasePr
       </div>
 
       {/* Interactive Filter Pills */}
-      <div className="flex flex-wrap items-center justify-between gap-4 pt-4 border-t border-line">
-        <div className="flex flex-wrap items-center gap-2">
-          {[
-            { key: "all", label: "All 12 Certifications" },
-            { key: "statutory", label: "Statutory & Autonomy" },
-            { key: "academic", label: "Academic Accreditations" },
-            { key: "healthcare", label: "Hospital & Clinical" },
-            { key: "global", label: "Global Standards" },
-          ].map((f) => (
-            <button
-              key={f.key}
-              onClick={() => setActiveFilter(f.key)}
-              className={`px-3.5 py-1.5 rounded-full text-xs font-mono transition-all ${
-                activeFilter === f.key
-                  ? "bg-accent text-on-accent font-bold shadow-sm"
-                  : "bg-surface-2 hover:bg-surface-3 text-content-secondary border border-line"
-              }`}
-            >
-              {f.label}
-            </button>
-          ))}
-        </div>
-
-        <div className="text-xs font-mono text-content-muted">
-          SHOWING {filteredItems.length} OF 12 RECOGNITIONS
-        </div>
+      <div className="flex flex-wrap items-center gap-2 pt-4 border-t border-line">
+        {[
+          { key: "all", label: "All 12 Certifications" },
+          { key: "statutory", label: "Statutory & Autonomy" },
+          { key: "academic", label: "Academic Accreditations" },
+          { key: "healthcare", label: "Hospital & Clinical" },
+          { key: "global", label: "Global Standards" },
+        ].map((f) => (
+          <button
+            key={f.key}
+            onClick={() => setActiveFilter(f.key)}
+            className={`px-3.5 py-1.5 rounded-full text-xs font-mono transition-all ${
+              activeFilter === f.key
+                ? "bg-accent text-on-accent font-bold shadow-sm"
+                : "bg-surface-2 hover:bg-surface-3 text-content-secondary border border-line"
+            }`}
+          >
+            {f.label}
+          </button>
+        ))}
       </div>
 
       {/* Remaining Certifications in Dynamic Responsive Mosaic */}
