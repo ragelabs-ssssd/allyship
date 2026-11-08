@@ -235,15 +235,7 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
     coverPosition: "50% 25%",
     subtitle:
       "Leadership and Collaboration Across Disciplines — Inaugural conclave dialogues with corporate and engineering leaders in Bengaluru.",
-    videos: [
-      {
-        title: "Allyship++ Conclave Film",
-        desc: "Keynote deliberations, corporate roundtable conversations, and inaugural chapter moments from the conclave floor.",
-        videoSrc: "/discover/soa-allyship-hyd-compressed.mp4",
-        youtubeId: "8wSGKsWyQwk",
-        tag: "Conclave Film",
-      },
-    ],
+    videos: [],
     photos: create24PhotoSlots("Bengaluru", [
       {
         src: "/conclave-moments/bengaluru-1/bengaluru-1-01.jpg",
