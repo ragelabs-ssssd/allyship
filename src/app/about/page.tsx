@@ -149,7 +149,7 @@ export default function AboutPage() {
                   </h3>
 
                   <p className="text-[10px] sm:text-[11px] md:text-xs font-mono text-content-secondary uppercase tracking-[0.18em] pt-1 sm:pt-2 text-white/80 max-w-md leading-relaxed">
-                    7 National Conclaves &middot; 500+ Boardroom CXOs &middot; Zero Commercial Sponsorship
+                    7 National Conclaves &middot; 500+ Boardroom CXOs
                   </p>
                 </div>
               </div>

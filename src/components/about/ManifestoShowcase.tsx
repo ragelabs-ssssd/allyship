@@ -37,7 +37,7 @@ export function ManifestoShowcase() {
           </h2>
 
           <p className="text-xs sm:text-sm font-mono text-content-secondary uppercase tracking-widest pt-2">
-            7 National Conclaves · 500+ Boardroom CXOs · Zero Commercial Sponsorship
+            7 National Conclaves · 500+ Boardroom CXOs
           </p>
         </div>
       </div>
