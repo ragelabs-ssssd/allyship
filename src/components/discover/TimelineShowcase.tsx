@@ -70,6 +70,39 @@ const SHM_PHOTO_OPTIONS = [
   },
 ];
 
+const SPS_PHOTO_OPTIONS = [
+  {
+    id: 1,
+    label: "Photo 1 (Pharma Research Biome)",
+    caption: "Official SOA Advanced Pharmaceutical Research & Academic Biome (DJI Drone Aerial)",
+    src: "/sps-options/sps-new-drone.jpg",
+  },
+  {
+    id: 2,
+    label: "Photo 2 (Campus Architecture)",
+    caption: "SPS Pharmaceutical Sciences Campus Complex & Quadrangle Lawn",
+    src: "/sps-options/sps-new-campus2.jpg",
+  },
+  {
+    id: 3,
+    label: "Photo 3 (Faculty Complex)",
+    caption: "Modern SOA Academic & Research Faculty High-Rise",
+    src: "/sps-options/sps-candidate-univ.jpg",
+  },
+  {
+    id: 4,
+    label: "Photo 4 (Colonnade Quad)",
+    caption: "SPS Modern Academic Wing & Courtyard Architecture",
+    src: "/sps-options/sps-new-entrance.jpg",
+  },
+  {
+    id: 5,
+    label: "Photo 5 (Original SPS High-Rise)",
+    caption: "School of Pharmaceutical Sciences (SPS) Multi-Story Building with Red Rooftop Crest",
+    src: "/sps-options/sps-option-1.jpg",
+  },
+];
+
 const IDS_PHOTO_OPTIONS = [
   {
     id: 1,
@@ -456,8 +489,8 @@ export const INSTITUTION_NODES: InstitutionNode[] = [
     acronym: "SNIL",
     desc: "Consistently ranked among India's Top 10 Law Schools (#10 in NIRF 2025) featuring ceremonial moot court halls and high court judicial clerkships.",
     category: "Jurisprudence",
-    image: "/slides/CON01670.jpg",
-    imageAlt: "SNIL Law School Courtrooms",
+    image: "/snil-options/snil-option-2.jpg",
+    imageAlt: "SNIL Law School High-Rise",
     badge: "NIRF #10 Law School",
     achievement: "Apex Court & Constitutional Law Moot",
     exitNumber: "EXIT 06 · MILE 16",
@@ -474,8 +507,8 @@ export const INSTITUTION_NODES: InstitutionNode[] = [
     acronym: "IAS",
     desc: "ICAR-accredited agricultural research faculty with agronomy farms, precision soil testing labs, and climate-resilient crop breeding facilities.",
     category: "Agronomy",
-    image: "/soa-campus-aerial.jpg",
-    imageAlt: "IAS Agricultural Research Biome",
+    image: "/ias-options/ias-option-1.jpg",
+    imageAlt: "IAS Agricultural Sciences Main Building",
     badge: "ICAR Accredited",
     achievement: "Agronomy & Climate Resilience Hub",
     exitNumber: "EXIT 07 · MILE 18",
@@ -492,8 +525,8 @@ export const INSTITUTION_NODES: InstitutionNode[] = [
     acronym: "IVS-AH",
     desc: "State-of-the-art clinical veterinary hospital, surgical suites, and animal research biome serving eastern regional livestock genomics.",
     category: "Veterinary Care",
-    image: "/slides/IMG_7577.jpg",
-    imageAlt: "IVS-AH Veterinary Surgery Hospital",
+    image: "/ivs-options/ivs-option-2.jpg",
+    imageAlt: "IVS-AH Clinical Veterinary Complex Drone View",
     badge: "Clinical Animal Hospital",
     achievement: "Livestock Genomics & Regional Surgery",
     exitNumber: "EXIT 08 · MILE 26",
@@ -542,21 +575,17 @@ export const INSTITUTION_NODES: InstitutionNode[] = [
 export function TimelineShowcase() {
   const [selectedSncPhoto, setSelectedSncPhoto] = useState(0);
   const [selectedShmPhoto, setSelectedShmPhoto] = useState(0);
+  const [selectedSpsPhoto, setSelectedSpsPhoto] = useState(0);
   const [selectedIdsPhoto, setSelectedIdsPhoto] = useState(0);
   const [selectedImsPhoto, setSelectedImsPhoto] = useState(0);
-  const [selectedSnilPhoto, setSelectedSnilPhoto] = useState(0);
-  const [selectedIasPhoto, setSelectedIasPhoto] = useState(0);
-  const [selectedIvsPhoto, setSelectedIvsPhoto] = useState(0);
   const [selectedCampus2Photo, setSelectedCampus2Photo] = useState(0);
   const [selectedPharma2Photo, setSelectedPharma2Photo] = useState(0);
 
   const currentSncPhoto = SNC_PHOTO_OPTIONS[selectedSncPhoto] ?? SNC_PHOTO_OPTIONS[0];
   const currentShmPhoto = SHM_PHOTO_OPTIONS[selectedShmPhoto] ?? SHM_PHOTO_OPTIONS[0];
+  const currentSpsPhoto = SPS_PHOTO_OPTIONS[selectedSpsPhoto] ?? SPS_PHOTO_OPTIONS[0];
   const currentIdsPhoto = IDS_PHOTO_OPTIONS[selectedIdsPhoto] ?? IDS_PHOTO_OPTIONS[0];
   const currentImsPhoto = IMS_PHOTO_OPTIONS[selectedImsPhoto] ?? IMS_PHOTO_OPTIONS[0];
-  const currentSnilPhoto = SNIL_PHOTO_OPTIONS[selectedSnilPhoto] ?? SNIL_PHOTO_OPTIONS[0];
-  const currentIasPhoto = IAS_PHOTO_OPTIONS[selectedIasPhoto] ?? IAS_PHOTO_OPTIONS[0];
-  const currentIvsPhoto = IVS_PHOTO_OPTIONS[selectedIvsPhoto] ?? IVS_PHOTO_OPTIONS[0];
   const currentCampus2Photo = CAMPUS2_PHOTO_OPTIONS[selectedCampus2Photo] ?? CAMPUS2_PHOTO_OPTIONS[0];
   const currentPharma2Photo = PHARMA2_PHOTO_OPTIONS[selectedPharma2Photo] ?? PHARMA2_PHOTO_OPTIONS[0];
 
@@ -579,6 +608,15 @@ export function TimelineShowcase() {
         onSelect: setSelectedShmPhoto,
       };
     }
+    if (nodeId === "sps-2004") {
+      return {
+        src: currentSpsPhoto.src,
+        caption: currentSpsPhoto.caption,
+        options: SPS_PHOTO_OPTIONS,
+        selected: selectedSpsPhoto,
+        onSelect: setSelectedSpsPhoto,
+      };
+    }
     if (nodeId === "ids-2006") {
       return {
         src: currentIdsPhoto.src,
@@ -595,33 +633,6 @@ export function TimelineShowcase() {
         options: IMS_PHOTO_OPTIONS,
         selected: selectedImsPhoto,
         onSelect: setSelectedImsPhoto,
-      };
-    }
-    if (nodeId === "snil-2011") {
-      return {
-        src: currentSnilPhoto.src,
-        caption: currentSnilPhoto.caption,
-        options: SNIL_PHOTO_OPTIONS,
-        selected: selectedSnilPhoto,
-        onSelect: setSelectedSnilPhoto,
-      };
-    }
-    if (nodeId === "ias-2013") {
-      return {
-        src: currentIasPhoto.src,
-        caption: currentIasPhoto.caption,
-        options: IAS_PHOTO_OPTIONS,
-        selected: selectedIasPhoto,
-        onSelect: setSelectedIasPhoto,
-      };
-    }
-    if (nodeId === "ivs-2022") {
-      return {
-        src: currentIvsPhoto.src,
-        caption: currentIvsPhoto.caption,
-        options: IVS_PHOTO_OPTIONS,
-        selected: selectedIvsPhoto,
-        onSelect: setSelectedIvsPhoto,
       };
     }
     if (nodeId === "campus2-2024") {
