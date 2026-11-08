@@ -7,8 +7,16 @@ import {
   MapPin,
   ShieldCheck,
   ArrowRight,
+  ExternalLink,
 } from "lucide-react";
 import Link from "next/link";
+import {
+  Option1CommandMatrix,
+  Option2DiplomaticCorridor,
+  Option3CinematicDeck,
+  Option4AccordionStack,
+  Option5SplitDashboard,
+} from "@/components/about/BentoCityOptions";
 
 const METRO_CITIES = [
   { name: "Bengaluru", edition: "1.0 & 2.0", focus: "Cloud & Sovereign AI Innovation" },
@@ -20,6 +28,7 @@ const METRO_CITIES = [
 
 export function BentoGridConcept() {
   const [selectedCity, setSelectedCity] = useState(0);
+  const [conceptOption, setConceptOption] = useState<number>(1);
 
   return (
     <div className="space-y-12">
@@ -127,28 +136,70 @@ export function BentoGridConcept() {
             </p>
           </div>
 
-          {/* Interactive City Selector */}
-          <div className="space-y-2 pt-2">
-            <div className="flex flex-wrap gap-1.5">
-              {METRO_CITIES.map((city, idx) => (
+          {/* Interactive Concept Switcher for Review */}
+          <div className="space-y-3 pt-3 border-t border-line/60">
+            <div className="flex items-center justify-between">
+              <span className="text-[10px] font-mono uppercase tracking-wider text-accent font-bold">
+                Design Option {conceptOption} of 5
+              </span>
+              <Link
+                href="/review/bento-cities"
+                className="text-[10px] font-mono text-content-muted hover:text-accent flex items-center gap-1 transition-colors underline"
+              >
+                <span>Compare All 5</span>
+                <ExternalLink className="w-2.5 h-2.5" />
+              </Link>
+            </div>
+
+            {/* Quick 5-Option Pill Selector */}
+            <div className="grid grid-cols-5 gap-1 p-1 rounded-xl bg-surface-2/70 border border-line text-[10px] font-mono">
+              {[1, 2, 3, 4, 5].map((optNum) => (
                 <button
-                  key={city.name}
+                  key={optNum}
                   type="button"
-                  onClick={() => setSelectedCity(idx)}
-                  className={`px-2.5 py-1 rounded-lg text-xs font-medium transition-colors ${
-                    selectedCity === idx
-                      ? "bg-accent text-on-accent font-bold"
-                      : "bg-surface-2 text-content-secondary hover:text-content"
+                  onClick={() => setConceptOption(optNum)}
+                  className={`py-1 rounded-lg transition-all font-bold text-center ${
+                    conceptOption === optNum
+                      ? "bg-accent text-on-accent shadow-sm"
+                      : "text-content-secondary hover:text-content hover:bg-surface-3"
                   }`}
                 >
-                  {city.name}
+                  Opt {optNum}
                 </button>
               ))}
             </div>
-            <div className="p-3 rounded-xl bg-surface-2 border border-line text-xs">
-              <span className="font-bold text-content block">{METRO_CITIES[selectedCity].name} {METRO_CITIES[selectedCity].edition}</span>
-              <span className="text-content-secondary">{METRO_CITIES[selectedCity].focus}</span>
-            </div>
+
+            {/* Rendered Active Option */}
+            {conceptOption === 1 && (
+              <Option1CommandMatrix
+                selectedCity={selectedCity}
+                setSelectedCity={setSelectedCity}
+              />
+            )}
+            {conceptOption === 2 && (
+              <Option2DiplomaticCorridor
+                selectedCity={selectedCity}
+                setSelectedCity={setSelectedCity}
+              />
+            )}
+            {conceptOption === 3 && (
+              <Option3CinematicDeck
+                selectedCity={selectedCity}
+                setSelectedCity={setSelectedCity}
+              />
+            )}
+            {conceptOption === 4 && (
+              <Option4AccordionStack
+                selectedCity={selectedCity}
+                setSelectedCity={setSelectedCity}
+              />
+            )}
+            {conceptOption === 5 && (
+              <Option5SplitDashboard
+                selectedCity={selectedCity}
+                setSelectedCity={setSelectedCity}
+              />
+            )}
           </div>
         </div>
 
