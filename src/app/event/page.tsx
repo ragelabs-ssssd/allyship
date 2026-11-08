@@ -386,117 +386,117 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/hyderabad-1/hyderabad-1-02.jpg",
-        caption: "Inaugural Lamp Lighting & Conclave Invocation on the Main Stage",
+        caption: "Corporate CXOs & Talent Leaders in Roundtable Deliberations",
         objectPosition: "50% 30%",
       },
       {
         src: "/conclave-moments/hyderabad-1/hyderabad-1-03.jpg",
-        caption: "Boardroom CXOs & Talent Leaders in Roundtable Deliberations",
-        objectPosition: "50% 35%",
-      },
-      {
-        src: "/conclave-moments/hyderabad-1/hyderabad-1-04.jpg",
-        caption: "Academic Leadership & Corporate Dignitaries on the Dais",
+        caption: "Dignitaries and Dais Leadership in Strategic Alignment",
         objectPosition: "50% 30%",
       },
       {
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-04.jpg",
+        caption: "Inaugural Keynote Address: Framing the Hyderabad Tech Corridor",
+        objectPosition: "50% 25%",
+      },
+      {
         src: "/conclave-moments/hyderabad-1/hyderabad-1-05.jpg",
-        caption: "Corporate Leaders & Capability Heads in Deliberation",
+        caption: "Executive Roundtable: Campus-to-Corporate Transition Strategies",
         objectPosition: "50% 35%",
       },
       {
         src: "/conclave-moments/hyderabad-1/hyderabad-1-06.jpg",
-        caption: "Ceremonial Conclave Lamp Lighting by University Leadership",
+        caption: "Conclave Floor Acclaim & Delegate Engagement",
         objectPosition: "50% 30%",
       },
       {
         src: "/conclave-moments/hyderabad-1/hyderabad-1-07.jpg",
-        caption: "Interactive Conclave Session & Delegate Roundtable Dialogue",
+        caption: "Senior Academic Leadership & Industry Leaders in Dialogue",
         objectPosition: "50% 30%",
       },
       {
         src: "/conclave-moments/hyderabad-1/hyderabad-1-08.jpg",
-        caption: "Senior Executive Peer Networking & Warm Camaraderie",
-        objectPosition: "50% 30%",
+        caption: "Industry Keynote: Next-Gen Capabilities and Tech Horizons",
+        objectPosition: "50% 25%",
       },
       {
         src: "/conclave-moments/hyderabad-1/hyderabad-1-09.jpg",
-        caption: "University Leadership in Strategic Dialogue with Corporate Heads",
-        objectPosition: "50% 30%",
-      },
-      {
-        src: "/conclave-moments/hyderabad-1/hyderabad-1-10.jpg",
-        caption: "Tech Corridor CXOs & Engineering Leaders in Deep Deliberation",
+        caption: "Roundtable Deliberations on Curriculum Agility & Industry Co-Design",
         objectPosition: "50% 35%",
       },
       {
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-10.jpg",
+        caption: "Panel Leadership Synthesis on the Conclave Dais",
+        objectPosition: "50% 30%",
+      },
+      {
         src: "/conclave-moments/hyderabad-1/hyderabad-1-11.jpg",
-        caption: "Conclave Leadership Alignment from the Dais",
+        caption: "CXOs and Technology Leaders Exchanging Strategic Perspectives",
         objectPosition: "50% 30%",
       },
       {
         src: "/conclave-moments/hyderabad-1/hyderabad-1-12.jpg",
-        caption: "Executive Camaraderie & Post-Session Exchange",
-        objectPosition: "50% 30%",
+        caption: "Enterprise Talent Transformation Address on Stage",
+        objectPosition: "50% 25%",
       },
       {
         src: "/conclave-moments/hyderabad-1/hyderabad-1-13.jpg",
-        caption: "Interactive Audience Q&A & Leadership Deliberations",
-        objectPosition: "50% 35%",
+        caption: "Commemorative Felicitation & University Honor Ceremony",
+        objectPosition: "50% 30%",
       },
       {
         src: "/conclave-moments/hyderabad-1/hyderabad-1-14.jpg",
-        caption: "Warm Executive Welcome & Conclave Camaraderie",
+        caption: "Institutional Partnerships & Engineering Pipeline Dialogue",
         objectPosition: "50% 30%",
       },
       {
         src: "/conclave-moments/hyderabad-1/hyderabad-1-15.jpg",
-        caption: "Engaged Delegates in Deliberation at Hyderabad Conclave",
-        objectPosition: "50% 35%",
-      },
-      {
-        src: "/conclave-moments/hyderabad-1/hyderabad-1-16.jpg",
-        caption: "Strategic Corporate-Campus Pipeline Discussion",
+        caption: "Executive Dais Deliberations on Future-Ready Engineering",
         objectPosition: "50% 30%",
       },
       {
-        src: "/conclave-moments/hyderabad-1/hyderabad-1-17.jpg",
-        caption: "Inaugural Keynote Address on Institutional Vision & Allyship",
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-16.jpg",
+        caption: "Keynote Address on Innovation Horizons in Hyderabad",
         objectPosition: "50% 25%",
       },
       {
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-17.jpg",
+        caption: "Executive Greetings & Peer Networking in the Corridor",
+        objectPosition: "50% 30%",
+      },
+      {
         src: "/conclave-moments/hyderabad-1/hyderabad-1-18.jpg",
-        caption: "Informal Networking & Executive Camaraderie",
+        caption: "Distinguished Guest Felicitation with Traditional Memento",
         objectPosition: "50% 30%",
       },
       {
         src: "/conclave-moments/hyderabad-1/hyderabad-1-19.jpg",
-        caption: "Convener Framing Address on Bridging Campus & Industry",
-        objectPosition: "50% 25%",
-      },
-      {
-        src: "/conclave-moments/hyderabad-1/hyderabad-1-20.jpg",
-        caption: "Executive Leadership Exchange in the Conclave Foyer",
+        caption: "Corporate Leadership Exchange During Executive High Tea",
         objectPosition: "50% 30%",
       },
       {
-        src: "/conclave-moments/hyderabad-1/hyderabad-1-21.jpg",
-        caption: "Industry Address on Building Future-Ready Talent Ecosystems",
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-20.jpg",
+        caption: "Convener Opening Remarks: Collaborative Industry Ecosystems",
         objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-21.jpg",
+        caption: "Enterprise Leaders in Bilateral Academic Collaboration Dialogue",
+        objectPosition: "50% 30%",
       },
       {
         src: "/conclave-moments/hyderabad-1/hyderabad-1-22.jpg",
-        caption: "Conclave Floor Applause & Audience Appreciation",
-        objectPosition: "50% 35%",
+        caption: "Stage Recognition of Industry Partners by University Dignitaries",
+        objectPosition: "50% 30%",
       },
       {
         src: "/conclave-moments/hyderabad-1/hyderabad-1-23.jpg",
-        caption: "Leadership Address on Scaling Regional Talent into National Corridors",
-        objectPosition: "50% 25%",
+        caption: "Roundtable Engagement on Talent Retention & Mentorship",
+        objectPosition: "50% 30%",
       },
       {
         src: "/conclave-moments/hyderabad-1/hyderabad-1-24.jpg",
-        caption: "Academic Dignitaries & Conveners in Concluding Reflections",
+        caption: "Concluding Stage Alignment & Multi-Sector Leadership Ensemble",
         objectPosition: "50% 30%",
       },
     ]),
@@ -1442,128 +1442,99 @@ function EventContent() {
                 </div>
 
                 {/* INSIDE CARD PART 1: OFFICIAL CHAPTER VIDEO SPACE FIRST */}
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2.5">
-                      <Video className="w-4 h-4 text-accent" />
-                      <h4 className="font-heading text-xs sm:text-sm font-bold uppercase tracking-[0.16em] text-content">
-                        {currentMediaArchive.city} Conclave Film
-                      </h4>
+                {currentMediaArchive.videos.length > 0 && (
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2.5">
+                        <Video className="w-4 h-4 text-accent" />
+                        <h4 className="font-heading text-xs sm:text-sm font-bold uppercase tracking-[0.16em] text-content">
+                          {currentMediaArchive.city} Conclave Film
+                        </h4>
+                      </div>
+                      <span className="text-xs font-sans text-content-muted">
+                        Official Video Archive
+                      </span>
                     </div>
-                    <span className="text-xs font-sans text-content-muted">
-                      Official Video Archive
-                    </span>
-                  </div>
 
-                  {currentMediaArchive.videos.length === 0 ? (
-                    /* Dedicated 16:9 Video Showcase Frame */
-                    <div className="bg-surface-2/70 rounded-2xl overflow-hidden border border-line grid grid-cols-1 lg:grid-cols-12">
-                      <div className="lg:col-span-8 relative aspect-video w-full bg-canvas/60 flex flex-col items-center justify-center p-8 text-center space-y-4">
-                        <div className="w-16 h-16 rounded-full bg-accent/15 border border-accent/40 text-accent flex items-center justify-center shadow-inner">
-                          <Video className="w-7 h-7" />
+                    {currentMediaArchive.videos.length === 1 ? (
+                      <div className="bg-surface-2 rounded-2xl overflow-hidden border border-line grid grid-cols-1 lg:grid-cols-12">
+                        <div className="lg:col-span-8 relative aspect-video w-full bg-canvas overflow-hidden">
+                          {currentMediaArchive.videos[0].videoSrc ? (
+                            <video
+                              src={currentMediaArchive.videos[0].videoSrc}
+                              controls
+                              playsInline
+                              preload="metadata"
+                              className="w-full h-full object-cover"
+                            />
+                          ) : (
+                            <iframe
+                              className="w-full h-full"
+                              src={`https://www.youtube-nocookie.com/embed/${currentMediaArchive.videos[0].youtubeId}`}
+                              title={currentMediaArchive.videos[0].title}
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowFullScreen
+                            />
+                          )}
                         </div>
-                        <div className="space-y-1.5 max-w-md">
-                          <span className="text-[11px] font-heading font-bold uppercase tracking-[0.18em] text-accent block">
-                            Official Conclave Film
+                        <div className="lg:col-span-4 p-6 sm:p-8 flex flex-col justify-center space-y-3 border-t lg:border-t-0 lg:border-l border-line">
+                          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/15 border border-accent/30 text-accent text-[10px] font-semibold uppercase tracking-[0.14em] w-fit">
+                            {currentMediaArchive.videos[0].tag}
                           </span>
-                          <h5 className="font-display text-lg sm:text-xl font-bold text-content">
-                            {currentMediaArchive.city} Chapter Film
+                          <h5 className="font-display text-lg sm:text-xl font-bold text-content leading-snug">
+                            {currentMediaArchive.videos[0].title}
                           </h5>
-                          <p className="font-sans text-xs text-content-muted leading-relaxed">
-                            Official chapter highlight film and keynote deliberations for {currentMediaArchive.city}.
+                          <p className="font-sans text-xs sm:text-sm text-content-secondary leading-relaxed">
+                            {currentMediaArchive.videos[0].desc}
                           </p>
                         </div>
                       </div>
-                      <div className="lg:col-span-4 p-6 sm:p-8 flex flex-col justify-center space-y-3 border-t lg:border-t-0 lg:border-l border-line">
-                        <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/15 border border-accent/30 text-accent text-[10px] font-semibold uppercase tracking-[0.14em] w-fit">
-                          {currentMediaArchive.city}
-                        </span>
-                        <h5 className="font-display text-lg sm:text-xl font-bold text-content leading-snug">
-                          {currentMediaArchive.city} | Official Conclave Film
-                        </h5>
-                        <p className="font-sans text-xs sm:text-sm text-content-secondary leading-relaxed">
-                          Highlights from the {currentMediaArchive.city} chapter featuring corporate leaders, HR executives, and academic dignitaries.
-                        </p>
-                      </div>
-                    </div>
-                  ) : currentMediaArchive.videos.length === 1 ? (
-                    <div className="bg-surface-2 rounded-2xl overflow-hidden border border-line grid grid-cols-1 lg:grid-cols-12">
-                      <div className="lg:col-span-8 relative aspect-video w-full bg-canvas overflow-hidden">
-                        {currentMediaArchive.videos[0].videoSrc ? (
-                          <video
-                            src={currentMediaArchive.videos[0].videoSrc}
-                            controls
-                            playsInline
-                            preload="metadata"
-                            className="w-full h-full object-cover"
-                          />
-                        ) : (
-                          <iframe
-                            className="w-full h-full"
-                            src={`https://www.youtube-nocookie.com/embed/${currentMediaArchive.videos[0].youtubeId}`}
-                            title={currentMediaArchive.videos[0].title}
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                          />
-                        )}
-                      </div>
-                      <div className="lg:col-span-4 p-6 sm:p-8 flex flex-col justify-center space-y-3 border-t lg:border-t-0 lg:border-l border-line">
-                        <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/15 border border-accent/30 text-accent text-[10px] font-semibold uppercase tracking-[0.14em] w-fit">
-                          {currentMediaArchive.videos[0].tag}
-                        </span>
-                        <h5 className="font-display text-lg sm:text-xl font-bold text-content leading-snug">
-                          {currentMediaArchive.videos[0].title}
-                        </h5>
-                        <p className="font-sans text-xs sm:text-sm text-content-secondary leading-relaxed">
-                          {currentMediaArchive.videos[0].desc}
-                        </p>
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                      {currentMediaArchive.videos.map((v, vIdx) => (
-                        <div
-                          key={v.youtubeId || v.videoSrc || vIdx}
-                          className="bg-surface-2 rounded-2xl overflow-hidden border border-line flex flex-col justify-between"
-                        >
-                          <div className="relative aspect-video w-full bg-canvas overflow-hidden">
-                            {v.videoSrc ? (
-                              <video
-                                src={v.videoSrc}
-                                controls
-                                playsInline
-                                preload="metadata"
-                                className="w-full h-full object-cover"
-                              />
-                            ) : (
-                              <iframe
-                                className="w-full h-full"
-                                src={`https://www.youtube-nocookie.com/embed/${v.youtubeId}`}
-                                title={v.title}
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                              />
-                            )}
+                    ) : (
+                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                        {currentMediaArchive.videos.map((v, vIdx) => (
+                          <div
+                            key={v.youtubeId || v.videoSrc || vIdx}
+                            className="bg-surface-2 rounded-2xl overflow-hidden border border-line flex flex-col justify-between"
+                          >
+                            <div className="relative aspect-video w-full bg-canvas overflow-hidden">
+                              {v.videoSrc ? (
+                                <video
+                                  src={v.videoSrc}
+                                  controls
+                                  playsInline
+                                  preload="metadata"
+                                  className="w-full h-full object-cover"
+                                />
+                              ) : (
+                                <iframe
+                                  className="w-full h-full"
+                                  src={`https://www.youtube-nocookie.com/embed/${v.youtubeId}`}
+                                  title={v.title}
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                  allowFullScreen
+                                />
+                              )}
+                            </div>
+                            <div className="p-5 space-y-1.5">
+                              <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.14em] text-accent block">
+                                {v.tag}
+                              </span>
+                              <h5 className="font-display text-base sm:text-lg font-semibold text-content leading-snug">
+                                {v.title}
+                              </h5>
+                              <p className="font-sans text-xs text-content-muted leading-relaxed">
+                                {v.desc}
+                              </p>
+                            </div>
                           </div>
-                          <div className="p-5 space-y-1.5">
-                            <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.14em] text-accent block">
-                              {v.tag}
-                            </span>
-                            <h5 className="font-display text-base sm:text-lg font-semibold text-content leading-snug">
-                              {v.title}
-                            </h5>
-                            <p className="font-sans text-xs text-content-muted leading-relaxed">
-                              {v.desc}
-                            </p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
 
                 {/* INSIDE CARD PART 2: 24 CHAPTER PHOTO SPACES IN 6 ROWS BELOW THE VIDEO */}
-                <div className="space-y-5 pt-6 border-t border-line">
+                <div className={`space-y-5 ${currentMediaArchive.videos.length > 0 ? "pt-6 border-t border-line" : ""}`}>
                   <div className="flex items-center gap-2.5">
                     <span className="w-2 h-2 rounded-full bg-accent" />
                     <h4 className="font-heading text-xs sm:text-sm font-bold uppercase tracking-[0.16em] text-content">
@@ -1594,19 +1565,14 @@ function EventContent() {
                             />
                           ) : (
                             /* Clean Dedicated 4:3 Photo Frame Space */
-                            <>
-                              <div className="absolute top-3 right-3 px-2 py-0.5 rounded-md bg-accent/15 border border-accent/30 text-[10px] font-mono font-semibold text-accent">
-                                {slotNumber} / 24
+                            <div className="space-y-1">
+                              <div className="text-xs font-heading font-bold uppercase tracking-[0.14em] text-content">
+                                Conclave Moment {slotNumber}
                               </div>
-                              <div className="space-y-1">
-                                <div className="text-xs font-heading font-bold uppercase tracking-[0.14em] text-content">
-                                  Conclave Moment {slotNumber}
-                                </div>
-                                <div className="text-[11px] font-sans text-content-muted">
-                                  {currentMediaArchive.city}
-                                </div>
+                              <div className="text-[11px] font-sans text-content-muted">
+                                {currentMediaArchive.city}
                               </div>
-                            </>
+                            </div>
                           )}
                         </div>
                       );
