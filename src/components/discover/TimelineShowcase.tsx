@@ -435,7 +435,7 @@ export const INSTITUTION_NODES: InstitutionNode[] = [
     acronym: "SPS",
     desc: "Consistently ranked among India's elite pharmacy faculties (NIRF #13 in Pharmacy); advances drug design, novel formulation technologies, and pharmacological synthesis.",
     category: "Pharmaceutical Sciences",
-    image: "/sps-options/sps-option-2.jpg",
+    image: "/sps-options/sps-option-1.jpg",
     imageAlt: "School of Pharmaceutical Sciences Building",
     badge: "NIRF #13 Pharmacy",
     achievement: "Drug Discovery & Novel Formulation Hub",
@@ -574,14 +574,12 @@ export const INSTITUTION_NODES: InstitutionNode[] = [
 
 export function TimelineShowcase() {
   const [selectedShmPhoto, setSelectedShmPhoto] = useState(0);
-  const [selectedSpsPhoto, setSelectedSpsPhoto] = useState(0);
   const [selectedIdsPhoto, setSelectedIdsPhoto] = useState(0);
   const [selectedImsPhoto, setSelectedImsPhoto] = useState(0);
   const [selectedCampus2Photo, setSelectedCampus2Photo] = useState(0);
   const [selectedPharma2Photo, setSelectedPharma2Photo] = useState(0);
 
   const currentShmPhoto = SHM_PHOTO_OPTIONS[selectedShmPhoto] ?? SHM_PHOTO_OPTIONS[0];
-  const currentSpsPhoto = SPS_PHOTO_OPTIONS[selectedSpsPhoto] ?? SPS_PHOTO_OPTIONS[0];
   const currentIdsPhoto = IDS_PHOTO_OPTIONS[selectedIdsPhoto] ?? IDS_PHOTO_OPTIONS[0];
   const currentImsPhoto = IMS_PHOTO_OPTIONS[selectedImsPhoto] ?? IMS_PHOTO_OPTIONS[0];
   const currentCampus2Photo = CAMPUS2_PHOTO_OPTIONS[selectedCampus2Photo] ?? CAMPUS2_PHOTO_OPTIONS[0];
@@ -595,15 +593,6 @@ export function TimelineShowcase() {
         options: SHM_PHOTO_OPTIONS,
         selected: selectedShmPhoto,
         onSelect: setSelectedShmPhoto,
-      };
-    }
-    if (nodeId === "sps-2004") {
-      return {
-        src: currentSpsPhoto.src,
-        caption: currentSpsPhoto.caption,
-        options: SPS_PHOTO_OPTIONS,
-        selected: selectedSpsPhoto,
-        onSelect: setSelectedSpsPhoto,
       };
     }
     if (nodeId === "ids-2006") {
