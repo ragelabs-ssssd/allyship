@@ -386,7 +386,128 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
         tag: "Hyderabad",
       },
     ],
-    photos: create24PhotoSlots("Hyderabad"),
+    photos: create24PhotoSlots("Hyderabad", [
+      {
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-01.jpg",
+        caption: "Grand Conclave Delegation & University Leadership on Stage",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-02.jpg",
+        caption: "Executive Panel Discussion: Practicing Allyship in the Tech Corridor",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-03.jpg",
+        caption: "Boardroom CXOs & Talent Leaders in Roundtable Deliberations",
+        objectPosition: "50% 35%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-04.jpg",
+        caption: "Institutional Recognition & Stage Honor Ceremony",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-05.jpg",
+        caption: "Enterprise Leaders Deliberating on Campus-to-Corporate Transitions",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-06.jpg",
+        caption: "Inaugural Lamp Lighting & Conclave Invocation by Dignitaries",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-07.jpg",
+        caption: "Interactive Session Dialogue & Q&A with Industry Delegates",
+        objectPosition: "50% 35%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-08.jpg",
+        caption: "Distinguished Guest Felicitation with Traditional Honors",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-09.jpg",
+        caption: "Executive Camaraderie & Peer Networking in Hyderabad",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-10.jpg",
+        caption: "Industry-Academia Co-Creation & Curriculum Agility Panel",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-11.jpg",
+        caption: "Academic Leadership & Corporate Conveners on the Dais",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-12.jpg",
+        caption: "Talent Transformation Perspectives Across Tech Verticals",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-13.jpg",
+        caption: "Commemorative Memento Presentation to Corporate Partners",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-14.jpg",
+        caption: "Senior Industry Delegates & Engineering Directors in Deliberation",
+        objectPosition: "50% 35%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-15.jpg",
+        caption: "Stage Recognition of Panelists by University Dignitaries",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-16.jpg",
+        caption: "Executive Peer Dialogue & Strategic Corporate Exchange",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-17.jpg",
+        caption: "Fireside Discussion on Future-Ready Engineering Capabilities",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-18.jpg",
+        caption: "Inaugural Keynote Address on Institutional Vision & Allyship",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-19.jpg",
+        caption: "Opening Framing Address on De-Biasing Early-Career Hiring",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-20.jpg",
+        caption: "Leadership Alignment Dialogue Between Corporate & Campus Heads",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-21.jpg",
+        caption: "Conclave Closing Synthesis & Corporate Partner Commemoration",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-22.jpg",
+        caption: "Industry Perspectives on Scaling Regional Talent Nationally",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-23.jpg",
+        caption: "Emerging Tech Foresight & Enterprise Collaboration Address",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-24.jpg",
+        caption: "Academic Dignitaries & Conveners in Concluding Reflections",
+        objectPosition: "50% 30%",
+      },
+    ]),
   },
   "kolkata-1": {
     id: "kolkata-1",
