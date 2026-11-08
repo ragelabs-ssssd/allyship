@@ -4,36 +4,36 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
-const ITER_PHOTO_OPTIONS = [
+const IBCS_PHOTO_OPTIONS = [
   {
     id: 1,
-    label: "Photo 1 (Current)",
-    caption: "ITER Academic Blocks & Courtyard Lawn",
-    src: "/soa-iter-building.jpg",
+    label: "Photo 1 (IBCS Building 1)",
+    caption: "Official IBCS Main Building & Lawn (Drone View 1 — soa.ac.in/ibcs)",
+    src: "/ibcs-options/ibcs-option-1.jpg",
   },
   {
     id: 2,
-    label: "Photo 2",
-    caption: "ITER Modern Glass Tower & Canopy (Official Drone Shot)",
-    src: "/iter-options/iter-option-1.jpg",
+    label: "Photo 2 (IBCS Building 2)",
+    caption: "Official IBCS Campus Complex & Courtyard (Drone View 2 — soa.ac.in/ibcs)",
+    src: "/ibcs-options/ibcs-option-2.jpg",
   },
   {
     id: 3,
-    label: "Photo 3",
-    caption: "ITER Full Campus Aerial Panorama (Official Drone View)",
-    src: "/iter-options/iter-option-2.png",
+    label: "Photo 3 (Previous)",
+    caption: "SOA Campus 2 Auditorium / Convention Centre (Previous Photo)",
+    src: "/soa-auditorium.jpg",
   },
   {
     id: 4,
     label: "Photo 4",
-    caption: "SOA / ITER Main Facade with Official Crest",
-    src: "/iter-options/iter-option-3.jpg",
+    caption: "SOA Academic Blocks & Courtyard (soa.ac.in/academics-at-soa)",
+    src: "/ibcs-options/ibcs-option-5.jpg",
   },
   {
     id: 5,
     label: "Photo 5",
-    caption: "ITER Electronics & Engineering Laboratory",
-    src: "/iter-options/iter-option-4.jpg",
+    caption: "IBCS National Management Conference Auditorium (soa.ac.in)",
+    src: "/ibcs-options/ibcs-option-3.jpg",
   },
 ];
 
@@ -84,8 +84,8 @@ export const INSTITUTION_NODES: InstitutionNode[] = [
     acronym: "IBCS",
     desc: "Established premier corporate management, finance, and business analytics education in Odisha, bridging regional talent with national boardrooms.",
     category: "Management",
-    image: "/soa-auditorium.jpg",
-    imageAlt: "IBCS Management Convention Center",
+    image: "/ibcs-options/ibcs-option-1.jpg",
+    imageAlt: "IBCS Campus Building",
     badge: "Premier B-School",
     achievement: "Corporate & Analytics Leadership",
     exitNumber: "EXIT 02 · MILE 2",
@@ -240,8 +240,8 @@ export const INSTITUTION_NODES: InstitutionNode[] = [
 ];
 
 export function TimelineShowcase() {
-  const [selectedIterPhoto, setSelectedIterPhoto] = useState(0);
-  const currentIterPhoto = ITER_PHOTO_OPTIONS[selectedIterPhoto] ?? ITER_PHOTO_OPTIONS[0];
+  const [selectedIbcsPhoto, setSelectedIbcsPhoto] = useState(0);
+  const currentIbcsPhoto = IBCS_PHOTO_OPTIONS[selectedIbcsPhoto] ?? IBCS_PHOTO_OPTIONS[0];
 
   return (
     <div id="timeline" className="space-y-12 scroll-mt-28">
@@ -307,7 +307,7 @@ export function TimelineShowcase() {
               {/* Photo Billboard */}
               <div className="lg:col-span-5 relative min-h-[240px] sm:min-h-[280px] bg-surface-3 overflow-hidden">
                 <Image
-                  src={node.id === "iter-1996" ? currentIterPhoto.src : node.image}
+                  src={node.id === "ibcs-1997" ? currentIbcsPhoto.src : node.image}
                   alt={node.title}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -315,15 +315,15 @@ export function TimelineShowcase() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
 
-                {node.id === "iter-1996" && (
+                {node.id === "ibcs-1997" && (
                   <div className="absolute top-3 left-3 right-3 flex flex-wrap items-center gap-1.5 z-10">
-                    {ITER_PHOTO_OPTIONS.map((opt, optIdx) => (
+                    {IBCS_PHOTO_OPTIONS.map((opt, optIdx) => (
                       <button
                         key={opt.id}
                         type="button"
-                        onClick={() => setSelectedIterPhoto(optIdx)}
+                        onClick={() => setSelectedIbcsPhoto(optIdx)}
                         className={`px-2.5 py-1 rounded-full text-[10px] font-mono font-bold transition-all cursor-pointer ${
-                          selectedIterPhoto === optIdx
+                          selectedIbcsPhoto === optIdx
                             ? "bg-accent text-on-accent shadow-md"
                             : "bg-black/65 backdrop-blur-md text-white/85 border border-white/20 hover:bg-black/85"
                         }`}
@@ -338,9 +338,9 @@ export function TimelineShowcase() {
                   <span className="text-sm font-mono text-[#F4E8C1] font-bold block">
                     {node.acronym}
                   </span>
-                  {node.id === "iter-1996" && (
+                  {node.id === "ibcs-1997" && (
                     <span className="text-[10px] font-sans text-white/80 truncate">
-                      {currentIterPhoto.caption}
+                      {currentIbcsPhoto.caption}
                     </span>
                   )}
                 </div>
