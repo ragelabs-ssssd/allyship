@@ -2,16 +2,15 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ShieldCheck,
   ArrowRight,
-  Terminal,
   Medal,
 } from "lucide-react";
 import { GetInvitedModal } from "@/components/GetInvitedModal";
 import { HeroBackdrop } from "@/components/HeroBackdrop";
 import { BentoGridConcept } from "@/components/about/BentoGridConcept";
-import { ManifestoShowcase } from "@/components/about/ManifestoShowcase";
 
 export default function AboutPage() {
   const [isInviteOpen, setIsInviteOpen] = useState(false);
@@ -117,105 +116,26 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Right Column: Code visual block */}
-          <div className="lg:col-span-6 xl:col-span-6 w-full flex justify-center lg:justify-end">
-            <div className="w-full max-w-xl lg:max-w-none xl:max-w-[640px] 2xl:max-w-[700px]">
-            <div className="relative rounded-3xl bg-surface border border-line shadow-2xl overflow-hidden force-dark group hover:border-accent/40 transition-colors duration-300">
-              {/* Window Header */}
-              <div className="flex items-center justify-between px-5 py-3.5 bg-black/60 border-b border-line">
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-[#EF4444]" />
-                  <div className="w-3 h-3 rounded-full bg-[#F59E0B]" />
-                  <div className="w-3 h-3 rounded-full bg-[#10B981]" />
-                </div>
-                <div className="flex items-center gap-2 text-xs text-content-muted font-mono">
-                  <Terminal className="w-4 h-4 text-accent" />
-                  <span>AllyshipIncrement.ts</span>
-                </div>
-                <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-glass text-content-muted border border-line">
-                  TypeScript
-                </span>
-              </div>
+          {/* Right Column: The Conclave Mandate Banner Visual */}
+          <div id="manifesto" className="lg:col-span-6 xl:col-span-6 w-full flex justify-center lg:justify-end scroll-mt-28">
+            <div className="w-full max-w-xl lg:max-w-none xl:max-w-[680px] 2xl:max-w-[720px]">
+              <div className="relative rounded-3xl bg-surface border border-line shadow-2xl overflow-hidden force-dark group hover:border-accent/50 transition-all duration-300 aspect-[1024/414] min-h-[260px] sm:min-h-[300px]">
+                <Image
+                  src="/conclave-mandate-delegation.jpg"
+                  alt="The Conclave Mandate — We Do Not Sign Pledges. We Alter Trajectories."
+                  fill
+                  className="object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+                  priority
+                />
 
-              {/* Code Editor Body with Line Numbers */}
-              <div className="p-5 font-mono text-xs sm:text-[13px] leading-6 bg-[#0D0D0D] overflow-x-auto">
-                <div className="table w-full">
-                  <div className="table-row">
-                    <span className="table-cell pr-4 text-right text-content-faint select-none text-[11px] w-8">01</span>
-                    <span className="table-cell text-content-faint italic">{"// Legacy Placement Model (Annual & Transactional)"}</span>
-                  </div>
-                  <div className="table-row">
-                    <span className="table-cell pr-4 text-right text-content-faint select-none text-[11px] w-8">02</span>
-                    <span className="table-cell"><span className="text-danger">placement</span>.<span className="text-accent-light">mode</span> = <span className="text-success">&quot;annual_recruitment&quot;</span>;</span>
-                  </div>
-                  <div className="table-row">
-                    <span className="table-cell pr-4 text-right text-content-faint select-none text-[11px] w-8">03</span>
-                    <span className="table-cell"><span className="text-danger">inclusion</span>.<span className="text-accent-light">scope</span> = <span className="text-success">&quot;paper_policy_only&quot;</span>;</span>
-                  </div>
-                  <div className="table-row">
-                    <span className="table-cell pr-4 text-right text-content-faint select-none text-[11px] w-8">04</span>
-                    <span className="table-cell">&nbsp;</span>
-                  </div>
-                  <div className="table-row">
-                    <span className="table-cell pr-4 text-right text-content-faint select-none text-[11px] w-8">05</span>
-                    <span className="table-cell text-content-faint italic">{"// The SOA Allyship++ Protocol (Bilateral & Compounding)"}</span>
-                  </div>
-                  <div className="table-row">
-                    <span className="table-cell pr-4 text-right text-content-faint select-none text-[11px] w-8">06</span>
-                    <span className="table-cell"><span className="text-purple-400">while</span> (<span className="text-sky-400">workplace</span>.<span className="text-accent-light">evolves</span>()) &#123;</span>
-                  </div>
-                  <div className="table-row">
-                    <span className="table-cell pr-4 text-right text-content-faint select-none text-[11px] w-8">07</span>
-                    <span className="table-cell pl-4"><span className="text-accent font-bold">allyship++</span>; <span className="text-content-faint italic">{"// Compounding institutional return"}</span></span>
-                  </div>
-                  <div className="table-row">
-                    <span className="table-cell pr-4 text-right text-content-faint select-none text-[11px] w-8">08</span>
-                    <span className="table-cell pl-4"><span className="text-sky-400">boardroom</span>.<span className="text-accent-light">listenFirst</span>([</span>
-                  </div>
-                  <div className="table-row">
-                    <span className="table-cell pr-4 text-right text-content-faint select-none text-[11px] w-8">09</span>
-                    <span className="table-cell pl-8 text-success">&quot;BLR&quot;, &quot;HYD&quot;, &quot;CCU&quot;, &quot;BOM&quot;, &quot;MAA&quot;</span>
-                  </div>
-                  <div className="table-row">
-                    <span className="table-cell pr-4 text-right text-content-faint select-none text-[11px] w-8">10</span>
-                    <span className="table-cell pl-4">]);</span>
-                  </div>
-                  <div className="table-row">
-                    <span className="table-cell pr-4 text-right text-content-faint select-none text-[11px] w-8">11</span>
-                    <span className="table-cell pl-4"><span className="text-sky-400">leadership</span>.<span className="text-accent-light">embed</span>([</span>
-                  </div>
-                  <div className="table-row">
-                    <span className="table-cell pr-4 text-right text-content-faint select-none text-[11px] w-8">12</span>
-                    <span className="table-cell pl-8 text-success">&quot;PsychSafety&quot;, &quot;GenZ&quot;, &quot;Sponsorship&quot;</span>
-                  </div>
-                  <div className="table-row">
-                    <span className="table-cell pr-4 text-right text-content-faint select-none text-[11px] w-8">13</span>
-                    <span className="table-cell pl-4">]);</span>
-                  </div>
-                  <div className="table-row">
-                    <span className="table-cell pr-4 text-right text-content-faint select-none text-[11px] w-8">14</span>
-                    <span className="table-cell pl-4"><span className="text-sky-400">curriculum</span>.<span className="text-accent-light">sync</span>(<span className="text-sky-400">industry</span>.<span className="text-accent-light">liveChallenges</span>);</span>
-                  </div>
-                  <div className="table-row">
-                    <span className="table-cell pr-4 text-right text-content-faint select-none text-[11px] w-8">15</span>
-                    <span className="table-cell">&#125;</span>
-                  </div>
-                </div>
-              </div>
+                {/* Letterbox Gold Accent Hairlines */}
+                <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-accent/60 to-transparent pointer-events-none" />
+                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-accent/60 to-transparent pointer-events-none" />
 
-              {/* Status footer */}
-              <div className="px-5 py-2.5 bg-black/40 border-t border-line flex items-center justify-between text-[11px] text-content-muted font-mono">
-                <span className="flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                  Compiled cleanly · Compounding inclusion active
-                </span>
-                <span className="text-accent font-semibold">100% Type-Safe</span>
+                {/* Corner Gold Accent Brackets */}
+                <div className="absolute top-0 left-0 w-5 h-5 border-t-2 border-l-2 border-accent pointer-events-none rounded-tl-3xl" />
+                <div className="absolute bottom-0 right-0 w-5 h-5 border-b-2 border-r-2 border-accent pointer-events-none rounded-br-3xl" />
               </div>
-
-              {/* Corner Gold Accent Brackets — directly anchored to the card */}
-              <div className="absolute top-0 left-0 w-5 h-5 border-t-2 border-l-2 border-accent pointer-events-none rounded-tl-3xl" />
-              <div className="absolute bottom-0 right-0 w-5 h-5 border-b-2 border-r-2 border-accent pointer-events-none rounded-br-3xl" />
-            </div>
             </div>
           </div>
         </div>
@@ -228,9 +148,6 @@ export default function AboutPage() {
       >
         <BentoGridConcept />
       </section>
-
-      {/* 4. THE MONOLITH MANIFESTO & TELEMETRY SHOWCASE (5 OUT-OF-THE-BOX OPTIONS) */}
-      <ManifestoShowcase />
 
       {/* 6. THE BOARDROOM-TO-ARENA SYNTHESIS */}
       <section
