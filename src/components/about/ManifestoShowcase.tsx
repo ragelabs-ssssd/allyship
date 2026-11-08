@@ -13,14 +13,12 @@ export function ManifestoShowcase() {
         {/* Background Image with Cinematic Grading */}
         <div className="absolute inset-0">
           <Image
-            src="/bengaluru-2.jpg"
+            src="/conclave-mandate-delegation.jpg"
             alt="Allyship++ National Conclave Delegation"
             fill
-            className="object-cover object-center brightness-[0.28] group-hover:scale-105 transition-transform duration-1000 ease-out"
+            className="object-cover object-center group-hover:scale-105 transition-transform duration-1000 ease-out"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-canvas/90 via-transparent to-canvas/90" />
-          <div className="absolute inset-0 bg-gradient-to-t from-canvas via-transparent to-canvas/80" />
         </div>
 
         {/* Letterbox Gold Accent Hairlines */}
@@ -28,7 +26,7 @@ export function ManifestoShowcase() {
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-accent/60 to-transparent" />
 
         {/* Content Overlay */}
-        <div className="relative z-10 max-w-3xl mx-auto space-y-5">
+        <div className="relative z-10 max-w-3xl mx-auto space-y-5 sr-only">
           <span className="text-[11px] font-mono uppercase tracking-[0.3em] text-accent font-bold block">
             THE CONCLAVE MANDATE
           </span>
