@@ -956,41 +956,112 @@ function EventContent() {
         {/* TAB 1: ALL 7 CHAPTERS */}
         {activeTab === "Chapters" && (
           <div id="chapter-details" className="space-y-10 scroll-mt-24 pt-4">
-            {/* City Selector Buttons */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2.5 scroll-mt-24">
-              {conclaves.map((c, idx) => {
-                const isSelected = selectedChapter === idx;
-                return (
-                  <button
-                    key={c.id}
-                    type="button"
-                    onClick={() => setSelectedChapter(idx)}
-                    className={`p-3.5 sm:p-4 rounded-2xl border text-left transition-all cursor-pointer ${
-                      isSelected
-                        ? "bg-surface-2 border-2 border-accent ring-2 ring-accent/30 shadow-md text-content"
-                        : "bg-surface border-line hover:border-accent/50 text-content-muted hover:text-content"
-                    }`}
-                  >
-                    <span
-                      className={`font-mono text-[10px] font-bold uppercase tracking-[0.14em] block ${
-                        isSelected ? "text-accent" : "text-content-muted"
+            {/* Creative Chapter Journey Header & Switcher */}
+            <div className="space-y-3.5">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 px-1">
+                <div className="flex items-center gap-2.5">
+                  <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+                  <span className="font-mono text-xs font-bold uppercase tracking-[0.16em] text-content">
+                    National Conclave Journey
+                  </span>
+                  <span className="text-content-faint">·</span>
+                  <span className="font-sans text-xs text-content-muted">
+                    Explore chapters chronologically
+                  </span>
+                </div>
+                <div className="flex items-center gap-3 font-mono text-[11px] text-content-muted">
+                  <span className="inline-flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-content-muted" />
+                    Chapters 01–04 (1.0)
+                  </span>
+                  <span className="text-content-faint">·</span>
+                  <span className="inline-flex items-center gap-1.5 text-accent font-semibold">
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                    Chapters 05–07 (2.0)
+                  </span>
+                </div>
+              </div>
+
+              {/* Creative Chapter Keycards Grid */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3 scroll-mt-24">
+                {conclaves.map((c, idx) => {
+                  const isSelected = selectedChapter === idx;
+                  const chapterNum = String(idx + 1).padStart(2, "0");
+                  const isTwoPointZero = c.editionCycle === "2.0";
+                  const cleanCity = c.city.replace(/\s*\([12]\.0\)/, "");
+
+                  return (
+                    <button
+                      key={c.id}
+                      type="button"
+                      onClick={() => setSelectedChapter(idx)}
+                      className={`relative group p-3.5 sm:p-4 rounded-2xl border text-left transition-all duration-300 cursor-pointer overflow-visible ${
+                        isSelected
+                          ? "bg-accent/10 border-2 border-accent ring-4 ring-accent/20 shadow-xl text-content -translate-y-0.5"
+                          : "bg-surface border-line hover:border-accent/60 text-content-muted hover:text-content hover:-translate-y-1 hover:shadow-md"
                       }`}
                     >
-                      {c.date} · {c.editionCycle === "2.0" ? "2.0" : "1.0"}
-                    </span>
-                    <span
-                      className={`font-display text-sm font-bold tracking-normal block truncate mt-1 ${
-                        isSelected ? "text-accent" : "text-content"
-                      }`}
-                    >
-                      {c.city}
-                    </span>
-                    <span className="font-sans text-xs text-content-muted block truncate mt-0.5 whitespace-nowrap">
-                      {c.venue.split(",")[0]}
-                    </span>
-                  </button>
-                );
-              })}
+                      {/* Top Row: Chapter Badge + Edition */}
+                      <div className="flex items-center justify-between gap-1 mb-2.5">
+                        <span
+                          className={`font-mono text-[11px] font-bold tracking-wider flex items-center gap-1.5 ${
+                            isSelected ? "text-accent" : "text-content-secondary group-hover:text-accent"
+                          }`}
+                        >
+                          {isSelected && <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />}
+                          CH · {chapterNum}
+                        </span>
+                        <span
+                          className={`px-2 py-0.5 rounded-full font-mono text-[9px] font-bold uppercase tracking-wider ${
+                            isTwoPointZero
+                              ? isSelected
+                                ? "bg-accent text-on-accent shadow-sm"
+                                : "bg-accent/15 text-accent border border-accent/30"
+                              : isSelected
+                              ? "bg-surface-3 text-content border border-line"
+                              : "bg-surface-2 text-content-muted border border-line"
+                          }`}
+                        >
+                          {isTwoPointZero ? "2.0" : "1.0"}
+                        </span>
+                      </div>
+
+                      {/* Middle Row: City & Date */}
+                      <div className="space-y-0.5">
+                        <h4
+                          className={`font-display text-sm font-bold tracking-normal truncate transition-colors ${
+                            isSelected ? "text-accent" : "text-content group-hover:text-accent"
+                          }`}
+                        >
+                          {cleanCity}
+                        </h4>
+                        <p className="font-sans text-[11px] text-content-muted truncate">
+                          {c.date}
+                        </p>
+                      </div>
+
+                      {/* Bottom Row: Venue / Active State indicator */}
+                      <div
+                        className={`mt-2.5 pt-2 border-t flex items-center justify-between font-sans text-[10px] ${
+                          isSelected
+                            ? "border-accent/30 text-accent font-semibold"
+                            : "border-line text-content-muted"
+                        }`}
+                      >
+                        <span className="truncate">
+                          {isSelected ? "Active Chapter" : c.venue.split(",")[0]}
+                        </span>
+                        {isSelected && <span className="text-xs">▾</span>}
+                      </div>
+
+                      {/* Downward pointer arrow connecting active card to the detail box below */}
+                      {isSelected && (
+                        <div className="hidden lg:block absolute -bottom-2.5 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-accent z-20 pointer-events-none" />
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
             </div>
 
             {/* Selected Conclave Detail Card — Executive Editorial Bento Grid */}
