@@ -88,7 +88,7 @@ export function GetInvitedModal({ isOpen, onClose }: GetInvitedModalProps) {
       role="dialog"
       aria-modal="true"
       aria-labelledby="invite-modal-title"
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-in fade-in duration-200 touch-none"
     >
       <div className="relative w-full max-w-xl bg-surface text-content rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[92vh] border border-line">
         {/* Header */}
@@ -163,7 +163,7 @@ export function GetInvitedModal({ isOpen, onClose }: GetInvitedModalProps) {
                     htmlFor="invite-full-name"
                     className="block font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-content-secondary mb-1.5"
                   >
-                    Full Name *
+                    Full Name <span className="text-accent ml-0.5">*</span>
                   </label>
                   <div className="relative">
                     <User className="w-4 h-4 text-content-muted absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
@@ -186,7 +186,7 @@ export function GetInvitedModal({ isOpen, onClose }: GetInvitedModalProps) {
                     htmlFor="invite-email"
                     className="block font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-content-secondary mb-1.5"
                   >
-                    Corporate Email *
+                    Corporate Email <span className="text-accent ml-0.5">*</span>
                   </label>
                   <div className="relative">
                     <Mail className="w-4 h-4 text-content-muted absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
@@ -211,7 +211,7 @@ export function GetInvitedModal({ isOpen, onClose }: GetInvitedModalProps) {
                     htmlFor="invite-company"
                     className="block font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-content-secondary mb-1.5"
                   >
-                    Company / Organization *
+                    Company / Organization <span className="text-accent ml-0.5">*</span>
                   </label>
                   <div className="relative">
                     <Building2 className="w-4 h-4 text-content-muted absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />

@@ -115,9 +115,12 @@ export function NirfRankingsShowcase({ onOpenSlide }: NirfRankingsShowcaseProps)
             </div>
 
             <div>
-              <span className="font-heading text-6xl sm:text-7xl lg:text-8xl font-black text-accent block leading-none tracking-tight">
-                15th
-              </span>
+              <div className="flex items-baseline gap-1 text-accent">
+                <span className="font-heading text-4xl sm:text-5xl font-bold opacity-80">#</span>
+                <span className="font-heading text-6xl sm:text-7xl lg:text-8xl font-black block leading-none tracking-tight tabular-nums">
+                  15
+                </span>
+              </div>
               <h3 className="font-heading text-2xl sm:text-3xl font-extrabold text-content mt-2">
                 University Category
               </h3>
@@ -167,7 +170,7 @@ export function NirfRankingsShowcase({ onOpenSlide }: NirfRankingsShowcaseProps)
               </div>
 
               <div>
-                <span className="font-heading text-4xl sm:text-5xl font-extrabold text-content group-hover:text-accent transition-colors block leading-none">
+                <span className="font-heading text-4xl sm:text-5xl font-extrabold text-content group-hover:text-accent transition-colors block leading-none tabular-nums">
                   {item.rank}
                 </span>
                 <h4 className="font-heading text-base font-bold text-content mt-1.5">

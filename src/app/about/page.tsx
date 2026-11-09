@@ -18,31 +18,31 @@ export default function AboutPage() {
   // Sports Legends Regional Conclaves
   const sportsAnchors = [
     {
-      city: "Bengaluru Chapter",
+      city: "Bengaluru",
       legend: "Anju Bobby George",
       role: "World Athletics Medalist & Olympian",
       domain: "Resilience, grit, and creating psychological safety in high-performance squads.",
     },
     {
-      city: "Hyderabad Chapter",
+      city: "Hyderabad",
       legend: "Arshad Ayub",
       role: "Former Test Cricketer & National Selector",
       domain: "Patience in talent development and long-range institutional succession planning.",
     },
     {
-      city: "Kolkata Chapter",
+      city: "Kolkata",
       legend: "Gurbux Singh & Gautam Sarkar",
       role: "Olympic Gold Medalist (Hockey) & Football Legend",
       domain: "Cross-generational cohesion, humility, and trust under championship pressure.",
     },
     {
-      city: "Mumbai Chapter",
+      city: "Mumbai",
       legend: "Nilesh Kulkarni & Anand Menezes",
       role: "Test Cricketer & Olympian Sprinter",
       domain: "Translating athletic rigor into enterprise culture and corporate leadership.",
     },
     {
-      city: "Chennai Chapter",
+      city: "Chennai",
       legend: "Premanand J.",
       role: "Paris Olympics 2024 National Sprint Coach",
       domain: "Micro-coaching, high-precision feedback loops, and compounding incremental gains.",
@@ -52,7 +52,7 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col w-full bg-canvas text-content pb-12">
       {/* 1. EDITORIAL LUXE HERO SECTION */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 min-h-[720px] sm:min-h-[780px] lg:min-h-[820px] xl:min-h-[840px] flex items-center justify-center border-b border-line overflow-hidden">
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 border-b border-line overflow-hidden">
         <HeroBackdrop />
         {/* Ambient gold background glow */}
         <div className="absolute top-[calc(50%+36px)] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-[radial-gradient(ellipse_at_center,rgba(197,168,105,0.12),transparent_70%)] pointer-events-none" />
@@ -64,7 +64,7 @@ export default function AboutPage() {
             </div>
 
             <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
-              Why &ldquo;Allyship<span className="text-accent">++</span>&rdquo;?
+              Why ALLYSHIP<span className="text-accent">++</span>?
             </h1>
 
             <p className="text-lg sm:text-xl font-display text-content-muted max-w-2xl mx-auto italic">

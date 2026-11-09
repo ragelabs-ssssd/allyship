@@ -265,8 +265,10 @@ export default function ImpactPage() {
                   {p.desc}
                 </p>
               </div>
-              <div className="pt-4 border-t border-line text-xs font-bold text-accent">
-                {p.metric}
+              <div className="pt-4 border-t border-line">
+                <span className="inline-flex items-center px-3 py-1.5 rounded-lg bg-accent/10 border border-accent/25 text-accent text-xs font-bold tracking-wide">
+                  {p.metric}
+                </span>
               </div>
             </div>
           ))}
@@ -284,7 +286,7 @@ export default function ImpactPage() {
             In the Press
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
-            National and regional print and digital publications—including Deccan Chronicle, The Statesman, Prameya News, OdishaBytes, The Sakala, Samaya, Around Odisha, Orissa Today, and The Sanchar—have chronicled SOA’s Allyship++ journey across India. Click any clipping to inspect the full report.
+            National and regional print and digital publications—including Deccan Chronicle, The Statesman, Prameya News, OdishaBytes, The Sakala, Samaya, Around Odisha, Orissa Today, and The Sanchar—have chronicled Siksha &lsquo;O&rsquo; Anusandhan&rsquo;s ALLYSHIP++ journey across India. Click any clipping to inspect the full report.
           </p>
         </div>
 
@@ -366,7 +368,8 @@ export default function ImpactPage() {
               <button
                 type="button"
                 onClick={() => setSelectedClipping(null)}
-                className="p-2 rounded-full hover:bg-glass-strong text-content-muted hover:text-content transition-colors"
+                aria-label="Close press clipping modal"
+                className="p-2 rounded-full hover:bg-glass-strong text-content-muted hover:text-content transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 <X className="w-5 h-5" />
               </button>

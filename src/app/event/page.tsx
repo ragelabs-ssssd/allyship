@@ -615,7 +615,7 @@ function EventContent() {
   return (
     <div className="flex flex-col w-full bg-canvas text-content pb-0">
       {/* 1. EDITORIAL LUXE HERO SECTION */}
-      <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 min-h-[720px] sm:min-h-[780px] lg:min-h-[820px] xl:min-h-[840px] flex items-center border-b border-line overflow-hidden">
+      <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 border-b border-line overflow-hidden">
         <HeroBackdrop />
         <div className="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -1005,7 +1005,7 @@ function EventContent() {
                   <span className="font-display text-sm font-semibold tracking-normal text-content block truncate mt-0.5">
                     {c.city}
                   </span>
-                  <span className="font-sans text-xs text-content-muted block truncate mt-0.5">
+                  <span className="font-sans text-xs text-content-muted block truncate mt-0.5 whitespace-nowrap">
                     {c.editionCycle === "2.0" ? "Chapter 2.0" : "Chapter 1.0"}
                   </span>
                 </button>
@@ -1175,7 +1175,7 @@ function EventContent() {
                       {s.chapter}
                     </span>
                     <h4 className="font-display text-base font-semibold tracking-normal text-content mt-3">{s.name}</h4>
-                    <div className="font-sans text-sm font-normal tracking-[0.01em] text-accent mt-0.5">{s.role}</div>
+                    <div className="font-sans text-xs sm:text-sm font-normal tracking-[0.01em] text-accent mt-1 line-clamp-2 leading-snug">{s.role}</div>
                     <div className="font-sans text-xs text-content-muted mt-1.5 italic">{s.note}</div>
                   </div>
                 ))}
@@ -1216,7 +1216,7 @@ function EventContent() {
                       {c.chapter}
                     </span>
                     <h4 className="font-display text-base font-semibold tracking-normal text-content mt-3">{c.name}</h4>
-                    <div className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-muted mt-0.5">{c.role}</div>
+                    <div className="font-sans text-xs sm:text-sm font-normal tracking-[0.01em] leading-snug text-content-muted mt-1 line-clamp-2">{c.role}</div>
                   </div>
                 ))}
               </div>
@@ -1280,7 +1280,7 @@ function EventContent() {
                               alt={`${archive.city} Chapter Cover`}
                               fill
                               sizes="(max-width: 768px) 100vw, 33vw"
-                              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 transform-gpu will-change-transform"
                               style={{ objectPosition: archive.coverPosition || "50% 25%" }}
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent group-hover:from-black/50 transition-colors" />
@@ -1352,7 +1352,7 @@ function EventContent() {
                               alt={`${archive.city} Chapter Cover`}
                               fill
                               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 transform-gpu will-change-transform"
                               style={{ objectPosition: archive.coverPosition || "50% 25%" }}
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent group-hover:from-black/50 transition-colors" />
@@ -1560,7 +1560,7 @@ function EventContent() {
                               alt={`${currentMediaArchive.city} — ${photo.caption}`}
                               fill
                               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 transform-gpu will-change-transform"
                               style={{ objectPosition: photo.objectPosition || "50% 25%" }}
                             />
                           ) : (

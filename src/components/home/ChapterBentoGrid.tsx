@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { ArrowUpRight, Calendar, MapPin, Users } from "lucide-react";
 import { conclavesData, ConclaveChapter } from "@/data/conclaves";
 import { SectionReveal } from "../animations/SectionReveal";
@@ -47,7 +48,7 @@ export function ChapterBentoGrid() {
               Standing National Corridors
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight mt-2">
-              The 5-City Executive Conclave Chronicles
+              The National Metro Conclave Chronicles
             </h2>
           </SectionReveal>
 
@@ -63,7 +64,11 @@ export function ChapterBentoGrid() {
             >
               All Chapters ({conclavesData.length})
               {activeCycle === "all" && (
-                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent" />
+                <motion.span
+                  layoutId="bentoTabIndicator"
+                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent"
+                  transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                />
               )}
             </button>
             <button
@@ -76,7 +81,11 @@ export function ChapterBentoGrid() {
             >
               Chapter 2.0
               {activeCycle === "2.0" && (
-                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent" />
+                <motion.span
+                  layoutId="bentoTabIndicator"
+                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent"
+                  transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                />
               )}
             </button>
             <button
@@ -89,7 +98,11 @@ export function ChapterBentoGrid() {
             >
               Chapter 1.0
               {activeCycle === "1.0" && (
-                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent" />
+                <motion.span
+                  layoutId="bentoTabIndicator"
+                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent"
+                  transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                />
               )}
             </button>
           </div>

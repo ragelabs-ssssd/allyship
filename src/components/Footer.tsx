@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Mail, CheckCircle2 } from "lucide-react";
 
 export function Footer() {
@@ -49,9 +50,11 @@ export function Footer() {
           <div className="lg:col-span-5 space-y-6">
             <Link href="/" className="inline-flex items-center gap-3.5 sm:gap-4 group">
               <div className="w-12 h-12 sm:w-14 sm:h-14 relative flex items-center justify-center rounded-full bg-glass-strong p-2 border border-line-strong group-hover:border-accent transition-colors shadow-md shrink-0 -mt-1">
-                <img
+                <Image
                   src="/soa-logo.png"
                   alt="Siksha 'O' Anusandhan (SOA) Crest"
+                  width={56}
+                  height={56}
                   className="w-full h-full object-contain filter brightness-105"
                 />
               </div>
@@ -66,7 +69,7 @@ export function Footer() {
                   Siksha &lsquo;O&rsquo; Anusandhan
                 </span>
                 <span className="font-sans text-[9px] font-medium tracking-[0.04em] text-content-muted mt-0.5">
-                  Deemed to be University · Category-1 Autonomy
+                  Deemed to be University · Category 1 Autonomy
                 </span>
               </div>
             </Link>
@@ -102,7 +105,7 @@ export function Footer() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className="font-sans text-xs text-content-secondary hover:text-accent transition-colors py-1 border-b border-line/30 hover:border-accent inline-flex items-center justify-between group"
+                  className="font-sans text-xs text-content-secondary hover:text-accent transition-colors py-1.5 border-b border-line/30 hover:border-accent inline-flex items-center justify-between group"
                 >
                   <span>{link.name}</span>
                   <span className="text-accent opacity-0 group-hover:opacity-100 transition-opacity">→</span>

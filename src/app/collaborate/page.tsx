@@ -162,7 +162,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
   return (
     <div className="flex flex-col w-full bg-canvas text-content pb-0">
       {/* 1. EDITORIAL LUXE HERO SECTION */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 min-h-[640px] lg:min-h-[720px] flex items-center border-b border-line overflow-hidden">
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 border-b border-line overflow-hidden">
         <HeroBackdrop videoSrc={SOA_VIDEO_SRC} align="right" />
         <div className="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full flex justify-end">
           <div className="max-w-3xl space-y-6 text-left sm:text-right flex flex-col items-start sm:items-end">
@@ -271,6 +271,12 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
         </div>
 
         <div className="bg-surface rounded-3xl overflow-hidden border border-line shadow-xl">
+          <div className="px-6 pt-4 pb-2 text-xs text-content-muted flex items-center justify-between gap-2 sm:hidden border-b border-line/60">
+            <span className="font-semibold text-accent">Placement Statistics</span>
+            <span className="inline-flex items-center gap-1 text-[11px]">
+              Swipe horizontally <ArrowRight className="w-3 h-3 text-accent" />
+            </span>
+          </div>
           <div className="overflow-x-auto">
             <table className="w-full min-w-[720px] text-left border-collapse text-xs sm:text-sm">
               <thead>
@@ -454,8 +460,21 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
                     <p className="text-sm text-content-muted max-w-md mx-auto">
                       Thank you for submitting your problem brief to SOA University. Our corporate relations committee will review it and initiate contact.
                     </p>
-                    <div className="inline-block px-4 py-2 rounded-xl bg-surface-2 border border-line text-content text-xs font-bold mt-2">
-                      Reference ID: {refId}
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-2 border border-line text-content text-xs font-bold mt-2">
+                      <span>Reference ID: {refId}</span>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          if (typeof navigator !== "undefined" && navigator.clipboard) {
+                            navigator.clipboard.writeText(refId);
+                          }
+                        }}
+                        title="Copy Reference ID"
+                        aria-label="Copy Reference ID"
+                        className="p-1 rounded hover:bg-surface-3 text-accent transition-colors"
+                      >
+                        <Copy className="w-3.5 h-3.5" />
+                      </button>
                     </div>
                   </div>
                   <div className="pt-4 flex flex-wrap items-center justify-center gap-4">

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { GetInvitedModal } from "./GetInvitedModal";
@@ -70,25 +71,28 @@ export function Navbar() {
               href="/"
               className="group flex items-center gap-3.5 sm:gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-xl py-1.5"
             >
-              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 relative flex items-center justify-center rounded-full bg-glass-strong p-2 shadow-lg shadow-black/40 border border-line-strong ring-1 ring-line group-hover:border-accent/80 group-hover:shadow-[0_0_24px_rgba(201,169,110,0.35)] transition-all duration-300 flex-shrink-0">
-                <img
+              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 relative flex items-center justify-center rounded-full bg-glass-strong p-2 shadow-lg shadow-black/40 border border-line-strong ring-1 ring-line group-hover:border-accent/80 group-hover:shadow-[0_0_24px_rgba(197,168,105,0.35)] transition-all duration-300 flex-shrink-0">
+                <Image
                   src="/soa-logo.png"
                   alt="Siksha 'O' Anusandhan University Logo"
+                  width={64}
+                  height={64}
+                  priority
                   className="w-full h-full object-contain filter brightness-105 contrast-105"
                 />
               </div>
               <div className="flex flex-col justify-center">
                 <span className="font-display text-lg sm:text-xl font-extrabold tracking-tight text-content leading-none inline-flex items-start">
                   ALLYSHIP
-                  <span className="text-accent text-[0.62em] font-bold ml-1 -mt-0.5 drop-shadow-[0_0_10px_rgba(201,169,110,0.45)]">
+                  <span className="text-accent text-[0.62em] font-bold ml-1 -mt-0.5 drop-shadow-[0_0_10px_rgba(197,168,105,0.45)]">
                     ++
                   </span>
                 </span>
                 <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.2em] text-accent mt-1 opacity-95 group-hover:opacity-100 transition-all duration-300">
                   Siksha &lsquo;O&rsquo; Anusandhan
                 </span>
-                <span className="font-sans text-[8.5px] sm:text-[9px] font-medium tracking-[0.03em] sm:tracking-[0.04em] text-content-muted group-hover:text-content mt-0.5 transition-colors whitespace-nowrap">
-                  Deemed to be University · Category-1 Autonomy
+                <span className="font-sans text-[8.5px] sm:text-[9px] font-medium tracking-[0.02em] sm:tracking-[0.04em] text-content-muted group-hover:text-content mt-0.5 transition-colors whitespace-nowrap">
+                  Deemed to be University · Category 1 Autonomy
                 </span>
               </div>
             </Link>
@@ -101,7 +105,7 @@ export function Navbar() {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className={`relative px-4 lg:px-5 py-2.5 text-sm lg:text-[15px] font-semibold tracking-wide transition-all duration-300 rounded-full ${
+                    className={`relative px-4 lg:px-5 py-2.5 font-heading text-sm lg:text-[14.5px] font-semibold tracking-wide transition-all duration-300 rounded-full ${
                       active
                         ? "text-content bg-glass-strong shadow-sm"
                         : "text-content-secondary hover:text-content hover:bg-glass"
@@ -122,7 +126,7 @@ export function Navbar() {
               <button
                 type="button"
                 onClick={() => setIsInviteOpen(true)}
-                className="inline-flex items-center gap-2.5 text-sm font-bold tracking-wide py-2.5 px-6 lg:px-7 rounded-full border border-accent/80 text-accent bg-accent/10 hover:bg-accent hover:text-on-accent hover:border-transparent transition-all duration-300 shadow-sm hover:shadow-[0_0_24px_rgba(201,169,110,0.35)]"
+                className="inline-flex items-center gap-2.5 font-heading text-sm font-bold tracking-wide py-2.5 px-6 lg:px-7 rounded-full border border-accent/80 text-accent bg-accent/10 hover:bg-accent hover:text-on-accent hover:border-transparent transition-all duration-300 shadow-sm hover:shadow-[0_0_24px_rgba(197,168,105,0.35)]"
               >
                 <span>Request Invite</span>
                 <ArrowRight className="w-4 h-4" />

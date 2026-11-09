@@ -11,11 +11,11 @@ interface CinematicHeroProps {
 }
 
 const ROTATING_WORDS = [
-  { text: "ACADEMIA", color: "text-accent" },    // Signature Champagne Gold
-  { text: "INNOVATION", color: "text-accent-light" },  // Warm Platinum Champagne
-  { text: "RESEARCH", color: "text-accent" },    // Rich Metallic Gold
-  { text: "LEADERSHIP", color: "text-accent-hover" },  // Muted Warm Bronze
-  { text: "FORESIGHT", color: "text-accent-light" },   // Soft Sunlit Brass
+  { text: "ACADEMIA", color: "text-accent" },
+  { text: "INNOVATION", color: "text-accent" },
+  { text: "RESEARCH", color: "text-accent" },
+  { text: "LEADERSHIP", color: "text-accent" },
+  { text: "FORESIGHT", color: "text-accent" },
 ];
 
 const HERO_SLIDES = [
@@ -215,21 +215,21 @@ export function CinematicHero({ onOpenInvite }: CinematicHeroProps) {
               transition={{ duration: 0.8, delay: 0.38, ease: [0.16, 1, 0.3, 1] }}
               className="pt-1 flex items-center gap-2 text-xs font-medium text-content-muted flex-wrap"
             >
-              <span className="inline-flex items-center gap-1.5 text-content font-semibold uppercase tracking-wider text-[11px]">
+              <span className="inline-flex items-center gap-1.5 text-content font-semibold uppercase tracking-wider text-[11px] whitespace-nowrap">
                 <MapPin className="w-3.5 h-3.5 text-accent" />
                 Metro Footprint:
               </span>
-              <span>Bengaluru</span>
-              <span className="text-content-faint">•</span>
-              <span>Hyderabad</span>
-              <span className="text-content-faint">•</span>
-              <span>Kolkata</span>
-              <span className="text-content-faint">•</span>
-              <span>Mumbai</span>
-              <span className="text-content-faint">•</span>
-              <span>Chennai</span>
-              <span className="text-content-faint">•</span>
-              <span>Bhubaneswar</span>
+              <span className="whitespace-nowrap">Bengaluru</span>
+              <span className="text-content-faint select-none">•</span>
+              <span className="whitespace-nowrap">Hyderabad</span>
+              <span className="text-content-faint select-none">•</span>
+              <span className="whitespace-nowrap">Kolkata</span>
+              <span className="text-content-faint select-none">•</span>
+              <span className="whitespace-nowrap">Mumbai</span>
+              <span className="text-content-faint select-none">•</span>
+              <span className="whitespace-nowrap">Chennai</span>
+              <span className="text-content-faint select-none">•</span>
+              <span className="whitespace-nowrap">Bhubaneswar</span>
             </motion.div>
 
             {/* CTAs */}

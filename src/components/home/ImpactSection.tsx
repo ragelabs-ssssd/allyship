@@ -51,7 +51,7 @@ function AnimatedNumber({ end, suffix = "", decimals = 0, duration = 2000 }: Cou
   }, [isInView, end, duration]);
 
   return (
-    <span ref={ref}>
+    <span ref={ref} className="tabular-nums">
       {decimals > 0 ? count.toFixed(decimals) : Math.floor(count)}
       {suffix}
     </span>

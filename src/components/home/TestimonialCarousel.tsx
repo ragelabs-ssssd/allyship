@@ -210,7 +210,7 @@ export function TestimonialCarousel() {
                   <div className="flex flex-1 flex-col justify-between p-6 sm:p-7">
                     <div className="space-y-4">
                       <Quote className="w-7 h-7 text-accent opacity-80" />
-                      <p className="font-serif italic font-normal tracking-normal text-base leading-[1.45] text-content">
+                      <p className="font-serif italic font-normal tracking-normal text-base sm:text-[17px] leading-[1.5] text-content">
                         &ldquo;{item.quote}&rdquo;
                       </p>
                     </div>

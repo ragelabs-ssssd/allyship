@@ -30,10 +30,10 @@ export function ChairmanVision() {
                   <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
                     Founding Visionary
                   </span>
-                  <h4 className="font-display text-base font-semibold tracking-normal text-content leading-snug">
+                  <h4 className="font-display text-xl sm:text-2xl font-bold tracking-normal text-content leading-snug">
                     Prof. (Dr.) Manojranjan Nayak
                   </h4>
-                  <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-secondary">
+                  <p className="font-sans text-xs sm:text-sm font-medium tracking-[0.02em] leading-relaxed text-content-secondary mt-1">
                     Founder President &amp; Chairman, Siksha &lsquo;O&rsquo; Anusandhan
                   </p>
                 </div>
@@ -54,6 +54,14 @@ export function ChairmanVision() {
                 corporate boardrooms and academic halls — an obligation to sculpt talent that leads
                 with intellect, empathy, and technological resilience.&rdquo;
               </blockquote>
+              <div className="pt-2">
+                <p className="font-display text-2xl sm:text-3xl font-extrabold text-content tracking-tight">
+                  Prof. (Dr.) Manojranjan Nayak
+                </p>
+                <p className="font-sans text-xs sm:text-sm font-medium uppercase tracking-[0.12em] text-accent mt-1">
+                  Founder President &amp; Chairman, Siksha &lsquo;O&rsquo; Anusandhan
+                </p>
+              </div>
             </div>
 
             <div className="space-y-3 pt-4 border-t border-line text-sm sm:text-base text-content-secondary leading-relaxed">
