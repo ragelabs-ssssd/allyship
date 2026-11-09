@@ -65,22 +65,22 @@ export function HeroBackdrop({
           muted
           playsInline
           preload="auto"
-          className="absolute left-1/2 top-1/2 h-[56.25vw] min-h-[100vh] w-[100vw] min-w-[177.78vh] -translate-x-1/2 -translate-y-1/2 object-cover border-0 brightness-[1.03] saturate-105"
+          className="absolute left-1/2 top-1/2 h-[56.25vw] min-h-[100vh] w-[100vw] min-w-[177.78vh] -translate-x-1/2 -translate-y-1/2 object-cover border-0 dark:brightness-[1.03] dark:saturate-105 brightness-[0.97] contrast-[1.06] saturate-[1.12]"
         >
           <source src={activeVideoSrc} type="video/mp4" />
         </video>
       )}
 
-      {/* Theme-aware scrims: gentle ambient overlay ensuring readability of copy */}
-      <div className={`absolute inset-0 bg-canvas/40 ${scrimClassName}`} />
+      {/* Theme-aware scrims: gentle ambient overlay ensuring readability of copy while preserving vivid video clarity */}
+      <div className={`absolute inset-0 bg-transparent dark:bg-canvas/40 ${scrimClassName}`} />
       <div
         className={`absolute inset-0 ${
           align === "right"
-            ? "bg-gradient-to-l from-canvas/90 via-canvas/60 to-canvas/10"
-            : "bg-gradient-to-r from-canvas/90 via-canvas/50 to-canvas/10"
+            ? "bg-gradient-to-l from-canvas/85 via-canvas/35 to-transparent dark:from-canvas/90 dark:via-canvas/60 dark:to-canvas/10"
+            : "bg-gradient-to-r from-canvas/85 via-canvas/35 to-transparent dark:from-canvas/90 dark:via-canvas/50 dark:to-canvas/10"
         }`}
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-canvas/75 via-transparent to-canvas/25" />
+      <div className="absolute inset-0 bg-gradient-to-t from-canvas/70 via-transparent to-transparent dark:from-canvas/75 dark:to-canvas/25" />
     </div>
   );
 }
