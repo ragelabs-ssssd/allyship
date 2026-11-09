@@ -90,11 +90,11 @@ export function BentoGridConcept() {
             </p>
           </div>
 
-          <div className="pt-4 border-t border-line">
-            <div className="text-[11px] font-semibold text-content">
+          <div className="pt-4 border-t border-line space-y-1">
+            <span className="font-sans text-[11px] font-semibold text-content block">
               Executive Takeaway:
-            </div>
-            <p className="text-xs text-accent mt-0.5">
+            </span>
+            <p className="font-sans text-xs text-accent font-medium leading-relaxed">
               Championship grit, setback recovery protocols, and high-pressure psychological safety embedded into student mentorship.
             </p>
           </div>
@@ -120,19 +120,19 @@ export function BentoGridConcept() {
           </div>
 
           {/* Pan-India Metro Corridor Cities */}
-          <div className="pt-4 border-t border-line space-y-1.5">
-            <div className="text-[11px] font-semibold text-content">
+          <div className="pt-4 border-t border-line space-y-1">
+            <span className="font-sans text-[11px] font-semibold text-content block">
               Regional Chapter Corridors:
-            </div>
-            <p className="font-sans text-[11px] sm:text-xs font-semibold text-accent tracking-wide flex flex-wrap items-center gap-x-2 gap-y-1">
+            </span>
+            <p className="font-sans text-xs font-medium text-accent leading-relaxed flex flex-wrap items-center gap-x-2 gap-y-1">
               <span>Bengaluru</span>
-              <span className="text-content-muted/60 select-none">/</span>
+              <span className="text-content-faint select-none font-light">/</span>
               <span>Hyderabad</span>
-              <span className="text-content-muted/60 select-none">/</span>
+              <span className="text-content-faint select-none font-light">/</span>
               <span>Mumbai</span>
-              <span className="text-content-muted/60 select-none">/</span>
+              <span className="text-content-faint select-none font-light">/</span>
               <span>Chennai</span>
-              <span className="text-content-muted/60 select-none">/</span>
+              <span className="text-content-faint select-none font-light">/</span>
               <span>Kolkata</span>
             </p>
           </div>
@@ -157,11 +157,13 @@ export function BentoGridConcept() {
             </p>
           </div>
 
-          <div className="p-3.5 rounded-xl bg-surface-2 border border-line space-y-1">
-            <div className="text-xs font-bold text-content">18 Specialized Research Hubs</div>
-            <div className="text-[11px] text-content-secondary">
-              Supported by the AIC-SOA Foundation under NITI Aayog to tackle real-world industrial challenges.
-            </div>
+          <div className="pt-4 border-t border-line space-y-1">
+            <span className="font-sans text-[11px] font-semibold text-content block">
+              Enterprise Research Hubs:
+            </span>
+            <p className="font-sans text-xs text-accent font-medium leading-relaxed">
+              18 specialized innovation laboratories supported by AIC-SOA Foundation under NITI Aayog to tackle real-world industrial challenges.
+            </p>
           </div>
         </div>
 
@@ -184,13 +186,16 @@ export function BentoGridConcept() {
             </p>
           </div>
 
-          <div className="pt-4 border-t border-line">
+          <div className="pt-4 border-t border-line space-y-1">
+            <span className="font-sans text-[11px] font-semibold text-content block">
+              Anti-Performative Thesis:
+            </span>
             <Link
               href="#manifesto"
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-accent hover:underline"
+              className="inline-flex items-center gap-1.5 font-sans text-xs font-medium text-accent hover:text-accent-hover transition-colors group"
             >
-              <span>Explore Anti-Performative Thesis</span>
-              <ArrowRight className="w-3.5 h-3.5" />
+              <span>Explore The Institutional Framework</span>
+              <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
         </div>
