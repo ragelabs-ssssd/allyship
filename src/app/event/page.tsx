@@ -752,7 +752,7 @@ function EventContent() {
 
       {/* 2. INSTITUTIONAL PHILOSOPHY & MANDATE */}
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
-        <div className="text-center max-w-5xl mx-auto space-y-3 mb-16">
+        <div className="text-center max-w-6xl mx-auto space-y-3 mb-16">
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             The Institutional Mandate
           </span>
@@ -761,8 +761,8 @@ function EventContent() {
             Why Allyship<span className="text-accent">++</span>?
           </h2>
 
-          <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal max-w-5xl mx-auto [text-wrap:balance]">
-            In an era of rapid disruption, transactional placement is no longer sufficient. <span className="whitespace-nowrap">Siksha &lsquo;O&rsquo; Anusandhan moves</span><br className="hidden md:inline" />{" "}
+          <p className="text-base sm:text-[17px] text-content-secondary leading-relaxed font-normal max-w-6xl mx-auto">
+            In an era of rapid disruption, transactional placement is no longer sufficient. <span className="whitespace-nowrap">Siksha &lsquo;O&rsquo; Anusandhan moves</span><br className="hidden lg:inline" />{" "}
             academic leadership directly into corporate boardrooms—co-creating empathetic, resilient, and future-ready talent ecosystems.
           </p>
         </div>
