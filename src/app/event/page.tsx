@@ -615,7 +615,7 @@ function EventContent() {
   return (
     <div className="flex flex-col w-full bg-canvas text-content pb-0">
       {/* 1. EDITORIAL LUXE HERO SECTION */}
-      <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 border-b border-line overflow-hidden">
+      <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 min-h-[720px] sm:min-h-[780px] lg:min-h-[820px] xl:min-h-[840px] flex items-center border-b border-line overflow-hidden">
         <HeroBackdrop />
         <div className="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">

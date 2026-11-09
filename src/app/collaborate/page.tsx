@@ -162,7 +162,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
   return (
     <div className="flex flex-col w-full bg-canvas text-content pb-0">
       {/* 1. EDITORIAL LUXE HERO SECTION */}
-      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 border-b border-line overflow-hidden">
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 min-h-[640px] lg:min-h-[720px] flex items-center border-b border-line overflow-hidden">
         <HeroBackdrop videoSrc={SOA_VIDEO_SRC} align="right" />
         <div className="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full flex justify-end">
           <div className="max-w-3xl space-y-6 text-left sm:text-right flex flex-col items-start sm:items-end">
