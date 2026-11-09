@@ -865,9 +865,9 @@ function EventContent() {
 
       {/* 2.5 MESSAGE FROM CONCLAVE CONVENER (UNDER WHY ALLYSHIP) */}
       <section id="institutional-mandate" className="py-16 lg:py-20 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-b border-line">
-        <div className="bg-surface rounded-3xl p-8 sm:p-12 border border-line shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-stretch group">
+        <div className="bg-surface rounded-3xl p-8 sm:p-12 border border-line shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-center group">
           {/* Text on Left */}
-          <div className="md:col-span-7 flex flex-col justify-between space-y-6">
+          <div className="md:col-span-7 space-y-6">
             <div className="space-y-4">
               <div className="space-y-1.5">
                 <span className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-accent block">
@@ -897,18 +897,18 @@ function EventContent() {
             </div>
           </div>
 
-          {/* Photo on Right: Cinematic Smart-Crop & Alignment */}
-          <div className="md:col-span-5 relative w-full h-[380px] sm:h-[440px] md:h-full md:min-h-[460px] rounded-2xl overflow-hidden bg-surface-3 border border-line shadow-2xl">
+          {/* Photo on Right: Proper Uncropped Whole Figure Framing */}
+          <div className="md:col-span-5 relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-surface-3 border border-line shadow-2xl">
             <Image
-              src="/IMG_7328_cinematic.jpg"
+              src="/IMG_7328_whole_4_3.jpg"
               alt="Prof. (Dr.) Raj Kumar Hota addressing Allyship++ Conclave at podium"
               fill
               sizes="(max-width: 768px) 100vw, 40vw"
-              className="object-cover object-center group-hover:scale-[1.03] transition-transform duration-700 ease-out"
+              className="object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
               priority
             />
-            {/* Cinematic Vignette & Bottom Scrim */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none" />
+            {/* Subtle Gradient Scrim & Rim Lighting */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
             <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none" />
 
             {/* Glassmorphic Convener Badge */}
@@ -917,12 +917,6 @@ function EventContent() {
                 <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
                 Conclave Convener
               </span>
-            </div>
-
-            {/* Bottom Cinematic Accent */}
-            <div className="absolute bottom-4 left-4 right-4 z-10 flex items-center justify-between text-[11px] font-sans text-white/80 pointer-events-none">
-              <span className="font-medium tracking-wide">SOA Allyship++ Conclave</span>
-              <span className="font-mono text-accent text-[10px]">National Chapter</span>
             </div>
           </div>
         </div>
