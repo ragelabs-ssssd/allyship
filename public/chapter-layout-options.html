@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALLYSHIP++ | Chapter Detail Structural Layout Options</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            accent: '#C5A869',
+            'accent-light': '#E8D5A7',
+            'accent-dark': '#9A7E3E',
+            canvas: 'var(--canvas)',
+            surface: 'var(--surface)',
+            'surface-2': 'var(--surface-2)',
+            'surface-3': 'var(--surface-3)',
+            line: 'var(--line)',
+            content: 'var(--content)',
+            'content-muted': 'var(--content-muted)',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root[data-theme="dark"] {
+      --canvas: #090909;
+      --surface: #121212;
+      --surface-2: #181818;
+      --surface-3: #222222;
+      --line: rgba(255, 255, 255, 0.12);
+      --content: #FFFFFF;
+      --content-muted: #9CA3AF;
+    }
+    :root[data-theme="light"] {
+      --canvas: #F8F6F1;
+      --surface: #FFFFFF;
+      --surface-2: #F1ECE2;
+      --surface-3: #E4DEC5;
+      --line: rgba(15, 23, 42, 0.12);
+      --content: #0F172A;
+      --content-muted: #64748B;
+    }
+    body {
+      background-color: var(--canvas);
+      color: var(--content);
+      font-family: 'Inter', sans-serif;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+    .font-display { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+  </style>
+</head>
+<body class="min-h-screen py-8 px-4 sm:px-8 max-w-[1500px] mx-auto">
+
+  <!-- Header & Controls -->
+  <header class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-line mb-8">
+    <div>
+      <span class="font-mono text-xs uppercase tracking-[0.2em] text-accent font-bold block">
+        Architecture Exploration
+      </span>
+      <h1 class="font-display text-2xl sm:text-4xl font-extrabold tracking-tight mt-1">
+        Chapter Structural Layout Redesign
+      </h1>
+      <p class="text-sm text-content-muted mt-2 max-w-2xl leading-relaxed">
+        Replacing the repetitive stack of flat grey boxes with high-end, editorial structures tailored for corporate conclaves.
+      </p>
+    </div>
+
+    <!-- Theme & Quick Links -->
+    <div class="flex items-center gap-3">
+      <button onclick="toggleTheme()" class="px-4 py-2 rounded-full border border-line bg-surface text-xs font-semibold hover:border-accent transition-colors shadow-sm">
+        <span id="theme-icon">☀️ Light Mode</span>
+      </button>
+      <a href="http://localhost:3000/event#chapter-details" class="px-5 py-2 rounded-full bg-accent text-black font-bold text-xs hover:brightness-110 transition-all shadow-md">
+        View Current Page ↗
+      </a>
+    </div>
+  </header>
+
+  <!-- Layout Option Selector Tabs -->
+  <nav class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+    <!-- Option 1 -->
+    <button onclick="setLayout(1)" id="tab-1" class="layout-tab text-left p-5 rounded-3xl border-2 border-accent bg-surface-2 ring-4 ring-accent/20 transition-all shadow-xl">
+      <div class="flex items-center justify-between mb-2">
+        <span class="px-2.5 py-0.5 rounded-full bg-accent/20 text-accent font-mono text-[10px] font-bold uppercase">
+          Option 1 · Recommended
+        </span>
+        <span class="text-xs text-accent font-semibold">Editorial</span>
+      </div>
+      <h3 class="font-display text-lg font-bold">Executive Bento & Narrative Grid</h3>
+      <p class="text-xs text-content-muted mt-1 leading-relaxed">
+        Asymmetrical 2-column magazine layout: Left side anchors the dialogue & keynote spotlight; Right side showcases the CXO roster with rich visual hierarchy.
+      </p>
+    </button>
+
+    <!-- Option 2 -->
+    <button onclick="setLayout(2)" id="tab-2" class="layout-tab text-left p-5 rounded-3xl border border-line bg-surface hover:border-accent/60 transition-all">
+      <div class="flex items-center justify-between mb-2">
+        <span class="px-2.5 py-0.5 rounded-full bg-surface-3 text-content-muted font-mono text-[10px] font-bold uppercase">
+          Option 2 · Split Screen
+        </span>
+        <span class="text-xs text-content-muted">Two-Column</span>
+      </div>
+      <h3 class="font-display text-lg font-bold">Pan-India Timeline Sidebar + Dossier</h3>
+      <p class="text-xs text-content-muted mt-1 leading-relaxed">
+        Replaces the 7 squished top buttons with an executive left sidebar timeline (Edition 2.0 vs 1.0) and a clean, spacious dossier on the right.
+      </p>
+    </button>
+
+    <!-- Option 3 -->
+    <button onclick="setLayout(3)" id="tab-3" class="layout-tab text-left p-5 rounded-3xl border border-line bg-surface hover:border-accent/60 transition-all">
+      <div class="flex items-center justify-between mb-2">
+        <span class="px-2.5 py-0.5 rounded-full bg-surface-3 text-content-muted font-mono text-[10px] font-bold uppercase">
+          Option 3 · Clean Tabs
+        </span>
+        <span class="text-xs text-content-muted">Segmented Dossier</span>
+      </div>
+      <h3 class="font-display text-lg font-bold">Segmented In-Card Pill Navigation</h3>
+      <p class="text-xs text-content-muted mt-1 leading-relaxed">
+        Zero vertical clutter: seamlessly tab between [Strategic Overview], [Corporate Panelists], [Sports Icons], and [SOA Delegation] inside the card.
+      </p>
+    </button>
+  </nav>
+
+  <!-- ========================================================
+       OPTION 1: EXECUTIVE EDITORIAL BENTO GRID (RECOMMENDED)
+       ======================================================== -->
+  <section id="layout-1" class="layout-view space-y-8">
+    <div class="p-4 rounded-2xl bg-accent/10 border border-accent/25 text-xs text-accent flex items-center justify-between">
+      <span>✨ <strong>Option 1 Overview:</strong> Asymmetrical editorial bento grid. Notice how the sports icon and dialogue have distinct personality rather than identical grey boxes.</span>
+      <span class="font-mono font-bold">EDITORIAL LUXURY</span>
+    </div>
+
+    <!-- Chapter Switcher Top Bar (Clean, rounded milestone chips) -->
+    <div class="space-y-3">
+      <div class="flex items-center justify-between">
+        <span class="font-mono text-xs uppercase tracking-widest text-content-muted font-semibold">
+          Select Conclave Chapter:
+        </span>
+        <span class="text-xs text-accent font-medium">7 National Chapters</span>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2.5">
+        <button class="p-3.5 rounded-2xl border-2 border-accent bg-surface-2 text-left ring-2 ring-accent/30 shadow-md">
+          <span class="text-[10px] font-mono text-accent font-bold uppercase block">June 2024 · 1.0</span>
+          <span class="font-display text-sm font-bold text-accent block mt-0.5">Bengaluru</span>
+          <span class="text-[11px] text-content-muted block truncate mt-0.5">Metropolitan Hub</span>
+        </button>
+        <button class="p-3.5 rounded-2xl border border-line bg-surface text-left hover:border-accent transition-all">
+          <span class="text-[10px] font-mono text-content-muted font-semibold uppercase block">July 2024 · 1.0</span>
+          <span class="font-display text-sm font-bold text-content block mt-0.5">Hyderabad</span>
+          <span class="text-[11px] text-content-muted block truncate mt-0.5">Le Meridien</span>
+        </button>
+        <button class="p-3.5 rounded-2xl border border-line bg-surface text-left hover:border-accent transition-all">
+          <span class="text-[10px] font-mono text-content-muted font-semibold uppercase block">Sep 2024 · 1.0</span>
+          <span class="font-display text-sm font-bold text-content block mt-0.5">Kolkata</span>
+          <span class="text-[11px] text-content-muted block truncate mt-0.5">JW Marriott</span>
+        </button>
+        <button class="p-3.5 rounded-2xl border border-line bg-surface text-left hover:border-accent transition-all">
+          <span class="text-[10px] font-mono text-content-muted font-semibold uppercase block">Oct 2025 · 1.0</span>
+          <span class="font-display text-sm font-bold text-content block mt-0.5">Mumbai</span>
+          <span class="text-[11px] text-content-muted block truncate mt-0.5">The St. Regis</span>
+        </button>
+        <button class="p-3.5 rounded-2xl border border-line bg-surface text-left hover:border-accent transition-all">
+          <span class="text-[10px] font-mono text-content-muted font-semibold uppercase block">March 2026 · 2.0</span>
+          <span class="font-display text-sm font-bold text-content block mt-0.5">Bengaluru</span>
+          <span class="text-[11px] text-content-muted block truncate mt-0.5">The Leela Palace</span>
+        </button>
+        <button class="p-3.5 rounded-2xl border border-line bg-surface text-left hover:border-accent transition-all">
+          <span class="text-[10px] font-mono text-content-muted font-semibold uppercase block">May 2026 · 2.0</span>
+          <span class="font-display text-sm font-bold text-content block mt-0.5">Hyderabad</span>
+          <span class="text-[11px] text-content-muted block truncate mt-0.5">ITC Kohenur</span>
+        </button>
+        <button class="p-3.5 rounded-2xl border border-line bg-surface text-left hover:border-accent transition-all">
+          <span class="text-[10px] font-mono text-content-muted font-semibold uppercase block">July 2026 · 2.0</span>
+          <span class="font-display text-sm font-bold text-content block mt-0.5">Chennai</span>
+          <span class="text-[11px] text-content-muted block truncate mt-0.5">Taj Coromandel</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- The Master Bento Card -->
+    <div class="rounded-3xl border border-line bg-surface p-6 sm:p-10 lg:p-12 shadow-2xl space-y-10">
+      <!-- Card Hero Header -->
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 border-b border-line">
+        <div class="space-y-3">
+          <div class="flex flex-wrap items-center gap-2.5">
+            <span class="px-3.5 py-1 rounded-full bg-accent text-black font-mono text-xs font-bold uppercase tracking-wider">
+              Allyship++ 1.0 · 1st Edition
+            </span>
+            <span class="px-3.5 py-1 rounded-full bg-surface-2 border border-line text-content-muted font-mono text-xs">
+              June 2024 · Bengaluru
+            </span>
+            <span class="px-3.5 py-1 rounded-full bg-surface-2 border border-line text-accent font-mono text-xs">
+              ~70 Corporate Leaders & Capability Heads
+            </span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-5xl font-black text-content tracking-tight">
+            Bengaluru: Leadership &amp; Collaboration Across Disciplines
+          </h2>
+        </div>
+        <button class="px-6 py-3 rounded-full bg-accent text-black font-bold text-xs hover:brightness-110 transition-all shrink-0 shadow-lg">
+          Request Conclave Invite →
+        </button>
+      </div>
+
+      <!-- Asymmetrical 2-Column Bento Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- Left Column: Context, Narrative & Sports Spotlight (5 cols) -->
+        <div class="lg:col-span-5 space-y-6">
+          <!-- Overview Card -->
+          <div class="p-6 sm:p-8 rounded-3xl bg-surface-2 border border-line space-y-4">
+            <span class="font-mono text-xs uppercase tracking-widest text-accent font-bold block">
+              Strategic Dialogue Mandate
+            </span>
+            <p class="text-sm leading-relaxed text-content-muted">
+              The first Allyship++ chapter brought around 70 corporate leaders, HR professionals, and industry experts together in Bengaluru. SOA Vice-Chancellor Prof. Pradipta Kumar Nanda opened the conclave, and Olympian Anju Bobby George addressed the gathering on leadership in high-performance environments.
+            </p>
+            <div class="p-4 rounded-2xl bg-surface border border-line text-xs font-medium text-accent">
+              <strong>Key Focus:</strong> Bridging academia and industry, leadership in sports, and the changing expectations of modern workplaces.
+            </div>
+          </div>
+
+          <!-- Highlight Card: Sports Icon / Keynote Guest -->
+          <div class="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-accent/15 via-surface-2 to-surface-2 border border-accent/40 shadow-xl space-y-3 relative overflow-hidden">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-[10px] uppercase tracking-widest text-accent font-bold px-2.5 py-1 rounded-full bg-accent/20 border border-accent/30">
+                🏅 Sports Keynote Spotlight
+              </span>
+              <span class="text-xs text-content-muted font-mono">Olympian</span>
+            </div>
+            <h4 class="font-display text-xl font-bold text-content mt-1">Anju Bobby George</h4>
+            <div class="text-xs font-semibold text-accent">
+              Olympian &amp; First Indian World Athletics Championship Medalist
+            </div>
+            <p class="text-xs text-content-muted leading-relaxed italic pt-1">
+              &ldquo;Virtual Keynote on &lsquo;Leadership in Sports&rsquo; and coach-athlete allyship.&rdquo;
+            </p>
+          </div>
+
+          <!-- Institutional Delegation Footer -->
+          <div class="p-5 rounded-2xl bg-surface border border-line space-y-3">
+            <span class="font-mono text-[10px] uppercase tracking-widest text-content-muted font-bold block">
+              SOA University Leadership Delegation
+            </span>
+            <div class="space-y-2 text-xs">
+              <div>
+                <strong class="text-content font-semibold block">Prof. Pradipta Kumar Nanda</strong>
+                <span class="text-content-muted">Vice-Chancellor, SOA (Inaugural Address)</span>
+              </div>
+              <div class="pt-2 border-t border-line">
+                <strong class="text-content font-semibold block">Prof. (Dr.) Raj Kumar Hota</strong>
+                <span class="text-content-muted">Dean of Corporate Relations and Placement (Convener)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Corporate CXO Roster (7 cols) -->
+        <div class="lg:col-span-7 space-y-6">
+          <!-- Moderator Spotlight -->
+          <div class="p-6 rounded-3xl bg-surface-2 border border-line hover:border-accent transition-all shadow-md flex items-center justify-between gap-4">
+            <div class="space-y-1">
+              <span class="font-mono text-[10px] uppercase tracking-widest text-accent font-bold">
+                Conclave Discussion Moderator
+              </span>
+              <h4 class="font-display text-lg font-bold text-content">Rajeev Kumar Singh</h4>
+              <p class="text-xs text-content-muted">Chief Strategist, Open Link Foundation</p>
+            </div>
+            <span class="px-3 py-1.5 rounded-xl bg-surface border border-line text-[11px] font-mono text-accent font-semibold shrink-0">
+              Session Chair
+            </span>
+          </div>
+
+          <!-- Corporate Panelists Grid -->
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs uppercase tracking-widest text-content-muted font-bold">
+                Corporate Panelists Roster (5 Leaders)
+              </span>
+              <span class="text-xs text-accent">Engineering &amp; People Leadership</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <!-- Panelist 1 -->
+              <div class="p-5 rounded-2xl bg-surface-2 border border-line hover:border-accent/60 transition-all hover:-translate-y-0.5 space-y-2">
+                <span class="text-[10px] font-mono uppercase tracking-wider text-accent block">Engineering R&amp;D</span>
+                <h5 class="font-display text-sm font-bold text-content">Dr. P.B. Kotur</h5>
+                <p class="text-xs text-content-muted">Global Head, Engineering Academy, L&amp;T Technology Services</p>
+              </div>
+
+              <!-- Panelist 2 -->
+              <div class="p-5 rounded-2xl bg-surface-2 border border-line hover:border-accent/60 transition-all hover:-translate-y-0.5 space-y-2">
+                <span class="text-[10px] font-mono uppercase tracking-wider text-accent block">HR &amp; People Strategy</span>
+                <h5 class="font-display text-sm font-bold text-content">C. Aparna</h5>
+                <p class="text-xs text-content-muted">CHRO, Torry Harris Integration Solutions</p>
+              </div>
+
+              <!-- Panelist 3 -->
+              <div class="p-5 rounded-2xl bg-surface-2 border border-line hover:border-accent/60 transition-all hover:-translate-y-0.5 space-y-2">
+                <span class="text-[10px] font-mono uppercase tracking-wider text-accent block">Global Banking &amp; Tech</span>
+                <h5 class="font-display text-sm font-bold text-content">Baliram Mutagekar</h5>
+                <p class="text-xs text-content-muted">Vice President, BNY Mellon</p>
+              </div>
+
+              <!-- Panelist 4 -->
+              <div class="p-5 rounded-2xl bg-surface-2 border border-line hover:border-accent/60 transition-all hover:-translate-y-0.5 space-y-2">
+                <span class="text-[10px] font-mono uppercase tracking-wider text-accent block">Enterprise Tech</span>
+                <h5 class="font-display text-sm font-bold text-content">Dr. S.J. Naganagouda</h5>
+                <p class="text-xs text-content-muted">Chief People Officer, Tally Solutions Pvt Ltd</p>
+              </div>
+
+              <!-- Panelist 5 -->
+              <div class="p-5 rounded-2xl bg-surface-2 border border-line hover:border-accent/60 transition-all hover:-translate-y-0.5 space-y-2 sm:col-span-2">
+                <span class="text-[10px] font-mono uppercase tracking-wider text-accent block">Advisory &amp; Cloud</span>
+                <h5 class="font-display text-sm font-bold text-content">Arun Parija</h5>
+                <p class="text-xs text-content-muted">Partner, Coserve Software Solutions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       OPTION 2: PAN-INDIA TIMELINE SIDEBAR + DOSSIER
+       ======================================================== -->
+  <section id="layout-2" class="layout-view hidden space-y-8">
+    <div class="p-4 rounded-2xl bg-accent/10 border border-accent/25 text-xs text-accent">
+      📑 <strong>Option 2 Overview:</strong> Instead of squished buttons across the top, the 7 chapters form a permanent timeline on the left, giving full vertical room to the chapter details on the right.
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <!-- Left Timeline Sidebar (4 cols) -->
+      <div class="lg:col-span-4 rounded-3xl border border-line bg-surface p-6 space-y-6 shadow-xl">
+        <div class="space-y-1 pb-4 border-b border-line">
+          <span class="font-mono text-xs uppercase tracking-widest text-accent font-bold">Chapter Timeline</span>
+          <h3 class="font-display text-lg font-bold">Pan-India Conclave Cadence</h3>
+        </div>
+
+        <!-- Edition 2.0 Group -->
+        <div class="space-y-2.5">
+          <span class="font-mono text-[10px] uppercase tracking-wider text-accent font-semibold block px-1">
+            Edition 2.0 (2026)
+          </span>
+          <div class="space-y-2">
+            <button class="w-full p-3.5 rounded-2xl border border-line bg-surface-2 text-left hover:border-accent transition-all">
+              <span class="font-display text-sm font-bold text-content block">Bengaluru 2.0</span>
+              <span class="text-xs text-content-muted block">March 2026 · The Leela Palace</span>
+            </button>
+            <button class="w-full p-3.5 rounded-2xl border border-line bg-surface-2 text-left hover:border-accent transition-all">
+              <span class="font-display text-sm font-bold text-content block">Hyderabad 2.0</span>
+              <span class="text-xs text-content-muted block">May 2026 · ITC Kohenur</span>
+            </button>
+            <button class="w-full p-3.5 rounded-2xl border border-line bg-surface-2 text-left hover:border-accent transition-all">
+              <span class="font-display text-sm font-bold text-content block">Chennai 2.0</span>
+              <span class="text-xs text-content-muted block">July 2026 · Taj Coromandel</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Edition 1.0 Group -->
+        <div class="space-y-2.5 pt-4 border-t border-line">
+          <span class="font-mono text-[10px] uppercase tracking-wider text-content-muted font-semibold block px-1">
+            Edition 1.0 (2024)
+          </span>
+          <div class="space-y-2">
+            <button class="w-full p-3.5 rounded-2xl border-2 border-accent bg-accent/15 text-left ring-2 ring-accent/30 shadow-md">
+              <span class="font-display text-sm font-bold text-accent block">Bengaluru 1.0 (Active)</span>
+              <span class="text-xs text-content-muted block">June 2024 · Metropolitan Hub</span>
+            </button>
+            <button class="w-full p-3.5 rounded-2xl border border-line bg-surface-2 text-left hover:border-accent transition-all">
+              <span class="font-display text-sm font-bold text-content block">Hyderabad 1.0</span>
+              <span class="text-xs text-content-muted block">July 2024 · Le Meridien</span>
+            </button>
+            <button class="w-full p-3.5 rounded-2xl border border-line bg-surface-2 text-left hover:border-accent transition-all">
+              <span class="font-display text-sm font-bold text-content block">Kolkata 1.0</span>
+              <span class="text-xs text-content-muted block">Sep 2024 · JW Marriott</span>
+            </button>
+            <button class="w-full p-3.5 rounded-2xl border border-line bg-surface-2 text-left hover:border-accent transition-all">
+              <span class="font-display text-sm font-bold text-content block">Mumbai 1.0</span>
+              <span class="text-xs text-content-muted block">Oct 2025 · The St. Regis</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Detailed Dossier (8 cols) -->
+      <div class="lg:col-span-8 rounded-3xl border border-line bg-surface p-6 sm:p-10 space-y-8 shadow-2xl">
+        <div class="space-y-3 pb-6 border-b border-line">
+          <span class="px-3.5 py-1 rounded-full bg-accent text-black font-mono text-xs font-bold uppercase">
+            June 2024 · 1st Edition
+          </span>
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-content mt-2">
+            Bengaluru: Leadership and Collaboration Across Disciplines
+          </h2>
+          <p class="text-xs sm:text-sm text-content-muted">
+            Bengaluru Metropolitan Hub · ~70 Corporate Leaders &amp; Capability Heads
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <h4 class="font-display text-xs font-bold uppercase tracking-wider text-accent">Dialogue Mandate</h4>
+          <p class="text-sm text-content-muted leading-relaxed">
+            The first Allyship++ chapter brought around 70 corporate leaders, HR professionals and industry experts together in Bengaluru. SOA Vice-Chancellor Prof. Pradipta Kumar Nanda opened the conclave, and Olympian Anju Bobby George addressed the gathering virtually on "Leadership in Sports".
+          </p>
+        </div>
+
+        <!-- Panelists & Guests Grid -->
+        <div class="space-y-4 pt-6 border-t border-line">
+          <h4 class="font-display text-xs font-bold uppercase tracking-wider text-content">Distinguished Delegation</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-2xl bg-surface-2 border border-line">
+              <span class="text-[10px] font-mono text-accent block uppercase">Sports Keynote</span>
+              <h5 class="font-display text-sm font-bold text-content mt-1">Anju Bobby George</h5>
+              <p class="text-xs text-content-muted">Olympian &amp; World Athletics Medalist</p>
+            </div>
+            <div class="p-4 rounded-2xl bg-surface-2 border border-line">
+              <span class="text-[10px] font-mono text-accent block uppercase">Session Chair</span>
+              <h5 class="font-display text-sm font-bold text-content mt-1">Rajeev Kumar Singh</h5>
+              <p class="text-xs text-content-muted">Chief Strategist, Open Link Foundation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       OPTION 3: SEGMENTED IN-CARD PILL NAVIGATION
+       ======================================================== -->
+  <section id="layout-3" class="layout-view hidden space-y-8">
+    <div class="p-4 rounded-2xl bg-accent/10 border border-accent/25 text-xs text-accent">
+      💡 <strong>Option 3 Overview:</strong> Cuts out the endless vertical scroll by providing inner tabs: [Overview], [Corporate Panelists], [Keynotes], and [SOA Delegation].
+    </div>
+
+    <!-- Chapter Card with Internal Tabs -->
+    <div class="rounded-3xl border border-line bg-surface p-6 sm:p-10 shadow-2xl space-y-8">
+      <!-- Top Title -->
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-line">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-widest text-accent font-bold">Allyship++ 1.0 · June 2024</span>
+          <h2 class="font-display text-2xl sm:text-4xl font-extrabold text-content mt-1">
+            Bengaluru: Leadership &amp; Collaboration
+          </h2>
+        </div>
+        <button class="px-5 py-2.5 rounded-full bg-accent text-black font-bold text-xs hover:brightness-110">
+          Request Invite →
+        </button>
+      </div>
+
+      <!-- In-Card Segmented Tabs -->
+      <div class="flex flex-wrap items-center gap-2 border-b border-line pb-4">
+        <button onclick="setInnerTab('overview')" id="inner-tab-overview" class="inner-tab px-4 py-2 rounded-xl bg-accent text-black font-bold text-xs shadow-sm">
+          Overview &amp; Dialogue
+        </button>
+        <button onclick="setInnerTab('panelists')" id="inner-tab-panelists" class="inner-tab px-4 py-2 rounded-xl bg-surface-2 text-content-muted font-medium text-xs hover:text-content">
+          Corporate Panelists (5)
+        </button>
+        <button onclick="setInnerTab('keynotes')" id="inner-tab-keynotes" class="inner-tab px-4 py-2 rounded-xl bg-surface-2 text-content-muted font-medium text-xs hover:text-content">
+          Sports &amp; Keynote Guests
+        </button>
+        <button onclick="setInnerTab('soa')" id="inner-tab-soa" class="inner-tab px-4 py-2 rounded-xl bg-surface-2 text-content-muted font-medium text-xs hover:text-content">
+          SOA Leadership
+        </button>
+      </div>
+
+      <!-- Inner Tab Content 1: Overview -->
+      <div id="inner-content-overview" class="inner-content space-y-4">
+        <p class="text-base text-content-muted leading-relaxed max-w-3xl">
+          The first Allyship++ chapter brought around 70 corporate leaders, HR professionals and industry experts together in Bengaluru. SOA Vice-Chancellor Prof. Pradipta Kumar Nanda opened the conclave, and Olympian Anju Bobby George addressed the gathering virtually on "Leadership in Sports". A panel of leaders from L&T Technology Services, Torry Harris, BNY Mellon and Tally Solutions examined where leadership and corporate relationships are heading next.
+        </p>
+        <div class="p-4 rounded-2xl bg-surface-2 border border-line text-xs font-semibold text-accent w-fit">
+          Key Focus: Bridging academia and industry, leadership in sports, and modern workplaces.
+        </div>
+      </div>
+
+      <!-- Inner Tab Content 2: Panelists -->
+      <div id="inner-content-panelists" class="inner-content hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="p-5 rounded-2xl bg-surface-2 border border-line space-y-1">
+          <span class="text-[10px] font-mono uppercase text-accent font-bold">L&amp;T Technology Services</span>
+          <h5 class="font-display text-sm font-bold text-content">Dr. P.B. Kotur</h5>
+          <p class="text-xs text-content-muted">Global Head, Engineering Academy</p>
+        </div>
+        <div class="p-5 rounded-2xl bg-surface-2 border border-line space-y-1">
+          <span class="text-[10px] font-mono uppercase text-accent font-bold">Torry Harris</span>
+          <h5 class="font-display text-sm font-bold text-content">C. Aparna</h5>
+          <p class="text-xs text-content-muted">CHRO, Integration Solutions</p>
+        </div>
+        <div class="p-5 rounded-2xl bg-surface-2 border border-line space-y-1">
+          <span class="text-[10px] font-mono uppercase text-accent font-bold">BNY Mellon</span>
+          <h5 class="font-display text-sm font-bold text-content">Baliram Mutagekar</h5>
+          <p class="text-xs text-content-muted">Vice President</p>
+        </div>
+      </div>
+
+      <!-- Inner Tab Content 3: Keynotes -->
+      <div id="inner-content-keynotes" class="inner-content hidden space-y-4">
+        <div class="p-6 rounded-2xl bg-surface-2 border border-accent/40 space-y-2">
+          <span class="text-xs font-mono text-accent font-bold">Olympic Guest</span>
+          <h4 class="font-display text-lg font-bold">Anju Bobby George</h4>
+          <p class="text-xs text-content-muted">Olympian &amp; First Indian World Athletics Championship Medalist</p>
+        </div>
+      </div>
+
+      <!-- Inner Tab Content 4: SOA Delegation -->
+      <div id="inner-content-soa" class="inner-content hidden grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="p-5 rounded-2xl bg-surface-2 border border-line">
+          <h5 class="font-display text-sm font-bold">Prof. Pradipta Kumar Nanda</h5>
+          <p class="text-xs text-content-muted">Vice-Chancellor, SOA</p>
+        </div>
+        <div class="p-5 rounded-2xl bg-surface-2 border border-line">
+          <h5 class="font-display text-sm font-bold">Prof. (Dr.) Raj Kumar Hota</h5>
+          <p class="text-xs text-content-muted">Dean of Corporate Relations &amp; Placement</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Scripts -->
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      document.getElementById('theme-icon').textContent = next === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
+    }
+
+    function setLayout(num) {
+      document.querySelectorAll('.layout-view').forEach(el => el.classList.add('hidden'));
+      document.getElementById('layout-' + num).classList.remove('hidden');
+
+      document.querySelectorAll('.layout-tab').forEach(el => {
+        el.className = 'layout-tab text-left p-5 rounded-3xl border border-line bg-surface hover:border-accent/60 transition-all';
+      });
+
+      const active = document.getElementById('tab-' + num);
+      active.className = 'layout-tab text-left p-5 rounded-3xl border-2 border-accent bg-surface-2 ring-4 ring-accent/20 transition-all shadow-xl';
+    }
+
+    function setInnerTab(tab) {
+      document.querySelectorAll('.inner-content').forEach(el => el.classList.add('hidden'));
+      document.getElementById('inner-content-' + tab).classList.remove('hidden');
+
+      document.querySelectorAll('.inner-tab').forEach(el => {
+        el.className = 'inner-tab px-4 py-2 rounded-xl bg-surface-2 text-content-muted font-medium text-xs hover:text-content';
+      });
+
+      const active = document.getElementById('inner-tab-' + tab);
+      active.className = 'inner-tab px-4 py-2 rounded-xl bg-accent text-black font-bold text-xs shadow-sm';
+    }
+  </script>
+</body>
+</html>

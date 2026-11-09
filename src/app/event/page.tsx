@@ -988,148 +988,218 @@ function EventContent() {
         {activeTab === "Chapters" && (
           <div id="chapter-details" className="space-y-10 scroll-mt-24 pt-4">
             {/* City Selector Buttons */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3 scroll-mt-24">
-              {conclaves.map((c, idx) => (
-                <button
-                  key={c.id}
-                  type="button"
-                  onClick={() => setSelectedChapter(idx)}
-                  className={`p-4 rounded-xl border text-left transition-all ${
-                    selectedChapter === idx
-                      ? "bg-surface-2 border-accent ring-2 ring-accent/30 shadow-md text-content"
-                      : "bg-surface border border-line hover:border-line-strong text-content-muted hover:text-content"
-                  }`}
-                >
-                  <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent block">
-                    {c.date}
-                  </span>
-                  <span className="font-display text-sm font-semibold tracking-normal text-content block truncate mt-0.5">
-                    {c.city}
-                  </span>
-                  <span className="font-sans text-xs text-content-muted block truncate mt-0.5 whitespace-nowrap">
-                    {c.editionCycle === "2.0" ? "Chapter 2.0" : "Chapter 1.0"}
-                  </span>
-                </button>
-              ))}
+            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2.5 scroll-mt-24">
+              {conclaves.map((c, idx) => {
+                const isSelected = selectedChapter === idx;
+                return (
+                  <button
+                    key={c.id}
+                    type="button"
+                    onClick={() => setSelectedChapter(idx)}
+                    className={`p-3.5 sm:p-4 rounded-2xl border text-left transition-all cursor-pointer ${
+                      isSelected
+                        ? "bg-surface-2 border-2 border-accent ring-2 ring-accent/30 shadow-md text-content"
+                        : "bg-surface border-line hover:border-accent/50 text-content-muted hover:text-content"
+                    }`}
+                  >
+                    <span
+                      className={`font-mono text-[10px] font-bold uppercase tracking-[0.14em] block ${
+                        isSelected ? "text-accent" : "text-content-muted"
+                      }`}
+                    >
+                      {c.date} · {c.editionCycle === "2.0" ? "2.0" : "1.0"}
+                    </span>
+                    <span
+                      className={`font-display text-sm font-bold tracking-normal block truncate mt-1 ${
+                        isSelected ? "text-accent" : "text-content"
+                      }`}
+                    >
+                      {c.city}
+                    </span>
+                    <span className="font-sans text-xs text-content-muted block truncate mt-0.5 whitespace-nowrap">
+                      {c.venue.split(",")[0]}
+                    </span>
+                  </button>
+                );
+              })}
             </div>
 
-            {/* Selected Conclave Detail Card */}
-            <div id="selected-conclave" className="bg-surface rounded-3xl p-8 sm:p-12 space-y-10 border border-line shadow-xl scroll-mt-24">
-              {/* Header Info */}
-              <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 pb-8 border-b border-line">
+            {/* Selected Conclave Detail Card — Executive Editorial Bento Grid */}
+            <div
+              id="selected-conclave"
+              className="bg-surface rounded-3xl p-6 sm:p-10 lg:p-12 space-y-10 border border-line shadow-2xl scroll-mt-24"
+            >
+              {/* Card Hero Header */}
+              <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 border-b border-line">
                 <div className="space-y-3">
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="px-3 py-1 rounded-full bg-accent text-on-accent font-sans text-[11px] font-semibold uppercase tracking-[0.14em]">
+                  <div className="flex flex-wrap items-center gap-2.5">
+                    <span className="px-3.5 py-1 rounded-full bg-accent text-on-accent font-mono text-xs font-bold uppercase tracking-wider shadow-sm">
                       {currentConclave.edition}
                     </span>
-                    <span className="px-3 py-1 rounded-full bg-surface-2 border border-line text-content-secondary font-sans text-xs font-medium">
+                    <span className="px-3.5 py-1 rounded-full bg-surface-2 border border-line text-content-secondary font-mono text-xs">
                       {currentConclave.date}
                     </span>
-                  </div>
-                  <h2 className="font-display text-3xl sm:text-4xl font-extrabold tracking-[-0.025em] leading-[1.1] text-content scroll-mt-24">
-                    {currentConclave.city}: {currentConclave.title}
-                  </h2>
-                  <div className="flex flex-wrap items-center gap-5 font-sans text-xs text-content-muted">
-                    <span className="flex items-center gap-1.5">
-                      <MapPin className="w-3.5 h-3.5 text-accent" />
-                      {currentConclave.venue}
-                    </span>
-                    <span>•</span>
-                    <span className="flex items-center gap-1.5">
-                      <Users className="w-3.5 h-3.5 text-accent" />
+                    <span className="px-3.5 py-1 rounded-full bg-surface-2 border border-line text-accent font-mono text-xs flex items-center gap-1.5">
+                      <Users className="w-3.5 h-3.5" />
                       {currentConclave.turnout}
                     </span>
+                  </div>
+                  <h2 className="font-display text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.1] text-content scroll-mt-24">
+                    {currentConclave.city}: {currentConclave.title}
+                  </h2>
+                  <div className="flex items-center gap-2 font-sans text-xs text-content-muted">
+                    <MapPin className="w-3.5 h-3.5 text-accent shrink-0" />
+                    <span>{currentConclave.venue}</span>
                   </div>
                 </div>
 
                 <button
                   type="button"
                   onClick={() => setIsInviteOpen(true)}
-                  className="inline-flex items-center gap-2 bg-accent hover:bg-accent-hover text-on-accent font-sans text-xs font-semibold tracking-normal py-2.5 px-5 rounded-full transition-colors duration-200 shadow-sm shrink-0 active:scale-95"
+                  className="inline-flex items-center gap-2 bg-accent hover:bg-accent-hover text-on-accent font-sans text-xs font-bold tracking-normal py-3 px-6 rounded-full transition-all duration-200 shadow-md shrink-0 active:scale-95 cursor-pointer"
                 >
-                  Join Future Conclaves
+                  <span>Join Future Conclaves</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
                 </button>
               </div>
 
-              {/* Narrative Description */}
-              <div className="space-y-3">
-                <h3 className="font-display text-xs font-bold uppercase tracking-[0.16em] text-accent">
-                  Conclave Overview & Strategic Dialogue
-                </h3>
-                <p className="font-sans text-base text-content-secondary leading-relaxed font-normal tracking-[0.01em]">
-                  {currentConclave.desc}
-                </p>
-                <div className="pt-2">
-                  <span className="inline-block font-sans text-xs font-medium text-content-secondary bg-surface-2 px-3.5 py-2 rounded-xl border border-line">
-                    Key Focus: {currentConclave.focus}
-                  </span>
-                </div>
-              </div>
-
-              {/* Sports Legends & Special Chief Guests */}
-              <div id="sports-guests" className="space-y-4 pt-6 border-t border-line scroll-mt-24">
-                <div className="flex items-center gap-2 text-accent">
-                  <Medal className="w-4 h-4" />
-                  <h3 className="font-display text-xs font-bold uppercase tracking-[0.16em] text-content-secondary">
-                    Sports Icons & Keynote Guests
-                  </h3>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {currentConclave.sportsGuests.map((sg) => (
-                    <div key={sg.name} className="p-5 rounded-2xl bg-surface-2 border border-line space-y-1">
-                      <h4 className="font-display text-base font-semibold tracking-normal text-content">{sg.name}</h4>
-                      <div className="font-sans text-sm font-normal tracking-[0.01em] text-accent">{sg.role}</div>
-                      <div className="font-sans text-xs text-content-muted italic">{sg.note}</div>
+              {/* Asymmetrical 2-Column Bento Grid */}
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                {/* Left Column: Context, Narrative, Sports Keynote & Institutional Delegation (5 cols) */}
+                <div className="lg:col-span-5 space-y-6">
+                  {/* Strategic Dialogue Mandate Card */}
+                  <div className="p-6 sm:p-7 rounded-3xl bg-surface-2 border border-line space-y-4 shadow-sm">
+                    <span className="font-mono text-xs uppercase tracking-widest text-accent font-bold block">
+                      Strategic Dialogue Mandate
+                    </span>
+                    <p className="font-sans text-sm leading-relaxed text-content-secondary font-normal">
+                      {currentConclave.desc}
+                    </p>
+                    <div className="p-4 rounded-2xl bg-surface border border-line text-xs font-medium text-accent">
+                      <strong className="font-bold">Key Focus:</strong> {currentConclave.focus}
                     </div>
-                  ))}
-                </div>
-              </div>
+                  </div>
 
-              {/* Moderators & Corporate Panelists */}
-              <div id="chapter-panelists" className="space-y-4 pt-6 border-t border-line scroll-mt-24">
-                <div className="flex items-center gap-2">
-                  <Users className="w-4 h-4 text-accent" />
-                  <h3 className="font-display text-xs font-bold uppercase tracking-[0.16em] text-content-secondary">
-                    Moderator & Corporate Panelists
-                  </h3>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {currentConclave.moderators.map((m) => (
-                    <div key={m.name} className="p-5 rounded-2xl bg-surface-2 border border-line hover:border-accent/60 transition-colors">
-                      <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">Moderator</span>
-                      <h4 className="font-display text-base font-semibold tracking-normal text-content mt-1">{m.name}</h4>
-                      <div className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-muted mt-0.5">{m.role}</div>
+                  {/* Sports Icons & Keynote Guests Spotlight (Rendered if exists) */}
+                  {currentConclave.sportsGuests && currentConclave.sportsGuests.length > 0 && (
+                    <div className="space-y-4">
+                      {currentConclave.sportsGuests.map((sg) => (
+                        <div
+                          key={sg.name}
+                          className="p-6 sm:p-7 rounded-3xl bg-gradient-to-br from-accent/15 via-surface-2 to-surface-2 border border-accent/40 shadow-xl space-y-3 relative overflow-hidden group"
+                        >
+                          <div className="flex items-center justify-between">
+                            <span className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest text-accent font-bold px-3 py-1 rounded-full bg-accent/20 border border-accent/30">
+                              <Medal className="w-3.5 h-3.5" />
+                              Sports Keynote Spotlight
+                            </span>
+                            <span className="text-xs text-content-muted font-mono">Special Guest</span>
+                          </div>
+                          <div>
+                            <h4 className="font-display text-xl font-bold text-content mt-1 group-hover:text-accent transition-colors">
+                              {sg.name}
+                            </h4>
+                            <div className="text-xs font-semibold text-accent mt-0.5">
+                              {sg.role}
+                            </div>
+                          </div>
+                          <p className="text-xs text-content-muted leading-relaxed italic pt-1 border-t border-line/60">
+                            &ldquo;{sg.note}&rdquo;
+                          </p>
+                        </div>
+                      ))}
                     </div>
-                  ))}
+                  )}
+
+                  {/* SOA University Institutional Delegation Card */}
+                  {currentConclave.leadership && currentConclave.leadership.length > 0 && (
+                    <div className="p-6 rounded-3xl bg-surface-2 border border-line space-y-4 shadow-sm">
+                      <div className="flex items-center gap-2">
+                        <Building className="w-4 h-4 text-accent" />
+                        <h4 className="font-mono text-xs uppercase tracking-widest text-content font-bold">
+                          SOA University Leadership Delegation
+                        </h4>
+                      </div>
+                      <div className="space-y-3">
+                        {currentConclave.leadership.map((l, lIdx) => (
+                          <div key={l.name} className={`${lIdx > 0 ? "pt-3 border-t border-line" : ""} space-y-0.5`}>
+                            <div className="font-display text-sm font-bold text-content">
+                              {l.name}
+                            </div>
+                            <div className="font-sans text-xs text-content-muted leading-relaxed">
+                              {l.role}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-2">
-                  {currentConclave.panelists.map((p) => (
-                    <div key={p.name} className="p-5 rounded-2xl bg-surface-2 border border-line hover:border-accent/60 transition-colors">
-                      <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-content-muted">Panelist</span>
-                      <h4 className="font-display text-base font-semibold tracking-normal text-content mt-1">{p.name}</h4>
-                      <div className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-muted mt-0.5">{p.role}</div>
+                {/* Right Column: Moderator & Corporate Panelists Roster (7 cols) */}
+                <div className="lg:col-span-7 space-y-6">
+                  {/* Moderator Spotlight */}
+                  {currentConclave.moderators && currentConclave.moderators.length > 0 && (
+                    <div className="space-y-3">
+                      {currentConclave.moderators.map((m) => (
+                        <div
+                          key={m.name}
+                          className="p-6 rounded-3xl bg-surface-2 border border-line hover:border-accent transition-all shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-4"
+                        >
+                          <div className="space-y-1">
+                            <span className="font-mono text-[10px] uppercase tracking-widest text-accent font-bold block">
+                              Conclave Discussion Moderator
+                            </span>
+                            <h4 className="font-display text-lg font-bold text-content">
+                              {m.name}
+                            </h4>
+                            <p className="font-sans text-xs text-content-muted leading-relaxed">
+                              {m.role}
+                            </p>
+                          </div>
+                          <span className="px-3.5 py-1.5 rounded-xl bg-surface border border-line text-xs font-mono text-accent font-bold shrink-0 self-start sm:self-center">
+                            Session Chair
+                          </span>
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
-              </div>
+                  )}
 
-              {/* SOA Leadership Delegation */}
-              <div id="leadership-delegation" className="space-y-4 pt-6 border-t border-line scroll-mt-24">
-                <div className="flex items-center gap-2">
-                  <Building className="w-4 h-4 text-accent" />
-                  <h3 className="font-display text-xs font-bold uppercase tracking-[0.16em] text-content-secondary">
-                    SOA University Institutional Delegation
-                  </h3>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {currentConclave.leadership.map((l) => (
-                    <div key={l.name} className="p-4 rounded-xl bg-surface-2 border border-line">
-                      <h4 className="font-display text-base font-semibold tracking-normal text-content">{l.name}</h4>
-                      <div className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-muted mt-0.5">{l.role}</div>
+                  {/* Corporate Panelists Roster Grid */}
+                  {currentConclave.panelists && currentConclave.panelists.length > 0 && (
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-between pb-2 border-b border-line">
+                        <div className="flex items-center gap-2">
+                          <Users className="w-4 h-4 text-accent" />
+                          <h4 className="font-mono text-xs uppercase tracking-widest text-content font-bold">
+                            Corporate Panelists Roster ({currentConclave.panelists.length} Leaders)
+                          </h4>
+                        </div>
+                        <span className="text-xs text-accent font-mono font-medium">
+                          Industry Deliberation
+                        </span>
+                      </div>
+
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {currentConclave.panelists.map((p) => (
+                          <div
+                            key={p.name}
+                            className="p-5 rounded-2xl bg-surface-2 border border-line hover:border-accent/60 transition-all hover:-translate-y-0.5 space-y-1.5 shadow-sm"
+                          >
+                            <span className="text-[10px] font-mono uppercase tracking-wider text-accent font-semibold block">
+                              Panelist
+                            </span>
+                            <h5 className="font-display text-sm font-bold text-content leading-snug">
+                              {p.name}
+                            </h5>
+                            <p className="font-sans text-xs text-content-muted leading-relaxed">
+                              {p.role}
+                            </p>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                  ))}
+                  )}
                 </div>
               </div>
             </div>
