@@ -544,7 +544,7 @@ function buildShuffledDeck(length: number, avoidFirst?: number): number[] {
 
 function EventContent() {
   const searchParams = useSearchParams();
-  const [activeTab, setActiveTab] = useState<"Chapters" | "Speakers" | "Videos">("Chapters");
+  const [activeTab, setActiveTab] = useState<"Chapters" | "Videos">("Chapters");
   const [selectedChapter, setSelectedChapter] = useState(0);
   const [selectedMediaCity, setSelectedMediaCity] = useState<string | null>(null);
   const [isInviteOpen, setIsInviteOpen] = useState(false);
@@ -958,7 +958,7 @@ function EventContent() {
           aria-label="Conclave sections"
           className="py-2.5 px-4 mx-auto w-fit max-w-[calc(100vw-2rem)] rounded-full bg-surface border border-line shadow-lg flex items-center justify-start sm:justify-center gap-2 sm:gap-3 overflow-x-auto"
         >
-          {(["Chapters", "Speakers", "Videos"] as const).map((t) => (
+          {(["Chapters", "Videos"] as const).map((t) => (
             <button
               key={t}
               type="button"
@@ -975,7 +975,6 @@ function EventContent() {
               }`}
             >
               {t === "Chapters" && "All 7 Chapters (1.0 & 2.0)"}
-              {t === "Speakers" && "Marquee Speakers Roster"}
               {t === "Videos" && "Conclave Moments"}
             </button>
           ))}
@@ -1206,96 +1205,7 @@ function EventContent() {
           </div>
         )}
 
-        {/* TAB 2: MARQUEE SPEAKERS ROSTER */}
-        {activeTab === "Speakers" && (
-          <div id="speakers-section" className="space-y-10 scroll-mt-24 pt-4">
-            <div className="max-w-5xl space-y-3 mb-8">
-              <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
-                Luminary Roster
-              </span>
-              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight scroll-mt-24">
-                Marquee Speakers &amp; Leaders
-              </h2>
-              <p className="text-base text-content-secondary max-w-2xl leading-relaxed">
-                Over 40 distinguished corporate leaders, Olympic champions, and academic dignitaries across all seven Allyship++ conclaves.
-              </p>
-            </div>
-
-            {/* Sports & Keynote Icons */}
-            <div className="space-y-4 scroll-mt-24">
-              <div className="flex items-center gap-2">
-                <Medal className="w-5 h-5 text-accent" />
-                <h3 className="font-display text-xs font-bold uppercase tracking-[0.16em] text-content-secondary">
-                  Olympic Champions & Indian Sports Legends
-                </h3>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                {[
-                  { name: "Anju Bobby George", chapter: "Bengaluru 1.0", role: "Olympian & World Athletics Medalist", note: "Keynote on Leadership in Sports" },
-                  { name: "Arshad Ayub", chapter: "Hyderabad 1.0", role: "Former Indian Test & ODI Cricketer", note: "Chief Guest on Collaborative Leadership" },
-                  { name: "Gurbux Singh", chapter: "Kolkata 1.0", role: "1964 Olympic Hockey Gold Medalist", note: "Sports Legend Tribute" },
-                  { name: "Gautam Sarkar", chapter: "Kolkata 1.0", role: "Former Indian Footballer ('Indian Beckenbauer')", note: "Sports Legend Tribute" },
-                  { name: "Satyaprakash Krishna", chapter: "Kolkata 1.0", role: "Mentor to Former Indian Cricket Captain M.S. Dhoni", note: "Sponsorship & Talent Spotting" },
-                  { name: "Nilesh Kulkarni", chapter: "Mumbai 1.0", role: "Former Indian Test Cricketer", note: "Fireside Chat on Resilience & Education" },
-                  { name: "Anand Menezes", chapter: "Mumbai 1.0", role: "Olympian & Senior Consultant, AFI", note: "Keynote on Athletic High-Performance" },
-                  { name: "Dr. G. Srinivas Patnaik", chapter: "Hyderabad 2.0", role: "Secretary, Athletics Federation of India", note: "Mentorship & Resilience in Young Talent" },
-                  { name: "Premanand J.", chapter: "Chennai 2.0", role: "Paris Olympics National Sprint Coach", note: "Discipline, Mentorship & Gen-Z Leadership" },
-                ].map((s) => (
-                  <div key={s.name} className="p-6 rounded-2xl bg-surface border border-line shadow-sm hover:shadow-md hover:border-accent transition-all flex flex-col justify-between h-full">
-                    <span className="inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent bg-surface-2 border border-line px-2.5 py-1 rounded-full w-fit">
-                      {s.chapter}
-                    </span>
-                    <h4 className="font-display text-base font-semibold tracking-normal text-content mt-3">{s.name}</h4>
-                    <div className="font-sans text-xs sm:text-sm font-normal tracking-[0.01em] text-accent mt-1 line-clamp-2 leading-snug">{s.role}</div>
-                    <div className="font-sans text-xs text-content-muted mt-1.5 italic">{s.note}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Corporate & CXO Leaders */}
-            <div className="space-y-4 pt-8 border-t border-line scroll-mt-24">
-              <div className="flex items-center gap-2">
-                <Users className="w-5 h-5 text-accent" />
-                <h3 className="font-display text-xs font-bold uppercase tracking-[0.16em] text-content-secondary">
-                  Corporate CXOs, CHROs & Capability Heads
-                </h3>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                {[
-                  { name: "Dr. P.B. Kotur", role: "Global Head, Engineering Academy, LTTS", chapter: "Bengaluru & Mumbai" },
-                  { name: "Archana Grover", role: "Global Head – Capabilities, Standard Chartered", chapter: "Chennai 2.0" },
-                  { name: "Prof. Sanjay Dhir", role: "Professor, IIT Delhi", chapter: "Hyderabad 2.0" },
-                  { name: "C. Aparna", role: "CHRO, Torry Harris Integration Solutions", chapter: "Bengaluru 1.0" },
-                  { name: "Baliram Mutagekar", role: "Vice President, BNY Mellon", chapter: "Bengaluru 1.0" },
-                  { name: "Pushkala Balasubramanian", role: "VP – Engineering, Kloudgin", chapter: "Hyderabad 1.0" },
-                  { name: "Rohit Adlakha", role: "CXO Advisor, Human Edge Enterprises", chapter: "Hyderabad 1.0" },
-                  { name: "Kiranmal Pendyala", role: "Former Strategic Thought Leader, UPS", chapter: "Hyderabad 1.0" },
-                  { name: "Sudipto Ray", role: "MD – Cloud & Digital, PwC", chapter: "Kolkata 1.0" },
-                  { name: "Brishti Mondal", role: "Vice President, NRI FinTech", chapter: "Kolkata 1.0" },
-                  { name: "Sumit Agarwal", role: "DEI Advisor to Fortune 500 Companies", chapter: "Kolkata 1.0" },
-                  { name: "Dr. Brillian S.K.", role: "EVP & Head HR, Times Professional Learning", chapter: "Mumbai 1.0" },
-                  { name: "Rachita Mahadev", role: "Emerging Talent Lead – APJ, Akamai Technologies", chapter: "Hyderabad 2.0" },
-                  { name: "Dr. Reena Das", role: "CHRO, Keolis Hyderabad", chapter: "Hyderabad 2.0" },
-                  { name: "Suganya Veeraraghavan", role: "AVP, Rocket India", chapter: "Chennai 2.0" },
-                  { name: "Suresh Aade", role: "Head HR, Foodhub", chapter: "Chennai 2.0" },
-                  { name: "R.K. Ramachandran", role: "Global Talent Head, KaarTech", chapter: "Chennai 2.0" },
-                  { name: "M.D. Joshua David", role: "India Campus Head, Mphasis", chapter: "Chennai 2.0" },
-                ].map((c) => (
-                  <div key={c.name} className="p-6 rounded-2xl bg-surface border border-line shadow-sm hover:shadow-md hover:border-accent transition-all flex flex-col justify-between h-full">
-                    <span className="inline-block font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-content-muted bg-surface-2 border border-line px-2.5 py-1 rounded-full w-fit">
-                      {c.chapter}
-                    </span>
-                    <h4 className="font-display text-base font-semibold tracking-normal text-content mt-3">{c.name}</h4>
-                    <div className="font-sans text-xs sm:text-sm font-normal tracking-[0.01em] leading-snug text-content-muted mt-1 line-clamp-2">{c.role}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* TAB 3: CONCLAVE MOMENTS (PARTITIONED: 2.0 AT TOP, 1.0 AT BOTTOM) */}
+        {/* TAB 2: CONCLAVE MOMENTS (PARTITIONED: 2.0 AT TOP, 1.0 AT BOTTOM) */}
         {activeTab === "Videos" && (
           <div id="videos-section" className="space-y-12 scroll-mt-24 pt-4">
             <div className="max-w-5xl space-y-3">
