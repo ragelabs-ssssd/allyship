@@ -863,6 +863,56 @@ function EventContent() {
         </div>
       </section>
 
+      {/* 2.5 MESSAGE FROM CONCLAVE CONVENER (UNDER WHY ALLYSHIP) */}
+      <section className="py-16 lg:py-20 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-b border-line">
+        <div className="bg-surface rounded-3xl p-8 sm:p-12 border border-line shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-center">
+          {/* Text on Left */}
+          <div className="md:col-span-7 space-y-5 order-2 md:order-1">
+            <div className="space-y-1">
+              <span className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-accent block">
+                Convener&apos;s Note
+              </span>
+              <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-[1.15] text-content">
+                Message from Prof. (Dr.) Raj Kumar Hota
+              </h2>
+            </div>
+
+            <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-muted">
+              As Convener of the Allyship++ conclaves across Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai, Prof. (Dr.) Raj Kumar Hota leads SOA’s ongoing dialogue with corporate executives, HR leaders, and industry mentors.
+            </p>
+
+            <blockquote className="font-display italic font-normal tracking-normal text-base sm:text-lg text-content leading-relaxed border-l-2 border-accent pl-5 py-3 bg-surface-2 rounded-r-xl">
+              &ldquo;True allyship bridges the gap between campus and career. By grounding corporate-academic partnerships in discipline and shared purpose, we create environments where young professionals thrive from day one.&rdquo;
+            </blockquote>
+
+            <div className="pt-3 border-t border-line">
+              <h4 className="font-display text-base font-semibold tracking-normal text-content">
+                Prof. (Dr.) Raj Kumar Hota
+              </h4>
+              <p className="font-sans text-xs font-normal tracking-[0.01em] leading-relaxed text-content-muted">
+                Dean of Corporate Relations and Placement · Convener, ALLYSHIP++ National Conclaves
+              </p>
+            </div>
+          </div>
+
+          {/* Photo on Right */}
+          <div className="md:col-span-5 relative h-80 sm:h-96 w-full rounded-2xl overflow-hidden bg-surface-3 border border-line order-1 md:order-2">
+            <Image
+              src="/IMG_7364.jpg"
+              alt="Prof. (Dr.) Raj Kumar Hota addressing Allyship++ Conclave at podium"
+              fill
+              sizes="(max-width: 768px) 100vw, 40vw"
+              className="object-cover object-top"
+            />
+            <div className="absolute top-4 right-4">
+              <span className="px-3 py-1 rounded-full bg-surface-2 text-content border border-line font-sans text-[10px] font-bold uppercase tracking-[0.14em]">
+                Conclave Convener
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 3. EDITORIAL TAB SWITCHER (CONSTANT POSITION) */}
       <div className="pt-10 pb-2">
         <nav
@@ -1520,56 +1570,7 @@ function EventContent() {
         </div>
       </section>
 
-      {/* 5. MESSAGE FROM CONCLAVE CONVENER (FINAL SECTION) */}
-      <section className="pb-24 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
-        <div className="bg-surface rounded-3xl p-8 sm:p-12 border border-line shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-center">
-          {/* Text on Left */}
-          <div className="md:col-span-7 space-y-5 order-2 md:order-1">
-            <div className="space-y-1">
-              <span className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-accent block">
-                Convener&apos;s Note
-              </span>
-              <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-[1.15] text-content">
-                Message from Prof. (Dr.) Raj Kumar Hota
-              </h2>
-            </div>
-
-            <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-muted">
-              As Convener of the Allyship++ conclaves across Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai, Prof. (Dr.) Raj Kumar Hota leads SOA’s ongoing dialogue with corporate executives, HR leaders, and industry mentors.
-            </p>
-
-            <blockquote className="font-display italic font-normal tracking-normal text-base sm:text-lg text-content leading-relaxed border-l-2 border-accent pl-5 py-3 bg-surface-2 rounded-r-xl">
-              &ldquo;True allyship bridges the gap between campus and career. By grounding corporate-academic partnerships in discipline and shared purpose, we create environments where young professionals thrive from day one.&rdquo;
-            </blockquote>
-
-            <div className="pt-3 border-t border-line">
-              <h4 className="font-display text-base font-semibold tracking-normal text-content">
-                Prof. (Dr.) Raj Kumar Hota
-              </h4>
-              <p className="font-sans text-xs font-normal tracking-[0.01em] leading-relaxed text-content-muted">
-                Dean of Corporate Relations and Placement · Convener, ALLYSHIP++ National Conclaves
-              </p>
-            </div>
-          </div>
-
-          {/* Photo on Right */}
-          <div className="md:col-span-5 relative h-80 sm:h-96 w-full rounded-2xl overflow-hidden bg-surface-3 border border-line order-1 md:order-2">
-            <Image
-              src="/IMG_7364.jpg"
-              alt="Prof. (Dr.) Raj Kumar Hota addressing Allyship++ Conclave at podium"
-              fill
-              sizes="(max-width: 768px) 100vw, 40vw"
-              className="object-cover object-top"
-            />
-            <div className="absolute top-4 right-4">
-              <span className="px-3 py-1 rounded-full bg-surface-2 text-content border border-line font-sans text-[10px] font-bold uppercase tracking-[0.14em]">
-                Conclave Convener
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      {/* Global Invitation Modal */}
       <GetInvitedModal isOpen={isInviteOpen} onClose={() => setIsInviteOpen(false)} />
     </div>
   );
