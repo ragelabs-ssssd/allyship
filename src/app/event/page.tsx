@@ -861,95 +861,6 @@ function EventContent() {
             </div>
           </div>
         </div>
-
-        {/* Leadership Vision Callout Box */}
-        <div className="mt-14 rounded-3xl p-8 sm:p-12 bg-gradient-to-br from-surface-2 via-surface to-canvas text-content shadow-2xl relative overflow-hidden border border-line">
-          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-8 space-y-4">
-              <span className="font-heading text-xs font-bold uppercase tracking-widest text-accent">
-                Our Purpose
-              </span>
-              <blockquote className="font-display italic font-normal tracking-normal text-2xl sm:text-3xl lg:text-4xl text-content leading-[1.35]">
-                &ldquo;Rather than waiting for industry to visit our campus, we bring academic dialogue directly to the cities where corporate leadership shapes the future of work.&rdquo;
-              </blockquote>
-              <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-secondary">
-                Through Allyship++, Siksha &lsquo;O&rsquo; Anusandhan works alongside corporate leaders to ensure young professionals enter workplaces that value mentorship, collaboration, and shared success.
-              </p>
-              <div className="pt-2 flex flex-wrap items-center gap-3 font-sans text-xs text-content-muted">
-                <span className="font-semibold text-content">Siksha &lsquo;O&rsquo; Anusandhan (Deemed to be University)</span>
-                <span>•</span>
-                <span className="text-accent">NIRF Rank 15 · NAAC A++ (3.88 CGPA)</span>
-              </div>
-            </div>
-
-            <div className="lg:col-span-4 grid grid-cols-2 gap-4">
-              <div className="p-5 rounded-2xl bg-glass border border-line text-center flex flex-col items-center justify-center h-full">
-                <div className="text-3xl sm:text-4xl font-extrabold font-display text-accent">500+</div>
-                <div className="font-sans text-xs text-content-secondary mt-1 font-medium">Leaders &amp; Delegates</div>
-              </div>
-              <div className="p-5 rounded-2xl bg-glass border border-line text-center flex flex-col items-center justify-center h-full">
-                <div className="text-3xl sm:text-4xl font-extrabold font-display text-content">7</div>
-                <div className="font-sans text-xs text-content-secondary mt-1 font-medium">Metro Conclaves</div>
-              </div>
-              <div className="p-5 rounded-2xl bg-glass border border-line text-center flex flex-col items-center justify-center h-full">
-                <div className="text-3xl sm:text-4xl font-extrabold font-display text-content">9+</div>
-                <div className="font-sans text-xs text-content-secondary mt-1 font-medium">Sports Icons &amp; Coaches</div>
-              </div>
-              <div className="p-5 rounded-2xl bg-glass border border-line text-center flex flex-col items-center justify-center h-full">
-                <div className="text-3xl sm:text-4xl font-extrabold font-display text-accent">5</div>
-                <div className="font-sans text-xs text-content-secondary mt-1 font-medium">Major Indian Cities</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 2.5 MESSAGE FROM CONCLAVE CONVENER */}
-      <section className="pb-20 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
-        <div className="bg-surface rounded-3xl p-8 sm:p-12 border border-line shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-center">
-          <div className="md:col-span-5 relative h-80 sm:h-96 w-full rounded-2xl overflow-hidden bg-surface-3 border border-line">
-            <Image
-              src="/IMG_7364.jpg"
-              alt="Prof. (Dr.) Raj Kumar Hota addressing Allyship++ Conclave at podium"
-              fill
-              sizes="(max-width: 768px) 100vw, 40vw"
-              className="object-cover object-top"
-            />
-            <div className="absolute top-4 left-4">
-              <span className="px-3 py-1 rounded-full bg-surface-2 text-content border border-line font-sans text-[10px] font-bold uppercase tracking-[0.14em]">
-                Conclave Convener
-              </span>
-            </div>
-          </div>
-
-          <div className="md:col-span-7 space-y-5">
-            <div className="space-y-1">
-              <span className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-accent block">
-                Convener&apos;s Note
-              </span>
-              <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-[1.15] text-content">
-                Message from Prof. (Dr.) Raj Kumar Hota
-              </h2>
-            </div>
-
-            <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-muted">
-              As Convener of the Allyship++ conclaves across Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai, Prof. (Dr.) Raj Kumar Hota leads SOA’s ongoing dialogue with corporate executives, HR leaders, and industry mentors.
-            </p>
-
-            <blockquote className="font-display italic font-normal tracking-normal text-base sm:text-lg text-content leading-relaxed border-l-2 border-accent pl-5 py-3 bg-surface-2 rounded-r-xl">
-              &ldquo;True allyship bridges the gap between campus and career. By grounding corporate-academic partnerships in discipline and shared purpose, we create environments where young professionals thrive from day one.&rdquo;
-            </blockquote>
-
-            <div className="pt-3 border-t border-line">
-              <h4 className="font-display text-base font-semibold tracking-normal text-content">
-                Prof. (Dr.) Raj Kumar Hota
-              </h4>
-              <p className="font-sans text-xs font-normal tracking-[0.01em] leading-relaxed text-content-muted">
-                Dean of Corporate Relations and Placement · Convener, ALLYSHIP++ National Conclaves
-              </p>
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* 3. EDITORIAL TAB SWITCHER (CONSTANT POSITION) */}
@@ -1565,6 +1476,97 @@ function EventContent() {
           </div>
         )}
       </div>
+
+      {/* 4. LEADERSHIP VISION & PURPOSE CALLOUT (NEXT TO LAST SECTION) */}
+      <section className="pt-8 pb-16 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
+        <div className="rounded-3xl p-8 sm:p-12 bg-gradient-to-br from-surface-2 via-surface to-canvas text-content shadow-2xl relative overflow-hidden border border-line">
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div className="lg:col-span-8 space-y-4">
+              <span className="font-heading text-xs font-bold uppercase tracking-widest text-accent">
+                Our Purpose
+              </span>
+              <blockquote className="font-display italic font-normal tracking-normal text-2xl sm:text-3xl lg:text-4xl text-content leading-[1.35]">
+                &ldquo;Rather than waiting for industry to visit our campus, we bring academic dialogue directly to the cities where corporate leadership shapes the future of work.&rdquo;
+              </blockquote>
+              <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-secondary">
+                Through Allyship++, Siksha &lsquo;O&rsquo; Anusandhan works alongside corporate leaders to ensure young professionals enter workplaces that value mentorship, collaboration, and shared success.
+              </p>
+              <div className="pt-2 flex flex-wrap items-center gap-3 font-sans text-xs text-content-muted">
+                <span className="font-semibold text-content">Siksha &lsquo;O&rsquo; Anusandhan (Deemed to be University)</span>
+                <span>•</span>
+                <span className="text-accent">NIRF Rank 15 · NAAC A++ (3.88 CGPA)</span>
+              </div>
+            </div>
+
+            <div className="lg:col-span-4 grid grid-cols-2 gap-4">
+              <div className="p-5 rounded-2xl bg-glass border border-line text-center flex flex-col items-center justify-center h-full">
+                <div className="text-3xl sm:text-4xl font-extrabold font-display text-accent">500+</div>
+                <div className="font-sans text-xs text-content-secondary mt-1 font-medium">Leaders &amp; Delegates</div>
+              </div>
+              <div className="p-5 rounded-2xl bg-glass border border-line text-center flex flex-col items-center justify-center h-full">
+                <div className="text-3xl sm:text-4xl font-extrabold font-display text-content">7</div>
+                <div className="font-sans text-xs text-content-secondary mt-1 font-medium">Metro Conclaves</div>
+              </div>
+              <div className="p-5 rounded-2xl bg-glass border border-line text-center flex flex-col items-center justify-center h-full">
+                <div className="text-3xl sm:text-4xl font-extrabold font-display text-content">9+</div>
+                <div className="font-sans text-xs text-content-secondary mt-1 font-medium">Sports Icons &amp; Coaches</div>
+              </div>
+              <div className="p-5 rounded-2xl bg-glass border border-line text-center flex flex-col items-center justify-center h-full">
+                <div className="text-3xl sm:text-4xl font-extrabold font-display text-accent">5</div>
+                <div className="font-sans text-xs text-content-secondary mt-1 font-medium">Major Indian Cities</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. MESSAGE FROM CONCLAVE CONVENER (FINAL SECTION) */}
+      <section className="pb-24 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
+        <div className="bg-surface rounded-3xl p-8 sm:p-12 border border-line shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-center">
+          <div className="md:col-span-5 relative h-80 sm:h-96 w-full rounded-2xl overflow-hidden bg-surface-3 border border-line">
+            <Image
+              src="/IMG_7364.jpg"
+              alt="Prof. (Dr.) Raj Kumar Hota addressing Allyship++ Conclave at podium"
+              fill
+              sizes="(max-width: 768px) 100vw, 40vw"
+              className="object-cover object-top"
+            />
+            <div className="absolute top-4 left-4">
+              <span className="px-3 py-1 rounded-full bg-surface-2 text-content border border-line font-sans text-[10px] font-bold uppercase tracking-[0.14em]">
+                Conclave Convener
+              </span>
+            </div>
+          </div>
+
+          <div className="md:col-span-7 space-y-5">
+            <div className="space-y-1">
+              <span className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-accent block">
+                Convener&apos;s Note
+              </span>
+              <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-[1.15] text-content">
+                Message from Prof. (Dr.) Raj Kumar Hota
+              </h2>
+            </div>
+
+            <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-muted">
+              As Convener of the Allyship++ conclaves across Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai, Prof. (Dr.) Raj Kumar Hota leads SOA’s ongoing dialogue with corporate executives, HR leaders, and industry mentors.
+            </p>
+
+            <blockquote className="font-display italic font-normal tracking-normal text-base sm:text-lg text-content leading-relaxed border-l-2 border-accent pl-5 py-3 bg-surface-2 rounded-r-xl">
+              &ldquo;True allyship bridges the gap between campus and career. By grounding corporate-academic partnerships in discipline and shared purpose, we create environments where young professionals thrive from day one.&rdquo;
+            </blockquote>
+
+            <div className="pt-3 border-t border-line">
+              <h4 className="font-display text-base font-semibold tracking-normal text-content">
+                Prof. (Dr.) Raj Kumar Hota
+              </h4>
+              <p className="font-sans text-xs font-normal tracking-[0.01em] leading-relaxed text-content-muted">
+                Dean of Corporate Relations and Placement · Convener, ALLYSHIP++ National Conclaves
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <GetInvitedModal isOpen={isInviteOpen} onClose={() => setIsInviteOpen(false)} />
     </div>
