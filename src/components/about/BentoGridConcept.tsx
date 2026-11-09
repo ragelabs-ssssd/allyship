@@ -123,7 +123,7 @@ export function BentoGridConcept() {
             <div className="text-[11px] font-semibold text-content">
               Regional Chapter Corridors:
             </div>
-            <p className="text-xs sm:text-sm font-mono font-bold text-accent tracking-wider flex flex-wrap items-center gap-x-2 gap-y-1">
+            <p className="font-sans text-[11px] sm:text-xs font-semibold text-accent tracking-wide flex flex-wrap items-center gap-x-2 gap-y-1">
               <span>Bengaluru</span>
               <span className="text-content-muted/60 select-none">/</span>
               <span>Hyderabad</span>
