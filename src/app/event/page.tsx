@@ -999,7 +999,7 @@ function EventContent() {
               className="bg-surface rounded-3xl p-6 sm:p-10 lg:p-12 space-y-10 border border-line shadow-2xl scroll-mt-24"
             >
               {/* Card Hero Header */}
-              <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 border-b border-line">
+              <div className="pb-8 border-b border-line">
                 <div className="space-y-3">
                   <div className="flex flex-wrap items-center gap-2.5">
                     <span className="px-3.5 py-1 rounded-full bg-accent text-on-accent font-mono text-xs font-bold uppercase tracking-wider shadow-sm">
@@ -1021,15 +1021,6 @@ function EventContent() {
                     <span>{currentConclave.venue}</span>
                   </div>
                 </div>
-
-                <button
-                  type="button"
-                  onClick={() => setIsInviteOpen(true)}
-                  className="inline-flex items-center gap-2 bg-accent hover:bg-accent-hover text-on-accent font-sans text-xs font-bold tracking-normal py-3 px-6 rounded-full transition-all duration-200 shadow-md shrink-0 active:scale-95 cursor-pointer"
-                >
-                  <span>Join Future Conclaves</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </button>
               </div>
 
               {/* Asymmetrical 2-Column Bento Grid */}
