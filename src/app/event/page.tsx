@@ -867,7 +867,7 @@ function EventContent() {
       <section className="py-16 lg:py-20 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-b border-line">
         <div className="bg-surface rounded-3xl p-8 sm:p-12 border border-line shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-center">
           {/* Text on Left */}
-          <div className="md:col-span-7 space-y-5 order-2 md:order-1">
+          <div className="md:col-span-7 space-y-5">
             <div className="space-y-1">
               <span className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-accent block">
                 Convener&apos;s Note
@@ -896,7 +896,7 @@ function EventContent() {
           </div>
 
           {/* Photo on Right */}
-          <div className="md:col-span-5 relative h-80 sm:h-96 w-full rounded-2xl overflow-hidden bg-surface-3 border border-line order-1 md:order-2">
+          <div className="md:col-span-5 relative h-80 sm:h-96 w-full rounded-2xl overflow-hidden bg-surface-3 border border-line">
             <Image
               src="/IMG_7364.jpg"
               alt="Prof. (Dr.) Raj Kumar Hota addressing Allyship++ Conclave at podium"
