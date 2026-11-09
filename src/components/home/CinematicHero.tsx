@@ -215,8 +215,8 @@ export function CinematicHero({ onOpenInvite }: CinematicHeroProps) {
               transition={{ duration: 0.8, delay: 0.38, ease: [0.16, 1, 0.3, 1] }}
               className="pt-1 flex items-center gap-2 text-xs font-medium text-content-muted flex-wrap"
             >
-              <span className="inline-flex items-center gap-1.5 text-content font-semibold uppercase tracking-wider text-[11px] whitespace-nowrap">
-                <MapPin className="w-3.5 h-3.5 text-accent" />
+              <span className="inline-flex items-center gap-1.5 font-sans text-xs font-semibold text-content whitespace-nowrap">
+                <MapPin className="w-3.5 h-3.5 text-accent -translate-y-[0.5px] shrink-0" />
                 Metro Footprint:
               </span>
               <span className="whitespace-nowrap">Bengaluru</span>

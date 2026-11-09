@@ -22,8 +22,9 @@ export function BentoGridConcept() {
         <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
           The Architecture of <span className="text-accent">Generational Impact</span>
         </h2>
-        <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
-          Transcending traditional hiring: a multi-dimensional ecosystem engineered for placement velocity, pan-India executive corridors, Olympic athletic grit, and psychological safety.
+        <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal max-w-4xl mx-auto [text-wrap:balance]">
+          Transcending traditional hiring: a multi-dimensional ecosystem engineered for<br className="hidden md:inline" />{" "}
+          placement velocity, pan-India executive corridors, Olympic athletic grit, and psychological safety.
         </p>
       </div>
 
