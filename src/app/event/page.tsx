@@ -898,7 +898,7 @@ function EventContent() {
           {/* Photo on Right */}
           <div className="md:col-span-5 relative h-80 sm:h-96 w-full rounded-2xl overflow-hidden bg-surface-3 border border-line">
             <Image
-              src="/IMG_5765.jpg"
+              src="/IMG_7328.jpg"
               alt="Prof. (Dr.) Raj Kumar Hota addressing Allyship++ Conclave at podium"
               fill
               sizes="(max-width: 768px) 100vw, 40vw"
