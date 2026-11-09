@@ -761,8 +761,9 @@ function EventContent() {
             Why Allyship<span className="text-accent">++</span>?
           </h2>
 
-          <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal max-w-4xl mx-auto">
-            In an era of rapid disruption, transactional placement is no longer sufficient. Siksha &lsquo;O&rsquo; Anusandhan moves<br className="hidden md:inline" /> academic leadership directly into corporate boardrooms—co-creating empathetic, resilient, and future-ready talent ecosystems.
+          <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal max-w-5xl mx-auto [text-wrap:balance]">
+            In an era of rapid disruption, transactional placement is no longer sufficient. <span className="whitespace-nowrap">Siksha &lsquo;O&rsquo; Anusandhan moves</span><br className="hidden md:inline" />{" "}
+            academic leadership directly into corporate boardrooms—co-creating empathetic, resilient, and future-ready talent ecosystems.
           </p>
         </div>
 
