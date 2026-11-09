@@ -217,7 +217,7 @@ export function CinematicHero({ onOpenInvite }: CinematicHeroProps) {
             >
               <span className="inline-flex items-center gap-1.5 font-sans text-xs font-semibold text-content whitespace-nowrap">
                 <MapPin className="w-3.5 h-3.5 text-accent -translate-y-[0.5px] shrink-0" />
-                Metro Footprint:
+                Conclave Cities:
               </span>
               <span className="whitespace-nowrap">Bengaluru</span>
               <span className="text-content-faint select-none">•</span>
