@@ -864,50 +864,65 @@ function EventContent() {
       </section>
 
       {/* 2.5 MESSAGE FROM CONCLAVE CONVENER (UNDER WHY ALLYSHIP) */}
-      <section className="py-16 lg:py-20 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-b border-line">
-        <div className="bg-surface rounded-3xl p-8 sm:p-12 border border-line shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-center">
+      <section id="institutional-mandate" className="py-16 lg:py-20 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-b border-line">
+        <div className="bg-surface rounded-3xl p-8 sm:p-12 border border-line shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-stretch group">
           {/* Text on Left */}
-          <div className="md:col-span-7 space-y-5">
-            <div className="space-y-1">
-              <span className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-accent block">
-                Convener&apos;s Note
-              </span>
-              <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-[1.15] text-content">
-                Message from Prof. (Dr.) Raj Kumar Hota
-              </h2>
+          <div className="md:col-span-7 flex flex-col justify-between space-y-6">
+            <div className="space-y-4">
+              <div className="space-y-1.5">
+                <span className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-accent block">
+                  Convener&apos;s Note
+                </span>
+                <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-[1.15] text-content">
+                  Message from Prof. (Dr.) Raj Kumar Hota
+                </h2>
+              </div>
+
+              <p className="font-sans text-sm sm:text-base font-normal tracking-[0.01em] leading-relaxed text-content-muted">
+                As Convener of the Allyship++ conclaves across Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai, Prof. (Dr.) Raj Kumar Hota leads SOA’s ongoing dialogue with corporate executives, HR leaders, and industry mentors.
+              </p>
+
+              <blockquote className="font-display italic font-normal tracking-normal text-base sm:text-lg text-content leading-relaxed border-l-2 border-accent pl-5 py-3.5 bg-surface-2 rounded-r-xl shadow-inner">
+                &ldquo;True allyship bridges the gap between campus and career. By grounding corporate-academic partnerships in discipline and shared purpose, we create environments where young professionals thrive from day one.&rdquo;
+              </blockquote>
             </div>
 
-            <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-muted">
-              As Convener of the Allyship++ conclaves across Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai, Prof. (Dr.) Raj Kumar Hota leads SOA’s ongoing dialogue with corporate executives, HR leaders, and industry mentors.
-            </p>
-
-            <blockquote className="font-display italic font-normal tracking-normal text-base sm:text-lg text-content leading-relaxed border-l-2 border-accent pl-5 py-3 bg-surface-2 rounded-r-xl">
-              &ldquo;True allyship bridges the gap between campus and career. By grounding corporate-academic partnerships in discipline and shared purpose, we create environments where young professionals thrive from day one.&rdquo;
-            </blockquote>
-
-            <div className="pt-3 border-t border-line">
+            <div className="pt-4 border-t border-line">
               <h4 className="font-display text-base font-semibold tracking-normal text-content">
                 Prof. (Dr.) Raj Kumar Hota
               </h4>
-              <p className="font-sans text-xs font-normal tracking-[0.01em] leading-relaxed text-content-muted">
+              <p className="font-sans text-xs font-normal tracking-[0.01em] leading-relaxed text-content-muted mt-0.5">
                 Dean of Corporate Relations and Placement · Convener, ALLYSHIP++ National Conclaves
               </p>
             </div>
           </div>
 
-          {/* Photo on Right */}
-          <div className="md:col-span-5 relative h-80 sm:h-96 w-full rounded-2xl overflow-hidden bg-surface-3 border border-line">
+          {/* Photo on Right: Cinematic Smart-Crop & Alignment */}
+          <div className="md:col-span-5 relative w-full h-[380px] sm:h-[440px] md:h-full md:min-h-[460px] rounded-2xl overflow-hidden bg-surface-3 border border-line shadow-2xl">
             <Image
-              src="/IMG_7328.jpg"
+              src="/IMG_7328_cinematic.jpg"
               alt="Prof. (Dr.) Raj Kumar Hota addressing Allyship++ Conclave at podium"
               fill
               sizes="(max-width: 768px) 100vw, 40vw"
-              className="object-cover object-top"
+              className="object-cover object-center group-hover:scale-[1.03] transition-transform duration-700 ease-out"
+              priority
             />
-            <div className="absolute top-4 right-4">
-              <span className="px-3 py-1 rounded-full bg-surface-2 text-content border border-line font-sans text-[10px] font-bold uppercase tracking-[0.14em]">
+            {/* Cinematic Vignette & Bottom Scrim */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent pointer-events-none" />
+            <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none" />
+
+            {/* Glassmorphic Convener Badge */}
+            <div className="absolute top-4 right-4 z-10">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md text-white/95 border border-accent/40 font-sans text-[10px] font-bold uppercase tracking-[0.16em] shadow-lg shadow-black/40">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
                 Conclave Convener
               </span>
+            </div>
+
+            {/* Bottom Cinematic Accent */}
+            <div className="absolute bottom-4 left-4 right-4 z-10 flex items-center justify-between text-[11px] font-sans text-white/80 pointer-events-none">
+              <span className="font-medium tracking-wide">SOA Allyship++ Conclave</span>
+              <span className="font-mono text-accent text-[10px]">National Chapter</span>
             </div>
           </div>
         </div>
