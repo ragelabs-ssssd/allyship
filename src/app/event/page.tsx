@@ -1523,22 +1523,8 @@ function EventContent() {
       {/* 5. MESSAGE FROM CONCLAVE CONVENER (FINAL SECTION) */}
       <section className="pb-24 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
         <div className="bg-surface rounded-3xl p-8 sm:p-12 border border-line shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-center">
-          <div className="md:col-span-5 relative h-80 sm:h-96 w-full rounded-2xl overflow-hidden bg-surface-3 border border-line">
-            <Image
-              src="/IMG_7364.jpg"
-              alt="Prof. (Dr.) Raj Kumar Hota addressing Allyship++ Conclave at podium"
-              fill
-              sizes="(max-width: 768px) 100vw, 40vw"
-              className="object-cover object-top"
-            />
-            <div className="absolute top-4 left-4">
-              <span className="px-3 py-1 rounded-full bg-surface-2 text-content border border-line font-sans text-[10px] font-bold uppercase tracking-[0.14em]">
-                Conclave Convener
-              </span>
-            </div>
-          </div>
-
-          <div className="md:col-span-7 space-y-5">
+          {/* Text on Left */}
+          <div className="md:col-span-7 space-y-5 order-2 md:order-1">
             <div className="space-y-1">
               <span className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-accent block">
                 Convener&apos;s Note
@@ -1563,6 +1549,22 @@ function EventContent() {
               <p className="font-sans text-xs font-normal tracking-[0.01em] leading-relaxed text-content-muted">
                 Dean of Corporate Relations and Placement · Convener, ALLYSHIP++ National Conclaves
               </p>
+            </div>
+          </div>
+
+          {/* Photo on Right */}
+          <div className="md:col-span-5 relative h-80 sm:h-96 w-full rounded-2xl overflow-hidden bg-surface-3 border border-line order-1 md:order-2">
+            <Image
+              src="/IMG_7364.jpg"
+              alt="Prof. (Dr.) Raj Kumar Hota addressing Allyship++ Conclave at podium"
+              fill
+              sizes="(max-width: 768px) 100vw, 40vw"
+              className="object-cover object-top"
+            />
+            <div className="absolute top-4 right-4">
+              <span className="px-3 py-1 rounded-full bg-surface-2 text-content border border-line font-sans text-[10px] font-bold uppercase tracking-[0.14em]">
+                Conclave Convener
+              </span>
             </div>
           </div>
         </div>
