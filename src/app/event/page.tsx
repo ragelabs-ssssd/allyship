@@ -390,8 +390,8 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
     ],
     photos: create24PhotoSlots("Hyderabad", [
       {
-        src: "/conclave-moments/hyderabad-1/hyderabad-1-01.jpg",
-        caption: "Full Conclave Hall Standing Acclaim & Banquet Ovation",
+        src: "",
+        caption: "Hyderabad — Conclave Moment 01",
         objectPosition: "50% 30%",
       },
       {
