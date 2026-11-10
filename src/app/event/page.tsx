@@ -944,7 +944,7 @@ function EventContent() {
                   : "bg-glass border border-line text-content-muted hover:text-content hover:bg-glass-strong"
               }`}
             >
-              {t === "Chapters" && "All 7 Chapters (1.0 & 2.0)"}
+              {t === "Chapters" && "All 7 Chapters"}
               {t === "Videos" && "Conclave Moments"}
             </button>
           ))}
