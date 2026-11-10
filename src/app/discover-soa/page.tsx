@@ -25,7 +25,7 @@ export default function DiscoverSoaPage() {
       <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 min-h-[640px] lg:min-h-[720px] flex items-center border-b border-line overflow-hidden">
         <HeroBackdrop videoSrc={SOA_VIDEO_SRC} />
         <div className="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full">
-          <div className="max-w-3xl space-y-6">
+          <div className="max-w-4xl xl:max-w-5xl space-y-6">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-2 border border-accent/30 shadow-sm font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
               <span>Deemed to be University · Category-I Autonomy</span>
             </div>
@@ -39,7 +39,7 @@ export default function DiscoverSoaPage() {
               Three Decades of Exploration · A Living Vision for Tomorrow
             </p>
 
-            <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-3xl font-normal">
+            <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-4xl xl:max-w-5xl font-normal">
               Founded with the conviction that eastern talent deserves equal voice in national progress, Siksha &lsquo;O&rsquo; Anusandhan has grown from a visionary foundation into one of India&apos;s top 15 multidisciplinary universities (NIRF #15). Over thirty years, our mission has remained constant: to connect academic exploration with the leaders and ideas shaping the future of work.
             </p>
 
