@@ -87,7 +87,7 @@ export default function AboutPage() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 2xl:gap-24 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 2xl:gap-24 items-start">
           {/* Left Column: 4-Paragraph Relatable Narrative */}
           <div className="lg:col-span-6 xl:col-span-6 space-y-6 text-left">
             <p className="max-w-[68ch] text-base text-content-secondary leading-relaxed font-normal">
@@ -137,7 +137,7 @@ export default function AboutPage() {
                     src="/slides/CON01670.jpg"
                     alt="Allyship++ Chennai Conclave Delegation"
                     fill
-                    className="object-cover object-center group-hover:scale-105 transition-transform duration-1000 ease-out"
+                    className="object-cover object-[center_25%] group-hover:scale-105 transition-transform duration-1000 ease-out"
                     priority
                   />
                   {/* Subtle blur overlay + dark cinematic grade */}
