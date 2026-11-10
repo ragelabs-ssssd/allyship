@@ -751,7 +751,7 @@ function EventContent() {
       </section>
 
       {/* 2. INSTITUTIONAL PHILOSOPHY & MANDATE */}
-      <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
+      <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-b border-line">
         <div className="text-center max-w-6xl mx-auto space-y-3 mb-16">
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             The Institutional Mandate
