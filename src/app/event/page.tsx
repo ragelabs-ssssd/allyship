@@ -967,17 +967,12 @@ function EventContent() {
           <div id="chapter-details" className="space-y-10 scroll-mt-24 pt-4">
             {/* Creative Dual-Cycle Structure with Keycard Dossier Content */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-5 scroll-mt-24">
-              {/* Deck 1: Allyship 1.0 · Inaugural Series (4 Editions) */}
+              {/* Deck 1: Allyship 1.0 · Inaugural Series */}
               <div className="lg:col-span-7 p-4 sm:p-5 rounded-3xl bg-surface border border-line space-y-3.5 shadow-sm">
-                <div className="flex items-center justify-between px-1">
-                  <div className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-content-muted" />
-                    <span className="font-mono text-xs font-bold uppercase tracking-[0.14em] text-content-secondary">
-                      Allyship 1.0 · Inaugural Series · 2024–2025
-                    </span>
-                  </div>
-                  <span className="font-mono text-[10px] text-content-muted px-2.5 py-0.5 rounded-full bg-surface-2 border border-line font-medium">
-                    4 Editions
+                <div className="flex items-center gap-2 px-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-content-muted" />
+                  <span className="font-mono text-xs font-bold uppercase tracking-[0.14em] text-content-secondary">
+                    Allyship 1.0 · Inaugural Series · 2024–2025
                   </span>
                 </div>
 
@@ -1053,17 +1048,12 @@ function EventContent() {
                 </div>
               </div>
 
-              {/* Deck 2: Allyship Chapter 2.0 · National Series (3 Editions) */}
+              {/* Deck 2: Allyship Chapter 2.0 · National Series */}
               <div className="lg:col-span-5 p-4 sm:p-5 rounded-3xl bg-surface border border-accent/30 space-y-3.5 shadow-sm">
-                <div className="flex items-center justify-between px-1">
-                  <div className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-                    <span className="font-mono text-xs font-bold uppercase tracking-[0.14em] text-accent">
-                      Allyship Chapter 2.0 · National Series · 2026
-                    </span>
-                  </div>
-                  <span className="font-mono text-[10px] text-accent font-semibold px-2.5 py-0.5 rounded-full bg-accent/10 border border-accent/30">
-                    3 Editions
+                <div className="flex items-center gap-2 px-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+                  <span className="font-mono text-xs font-bold uppercase tracking-[0.14em] text-accent">
+                    Allyship Chapter 2.0 · National Series · 2026
                   </span>
                 </div>
 
@@ -1344,7 +1334,7 @@ function EventContent() {
                       </h3>
                     </div>
                     <span className="text-xs font-sans text-content-muted">
-                      Bengaluru / Hyderabad / Chennai · 3 Editions
+                      Bengaluru / Hyderabad / Chennai
                     </span>
                   </div>
 
@@ -1416,7 +1406,7 @@ function EventContent() {
                       </h3>
                     </div>
                     <span className="text-xs font-sans text-content-muted">
-                      Bengaluru / Hyderabad / Kolkata / Mumbai · 4 Editions
+                      Bengaluru / Hyderabad / Kolkata / Mumbai
                     </span>
                   </div>
 

@@ -79,7 +79,7 @@ export function ChapterBentoGrid() {
                   : "text-content-muted hover:text-content"
               }`}
             >
-              Allyship 2.0 (3 Editions)
+              Allyship 2.0
               {activeCycle === "2.0" && (
                 <motion.span
                   layoutId="bentoTabIndicator"
@@ -96,7 +96,7 @@ export function ChapterBentoGrid() {
                   : "text-content-muted hover:text-content"
               }`}
             >
-              Allyship 1.0 (4 Editions)
+              Allyship 1.0
               {activeCycle === "1.0" && (
                 <motion.span
                   layoutId="bentoTabIndicator"
