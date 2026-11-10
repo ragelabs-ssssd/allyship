@@ -83,7 +83,7 @@ export default function AboutPage() {
             The Origin &amp; Mandate
           </span>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-[42px] xl:text-5xl font-bold text-content tracking-tight md:whitespace-nowrap">
-            Bridging Two Worlds: The Genesis of ALLYSHIP
+            Bridging Two Worlds: The Genesis of ALLYSHIP<span className="text-accent">++</span>
           </h2>
         </div>
 
