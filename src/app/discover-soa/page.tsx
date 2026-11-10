@@ -35,12 +35,12 @@ export default function DiscoverSoaPage() {
               <span className="italic font-normal sm:whitespace-nowrap">Siksha &lsquo;O&rsquo; Anusandhan</span>
             </h1>
 
-            <p className="text-lg sm:text-xl font-display text-content-muted italic sm:whitespace-nowrap">
+            <p className="text-base sm:text-lg font-display text-content-muted italic lg:whitespace-nowrap">
               Three Decades of Exploration · A Living Vision for Tomorrow
             </p>
 
-            <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal">
-              Founded with the conviction that eastern talent deserves equal voice in national progress, Siksha &lsquo;O&rsquo; Anusandhan has grown from a visionary foundation into one of India&apos;s top 15 multidisciplinary universities (NIRF #15). Over thirty years, our mission has remained constant: to connect academic exploration with the leaders and ideas shaping the future of work.
+            <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-xl font-normal">
+              Founded to empower eastern talent, Siksha &lsquo;O&rsquo; Anusandhan has grown into one of India&apos;s top 15 universities (NIRF #15). Across three decades, we connect rigorous academic research with leaders shaping the future of work.
             </p>
 
             <div className="pt-2 flex flex-wrap items-center gap-4">

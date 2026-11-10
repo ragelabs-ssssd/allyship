@@ -175,12 +175,12 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
               <span className="block italic font-normal sm:whitespace-nowrap">for Tomorrow&rsquo;s Leaders</span>
             </h1>
 
-            <p className="text-lg sm:text-xl font-display text-content-muted italic text-left sm:text-right lg:whitespace-nowrap">
+            <p className="text-base sm:text-lg font-display text-content-muted italic text-left sm:text-right lg:whitespace-nowrap">
               Co-Innovate. Sponsor Applied Research. Build Strategic Talent Corridors.
             </p>
 
-            <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal text-left sm:text-right">
-              From co-founding advanced campus Centres of Excellence with Tech Mahindra and LTTS to sponsoring R&amp;D challenges through the AIC-SOA Foundation under NITI Aayog, Siksha &lsquo;O&rsquo; Anusandhan offers global enterprises an agile, high-velocity talent ecosystem.
+            <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-xl font-normal text-left sm:text-right">
+              From co-founding Centres of Excellence with Tech Mahindra and LTTS to sponsoring R&amp;D challenges with NITI Aayog, Siksha &lsquo;O&rsquo; Anusandhan offers global enterprises an agile, high-velocity talent ecosystem.
             </p>
 
             <div className="pt-2 flex flex-wrap items-center justify-start sm:justify-end gap-4">
