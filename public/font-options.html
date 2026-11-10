@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALLYSHIP++ Typography & Font Pairing Studio</title>
+  
+  <!-- Preload & Load Google Fonts for all 5 Options -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Epilogue:wght@600;700;800;900&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* Base resets & CSS variables */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0A0A0A;
+      --surface: #121212;
+      --surface-2: #1A1A1A;
+      --surface-3: #222222;
+      --text: #F1F1F1;
+      --text-secondary: #A1A1AA;
+      --text-muted: #71717A;
+      --accent: #C5A869;
+      --accent-hover: #D4B97B;
+      --accent-subtle: rgba(197, 168, 105, 0.12);
+      --border: rgba(255, 255, 255, 0.12);
+      --border-accent: rgba(197, 168, 105, 0.35);
+      --badge-bg: #1A1A1A;
+      --badge-text: #C5A869;
+    }
+
+    [data-theme="light"] {
+      --bg: #F7F5F0;
+      --surface: #FFFFFF;
+      --surface-2: #F1EEE7;
+      --surface-3: #E9E4DA;
+      --text: #0F172A;
+      --text-secondary: #334155;
+      --text-muted: #64748B;
+      --accent: #7E5F24;
+      --accent-hover: #6A4F1D;
+      --accent-subtle: rgba(126, 95, 36, 0.12);
+      --border: rgba(15, 23, 42, 0.12);
+      --border-accent: rgba(126, 95, 36, 0.35);
+      --badge-bg: #F1EEE7;
+      --badge-text: #7E5F24;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body, 'Inter', sans-serif);
+      transition: background-color 0.3s ease, color 0.3s ease;
+      min-height: 100vh;
+      line-height: 1.6;
+      padding-bottom: 80px;
+    }
+
+    /* Fixed Top Navigation Bar */
+    .top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      backdrop-filter: blur(12px);
+    }
+    .brand-title {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .brand-title span.sub {
+      color: var(--text-muted);
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    .theme-toggle-btn {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 8px 16px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .theme-toggle-btn:hover {
+      border-color: var(--accent);
+    }
+
+    /* Option Selector Pills */
+    .selector-container {
+      max-width: 1300px;
+      margin: 24px auto 32px auto;
+      padding: 0 24px;
+    }
+    .selector-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+      display: block;
+    }
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 12px;
+    }
+    .option-card {
+      background: var(--surface);
+      border: 2px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      text-align: left;
+      position: relative;
+    }
+    .option-card:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-2px);
+    }
+    .option-card.active {
+      border-color: var(--accent);
+      background: var(--surface-2);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+    .option-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 2px 8px;
+      border-radius: 6px;
+      background: var(--accent-subtle);
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .option-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .option-desc {
+      font-size: 12px;
+      color: var(--text-secondary);
+      line-height: 1.4;
+      margin-bottom: 10px;
+    }
+    .option-specs {
+      font-size: 11px;
+      color: var(--accent);
+      font-weight: 600;
+      border-top: 1px solid var(--border);
+      padding-top: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    /* Live Preview Section */
+    .preview-wrapper {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .preview-banner {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 20px 24px;
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .banner-info h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .banner-info p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+    .banner-pills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .font-pill {
+      font-size: 11px;
+      padding: 4px 10px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    /* Simulated Hero Container */
+    .hero-container {
+      position: relative;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 70px 40px;
+      text-align: center;
+      overflow: hidden;
+      margin-bottom: 36px;
+      box-shadow: 0 12px 36px rgba(0,0,0,0.06);
+    }
+    .hero-container::before {
+      content: "";
+      position: absolute;
+      top: -20%;
+      left: 30%;
+      width: 500px;
+      height: 400px;
+      background: radial-gradient(circle, var(--accent-subtle) 0%, transparent 70%);
+      pointer-events-none;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      background: var(--badge-bg);
+      border: 1px solid var(--border-accent);
+      color: var(--badge-text);
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+
+    .hero-heading {
+      font-family: var(--font-display);
+      font-size: clamp(34px, 5.5vw, 68px);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+      color: var(--text);
+      max-width: 900px;
+      margin: 0 auto 20px auto;
+    }
+    .hero-heading .plus {
+      color: var(--accent);
+    }
+
+    .hero-subhead {
+      font-family: var(--font-accent);
+      font-size: clamp(17px, 2.2vw, 24px);
+      color: var(--text-muted);
+      font-style: italic;
+      max-width: 780px;
+      margin: 0 auto 24px auto;
+      line-height: 1.45;
+    }
+
+    .hero-body {
+      font-family: var(--font-body);
+      font-size: 16px;
+      color: var(--text-secondary);
+      max-width: 700px;
+      margin: 0 auto 32px auto;
+      line-height: 1.7;
+    }
+
+    .cta-group {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .cta-primary {
+      background: var(--accent);
+      color: #FFFFFF;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 9999px;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cta-secondary {
+      background: var(--surface-2);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 9999px;
+      border: 1px solid var(--border);
+      cursor: pointer;
+    }
+
+    /* Genesis Content Demo Section */
+    .content-demo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 860px) {
+      .content-demo-grid { grid-template-columns: 1fr; }
+    }
+
+    .demo-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 36px 32px;
+    }
+    .eyebrow {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--accent);
+      margin-bottom: 12px;
+      display: block;
+    }
+    .card-heading {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.015em;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+    .card-paragraph {
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .quote-box {
+      border-left: 3px solid var(--accent);
+      padding: 16px 20px;
+      background: var(--surface-2);
+      border-radius: 0 12px 12px 0;
+      margin-top: 20px;
+    }
+    .quote-text {
+      font-family: var(--font-accent);
+      font-size: 16px;
+      font-style: italic;
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    /* Comparison Table */
+    .comparison-table-wrapper {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+    th, td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      font-size: 13px;
+    }
+    th {
+      font-family: var(--font-body);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      font-size: 11px;
+    }
+    td.opt-name {
+      font-weight: 700;
+      color: var(--text);
+    }
+    td.opt-fonts {
+      font-weight: 600;
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Sticky Bar -->
+  <header class="top-bar">
+    <div class="brand-title">
+      ALLYSHIP++
+      <span class="sub">| Typography & Font Pairing Studio</span>
+    </div>
+    <button class="theme-toggle-btn" onclick="toggleTheme()">
+      <span id="theme-icon">☀️</span>
+      <span id="theme-text">Switch to Dark Mode</span>
+    </button>
+  </header>
+
+  <!-- Option Selector Grid -->
+  <main class="selector-container">
+    <span class="selector-label">Select 1 of 5 Font Combinations to Preview Live:</span>
+    <div class="options-grid">
+
+      <!-- Option 1 -->
+      <div class="option-card active" onclick="setOption(1)" id="card-1">
+        <span class="option-badge">Option 01 · Current Benchmark</span>
+        <div class="option-title">Modern Institutional</div>
+        <div class="option-desc">Contemporary architectural clarity with high-trust corporate authority.</div>
+        <div class="option-specs">
+          <div>Display: <strong>Plus Jakarta Sans</strong></div>
+          <div>Body: <strong>Inter</strong></div>
+          <div>Serif Accent: <strong>Newsreader</strong></div>
+        </div>
+      </div>
+
+      <!-- Option 2 -->
+      <div class="option-card" onclick="setOption(2)" id="card-2">
+        <span class="option-badge">Option 02 · Prestige</span>
+        <div class="option-title">Global Ivy & Editorial</div>
+        <div class="option-desc">Financial Times & Ivy League stature with crisp geometric readability.</div>
+        <div class="option-specs">
+          <div>Display: <strong>Playfair Display</strong></div>
+          <div>Body: <strong>Plus Jakarta Sans</strong></div>
+          <div>Serif Accent: <strong>Newsreader</strong></div>
+        </div>
+      </div>
+
+      <!-- Option 3 -->
+      <div class="option-card" onclick="setOption(3)" id="card-3">
+        <span class="option-badge">Option 03 · Innovation</span>
+        <div class="option-title">Silicon Valley Executive</div>
+        <div class="option-desc">Sculptural, high-tech elegance trusted by frontier engineering leaders.</div>
+        <div class="option-specs">
+          <div>Display: <strong>Space Grotesk</strong></div>
+          <div>Body: <strong>DM Sans</strong></div>
+          <div>Code/Accent: <strong>Space Mono</strong></div>
+        </div>
+      </div>
+
+      <!-- Option 4 -->
+      <div class="option-card" onclick="setOption(4)" id="card-4">
+        <span class="option-badge">Option 04 · Humanist</span>
+        <div class="option-title">Empathetic Leadership</div>
+        <div class="option-desc">Warm, rounded, highly relatable for generational mentorship & allyship.</div>
+        <div class="option-specs">
+          <div>Display: <strong>Outfit</strong></div>
+          <div>Body: <strong>Plus Jakarta Sans</strong></div>
+          <div>Serif Accent: <strong>Cormorant Garamond</strong></div>
+        </div>
+      </div>
+
+      <!-- Option 5 -->
+      <div class="option-card" onclick="setOption(5)" id="card-5">
+        <span class="option-badge">Option 05 · Monumental</span>
+        <div class="option-title">Architectural Swiss & Editorial</div>
+        <div class="option-desc">Bold European editorial energy with expressively sculpted serif italic.</div>
+        <div class="option-specs">
+          <div>Display: <strong>Epilogue</strong></div>
+          <div>Body: <strong>Manrope</strong></div>
+          <div>Serif Accent: <strong>Instrument Serif</strong></div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Live Preview Canvas -->
+  <section class="preview-wrapper">
+
+    <!-- Active Banner -->
+    <div class="preview-banner">
+      <div class="banner-info">
+        <h2 id="active-banner-title">Option 01: Modern Institutional</h2>
+        <p id="active-banner-desc">Plus Jakarta Sans (Headings) · Inter (Body) · Newsreader (Editorial Accent)</p>
+      </div>
+      <div class="banner-pills">
+        <span class="font-pill" id="pill-display">Display: Plus Jakarta Sans</span>
+        <span class="font-pill" id="pill-body">Body: Inter</span>
+        <span class="font-pill" id="pill-accent">Accent: Newsreader</span>
+      </div>
+    </div>
+
+    <!-- Live Simulated Hero -->
+    <div class="hero-container">
+      <div class="badge-pill">
+        Institutional Philosophy &amp; Mandate
+      </div>
+
+      <h1 class="hero-heading">
+        The ALLYSHIP<span class="plus">++</span> Thesis
+      </h1>
+
+      <p class="hero-subhead">
+        Where Relationships Precede Recruitment — Bridging Three Decades of Academic Inquiry with the Leaders Shaping India’s Future.
+      </p>
+
+      <p class="hero-body">
+        A national initiative by Siksha &lsquo;O&rsquo; Anusandhan that brings corporate leaders, academic thinkers, and national icons into a shared conversation—building enduring relationships, mentoring emerging talent, and shaping the future of work.
+      </p>
+
+      <div class="cta-group">
+        <button class="cta-primary">
+          <span>Request Executive Invitation</span>
+          <span>→</span>
+        </button>
+        <button class="cta-secondary">
+          <span>Explore Chapters</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Genesis & Quote Demo Grid -->
+    <div class="content-demo-grid">
+      <!-- Card 1: Genesis Text -->
+      <div class="demo-card">
+        <span class="eyebrow">The Origin &amp; Mandate</span>
+        <h3 class="card-heading">Bridging Two Worlds: The Genesis of ALLYSHIP</h3>
+        <p class="card-paragraph">
+          For too long, the relationship between universities and industry has been limited to annual visits and short interviews. ALLYSHIP was founded on a simple realization: preparing future generations requires continuous conversation, not an annual transaction.
+        </p>
+        <p class="card-paragraph">
+          Instead of waiting behind campus gates, Siksha &lsquo;O&rsquo; Anusandhan stepped directly into the boardrooms of Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai to listen first. We asked a fundamental question: <em>How do we create workplaces where emerging talent doesn&rsquo;t just adapt, but genuinely thrives?</em>
+        </p>
+      </div>
+
+      <!-- Card 2: Living Standard & Athletic Parallel -->
+      <div class="demo-card">
+        <span class="eyebrow">The Living Standard · Practicing Allyship</span>
+        <h3 class="card-heading">Culture is What Happens on a Tuesday</h3>
+        <p class="card-paragraph">
+          By bringing Olympic coaches and sports icons alongside corporate leaders, we ground mentorship in the timeless truth of sport: potential only turns into excellence when someone believes in you enough to guide you through the setbacks.
+        </p>
+
+        <div class="quote-box">
+          <p class="quote-text">
+            &ldquo;A diversity policy says what an organization intends on paper. Allyship is what happens on an ordinary Tuesday—who is heard in a meeting, who is trusted with a challenging project, and who speaks up when an early-career colleague is overlooked.&rdquo;
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Font Spec Sheet Table -->
+    <div class="comparison-table-wrapper">
+      <span class="eyebrow">Curated Technical Comparison Matrix</span>
+      <table>
+        <thead>
+          <tr>
+            <th>Option #</th>
+            <th>Name &amp; Philosophy</th>
+            <th>Heading / Display</th>
+            <th>Body / Prose</th>
+            <th>Editorial Accent</th>
+            <th>Best Suited For</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="opt-name">Option 01</td>
+            <td>Modern Institutional</td>
+            <td class="opt-fonts">Plus Jakarta Sans</td>
+            <td class="opt-fonts">Inter</td>
+            <td class="opt-fonts">Newsreader</td>
+            <td>Balanced enterprise authority, tech-ready clarity</td>
+          </tr>
+          <tr>
+            <td class="opt-name">Option 02</td>
+            <td>Global Ivy &amp; Editorial</td>
+            <td class="opt-fonts">Playfair Display</td>
+            <td class="opt-fonts">Plus Jakarta Sans</td>
+            <td class="opt-fonts">Newsreader</td>
+            <td>Prestigious university heritage, thought leadership</td>
+          </tr>
+          <tr>
+            <td class="opt-name">Option 03</td>
+            <td>Silicon Valley Executive</td>
+            <td class="opt-fonts">Space Grotesk</td>
+            <td class="opt-fonts">DM Sans</td>
+            <td class="opt-fonts">Space Mono</td>
+            <td>GCC leaders, frontier innovation, engineering edge</td>
+          </tr>
+          <tr>
+            <td class="opt-name">Option 04</td>
+            <td>Empathetic Leadership</td>
+            <td class="opt-fonts">Outfit</td>
+            <td class="opt-fonts">Plus Jakarta Sans</td>
+            <td class="opt-fonts">Cormorant Garamond</td>
+            <td>Human connection, mentorship, relatable warmth</td>
+          </tr>
+          <tr>
+            <td class="opt-name">Option 05</td>
+            <td>Architectural Swiss</td>
+            <td class="opt-fonts">Epilogue</td>
+            <td class="opt-fonts">Manrope</td>
+            <td class="opt-fonts">Instrument Serif</td>
+            <td>High-impact national presence, European editorial</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </section>
+
+  <script>
+    const FONT_OPTIONS = {
+      1: {
+        name: "Option 01: Modern Institutional",
+        desc: "Plus Jakarta Sans (Headings) · Inter (Body) · Newsreader (Editorial Accent)",
+        display: "'Plus Jakarta Sans', sans-serif",
+        body: "'Inter', sans-serif",
+        accent: "'Newsreader', serif",
+        displayLabel: "Display: Plus Jakarta Sans",
+        bodyLabel: "Body: Inter",
+        accentLabel: "Accent: Newsreader"
+      },
+      2: {
+        name: "Option 02: Global Ivy & Editorial",
+        desc: "Playfair Display (Headings) · Plus Jakarta Sans (Body) · Newsreader (Editorial Accent)",
+        display: "'Playfair Display', serif",
+        body: "'Plus Jakarta Sans', sans-serif",
+        accent: "'Newsreader', serif",
+        displayLabel: "Display: Playfair Display",
+        bodyLabel: "Body: Plus Jakarta Sans",
+        accentLabel: "Accent: Newsreader"
+      },
+      3: {
+        name: "Option 03: Silicon Valley Executive",
+        desc: "Space Grotesk (Headings) · DM Sans (Body) · Space Mono (Accent)",
+        display: "'Space Grotesk', sans-serif",
+        body: "'DM Sans', sans-serif",
+        accent: "'Space Mono', monospace",
+        displayLabel: "Display: Space Grotesk",
+        bodyLabel: "Body: DM Sans",
+        accentLabel: "Accent: Space Mono"
+      },
+      4: {
+        name: "Option 04: Empathetic Leadership",
+        desc: "Outfit (Headings) · Plus Jakarta Sans (Body) · Cormorant Garamond (Editorial Accent)",
+        display: "'Outfit', sans-serif",
+        body: "'Plus Jakarta Sans', sans-serif",
+        accent: "'Cormorant Garamond', serif",
+        displayLabel: "Display: Outfit",
+        bodyLabel: "Body: Plus Jakarta Sans",
+        accentLabel: "Accent: Cormorant Garamond"
+      },
+      5: {
+        name: "Option 05: Architectural Swiss & Editorial",
+        desc: "Epilogue (Headings) · Manrope (Body) · Instrument Serif (Editorial Accent)",
+        display: "'Epilogue', sans-serif",
+        body: "'Manrope', sans-serif",
+        accent: "'Instrument Serif', serif",
+        displayLabel: "Display: Epilogue",
+        bodyLabel: "Body: Manrope",
+        accentLabel: "Accent: Instrument Serif"
+      }
+    };
+
+    function setOption(optId) {
+      const opt = FONT_OPTIONS[optId];
+      if (!opt) return;
+
+      // Update CSS variables on document
+      document.documentElement.style.setProperty('--font-display', opt.display);
+      document.documentElement.style.setProperty('--font-body', opt.body);
+      document.documentElement.style.setProperty('--font-accent', opt.accent);
+
+      // Update Card Active states
+      for (let i = 1; i <= 5; i++) {
+        const card = document.getElementById(`card-${i}`);
+        if (card) {
+          if (i === optId) card.classList.add('active');
+          else card.classList.remove('active');
+        }
+      }
+
+      // Update Banner Info
+      document.getElementById('active-banner-title').innerText = opt.name;
+      document.getElementById('active-banner-desc').innerText = opt.desc;
+      document.getElementById('pill-display').innerText = opt.displayLabel;
+      document.getElementById('pill-body').innerText = opt.bodyLabel;
+      document.getElementById('pill-accent').innerText = opt.accentLabel;
+    }
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+
+      const icon = document.getElementById('theme-icon');
+      const text = document.getElementById('theme-text');
+      if (next === 'dark') {
+        icon.innerText = '🌙';
+        text.innerText = 'Switch to Light Mode';
+      } else {
+        icon.innerText = '☀️';
+        text.innerText = 'Switch to Dark Mode';
+      }
+    }
+
+    // Initialize with Option 1
+    setOption(1);
+  </script>
+</body>
+</html>
