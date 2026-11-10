@@ -1148,16 +1148,19 @@ function EventContent() {
               {/* Card Hero Header */}
               <div className="pb-8 border-b border-line">
                 <div className="space-y-3">
-                  <div className="flex flex-wrap items-center gap-2.5">
-                    <span className="px-3.5 py-1 rounded-full bg-accent text-on-accent font-mono text-xs font-bold uppercase tracking-wider shadow-sm">
-                      {currentConclave.edition}
-                    </span>
-                    <span className="px-3.5 py-1 rounded-full bg-surface-2 border border-line text-content-secondary font-mono text-xs">
+                  <div className="flex items-center justify-between gap-3 flex-wrap">
+                    <div className="flex flex-wrap items-center gap-2.5">
+                      <span className="px-3.5 py-1 rounded-full bg-accent text-on-accent font-mono text-xs font-bold uppercase tracking-wider shadow-sm">
+                        {currentConclave.edition}
+                      </span>
+                      <span className="px-3.5 py-1 rounded-full bg-surface-2 border border-line text-accent font-mono text-xs flex items-center gap-1.5">
+                        <Users className="w-3.5 h-3.5" />
+                        {currentConclave.turnout}
+                      </span>
+                    </div>
+
+                    <span className="px-3.5 py-1 rounded-full bg-surface-2 border border-line text-content-secondary font-mono text-xs ml-auto">
                       {currentConclave.date}
-                    </span>
-                    <span className="px-3.5 py-1 rounded-full bg-surface-2 border border-line text-accent font-mono text-xs flex items-center gap-1.5">
-                      <Users className="w-3.5 h-3.5" />
-                      {currentConclave.turnout}
                     </span>
                   </div>
                   <h2 className="font-display text-xl sm:text-2xl md:text-3xl lg:text-[1.85rem] xl:text-[2.25rem] 2xl:text-4xl font-black tracking-tight leading-tight text-content scroll-mt-24 md:whitespace-nowrap overflow-hidden text-ellipsis">
