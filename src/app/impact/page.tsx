@@ -179,8 +179,8 @@ export default function ImpactPage() {
                 <span className="italic font-normal">Impact</span>
               </h1>
 
-              <p className="text-lg sm:text-xl font-display text-content-muted italic lg:whitespace-nowrap">
-                Moving Beyond Short-Term Metrics to Transform the Future of Education and Work
+              <p className="text-base sm:text-lg font-display text-content-muted italic lg:whitespace-nowrap">
+                Moving Beyond Metrics to Transform Education and Work
               </p>
 
               <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-xl font-normal">
