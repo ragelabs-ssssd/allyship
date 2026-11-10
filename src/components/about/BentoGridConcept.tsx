@@ -30,43 +30,43 @@ export function BentoGridConcept() {
 
       {/* Bento Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
-        {/* Card 1: Large Featured Card (8 cols) - Placement Velocity & NIRF Dividend */}
+        {/* Card 1: Large Featured Card (8 cols) - Enduring Relationships & Institutional Legacy */}
         <div className="md:col-span-2 lg:col-span-8 rounded-3xl p-8 sm:p-10 bg-surface border border-line shadow-xl flex flex-col justify-between space-y-8 relative overflow-hidden group hover:border-accent/60 transition-all duration-300">
           <div className="absolute top-0 right-0 w-80 h-80 bg-accent/15 rounded-full blur-3xl pointer-events-none" />
 
           <div className="space-y-4 relative z-10">
             <div className="flex flex-wrap gap-2 items-center justify-between">
               <span className="text-[11px] font-bold font-heading uppercase tracking-widest px-3 py-1 rounded-full bg-accent-subtle text-accent border border-accent/30">
-                Primary Measurable Dividend
+                Institutional Mandate
               </span>
-              <span className="text-xs font-semibold text-accent">NIRF 2025 #15 Overall</span>
+              <span className="text-xs font-semibold text-accent">NIRF 2025 #15 Nationally</span>
             </div>
 
             <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-content tracking-tight">
-              94.54% Placement with Day-One Readiness
+              Enduring Relationships Beyond Recruitment
             </h3>
             <p className="text-sm sm:text-base text-content-secondary leading-relaxed font-normal max-w-2xl">
-              By replacing archaic placement weeks with year-round capability co-creation, SOA graduates enter global workforces with immediate production readiness. Over 150+ multinational partners anchor their talent pipelines here.
+              By replacing one-off hiring cycles with year-round collaboration, SOA bridges classroom inquiry with executive boardrooms. Over 500 enterprise leaders and 150+ multinational partners actively help mentor, guide, and inspire future generations.
             </p>
           </div>
 
           {/* Metric Bar Visualizer */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-line relative z-10">
             <div>
-              <div className="font-heading text-2xl sm:text-3xl font-bold text-accent">94.54%</div>
-              <div className="text-[11px] text-content-secondary mt-1">Placement Rate</div>
+              <div className="font-heading text-2xl sm:text-3xl font-bold text-accent">30+ Yrs</div>
+              <div className="text-[11px] text-content-secondary mt-1">Academic Legacy</div>
             </div>
             <div>
               <div className="font-heading text-2xl sm:text-3xl font-bold text-content">500+</div>
-              <div className="text-[11px] text-content-secondary mt-1">Corporate CXOs</div>
+              <div className="text-[11px] text-content-secondary mt-1">Boardroom CXOs</div>
             </div>
             <div>
               <div className="font-heading text-2xl sm:text-3xl font-bold text-content">150+</div>
-              <div className="text-[11px] text-content-secondary mt-1">Global Employers</div>
+              <div className="text-[11px] text-content-secondary mt-1">Global Partners</div>
             </div>
             <div>
               <div className="font-heading text-2xl sm:text-3xl font-bold text-accent">18 CoEs</div>
-              <div className="text-[11px] text-content-secondary mt-1">Research Centers</div>
+              <div className="text-[11px] text-content-secondary mt-1">Research Centres</div>
             </div>
           </div>
         </div>

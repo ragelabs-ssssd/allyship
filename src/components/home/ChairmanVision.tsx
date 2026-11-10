@@ -66,7 +66,7 @@ export function ChairmanVision() {
 
             <div className="space-y-3 pt-4 border-t border-line text-sm sm:text-base text-content-secondary leading-relaxed">
               <p className="font-sans text-sm sm:text-base font-normal tracking-[0.01em] leading-relaxed text-content-secondary">
-                Founded on the conviction that eastern talent deserves equal national access, Prof. (Dr.) Manojranjan Nayak built Siksha &lsquo;O&rsquo; Anusandhan into a top-15 national university (NIRF #15)—anchoring 15,000 scholars, dual super-specialty hospitals, and bilateral industry conduits with global technology leaders.
+                Over three decades, Prof. (Dr.) Manojranjan Nayak has guided Siksha &lsquo;O&rsquo; Anusandhan from an ambitious educational venture into one of India’s top 15 national universities (NIRF #15). His foundational conviction remains unchanged: true education does not end with academic honors—it begins when young scholars find leaders who believe in their potential, listen to their ideas, and open doors for them to lead with dignity.
 
 
               </p>

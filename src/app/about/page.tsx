@@ -67,8 +67,8 @@ export default function AboutPage() {
               The ALLYSHIP<span className="text-accent">++</span> Thesis
             </h1>
 
-            <p className="text-lg sm:text-xl font-display text-content-muted max-w-2xl mx-auto italic">
-              Redefining How India&rsquo;s Next-Generation Talent Meets Boardroom Leadership.
+            <p className="text-lg sm:text-xl font-display text-content-muted max-w-3xl mx-auto italic">
+              Where Relationships Precede Recruitment — Bridging Three Decades of Academic Inquiry with the Leaders Shaping India&rsquo;s Future.
             </p>
 
           </div>
@@ -78,28 +78,42 @@ export default function AboutPage() {
       {/* 2. INSTITUTIONAL NARRATIVE & THE CODE VISUAL BLOCK */}
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 2xl:gap-24 items-center">
-          {/* Left Column: 3-Paragraph Narrative */}
+          {/* Left Column: 4-Paragraph Relatable Narrative */}
           <div className="lg:col-span-6 xl:col-span-6 space-y-6 text-left">
             <div className="space-y-2">
               <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
-                The Genesis of Allyship++
+                The Origin &amp; Mandate
               </span>
               <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
-                Bringing Industry and Academia to the Same Table
+                Bridging Two Worlds: The Genesis of ALLYSHIP
               </h2>
             </div>
 
             <p className="max-w-[68ch] text-base text-content-secondary leading-relaxed font-normal">
-              For decades, university placement in India operated as a yearly, one-way transaction: institutions waited on campus for recruiters to arrive. Allyship++ reverses that equation. Siksha &lsquo;O&rsquo; Anusandhan travels directly to the corporate boardrooms of Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai to listen first. While a diversity policy states what an organisation intends on paper, allyship determines what happens on an ordinary Tuesday—who receives credit in a meeting, who is sponsored for a stretch project, and who speaks up when a boundary is crossed.
+              For too long, the relationship between universities and industry has been limited to annual visits and short interviews. ALLYSHIP was founded on a simple realization: preparing future generations requires continuous conversation, not an annual transaction.
             </p>
 
             <p className="max-w-[68ch] text-base text-content-secondary leading-relaxed font-normal">
-              The &ldquo;++&rdquo; carries a dual meaning rooted in engineering and organizational leadership: in programming, the <code className="text-accent bg-glass-strong px-2 py-0.5 rounded border border-line font-mono font-semibold">++</code> operator increments a value by one step at a time, and marks the historic leap from procedural C to object-oriented C++. Applied to corporate-academic leadership, Allyship++ represents a continuous, compounding upgrade—expanding traditional DEI to encompass generational allyship for Gen-Z professionals, psychological safety for junior analysts, and co-created curricula between universities and employers.
+              Instead of waiting behind campus gates, Siksha &lsquo;O&rsquo; Anusandhan stepped directly into the boardrooms of Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai to listen first. We asked a fundamental question: <em>How do we create workplaces where emerging talent doesn&rsquo;t just adapt, but genuinely thrives?</em>
             </p>
 
             <p className="max-w-[68ch] text-base text-content-secondary leading-relaxed font-normal">
-              Uniquely, every ALLYSHIP++ conclave pairs corporate talent strategists with Olympic and national athletic coaches. This cross-domain synthesis demonstrates that the radical psychological safety, high-stakes feedback loops, and coach-athlete sponsorship required to reach world podiums are the exact leadership disciplines needed to build resilient enterprise teams.
+              The <code className="text-accent bg-glass-strong px-2 py-0.5 rounded border border-line font-mono font-semibold">++</code> represents compounding growth. In leadership, it reflects our commitment to go beyond standard hiring metrics—focusing on psychological safety for first-time professionals, genuine mentorship from seasoned leaders, and classrooms shaped directly alongside corporate practitioners.
             </p>
+
+            <p className="max-w-[68ch] text-base text-content-secondary leading-relaxed font-normal">
+              By bringing Olympic coaches and sports icons alongside corporate leaders, we ground mentorship in the timeless truth of sport: potential only turns into excellence when someone believes in you enough to guide you through the setbacks.
+            </p>
+
+            {/* Living Standard Callout Card */}
+            <div className="p-5 rounded-2xl bg-surface-2 border border-accent/25 space-y-2 mt-4">
+              <span className="text-[10px] font-bold font-heading uppercase tracking-widest text-accent block">
+                The Living Standard · Practicing Allyship
+              </span>
+              <p className="text-xs sm:text-sm text-content-secondary leading-relaxed italic">
+                &ldquo;A diversity policy says what an organization intends on paper. Allyship is what happens on an ordinary Tuesday—who is heard in a meeting, who is trusted with a challenging project, and who speaks up when an early-career colleague is overlooked.&rdquo;
+              </p>
+            </div>
 
             <div className="pt-2">
               <a

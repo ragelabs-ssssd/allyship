@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { CinematicHero } from "@/components/home/CinematicHero";
 import { LogoTicker } from "@/components/home/LogoTicker";
 import { ImpactSection } from "@/components/home/ImpactSection";
+import { BeyondRecruitment } from "@/components/home/BeyondRecruitment";
 import { ChapterBentoGrid } from "@/components/home/ChapterBentoGrid";
 import { ChairmanVision } from "@/components/home/ChairmanVision";
 import { TestimonialCarousel } from "@/components/home/TestimonialCarousel";
@@ -23,6 +24,9 @@ export default function HomePage() {
 
       {/* 3. Impact Numbers — Giant Animated Metrics */}
       <ImpactSection />
+
+      {/* 3.5. Beyond Recruitment — The Deeper Purpose & Institutional Covenant */}
+      <BeyondRecruitment />
 
       {/* 4. Conclave Chapters — Asymmetrical Bento Grid */}
       <ChapterBentoGrid />

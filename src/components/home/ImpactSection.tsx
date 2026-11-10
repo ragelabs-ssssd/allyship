@@ -64,25 +64,25 @@ export function ImpactSection() {
       value: 500,
       suffix: "+",
       decimals: 0,
-      title: "CXOs & Capability Heads",
+      title: "Boardroom Leaders & CXOs",
       description:
-        "Enterprise directors from Microsoft, Amazon, Dell, Deloitte, and 150+ multinationals actively co-designing talent pipelines and leadership benchmarks.",
+        "Enterprise directors, vice presidents, and talent heads from Microsoft, Amazon, Dell, Deloitte, and 150+ organizations engaged in enduring dialogue.",
     },
     {
       value: 7,
       suffix: "",
       decimals: 0,
-      title: "National Leadership Conclaves",
+      title: "Metropolitan Conclaves",
       description:
-        "High-impact leadership conclaves across Bengaluru, Hyderabad, Kolkata, Mumbai, Chennai, and institutional headquarters.",
+        "In-depth leadership conclaves convened across Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai—linking classroom learning with boardroom realities.",
     },
     {
-      value: 94.54,
-      suffix: "%",
-      decimals: 2,
-      title: "Placement Velocity Engine",
+      value: 30,
+      suffix: "+ Yrs",
+      decimals: 0,
+      title: "Academic Stewardship",
       description:
-        "1,802 of 1,903 engineering graduates placed with zero-day ramp-up, verified by Tier-1 corporate partners and NIRF #15 ranking.",
+        "Three decades of educational excellence from Siksha 'O' Anusandhan (NIRF #15), advancing research, human values, and generational leadership.",
     },
   ];
 
@@ -93,10 +93,10 @@ export function ImpactSection() {
         <SectionReveal className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 pb-8 border-b border-line">
           <div>
             <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
-              Verified Institutional Dividends
+              The Reach of Our Alliance
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight mt-2">
-              The Architecture of Measurable Velocity
+              A National Network Built on Real Relationships
             </h2>
           </div>
           <Link

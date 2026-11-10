@@ -45,10 +45,10 @@ export function ChapterBentoGrid() {
         <div className="flex flex-col xl:flex-row xl:items-end justify-between gap-6 mb-16 pb-6 border-b border-line">
           <SectionReveal>
             <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
-              Standing National Corridors
+              A Continuing National Dialogue
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight mt-2">
-              The National Metro Conclave Chronicles
+              Conversations Shaping the Future of Work
             </h2>
           </SectionReveal>
 

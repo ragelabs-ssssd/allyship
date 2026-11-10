@@ -204,7 +204,7 @@ export function CinematicHero({ onOpenInvite }: CinematicHeroProps) {
                 transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                 className="font-sans text-base sm:text-lg font-normal tracking-[0.01em] leading-relaxed text-content-secondary max-w-xl"
               >
-                An executive alliance that brings together CHROs, Global Capability Center (GCC) leaders and engineering leaders to co-create curricula, nurture emerging talent and institutionalize day-one career readiness.
+                A national initiative by Siksha &lsquo;O&rsquo; Anusandhan that brings corporate leaders, academic thinkers, and national icons into a shared conversation—building enduring relationships, mentoring emerging talent, and shaping the future of work.
               </motion.p>
             </div>
 

@@ -29,8 +29,7 @@ export function CtaBanner({ onOpenInvite }: CtaBannerProps) {
 
         <SectionReveal delay={0.2}>
           <p className="font-sans text-base sm:text-lg font-normal tracking-[0.01em] leading-relaxed text-content-secondary max-w-xl mx-auto">
-            A strictly curated boardroom delegation for CHROs, Managing Directors, and Technology Leaders
-            establishing high-velocity talent pipelines and campus Centres of Excellence.
+            A curated boardroom convening for executive leaders, educators, and mentors committed to bridging academia and industry to nurture the next generation of leadership.
           </p>
         </SectionReveal>
 
