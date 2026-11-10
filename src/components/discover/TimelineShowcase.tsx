@@ -453,8 +453,8 @@ export const INSTITUTION_NODES: InstitutionNode[] = [
     acronym: "IDS",
     desc: "Ranked #9 in India by NIRF 2025; premier multi-chair maxillofacial surgical hospital, digital prosthodontics suites, and regional oral oncology centre.",
     category: "Dental Surgery",
-    image: "/slides/IMG_7873.jpg",
-    imageAlt: "Institute of Dental Sciences Hospital",
+    image: "/ids-options/ids-option-1.jpg",
+    imageAlt: "Official Institute of Dental Sciences High-Rise Hospital",
     badge: "NIRF #9 in India",
     achievement: "Oral & Maxillofacial Super-Center",
     exitNumber: "EXIT 04 · MILE 10",
@@ -471,8 +471,8 @@ export const INSTITUTION_NODES: InstitutionNode[] = [
     acronym: "IMS & SUM Hospital",
     desc: "Super-specialty medical college and quaternary healthcare hospital ranked #15 nationally with 2,000+ clinical beds serving Eastern India.",
     category: "Quaternary Medicine",
-    image: "/soa-campus-grounds.jpg",
-    imageAlt: "IMS & SUM Hospital Quaternary Grounds",
+    image: "/ims-options/ims-option-1.jpg",
+    imageAlt: "IMS & SUM Hospital Super-Specialty Medical High-Rise",
     badge: "NIRF #15 Medical · 2000+ Beds",
     achievement: "NABH & NABL Quaternary Anchor",
     exitNumber: "EXIT 05 · MILE 12",
@@ -525,8 +525,8 @@ export const INSTITUTION_NODES: InstitutionNode[] = [
     acronym: "IVS-AH",
     desc: "State-of-the-art clinical veterinary hospital, surgical suites, and animal research biome serving eastern regional livestock genomics.",
     category: "Veterinary Care",
-    image: "/ivs-options/ivs-option-2.jpg",
-    imageAlt: "IVS-AH Clinical Veterinary Complex Drone View",
+    image: "/ivs-options/ivs-option-1.jpg",
+    imageAlt: "Institute of Veterinary Sciences & Animal Husbandry Modern Facade",
     badge: "Clinical Animal Hospital",
     achievement: "Livestock Genomics & Regional Surgery",
     exitNumber: "EXIT 08 · MILE 26",
@@ -561,8 +561,8 @@ export const INSTITUTION_NODES: InstitutionNode[] = [
     acronym: "SPS Phase-II",
     desc: "Cutting-edge biopharmaceutical research centre equipped with high-throughput drug screening, computational molecular biology, and sovereign AI labs.",
     category: "Bio-Pharma & AI",
-    image: "/discover/evolution-growth.jpg",
-    imageAlt: "SPS Phase II Molecular Labs",
+    image: "/pharma2-options/pharma2-option-1.jpg",
+    imageAlt: "SPS Phase-II Advanced High-Throughput Drug Discovery Complex",
     badge: "Sovereign AI Discovery",
     achievement: "High-Throughput Molecular R&D Apex",
     exitNumber: "EXIT 10 · MILE 30",
@@ -573,67 +573,6 @@ export const INSTITUTION_NODES: InstitutionNode[] = [
 ];
 
 export function TimelineShowcase() {
-  const [selectedShmPhoto, setSelectedShmPhoto] = useState(0);
-  const [selectedIdsPhoto, setSelectedIdsPhoto] = useState(0);
-  const [selectedImsPhoto, setSelectedImsPhoto] = useState(0);
-  const [selectedIvsPhoto, setSelectedIvsPhoto] = useState(0);
-  const [selectedPharma2Photo, setSelectedPharma2Photo] = useState(0);
-
-  const currentShmPhoto = SHM_PHOTO_OPTIONS[selectedShmPhoto] ?? SHM_PHOTO_OPTIONS[0];
-  const currentIdsPhoto = IDS_PHOTO_OPTIONS[selectedIdsPhoto] ?? IDS_PHOTO_OPTIONS[0];
-  const currentImsPhoto = IMS_PHOTO_OPTIONS[selectedImsPhoto] ?? IMS_PHOTO_OPTIONS[0];
-  const currentIvsPhoto = IVS_PHOTO_OPTIONS[selectedIvsPhoto] ?? IVS_PHOTO_OPTIONS[0];
-  const currentPharma2Photo = PHARMA2_PHOTO_OPTIONS[selectedPharma2Photo] ?? PHARMA2_PHOTO_OPTIONS[0];
-
-  const getNodePhotoData = (nodeId: string) => {
-    if (nodeId === "shm-2004") {
-      return {
-        src: currentShmPhoto.src,
-        caption: currentShmPhoto.caption,
-        options: SHM_PHOTO_OPTIONS,
-        selected: selectedShmPhoto,
-        onSelect: setSelectedShmPhoto,
-      };
-    }
-    if (nodeId === "ids-2006") {
-      return {
-        src: currentIdsPhoto.src,
-        caption: currentIdsPhoto.caption,
-        options: IDS_PHOTO_OPTIONS,
-        selected: selectedIdsPhoto,
-        onSelect: setSelectedIdsPhoto,
-      };
-    }
-    if (nodeId === "ims-2007") {
-      return {
-        src: currentImsPhoto.src,
-        caption: currentImsPhoto.caption,
-        options: IMS_PHOTO_OPTIONS,
-        selected: selectedImsPhoto,
-        onSelect: setSelectedImsPhoto,
-      };
-    }
-    if (nodeId === "ivs-2022") {
-      return {
-        src: currentIvsPhoto.src,
-        caption: currentIvsPhoto.caption,
-        options: IVS_PHOTO_OPTIONS,
-        selected: selectedIvsPhoto,
-        onSelect: setSelectedIvsPhoto,
-      };
-    }
-    if (nodeId === "pharma2-2025") {
-      return {
-        src: currentPharma2Photo.src,
-        caption: currentPharma2Photo.caption,
-        options: PHARMA2_PHOTO_OPTIONS,
-        selected: selectedPharma2Photo,
-        onSelect: setSelectedPharma2Photo,
-      };
-    }
-    return null;
-  };
-
   const [viewMode, setViewMode] = useState<"grid" | "expressway">("grid");
 
   return (
@@ -745,8 +684,6 @@ export function TimelineShowcase() {
       {viewMode === "grid" ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {INSTITUTION_NODES.map((node, idx) => {
-            const photoData = getNodePhotoData(node.id);
-
             return (
               <div
                 key={node.id}
@@ -756,7 +693,7 @@ export function TimelineShowcase() {
                   {/* Photo Billboard */}
                   <div className="relative aspect-[16/10] bg-surface-3 overflow-hidden">
                     <Image
-                      src={photoData ? photoData.src : node.image}
+                      src={node.image}
                       alt={node.title}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -773,26 +710,6 @@ export function TimelineShowcase() {
                         {node.acronym}
                       </span>
                     </div>
-
-                    {/* Photo Options Pill Switcher */}
-                    {photoData && (
-                      <div className="absolute bottom-2 left-2 right-2 flex flex-wrap items-center gap-1 z-10">
-                        {photoData.options.map((opt, optIdx) => (
-                          <button
-                            key={opt.id}
-                            type="button"
-                            onClick={() => photoData.onSelect(optIdx)}
-                            className={`px-2 py-0.5 rounded-full text-[9px] font-mono font-bold transition-all cursor-pointer ${
-                              photoData.selected === optIdx
-                                ? "bg-accent text-on-accent shadow-md"
-                                : "bg-black/65 backdrop-blur-md text-white/80 border border-white/20 hover:bg-black/85"
-                            }`}
-                          >
-                            P{opt.id}
-                          </button>
-                        ))}
-                      </div>
-                    )}
                   </div>
 
                   {/* Card Body */}
@@ -834,8 +751,6 @@ export function TimelineShowcase() {
         /* Expressway Roadway with Cantilever Gantry Billboards */
         <div className="space-y-8 relative pl-6 sm:pl-12 border-l-4 border-dashed border-accent/40">
         {INSTITUTION_NODES.map((node, idx) => {
-          const photoData = getNodePhotoData(node.id);
-
           return (
             <div key={node.id} className="relative group">
               {/* Highway Milepost Marker Pin */}
@@ -848,7 +763,7 @@ export function TimelineShowcase() {
                 {/* Photo Billboard */}
                 <div className="lg:col-span-5 relative min-h-[240px] sm:min-h-[280px] bg-surface-3 overflow-hidden">
                   <Image
-                    src={photoData ? photoData.src : node.image}
+                    src={node.image}
                     alt={node.title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -856,34 +771,13 @@ export function TimelineShowcase() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
 
-                  {photoData && (
-                    <div className="absolute top-3 left-3 right-3 flex flex-wrap items-center gap-1.5 z-10">
-                      {photoData.options.map((opt, optIdx) => (
-                        <button
-                          key={opt.id}
-                          type="button"
-                          onClick={() => photoData.onSelect(optIdx)}
-                          className={`px-2.5 py-1 rounded-full text-[10px] font-mono font-bold transition-all cursor-pointer ${
-                            photoData.selected === optIdx
-                              ? "bg-accent text-on-accent shadow-md"
-                              : "bg-black/65 backdrop-blur-md text-white/85 border border-white/20 hover:bg-black/85"
-                          }`}
-                        >
-                          {opt.label}
-                        </button>
-                      ))}
-                    </div>
-                  )}
-
                   <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between gap-2">
                     <span className="text-sm font-mono text-[#F4E8C1] font-bold block">
                       {node.acronym}
                     </span>
-                    {photoData && (
-                      <span className="text-[10px] font-sans text-white/80 truncate">
-                        {photoData.caption}
-                      </span>
-                    )}
+                    <span className="text-[10px] font-mono text-white/80 uppercase tracking-wider">
+                      {node.badge}
+                    </span>
                   </div>
                 </div>
 
