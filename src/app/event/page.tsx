@@ -390,9 +390,9 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
     ],
     photos: create24PhotoSlots("Hyderabad", [
       {
-        src: "",
-        caption: "Hyderabad — Conclave Moment 01",
-        objectPosition: "50% 30%",
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-09.jpg",
+        caption: "Executive Roundtable on Curriculum Agility & Industry Co-Design",
+        objectPosition: "50% 35%",
       },
       {
         src: "",
@@ -430,8 +430,8 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
         objectPosition: "50% 30%",
       },
       {
-        src: "/conclave-moments/hyderabad-1/hyderabad-1-09.jpg",
-        caption: "Executive Roundtable on Curriculum Agility & Industry Co-Design",
+        src: "",
+        caption: "Hyderabad — Conclave Moment 09",
         objectPosition: "50% 35%",
       },
       {
