@@ -43,25 +43,25 @@ export default function CollaboratePage() {
 
   const partnershipPillars = [
     {
-      title: "Industry Challenges & Incubation",
+      title: "Industry Challenges & Venture Incubation",
       icon: Lightbulb,
       desc: "Sponsor real-world engineering, clinical, or digital transformation challenges for faculty-led research cohorts to prototype and scale through the AIC-SOA Atal Incubation Centre under NITI Aayog.",
       action: "Submit Problem Statement",
     },
     {
-      title: "Centres of Excellence & R&D",
+      title: "Centres of Excellence & Applied R&D",
       icon: Cpu,
       desc: "Co-establish specialized industry hubs modeled on SOA’s on-campus Centres of Excellence with Tech Mahindra (ServiceNow & Enterprise Cloud), L&T Technology Services (Medical AI & Embedded Systems), and the Blue Star Limited Skill Development Centre (HVAC, Smart Refrigeration & Thermal Engineering at ITER).",
       action: "Explore CoE Models",
     },
     {
-      title: "Executive Mentorship & Curriculum Co-Design",
+      title: "Executive Advisory & Curriculum Co-Design",
       icon: Users,
       desc: "Shape flexible curricula and job-ready training tracks—building on SOA’s Talent Next and Mission10x alliances with Wipro Ltd and scholarships with Blue Star Foundation.",
       action: "Join Advisory Boards",
     },
     {
-      title: "High-Velocity Internships & Campus Hiring",
+      title: "High-Velocity Internships & Day-One Hiring",
       icon: TrendingUp,
       desc: "Recruit from an ecosystem delivering 94.54% B.Tech and 97.22% MBA placement rates, ₹46 LPA peak packages, and record selections by global leaders like the London Stock Exchange Group (LSEG).",
       action: "Initiate Recruitment",
@@ -167,7 +167,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
         <div className="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full flex justify-end">
           <div className="max-w-3xl space-y-6 text-left sm:text-right flex flex-col items-start sm:items-end">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase">
-              <span>Corporate Partnership Portal</span>
+              <span>Enterprise Partnership Portal</span>
             </div>
 
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05] text-left sm:text-right">
@@ -176,11 +176,11 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
             </h1>
 
             <p className="text-lg sm:text-xl font-display text-content-muted italic text-left sm:text-right">
-              Co-Innovate. Mentor Emerging Leaders. Build Strategic Pipelines.
+              Co-Innovate. Sponsor Applied Research. Build Strategic Talent Corridors.
             </p>
 
             <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-3xl font-normal text-left sm:text-right ml-auto">
-              From co-founding advanced campus Centres of Excellence with Tech Mahindra and LTTS, to sponsoring R&D challenges through the AIC-SOA Foundation under NITI Aayog, Siksha &lsquo;O&rsquo; Anusandhan offers global enterprises an agile, co-creative talent ecosystem built for technical velocity.
+              From co-founding advanced campus Centres of Excellence with Tech Mahindra and LTTS to sponsoring R&amp;D challenges through the AIC-SOA Foundation under NITI Aayog, Siksha &lsquo;O&rsquo; Anusandhan offers global enterprises an agile, high-velocity talent ecosystem.
             </p>
 
             <div className="pt-2 flex flex-wrap items-center justify-start sm:justify-end gap-4">
@@ -208,13 +208,13 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
         <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
-            Four Strategic Avenues
+            Four Strategic Tracks
           </span>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
-            How Corporate Leaders Collaborate with SOA
+            Enterprise Collaboration Pathways
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
-            Transcend seasonal campus recruitment through high-trust, bilateral engagements that accelerate your enterprise engineering velocity and talent resilience.
+            Transcend seasonal campus recruitment through bilateral engagements that accelerate your enterprise engineering velocity and talent resilience.
           </p>
         </div>
 
@@ -263,10 +263,10 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
             </span>
           </div>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
-            Multi-Year Placement Performance
+            Multi-Year Enterprise Placement Audit
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl">
-            SOA’s placement track record reflects deepened trust among Fortune 500 recruiters and global capability centres across engineering, management, clinical healthcare, and legal disciplines.
+            SOA’s placement track record reflects deepened trust among Fortune 500 recruiters and global capability centres across engineering (94.54%), management (97.22%), healthcare, and law.
           </p>
         </div>
 
@@ -322,10 +322,10 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line">
         <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
-            127-Acre Campus Infrastructure
+            127-Acre Academic Ecosystem
           </span>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
-            Infrastructure &amp; Research Facilities
+            Research Infrastructure &amp; Living Laboratories
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
             A state-of-the-art academic biome in Bhubaneswar encompassing enterprise-anchored engineering labs, 2,000+ bed teaching hospitals, solar micro-grids, and high-performance sovereign computing hubs.
@@ -424,7 +424,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 2xl:gap-24 items-start">
           <div className="lg:col-span-5 space-y-6">
             <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
-              Direct Interface
+              Direct Executive Interface
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
               Submit an Industry Problem Statement
