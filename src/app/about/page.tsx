@@ -111,7 +111,7 @@ export default function AboutPage() {
                 The Living Standard · Practicing Allyship
               </span>
               <p className="text-xs sm:text-sm text-content-secondary leading-relaxed italic">
-                &ldquo;A diversity policy says what an organization intends on paper. Allyship is what happens on an ordinary Tuesday—who is heard in a meeting, who is trusted with a challenging project, and who speaks up when an early-career colleague is overlooked.&rdquo;
+                &ldquo;A diversity policy says what an organization intends on paper. Allyship is what happens on an ordinary Friday—who is heard in a meeting, who is trusted with a challenging project, and who speaks up when an early-career colleague is overlooked.&rdquo;
               </p>
             </div>
 
