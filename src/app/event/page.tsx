@@ -645,7 +645,7 @@ function EventContent() {
               </p>
 
               <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal">
-                Instead of convening behind institutional gates in Bhubaneswar, Siksha &lsquo;O&rsquo; Anusandhan brings academic leadership directly into India&apos;s key economic centers. From Bengaluru and Hyderabad to Kolkata, Mumbai, and Chennai, each conclave serves as a focused forum: listening to the changing demands of industry, discussing the real pressures faced by young professionals, and building relationships that transcend hiring cycles.
+                Instead of convening behind institutional gates in Bhubaneswar, Siksha &lsquo;O&rsquo; Anusandhan brings academic leadership directly into India&apos;s economic centers. Across Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai, each conclave listens to industry demands, addresses early-career pressures, and builds relationships beyond hiring cycles.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
