@@ -90,19 +90,19 @@ export default function AboutPage() {
             </div>
 
             <p className="max-w-[68ch] text-base text-content-secondary leading-relaxed font-normal">
-              For too long, the relationship between universities and industry has been limited to annual visits and short interviews. ALLYSHIP was founded on a simple realization: preparing future generations requires continuous conversation, not an annual transaction.
+              For too long, university-industry ties were limited to annual campus visits. ALLYSHIP was founded on a simple truth: preparing future talent requires continuous dialogue, not periodic transactions.
             </p>
 
             <p className="max-w-[68ch] text-base text-content-secondary leading-relaxed font-normal">
-              Instead of waiting behind campus gates, Siksha &lsquo;O&rsquo; Anusandhan stepped directly into the boardrooms of Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai to listen first. We asked a fundamental question: <em>How do we create workplaces where emerging talent doesn&rsquo;t just adapt, but genuinely thrives?</em>
+              Instead of waiting behind gates, Siksha &lsquo;O&rsquo; Anusandhan stepped directly into metropolitan boardrooms across India to listen. We asked: <em>How do we build workplaces where young talent genuinely thrives?</em>
             </p>
 
             <p className="max-w-[68ch] text-base text-content-secondary leading-relaxed font-normal">
-              The <code className="text-accent bg-glass-strong px-2 py-0.5 rounded border border-line font-mono font-semibold">++</code> represents compounding growth. In leadership, it reflects our commitment to go beyond standard hiring metrics—focusing on psychological safety for first-time professionals, genuine mentorship from seasoned leaders, and classrooms shaped directly alongside corporate practitioners.
+              The <code className="text-accent bg-glass-strong px-2 py-0.5 rounded border border-line font-mono font-semibold">++</code> signifies compounding impact—moving beyond hiring metrics toward psychological safety, executive mentorship, and curricula co-designed with corporate practitioners.
             </p>
 
             <p className="max-w-[68ch] text-base text-content-secondary leading-relaxed font-normal">
-              By bringing Olympic coaches and sports icons alongside corporate leaders, we ground mentorship in the timeless truth of sport: potential only turns into excellence when someone believes in you enough to guide you through the setbacks.
+              Uniting Olympic mentors with boardroom chairs, we draw on a timeless athletic truth: potential turns into excellence only when trusted mentors guide talent through setbacks.
             </p>
 
             {/* Living Standard Callout Card */}
