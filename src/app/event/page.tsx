@@ -993,7 +993,7 @@ function EventContent() {
                             : "bg-surface-2 border-line hover:border-accent/60 text-content-muted hover:text-content hover:-translate-y-1 hover:shadow-md"
                           }`}
                       >
-                        {/* Top Row: Edition Badge + Year */}
+                        {/* Top Row: Edition Badge */}
                         <div className="flex items-center justify-between gap-1 mb-2">
                           <span
                             className={`font-mono text-[11px] font-bold tracking-wider flex items-center gap-1.5 ${isSelected ? "text-accent" : "text-content-secondary group-hover:text-accent"
@@ -1001,14 +1001,6 @@ function EventContent() {
                           >
                             {isSelected && <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />}
                             Edition {editionNum}
-                          </span>
-                          <span
-                            className={`px-2 py-0.5 rounded-full font-mono text-[9px] font-bold tracking-wider ${isSelected
-                                ? "bg-accent/20 text-accent border border-accent/40"
-                                : "bg-surface-3 text-content-muted border border-line"
-                              }`}
-                          >
-                            {c.date.split(" ").pop()}
                           </span>
                         </div>
 
@@ -1074,7 +1066,7 @@ function EventContent() {
                             : "bg-surface-2 border-line hover:border-accent/60 text-content-muted hover:text-content hover:-translate-y-1 hover:shadow-md"
                           }`}
                       >
-                        {/* Top Row: Edition Badge + Year */}
+                        {/* Top Row: Edition Badge */}
                         <div className="flex items-center justify-between gap-1 mb-2">
                           <span
                             className={`font-mono text-[11px] font-bold tracking-wider flex items-center gap-1.5 ${isSelected ? "text-accent" : "text-content-secondary group-hover:text-accent"
@@ -1082,14 +1074,6 @@ function EventContent() {
                           >
                             {isSelected && <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />}
                             Edition {editionNum}
-                          </span>
-                          <span
-                            className={`px-2 py-0.5 rounded-full font-mono text-[9px] font-bold tracking-wider ${isSelected
-                                ? "bg-accent/20 text-accent border border-accent/40"
-                                : "bg-surface-3 text-content-muted border border-line"
-                              }`}
-                          >
-                            {c.date.split(" ").pop()}
                           </span>
                         </div>
 
