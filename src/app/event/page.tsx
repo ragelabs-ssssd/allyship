@@ -1000,7 +1000,7 @@ function EventContent() {
                             : "bg-surface-2 border-line hover:border-accent/60 text-content-muted hover:text-content hover:-translate-y-1 hover:shadow-md"
                         }`}
                       >
-                        {/* Top Row: Chapter Badge + Edition */}
+                        {/* Top Row: Chapter Badge + Year */}
                         <div className="flex items-center justify-between gap-1 mb-2">
                           <span
                             className={`font-mono text-[11px] font-bold tracking-wider flex items-center gap-1.5 ${
@@ -1011,13 +1011,13 @@ function EventContent() {
                             Chapter {chapterNum}
                           </span>
                           <span
-                            className={`px-2 py-0.5 rounded-full font-mono text-[9px] font-bold uppercase tracking-wider ${
+                            className={`px-2 py-0.5 rounded-full font-mono text-[9px] font-bold tracking-wider ${
                               isSelected
-                                ? "bg-surface-3 text-content border border-line"
-                                : "bg-surface text-content-muted border border-line"
+                                ? "bg-accent/20 text-accent border border-accent/40"
+                                : "bg-surface-3 text-content-muted border border-line"
                             }`}
                           >
-                            1.0
+                            {c.date.split(" ").pop()}
                           </span>
                         </div>
 
@@ -1091,7 +1091,7 @@ function EventContent() {
                             : "bg-surface-2 border-line hover:border-accent/60 text-content-muted hover:text-content hover:-translate-y-1 hover:shadow-md"
                         }`}
                       >
-                        {/* Top Row: Chapter Badge + Edition */}
+                        {/* Top Row: Chapter Badge + Year */}
                         <div className="flex items-center justify-between gap-1 mb-2">
                           <span
                             className={`font-mono text-[11px] font-bold tracking-wider flex items-center gap-1.5 ${
@@ -1102,13 +1102,13 @@ function EventContent() {
                             Chapter {chapterNum}
                           </span>
                           <span
-                            className={`px-2 py-0.5 rounded-full font-mono text-[9px] font-bold uppercase tracking-wider ${
+                            className={`px-2 py-0.5 rounded-full font-mono text-[9px] font-bold tracking-wider ${
                               isSelected
-                                ? "bg-accent text-on-accent shadow-sm"
-                                : "bg-accent/15 text-accent border border-accent/30"
+                                ? "bg-accent/20 text-accent border border-accent/40"
+                                : "bg-surface-3 text-content-muted border border-line"
                             }`}
                           >
-                            2.0
+                            {c.date.split(" ").pop()}
                           </span>
                         </div>
 
