@@ -71,10 +71,6 @@ export default function AboutPage() {
               Bridging Corporate Corridors with Regional Talent Through Active Leadership and Mutual Trust.
             </p>
 
-            <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-4xl mx-auto font-normal">
-              Allyship is the deliberate discipline where leaders with institutional power open doors, absorb political risk, and sponsor emerging talent.
-            </p>
-
           </div>
         </div>
       </section>
