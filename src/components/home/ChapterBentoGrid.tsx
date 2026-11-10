@@ -79,7 +79,7 @@ export function ChapterBentoGrid() {
                   : "text-content-muted hover:text-content"
               }`}
             >
-              Chapter 2.0
+              National Expansion (2026)
               {activeCycle === "2.0" && (
                 <motion.span
                   layoutId="bentoTabIndicator"
@@ -96,7 +96,7 @@ export function ChapterBentoGrid() {
                   : "text-content-muted hover:text-content"
               }`}
             >
-              Chapter 1.0
+              Inaugural Series (2024–2025)
               {activeCycle === "1.0" && (
                 <motion.span
                   layoutId="bentoTabIndicator"
