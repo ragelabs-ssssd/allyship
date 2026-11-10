@@ -395,8 +395,8 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
         objectPosition: "50% 35%",
       },
       {
-        src: "/conclave-moments/hyderabad-1/hyderabad-1-07.jpg",
-        caption: "Senior Academic Leadership & Industry Leaders in Dialogue",
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-06.jpg",
+        caption: "Multi-Sector Leadership Panel Deliberation on the Main Stage",
         objectPosition: "50% 30%",
       },
       {
@@ -415,13 +415,13 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
         objectPosition: "50% 35%",
       },
       {
-        src: "/conclave-moments/hyderabad-1/hyderabad-1-06.jpg",
-        caption: "Multi-Sector Leadership Panel Deliberation on the Main Stage",
+        src: "",
+        caption: "Hyderabad — Conclave Moment 06",
         objectPosition: "50% 30%",
       },
       {
-        src: "",
-        caption: "Hyderabad — Conclave Moment 07",
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-07.jpg",
+        caption: "Senior Academic Leadership & Industry Leaders in Dialogue",
         objectPosition: "50% 30%",
       },
       {
