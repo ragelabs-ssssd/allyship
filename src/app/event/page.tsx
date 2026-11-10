@@ -25,6 +25,7 @@ import {
 import { GetInvitedModal } from "@/components/GetInvitedModal";
 import { HeroBackdrop } from "@/components/HeroBackdrop";
 import { conclavesData } from "@/data/conclaves";
+import { getCityLandmarkMeta } from "@/components/event/CityLandmarks";
 
 const CHAPTER_THEMES: Record<string, string> = {
   "bengaluru-1": "Cross-Discipline Leadership",
@@ -982,6 +983,9 @@ function EventContent() {
                     const isSelected = selectedChapter === idx;
                     const editionNum = String(sliceIdx + 1).padStart(2, "0");
                     const cleanCity = c.city.replace(/\s*\([12]\.0\)/, "");
+                    const cityMeta = getCityLandmarkMeta(cleanCity);
+                    const LandmarkIcon = cityMeta.Icon;
+                    const LandmarkWatermark = cityMeta.Watermark;
 
                     return (
                       <button
@@ -993,8 +997,21 @@ function EventContent() {
                             : "bg-surface-2 border-line hover:border-accent/60 text-content-muted hover:text-content hover:-translate-y-1 hover:shadow-md"
                           }`}
                       >
-                        {/* Top Row: Edition Badge */}
-                        <div className="flex items-center justify-between gap-1 mb-2">
+                        {/* Background City Landmark Silhouette Watermark */}
+                        <div className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
+                          <div
+                            className={`absolute -right-2 -bottom-2 w-20 h-20 transition-all duration-500 ease-out pointer-events-none ${isSelected
+                                ? "text-accent/20 scale-105"
+                                : "text-content-muted/5 group-hover:text-accent/15 group-hover:scale-105"
+                              }`}
+                            aria-hidden="true"
+                          >
+                            <LandmarkWatermark className="w-full h-full" />
+                          </div>
+                        </div>
+
+                        {/* Top Row: Edition Badge + Place Landmark Badge */}
+                        <div className="flex items-center justify-between gap-1 mb-2 relative z-10">
                           <span
                             className={`font-mono text-[11px] font-bold tracking-wider flex items-center gap-1.5 ${isSelected ? "text-accent" : "text-content-secondary group-hover:text-accent"
                               }`}
@@ -1002,10 +1019,20 @@ function EventContent() {
                             {isSelected && <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />}
                             Edition {editionNum}
                           </span>
+                          <span
+                            className={`inline-flex items-center gap-1 px-1.5 py-0.5 rounded-md font-mono text-[9px] font-bold tracking-wider transition-colors ${isSelected
+                                ? "bg-accent/20 text-accent border border-accent/40 shadow-sm"
+                                : "bg-surface-3 text-content-muted border border-line group-hover:border-accent/40 group-hover:text-accent"
+                              }`}
+                            title={`${cleanCity} · ${cityMeta.landmark}`}
+                          >
+                            <LandmarkIcon className="w-2.5 h-2.5 shrink-0" />
+                            <span>{cityMeta.code}</span>
+                          </span>
                         </div>
 
                         {/* Middle Row: Clean City & Date */}
-                        <div className="space-y-0.5">
+                        <div className="space-y-0.5 relative z-10">
                           <h4
                             className={`font-display text-sm font-bold tracking-normal truncate transition-colors ${isSelected ? "text-accent" : "text-content group-hover:text-accent"
                               }`}
@@ -1019,7 +1046,7 @@ function EventContent() {
 
                         {/* Bottom Row: Thematic Focus / Active State indicator */}
                         <div
-                          className={`mt-2.5 pt-2 border-t flex items-center justify-between font-sans text-[10px] ${isSelected
+                          className={`mt-2.5 pt-2 border-t flex items-center justify-between font-sans text-[10px] relative z-10 ${isSelected
                               ? "border-accent/30 text-accent font-semibold"
                               : "border-line text-content-muted"
                             }`}
@@ -1055,6 +1082,9 @@ function EventContent() {
                     const isSelected = selectedChapter === idx;
                     const editionNum = String(sliceIdx + 1).padStart(2, "0");
                     const cleanCity = c.city.replace(/\s*\([12]\.0\)/, "");
+                    const cityMeta = getCityLandmarkMeta(cleanCity);
+                    const LandmarkIcon = cityMeta.Icon;
+                    const LandmarkWatermark = cityMeta.Watermark;
 
                     return (
                       <button
@@ -1066,8 +1096,21 @@ function EventContent() {
                             : "bg-surface-2 border-line hover:border-accent/60 text-content-muted hover:text-content hover:-translate-y-1 hover:shadow-md"
                           }`}
                       >
-                        {/* Top Row: Edition Badge */}
-                        <div className="flex items-center justify-between gap-1 mb-2">
+                        {/* Background City Landmark Silhouette Watermark */}
+                        <div className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
+                          <div
+                            className={`absolute -right-2 -bottom-2 w-20 h-20 transition-all duration-500 ease-out pointer-events-none ${isSelected
+                                ? "text-accent/20 scale-105"
+                                : "text-content-muted/5 group-hover:text-accent/15 group-hover:scale-105"
+                              }`}
+                            aria-hidden="true"
+                          >
+                            <LandmarkWatermark className="w-full h-full" />
+                          </div>
+                        </div>
+
+                        {/* Top Row: Edition Badge + Place Landmark Badge */}
+                        <div className="flex items-center justify-between gap-1 mb-2 relative z-10">
                           <span
                             className={`font-mono text-[11px] font-bold tracking-wider flex items-center gap-1.5 ${isSelected ? "text-accent" : "text-content-secondary group-hover:text-accent"
                               }`}
@@ -1075,10 +1118,20 @@ function EventContent() {
                             {isSelected && <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />}
                             Edition {editionNum}
                           </span>
+                          <span
+                            className={`inline-flex items-center gap-1 px-1.5 py-0.5 rounded-md font-mono text-[9px] font-bold tracking-wider transition-colors ${isSelected
+                                ? "bg-accent/20 text-accent border border-accent/40 shadow-sm"
+                                : "bg-surface-3 text-content-muted border border-line group-hover:border-accent/40 group-hover:text-accent"
+                              }`}
+                            title={`${cleanCity} · ${cityMeta.landmark}`}
+                          >
+                            <LandmarkIcon className="w-2.5 h-2.5 shrink-0" />
+                            <span>{cityMeta.code}</span>
+                          </span>
                         </div>
 
                         {/* Middle Row: Clean City & Date */}
-                        <div className="space-y-0.5">
+                        <div className="space-y-0.5 relative z-10">
                           <h4
                             className={`font-display text-sm font-bold tracking-normal truncate transition-colors ${isSelected ? "text-accent" : "text-content group-hover:text-accent"
                               }`}
@@ -1092,7 +1145,7 @@ function EventContent() {
 
                         {/* Bottom Row: Thematic Focus / Active State indicator */}
                         <div
-                          className={`mt-2.5 pt-2 border-t flex items-center justify-between font-sans text-[10px] ${isSelected
+                          className={`mt-2.5 pt-2 border-t flex items-center justify-between font-sans text-[10px] relative z-10 ${isSelected
                               ? "border-accent/30 text-accent font-semibold"
                               : "border-line text-content-muted"
                             }`}
