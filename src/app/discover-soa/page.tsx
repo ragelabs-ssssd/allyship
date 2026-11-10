@@ -125,7 +125,7 @@ export default function DiscoverSoaPage() {
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             Three Decades of Institutional Nation-Building
           </span>
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-5xl font-bold text-content tracking-tight lg:whitespace-nowrap">
             The Three-Decade Arc of Institutional Excellence
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-5xl mx-auto lg:whitespace-nowrap">
