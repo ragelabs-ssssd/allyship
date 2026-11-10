@@ -23,8 +23,8 @@ export function BentoGridConcept() {
           The Architecture of <span className="text-accent">Generational Impact</span>
         </h2>
         <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal max-w-4xl mx-auto [text-wrap:balance]">
-          Transcending traditional hiring: a multi-dimensional ecosystem engineered for<br className="hidden md:inline" />{" "}
-          placement velocity, pan-India executive corridors, Olympic athletic grit, and psychological safety.
+          A proven corporate-academic framework designed for immediate workplace readiness,<br className="hidden md:inline" />{" "}
+          pan-India dialogue, and high-performance mentorship.
         </p>
       </div>
 
@@ -43,7 +43,7 @@ export function BentoGridConcept() {
             </div>
 
             <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-content tracking-tight">
-              94.54% Placement Velocity with Zero-Day Ramp-Up
+              94.54% Placement with Day-One Readiness
             </h3>
             <p className="text-sm sm:text-base text-content-secondary leading-relaxed font-normal max-w-2xl">
               By replacing archaic placement weeks with year-round capability co-creation, SOA graduates enter global workforces with immediate production readiness. Over 150+ multinational partners anchor their talent pipelines here.
@@ -83,7 +83,7 @@ export function BentoGridConcept() {
               </span>
             </div>
             <h3 className="font-heading text-xl font-bold text-content">
-              The Olympic Crucible: Grit for the C-Suite
+              Championship Discipline for Corporate Leadership
             </h3>
             <p className="text-xs sm:text-sm text-content-secondary leading-relaxed font-normal">
               Technical brilliance gets graduates hired; emotional stamina creates CXOs. Olympic medalists and sporting legends mentor students in the psychology of catastrophic setbacks and enduring high-stakes boardroom pressure.
@@ -112,7 +112,7 @@ export function BentoGridConcept() {
               </span>
             </div>
             <h3 className="font-heading text-xl font-bold text-content">
-              Pan-India Executive Diplomacy
+              Direct Dialogue Across Five Indian Metros
             </h3>
             <p className="text-xs sm:text-sm text-content-secondary leading-relaxed font-normal">
               Dismantling campus isolation: SOA projects talent directly into corporate boardrooms across 5 commercial capitals, converting hiring into continuous policy co-authorship.
@@ -150,7 +150,7 @@ export function BentoGridConcept() {
               </span>
             </div>
             <h3 className="font-heading text-xl font-bold text-content">
-              Industry-Powered Centres of Excellence
+              18 Industry-Powered Centres of Excellence
             </h3>
             <p className="text-xs sm:text-sm text-content-secondary leading-relaxed font-normal">
               Dedicated on-campus innovation hubs co-established with Tech Mahindra, LTTS, Blue Star, and Wipro immerse students in live ServiceNow workflows, smart HVAC climatech systems, and medical AI architectures starting in their second year.
@@ -179,7 +179,7 @@ export function BentoGridConcept() {
               </span>
             </div>
             <h3 className="font-heading text-xl font-bold text-content">
-              The Radical Psychological Safety Pact
+              Generational Mentorship &amp; Psychological Safety
             </h3>
             <p className="text-xs sm:text-sm text-content-secondary leading-relaxed font-normal">
               De-weaponizing workplace hierarchy for emerging talent: coaching Gen-Z professionals to challenge assumptions with integrity, speak truth to power, and eliminate imposter syndrome before Day 1.

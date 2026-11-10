@@ -64,11 +64,11 @@ export default function AboutPage() {
             </div>
 
             <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
-              Why ALLYSHIP<span className="text-accent">++</span>?
+              The ALLYSHIP<span className="text-accent">++</span> Thesis
             </h1>
 
             <p className="text-lg sm:text-xl font-display text-content-muted max-w-2xl mx-auto italic">
-              Bridging Corporate Corridors with Regional Talent Through Active Leadership and Mutual Trust.
+              Redefining How India&rsquo;s Next-Generation Talent Meets Boardroom Leadership.
             </p>
 
           </div>
@@ -85,7 +85,7 @@ export default function AboutPage() {
                 The Genesis of Allyship++
               </span>
               <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
-                Industry and Academia, in the Same Room
+                Bringing Industry and Academia to the Same Table
               </h2>
             </div>
 
@@ -240,7 +240,7 @@ export default function AboutPage() {
             </span>
 
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl font-bold text-content tracking-tight">
-              Connect with SOA Leadership
+              Engage with SOA Leadership
             </h2>
 
             <p className="text-base sm:text-lg text-content-secondary max-w-xl mx-auto leading-relaxed font-normal">
