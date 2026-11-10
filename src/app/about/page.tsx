@@ -77,18 +77,19 @@ export default function AboutPage() {
 
       {/* 2. INSTITUTIONAL NARRATIVE & THE CODE VISUAL BLOCK */}
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
+        {/* Section Heading - Single Line */}
+        <div className="space-y-2 text-left mb-8 lg:mb-12">
+          <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
+            The Origin &amp; Mandate
+          </span>
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-[42px] xl:text-5xl font-bold text-content tracking-tight md:whitespace-nowrap">
+            Bridging Two Worlds: The Genesis of ALLYSHIP
+          </h2>
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 2xl:gap-24 items-center">
           {/* Left Column: 4-Paragraph Relatable Narrative */}
           <div className="lg:col-span-6 xl:col-span-6 space-y-6 text-left">
-            <div className="space-y-2">
-              <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
-                The Origin &amp; Mandate
-              </span>
-              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
-                Bridging Two Worlds: The Genesis of ALLYSHIP
-              </h2>
-            </div>
-
             <p className="max-w-[68ch] text-base text-content-secondary leading-relaxed font-normal">
               For too long, university-industry ties were limited to annual campus visits. ALLYSHIP was founded on a simple truth: preparing future talent requires continuous dialogue, not periodic transactions.
             </p>
