@@ -41,19 +41,19 @@ export default function ImpactPage() {
 
   const outcomePillars = [
     {
-      title: "Curriculum & CoE Co-Creation",
+      title: "Enterprise Co-Creation & Dedicated CoEs",
       badge: "Institutional Infrastructure",
       desc: "Boardroom feedback from Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai has translated into specialized skill labs on campus—including the Tech Mahindra Centre of Excellence at ITER and Wipro readiness tracks.",
       metric: "Active CoEs with Tech Mahindra & LTTS",
     },
     {
-      title: "Record-Breaking Graduate Absorption",
+      title: "Verified Career Velocity & Day-One Readiness",
       badge: "Career Velocity",
       desc: "Deepened trust among global capability centres and Fortune 500 recruiters contributed to a 94.54% engineering placement rate, a 97.22% MBA placement rate, and LSEG selecting 11 SOA students in a single drive.",
       metric: "11 Hired by LSEG · ₹46 LPA Peak",
     },
     {
-      title: "Gen-Z Leadership & HR Policy Adoption",
+      title: "Early-Career Mentorship & Policy Adoption",
       badge: "Workplace Cultural Reform",
       desc: "Over 500 participating CHROs, VPs, and talent leaders across seven conclaves have co-developed actionable frameworks on psychological safety, mentorship roles, and empathetic Gen-Z onboarding for modern teams.",
       metric: "500+ Executives Engaged",
@@ -171,20 +171,20 @@ export default function ImpactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-[11px] font-bold font-heading tracking-[0.14em] uppercase">
-                <span>In the Headlines · Measured Reputational Capital</span>
+                <span>Verified Outcomes &amp; National Chronicle</span>
               </div>
 
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
-                The Impact of <br />
-                <span className="italic font-normal">Allyship<span className="text-accent not-italic">++</span></span>
+                The ALLYSHIP<span className="text-accent">++</span> <br />
+                <span className="italic font-normal">Impact</span>
               </h1>
 
               <p className="text-lg sm:text-xl font-display text-content-muted italic">
-                From Boardroom Dialogue to Campus Innovation &amp; Career Excellence
+                Transforming Boardroom Commitments into Measurable Career Trajectories
               </p>
 
               <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-3xl font-normal">
-                Across seven national conclaves spanning India&apos;s core commercial hubs, ALLYSHIP++ has converted boardroom commitments into concrete academic transformation—anchoring corporate Centres of Excellence, de-biasing hiring pipelines, and achieving a 94.54% engineering placement velocity.
+                Across seven national conclaves spanning India&apos;s core commercial hubs, ALLYSHIP++ converts executive dialogue into tangible institutional progress—powering dedicated research laboratories, de-biasing hiring pipelines, and achieving a 94.54% placement velocity.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
@@ -238,13 +238,13 @@ export default function ImpactPage() {
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
         <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
-            Shared Progress
+            Institutional Progress
           </span>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
-            From Dialogue to Action
+            From Boardroom Deliberation to Measurable Outcomes
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
-            How conversations across Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai support stronger relationships between SOA, industry partners, and emerging talent.
+            Direct engagement across Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai delivers enduring dividends for students and enterprise partners.
           </p>
         </div>
 
@@ -283,10 +283,10 @@ export default function ImpactPage() {
             <span>National &amp; Regional Media Chronicle</span>
           </div>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
-            In the Press
+            Chronicled Across India&apos;s Leading Publications
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
-            National and regional print and digital publications—including Deccan Chronicle, The Statesman, Prameya News, OdishaBytes, The Sakala, Samaya, Around Odisha, Orissa Today, and The Sanchar—have chronicled Siksha &lsquo;O&rsquo; Anusandhan&rsquo;s ALLYSHIP++ journey across India. Click any clipping to inspect the full report.
+            Leading national and regional publications—including Deccan Chronicle, The Statesman, Prameya News, OdishaBytes, The Sakala, Samaya, Around Odisha, Orissa Today, and The Sanchar—have documented the evolution of ALLYSHIP++ across seven national editions. Click any clipping to inspect the full report.
           </p>
         </div>
 
