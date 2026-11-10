@@ -1,8 +1,7 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 
 interface PressHeadline {
   outlet: string;
@@ -61,24 +60,7 @@ export function PressTicker() {
   const repeatedHeadlines = [...pressHeadlines, ...pressHeadlines];
 
   return (
-    <section className="border-y border-line bg-surface-2 py-5 sm:py-6 overflow-hidden select-none">
-      {/* Top Header / Kicker */}
-      <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 mb-3 sm:mb-4 flex items-center justify-between">
-        <div className="flex items-center gap-2.5">
-          <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-          <span className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-accent">
-            National Press &amp; Media Verification
-          </span>
-        </div>
-        <Link
-          href="/impact"
-          className="hidden sm:flex items-center gap-1.5 font-mono text-[11px] text-content-muted hover:text-accent transition-colors group"
-        >
-          <span>View All Press Archives</span>
-          <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-        </Link>
-      </div>
-
+    <section className="border-y border-line bg-surface-2 py-4 sm:py-5 overflow-hidden select-none">
       {/* Scrolling Ticker Track */}
       <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_6%,black_94%,transparent)]">
         <div className="press-ticker-track flex w-max items-center gap-5 sm:gap-6">
