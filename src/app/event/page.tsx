@@ -632,20 +632,20 @@ function EventContent() {
             {/* Left Column: Editorial Headline & Copy */}
             <div className="lg:col-span-7 space-y-6">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-[11px] font-bold font-heading tracking-[0.14em] uppercase">
-                <span>Conversations That Outlive the Room</span>
+                <span>National Executive Conclaves · 2024–2026</span>
               </div>
 
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
-                The Metro <br />
+                The ALLYSHIP<span className="text-accent">++</span> <br />
                 <span className="italic font-normal">Conclaves</span>
               </h1>
 
               <p className="text-lg sm:text-xl font-display text-content-muted italic">
-                Where Corporate Vision Meets Sporting Grit &amp; Academic Leadership
+                Where Boardroom Vision Meets Championship Grit &amp; University Research
               </p>
 
               <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-3xl font-normal">
-                Siksha &lsquo;O&rsquo; Anusandhan anchors ALLYSHIP++ across India&apos;s premier commercial corridors. Each standing chapter convenes enterprise CXOs, talent strategists, Olympic coaches, and university leadership to co-author institutional pipelines, de-bias hiring, and accelerate regional talent into national leadership.
+                Siksha &lsquo;O&rsquo; Anusandhan brings academic leadership directly into India&apos;s premier commercial corridors. Each standing chapter convenes enterprise CXOs, talent strategists, Olympic coaches, and university leadership to co-author institutional pipelines, de-bias hiring, and accelerate regional talent into national leadership.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
@@ -734,7 +734,7 @@ function EventContent() {
                   {/* Cinematic Vignette & Animated Caption Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/10 flex flex-col justify-end p-5 sm:p-6 text-content pointer-events-none">
                     <span className="text-[11px] font-bold font-heading text-accent-light uppercase tracking-[0.16em]">
-                      Editions 1.0 &amp; 2.0
+                      National Conclave Series
                     </span>
                     <AnimatePresence mode="wait">
                       <motion.div
@@ -772,7 +772,7 @@ function EventContent() {
           </h2>
 
           <p className="text-base sm:text-[17px] text-content-secondary leading-relaxed font-normal max-w-6xl mx-auto">
-            In an era of rapid disruption, transactional placement is no longer sufficient. <span className="whitespace-nowrap">Siksha &lsquo;O&rsquo; Anusandhan moves</span><br className="hidden lg:inline" />{" "}
+            In an era of rapid disruption, transactional recruitment is obsolete. <span className="whitespace-nowrap">Siksha &lsquo;O&rsquo; Anusandhan moves</span><br className="hidden lg:inline" />{" "}
             academic leadership directly into corporate boardrooms—co-creating empathetic, resilient, and future-ready talent ecosystems.
           </p>
         </div>
@@ -786,10 +786,10 @@ function EventContent() {
               </div>
               <div>
                 <span className="font-display text-[11px] font-bold tracking-[0.14em] text-accent uppercase block">
-                  Beyond Campus Recruitment
+                  Year-Round Capability Co-Creation
                 </span>
                 <h3 className="font-display text-lg font-bold tracking-tight text-content mt-1">
-                  Ending Transactional Hiring
+                  Ending Transactional Recruitment
                 </h3>
               </div>
               <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-secondary">
@@ -809,10 +809,10 @@ function EventContent() {
               </div>
               <div>
                 <span className="font-display text-[11px] font-bold tracking-[0.14em] text-accent uppercase block">
-                  The Athletic Crucible
+                  Championship Psychology
                 </span>
                 <h3 className="font-display text-lg font-bold tracking-tight text-content mt-1">
-                  How Athletics Anchors Allyship
+                  How Athletics Anchors Executive Mentorship
                 </h3>
               </div>
               <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-secondary">
@@ -832,10 +832,10 @@ function EventContent() {
               </div>
               <div>
                 <span className="font-display text-[11px] font-bold tracking-[0.14em] text-accent uppercase block">
-                  Workplace Cultural Shift
+                  Workplace Culture &amp; Psychological Safety
                 </span>
                 <h3 className="font-display text-lg font-bold tracking-tight text-content mt-1">
-                  Everyday Duty Over Slogans
+                  Everyday Duty Over Symbolic Compliance
                 </h3>
               </div>
               <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-secondary">
@@ -855,7 +855,7 @@ function EventContent() {
               </div>
               <div>
                 <span className="font-display text-[11px] font-bold tracking-[0.14em] text-accent uppercase block">
-                  Two-Way Enterprise Bridge
+                  Enterprise Research Hubs
                 </span>
                 <h3 className="font-display text-lg font-bold tracking-tight text-content mt-1">
                   Co-Innovation &amp; Living Labs
@@ -881,7 +881,7 @@ function EventContent() {
             <div className="space-y-4">
               <div className="space-y-1.5">
                 <span className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-accent block">
-                  Convener&apos;s Note
+                  Academic Direction &amp; Leadership
                 </span>
                 <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-[1.15] text-content">
                   Message from Prof. (Dr.) Raj Kumar Hota
@@ -1348,7 +1348,7 @@ function EventContent() {
                     <div className="flex items-center gap-3">
                       <span className="w-2 h-2 rounded-full bg-accent shrink-0" />
                       <h3 className="font-display text-lg sm:text-xl font-bold text-content tracking-tight">
-                        Allyship++ 2.0 — Practicing Allyship
+                        National Expansion Series · 2026
                       </h3>
                     </div>
                     <span className="text-xs font-sans text-content-muted">
@@ -1420,7 +1420,7 @@ function EventContent() {
                     <div className="flex items-center gap-3">
                       <span className="w-2 h-2 rounded-full bg-accent shrink-0" />
                       <h3 className="font-display text-lg sm:text-xl font-bold text-content tracking-tight">
-                        Allyship++ 1.0 — Bridging Campus &amp; Industry
+                        Inaugural Conclave Series · 2024–2025
                       </h3>
                     </div>
                     <span className="text-xs font-sans text-content-muted">
@@ -1691,7 +1691,7 @@ function EventContent() {
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8 space-y-4">
               <span className="font-heading text-xs font-bold uppercase tracking-widest text-accent">
-                Our Purpose
+                The Conclave Mission
               </span>
               <blockquote className="font-display italic font-normal tracking-normal text-2xl sm:text-3xl lg:text-4xl text-content leading-[1.35]">
                 &ldquo;Rather than waiting for industry to visit our campus, we bring academic dialogue directly to the cities where corporate leadership shapes the future of work.&rdquo;
