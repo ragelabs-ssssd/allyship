@@ -980,7 +980,7 @@ function EventContent() {
                   {conclaves.slice(0, 4).map((c, sliceIdx) => {
                     const idx = sliceIdx;
                     const isSelected = selectedChapter === idx;
-                    const chapterNum = String(idx + 1).padStart(2, "0");
+                    const editionNum = String(sliceIdx + 1).padStart(2, "0");
                     const cleanCity = c.city.replace(/\s*\([12]\.0\)/, "");
 
                     return (
@@ -993,14 +993,14 @@ function EventContent() {
                             : "bg-surface-2 border-line hover:border-accent/60 text-content-muted hover:text-content hover:-translate-y-1 hover:shadow-md"
                           }`}
                       >
-                        {/* Top Row: Chapter Badge + Year */}
+                        {/* Top Row: Edition Badge + Year */}
                         <div className="flex items-center justify-between gap-1 mb-2">
                           <span
                             className={`font-mono text-[11px] font-bold tracking-wider flex items-center gap-1.5 ${isSelected ? "text-accent" : "text-content-secondary group-hover:text-accent"
                               }`}
                           >
                             {isSelected && <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />}
-                            Chapter {chapterNum}
+                            Edition {editionNum}
                           </span>
                           <span
                             className={`px-2 py-0.5 rounded-full font-mono text-[9px] font-bold tracking-wider ${isSelected
@@ -1048,12 +1048,12 @@ function EventContent() {
                 </div>
               </div>
 
-              {/* Deck 2: Allyship Chapter 2.0 · National Series */}
+              {/* Deck 2: Allyship 2.0 · National Series */}
               <div className="lg:col-span-5 p-4 sm:p-5 rounded-3xl bg-surface border border-accent/30 space-y-3.5 shadow-sm">
                 <div className="flex items-center gap-2 px-1">
                   <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
                   <span className="font-mono text-xs font-bold uppercase tracking-[0.14em] text-accent">
-                    Allyship Chapter 2.0 · National Series
+                    Allyship 2.0 · National Series
                   </span>
                 </div>
 
@@ -1061,7 +1061,7 @@ function EventContent() {
                   {conclaves.slice(4).map((c, sliceIdx) => {
                     const idx = sliceIdx + 4;
                     const isSelected = selectedChapter === idx;
-                    const chapterNum = String(idx + 1).padStart(2, "0");
+                    const editionNum = String(sliceIdx + 1).padStart(2, "0");
                     const cleanCity = c.city.replace(/\s*\([12]\.0\)/, "");
 
                     return (
@@ -1074,14 +1074,14 @@ function EventContent() {
                             : "bg-surface-2 border-line hover:border-accent/60 text-content-muted hover:text-content hover:-translate-y-1 hover:shadow-md"
                           }`}
                       >
-                        {/* Top Row: Chapter Badge + Year */}
+                        {/* Top Row: Edition Badge + Year */}
                         <div className="flex items-center justify-between gap-1 mb-2">
                           <span
                             className={`font-mono text-[11px] font-bold tracking-wider flex items-center gap-1.5 ${isSelected ? "text-accent" : "text-content-secondary group-hover:text-accent"
                               }`}
                           >
                             {isSelected && <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />}
-                            Chapter {chapterNum}
+                            Edition {editionNum}
                           </span>
                           <span
                             className={`px-2 py-0.5 rounded-full font-mono text-[9px] font-bold tracking-wider ${isSelected
@@ -1330,7 +1330,7 @@ function EventContent() {
                     <div className="flex items-center gap-3">
                       <span className="w-2 h-2 rounded-full bg-accent shrink-0" />
                       <h3 className="font-display text-lg sm:text-xl font-bold text-content tracking-tight">
-                        Allyship Chapter 2.0 · National Series
+                        Allyship 2.0 · National Series
                       </h3>
                     </div>
                     <span className="text-xs font-sans text-content-muted">
