@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALLYSHIP++ | 5 Live Scrolling Ticker Options</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            accent: '#C5A869',
+            'accent-light': '#E8D5A7',
+            'accent-dark': '#9A7E3E',
+            canvas: 'var(--canvas)',
+            surface: 'var(--surface)',
+            'surface-2': 'var(--surface-2)',
+            'surface-3': 'var(--surface-3)',
+            line: 'var(--line)',
+            content: 'var(--content)',
+            'content-muted': 'var(--content-muted)',
+            'content-secondary': 'var(--content-secondary)',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root[data-theme="dark"] {
+      --canvas: #090909;
+      --surface: #121212;
+      --surface-2: #181818;
+      --surface-3: #222222;
+      --line: rgba(255, 255, 255, 0.12);
+      --content: #FFFFFF;
+      --content-muted: #9CA3AF;
+      --content-secondary: #D1D5DB;
+    }
+    :root[data-theme="light"] {
+      --canvas: #F8F6F1;
+      --surface: #FFFFFF;
+      --surface-2: #F1ECE2;
+      --surface-3: #E4DEC5;
+      --line: rgba(15, 23, 42, 0.12);
+      --content: #0F172A;
+      --content-muted: #64748B;
+      --content-secondary: #334155;
+    }
+    body {
+      background-color: var(--canvas);
+      color: var(--content);
+      font-family: 'Inter', sans-serif;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+    .font-display { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+
+    @keyframes marqueeFast {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    @keyframes marqueeSlow {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .ticker-track-fast {
+      display: flex;
+      width: max-content;
+      animation: marqueeFast 45s linear infinite;
+    }
+    .ticker-track-slow {
+      display: flex;
+      width: max-content;
+      animation: marqueeSlow 65s linear infinite;
+    }
+    .ticker-track-fast:hover, .ticker-track-slow:hover {
+      animation-play-state: paused;
+    }
+  </style>
+</head>
+<body class="min-h-screen py-8 px-4 sm:px-8 max-w-[1720px] mx-auto space-y-12">
+
+  <!-- TOP APP BAR -->
+  <header class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-line">
+    <div>
+      <div class="flex items-center gap-2 mb-2">
+        <span class="px-2.5 py-0.5 rounded-full bg-accent/20 text-accent font-mono text-[10px] font-bold uppercase tracking-wider">
+          Live Scrolling Marquee Review
+        </span>
+        <span class="text-xs text-content-muted font-mono">5 Non-Logo Scrolling Concepts</span>
+      </div>
+      <h1 class="font-display text-2xl sm:text-4xl font-extrabold tracking-tight">
+        What Else Can Scroll Below the Hero?
+      </h1>
+      <p class="text-sm text-content-muted mt-1 max-w-3xl leading-relaxed">
+        You liked the smooth continuous scrolling motion, but company logos are out. Here are <strong>5 live scrolling tickers</strong> using real conclave content, quotes, news, and tour milestones. Hover over any ticker to pause it!
+      </p>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <button onclick="toggleTheme()" class="px-4 py-2 rounded-full border border-line bg-surface text-xs font-semibold hover:border-accent transition-colors shadow-sm">
+        <span id="theme-icon">☀️ Light Mode</span>
+      </button>
+      <a href="http://localhost:3000" target="_blank" class="px-5 py-2 rounded-full bg-accent text-black font-bold text-xs hover:brightness-110 transition-all shadow-md">
+        View Live Homepage ↗
+      </a>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- OPTION 1: CONCLAVE TOUR MILESTONE PILLS (CITIES + THEMES) -->
+  <!-- ========================================================================= -->
+  <section class="space-y-4 p-6 sm:p-8 rounded-3xl bg-surface border-2 border-accent shadow-2xl relative">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-line">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="px-2.5 py-0.5 rounded-full bg-accent text-black font-mono text-[10px] font-bold uppercase">Option 1 · Recommended</span>
+          <span class="text-xs font-mono text-accent font-bold">National Tour Milestone Pills</span>
+        </div>
+        <h2 class="text-xl sm:text-2xl font-bold font-display text-content mt-1">Conclave Tour Capsule Stream (7 National Editions)</h2>
+        <p class="text-xs text-content-muted mt-0.5">
+          Smoothly scrolling capsule badges showcasing all 7 editions across <strong>Allyship 1.0 (4 Editions)</strong> and <strong>Allyship 2.0 (3 Editions)</strong> with their distinct themes.
+        </p>
+      </div>
+    </div>
+
+    <!-- Live Render Preview -->
+    <div class="pt-2 border-y border-line bg-surface-2 py-6 overflow-hidden rounded-2xl select-none">
+      <div class="mb-4 px-6 flex items-center justify-between">
+        <span class="text-[10px] font-mono uppercase tracking-[0.2em] text-accent font-bold">
+          Standing Conclave Tour · 2024–2026
+        </span>
+        <span class="text-[10px] font-mono text-content-muted">Hover to pause</span>
+      </div>
+
+      <div class="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+        <div class="ticker-track-fast flex items-center gap-4">
+          <!-- Capsule 1 -->
+          <div class="flex items-center gap-3 px-4 py-2.5 rounded-full bg-surface border border-line hover:border-accent shadow-sm shrink-0">
+            <span class="px-2 py-0.5 rounded-full bg-accent/20 text-accent font-mono text-[10px] font-bold">1.0 · ED. 01</span>
+            <span class="font-display text-xs font-bold text-content">Bengaluru</span>
+            <span class="text-[11px] text-content-muted">Leadership Across Disciplines</span>
+            <span class="text-[10px] font-mono text-accent">June 2024</span>
+          </div>
+
+          <!-- Capsule 2 -->
+          <div class="flex items-center gap-3 px-4 py-2.5 rounded-full bg-surface border border-line hover:border-accent shadow-sm shrink-0">
+            <span class="px-2 py-0.5 rounded-full bg-accent/20 text-accent font-mono text-[10px] font-bold">1.0 · ED. 02</span>
+            <span class="font-display text-xs font-bold text-content">Hyderabad</span>
+            <span class="text-[11px] text-content-muted">Organizational Trust</span>
+            <span class="text-[10px] font-mono text-accent">July 2024</span>
+          </div>
+
+          <!-- Capsule 3 -->
+          <div class="flex items-center gap-3 px-4 py-2.5 rounded-full bg-surface border border-line hover:border-accent shadow-sm shrink-0">
+            <span class="px-2 py-0.5 rounded-full bg-accent/20 text-accent font-mono text-[10px] font-bold">1.0 · ED. 03</span>
+            <span class="font-display text-xs font-bold text-content">Kolkata</span>
+            <span class="text-[11px] text-content-muted">Workplace Inclusion</span>
+            <span class="text-[10px] font-mono text-accent">Sept 2024</span>
+          </div>
+
+          <!-- Capsule 4 -->
+          <div class="flex items-center gap-3 px-4 py-2.5 rounded-full bg-surface border border-line hover:border-accent shadow-sm shrink-0">
+            <span class="px-2 py-0.5 rounded-full bg-accent/20 text-accent font-mono text-[10px] font-bold">1.0 · ED. 04</span>
+            <span class="font-display text-xs font-bold text-content">Mumbai</span>
+            <span class="text-[11px] text-content-muted">Empowered Teams</span>
+            <span class="text-[10px] font-mono text-accent">Oct 2025</span>
+          </div>
+
+          <!-- Capsule 5 -->
+          <div class="flex items-center gap-3 px-4 py-2.5 rounded-full bg-surface border border-accent/40 bg-accent/5 hover:border-accent shadow-sm shrink-0">
+            <span class="px-2 py-0.5 rounded-full bg-accent text-black font-mono text-[10px] font-bold">2.0 · ED. 01</span>
+            <span class="font-display text-xs font-bold text-accent">Bengaluru</span>
+            <span class="text-[11px] text-content-secondary">Tech-Academia Bridges</span>
+            <span class="text-[10px] font-mono text-accent">March 2026</span>
+          </div>
+
+          <!-- Capsule 6 -->
+          <div class="flex items-center gap-3 px-4 py-2.5 rounded-full bg-surface border border-accent/40 bg-accent/5 hover:border-accent shadow-sm shrink-0">
+            <span class="px-2 py-0.5 rounded-full bg-accent text-black font-mono text-[10px] font-bold">2.0 · ED. 02</span>
+            <span class="font-display text-xs font-bold text-accent">Hyderabad</span>
+            <span class="text-[11px] text-content-secondary">Emerging Talent Transition</span>
+            <span class="text-[10px] font-mono text-accent">May 2026</span>
+          </div>
+
+          <!-- Capsule 7 -->
+          <div class="flex items-center gap-3 px-4 py-2.5 rounded-full bg-surface border border-accent/40 bg-accent/5 hover:border-accent shadow-sm shrink-0">
+            <span class="px-2 py-0.5 rounded-full bg-accent text-black font-mono text-[10px] font-bold">2.0 · ED. 03</span>
+            <span class="font-display text-xs font-bold text-accent">Chennai</span>
+            <span class="text-[11px] text-content-secondary">Practicing Allyship Duty</span>
+            <span class="text-[10px] font-mono text-accent">July 2026</span>
+          </div>
+
+          <!-- DUPLICATE SET FOR SEAMLESS LOOP -->
+          <div class="flex items-center gap-3 px-4 py-2.5 rounded-full bg-surface border border-line hover:border-accent shadow-sm shrink-0">
+            <span class="px-2 py-0.5 rounded-full bg-accent/20 text-accent font-mono text-[10px] font-bold">1.0 · ED. 01</span>
+            <span class="font-display text-xs font-bold text-content">Bengaluru</span>
+            <span class="text-[11px] text-content-muted">Leadership Across Disciplines</span>
+            <span class="text-[10px] font-mono text-accent">June 2024</span>
+          </div>
+          <div class="flex items-center gap-3 px-4 py-2.5 rounded-full bg-surface border border-line hover:border-accent shadow-sm shrink-0">
+            <span class="px-2 py-0.5 rounded-full bg-accent/20 text-accent font-mono text-[10px] font-bold">1.0 · ED. 02</span>
+            <span class="font-display text-xs font-bold text-content">Hyderabad</span>
+            <span class="text-[11px] text-content-muted">Organizational Trust</span>
+            <span class="text-[10px] font-mono text-accent">July 2024</span>
+          </div>
+          <div class="flex items-center gap-3 px-4 py-2.5 rounded-full bg-surface border border-line hover:border-accent shadow-sm shrink-0">
+            <span class="px-2 py-0.5 rounded-full bg-accent/20 text-accent font-mono text-[10px] font-bold">1.0 · ED. 03</span>
+            <span class="font-display text-xs font-bold text-content">Kolkata</span>
+            <span class="text-[11px] text-content-muted">Workplace Inclusion</span>
+            <span class="text-[10px] font-mono text-accent">Sept 2024</span>
+          </div>
+          <div class="flex items-center gap-3 px-4 py-2.5 rounded-full bg-surface border border-line hover:border-accent shadow-sm shrink-0">
+            <span class="px-2 py-0.5 rounded-full bg-accent/20 text-accent font-mono text-[10px] font-bold">1.0 · ED. 04</span>
+            <span class="font-display text-xs font-bold text-content">Mumbai</span>
+            <span class="text-[11px] text-content-muted">Empowered Teams</span>
+            <span class="text-[10px] font-mono text-accent">Oct 2025</span>
+          </div>
+          <div class="flex items-center gap-3 px-4 py-2.5 rounded-full bg-surface border border-accent/40 bg-accent/5 hover:border-accent shadow-sm shrink-0">
+            <span class="px-2 py-0.5 rounded-full bg-accent text-black font-mono text-[10px] font-bold">2.0 · ED. 01</span>
+            <span class="font-display text-xs font-bold text-accent">Bengaluru</span>
+            <span class="text-[11px] text-content-secondary">Tech-Academia Bridges</span>
+            <span class="text-[10px] font-mono text-accent">March 2026</span>
+          </div>
+          <div class="flex items-center gap-3 px-4 py-2.5 rounded-full bg-surface border border-accent/40 bg-accent/5 hover:border-accent shadow-sm shrink-0">
+            <span class="px-2 py-0.5 rounded-full bg-accent text-black font-mono text-[10px] font-bold">2.0 · ED. 02</span>
+            <span class="font-display text-xs font-bold text-accent">Hyderabad</span>
+            <span class="text-[11px] text-content-secondary">Emerging Talent Transition</span>
+            <span class="text-[10px] font-mono text-accent">May 2026</span>
+          </div>
+          <div class="flex items-center gap-3 px-4 py-2.5 rounded-full bg-surface border border-accent/40 bg-accent/5 hover:border-accent shadow-sm shrink-0">
+            <span class="px-2 py-0.5 rounded-full bg-accent text-black font-mono text-[10px] font-bold">2.0 · ED. 03</span>
+            <span class="font-display text-xs font-bold text-accent">Chennai</span>
+            <span class="text-[11px] text-content-secondary">Practicing Allyship Duty</span>
+            <span class="text-[10px] font-mono text-accent">July 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- OPTION 2: EXECUTIVE CXO & OLYMPIAN SOUNDBITES MARQUEE -->
+  <!-- ========================================================================= -->
+  <section class="space-y-4 p-6 sm:p-8 rounded-3xl bg-surface border border-line shadow-xl">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-line">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="px-2.5 py-0.5 rounded-full bg-accent/20 text-accent font-mono text-[10px] font-bold uppercase">Option 2</span>
+          <span class="text-xs font-mono text-content-muted">Thought Leadership &amp; Real Voices</span>
+        </div>
+        <h2 class="text-xl sm:text-2xl font-bold font-display text-content mt-1">Conclave Soundbites Stream (Olympic &amp; CXO Quotes)</h2>
+        <p class="text-xs text-content-muted mt-0.5">
+          A continuous editorial stream of powerful 1-sentence takeaways from Olympians, CXOs, and university leaders delivered live at the conclaves.
+        </p>
+      </div>
+    </div>
+
+    <!-- Live Render Preview -->
+    <div class="pt-2 border-y border-line bg-surface-2 py-6 overflow-hidden rounded-2xl select-none">
+      <div class="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+        <div class="ticker-track-slow flex items-center gap-12 font-sans text-xs sm:text-sm text-content-secondary">
+          <!-- Quote 1 -->
+          <div class="flex items-center gap-3 shrink-0">
+            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+            <span class="italic font-display text-content">&ldquo;Leadership in sports is about building trust before demanding podium excellence.&rdquo;</span>
+            <span class="font-mono text-[11px] text-accent font-bold">— Anju Bobby George, Olympian</span>
+          </div>
+
+          <!-- Quote 2 -->
+          <div class="flex items-center gap-3 shrink-0">
+            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+            <span class="italic font-display text-content">&ldquo;Allyship is what happens on an ordinary Friday in meetings—who is heard, who is sponsored.&rdquo;</span>
+            <span class="font-mono text-[11px] text-accent font-bold">— Archana Grover, Standard Chartered</span>
+          </div>
+
+          <!-- Quote 3 -->
+          <div class="flex items-center gap-3 shrink-0">
+            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+            <span class="italic font-display text-content">&ldquo;True composure is built in high-pressure crucibles with trusted mentors by your side.&rdquo;</span>
+            <span class="font-mono text-[11px] text-accent font-bold">— Arshad Ayub, Former Indian Test Cricketer</span>
+          </div>
+
+          <!-- Quote 4 -->
+          <div class="flex items-center gap-3 shrink-0">
+            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+            <span class="italic font-display text-content">&ldquo;Curricula cannot be static; they must be co-authored weekly alongside corporate practitioners.&rdquo;</span>
+            <span class="font-mono text-[11px] text-accent font-bold">— Dr. P.B. Kotur, Global Head, LTTS</span>
+          </div>
+
+          <!-- Quote 5 -->
+          <div class="flex items-center gap-3 shrink-0">
+            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+            <span class="italic font-display text-content">&ldquo;Potential turns into excellence only when trusted coaches guide you through setbacks.&rdquo;</span>
+            <span class="font-mono text-[11px] text-accent font-bold">— Premanand J., Paris Olympics National Sprint Coach</span>
+          </div>
+
+          <!-- DUPLICATE FOR LOOP -->
+          <div class="flex items-center gap-3 shrink-0">
+            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+            <span class="italic font-display text-content">&ldquo;Leadership in sports is about building trust before demanding podium excellence.&rdquo;</span>
+            <span class="font-mono text-[11px] text-accent font-bold">— Anju Bobby George, Olympian</span>
+          </div>
+          <div class="flex items-center gap-3 shrink-0">
+            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+            <span class="italic font-display text-content">&ldquo;Allyship is what happens on an ordinary Friday in meetings—who is heard, who is sponsored.&rdquo;</span>
+            <span class="font-mono text-[11px] text-accent font-bold">— Archana Grover, Standard Chartered</span>
+          </div>
+          <div class="flex items-center gap-3 shrink-0">
+            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+            <span class="italic font-display text-content">&ldquo;True composure is built in high-pressure crucibles with trusted mentors by your side.&rdquo;</span>
+            <span class="font-mono text-[11px] text-accent font-bold">— Arshad Ayub, Former Indian Test Cricketer</span>
+          </div>
+          <div class="flex items-center gap-3 shrink-0">
+            <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
+            <span class="italic font-display text-content">&ldquo;Curricula cannot be static; they must be co-authored weekly alongside corporate practitioners.&rdquo;</span>
+            <span class="font-mono text-[11px] text-accent font-bold">— Dr. P.B. Kotur, Global Head, LTTS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- OPTION 3: NATIONAL PRESS & MEDIA HEADLINES MARQUEE -->
+  <!-- ========================================================================= -->
+  <section class="space-y-4 p-6 sm:p-8 rounded-3xl bg-surface border border-line shadow-xl">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-line">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="px-2.5 py-0.5 rounded-full bg-accent/20 text-accent font-mono text-[10px] font-bold uppercase">Option 3</span>
+          <span class="text-xs font-mono text-content-muted">Public Media Verification</span>
+        </div>
+        <h2 class="text-xl sm:text-2xl font-bold font-display text-content mt-1">National Press Headlines Ticker (Media Verification)</h2>
+        <p class="text-xs text-content-muted mt-0.5">
+          Real headlines from major national publications documenting the conclave series across metros.
+        </p>
+      </div>
+    </div>
+
+    <!-- Live Render Preview -->
+    <div class="pt-2 border-y border-line bg-surface-2 py-6 overflow-hidden rounded-2xl select-none">
+      <div class="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+        <div class="ticker-track-fast flex items-center gap-8 font-mono text-xs">
+          <!-- Press 1 -->
+          <div class="flex items-center gap-3 px-4 py-2 rounded-xl bg-surface border border-line shrink-0">
+            <span class="px-2 py-0.5 rounded bg-white/10 text-white font-bold text-[10px]">DECCAN CHRONICLE</span>
+            <span class="text-content font-sans font-medium text-xs">&ldquo;Arshad Ayub &amp; CXOs Deliberate on Organizational Allyship at Hyderabad&rdquo;</span>
+            <span class="text-accent text-[10px]">HYD CONCLAVE</span>
+          </div>
+
+          <!-- Press 2 -->
+          <div class="flex items-center gap-3 px-4 py-2 rounded-xl bg-surface border border-line shrink-0">
+            <span class="px-2 py-0.5 rounded bg-white/10 text-white font-bold text-[10px]">THE HINDU</span>
+            <span class="text-content font-sans font-medium text-xs">&ldquo;Siksha 'O' Anusandhan Convenes Industry-Academia Leadership Conclave in Chennai&rdquo;</span>
+            <span class="text-accent text-[10px]">CHENNAI CONCLAVE</span>
+          </div>
+
+          <!-- Press 3 -->
+          <div class="flex items-center gap-3 px-4 py-2 rounded-xl bg-surface border border-line shrink-0">
+            <span class="px-2 py-0.5 rounded bg-white/10 text-white font-bold text-[10px]">TIMES OF INDIA</span>
+            <span class="text-content font-sans font-medium text-xs">&ldquo;Bridging Campus Gates: SOA Steps Directly into India&apos;s Metropolitan Boardrooms&rdquo;</span>
+            <span class="text-accent text-[10px]">MUMBAI CONCLAVE</span>
+          </div>
+
+          <!-- Press 4 -->
+          <div class="flex items-center gap-3 px-4 py-2 rounded-xl bg-surface border border-line shrink-0">
+            <span class="px-2 py-0.5 rounded bg-white/10 text-white font-bold text-[10px]">PRAMEYA</span>
+            <span class="text-content font-sans font-medium text-xs">&ldquo;Olympic Gold Medalist Gurbux Singh &amp; Corporate Leaders Honour Eastern Talent&rdquo;</span>
+            <span class="text-accent text-[10px]">KOLKATA CONCLAVE</span>
+          </div>
+
+          <!-- DUPLICATE FOR LOOP -->
+          <div class="flex items-center gap-3 px-4 py-2 rounded-xl bg-surface border border-line shrink-0">
+            <span class="px-2 py-0.5 rounded bg-white/10 text-white font-bold text-[10px]">DECCAN CHRONICLE</span>
+            <span class="text-content font-sans font-medium text-xs">&ldquo;Arshad Ayub &amp; CXOs Deliberate on Organizational Allyship at Hyderabad&rdquo;</span>
+            <span class="text-accent text-[10px]">HYD CONCLAVE</span>
+          </div>
+          <div class="flex items-center gap-3 px-4 py-2 rounded-xl bg-surface border border-line shrink-0">
+            <span class="px-2 py-0.5 rounded bg-white/10 text-white font-bold text-[10px]">THE HINDU</span>
+            <span class="text-content font-sans font-medium text-xs">&ldquo;Siksha 'O' Anusandhan Convenes Industry-Academia Leadership Conclave in Chennai&rdquo;</span>
+            <span class="text-accent text-[10px]">CHENNAI CONCLAVE</span>
+          </div>
+          <div class="flex items-center gap-3 px-4 py-2 rounded-xl bg-surface border border-line shrink-0">
+            <span class="px-2 py-0.5 rounded bg-white/10 text-white font-bold text-[10px]">TIMES OF INDIA</span>
+            <span class="text-content font-sans font-medium text-xs">&ldquo;Bridging Campus Gates: SOA Steps Directly into India&apos;s Metropolitan Boardrooms&rdquo;</span>
+            <span class="text-accent text-[10px]">MUMBAI CONCLAVE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- OPTION 4: EXECUTIVE FOCUS & BOARDROOM AGENDA STREAM -->
+  <!-- ========================================================================= -->
+  <section class="space-y-4 p-6 sm:p-8 rounded-3xl bg-surface border border-line shadow-xl">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-line">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="px-2.5 py-0.5 rounded-full bg-accent/20 text-accent font-mono text-[10px] font-bold uppercase">Option 4</span>
+          <span class="text-xs font-mono text-content-muted">Intellectual Agenda &amp; Mandates</span>
+        </div>
+        <h2 class="text-xl sm:text-2xl font-bold font-display text-content mt-1">Conclave Boardroom Agendas (The Core Themes)</h2>
+        <p class="text-xs text-content-muted mt-0.5">
+          Scrolling continuous stream of the core operational themes and intellectual mandates debated inside the conclaves.
+        </p>
+      </div>
+    </div>
+
+    <!-- Live Render Preview -->
+    <div class="pt-2 border-y border-line bg-surface-2 py-6 overflow-hidden rounded-2xl select-none">
+      <div class="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+        <div class="ticker-track-fast flex items-center gap-6 font-mono text-xs uppercase tracking-wider text-content">
+          <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface border border-line">
+            <span class="text-accent">✦</span>
+            <span>Psychological Safety for First-Time Professionals</span>
+          </span>
+          <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface border border-line">
+            <span class="text-accent">✦</span>
+            <span>De-Biasing Technical Hiring Paradigms</span>
+          </span>
+          <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface border border-line">
+            <span class="text-accent">✦</span>
+            <span>Olympic Mentorship &amp; Athletic Composure</span>
+          </span>
+          <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface border border-line">
+            <span class="text-accent">✦</span>
+            <span>Year-Round Capability Co-Creation</span>
+          </span>
+          <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface border border-line">
+            <span class="text-accent">✦</span>
+            <span>Ending Day-One Transactional Placement</span>
+          </span>
+          <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface border border-line">
+            <span class="text-accent">✦</span>
+            <span>Executive Sponsorship Over Quarterly Evaluations</span>
+          </span>
+
+          <!-- DUPLICATE -->
+          <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface border border-line">
+            <span class="text-accent">✦</span>
+            <span>Psychological Safety for First-Time Professionals</span>
+          </span>
+          <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface border border-line">
+            <span class="text-accent">✦</span>
+            <span>De-Biasing Technical Hiring Paradigms</span>
+          </span>
+          <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface border border-line">
+            <span class="text-accent">✦</span>
+            <span>Olympic Mentorship &amp; Athletic Composure</span>
+          </span>
+          <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface border border-line">
+            <span class="text-accent">✦</span>
+            <span>Year-Round Capability Co-Creation</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- OPTION 5: DYNAMIC FACTS & INSTITUTIONAL VELOCITY STREAM -->
+  <!-- ========================================================================= -->
+  <section class="space-y-4 p-6 sm:p-8 rounded-3xl bg-surface border border-line shadow-xl">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-line">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="px-2.5 py-0.5 rounded-full bg-accent/20 text-accent font-mono text-[10px] font-bold uppercase">Option 5</span>
+          <span class="text-xs font-mono text-content-muted">High-Energy Facts &amp; Metrics</span>
+        </div>
+        <h2 class="text-xl sm:text-2xl font-bold font-display text-content mt-1">Institutional Velocity &amp; Factoids Marquee</h2>
+        <p class="text-xs text-content-muted mt-0.5">
+          High-energy scroll of key verified facts, metrics, rankings, and credentials that validate the movement.
+        </p>
+      </div>
+    </div>
+
+    <!-- Live Render Preview -->
+    <div class="pt-2 border-y border-line bg-surface-2 py-6 overflow-hidden rounded-2xl select-none">
+      <div class="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+        <div class="ticker-track-fast flex items-center gap-10 font-display text-sm font-bold text-content">
+          <div class="flex items-center gap-2 shrink-0">
+            <span class="text-accent font-mono text-xs">#01</span>
+            <span class="text-accent">500+</span>
+            <span>Boardroom CXOs Engaged</span>
+          </div>
+          <div class="flex items-center gap-2 shrink-0">
+            <span class="text-accent font-mono text-xs">#02</span>
+            <span class="text-accent">NIRF #14</span>
+            <span>Ranked University in India</span>
+          </div>
+          <div class="flex items-center gap-2 shrink-0">
+            <span class="text-accent font-mono text-xs">#03</span>
+            <span class="text-accent">NAAC A++</span>
+            <span>Highest Grade Accreditation</span>
+          </div>
+          <div class="flex items-center gap-2 shrink-0">
+            <span class="text-accent font-mono text-xs">#04</span>
+            <span class="text-accent">7 Editions</span>
+            <span>Across 5 Commercial Corridors</span>
+          </div>
+          <div class="flex items-center gap-2 shrink-0">
+            <span class="text-accent font-mono text-xs">#05</span>
+            <span class="text-accent">4 Olympic Mentors</span>
+            <span>Anchoring Athletic Resilience</span>
+          </div>
+          <div class="flex items-center gap-2 shrink-0">
+            <span class="text-accent font-mono text-xs">#06</span>
+            <span class="text-accent">3 Decades</span>
+            <span>Of Continuous Academic Inquiry</span>
+          </div>
+
+          <!-- DUPLICATE -->
+          <div class="flex items-center gap-2 shrink-0">
+            <span class="text-accent font-mono text-xs">#01</span>
+            <span class="text-accent">500+</span>
+            <span>Boardroom CXOs Engaged</span>
+          </div>
+          <div class="flex items-center gap-2 shrink-0">
+            <span class="text-accent font-mono text-xs">#02</span>
+            <span class="text-accent">NIRF #14</span>
+            <span>Ranked University in India</span>
+          </div>
+          <div class="flex items-center gap-2 shrink-0">
+            <span class="text-accent font-mono text-xs">#03</span>
+            <span class="text-accent">NAAC A++</span>
+            <span>Highest Grade Accreditation</span>
+          </div>
+          <div class="flex items-center gap-2 shrink-0">
+            <span class="text-accent font-mono text-xs">#04</span>
+            <span class="text-accent">7 Editions</span>
+            <span>Across 5 Commercial Corridors</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JAVASCRIPT FOR THEME TOGGLE -->
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      document.getElementById('theme-icon').textContent = next === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
+    }
+  </script>
+</body>
+</html>
+

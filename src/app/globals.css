@@ -369,6 +369,14 @@
   animation-play-state: paused;
 }
 
+.press-ticker-track {
+  animation: ticker-scroll 55s linear infinite;
+}
+
+.press-ticker-track:hover {
+  animation-play-state: paused;
+}
+
 /* ═══════════════════════════════════════════
    KINETIC TYPOGRAPHY & HERO KEYFRAMES
    ═══════════════════════════════════════════ */
@@ -667,7 +675,8 @@
     scroll-behavior: auto !important;
   }
 
-  .logo-ticker-track {
+  .logo-ticker-track,
+  .press-ticker-track {
     animation: none;
   }
 }

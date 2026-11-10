@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { CinematicHero } from "@/components/home/CinematicHero";
-import { LogoTicker } from "@/components/home/LogoTicker";
+import { PressTicker } from "@/components/home/LogoTicker";
 import { ImpactSection } from "@/components/home/ImpactSection";
 import { BeyondRecruitment } from "@/components/home/BeyondRecruitment";
 import { ChapterBentoGrid } from "@/components/home/ChapterBentoGrid";
@@ -19,8 +19,8 @@ export default function HomePage() {
       {/* 1. Cinematic Hero — Editorial Split */}
       <CinematicHero onOpenInvite={() => setIsInviteOpen(true)} />
 
-      {/* 2. Logo Ticker — Continuous Monochrome Marquee */}
-      <LogoTicker />
+      {/* 2. National Press & Media Headlines Marquee */}
+      <PressTicker />
 
       {/* 3. Impact Numbers — Giant Animated Metrics */}
       <ImpactSection />
