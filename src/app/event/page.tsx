@@ -630,7 +630,7 @@ function EventContent() {
         <div className="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Left Column: Editorial Headline & Copy */}
-            <div className="lg:col-span-7 xl:col-span-8 space-y-6">
+            <div className="lg:col-span-7 space-y-6 max-w-3xl">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-2 border border-accent/30 shadow-sm font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
                 <span>A Continuing National Dialogue · 7 Editions</span>
               </div>
@@ -640,11 +640,11 @@ function EventContent() {
                 <span className="italic font-normal">Conclaves</span>
               </h1>
 
-              <p className="text-base sm:text-lg lg:text-xl font-display text-content-muted italic lg:whitespace-nowrap">
+              <p className="text-base sm:text-lg font-display text-content-muted italic">
                 Where Corporate Chairs, Olympic Mentors, and University Thinkers Build Enduring Alliances
               </p>
 
-              <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-4xl xl:max-w-5xl font-normal">
+              <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal">
                 Instead of convening behind institutional gates in Bhubaneswar, Siksha &lsquo;O&rsquo; Anusandhan brings academic leadership directly into India&apos;s key economic centers. From Bengaluru and Hyderabad to Kolkata, Mumbai, and Chennai, each conclave serves as a focused forum: listening to the changing demands of industry, discussing the real pressures faced by young professionals, and building relationships that transcend hiring cycles.
               </p>
 
@@ -667,7 +667,7 @@ function EventContent() {
             </div>
 
             {/* Right Column: Curated Cinematic Photo Frame */}
-            <div className="lg:col-span-5 xl:col-span-4 relative">
+            <div className="lg:col-span-5 relative">
               <div
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}

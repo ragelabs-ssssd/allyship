@@ -169,7 +169,7 @@ export default function ImpactPage() {
         <HeroBackdrop />
         <div className="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            <div className="lg:col-span-7 space-y-6">
+            <div className="lg:col-span-7 space-y-6 max-w-3xl">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-2 border border-accent/30 shadow-sm font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
                 <span>Institutional Dividends · Sustainable Progress</span>
               </div>
@@ -183,7 +183,7 @@ export default function ImpactPage() {
                 Moving Beyond Short-Term Metrics to Transform the Future of Education and Work
               </p>
 
-              <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-3xl font-normal">
+              <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal">
                 The true measure of an alliance cannot be captured in a single recruitment cycle. Impact is seen when boardroom leaders help reshape engineering syllabi, when corporate laboratories open inside university campuses, and when first-generation graduates enter the workforce with the quiet confidence to speak up, contribute, and lead.
               </p>
 

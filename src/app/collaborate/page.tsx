@@ -179,7 +179,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
               Co-Innovate. Sponsor Applied Research. Build Strategic Talent Corridors.
             </p>
 
-            <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-xl lg:max-w-[600px] font-normal text-left sm:text-right ml-auto">
+            <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal text-left sm:text-right">
               From co-founding advanced campus Centres of Excellence with Tech Mahindra and LTTS to sponsoring R&amp;D challenges through the AIC-SOA Foundation under NITI Aayog, Siksha &lsquo;O&rsquo; Anusandhan offers global enterprises an agile, high-velocity talent ecosystem.
             </p>
 
