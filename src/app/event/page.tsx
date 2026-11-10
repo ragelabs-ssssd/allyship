@@ -26,6 +26,16 @@ import { GetInvitedModal } from "@/components/GetInvitedModal";
 import { HeroBackdrop } from "@/components/HeroBackdrop";
 import { conclavesData } from "@/data/conclaves";
 
+const CHAPTER_THEMES: Record<string, string> = {
+  "bengaluru-1": "Cross-Discipline Leadership",
+  "hyderabad-1": "Organizational Trust",
+  "kolkata-1": "Workplace Inclusion",
+  "mumbai-1": "Empowered Teams",
+  "bengaluru-2": "Tech-Academia Ties",
+  "hyderabad-2": "Emerging Talent",
+  "chennai-2": "Executive Mentorship",
+};
+
 const eventHeroImages = [
   {
     src: "/photos-1/IMG_7448.jpg",
@@ -958,17 +968,17 @@ function EventContent() {
           <div id="chapter-details" className="space-y-10 scroll-mt-24 pt-4">
             {/* Creative Dual-Cycle Structure with Keycard Dossier Content */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-5 scroll-mt-24">
-              {/* Deck 1: Cycle 1.0 Tour (Chapters 01–04) */}
+              {/* Deck 1: Inaugural Conclave Series (Chapters 01–04) */}
               <div className="lg:col-span-7 p-4 sm:p-5 rounded-3xl bg-surface border border-line space-y-3.5 shadow-sm">
                 <div className="flex items-center justify-between px-1">
                   <div className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-content-muted" />
                     <span className="font-mono text-xs font-bold uppercase tracking-[0.14em] text-content-secondary">
-                      Cycle 1.0 Tour · Foundation (2024–2025)
+                      Inaugural Conclave Series · 2024–2025
                     </span>
                   </div>
                   <span className="font-mono text-[10px] text-content-muted px-2.5 py-0.5 rounded-full bg-surface-2 border border-line font-medium">
-                    Chapters 01–04
+                    4 Conclaves
                   </span>
                 </div>
 
@@ -998,7 +1008,7 @@ function EventContent() {
                             }`}
                           >
                             {isSelected && <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />}
-                            CH · {chapterNum}
+                            Chapter {chapterNum}
                           </span>
                           <span
                             className={`px-2 py-0.5 rounded-full font-mono text-[9px] font-bold uppercase tracking-wider ${
@@ -1025,7 +1035,7 @@ function EventContent() {
                           </p>
                         </div>
 
-                        {/* Bottom Row: Venue / Active State indicator */}
+                        {/* Bottom Row: Thematic Focus / Active State indicator */}
                         <div
                           className={`mt-2.5 pt-2 border-t flex items-center justify-between font-sans text-[10px] ${
                             isSelected
@@ -1034,7 +1044,7 @@ function EventContent() {
                           }`}
                         >
                           <span className="truncate">
-                            {isSelected ? "Active Chapter" : c.venue.split(",")[0]}
+                            {isSelected ? "Active Conclave" : (CHAPTER_THEMES[c.id] || c.focus.split(",")[0])}
                           </span>
                           {isSelected && <span className="text-xs">▾</span>}
                         </div>
@@ -1049,17 +1059,17 @@ function EventContent() {
                 </div>
               </div>
 
-              {/* Deck 2: Cycle 2.0 Tour (Chapters 05–07) */}
+              {/* Deck 2: National Expansion Series (Chapters 05–07) */}
               <div className="lg:col-span-5 p-4 sm:p-5 rounded-3xl bg-surface border border-accent/30 space-y-3.5 shadow-sm">
                 <div className="flex items-center justify-between px-1">
                   <div className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
                     <span className="font-mono text-xs font-bold uppercase tracking-[0.14em] text-accent">
-                      Cycle 2.0 Tour · Scale & Impact (2026)
+                      National Expansion Series · 2026
                     </span>
                   </div>
                   <span className="font-mono text-[10px] text-accent font-semibold px-2.5 py-0.5 rounded-full bg-accent/10 border border-accent/30">
-                    Chapters 05–07
+                    3 Conclaves
                   </span>
                 </div>
 
@@ -1089,7 +1099,7 @@ function EventContent() {
                             }`}
                           >
                             {isSelected && <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />}
-                            CH · {chapterNum}
+                            Chapter {chapterNum}
                           </span>
                           <span
                             className={`px-2 py-0.5 rounded-full font-mono text-[9px] font-bold uppercase tracking-wider ${
@@ -1116,7 +1126,7 @@ function EventContent() {
                           </p>
                         </div>
 
-                        {/* Bottom Row: Venue / Active State indicator */}
+                        {/* Bottom Row: Thematic Focus / Active State indicator */}
                         <div
                           className={`mt-2.5 pt-2 border-t flex items-center justify-between font-sans text-[10px] ${
                             isSelected
@@ -1125,7 +1135,7 @@ function EventContent() {
                           }`}
                         >
                           <span className="truncate">
-                            {isSelected ? "Active Chapter" : c.venue.split(",")[0]}
+                            {isSelected ? "Active Conclave" : (CHAPTER_THEMES[c.id] || c.focus.split(",")[0])}
                           </span>
                           {isSelected && <span className="text-xs">▾</span>}
                         </div>
