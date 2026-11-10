@@ -395,8 +395,8 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
         objectPosition: "50% 30%",
       },
       {
-        src: "/conclave-moments/hyderabad-1/hyderabad-1-02.jpg",
-        caption: "Corporate CXOs & Talent Leaders in Roundtable Deliberations",
+        src: "",
+        caption: "Hyderabad — Conclave Moment 02",
         objectPosition: "50% 30%",
       },
       {
