@@ -400,9 +400,9 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
         objectPosition: "50% 30%",
       },
       {
-        src: "/conclave-moments/hyderabad-1/hyderabad-1-03.jpg",
-        caption: "Dais Dignitaries & Academic Leadership in Strategic Alignment",
-        objectPosition: "50% 30%",
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-foyer-selfie.jpg",
+        caption: "Conclave Delegates & Executive Foyer Moments in Hyderabad",
+        objectPosition: "50% 25%",
       },
       {
         src: "/conclave-moments/hyderabad-1/hyderabad-1-04.jpg",
