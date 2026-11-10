@@ -179,7 +179,7 @@ export default function ImpactPage() {
                 <span className="italic font-normal">Impact</span>
               </h1>
 
-              <p className="text-lg sm:text-xl font-display text-content-muted italic">
+              <p className="text-lg sm:text-xl font-display text-content-muted italic lg:whitespace-nowrap">
                 Moving Beyond Short-Term Metrics to Transform the Future of Education and Work
               </p>
 
@@ -243,8 +243,8 @@ export default function ImpactPage() {
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
             From Boardroom Deliberation to Measurable Outcomes
           </h2>
-          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
-            Direct engagement across Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai delivers enduring dividends for students and enterprise partners.
+          <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal max-w-5xl mx-auto lg:whitespace-nowrap">
+            Direct engagement across India&apos;s commercial capitals delivering enduring dividends for scholars and enterprise partners.
           </p>
         </div>
 
@@ -278,15 +278,15 @@ export default function ImpactPage() {
       {/* 3. IN THE PRESS — 9 NEWSPAPER & MEDIA CLIPPINGS */}
       <section id="press-coverage" className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line">
         <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase shadow-sm">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-2 border border-accent/30 shadow-sm font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
             <Newspaper className="w-3.5 h-3.5" />
             <span>National &amp; Regional Media Chronicle</span>
           </div>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
             Chronicled Across India&apos;s Leading Publications
           </h2>
-          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
-            Leading national and regional publications—including Deccan Chronicle, The Statesman, Prameya News, OdishaBytes, The Sakala, Samaya, Around Odisha, Orissa Today, and The Sanchar—have documented the evolution of ALLYSHIP++ across seven national editions. Click any clipping to inspect the full report.
+          <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal max-w-5xl mx-auto lg:whitespace-nowrap">
+            Documented across Deccan Chronicle, The Statesman, Prameya News, OdishaBytes, and national newsrooms.
           </p>
         </div>
 
