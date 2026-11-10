@@ -61,7 +61,7 @@ export function Navbar() {
         } ${
           isScrolled
             ? "nav-editorial shadow-2xl"
-            : "bg-gradient-to-b from-canvas/95 via-canvas/70 to-transparent backdrop-blur-[2px]"
+            : "bg-gradient-to-b from-canvas/50 via-canvas/25 to-transparent dark:from-canvas/95 dark:via-canvas/70 dark:to-transparent backdrop-blur-[2px]"
         }`}
       >
         <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">

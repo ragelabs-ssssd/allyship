@@ -16,7 +16,7 @@ export function HeroBackdrop({
   scrimClassName?: string;
   videoSrc?: string;
   playbackRate?: number;
-  align?: "left" | "right";
+  align?: "left" | "right" | "center";
 }) {
   const pathname = usePathname();
   const prefersReducedMotion = useReducedMotion();
@@ -71,16 +71,18 @@ export function HeroBackdrop({
         </video>
       )}
 
-      {/* Theme-aware scrims: gentle ambient overlay ensuring readability of copy while preserving vivid video clarity */}
+      {/* Theme-aware scrims: half-decreased whitish shade in light mode so video is crystal clear */}
       <div className={`absolute inset-0 bg-transparent dark:bg-canvas/40 ${scrimClassName}`} />
       <div
         className={`absolute inset-0 ${
-          align === "right"
-            ? "bg-gradient-to-l from-canvas/85 via-canvas/35 to-transparent dark:from-canvas/90 dark:via-canvas/60 dark:to-canvas/10"
-            : "bg-gradient-to-r from-canvas/85 via-canvas/35 to-transparent dark:from-canvas/90 dark:via-canvas/50 dark:to-canvas/10"
+          align === "center"
+            ? "bg-gradient-to-b from-canvas/25 via-canvas/10 to-canvas/30 dark:from-canvas/60 dark:via-canvas/30 dark:to-canvas/70"
+            : align === "right"
+            ? "bg-gradient-to-l from-canvas/40 via-canvas/15 to-transparent dark:from-canvas/90 dark:via-canvas/60 dark:to-canvas/10"
+            : "bg-gradient-to-r from-canvas/40 via-canvas/15 to-transparent dark:from-canvas/90 dark:via-canvas/50 dark:to-canvas/10"
         }`}
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-canvas/70 via-transparent to-transparent dark:from-canvas/75 dark:to-canvas/25" />
+      <div className="absolute inset-0 bg-gradient-to-t from-canvas/35 via-transparent to-transparent dark:from-canvas/75 dark:to-canvas/25" />
     </div>
   );
 }
