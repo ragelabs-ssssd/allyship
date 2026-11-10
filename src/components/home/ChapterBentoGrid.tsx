@@ -79,7 +79,7 @@ export function ChapterBentoGrid() {
                   : "text-content-muted hover:text-content"
               }`}
             >
-              National Expansion
+              Allyship 2.0 (3 Editions)
               {activeCycle === "2.0" && (
                 <motion.span
                   layoutId="bentoTabIndicator"
@@ -96,7 +96,7 @@ export function ChapterBentoGrid() {
                   : "text-content-muted hover:text-content"
               }`}
             >
-              Inaugural Series
+              Allyship 1.0 (4 Editions)
               {activeCycle === "1.0" && (
                 <motion.span
                   layoutId="bentoTabIndicator"
