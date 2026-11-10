@@ -42,12 +42,12 @@ export function ChapterBentoGrid() {
     <section id="chapters" className="py-20 lg:py-28 bg-canvas relative">
       <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
         {/* Section Header */}
-        <div className="flex flex-col xl:flex-row xl:items-end justify-between gap-6 mb-16 pb-6 border-b border-line">
+        <div className="flex flex-col xl:flex-row xl:items-end justify-between gap-6 mb-16 pb-8 border-b border-line">
           <SectionReveal>
             <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
               A Continuing National Dialogue
             </span>
-            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-[32px] xl:text-[36px] 2xl:text-4xl font-bold text-content tracking-tight mt-2 xl:whitespace-nowrap">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight mt-2">
               Conversations Shaping the Future of Work
             </h2>
           </SectionReveal>
