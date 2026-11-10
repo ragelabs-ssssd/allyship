@@ -241,12 +241,10 @@ export function CinematicHero({ onOpenInvite }: CinematicHeroProps) {
             >
               <button
                 onClick={onOpenInvite}
-                className="inline-flex items-center gap-3 rounded-full bg-accent hover:bg-accent-hover text-on-accent font-sans font-semibold text-sm px-7 py-3.5 min-h-[48px] transition-colors duration-200 shadow-sm"
+                className="group inline-flex items-center gap-2.5 rounded-full bg-accent hover:bg-accent-hover text-on-accent font-sans font-semibold text-sm px-7 py-3.5 min-h-[48px] transition-colors duration-200 shadow-sm"
               >
                 <span>Request Executive Invitation</span>
-                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-black/80 text-white text-xs">
-                  →
-                </span>
+                <ChevronRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" strokeWidth={2.5} />
               </button>
 
               <a

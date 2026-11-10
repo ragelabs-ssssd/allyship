@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ArrowRight, ShieldCheck } from "lucide-react";
+import { ChevronRight, ShieldCheck } from "lucide-react";
 import { SectionReveal } from "../animations/SectionReveal";
 
 interface CtaBannerProps {
@@ -36,12 +36,10 @@ export function CtaBanner({ onOpenInvite }: CtaBannerProps) {
         <SectionReveal delay={0.3} className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
             onClick={onOpenInvite}
-            className="inline-flex items-center gap-3 rounded-full bg-accent hover:bg-accent-hover text-on-accent font-sans font-semibold text-sm px-6 py-3.5 transition-colors duration-200 shadow-sm"
+            className="group inline-flex items-center gap-2.5 rounded-full bg-accent hover:bg-accent-hover text-on-accent font-sans font-semibold text-sm px-7 py-3.5 transition-colors duration-200 shadow-sm"
           >
             <span>Request Executive Invitation</span>
-            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-black/80 text-white text-xs">
-              →
-            </span>
+            <ChevronRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" strokeWidth={2.5} />
           </button>
         </SectionReveal>
 

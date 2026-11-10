@@ -10,6 +10,7 @@ import {
   GraduationCap,
   Briefcase,
   ArrowRight,
+  ChevronRight,
   ExternalLink,
   Newspaper,
   Award,
@@ -191,10 +192,10 @@ export default function ImpactPage() {
                 <button
                   type="button"
                   onClick={() => setIsInviteOpen(true)}
-                  className="btn-primary"
+                  className="btn-primary group"
                 >
                   <span>Join the Next Conclave</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <ChevronRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" strokeWidth={2.5} />
                 </button>
                 <a
                   href="#press-coverage"

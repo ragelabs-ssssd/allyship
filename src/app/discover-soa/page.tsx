@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import {
   ArrowRight,
+  ChevronRight,
   Trophy,
   X,
 } from "lucide-react";
@@ -47,10 +48,10 @@ export default function DiscoverSoaPage() {
               <button
                 type="button"
                 onClick={() => setIsTourOpen(true)}
-                className="btn-primary"
+                className="btn-primary group"
               >
                 <span>Take Virtual Tour</span>
-                <ArrowRight className="w-4 h-4" />
+                <ChevronRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" strokeWidth={2.5} />
               </button>
 
               <button

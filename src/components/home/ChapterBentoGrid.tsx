@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Calendar, MapPin, Users } from "lucide-react";
+import { ArrowUpRight, Calendar, ChevronRight, MapPin, Users } from "lucide-react";
 import { conclavesData, ConclaveChapter } from "@/data/conclaves";
 import { SectionReveal } from "../animations/SectionReveal";
 
@@ -263,12 +263,10 @@ export function ChapterBentoGrid() {
         <div className="mt-12 text-center">
           <Link
             href="/event"
-            className="inline-flex items-center gap-3 px-8 py-3.5 rounded-full bg-accent hover:bg-accent-hover text-on-accent font-sans text-sm font-medium transition-colors duration-200 shadow-sm"
+            className="group inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-accent hover:bg-accent-hover text-on-accent font-sans text-sm font-semibold transition-colors duration-200 shadow-sm"
           >
             <span>Explore All Chapter Agendas, Panels &amp; Summaries</span>
-            <span className="flex h-6 w-6 items-center justify-center rounded-full bg-black/80 text-white text-xs">
-              →
-            </span>
+            <ChevronRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" strokeWidth={2.5} />
           </Link>
         </div>
       </div>

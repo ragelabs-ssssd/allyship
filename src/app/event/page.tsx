@@ -652,10 +652,10 @@ function EventContent() {
                 <button
                   type="button"
                   onClick={() => setIsInviteOpen(true)}
-                  className="btn-primary"
+                  className="btn-primary group"
                 >
                   <span>Request an Invitation</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <ChevronRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" strokeWidth={2.5} />
                 </button>
                 <a
                   href="#chapter-details"

@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
+  ChevronRight,
   CheckCircle2,
   Building2,
   Users,
@@ -186,10 +187,10 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
             <div className="pt-2 flex flex-wrap items-center justify-start sm:justify-end gap-4">
               <a
                 href="#submit-challenge"
-                className="btn-primary"
+                className="btn-primary group"
               >
                 <span>Submit Industry Challenge</span>
-                <ArrowRight className="w-4 h-4" />
+                <ChevronRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" strokeWidth={2.5} />
               </a>
 
               <button
