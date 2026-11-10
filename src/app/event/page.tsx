@@ -405,8 +405,8 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
         objectPosition: "50% 25%",
       },
       {
-        src: "/conclave-moments/hyderabad-1/hyderabad-1-04.jpg",
-        caption: "Banquet Floor Delegate Applause & Table Engagement",
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-photobooth-charminar.jpg",
+        caption: "Commemorative Charminar Installation & Conclave Delegation Frame",
         objectPosition: "50% 30%",
       },
       {
