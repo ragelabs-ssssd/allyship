@@ -644,8 +644,8 @@ function EventContent() {
                 Where Corporate Chairs, Olympic Mentors, and Thinkers Build Enduring Alliances
               </p>
 
-              <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal">
-                Instead of convening behind institutional gates in Bhubaneswar, Siksha &lsquo;O&rsquo; Anusandhan brings academic leadership directly into India&apos;s economic centers. Across Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai, each conclave listens to industry demands, addresses early-career pressures, and builds relationships beyond hiring cycles.
+              <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-xl font-normal">
+                From Bhubaneswar to India&apos;s key economic hubs, Siksha &lsquo;O&rsquo; Anusandhan brings academic leadership directly to industry—listening to corporate demands, guiding young talent, and building alliances beyond hiring cycles.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
