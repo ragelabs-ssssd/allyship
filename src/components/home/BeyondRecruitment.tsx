@@ -38,8 +38,8 @@ export function BeyondRecruitment() {
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight mt-2">
               Why Industry and Academia Need a New Covenant
             </h2>
-            <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal max-w-3xl mx-auto mt-3">
-              Moving beyond one-off recruitment into an enduring partnership—where ideas, mentorship, and opportunities flow freely between university halls and corporate boardrooms.
+            <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal max-w-5xl mx-auto mt-3 lg:whitespace-nowrap">
+              Moving beyond one-off recruitment into an enduring partnership where ideas, mentorship, and opportunities flow freely.
             </p>
           </SectionReveal>
         </div>

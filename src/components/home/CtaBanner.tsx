@@ -28,8 +28,8 @@ export function CtaBanner({ onOpenInvite }: CtaBannerProps) {
         </SectionReveal>
 
         <SectionReveal delay={0.2}>
-          <p className="font-sans text-base sm:text-lg font-normal tracking-[0.01em] leading-relaxed text-content-secondary max-w-xl mx-auto">
-            A curated boardroom convening for executive leaders, educators, and mentors committed to bridging academia and industry to nurture the next generation of leadership.
+          <p className="font-sans text-base sm:text-lg font-normal tracking-[0.01em] leading-relaxed text-content-secondary max-w-5xl mx-auto lg:whitespace-nowrap">
+            A curated boardroom convening for executive leaders and mentors committed to nurturing the next generation.
           </p>
         </SectionReveal>
 
