@@ -27,7 +27,7 @@ export default function DiscoverSoaPage() {
         <div className="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full">
           <div className="max-w-3xl space-y-6">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-[11px] font-bold font-heading tracking-[0.14em] uppercase">
-              <span>Deemed to be University · Bhubaneswar, India</span>
+              <span>Deemed to be University · Category-I Autonomy</span>
             </div>
 
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
@@ -36,7 +36,7 @@ export default function DiscoverSoaPage() {
             </h1>
 
             <p className="text-lg sm:text-xl font-display text-content-muted italic">
-              Ranked 15th Nationally · NAAC A++ · UGC Category-I Autonomy
+              Ranked 15th Nationally · NAAC A++ (3.88 CGPA) · UGC Category-I Autonomy
             </p>
 
             <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-3xl font-normal">
@@ -91,10 +91,10 @@ export default function DiscoverSoaPage() {
             Global Benchmarking &amp; Accolades
           </span>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
-            International Rankings &amp; Global Standing
+            International Rankings &amp; Worldwide Impact
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
-            Ranked among the premier institutions in the world by Quacquarelli Symonds (QS) and Times Higher Education (THE).
+            Ranked among elite global institutions by Quacquarelli Symonds (QS World) and Times Higher Education (THE).
           </p>
         </div>
 
@@ -108,7 +108,7 @@ export default function DiscoverSoaPage() {
             National &amp; International Certifications
           </span>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
-            Accreditations &amp; Major Recognitions
+            Accreditations &amp; Sovereign Recognitions
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
             Validated by national statutory authorities, healthcare boards, laboratory accreditors, and global standards bodies.
@@ -126,10 +126,10 @@ export default function DiscoverSoaPage() {
             Three Decades of Institutional Nation-Building
           </span>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
-            Evolution &amp; Growth Timeline
+            The Three-Decade Arc of Institutional Excellence
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto">
-            From the founding of ITER in 1996 to modern pharmaceutical super-centres, advanced medical campuses, and sovereign AI labs in 2026.
+            From the founding of ITER in 1996 to premier medical research complexes, pharmaceutical innovation hubs, and dedicated enterprise AI laboratories.
           </p>
         </div>
 
