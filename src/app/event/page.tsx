@@ -395,8 +395,8 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
         objectPosition: "50% 35%",
       },
       {
-        src: "",
-        caption: "Hyderabad — Conclave Moment 02",
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-07.jpg",
+        caption: "Senior Academic Leadership & Industry Leaders in Dialogue",
         objectPosition: "50% 30%",
       },
       {
@@ -420,8 +420,8 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
         objectPosition: "50% 30%",
       },
       {
-        src: "/conclave-moments/hyderabad-1/hyderabad-1-07.jpg",
-        caption: "Senior Academic Leadership & Industry Leaders in Dialogue",
+        src: "",
+        caption: "Hyderabad — Conclave Moment 07",
         objectPosition: "50% 30%",
       },
       {
