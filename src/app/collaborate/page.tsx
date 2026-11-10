@@ -166,7 +166,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
         <HeroBackdrop videoSrc={SOA_VIDEO_SRC} align="right" />
         <div className="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full flex justify-end">
           <div className="max-w-3xl space-y-6 text-left sm:text-right flex flex-col items-start sm:items-end">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-widest uppercase">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-2 border border-accent/30 shadow-sm font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
               <span>Enterprise Partnership Portal</span>
             </div>
 
