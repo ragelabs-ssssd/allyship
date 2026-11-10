@@ -985,7 +985,6 @@ function EventContent() {
                     const cleanCity = c.city.replace(/\s*\([12]\.0\)/, "");
                     const cityMeta = getCityLandmarkMeta(cleanCity);
                     const LandmarkIcon = cityMeta.Icon;
-                    const LandmarkWatermark = cityMeta.Watermark;
 
                     return (
                       <button
@@ -997,21 +996,8 @@ function EventContent() {
                             : "bg-surface-2 border-line hover:border-accent/60 text-content-muted hover:text-content hover:-translate-y-1 hover:shadow-md"
                           }`}
                       >
-                        {/* Background City Landmark Silhouette Watermark - positioned safely above the bottom divider so it is never bisected */}
-                        <div className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
-                          <div
-                            className={`absolute top-5 right-2 w-14 h-14 transition-all duration-500 ease-out pointer-events-none ${isSelected
-                                ? "text-accent/25 scale-105"
-                                : "text-content-muted/8 group-hover:text-accent/20 group-hover:scale-105"
-                              }`}
-                            aria-hidden="true"
-                          >
-                            <LandmarkWatermark className="w-full h-full" />
-                          </div>
-                        </div>
-
                         {/* Top Row: Edition Badge + Place Landmark Symbol Badge */}
-                        <div className="flex items-center justify-between gap-1 mb-2 relative z-10">
+                        <div className="flex items-center justify-between gap-1 mb-2">
                           <span
                             className={`font-mono text-[11px] font-bold tracking-wider flex items-center gap-1.5 ${isSelected ? "text-accent" : "text-content-secondary group-hover:text-accent"
                               }`}
@@ -1020,18 +1006,18 @@ function EventContent() {
                             Edition {editionNum}
                           </span>
                           <div
-                            className={`w-7 h-7 rounded-lg flex items-center justify-center transition-all duration-300 ${isSelected
+                            className={`w-8 h-8 rounded-xl flex items-center justify-center transition-all duration-300 ${isSelected
                                 ? "bg-accent/20 text-accent border border-accent/40 shadow-sm"
                                 : "bg-surface-3/80 text-content-muted border border-line group-hover:border-accent/40 group-hover:text-accent group-hover:bg-accent/10"
                               }`}
                             title={`${cleanCity} · ${cityMeta.landmark}`}
                           >
-                            <LandmarkIcon className="w-4 h-4 shrink-0 transition-transform duration-300 group-hover:scale-110" />
+                            <LandmarkIcon className="w-5 h-5 shrink-0 transition-transform duration-300 group-hover:scale-110" />
                           </div>
                         </div>
 
                         {/* Middle Row: Clean City & Date */}
-                        <div className="space-y-0.5 relative z-10">
+                        <div className="space-y-0.5">
                           <h4
                             className={`font-display text-sm font-bold tracking-normal truncate transition-colors ${isSelected ? "text-accent" : "text-content group-hover:text-accent"
                               }`}
@@ -1045,7 +1031,7 @@ function EventContent() {
 
                         {/* Bottom Row: Thematic Focus / Active State indicator */}
                         <div
-                          className={`mt-2.5 pt-2 border-t flex items-center justify-between font-sans text-[10px] relative z-10 ${isSelected
+                          className={`mt-2.5 pt-2 border-t flex items-center justify-between font-sans text-[10px] ${isSelected
                               ? "border-accent/30 text-accent font-semibold"
                               : "border-line text-content-muted"
                             }`}
@@ -1083,7 +1069,6 @@ function EventContent() {
                     const cleanCity = c.city.replace(/\s*\([12]\.0\)/, "");
                     const cityMeta = getCityLandmarkMeta(cleanCity);
                     const LandmarkIcon = cityMeta.Icon;
-                    const LandmarkWatermark = cityMeta.Watermark;
 
                     return (
                       <button
@@ -1095,21 +1080,8 @@ function EventContent() {
                             : "bg-surface-2 border-line hover:border-accent/60 text-content-muted hover:text-content hover:-translate-y-1 hover:shadow-md"
                           }`}
                       >
-                        {/* Background City Landmark Silhouette Watermark - positioned safely above the bottom divider so it is never bisected */}
-                        <div className="absolute inset-0 rounded-2xl overflow-hidden pointer-events-none">
-                          <div
-                            className={`absolute top-5 right-2 w-14 h-14 transition-all duration-500 ease-out pointer-events-none ${isSelected
-                                ? "text-accent/25 scale-105"
-                                : "text-content-muted/8 group-hover:text-accent/20 group-hover:scale-105"
-                              }`}
-                            aria-hidden="true"
-                          >
-                            <LandmarkWatermark className="w-full h-full" />
-                          </div>
-                        </div>
-
                         {/* Top Row: Edition Badge + Place Landmark Symbol Badge */}
-                        <div className="flex items-center justify-between gap-1 mb-2 relative z-10">
+                        <div className="flex items-center justify-between gap-1 mb-2">
                           <span
                             className={`font-mono text-[11px] font-bold tracking-wider flex items-center gap-1.5 ${isSelected ? "text-accent" : "text-content-secondary group-hover:text-accent"
                               }`}
@@ -1118,18 +1090,18 @@ function EventContent() {
                             Edition {editionNum}
                           </span>
                           <div
-                            className={`w-7 h-7 rounded-lg flex items-center justify-center transition-all duration-300 ${isSelected
+                            className={`w-8 h-8 rounded-xl flex items-center justify-center transition-all duration-300 ${isSelected
                                 ? "bg-accent/20 text-accent border border-accent/40 shadow-sm"
                                 : "bg-surface-3/80 text-content-muted border border-line group-hover:border-accent/40 group-hover:text-accent group-hover:bg-accent/10"
                               }`}
                             title={`${cleanCity} · ${cityMeta.landmark}`}
                           >
-                            <LandmarkIcon className="w-4 h-4 shrink-0 transition-transform duration-300 group-hover:scale-110" />
+                            <LandmarkIcon className="w-5 h-5 shrink-0 transition-transform duration-300 group-hover:scale-110" />
                           </div>
                         </div>
 
                         {/* Middle Row: Clean City & Date */}
-                        <div className="space-y-0.5 relative z-10">
+                        <div className="space-y-0.5">
                           <h4
                             className={`font-display text-sm font-bold tracking-normal truncate transition-colors ${isSelected ? "text-accent" : "text-content group-hover:text-accent"
                               }`}
@@ -1143,7 +1115,7 @@ function EventContent() {
 
                         {/* Bottom Row: Thematic Focus / Active State indicator */}
                         <div
-                          className={`mt-2.5 pt-2 border-t flex items-center justify-between font-sans text-[10px] relative z-10 ${isSelected
+                          className={`mt-2.5 pt-2 border-t flex items-center justify-between font-sans text-[10px] ${isSelected
                               ? "border-accent/30 text-accent font-semibold"
                               : "border-line text-content-muted"
                             }`}
