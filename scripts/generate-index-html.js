@@ -2065,7 +2065,7 @@ const htmlContent = `<!DOCTYPE html>
       const modal = document.getElementById('tour-modal');
       modal.classList.remove('hidden');
       const iframe = document.getElementById('tour-iframe');
-      if (iframe) iframe.src = "https://www.youtube-nocookie.com/embed/8wSGKsWyQwk?autoplay=1";
+      if (iframe) iframe.src = "https://www.youtube-nocookie.com/embed/Bjp-vCBHB0E?autoplay=1";
     }
 
     function closeTourModal() {

@@ -198,7 +198,7 @@ export default function DiscoverSoaPage() {
             <div className="aspect-video w-full bg-black flex items-center justify-center">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube-nocookie.com/embed/8wSGKsWyQwk?autoplay=1"
+                src="https://www.youtube-nocookie.com/embed/Bjp-vCBHB0E?autoplay=1"
                 title="SOA University Campus Tour"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
