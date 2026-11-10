@@ -47,7 +47,7 @@ export function ChapterBentoGrid() {
             <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
               A Continuing National Dialogue
             </span>
-            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight mt-2">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-[32px] xl:text-[36px] 2xl:text-4xl font-bold text-content tracking-tight mt-2 xl:whitespace-nowrap">
               Conversations Shaping the Future of Work
             </h2>
           </SectionReveal>
@@ -62,7 +62,7 @@ export function ChapterBentoGrid() {
                   : "text-content-muted hover:text-content"
               }`}
             >
-              All Chapters ({conclavesData.length})
+              All Chapters
               {activeCycle === "all" && (
                 <motion.span
                   layoutId="bentoTabIndicator"
@@ -79,7 +79,7 @@ export function ChapterBentoGrid() {
                   : "text-content-muted hover:text-content"
               }`}
             >
-              National Expansion (2026)
+              National Expansion
               {activeCycle === "2.0" && (
                 <motion.span
                   layoutId="bentoTabIndicator"
@@ -96,7 +96,7 @@ export function ChapterBentoGrid() {
                   : "text-content-muted hover:text-content"
               }`}
             >
-              Inaugural Series (2024–2025)
+              Inaugural Series
               {activeCycle === "1.0" && (
                 <motion.span
                   layoutId="bentoTabIndicator"
