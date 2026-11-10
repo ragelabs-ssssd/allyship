@@ -972,7 +972,7 @@ function EventContent() {
                 <div className="flex items-center gap-2 px-1">
                   <span className="w-1.5 h-1.5 rounded-full bg-content-muted" />
                   <span className="font-mono text-xs font-bold uppercase tracking-[0.14em] text-content-secondary">
-                    Allyship 1.0 · Inaugural Series · 2024–2025
+                    Allyship 1.0 · Inaugural Series
                   </span>
                 </div>
 
@@ -1053,7 +1053,7 @@ function EventContent() {
                 <div className="flex items-center gap-2 px-1">
                   <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
                   <span className="font-mono text-xs font-bold uppercase tracking-[0.14em] text-accent">
-                    Allyship Chapter 2.0 · National Series · 2026
+                    Allyship Chapter 2.0 · National Series
                   </span>
                 </div>
 
@@ -1330,7 +1330,7 @@ function EventContent() {
                     <div className="flex items-center gap-3">
                       <span className="w-2 h-2 rounded-full bg-accent shrink-0" />
                       <h3 className="font-display text-lg sm:text-xl font-bold text-content tracking-tight">
-                        Allyship Chapter 2.0 · National Series · 2026
+                        Allyship Chapter 2.0 · National Series
                       </h3>
                     </div>
                     <span className="text-xs font-sans text-content-muted">
@@ -1402,7 +1402,7 @@ function EventContent() {
                     <div className="flex items-center gap-3">
                       <span className="w-2 h-2 rounded-full bg-accent shrink-0" />
                       <h3 className="font-display text-lg sm:text-xl font-bold text-content tracking-tight">
-                        Allyship 1.0 · Inaugural Series · 2024–2025
+                        Allyship 1.0 · Inaugural Series
                       </h3>
                     </div>
                     <span className="text-xs font-sans text-content-muted">
