@@ -240,7 +240,7 @@ export default function ImpactPage() {
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             Institutional Progress
           </span>
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-5xl font-bold text-content tracking-tight lg:whitespace-nowrap">
             From Boardroom Deliberation to Measurable Outcomes
           </h2>
           <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal max-w-5xl mx-auto lg:whitespace-nowrap">
@@ -282,7 +282,7 @@ export default function ImpactPage() {
             <Newspaper className="w-3.5 h-3.5" />
             <span>National &amp; Regional Media Chronicle</span>
           </div>
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-5xl font-bold text-content tracking-tight lg:whitespace-nowrap">
             Chronicled Across India&apos;s Leading Publications
           </h2>
           <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal max-w-5xl mx-auto lg:whitespace-nowrap">
