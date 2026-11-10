@@ -631,8 +631,8 @@ function EventContent() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Left Column: Editorial Headline & Copy */}
             <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-[11px] font-bold font-heading tracking-[0.14em] uppercase">
-                <span>National Executive Conclaves · 2024–2026</span>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-2 border border-accent/30 shadow-sm font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
+                <span>A Continuing National Dialogue · 7 Editions</span>
               </div>
 
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
@@ -641,11 +641,11 @@ function EventContent() {
               </h1>
 
               <p className="text-lg sm:text-xl font-display text-content-muted italic">
-                Where Boardroom Vision Meets Championship Grit &amp; University Research
+                Where Corporate Chairs, Olympic Mentors, and University Thinkers Build Enduring Alliances
               </p>
 
               <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-3xl font-normal">
-                Siksha &lsquo;O&rsquo; Anusandhan brings academic leadership directly into India&apos;s premier commercial corridors. Each standing chapter convenes enterprise CXOs, talent strategists, Olympic coaches, and university leadership to co-author institutional pipelines, de-bias hiring, and accelerate regional talent into national leadership.
+                Instead of convening behind institutional gates in Bhubaneswar, Siksha &lsquo;O&rsquo; Anusandhan brings academic leadership directly into India&apos;s key economic centers. From Bengaluru and Hyderabad to Kolkata, Mumbai, and Chennai, each conclave serves as a focused forum: listening to the changing demands of industry, discussing the real pressures faced by young professionals, and building relationships that transcend hiring cycles.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">
@@ -816,7 +816,7 @@ function EventContent() {
                 </h3>
               </div>
               <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-secondary">
-                Olympic medalists and national sprint coaches anchor our conclaves because elite championship sports embody radical accountability, mentorship under pressure, and emotional fortitude.
+                In corporate life, talent is often evaluated through spreadsheets. In elite sport, a coach provides daily guidance, absorbs external pressure, and stands by their athlete through setbacks. By pairing sports icons with boardroom chairs, ALLYSHIP grounds leadership in the ultimate truth of sport: potential only becomes excellence when someone believes in you enough to guide you through the fire.
               </p>
             </div>
             <div className="pt-4 mt-6 border-t border-line flex items-center gap-2 font-sans text-xs font-semibold text-content-secondary">
@@ -948,11 +948,10 @@ function EventContent() {
                   setSelectedMediaCity(null);
                 }
               }}
-              className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full font-sans text-xs sm:text-sm font-medium tracking-wide transition-all whitespace-nowrap ${
-                activeTab === t
+              className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full font-sans text-xs sm:text-sm font-medium tracking-wide transition-all whitespace-nowrap ${activeTab === t
                   ? "bg-accent text-on-accent shadow-md font-semibold"
                   : "bg-glass border border-line text-content-muted hover:text-content hover:bg-glass-strong"
-              }`}
+                }`}
             >
               {t === "Chapters" && "Conclave Chapters"}
               {t === "Videos" && "Conclave Moments"}
@@ -994,28 +993,25 @@ function EventContent() {
                         key={c.id}
                         type="button"
                         onClick={() => setSelectedChapter(idx)}
-                        className={`relative group p-3.5 rounded-2xl border text-left transition-all duration-300 cursor-pointer overflow-visible ${
-                          isSelected
+                        className={`relative group p-3.5 rounded-2xl border text-left transition-all duration-300 cursor-pointer overflow-visible ${isSelected
                             ? "bg-accent/10 border-2 border-accent ring-4 ring-accent/20 shadow-xl text-content -translate-y-0.5"
                             : "bg-surface-2 border-line hover:border-accent/60 text-content-muted hover:text-content hover:-translate-y-1 hover:shadow-md"
-                        }`}
+                          }`}
                       >
                         {/* Top Row: Chapter Badge + Year */}
                         <div className="flex items-center justify-between gap-1 mb-2">
                           <span
-                            className={`font-mono text-[11px] font-bold tracking-wider flex items-center gap-1.5 ${
-                              isSelected ? "text-accent" : "text-content-secondary group-hover:text-accent"
-                            }`}
+                            className={`font-mono text-[11px] font-bold tracking-wider flex items-center gap-1.5 ${isSelected ? "text-accent" : "text-content-secondary group-hover:text-accent"
+                              }`}
                           >
                             {isSelected && <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />}
                             Chapter {chapterNum}
                           </span>
                           <span
-                            className={`px-2 py-0.5 rounded-full font-mono text-[9px] font-bold tracking-wider ${
-                              isSelected
+                            className={`px-2 py-0.5 rounded-full font-mono text-[9px] font-bold tracking-wider ${isSelected
                                 ? "bg-accent/20 text-accent border border-accent/40"
                                 : "bg-surface-3 text-content-muted border border-line"
-                            }`}
+                              }`}
                           >
                             {c.date.split(" ").pop()}
                           </span>
@@ -1024,9 +1020,8 @@ function EventContent() {
                         {/* Middle Row: Clean City & Date */}
                         <div className="space-y-0.5">
                           <h4
-                            className={`font-display text-sm font-bold tracking-normal truncate transition-colors ${
-                              isSelected ? "text-accent" : "text-content group-hover:text-accent"
-                            }`}
+                            className={`font-display text-sm font-bold tracking-normal truncate transition-colors ${isSelected ? "text-accent" : "text-content group-hover:text-accent"
+                              }`}
                           >
                             {cleanCity}
                           </h4>
@@ -1037,11 +1032,10 @@ function EventContent() {
 
                         {/* Bottom Row: Thematic Focus / Active State indicator */}
                         <div
-                          className={`mt-2.5 pt-2 border-t flex items-center justify-between font-sans text-[10px] ${
-                            isSelected
+                          className={`mt-2.5 pt-2 border-t flex items-center justify-between font-sans text-[10px] ${isSelected
                               ? "border-accent/30 text-accent font-semibold"
                               : "border-line text-content-muted"
-                          }`}
+                            }`}
                         >
                           <span className="truncate">
                             {isSelected ? "Active Conclave" : (CHAPTER_THEMES[c.id] || c.focus.split(",")[0])}
@@ -1085,28 +1079,25 @@ function EventContent() {
                         key={c.id}
                         type="button"
                         onClick={() => setSelectedChapter(idx)}
-                        className={`relative group p-3.5 rounded-2xl border text-left transition-all duration-300 cursor-pointer overflow-visible ${
-                          isSelected
+                        className={`relative group p-3.5 rounded-2xl border text-left transition-all duration-300 cursor-pointer overflow-visible ${isSelected
                             ? "bg-accent/10 border-2 border-accent ring-4 ring-accent/20 shadow-xl text-content -translate-y-0.5"
                             : "bg-surface-2 border-line hover:border-accent/60 text-content-muted hover:text-content hover:-translate-y-1 hover:shadow-md"
-                        }`}
+                          }`}
                       >
                         {/* Top Row: Chapter Badge + Year */}
                         <div className="flex items-center justify-between gap-1 mb-2">
                           <span
-                            className={`font-mono text-[11px] font-bold tracking-wider flex items-center gap-1.5 ${
-                              isSelected ? "text-accent" : "text-content-secondary group-hover:text-accent"
-                            }`}
+                            className={`font-mono text-[11px] font-bold tracking-wider flex items-center gap-1.5 ${isSelected ? "text-accent" : "text-content-secondary group-hover:text-accent"
+                              }`}
                           >
                             {isSelected && <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />}
                             Chapter {chapterNum}
                           </span>
                           <span
-                            className={`px-2 py-0.5 rounded-full font-mono text-[9px] font-bold tracking-wider ${
-                              isSelected
+                            className={`px-2 py-0.5 rounded-full font-mono text-[9px] font-bold tracking-wider ${isSelected
                                 ? "bg-accent/20 text-accent border border-accent/40"
                                 : "bg-surface-3 text-content-muted border border-line"
-                            }`}
+                              }`}
                           >
                             {c.date.split(" ").pop()}
                           </span>
@@ -1115,9 +1106,8 @@ function EventContent() {
                         {/* Middle Row: Clean City & Date */}
                         <div className="space-y-0.5">
                           <h4
-                            className={`font-display text-sm font-bold tracking-normal truncate transition-colors ${
-                              isSelected ? "text-accent" : "text-content group-hover:text-accent"
-                            }`}
+                            className={`font-display text-sm font-bold tracking-normal truncate transition-colors ${isSelected ? "text-accent" : "text-content group-hover:text-accent"
+                              }`}
                           >
                             {cleanCity}
                           </h4>
@@ -1128,11 +1118,10 @@ function EventContent() {
 
                         {/* Bottom Row: Thematic Focus / Active State indicator */}
                         <div
-                          className={`mt-2.5 pt-2 border-t flex items-center justify-between font-sans text-[10px] ${
-                            isSelected
+                          className={`mt-2.5 pt-2 border-t flex items-center justify-between font-sans text-[10px] ${isSelected
                               ? "border-accent/30 text-accent font-semibold"
                               : "border-line text-content-muted"
-                          }`}
+                            }`}
                         >
                           <span className="truncate">
                             {isSelected ? "Active Conclave" : (CHAPTER_THEMES[c.id] || c.focus.split(",")[0])}
@@ -1515,11 +1504,10 @@ function EventContent() {
                           key={chapterKey}
                           type="button"
                           onClick={() => setSelectedMediaCity(chapterKey)}
-                          className={`px-3 py-1.5 rounded-full font-sans text-xs font-medium transition-all cursor-pointer ${
-                            isSelected
+                          className={`px-3 py-1.5 rounded-full font-sans text-xs font-medium transition-all cursor-pointer ${isSelected
                               ? "bg-accent text-on-accent font-semibold shadow-sm"
                               : "bg-surface-2 border border-line text-content-muted hover:text-content"
-                          }`}
+                            }`}
                         >
                           {item.city}
                         </button>
@@ -1648,11 +1636,10 @@ function EventContent() {
                       return (
                         <div
                           key={`${currentMediaArchive.id}-photo-${idx}`}
-                          className={`group relative aspect-[4/3] rounded-2xl overflow-hidden transition-all duration-500 ${
-                            photo.src
+                          className={`group relative aspect-[4/3] rounded-2xl overflow-hidden transition-all duration-500 ${photo.src
                               ? "bg-surface-2 border border-line shadow-sm hover:border-accent/50 hover:shadow-lg"
                               : "bg-surface-2/60 border border-line hover:border-accent/40 flex flex-col items-center justify-center p-4 text-center"
-                          }`}
+                            }`}
                         >
                           {photo.src ? (
                             <Image

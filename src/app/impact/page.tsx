@@ -43,14 +43,14 @@ export default function ImpactPage() {
     {
       title: "Enterprise Co-Creation & Dedicated CoEs",
       badge: "Institutional Infrastructure",
-      desc: "Boardroom feedback from Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai has translated into specialized skill labs on campus—including the Tech Mahindra Centre of Excellence at ITER and Wipro readiness tracks.",
+      desc: "Boardroom feedback from Bengaluru, Hyderabad, Kolkata, Mumbai, and Chennai has translated into permanent on-campus skill hubs—including the Tech Mahindra Centre of Excellence in Cloud & ServiceNow, and LTTS Medical AI architectures.",
       metric: "Active CoEs with Tech Mahindra & LTTS",
     },
     {
-      title: "Verified Career Velocity & Day-One Readiness",
-      badge: "Career Velocity",
-      desc: "Deepened trust among global capability centres and Fortune 500 recruiters contributed to a 94.54% engineering placement rate, a 97.22% MBA placement rate, and LSEG selecting 11 SOA students in a single drive.",
-      metric: "11 Hired by LSEG · ₹46 LPA Peak",
+      title: "Career Resilience & Day-One Confidence",
+      badge: "Student Transformation",
+      desc: "Through continuous executive roundtables and direct feedback loops, SOA students learn to navigate real-world ambiguity before entering the workforce. Our partnership prepares them for sustainable, multi-decade careers built on adaptability and ethics.",
+      metric: "15,000+ Scholars Guided by Industry Mentors",
     },
     {
       title: "Early-Career Mentorship & Policy Adoption",
@@ -170,8 +170,8 @@ export default function ImpactPage() {
         <div className="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-[11px] font-bold font-heading tracking-[0.14em] uppercase">
-                <span>Verified Outcomes &amp; National Chronicle</span>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-2 border border-accent/30 shadow-sm font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
+                <span>Institutional Dividends · Sustainable Progress</span>
               </div>
 
               <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05]">
@@ -180,11 +180,11 @@ export default function ImpactPage() {
               </h1>
 
               <p className="text-lg sm:text-xl font-display text-content-muted italic">
-                Transforming Boardroom Commitments into Measurable Career Trajectories
+                Moving Beyond Short-Term Metrics to Transform the Future of Education and Work
               </p>
 
               <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-3xl font-normal">
-                Across seven national conclaves spanning India&apos;s core commercial hubs, ALLYSHIP++ converts executive dialogue into tangible institutional progress—powering dedicated research laboratories, de-biasing hiring pipelines, and achieving a 94.54% placement velocity.
+                The true measure of an alliance cannot be captured in a single recruitment cycle. Impact is seen when boardroom leaders help reshape engineering syllabi, when corporate laboratories open inside university campuses, and when first-generation graduates enter the workforce with the quiet confidence to speak up, contribute, and lead.
               </p>
 
               <div className="pt-2 flex flex-wrap items-center gap-4">

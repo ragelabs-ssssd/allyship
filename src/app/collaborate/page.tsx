@@ -61,10 +61,10 @@ export default function CollaboratePage() {
       action: "Join Advisory Boards",
     },
     {
-      title: "High-Velocity Internships & Day-One Hiring",
+      title: "Talent Stewardship & Mentorship Fellowships",
       icon: TrendingUp,
-      desc: "Recruit from an ecosystem delivering 94.54% B.Tech and 97.22% MBA placement rates, ₹46 LPA peak packages, and record selections by global leaders like the London Stock Exchange Group (LSEG).",
-      action: "Initiate Recruitment",
+      desc: "Engage with students early in their academic journey through mentored internships, capstone challenges, and executive fireside guidance. By investing in young scholars before graduation day, corporate partners nurture future leaders from within.",
+      action: "Explore Fellowship Tracks",
     },
   ];
 
@@ -253,20 +253,20 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
         </div>
       </section>
 
-      {/* 3. VERIFIED PLACEMENT VELOCITY DATA TABLE */}
+      {/* 3. INSTITUTIONAL GRADUATE PATHWAYS & ENTERPRISE TRUST */}
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line">
         <div className="max-w-5xl space-y-3 mb-16">
           <div className="flex items-center gap-2 text-accent">
             <Award className="w-5 h-5" />
             <span className="text-xs font-bold uppercase tracking-wider font-heading">
-              Recruitment Velocity & Talent Quality
+              Institutional Pathways · Multi-Disciplinary Trust
             </span>
           </div>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
-            Multi-Year Enterprise Placement Audit
+            A Trusted Bridge to Enterprise Leadership
           </h2>
           <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl">
-            SOA’s placement track record reflects deepened trust among Fortune 500 recruiters and global capability centres across engineering (94.54%), management (97.22%), healthcare, and law.
+            Decades of sustained corporate trust across engineering, management, clinical sciences, and research—reflecting rigorous academic standards, verified capability, and long-term career resilience.
           </p>
         </div>
 
