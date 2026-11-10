@@ -121,14 +121,14 @@ export default function DiscoverSoaPage() {
 
       {/* 5. EVOLUTION & GROWTH (Screenshot 5) */}
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line">
-        <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
+        <div className="text-center w-full max-w-7xl mx-auto mb-16 space-y-3 flex flex-col items-center justify-center">
           <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             Three Decades of Institutional Nation-Building
           </span>
-          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-5xl font-bold text-content tracking-tight lg:whitespace-nowrap">
+          <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-[34px] xl:text-[42px] font-bold text-content tracking-tight text-center">
             The Three-Decade Arc of Institutional Excellence
           </h2>
-          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-5xl mx-auto lg:whitespace-nowrap">
+          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-4xl mx-auto text-center">
             From ITER&apos;s inception in 1996 to medical complexes, research hubs, and enterprise AI laboratories.
           </p>
         </div>

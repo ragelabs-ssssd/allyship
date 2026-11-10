@@ -30,15 +30,15 @@ export function BeyondRecruitment() {
     <section className="py-20 lg:py-28 bg-surface-2 relative border-b border-line overflow-hidden">
       <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
         {/* Section Header */}
-        <div className="text-center max-w-4xl mx-auto space-y-4 mb-16">
+        <div className="text-center w-full max-w-7xl mx-auto space-y-4 mb-16 flex flex-col items-center justify-center">
           <SectionReveal>
             <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
               The Deeper Purpose
             </span>
-            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight mt-2">
+            <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-[34px] xl:text-[42px] font-bold text-content tracking-tight mt-2 text-center">
               Why Industry and Academia Need a New Covenant
             </h2>
-            <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal max-w-5xl mx-auto mt-3 lg:whitespace-nowrap">
+            <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal max-w-4xl mx-auto mt-3 text-center">
               Moving beyond one-off recruitment into an enduring partnership where ideas, mentorship, and opportunities flow freely.
             </p>
           </SectionReveal>
