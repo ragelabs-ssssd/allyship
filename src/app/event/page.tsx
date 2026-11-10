@@ -641,7 +641,7 @@ function EventContent() {
               </h1>
 
               <p className="text-base sm:text-lg font-display text-content-muted italic lg:whitespace-nowrap">
-                Where Corporate Chairs, Olympic Mentors, and Thinkers Build Enduring Alliances
+                Where Corporate Chairs, Olympians, and Thinkers Connect
               </p>
 
               <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-xl font-normal">
