@@ -171,8 +171,8 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
             </div>
 
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05] text-left sm:text-right">
-              <span className="block sm:whitespace-nowrap">Strategic Alliances</span>
-              <span className="block italic font-normal sm:whitespace-nowrap">for Tomorrow&rsquo;s Leaders</span>
+              <span className="block sm:whitespace-nowrap">Where Industry &amp; Academia</span>
+              <span className="block italic font-normal sm:whitespace-nowrap">Co-Create the Future</span>
             </h1>
 
             <p className="text-base sm:text-lg font-display text-content-muted italic text-left sm:text-right lg:whitespace-nowrap">
