@@ -129,8 +129,11 @@ export default function DiscoverSoaPage() {
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-[34px] xl:text-[42px] font-bold text-content tracking-tight text-center">
             The Three-Decade Arc of Institutional Excellence
           </h2>
-          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-4xl mx-auto text-center">
-            From ITER&apos;s inception in 1996 to medical complexes, research hubs, and enterprise AI laboratories.
+          <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal max-w-2xl mx-auto text-center">
+            <span className="block sm:inline lg:block">From ITER&apos;s inception in 1996 to super-speciality medical</span>
+            <span className="block sm:inline lg:block">complexes, sovereign research hubs, and enterprise AI labs,</span>
+            <span className="block sm:inline lg:block">Siksha &lsquo;O&rsquo; Anusandhan has built enduring national institutions—</span>
+            <span className="block sm:inline lg:block">translating rigorous scholarship into global leadership.</span>
           </p>
         </div>
 

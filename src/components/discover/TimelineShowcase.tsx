@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, LayoutGrid, List } from "lucide-react";
 
 const SNC_PHOTO_OPTIONS = [
   {
@@ -634,36 +634,62 @@ export function TimelineShowcase() {
     return null;
   };
 
+  const [viewMode, setViewMode] = useState<"grid" | "expressway">("grid");
+
   return (
     <div id="timeline" className="space-y-12 scroll-mt-28">
-      {/* 2 Key Metric Pillars */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto text-center">
-        <div className="p-6 sm:p-8 rounded-3xl bg-surface-2 border border-line hover:border-accent transition-all flex flex-col items-center justify-center">
-          <span className="font-display text-5xl sm:text-6xl font-extrabold text-accent">
-            13
+      {/* 4 Key Metric Pillars (4-in-1) */}
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto text-center">
+        <div className="p-6 rounded-3xl bg-surface-2 border border-line hover:border-accent transition-all flex flex-col items-center justify-center">
+          <span className="font-display text-4xl sm:text-5xl font-extrabold text-accent">
+            30+
           </span>
-          <span className="font-heading text-sm font-bold text-content mt-2 uppercase tracking-wider">
-            Constituent Institutes
+          <span className="font-heading text-xs sm:text-sm font-bold text-content mt-2 uppercase tracking-wider">
+            Years of Excellence
           </span>
-          <span className="text-xs text-content-muted mt-1 font-sans">
-            Engineering, Medicine, Dental, Law, Management, Nursing, Pharmacy &amp; Agriculture
+          <span className="text-[11px] text-content-muted mt-1 font-sans">
+            1996 ITER to 2026 Sovereign AI
           </span>
         </div>
 
-        <div className="p-6 sm:p-8 rounded-3xl bg-surface-2 border border-line hover:border-accent transition-all flex flex-col items-center justify-center">
-          <span className="font-display text-5xl sm:text-6xl font-extrabold text-accent">
+        <div className="p-6 rounded-3xl bg-surface-2 border border-line hover:border-accent transition-all flex flex-col items-center justify-center">
+          <span className="font-display text-4xl sm:text-5xl font-extrabold text-accent">
+            13
+          </span>
+          <span className="font-heading text-xs sm:text-sm font-bold text-content mt-2 uppercase tracking-wider">
+            Constituent Institutes
+          </span>
+          <span className="text-[11px] text-content-muted mt-1 font-sans">
+            Engineering, Medicine, Law &amp; Sciences
+          </span>
+        </div>
+
+        <div className="p-6 rounded-3xl bg-surface-2 border border-line hover:border-accent transition-all flex flex-col items-center justify-center">
+          <span className="font-display text-4xl sm:text-5xl font-extrabold text-accent">
             18
           </span>
-          <span className="font-heading text-sm font-bold text-content mt-2 uppercase tracking-wider">
-            State-of-the-Art Research Centres
+          <span className="font-heading text-xs sm:text-sm font-bold text-content mt-2 uppercase tracking-wider">
+            Research Centres
           </span>
-          <span className="text-xs text-content-muted mt-1 font-sans">
-            Nanotechnology, Renewable Energy, Climate Studies, Biomechanics &amp; AI
+          <span className="text-[11px] text-content-muted mt-1 font-sans">
+            Nanotech, Renewable Energy &amp; AI
+          </span>
+        </div>
+
+        <div className="p-6 rounded-3xl bg-surface-2 border border-line hover:border-accent transition-all flex flex-col items-center justify-center">
+          <span className="font-display text-4xl sm:text-5xl font-extrabold text-accent">
+            127
+          </span>
+          <span className="font-heading text-xs sm:text-sm font-bold text-content mt-2 uppercase tracking-wider">
+            Acres of Campuses
+          </span>
+          <span className="text-[11px] text-content-muted mt-1 font-sans">
+            Smart Multi-Biome Infrastructure
           </span>
         </div>
       </div>
 
-      {/* Gantry Expressway Roadmap Header Bar */}
+      {/* Gantry Expressway Roadmap Header Bar with View Toggle */}
       <div className="p-6 rounded-3xl bg-surface-2 border border-line flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <span className="text-xs font-mono uppercase tracking-widest text-accent font-bold block">
@@ -673,19 +699,140 @@ export function TimelineShowcase() {
             The 30-Mile Academic Expressway (Mile 0 → Mile 30)
           </h3>
         </div>
-        <div className="flex flex-wrap items-center gap-2 text-xs font-mono text-content-muted self-start sm:self-auto">
-          <span className="px-3 py-1.5 rounded-full bg-accent/15 border border-accent/40 text-accent font-bold">
-            ORIGIN: 1996 ITER
-          </span>
-          <ArrowRight className="w-3.5 h-3.5 text-accent shrink-0" />
-          <span className="px-3 py-1.5 rounded-full bg-accent/15 border border-accent/40 text-accent font-bold">
-            HORIZON: 2026 SOVEREIGN AI
-          </span>
+
+        <div className="flex flex-wrap items-center gap-3 self-start sm:self-auto">
+          {/* View Mode Switcher */}
+          <div className="inline-flex rounded-xl bg-surface-3 p-1 border border-line shadow-inner">
+            <button
+              type="button"
+              onClick={() => setViewMode("grid")}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all cursor-pointer ${
+                viewMode === "grid"
+                  ? "bg-accent text-on-accent shadow-sm"
+                  : "text-content-muted hover:text-content"
+              }`}
+            >
+              <LayoutGrid className="w-3.5 h-3.5" />
+              <span>4-in-1 Grid</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => setViewMode("expressway")}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all cursor-pointer ${
+                viewMode === "expressway"
+                  ? "bg-accent text-on-accent shadow-sm"
+                  : "text-content-muted hover:text-content"
+              }`}
+            >
+              <List className="w-3.5 h-3.5" />
+              <span>Expressway Timeline</span>
+            </button>
+          </div>
+
+          <div className="hidden lg:flex items-center gap-2 text-xs font-mono text-content-muted">
+            <span className="px-2.5 py-1 rounded-full bg-accent/15 border border-accent/40 text-accent font-bold text-[10px]">
+              1996 ITER
+            </span>
+            <ArrowRight className="w-3 h-3 text-accent shrink-0" />
+            <span className="px-2.5 py-1 rounded-full bg-accent/15 border border-accent/40 text-accent font-bold text-[10px]">
+              2026 AI
+            </span>
+          </div>
         </div>
       </div>
 
-      {/* Expressway Roadway with Cantilever Gantry Billboards */}
-      <div className="space-y-8 relative pl-6 sm:pl-12 border-l-4 border-dashed border-accent/40">
+      {/* 4-in-1 Matrix View */}
+      {viewMode === "grid" ? (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {INSTITUTION_NODES.map((node, idx) => {
+            const photoData = getNodePhotoData(node.id);
+
+            return (
+              <div
+                key={node.id}
+                className="rounded-3xl bg-surface-2 border border-line hover:border-accent overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl flex flex-col justify-between group"
+              >
+                <div>
+                  {/* Photo Billboard */}
+                  <div className="relative aspect-[16/10] bg-surface-3 overflow-hidden">
+                    <Image
+                      src={photoData ? photoData.src : node.image}
+                      alt={node.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+
+                    {/* Top Badges */}
+                    <div className="absolute top-3 left-3 right-3 flex items-center justify-between gap-1.5 z-10">
+                      <span className="font-mono text-[10px] font-bold text-accent px-2.5 py-0.5 rounded-full bg-black/75 backdrop-blur-md border border-accent/40 shadow-sm">
+                        {node.year}
+                      </span>
+                      <span className="text-[10px] font-mono text-[#F4E8C1] font-bold px-2 py-0.5 rounded-md bg-black/65 backdrop-blur-md border border-white/10">
+                        {node.acronym}
+                      </span>
+                    </div>
+
+                    {/* Photo Options Pill Switcher */}
+                    {photoData && (
+                      <div className="absolute bottom-2 left-2 right-2 flex flex-wrap items-center gap-1 z-10">
+                        {photoData.options.map((opt, optIdx) => (
+                          <button
+                            key={opt.id}
+                            type="button"
+                            onClick={() => photoData.onSelect(optIdx)}
+                            className={`px-2 py-0.5 rounded-full text-[9px] font-mono font-bold transition-all cursor-pointer ${
+                              photoData.selected === optIdx
+                                ? "bg-accent text-on-accent shadow-md"
+                                : "bg-black/65 backdrop-blur-md text-white/80 border border-white/20 hover:bg-black/85"
+                            }`}
+                          >
+                            P{opt.id}
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Card Body */}
+                  <div className="p-5 space-y-2.5">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="text-[10px] font-mono uppercase text-content-muted font-bold tracking-wider truncate">
+                        {node.badge}
+                      </span>
+                      <span className="text-[10px] font-mono text-accent font-bold shrink-0">
+                        Exit 0{idx + 1}
+                      </span>
+                    </div>
+
+                    <div>
+                      <h4 className="font-heading text-lg font-bold text-content group-hover:text-accent transition-colors leading-snug">
+                        {node.title}
+                      </h4>
+                      <p className="text-xs font-sans text-accent font-semibold mt-0.5 line-clamp-1" title={node.faculty}>
+                        {node.faculty}
+                      </p>
+                    </div>
+
+                    <p className="text-xs text-content-secondary leading-relaxed font-sans line-clamp-3">
+                      {node.desc}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Card Footer */}
+                <div className="p-4 pt-3 border-t border-line/60 bg-surface-1/40 flex flex-col gap-1 text-[11px] font-mono">
+                  <span className="text-content-muted text-[10px] truncate">{node.laneName}</span>
+                  <span className="text-accent font-semibold text-[10px] truncate">{node.achievement}</span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      ) : (
+        /* Expressway Roadway with Cantilever Gantry Billboards */
+        <div className="space-y-8 relative pl-6 sm:pl-12 border-l-4 border-dashed border-accent/40">
         {INSTITUTION_NODES.map((node, idx) => {
           const photoData = getNodePhotoData(node.id);
 
@@ -775,7 +922,8 @@ export function TimelineShowcase() {
             </div>
           );
         })}
-      </div>
+        </div>
+      )}
     </div>
   );
 }
