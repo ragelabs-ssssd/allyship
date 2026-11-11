@@ -260,6 +260,7 @@ export const conclavesData: ConclaveChapter[] = [
         name: "Nilesh Kulkarni",
         role: "Former Indian Test Cricketer",
         note: "Fireside Chat on Leadership, Mental Fortitude & Sports Education",
+        image: "/testimonials/nilesh-kulkarni.jpg",
       },
       {
         name: "Anand Menezes",

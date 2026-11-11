@@ -15,6 +15,7 @@ interface Testimonial {
   chapter: string;
   highlight?: string;
   image?: string;
+  imagePosition?: string;
 }
 
 const initials = (name: string) =>
@@ -36,6 +37,18 @@ const testimonials: Testimonial[] = [
     chapter: "Bengaluru Conclave Keynote",
     highlight: "Khel Ratna Luminary",
     image: "/testimonials/anju-bobby-george.jpg",
+    imagePosition: "50% 18%",
+  },
+  {
+    quote:
+      "Whether bowling the first delivery in international cricket or leading education ventures, sustained peak performance demands mental fortitude, relentless discipline, and authentic camaraderie across the team.",
+    author: "Nilesh Kulkarni",
+    role: "Former Indian Test Cricketer",
+    organization: "Founder Director, IISM",
+    chapter: "Mumbai Conclave Fireside",
+    highlight: "Test Cricketer",
+    image: "/testimonials/nilesh-kulkarni.jpg",
+    imagePosition: "50% 12%",
   },
   {
     quote:
@@ -46,6 +59,7 @@ const testimonials: Testimonial[] = [
     chapter: "Bengaluru & Mumbai Conclave Deliberations",
     highlight: "Academy Head",
     image: "/testimonials/pb-kotur-v2.jpg",
+    imagePosition: "50% 15%",
   },
   {
     quote:
@@ -56,6 +70,7 @@ const testimonials: Testimonial[] = [
     chapter: "Chennai Conclave Moderator",
     highlight: "Panel Moderator",
     image: "/testimonials/archana-grover.jpg",
+    imagePosition: "50% 20%",
   },
   {
     quote:
@@ -66,6 +81,7 @@ const testimonials: Testimonial[] = [
     chapter: "Chennai Conclave Fireside",
     highlight: "Olympic Mentor",
     image: "/testimonials/premanand-j.jpg",
+    imagePosition: "50% 20%",
   },
   {
     quote:
@@ -76,6 +92,7 @@ const testimonials: Testimonial[] = [
     chapter: "Hyderabad Conclave Chief Guest",
     highlight: "Chief Guest",
     image: "/testimonials/arshad-ayub-v2.jpg",
+    imagePosition: "50% 15%",
   },
   {
     quote:
@@ -86,6 +103,7 @@ const testimonials: Testimonial[] = [
     chapter: "Mumbai Conclave Panelist",
     highlight: "HR Panelist",
     image: "/testimonials/gauri-das.jpg",
+    imagePosition: "50% 20%",
   },
   {
     quote:
@@ -96,6 +114,7 @@ const testimonials: Testimonial[] = [
     chapter: "Hyderabad Conclave Speaker",
     highlight: "AFI Governance",
     image: "/testimonials/srinivas-patnaik.jpg",
+    imagePosition: "50% 15%",
   },
 ];
 
@@ -177,7 +196,8 @@ export function TestimonialCarousel() {
                         alt={item.author}
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        className="object-cover object-top"
+                        className="object-cover"
+                        style={{ objectPosition: item.imagePosition || "50% 15%" }}
                       />
                     ) : (
                       <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-surface-2 to-surface-sunken">
