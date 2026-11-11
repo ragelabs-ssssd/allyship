@@ -9,147 +9,118 @@ if (!fs.existsSync(outDir)) {
   fs.mkdirSync(outDir, { recursive: true });
 }
 
-// 24 Curated Moments tailored to user requirements:
-// Upper rows: Crowded audience assembly, VIP dais ensembles, prestigious awarding & memento felicitations.
-// Followed by Olympic fireside dialogue, leadership keynotes, panel deliberations, and executive foyer networking.
+// 16 High-Impact Curated Moments (strictly crowded hall, awards, fireside, keynotes, and panel deliberations)
+// Zero repetitive dais bouquet shots, zero foyer/registration desk shots.
 export const chennaiMoments = [
-  // 1. The Grand Conclave Plenary Ensemble - 50+ corporate leaders & SOA leadership under the Allyship 2.0 digital wall
+  // 1. The Grand Conclave Plenary Ensemble
   {
     src: 'CON01670.JPG',
     caption: 'Grand Conclave Plenary Ensemble: Corporate Leaders & SOA Academic Leadership at Chennai',
     pos: '50% 35%',
     type: 'full'
   },
-  // 2. Audience Perspective - Seated delegates at banquet tables capturing the live dais proceedings
+  // 2. Audience Perspective & Plenary Hall Assembly
   {
     src: 'CON01643.JPG',
     caption: 'Plenary Assembly & Audience Perspective: Corporate Delegates Engaged at Hyatt Regency Chennai',
     pos: '50% 30%',
     type: 'full'
   },
-  // 3. Awarding & Traditional Shawl Honor - Olympic Sprint Coach Premanand J. felicitated with ceremonial shawl & memento
+  // 3. Awarding & Traditional Shawl Honor to Olympic Sprint Coach Premanand J.
   {
     src: 'CON01524.JPG',
     caption: 'Ceremonial Shawl & Commemorative Conclave Memento Presentation to Olympic Sprint Coach Premanand J.',
     pos: '50% 25%',
     type: 'full'
   },
-  // 4. Central Dais Leadership & Guest Luminaries Ensemble (High-res VIP dais focus)
+  // 4. Central Dais Leadership & Guest Luminaries Ensemble (VIP crop)
   {
     src: 'CON01670.JPG',
     caption: 'Dignitaries & Chief Luminaries on Dais at the ALLYSHIP 2.0 Chennai Chapter',
     pos: '50% 30%',
     type: 'vip-crop'
   },
-  // 5. Corporate Partner Dais Felicitation - Floral tribute & institutional honor
-  {
-    src: 'CON01547.JPG',
-    caption: 'Corporate Partner Felicitation & Floral Honors Presented by Conclave Leadership',
-    pos: '50% 25%',
-    type: 'full'
-  },
-  // 6. Senior Industry Partner Felicitation on Stage
-  {
-    src: 'CON01459.JPG',
-    caption: 'Academic Leadership Presenting Commemorative Honors to Corporate Partner',
-    pos: '50% 25%',
-    type: 'full'
-  },
-  // 7. Distinguished Executive Felicitation & Dais Recognition
-  {
-    src: 'CON01552.JPG',
-    caption: 'Industry Leadership Felicitation & Strategic Partnership Commemoration',
-    pos: '50% 25%',
-    type: 'full'
-  },
-  // 8. Welcoming Paris Olympics National Sprint Coach Premanand J. to Dais
+  // 5. Paris Olympics National Sprint Coach Premanand J. Welcome Honor
   {
     src: 'CON01493.JPG',
     caption: 'Inaugural Felicitation & Welcome Honor for Olympic Luminary Premanand J.',
     pos: '50% 25%',
     type: 'full'
   },
-  // 9. Olympic Fireside Plenary View - Coach Premanand J. in dialogue with delegates in foreground
+  // 6. Plenary Fireside Session with Seated Audience Foreground
   {
     src: 'CON01502.JPG',
     caption: 'Plenary Fireside Session: Paris Olympics National Sprint Coach Premanand J. on Dais',
     pos: '50% 30%',
     type: 'full'
   },
-  // 10. Close Fireside Exchange on Athletic Rigor & Corporate Resilience
+  // 7. Fireside Dialogue on Mentorship, Resilience & Sustained Performance
   {
     src: 'CON01501.JPG',
     caption: 'Fireside Dialogue: Olympic Lessons in Mentorship, Resilience & Sustained Performance',
     pos: '50% 20%',
     type: 'full'
   },
-  // 11. Vice-Chancellor Keynote Address - Prof. (Dr.) Pradipta Kumar Nanda on University-Enterprise Covenant
+  // 8. Vice-Chancellor Keynote Address - Prof. (Dr.) Pradipta Kumar Nanda
   {
     src: 'CON01466.JPG',
     caption: 'Vice-Chancellor Prof. (Dr.) Pradipta Kumar Nanda Delivering the Presidential Conclave Address',
     pos: '50% 20%',
     type: 'full'
   },
-  // 12. Opening Leadership Address at the Conclave Dais Podium
+  // 9. Inaugural Leadership Address on Dais Podium
   {
     src: 'CON01481.JPG',
     caption: 'Inaugural Leadership Address on Sovereign Innovation & Industry-Academia Symbiosis',
     pos: '50% 20%',
     type: 'full'
   },
-  // 13. Strategic Industry-Academia Panel Deliberations
+  // 10. Strategic Panel Deliberations on Practicing Allyship
   {
     src: 'CON01567.JPG',
     caption: 'Strategic Panel Deliberations: Practicing Allyship as a Core Corporate Responsibility',
     pos: '50% 30%',
     type: 'full'
   },
-  // 14. Corporate Thought Leaders in Dynamic Deliberation
+  // 11. Enterprise Leaders Examining Cross-Disciplinary Talent Development
   {
     src: 'CON01587.JPG',
     caption: 'Enterprise Leaders Examining Cross-Disciplinary Talent Development & Innovation',
     pos: '50% 30%',
     type: 'full'
   },
-  // 15. Panel Moderator Archana Grover Guiding the Executive Dialogue
+  // 12. Executive Panel Moderator Archana Grover
   {
     src: 'CON01569.JPG',
     caption: 'Executive Panel Moderator Framing Critical Themes on Strategic Industry Mentorship',
     pos: '50% 20%',
     type: 'full'
   },
-  // 16. Corporate HR Leader Sharing Actionable Insights on Talent Readiness
+  // 13. Corporate Leadership Perspectives on Capability Gap
   {
     src: 'CON01596.JPG',
     caption: 'Corporate Leadership Perspectives on Bridging the Engineering Capability Gap',
     pos: '50% 25%',
     type: 'full'
   },
-  // 17. Cross-Disciplinary Panel Deliberation on Future Tech & Industry Alignment
+  // 14. Industry Capability Heads Deliberating Collaborative Curriculum Architectures
   {
     src: 'CON01603.JPG',
     caption: 'Industry Capability Heads Deliberating Collaborative Curriculum Architectures',
     pos: '50% 30%',
     type: 'full'
   },
-  // 18. Interactive Assembly Dialogue & Corporate Audience Q&A
+  // 15. Interactive Conclave Discourse & Audience Reflections
   {
     src: 'CON01609.JPG',
     caption: 'Interactive Conclave Discourse: Audience Reflections & Panel Exchange',
     pos: '50% 30%',
     type: 'full'
   },
-  // 19. Complete Conclave Panelist & Dais Leadership Delegation
+  // 16. Distinguished Panelists & Conclave Dais Dignitaries Lineup
   {
     src: 'CON01638.JPG',
     caption: 'Distinguished Panelists & Conclave Dais Dignitaries Acknowledging the Assembly',
-    pos: '50% 30%',
-    type: 'full'
-  },
-  // 20. Executive Foyer Accreditation & VIP Delegate Welcome
-  {
-    src: 'CON01362.JPG',
-    caption: 'Executive Delegate Registration & Foyer Welcome at Hyatt Regency Chennai',
     pos: '50% 30%',
     type: 'full'
   }
@@ -157,6 +128,12 @@ export const chennaiMoments = [
 
 async function main() {
   console.log(`Processing ${chennaiMoments.length} Chennai 2.0 curated photos...`);
+
+  // Clean out previous files
+  const existing = fs.readdirSync(outDir).filter(f => f.startsWith('chennai-2-'));
+  for (const f of existing) {
+    fs.unlinkSync(path.join(outDir, f));
+  }
 
   for (let i = 0; i < chennaiMoments.length; i++) {
     const item = chennaiMoments[i];
@@ -167,8 +144,6 @@ async function main() {
     let pipeline = sharp(inPath).rotate(); // auto-orient based on EXIF
 
     if (item.type === 'vip-crop') {
-      // Focus on central dais leaders in the grand group shot CON01670 (width: 7008, height: 4672)
-      // Crop central region: x: 1200, y: 700, width: 4600, height: 3200
       pipeline = pipeline.extract({ left: 1200, top: 750, width: 4600, height: 3200 });
     }
 
@@ -181,11 +156,10 @@ async function main() {
     console.log(`Slot ${String(i + 1).padStart(2, '0')}: ${item.src} -> ${outName} (${(stat.size / 1024).toFixed(0)} KB)`);
   }
 
-  console.log('Successfully processed all 24 Chennai 2.0 moments!');
+  console.log('Successfully processed all 16 curated Chennai 2.0 moments!');
 }
 
 main().catch(err => {
   console.error(err);
   process.exit(1);
 });
-
