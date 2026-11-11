@@ -225,7 +225,7 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
     city: "Chennai",
     date: "July 2026",
     editionBadge: "Allyship++ — 3rd Edition",
-    coverImage: "/slides/CON01670.jpg",
+    coverImage: "/conclave-moments/chennai-2/chennai-2-01.jpg",
     coverPosition: "50% 28%",
     subtitle:
       "Practicing Allyship as a Leadership Responsibility — Full panel deliberations, Olympic fireside conversation, and chapter gallery from Chennai.",
@@ -243,7 +243,128 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
         tag: "Sport & Leadership",
       },
     ],
-    photos: create24PhotoSlots("Chennai"),
+    photos: create24PhotoSlots("Chennai", [
+      {
+        src: "/conclave-moments/chennai-2/chennai-2-01.jpg",
+        caption: "Grand Conclave Plenary Ensemble: Corporate Leaders & SOA Academic Leadership at Chennai",
+        objectPosition: "50% 35%",
+      },
+      {
+        src: "/conclave-moments/chennai-2/chennai-2-02.jpg",
+        caption: "Plenary Assembly & Audience Perspective: Corporate Delegates Engaged at Hyatt Regency Chennai",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/chennai-2/chennai-2-03.jpg",
+        caption: "Ceremonial Shawl & Commemorative Conclave Memento Presentation to Olympic Sprint Coach Premanand J.",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/chennai-2/chennai-2-04.jpg",
+        caption: "Dignitaries & Chief Luminaries on Dais at the ALLYSHIP 2.0 Chennai Chapter",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/chennai-2/chennai-2-05.jpg",
+        caption: "Corporate Partner Felicitation & Floral Honors Presented by Conclave Leadership",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/chennai-2/chennai-2-06.jpg",
+        caption: "Academic Leadership Presenting Commemorative Honors to Corporate Partner",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/chennai-2/chennai-2-07.jpg",
+        caption: "Industry Leadership Felicitation & Strategic Partnership Commemoration",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/chennai-2/chennai-2-08.jpg",
+        caption: "Inaugural Felicitation & Welcome Honor for Olympic Luminary Premanand J.",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/chennai-2/chennai-2-09.jpg",
+        caption: "Plenary Fireside Session: Paris Olympics National Sprint Coach Premanand J. on Dais",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/chennai-2/chennai-2-10.jpg",
+        caption: "Fireside Dialogue: Olympic Lessons in Mentorship, Resilience & Sustained Performance",
+        objectPosition: "50% 20%",
+      },
+      {
+        src: "/conclave-moments/chennai-2/chennai-2-11.jpg",
+        caption: "Vice-Chancellor Prof. (Dr.) Pradipta Kumar Nanda Delivering the Presidential Conclave Address",
+        objectPosition: "50% 20%",
+      },
+      {
+        src: "/conclave-moments/chennai-2/chennai-2-12.jpg",
+        caption: "Inaugural Leadership Address on Sovereign Innovation & Industry-Academia Symbiosis",
+        objectPosition: "50% 20%",
+      },
+      {
+        src: "/conclave-moments/chennai-2/chennai-2-13.jpg",
+        caption: "Strategic Panel Deliberations: Practicing Allyship as a Core Corporate Responsibility",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/chennai-2/chennai-2-14.jpg",
+        caption: "Enterprise Leaders Examining Cross-Disciplinary Talent Development & Innovation",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/chennai-2/chennai-2-15.jpg",
+        caption: "Executive Panel Moderator Framing Critical Themes on Strategic Industry Mentorship",
+        objectPosition: "50% 20%",
+      },
+      {
+        src: "/conclave-moments/chennai-2/chennai-2-16.jpg",
+        caption: "Corporate Leadership Perspectives on Bridging the Engineering Capability Gap",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/chennai-2/chennai-2-17.jpg",
+        caption: "Industry Capability Heads Deliberating Collaborative Curriculum Architectures",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/chennai-2/chennai-2-18.jpg",
+        caption: "Interactive Conclave Discourse: Audience Reflections & Panel Exchange",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/chennai-2/chennai-2-19.jpg",
+        caption: "Distinguished Panelists & Conclave Dais Dignitaries Acknowledging the Assembly",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/chennai-2/chennai-2-20.jpg",
+        caption: "Executive Delegate Registration & Foyer Welcome at Hyatt Regency Chennai",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/chennai-2/chennai-2-21.jpg",
+        caption: "Industry Delegates Receiving Conclave Accreditation Badges & Materials",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/chennai-2/chennai-2-22.jpg",
+        caption: "Corporate Leaders & Capability Heads in Collaborative Networking Exchange",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/chennai-2/chennai-2-23.jpg",
+        caption: "Bilateral Leadership Exchange on Research Alliances & Corporate Mentorship",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/chennai-2/chennai-2-24.jpg",
+        caption: "Corporate Partner Commemoration at the ALLYSHIP 2.0 Chennai Media Wall",
+        objectPosition: "50% 20%",
+      },
+    ]),
   },
   "bengaluru-1": {
     id: "bengaluru-1",
