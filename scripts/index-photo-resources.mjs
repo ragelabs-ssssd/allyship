@@ -95,7 +95,7 @@ for (const ch of CHAPTERS) {
     return {
       index: idx + 1,
       filename,
-      src: `/photo-resources/${ch.id}/${filename}`,
+      src: `./photo-resources/${ch.id}/${filename}`,
       size: (buf.length / 1024).toFixed(1) + ' KB',
       dim: dim.width ? `${dim.width}×${dim.height}` : 'Standard',
     };
