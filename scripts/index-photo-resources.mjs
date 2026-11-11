@@ -15,27 +15,27 @@ const CHAPTERS = [
   {
     id: 'kolkata-1',
     title: 'Kolkata (Allyship 1.0 · 3rd Edition)',
-    aliases: ['kolkata-1', 'kolkata 1', 'kol-1']
+    aliases: ['kolkata-1', 'kolkata - 1st ediiton - allyship', 'kolkata - 1st edition', 'kolkata 1', 'kol-1', 'kolkata']
   },
   {
     id: 'mumbai-1',
     title: 'Mumbai (Allyship 1.0 · 4th Edition)',
-    aliases: ['mumbai-1', 'mumbai 1', 'mum-1']
+    aliases: ['mumbai-1', 'mumbai - 1st ediiton - allyship', 'mumbai - 1st edition', 'mumbai 1', 'mum-1', 'mumbai']
   },
   {
     id: 'bengaluru-2',
     title: 'Bengaluru (Allyship 2.0 · 1st Edition)',
-    aliases: ['bengaluru-2', 'bengaluru 2', 'blr-2']
+    aliases: ['bengaluru-2', 'bengaluru 2', 'blr-2', 'bengaluru 2.0']
   },
   {
     id: 'hyderabad-2',
     title: 'Hyderabad (Allyship 2.0 · 2nd Edition)',
-    aliases: ['hyderabad-2', 'hyderabad 2', 'hyd-2']
+    aliases: ['hyderabad-2', 'hyderabad 2', 'hyd-2', 'hyderabad 2.0']
   },
   {
     id: 'chennai-2',
     title: 'Chennai (Allyship 2.0 · 3rd Edition)',
-    aliases: ['chennai-2', 'chennai 2', 'chn-2']
+    aliases: ['chennai-2', 'chennai 2', 'chn-2', 'chennai 2.0', 'chennai']
   },
 ];
 
@@ -207,7 +207,7 @@ const html = `<!DOCTYPE html>
                 ${catalog[ch.id].map(photo => `
                   <div
                     id="card-${ch.id}-${photo.index}"
-                    onclick="toggleSelect('${photo.filename}', ${photo.index})"
+                    onclick="toggleSelect('${ch.id}', '${photo.filename}', ${photo.index})"
                     class="group relative bg-slate-900 border border-slate-800 hover:border-amber-400/60 rounded-xl overflow-hidden flex flex-col transition-all duration-200 cursor-pointer select-none"
                   >
                     <div class="relative aspect-[4/3] bg-slate-950 overflow-hidden">
@@ -215,7 +215,7 @@ const html = `<!DOCTYPE html>
                       <div class="absolute top-1.5 left-1.5 px-2 py-0.5 rounded-md bg-black/80 backdrop-blur-sm text-[11px] font-mono font-bold text-amber-400 border border-amber-400/40 shadow">
                         #${String(photo.index).padStart(2, '0')}
                       </div>
-                      <div id="check-${photo.index}" class="hidden absolute top-1.5 right-1.5 w-5 h-5 rounded-full bg-amber-400 text-slate-950 flex items-center justify-center font-bold text-[10px] shadow">
+                      <div id="check-${ch.id}-${photo.index}" class="hidden absolute top-1.5 right-1.5 w-5 h-5 rounded-full bg-amber-400 text-slate-950 flex items-center justify-center font-bold text-[10px] shadow">
                         ✓
                       </div>
                     </div>
@@ -252,16 +252,16 @@ const html = `<!DOCTYPE html>
       }
     }
 
-    function toggleSelect(filename, num) {
-      const idx = selected.findIndex(x => x.num === num);
-      const card = document.getElementById('card-bengaluru-1-' + num);
-      const check = document.getElementById('check-' + num);
+    function toggleSelect(chapterId, filename, num) {
+      const idx = selected.findIndex(x => x.num === num && x.chapterId === chapterId);
+      const card = document.getElementById('card-' + chapterId + '-' + num);
+      const check = document.getElementById('check-' + chapterId + '-' + num);
       if (idx !== -1) {
         selected.splice(idx, 1);
         if (card) card.classList.remove('selected-card');
         if (check) check.classList.add('hidden');
       } else {
-        selected.push({ num, filename });
+        selected.push({ chapterId, num, filename });
         if (card) card.classList.add('selected-card');
         if (check) check.classList.remove('hidden');
       }
@@ -282,7 +282,7 @@ const html = `<!DOCTYPE html>
     function clearSelection() {
       selected = [];
       document.querySelectorAll('.selected-card').forEach(el => el.classList.remove('selected-card'));
-      document.querySelectorAll('[id^=\"check-\"]').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('[id^="check-"]').forEach(el => el.classList.add('hidden'));
       updateSelectionUI();
     }
 
@@ -295,6 +295,14 @@ const html = `<!DOCTYPE html>
       navigator.clipboard.writeText(text);
       alert('Copied ' + selected.length + ' photo choices to clipboard! You can paste them in chat.');
     }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const ch = params.get('chapter');
+      if (ch) {
+        selectChapter(ch);
+      }
+    });
   </script>
 </body>
 </html>
