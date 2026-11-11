@@ -48,7 +48,7 @@ const testimonials: Testimonial[] = [
     chapter: "Mumbai Conclave Fireside",
     highlight: "Test Cricketer",
     image: "/testimonials/nilesh-kulkarni.jpg",
-    imagePosition: "50% 12%",
+    imagePosition: "50% 18%",
   },
   {
     quote:
@@ -59,7 +59,7 @@ const testimonials: Testimonial[] = [
     chapter: "Bengaluru & Mumbai Conclave Deliberations",
     highlight: "Academy Head",
     image: "/testimonials/pb-kotur-v2.jpg",
-    imagePosition: "50% 15%",
+    imagePosition: "50% 18%",
   },
   {
     quote:
@@ -70,7 +70,7 @@ const testimonials: Testimonial[] = [
     chapter: "Chennai Conclave Moderator",
     highlight: "Panel Moderator",
     image: "/testimonials/archana-grover.jpg",
-    imagePosition: "50% 20%",
+    imagePosition: "50% 18%",
   },
   {
     quote:
@@ -81,7 +81,7 @@ const testimonials: Testimonial[] = [
     chapter: "Chennai Conclave Fireside",
     highlight: "Olympic Mentor",
     image: "/testimonials/premanand-j.jpg",
-    imagePosition: "50% 20%",
+    imagePosition: "50% 18%",
   },
   {
     quote:
@@ -92,7 +92,7 @@ const testimonials: Testimonial[] = [
     chapter: "Hyderabad Conclave Chief Guest",
     highlight: "Chief Guest",
     image: "/testimonials/arshad-ayub-v2.jpg",
-    imagePosition: "50% 20%",
+    imagePosition: "50% 18%",
   },
   {
     quote:
@@ -103,7 +103,7 @@ const testimonials: Testimonial[] = [
     chapter: "Kolkata Conclave Keynote",
     highlight: "Olympic Gold Medalist",
     image: "/testimonials/gurbux-singh.jpg",
-    imagePosition: "50% 12%",
+    imagePosition: "50% 18%",
   },
   {
     quote:
@@ -114,7 +114,7 @@ const testimonials: Testimonial[] = [
     chapter: "Hyderabad Conclave Speaker",
     highlight: "AFI Governance",
     image: "/testimonials/srinivas-patnaik.jpg",
-    imagePosition: "50% 15%",
+    imagePosition: "50% 18%",
   },
 ];
 
