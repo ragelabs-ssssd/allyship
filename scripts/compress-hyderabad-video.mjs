@@ -46,3 +46,4 @@ const outStat = fs.statSync(outputVideo);
 console.log(`\nCompression completed in ${elapsed}s!`);
 console.log(`Source 4K: ${(inStat.size / 1024 / 1024).toFixed(2)} MB`);
 console.log(`Web 1080p with audio: ${(outStat.size / 1024 / 1024).toFixed(2)} MB`);
+

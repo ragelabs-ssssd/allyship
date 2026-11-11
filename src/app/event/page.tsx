@@ -428,9 +428,9 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
         objectPosition: "50% 35%",
       },
       {
-        src: "/conclave-moments/hyderabad-1/hyderabad-1-03.jpg",
-        caption: "Inaugural Dais Opening & Keynote Deliberations from the Podium",
-        objectPosition: "50% 25%",
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-crowd-plenary.jpg",
+        caption: "Plenary Assembly Deliberations & Executive Delegations on Dais",
+        objectPosition: "50% 30%",
       },
       {
         src: "/conclave-moments/hyderabad-1/hyderabad-1-07.jpg",
@@ -448,8 +448,8 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
         objectPosition: "50% 30%",
       },
       {
-        src: "/conclave-moments/hyderabad-1/hyderabad-1-10.jpg",
-        caption: "Executive Dais Synthesis & Panel Deliberation on Stage",
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-crowd-assembly.jpg",
+        caption: "Multi-Sector Executive Panel in Collaborative Deliberations",
         objectPosition: "50% 30%",
       },
       {
@@ -468,8 +468,8 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
         objectPosition: "50% 30%",
       },
       {
-        src: "/conclave-moments/hyderabad-1/hyderabad-1-14.jpg",
-        caption: "Dais Leadership & Executive Panel in Collaborative Discussion",
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-dais-leadership.jpg",
+        caption: "Engaged Industry Audience & Executive Hall Acclaim",
         objectPosition: "50% 30%",
       },
       {
