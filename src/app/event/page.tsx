@@ -246,7 +246,13 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
     coverPosition: "50% 25%",
     subtitle:
       "Leadership and Collaboration Across Disciplines — Inaugural conclave dialogues with corporate and engineering leaders in Bengaluru.",
-    videos: [],
+    videos: [
+      {
+        title: "Bengaluru Chapter | Conclave Film",
+        desc: "Keynote deliberations, corporate roundtable conversations, and inaugural chapter moments from the conclave floor.",
+        tag: "Bengaluru Conclave Film",
+      },
+    ],
     photos: create24PhotoSlots("Bengaluru", [
       {
         src: "/conclave-moments/bengaluru-1/bengaluru-1-01.jpg",
@@ -1555,7 +1561,7 @@ function EventContent() {
                               preload="metadata"
                               className="w-full h-full object-cover"
                             />
-                          ) : (
+                          ) : currentMediaArchive.videos[0].youtubeId ? (
                             <iframe
                               className="w-full h-full"
                               src={`https://www.youtube-nocookie.com/embed/${currentMediaArchive.videos[0].youtubeId}`}
@@ -1563,6 +1569,18 @@ function EventContent() {
                               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                               allowFullScreen
                             />
+                          ) : (
+                            <div className="relative w-full h-full bg-gradient-to-br from-surface-2 via-surface-3 to-canvas flex flex-col items-center justify-center p-6 text-center border-dashed border border-line/80">
+                              <div className="w-14 h-14 rounded-full bg-accent/15 border border-accent/30 flex items-center justify-center text-accent mb-3 shadow-lg shadow-accent/5">
+                                <Play className="w-6 h-6 ml-0.5" />
+                              </div>
+                              <span className="font-heading text-xs sm:text-sm font-bold uppercase tracking-[0.16em] text-content">
+                                {currentMediaArchive.city} Conclave Film Space
+                              </span>
+                              <p className="font-sans text-xs text-content-muted mt-1.5 max-w-sm">
+                                Video player space is ready. Provide the YouTube video link or MP4 file to play the official film here.
+                              </p>
+                            </div>
                           )}
                         </div>
                         <div className="lg:col-span-4 p-6 sm:p-8 flex flex-col justify-center space-y-3 border-t lg:border-t-0 lg:border-l border-line">
@@ -1593,7 +1611,7 @@ function EventContent() {
                                   preload="metadata"
                                   className="w-full h-full object-cover"
                                 />
-                              ) : (
+                              ) : v.youtubeId ? (
                                 <iframe
                                   className="w-full h-full"
                                   src={`https://www.youtube-nocookie.com/embed/${v.youtubeId}`}
@@ -1601,6 +1619,11 @@ function EventContent() {
                                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                   allowFullScreen
                                 />
+                              ) : (
+                                <div className="relative aspect-video w-full bg-gradient-to-br from-surface-2 to-surface-3 flex flex-col items-center justify-center p-6 text-center">
+                                  <Play className="w-8 h-8 text-accent mb-2" />
+                                  <span className="text-xs font-semibold uppercase tracking-wider text-content">Video Slot Ready</span>
+                                </div>
                               )}
                             </div>
                             <div className="p-5 space-y-1.5">
