@@ -40,3 +40,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 /Photos - 1/
+
+# local raw photo resources (large camera source files)
+/photo-resources/*
+!/photo-resources/*/.gitkeep
+/public/photo-resources/*
+!/public/photo-resources/*/.gitkeep
