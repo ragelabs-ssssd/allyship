@@ -285,8 +285,8 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/bengaluru-1/bengaluru-1-08.jpg",
-        caption: "Felicitation of Distinguished Guests with Traditional Uttariya & Memento",
-        objectPosition: "50% 30%",
+        caption: "Executive Delegation & Leadership Commemoration with Prof. (Dr.) Raj Kumar Hota",
+        objectPosition: "50% 25%",
       },
       {
         src: "/conclave-moments/bengaluru-1/bengaluru-1-09.jpg",
