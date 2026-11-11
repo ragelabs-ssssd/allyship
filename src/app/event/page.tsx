@@ -534,7 +534,128 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
     subtitle:
       "Leadership, Collaboration, and Workplace Inclusion — Dual-panel deliberations and sports legends tribute from the Kolkata chapter.",
     videos: [],
-    photos: create24PhotoSlots("Kolkata"),
+    photos: create24PhotoSlots("Kolkata", [
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-01.jpg",
+        caption: "Grand Conclave Hall & Dais Setup at Hyatt Regency Kolkata",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-02.jpg",
+        caption: "Inaugural Conclave Address & Plenary Hall Assembly",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-03.jpg",
+        caption: "Engaged Conclave Delegation in the Plenary Session",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-04.jpg",
+        caption: "Executive Leadership Panel: Strategic Collaboration Across Sectors",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-05.jpg",
+        caption: "Women in Leadership & Technology Panel Discussion",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-06.jpg",
+        caption: "Distinguished Conclave Panelists & Dais Delegation",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-07.jpg",
+        caption: "Keynote Presentation: Digital Transformation & Inclusive Workplaces",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-08.jpg",
+        caption: "Executive Address on Cross-Disciplinary Institutional Alliances",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-09.jpg",
+        caption: "Industry Leader Perspective on Mentorship & Youth Empowerment",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-10.jpg",
+        caption: "Conclave Dais Keynote from the Official Podium",
+        objectPosition: "50% 20%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-11.jpg",
+        caption: "Interactive Panel Deliberations & Executive Dialogue",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-12.jpg",
+        caption: "Ceremonial Shawl & Uttariya Felicitation for Distinguished Dignitary",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-13.jpg",
+        caption: "Corporate Excellence & Academic Partnership Memento Handover",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-14.jpg",
+        caption: "Traditional Stage Honor Presented to Conclave Guest Speaker",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-15.jpg",
+        caption: "Commemorative Conclave Citation & Institutional Recognition",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-16.jpg",
+        caption: "Stage Felicitation Ceremony with Senior Academic Patrons",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-17.jpg",
+        caption: "University Leadership Presenting Conclave Dais Memento",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-18.jpg",
+        caption: "Executive VIP Delegate at the Allyship Conclave Media Wall",
+        objectPosition: "50% 20%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-19.jpg",
+        caption: "Distinguished Corporate Leader at the Conclave Photobooth",
+        objectPosition: "50% 20%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-20.jpg",
+        caption: "Cross-Disciplinary Enterprise Delegation at the Conclave Installation",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-21.jpg",
+        caption: "Executive Roundtable: Informal Leadership Discourse in the Lounge",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-22.jpg",
+        caption: "Women Corporate Leaders & Delegates at the Conclave Wall",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-23.jpg",
+        caption: "Industry Partners & Executive Networking at Hyatt Regency",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-24.jpg",
+        caption: "Bilateral Corporate Collaboration & Delegate Networking Exchange",
+        objectPosition: "50% 25%",
+      },
+    ]),
   },
   "mumbai-1": {
     id: "mumbai-1",
