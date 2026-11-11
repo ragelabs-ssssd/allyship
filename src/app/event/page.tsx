@@ -280,8 +280,8 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/bengaluru-1/bengaluru-1-07.jpg",
-        caption: "Executive Camaraderie & Informal Exchanges at Bengaluru Conclave",
-        objectPosition: "50% 30%",
+        caption: "Dignitaries & Enterprise Delegates in Conclave Deliberations",
+        objectPosition: "50% 35%",
       },
       {
         src: "/conclave-moments/bengaluru-1/bengaluru-1-08.jpg",
