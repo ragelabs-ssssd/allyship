@@ -300,8 +300,8 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/bengaluru-1/bengaluru-1-11.jpg",
-        caption: "Workforce Readiness & Curriculum Agility Panel Session",
-        objectPosition: "50% 30%",
+        caption: "Industry Delegates & Conclave Dignitaries with ALLYSHIP++ Installation",
+        objectPosition: "50% 35%",
       },
       {
         src: "/conclave-moments/bengaluru-1/bengaluru-1-12.jpg",
