@@ -460,9 +460,9 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
         objectPosition: "50% 30%",
       },
       {
-        src: "/conclave-moments/hyderabad-1/arshad-ayub-perspective.jpg",
-        caption: "Chief Guest Arshad Ayub Delivering Keynote Perspective on Resilient Leadership",
-        objectPosition: "50% 20%",
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-11.jpg",
+        caption: "CXOs & Technology Leaders Exchanging Strategic Perspectives",
+        objectPosition: "50% 30%",
       },
       {
         src: "/conclave-moments/hyderabad-1/hyderabad-1-12.jpg",
