@@ -344,26 +344,6 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
         caption: "Executive Delegate Registration & Foyer Welcome at Hyatt Regency Chennai",
         objectPosition: "50% 30%",
       },
-      {
-        src: "/conclave-moments/chennai-2/chennai-2-21.jpg",
-        caption: "Industry Delegates Receiving Conclave Accreditation Badges & Materials",
-        objectPosition: "50% 25%",
-      },
-      {
-        src: "/conclave-moments/chennai-2/chennai-2-22.jpg",
-        caption: "Corporate Leaders & Capability Heads in Collaborative Networking Exchange",
-        objectPosition: "50% 25%",
-      },
-      {
-        src: "/conclave-moments/chennai-2/chennai-2-23.jpg",
-        caption: "Bilateral Leadership Exchange on Research Alliances & Corporate Mentorship",
-        objectPosition: "50% 25%",
-      },
-      {
-        src: "/conclave-moments/chennai-2/chennai-2-24.jpg",
-        caption: "Corporate Partner Commemoration at the ALLYSHIP 2.0 Chennai Media Wall",
-        objectPosition: "50% 20%",
-      },
     ]),
   },
   "bengaluru-1": {

@@ -152,34 +152,6 @@ export const chennaiMoments = [
     caption: 'Executive Delegate Registration & Foyer Welcome at Hyatt Regency Chennai',
     pos: '50% 30%',
     type: 'full'
-  },
-  // 21. Corporate Delegate Credentialing & Conclave Kit Reception
-  {
-    src: 'CON01411.JPG',
-    caption: 'Industry Delegates Receiving Conclave Accreditation Badges & Materials',
-    pos: '50% 25%',
-    type: 'full'
-  },
-  // 22. Foyer Camaraderie & Executive Peer Networking
-  {
-    src: 'CON01376.JPG',
-    caption: 'Corporate Leaders & Capability Heads in Collaborative Networking Exchange',
-    pos: '50% 25%',
-    type: 'full'
-  },
-  // 23. Bilateral Academic-Enterprise Partnership Dialogue
-  {
-    src: 'CON01357.JPG',
-    caption: 'Bilateral Leadership Exchange on Research Alliances & Corporate Mentorship',
-    pos: '50% 25%',
-    type: 'full'
-  },
-  // 24. Corporate Dignitary Commemoration at the Official Media Backdrop
-  {
-    src: 'CON01371.JPG',
-    caption: 'Corporate Partner Commemoration at the ALLYSHIP 2.0 Chennai Media Wall',
-    pos: '50% 20%',
-    type: 'full'
   }
 ];
 
@@ -216,3 +188,4 @@ main().catch(err => {
   console.error(err);
   process.exit(1);
 });
+
