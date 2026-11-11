@@ -314,6 +314,66 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
         caption: "Executive Panelist Addressing the Conclave during Strategic Deliberations",
         objectPosition: "55% 25%",
       },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-13.jpg",
+        caption: "Commemorative Memento Presentation to Industry Dignitary on Dais",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-14.jpg",
+        caption: "Executive Dialogue & Strategic Networking in Conclave Foyer",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-15.jpg",
+        caption: "Corporate Leaders & Industry Capability Heads in Camaraderie",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-16.jpg",
+        caption: "Industry Mentors & Academic Delegates in Collaborative Exchange",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-17.jpg",
+        caption: "Enterprise Delegates Engaged in Conclave Round-Table Discourse",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-18.jpg",
+        caption: "Interactive Audience Dialogue & Leadership Q&A from the Floor",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-19.jpg",
+        caption: "Distinguished Attendees & Industry Leaders Following the Deliberations",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-20.jpg",
+        caption: "Keynote Address: Aligning Future-Ready Talent with Industry Needs",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-21.jpg",
+        caption: "Executive Panel Deliberation on Talent Strategy & Workplace Culture",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-22.jpg",
+        caption: "Industry Leader Delivering Strategic Insights on the Main Stage",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-23.jpg",
+        caption: "Inaugural Conclave Invocation & Ceremony with Academic Leadership",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-24.jpg",
+        caption: "Distinguished Delegation & Conclave Dignitaries Commemorative Frame",
+        objectPosition: "50% 30%",
+      },
     ]),
   },
   "hyderabad-1": {
