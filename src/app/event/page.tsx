@@ -21,6 +21,7 @@ import {
   ChevronRight,
   ShieldCheck,
   Video,
+  Camera,
 } from "lucide-react";
 import { GetInvitedModal } from "@/components/GetInvitedModal";
 import { HeroBackdrop } from "@/components/HeroBackdrop";
@@ -189,7 +190,13 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
     coverPosition: "50% 25%",
     subtitle:
       "Next-Gen Talent & Industry–Academia Collaboration — Executive roundtable insights, mentorship dialogues, and chapter moments from Bengaluru.",
-    videos: [],
+    videos: [
+      {
+        title: "Bengaluru Chapter (2.0) | Official Conclave Film",
+        desc: "Keynote deliberations, campus-to-corporate transitions, and executive leadership dialogues from the Bengaluru Metropolitan Executive Hub.",
+        tag: "Bengaluru 2.0 Conclave Film",
+      },
+    ],
     photos: create24PhotoSlots("Bengaluru"),
   },
   "hyderabad-2": {
@@ -1809,10 +1816,14 @@ function EventContent() {
                   </div>
                 )}
 
-                {/* INSIDE CARD PART 2: CHAPTER PHOTO GALLERY (ONLY ACTIVE PHOTOS, NO BLANK CARDS) */}
+                {/* INSIDE CARD PART 2: CHAPTER PHOTO GALLERY */}
                 {(() => {
                   const validPhotos = currentMediaArchive.photos.filter((photo) => Boolean(photo.src));
-                  if (validPhotos.length === 0) return null;
+                  // If photos have been uploaded (e.g. Mumbai 4, Kolkata 24, etc.), show only active photos (no trailing blank cards)
+                  // If no photos uploaded yet (e.g. Allyship 2.0 chapters), show dedicated photo card spaces
+                  const photosToRender = validPhotos.length > 0 ? validPhotos : currentMediaArchive.photos;
+                  if (photosToRender.length === 0) return null;
+
                   return (
                     <div className={`space-y-5 ${currentMediaArchive.videos.length > 0 ? "pt-6 border-t border-line" : ""}`}>
                       <div className="flex items-center gap-2.5">
@@ -1821,31 +1832,56 @@ function EventContent() {
                           {currentMediaArchive.city} Chapter Photo Gallery
                         </h4>
                         <span className="text-xs font-sans text-content-muted ml-auto">
-                          {validPhotos.length} {validPhotos.length === 1 ? "Moment" : "Moments"}
+                          {validPhotos.length > 0
+                            ? `${validPhotos.length} ${validPhotos.length === 1 ? "Moment" : "Moments"}`
+                            : `${currentMediaArchive.photos.length} Photo Spaces Ready`}
                         </span>
                       </div>
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                        {validPhotos.map((photo, idx) => (
-                          <div
-                            key={`${currentMediaArchive.id}-photo-${idx}`}
-                            className="group relative aspect-[4/3] rounded-2xl overflow-hidden transition-all duration-500 bg-surface-2 border border-line shadow-sm hover:border-accent/50 hover:shadow-lg"
-                          >
-                            <Image
-                              src={photo.src}
-                              alt={`${currentMediaArchive.city} — ${photo.caption}`}
-                              fill
-                              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                              className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 transform-gpu will-change-transform"
-                              style={{ objectPosition: photo.objectPosition || "50% 25%" }}
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-canvas/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                              <span className="text-xs font-sans text-content line-clamp-2">
-                                {photo.caption}
-                              </span>
+                        {photosToRender.map((photo, idx) => {
+                          const slotNumber = String(idx + 1).padStart(2, "0");
+                          return (
+                            <div
+                              key={`${currentMediaArchive.id}-photo-${idx}`}
+                              className={`group relative aspect-[4/3] rounded-2xl overflow-hidden transition-all duration-500 ${
+                                photo.src
+                                  ? "bg-surface-2 border border-line shadow-sm hover:border-accent/50 hover:shadow-lg"
+                                  : "bg-surface-2/60 border border-dashed border-line/80 hover:border-accent/40 flex flex-col items-center justify-center p-4 text-center"
+                              }`}
+                            >
+                              {photo.src ? (
+                                <>
+                                  <Image
+                                    src={photo.src}
+                                    alt={`${currentMediaArchive.city} — ${photo.caption}`}
+                                    fill
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 transform-gpu will-change-transform"
+                                    style={{ objectPosition: photo.objectPosition || "50% 25%" }}
+                                  />
+                                  <div className="absolute inset-0 bg-gradient-to-t from-canvas/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                    <span className="text-xs font-sans text-content line-clamp-2">
+                                      {photo.caption}
+                                    </span>
+                                  </div>
+                                </>
+                              ) : (
+                                <div className="space-y-1.5 flex flex-col items-center justify-center text-center">
+                                  <div className="w-8 h-8 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center text-accent/80 mb-1">
+                                    <Camera className="w-4 h-4" />
+                                  </div>
+                                  <div className="text-xs font-heading font-bold uppercase tracking-[0.14em] text-content">
+                                    Conclave Moment {slotNumber}
+                                  </div>
+                                  <div className="text-[11px] font-sans text-content-muted">
+                                    {currentMediaArchive.city} Photo Space
+                                  </div>
+                                </div>
+                              )}
                             </div>
-                          </div>
-                        ))}
+                          );
+                        })}
                       </div>
                     </div>
                   );
