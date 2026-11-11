@@ -305,8 +305,8 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/bengaluru-1/bengaluru-1-12.jpg",
-        caption: "Executive Peer Dialogue & Industry-Academia Networking",
-        objectPosition: "50% 30%",
+        caption: "Corporate Leadership & Academic Delegation with ALLYSHIP++ Installation",
+        objectPosition: "50% 35%",
       },
       {
         src: "/conclave-moments/bengaluru-1/bengaluru-1-13.jpg",
