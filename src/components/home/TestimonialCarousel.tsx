@@ -92,7 +92,7 @@ const testimonials: Testimonial[] = [
     chapter: "Hyderabad Conclave Chief Guest",
     highlight: "Chief Guest",
     image: "/testimonials/arshad-ayub-v2.jpg",
-    imagePosition: "50% 15%",
+    imagePosition: "50% 12%",
   },
   {
     quote:
