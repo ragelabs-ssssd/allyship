@@ -286,41 +286,21 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/chennai-2/chennai-2-09.jpg",
-        caption: "Inaugural Leadership Address on Sovereign Innovation & Industry-Academia Symbiosis",
-        objectPosition: "50% 20%",
-      },
-      {
-        src: "/conclave-moments/chennai-2/chennai-2-10.jpg",
         caption: "Strategic Panel Deliberations: Practicing Allyship as a Core Corporate Responsibility",
         objectPosition: "50% 30%",
       },
       {
-        src: "/conclave-moments/chennai-2/chennai-2-11.jpg",
-        caption: "Enterprise Leaders Examining Cross-Disciplinary Talent Development & Innovation",
-        objectPosition: "50% 30%",
-      },
-      {
-        src: "/conclave-moments/chennai-2/chennai-2-12.jpg",
+        src: "/conclave-moments/chennai-2/chennai-2-10.jpg",
         caption: "Executive Panel Moderator Framing Critical Themes on Strategic Industry Mentorship",
         objectPosition: "50% 20%",
       },
       {
-        src: "/conclave-moments/chennai-2/chennai-2-13.jpg",
-        caption: "Corporate Leadership Perspectives on Bridging the Engineering Capability Gap",
-        objectPosition: "50% 25%",
-      },
-      {
-        src: "/conclave-moments/chennai-2/chennai-2-14.jpg",
+        src: "/conclave-moments/chennai-2/chennai-2-11.jpg",
         caption: "Industry Capability Heads Deliberating Collaborative Curriculum Architectures",
         objectPosition: "50% 30%",
       },
       {
-        src: "/conclave-moments/chennai-2/chennai-2-15.jpg",
-        caption: "Interactive Conclave Discourse: Audience Reflections & Panel Exchange",
-        objectPosition: "50% 30%",
-      },
-      {
-        src: "/conclave-moments/chennai-2/chennai-2-16.jpg",
+        src: "/conclave-moments/chennai-2/chennai-2-12.jpg",
         caption: "Distinguished Panelists & Conclave Dais Dignitaries Acknowledging the Assembly",
         objectPosition: "50% 30%",
       },
