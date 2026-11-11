@@ -290,8 +290,8 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/bengaluru-1/bengaluru-1-09.jpg",
-        caption: "Leadership Alignment & Conclave Overview from the Dais",
-        objectPosition: "50% 30%",
+        caption: "Executive Panel Deliberations Led by Dr. P.B. Kotur on Dais",
+        objectPosition: "50% 25%",
       },
       {
         src: "/conclave-moments/bengaluru-1/bengaluru-1-10.jpg",
