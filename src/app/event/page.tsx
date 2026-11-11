@@ -275,8 +275,8 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/bengaluru-1/bengaluru-1-06.jpg",
-        caption: "Panel Discourse on Building Future-Ready Talent Ecosystems",
-        objectPosition: "50% 30%",
+        caption: "Executive Peer Networking & Cross-Industry Dialogue",
+        objectPosition: "50% 25%",
       },
       {
         src: "/conclave-moments/bengaluru-1/bengaluru-1-07.jpg",
