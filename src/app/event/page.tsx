@@ -270,8 +270,8 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/bengaluru-1/bengaluru-1-05.jpg",
-        caption: "Interactive Session Dialogue & Q&A with Industry Delegates",
-        objectPosition: "50% 35%",
+        caption: "Grand Conclave Hall & Executive Panel Discussion Overview",
+        objectPosition: "50% 45%",
       },
       {
         src: "/conclave-moments/bengaluru-1/bengaluru-1-06.jpg",
