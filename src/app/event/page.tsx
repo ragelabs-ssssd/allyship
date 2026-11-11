@@ -394,9 +394,11 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
     videos: [
       {
         title: "Hyderabad Chapter | Official Conclave Film",
-        desc: "Highlights from the Hyderabad conclave: conversations on leadership, young talent, and industry–academia collaboration.",
-        youtubeId: "8wSGKsWyQwk",
-        tag: "Hyderabad",
+        desc: "Keynote deliberations, corporate roundtable conversations, and inaugural chapter moments from the Hyderabad Tech Corridor.",
+        videoSrc: "/discover/hyderabad-1-conclave-film.mp4",
+        tag: "Hyderabad Conclave Film",
+        objectPosition: "50% 50%",
+        objectFit: "cover",
       },
     ],
     photos: create24PhotoSlots("Hyderabad", [
@@ -426,9 +428,9 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
         objectPosition: "50% 35%",
       },
       {
-        src: "",
-        caption: "Hyderabad — Conclave Moment 06",
-        objectPosition: "50% 30%",
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-03.jpg",
+        caption: "Inaugural Dais Opening & Keynote Deliberations from the Podium",
+        objectPosition: "50% 25%",
       },
       {
         src: "/conclave-moments/hyderabad-1/hyderabad-1-07.jpg",
@@ -441,9 +443,9 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
         objectPosition: "50% 30%",
       },
       {
-        src: "",
-        caption: "Hyderabad — Conclave Moment 09",
-        objectPosition: "50% 35%",
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-04.jpg",
+        caption: "Engaged Industry Delegates & Executives at Conclave Banquet Seating",
+        objectPosition: "50% 30%",
       },
       {
         src: "/conclave-moments/hyderabad-1/hyderabad-1-10.jpg",
