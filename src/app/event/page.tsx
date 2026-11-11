@@ -254,7 +254,7 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
         desc: "Keynote deliberations, corporate roundtable conversations, and inaugural chapter moments from the conclave floor.",
         videoSrc: "/discover/bengaluru-1-conclave-film.mp4",
         tag: "Bengaluru Conclave Film",
-        objectPosition: "50% 25%",
+        objectPosition: "50% 50%",
         objectFit: "cover",
       },
     ],
@@ -1567,7 +1567,7 @@ function EventContent() {
                               className="w-full h-full object-cover"
                               style={{
                                 objectFit: currentMediaArchive.videos[0].objectFit || "cover",
-                                objectPosition: currentMediaArchive.videos[0].objectPosition || "50% 25%",
+                                objectPosition: currentMediaArchive.videos[0].objectPosition || "50% 50%",
                               }}
                             />
                           ) : currentMediaArchive.videos[0].youtubeId ? (
@@ -1621,7 +1621,7 @@ function EventContent() {
                                   className="w-full h-full object-cover"
                                   style={{
                                     objectFit: v.objectFit || "cover",
-                                    objectPosition: v.objectPosition || "50% 25%",
+                                    objectPosition: v.objectPosition || "50% 50%",
                                   }}
                                 />
                               ) : v.youtubeId ? (
