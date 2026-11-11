@@ -2,48 +2,55 @@ import fs from 'fs';
 import path from 'path';
 import sharp from 'sharp';
 
-// 24 curated non-duplicate photos representing all segments
-const selectedNumbers = [
-  12, // 01: Grand Conclave Hall & Stage Setup
-  8,  // 02: Inaugural Keynote Deliberation & Audience Hall View
-  10, // 03: Conclave Delegate Assembly in Attention
-  13, // 04: Full Executive Panel Deliberations on Main Stage
-  28, // 05: Women in Tech & Executive Leadership Panel
-  14, // 06: Dignitaries & Panelists Congratulatory Stage Conclave
-  44, // 07: Conclave Speaker in Action with Multimedia Presentation
-  21, // 08: Keynote Address on Inclusive Corporate Ecosystems
-  33, // 09: Industry Leader Keynote on Strategic Allyship
-  43, // 10: Leadership Perspective from the Conclave Podium
-  46, // 11: Interactive Stage Deliberations
-  16, // 12: Ceremonial Shawl Felicitation for Senior Dignitary
-  19, // 13: Corporate Excellence Memento Handover
-  22, // 14: Traditional Honor & Felicitation of Conclave Guest
-  23, // 15: Commemorative Conclave Citation Presentation
-  24, // 16: Conclave Guest Felicitation by Academic & Industry Patrons
-  38, // 17: Dais Dignitaries Presenting Commemorative Memento
-  11, // 18: Executive VIP Portrait at Conclave Wall
-  35, // 19: Distinguished Delegate Portrait at Conclave Backdrop
-  3,  // 20: Cross-Disciplinary Corporate Delegation
-  5,  // 21: Executive Roundtable Informal Discourse
-  26, // 22: Women Leadership Delegation at Conclave Media Wall
-  34, // 23: Corporate Partners & Alliances Network at Hyatt Wall
-  36  // 24: Industry Delegates & Partners in Corporate Discussion
+// User's exact 24 chosen photos, reordered so upper rows feature crowded & appreciation shots:
+const kolkataCuratedOrder = [
+  // Upper Row 1: The most crowded plenary and stage ensemble moments
+  { num: 10, caption: "Engaged Conclave Delegation in the Plenary Session", pos: "50% 30%" },
+  { num: 8,  caption: "Inaugural Conclave Address & Plenary Hall Assembly", pos: "50% 25%" },
+  { num: 14, caption: "Distinguished Panelists & Dais Delegation Ensemble", pos: "50% 30%" },
+  { num: 3,  caption: "Cross-Disciplinary Enterprise Delegation at Conclave Wall", pos: "50% 25%" },
+
+  // Upper Row 2: Traditional Honors & Dais Appreciation Felicitations
+  { num: 16, caption: "Ceremonial Shawl & Uttariya Felicitation for Distinguished Dignitary", pos: "50% 25%" },
+  { num: 19, caption: "Corporate Excellence & Academic Partnership Memento Handover", pos: "50% 25%" },
+  { num: 37, caption: "Stage Dignitaries Honoring Conclave Guest on Dais", pos: "50% 25%" },
+  { num: 20, caption: "Commemorative Stage Honor Presentation", pos: "50% 25%" },
+
+  // Row 3: Conclave Felicitations & Keynote Leadership
+  { num: 42, caption: "Distinguished Stage Felicitation Ceremony", pos: "50% 25%" },
+  { num: 25, caption: "Conclave Citation & Institutional Recognition", pos: "50% 25%" },
+  { num: 32, caption: "Partnership Memento Handover with Academic Leadership", pos: "50% 25%" },
+  { num: 21, caption: "Executive Keynote Address on Cross-Disciplinary Alliances", pos: "50% 25%" },
+
+  // Row 4: Panel Discussions & Informal Discourse
+  { num: 33, caption: "Industry Leader Perspective on Strategic Mentorship", pos: "50% 25%" },
+  { num: 46, caption: "Interactive Panel Deliberations & Executive Exchange", pos: "50% 30%" },
+  { num: 5,  caption: "Executive Roundtable: Informal Leadership Discourse in the Lounge", pos: "50% 25%" },
+  { num: 26, caption: "Women Corporate Leaders & Delegation at the Conclave Wall", pos: "50% 25%" },
+
+  // Row 5: Executive Networking & Media Wall
+  { num: 4,  caption: "Executive Leadership Delegation at the Media Wall", pos: "50% 25%" },
+  { num: 35, caption: "Distinguished Corporate Leader at the Conclave Photobooth", pos: "50% 20%" },
+  { num: 36, caption: "Bilateral Corporate Collaboration & Delegate Discussion", pos: "50% 25%" },
+  { num: 9,  caption: "Industry Partners in Collaborative Conclave Exchange", pos: "50% 25%" },
+
+  // Row 6: Bilateral Networking
+  { num: 29, caption: "Senior Corporate Leadership Network at Hyatt Regency", pos: "50% 25%" },
+  { num: 27, caption: "Industry Delegates & Corporate Alliances at the Backdrop", pos: "50% 25%" },
+  { num: 6,  caption: "Corporate Leadership Partners at the Conclave Installation", pos: "50% 25%" },
+  { num: 2,  caption: "Executive Delegates at the Conclave Installation Frame", pos: "50% 25%" }
 ];
 
 const srcDir = 'public/photo-resources/kolkata-1';
 const outDir = 'public/conclave-moments/kolkata-1';
 
-if (!fs.existsSync(outDir)) {
-  fs.mkdirSync(outDir, { recursive: true });
-}
-
 const allFiles = fs.readdirSync(srcDir).filter(f => /\.(jpe?g|png)$/i.test(f));
 
-async function processPhotos() {
-  console.log('Processing 24 curated Kolkata photos...');
-  for (let i = 0; i < selectedNumbers.length; i++) {
-    const num = selectedNumbers[i];
-    const srcFile = allFiles[num - 1];
+async function reprocessKolkata() {
+  console.log('Reprocessing Kolkata moments with crowded/appreciation upper rows...');
+  for (let i = 0; i < kolkataCuratedOrder.length; i++) {
+    const item = kolkataCuratedOrder[i];
+    const srcFile = allFiles[item.num - 1];
     const outName = 'kolkata-1-' + String(i + 1).padStart(2, '0') + '.jpg';
     const inPath = path.join(srcDir, srcFile);
     const outPath = path.join(outDir, outName);
@@ -54,12 +61,12 @@ async function processPhotos() {
       .toFile(outPath);
       
     const stat = fs.statSync(outPath);
-    console.log(`[${i + 1}/24] #${num} (${srcFile}) -> ${outName} (${(stat.size / 1024).toFixed(0)} KB)`);
+    console.log(`Slot ${i + 1}: #${item.num} (${srcFile}) -> ${outName} (${(stat.size / 1024).toFixed(0)} KB)`);
   }
-  console.log('Successfully optimized and saved all 24 Kolkata Conclave Moments photos!');
+  console.log('Kolkata photos successfully reprocessed!');
 }
 
-processPhotos().catch(err => {
+reprocessKolkata().catch(err => {
   console.error(err);
   process.exit(1);
 });

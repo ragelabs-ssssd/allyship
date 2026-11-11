@@ -537,7 +537,7 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
     photos: create24PhotoSlots("Kolkata", [
       {
         src: "/conclave-moments/kolkata-1/kolkata-1-01.jpg",
-        caption: "Grand Conclave Hall & Dais Setup at Hyatt Regency Kolkata",
+        caption: "Engaged Conclave Delegation in the Plenary Session",
         objectPosition: "50% 30%",
       },
       {
@@ -547,112 +547,112 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/kolkata-1/kolkata-1-03.jpg",
-        caption: "Engaged Conclave Delegation in the Plenary Session",
+        caption: "Distinguished Panelists & Dais Delegation Ensemble",
         objectPosition: "50% 30%",
       },
       {
         src: "/conclave-moments/kolkata-1/kolkata-1-04.jpg",
-        caption: "Executive Leadership Panel: Strategic Collaboration Across Sectors",
-        objectPosition: "50% 30%",
+        caption: "Cross-Disciplinary Enterprise Delegation at Conclave Wall",
+        objectPosition: "50% 25%",
       },
       {
         src: "/conclave-moments/kolkata-1/kolkata-1-05.jpg",
-        caption: "Women in Leadership & Technology Panel Discussion",
-        objectPosition: "50% 30%",
-      },
-      {
-        src: "/conclave-moments/kolkata-1/kolkata-1-06.jpg",
-        caption: "Distinguished Conclave Panelists & Dais Delegation",
-        objectPosition: "50% 30%",
-      },
-      {
-        src: "/conclave-moments/kolkata-1/kolkata-1-07.jpg",
-        caption: "Keynote Presentation: Digital Transformation & Inclusive Workplaces",
-        objectPosition: "50% 25%",
-      },
-      {
-        src: "/conclave-moments/kolkata-1/kolkata-1-08.jpg",
-        caption: "Executive Address on Cross-Disciplinary Institutional Alliances",
-        objectPosition: "50% 25%",
-      },
-      {
-        src: "/conclave-moments/kolkata-1/kolkata-1-09.jpg",
-        caption: "Industry Leader Perspective on Mentorship & Youth Empowerment",
-        objectPosition: "50% 25%",
-      },
-      {
-        src: "/conclave-moments/kolkata-1/kolkata-1-10.jpg",
-        caption: "Conclave Dais Keynote from the Official Podium",
-        objectPosition: "50% 20%",
-      },
-      {
-        src: "/conclave-moments/kolkata-1/kolkata-1-11.jpg",
-        caption: "Interactive Panel Deliberations & Executive Dialogue",
-        objectPosition: "50% 30%",
-      },
-      {
-        src: "/conclave-moments/kolkata-1/kolkata-1-12.jpg",
         caption: "Ceremonial Shawl & Uttariya Felicitation for Distinguished Dignitary",
         objectPosition: "50% 25%",
       },
       {
-        src: "/conclave-moments/kolkata-1/kolkata-1-13.jpg",
+        src: "/conclave-moments/kolkata-1/kolkata-1-06.jpg",
         caption: "Corporate Excellence & Academic Partnership Memento Handover",
         objectPosition: "50% 25%",
       },
       {
-        src: "/conclave-moments/kolkata-1/kolkata-1-14.jpg",
-        caption: "Traditional Stage Honor Presented to Conclave Guest Speaker",
+        src: "/conclave-moments/kolkata-1/kolkata-1-07.jpg",
+        caption: "Stage Dignitaries Honoring Conclave Guest on Dais",
         objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-08.jpg",
+        caption: "Commemorative Stage Honor Presentation",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-09.jpg",
+        caption: "Distinguished Stage Felicitation Ceremony",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-10.jpg",
+        caption: "Conclave Citation & Institutional Recognition",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-11.jpg",
+        caption: "Partnership Memento Handover with Academic Leadership",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-12.jpg",
+        caption: "Executive Keynote Address on Cross-Disciplinary Alliances",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-13.jpg",
+        caption: "Industry Leader Perspective on Strategic Mentorship",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-14.jpg",
+        caption: "Interactive Panel Deliberations & Executive Exchange",
+        objectPosition: "50% 30%",
       },
       {
         src: "/conclave-moments/kolkata-1/kolkata-1-15.jpg",
-        caption: "Commemorative Conclave Citation & Institutional Recognition",
-        objectPosition: "50% 25%",
-      },
-      {
-        src: "/conclave-moments/kolkata-1/kolkata-1-16.jpg",
-        caption: "Stage Felicitation Ceremony with Senior Academic Patrons",
-        objectPosition: "50% 25%",
-      },
-      {
-        src: "/conclave-moments/kolkata-1/kolkata-1-17.jpg",
-        caption: "University Leadership Presenting Conclave Dais Memento",
-        objectPosition: "50% 25%",
-      },
-      {
-        src: "/conclave-moments/kolkata-1/kolkata-1-18.jpg",
-        caption: "Executive VIP Delegate at the Allyship Conclave Media Wall",
-        objectPosition: "50% 20%",
-      },
-      {
-        src: "/conclave-moments/kolkata-1/kolkata-1-19.jpg",
-        caption: "Distinguished Corporate Leader at the Conclave Photobooth",
-        objectPosition: "50% 20%",
-      },
-      {
-        src: "/conclave-moments/kolkata-1/kolkata-1-20.jpg",
-        caption: "Cross-Disciplinary Enterprise Delegation at the Conclave Installation",
-        objectPosition: "50% 25%",
-      },
-      {
-        src: "/conclave-moments/kolkata-1/kolkata-1-21.jpg",
         caption: "Executive Roundtable: Informal Leadership Discourse in the Lounge",
         objectPosition: "50% 25%",
       },
       {
+        src: "/conclave-moments/kolkata-1/kolkata-1-16.jpg",
+        caption: "Women Corporate Leaders & Delegation at the Conclave Wall",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-17.jpg",
+        caption: "Executive Leadership Delegation at the Media Wall",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-18.jpg",
+        caption: "Distinguished Corporate Leader at the Conclave Photobooth",
+        objectPosition: "50% 20%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-19.jpg",
+        caption: "Bilateral Corporate Collaboration & Delegate Discussion",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-20.jpg",
+        caption: "Industry Partners in Collaborative Conclave Exchange",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/kolkata-1/kolkata-1-21.jpg",
+        caption: "Senior Corporate Leadership Network at Hyatt Regency",
+        objectPosition: "50% 25%",
+      },
+      {
         src: "/conclave-moments/kolkata-1/kolkata-1-22.jpg",
-        caption: "Women Corporate Leaders & Delegates at the Conclave Wall",
+        caption: "Industry Delegates & Corporate Alliances at the Backdrop",
         objectPosition: "50% 25%",
       },
       {
         src: "/conclave-moments/kolkata-1/kolkata-1-23.jpg",
-        caption: "Industry Partners & Executive Networking at Hyatt Regency",
+        caption: "Corporate Leadership Partners at the Conclave Installation",
         objectPosition: "50% 25%",
       },
       {
         src: "/conclave-moments/kolkata-1/kolkata-1-24.jpg",
-        caption: "Bilateral Corporate Collaboration & Delegate Networking Exchange",
+        caption: "Executive Delegates at the Conclave Installation Frame",
         objectPosition: "50% 25%",
       },
     ]),
@@ -667,8 +667,38 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
     coverPosition: "50% 25%",
     subtitle:
       "Building Inclusive and Empowered Workplaces — High-performance culture and talent transformation insights from Mumbai.",
-    videos: [],
-    photos: create24PhotoSlots("Mumbai"),
+    videos: [
+      {
+        title: "Mumbai Chapter | Official Conclave Film",
+        desc: "Keynote deliberations, corporate roundtable conversations, and inaugural chapter moments from the conclave floor in Mumbai.",
+        videoSrc: "/discover/mumbai-1-conclave-film.mp4",
+        tag: "Mumbai Conclave Film",
+        objectPosition: "50% 50%",
+        objectFit: "cover",
+      },
+    ],
+    photos: [
+      {
+        src: "/conclave-moments/mumbai-1/mumbai-1-01.jpg",
+        caption: "Corporate & Academic Leadership Delegation at the Mumbai Conclave Backdrop",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/mumbai-1/mumbai-1-02.jpg",
+        caption: "Executive Dignitaries & Organizers on the Mumbai Conclave Floor",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/mumbai-1/mumbai-1-03.jpg",
+        caption: "Main Stage Fireside Deliberation: Leadership Dialogue on Talent & Culture",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/mumbai-1/mumbai-1-04.jpg",
+        caption: "High-Performance Culture & Strategic Allyship Panel Discussion",
+        objectPosition: "50% 30%",
+      },
+    ],
   },
 };
 
@@ -1778,27 +1808,28 @@ function EventContent() {
                   </div>
                 )}
 
-                {/* INSIDE CARD PART 2: 24 CHAPTER PHOTO SPACES IN 6 ROWS BELOW THE VIDEO */}
-                <div className={`space-y-5 ${currentMediaArchive.videos.length > 0 ? "pt-6 border-t border-line" : ""}`}>
-                  <div className="flex items-center gap-2.5">
-                    <span className="w-2 h-2 rounded-full bg-accent" />
-                    <h4 className="font-heading text-xs sm:text-sm font-bold uppercase tracking-[0.16em] text-content">
-                      {currentMediaArchive.city} Chapter Photo Gallery
-                    </h4>
-                  </div>
+                {/* INSIDE CARD PART 2: CHAPTER PHOTO GALLERY (ONLY ACTIVE PHOTOS, NO BLANK CARDS) */}
+                {(() => {
+                  const validPhotos = currentMediaArchive.photos.filter((photo) => Boolean(photo.src));
+                  if (validPhotos.length === 0) return null;
+                  return (
+                    <div className={`space-y-5 ${currentMediaArchive.videos.length > 0 ? "pt-6 border-t border-line" : ""}`}>
+                      <div className="flex items-center gap-2.5">
+                        <span className="w-2 h-2 rounded-full bg-accent" />
+                        <h4 className="font-heading text-xs sm:text-sm font-bold uppercase tracking-[0.16em] text-content">
+                          {currentMediaArchive.city} Chapter Photo Gallery
+                        </h4>
+                        <span className="text-xs font-sans text-content-muted ml-auto">
+                          {validPhotos.length} {validPhotos.length === 1 ? "Moment" : "Moments"}
+                        </span>
+                      </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-                    {currentMediaArchive.photos.map((photo, idx) => {
-                      const slotNumber = String(idx + 1).padStart(2, "0");
-                      return (
-                        <div
-                          key={`${currentMediaArchive.id}-photo-${idx}`}
-                          className={`group relative aspect-[4/3] rounded-2xl overflow-hidden transition-all duration-500 ${photo.src
-                            ? "bg-surface-2 border border-line shadow-sm hover:border-accent/50 hover:shadow-lg"
-                            : "bg-surface-2/60 border border-line hover:border-accent/40 flex flex-col items-center justify-center p-4 text-center"
-                            }`}
-                        >
-                          {photo.src ? (
+                      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                        {validPhotos.map((photo, idx) => (
+                          <div
+                            key={`${currentMediaArchive.id}-photo-${idx}`}
+                            className="group relative aspect-[4/3] rounded-2xl overflow-hidden transition-all duration-500 bg-surface-2 border border-line shadow-sm hover:border-accent/50 hover:shadow-lg"
+                          >
                             <Image
                               src={photo.src}
                               alt={`${currentMediaArchive.city} — ${photo.caption}`}
@@ -1807,22 +1838,17 @@ function EventContent() {
                               className="object-cover transition-transform duration-700 ease-out group-hover:scale-105 transform-gpu will-change-transform"
                               style={{ objectPosition: photo.objectPosition || "50% 25%" }}
                             />
-                          ) : (
-                            /* Clean Dedicated 4:3 Photo Frame Space */
-                            <div className="space-y-1">
-                              <div className="text-xs font-heading font-bold uppercase tracking-[0.14em] text-content">
-                                Conclave Moment {slotNumber}
-                              </div>
-                              <div className="text-[11px] font-sans text-content-muted">
-                                {currentMediaArchive.city}
-                              </div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-canvas/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                              <span className="text-xs font-sans text-content line-clamp-2">
+                                {photo.caption}
+                              </span>
                             </div>
-                          )}
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })()}
               </div>
             )}
           </div>
