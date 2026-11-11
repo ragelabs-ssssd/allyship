@@ -537,7 +537,7 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
     photos: create24PhotoSlots("Kolkata", [
       {
         src: "/conclave-moments/kolkata-1/kolkata-1-01.jpg",
-        caption: "Engaged Conclave Delegation in the Plenary Session",
+        caption: "Distinguished Panelists & Conclave Dais Dignitaries Stage Ensemble",
         objectPosition: "50% 30%",
       },
       {
@@ -547,7 +547,7 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/kolkata-1/kolkata-1-03.jpg",
-        caption: "Distinguished Panelists & Dais Delegation Ensemble",
+        caption: "Full Plenary Hall Delegation in Seated Attention",
         objectPosition: "50% 30%",
       },
       {
@@ -557,37 +557,37 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/kolkata-1/kolkata-1-05.jpg",
-        caption: "Ceremonial Shawl & Uttariya Felicitation for Distinguished Dignitary",
+        caption: "Conclave Dais Dignitaries Presenting Floral Tribute & Honor on Stage",
         objectPosition: "50% 25%",
       },
       {
         src: "/conclave-moments/kolkata-1/kolkata-1-06.jpg",
-        caption: "Corporate Excellence & Academic Partnership Memento Handover",
+        caption: "Ceremonial Shawl & Uttariya Felicitation for Senior Dignitary",
         objectPosition: "50% 25%",
       },
       {
         src: "/conclave-moments/kolkata-1/kolkata-1-07.jpg",
-        caption: "Stage Dignitaries Honoring Conclave Guest on Dais",
+        caption: "Corporate Excellence & Academic Partnership Memento Handover",
         objectPosition: "50% 25%",
       },
       {
         src: "/conclave-moments/kolkata-1/kolkata-1-08.jpg",
-        caption: "Commemorative Stage Honor Presentation",
+        caption: "Academic Leadership Presenting Commemorative Memento to Corporate Leader",
         objectPosition: "50% 25%",
       },
       {
         src: "/conclave-moments/kolkata-1/kolkata-1-09.jpg",
-        caption: "Distinguished Stage Felicitation Ceremony",
+        caption: "Commemorative Stage Honor Presentation on Dais",
         objectPosition: "50% 25%",
       },
       {
         src: "/conclave-moments/kolkata-1/kolkata-1-10.jpg",
-        caption: "Conclave Citation & Institutional Recognition",
+        caption: "Distinguished Stage Felicitation Ceremony",
         objectPosition: "50% 25%",
       },
       {
         src: "/conclave-moments/kolkata-1/kolkata-1-11.jpg",
-        caption: "Partnership Memento Handover with Academic Leadership",
+        caption: "Conclave Citation & Institutional Recognition",
         objectPosition: "50% 25%",
       },
       {
@@ -617,7 +617,7 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/kolkata-1/kolkata-1-17.jpg",
-        caption: "Executive Leadership Delegation at the Media Wall",
+        caption: "Corporate Leadership Delegation at the Media Wall",
         objectPosition: "50% 25%",
       },
       {
