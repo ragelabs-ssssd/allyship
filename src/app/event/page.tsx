@@ -306,73 +306,13 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/bengaluru-1/bengaluru-1-11.jpg",
-        caption: "Industry Delegates & Conclave Dignitaries with ALLYSHIP++ Installation",
-        objectPosition: "50% 35%",
-      },
-      {
-        src: "/conclave-moments/bengaluru-1/bengaluru-1-12.jpg",
         caption: "Corporate Leadership & Academic Delegation with ALLYSHIP++ Installation",
         objectPosition: "50% 35%",
       },
       {
-        src: "/conclave-moments/bengaluru-1/bengaluru-1-13.jpg",
+        src: "/conclave-moments/bengaluru-1/bengaluru-1-12.jpg",
         caption: "Executive Panelist Addressing the Conclave during Strategic Deliberations",
         objectPosition: "55% 25%",
-      },
-      {
-        src: "/conclave-moments/bengaluru-1/bengaluru-1-14.jpg",
-        caption: "Conclave Delegates & Engineering Leaders Engaged in Deliberation",
-        objectPosition: "50% 35%",
-      },
-      {
-        src: "/conclave-moments/bengaluru-1/bengaluru-1-15.jpg",
-        caption: "Distinguished Guest Felicitation on Stage by University Leadership",
-        objectPosition: "50% 30%",
-      },
-      {
-        src: "/conclave-moments/bengaluru-1/bengaluru-1-16.jpg",
-        caption: "Strategic Collaboration Dialogue Between Corporate Leaders & Faculty",
-        objectPosition: "50% 30%",
-      },
-      {
-        src: "/conclave-moments/bengaluru-1/bengaluru-1-17.jpg",
-        caption: "Cross-Industry Panel Deliberations on Engineering & Leadership",
-        objectPosition: "50% 30%",
-      },
-      {
-        src: "/conclave-moments/bengaluru-1/bengaluru-1-18.jpg",
-        caption: "Keynote Address by Dr. P.B. Kotur, Head, L&T Global Engineering Academy",
-        objectPosition: "50% 25%",
-      },
-      {
-        src: "/conclave-moments/bengaluru-1/bengaluru-1-19.jpg",
-        caption: "Academic & Industry Leadership Synthesis on the Dais",
-        objectPosition: "50% 30%",
-      },
-      {
-        src: "/conclave-moments/bengaluru-1/bengaluru-1-20.jpg",
-        caption: "Keynote Perspectives: Aligning Corporate Corridors with Campus Talent",
-        objectPosition: "50% 25%",
-      },
-      {
-        src: "/conclave-moments/bengaluru-1/bengaluru-1-21.jpg",
-        caption: "Industry Address by Dr. S.J. Naganagouda, Chief People Officer, Tally Solutions",
-        objectPosition: "50% 25%",
-      },
-      {
-        src: "/conclave-moments/bengaluru-1/bengaluru-1-22.jpg",
-        caption: "Welcome & Conclave Framing Address by Prof. (Dr.) Raj Kumar Hota",
-        objectPosition: "50% 25%",
-      },
-      {
-        src: "/conclave-moments/bengaluru-1/bengaluru-1-23.jpg",
-        caption: "Applied Innovation & Emerging Tech Skills Dialogue",
-        objectPosition: "50% 25%",
-      },
-      {
-        src: "/conclave-moments/bengaluru-1/bengaluru-1-24.jpg",
-        caption: "Corporate Foresight Address on Evolving Tech Corridors",
-        objectPosition: "50% 25%",
       },
     ]),
   },
