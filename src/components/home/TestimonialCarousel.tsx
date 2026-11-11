@@ -96,17 +96,6 @@ const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "Gen-Z professionals require authentic mentorship rather than top-down mandates. ALLYSHIP++ provides the exact forum where industry CHROs and university deans establish that cadence.",
-    author: "Gauri Das",
-    role: "SVP & Head of Human Resources",
-    organization: "India Factoring & Finance Solutions",
-    chapter: "Mumbai Conclave Panelist",
-    highlight: "HR Panelist",
-    image: "/testimonials/gauri-das.jpg",
-    imagePosition: "50% 20%",
-  },
-  {
-    quote:
       "On an Olympic hockey turf as in any competitive enterprise, victory is never an individual triumph. It belongs to squads that communicate instinctively, absorb pressure selflessly, and lift each other up without hesitation.",
     author: "Gurbux Singh",
     role: "1964 Olympic Hockey Gold Medalist",
