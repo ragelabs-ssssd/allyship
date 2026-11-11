@@ -177,6 +177,68 @@ export default function AboutPage() {
         <BentoGridConcept />
       </section>
 
+      {/* 4. MESSAGE FROM VICE-CHANCELLOR PROF. PRADIPTA KUMAR NANDA */}
+      <section
+        id="vice-chancellor-mandate"
+        className="py-16 lg:py-20 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line"
+      >
+        <div className="bg-surface rounded-3xl p-8 sm:p-12 border border-line shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-center group">
+          {/* Text on Left */}
+          <div className="md:col-span-7 space-y-6">
+            <div className="space-y-4">
+              <div className="space-y-1.5">
+                <span className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-accent block">
+                  Academic Direction &amp; Leadership
+                </span>
+                <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-[1.15] text-content">
+                  Message from Prof. Pradipta Kumar Nanda
+                </h2>
+              </div>
+
+              <p className="font-sans text-sm sm:text-base font-normal tracking-[0.01em] leading-relaxed text-content-muted">
+                As Vice-Chancellor of Siksha &apos;O&apos; Anusandhan (SOA) Deemed to be University, Prof. Pradipta Kumar Nanda steers the institution&apos;s academic architecture, national research mandates, and transformative industry-academia covenants.
+              </p>
+
+              <blockquote className="font-display italic font-normal tracking-normal text-base sm:text-lg text-content leading-relaxed border-l-2 border-accent pl-5 py-3.5 bg-surface-2 rounded-r-xl shadow-inner">
+                &ldquo;True academic leadership cannot exist in isolation from industrial evolution. Through ALLYSHIP++, we bring the laboratory and the boardroom into an enduring covenant—equipping our scholars with real-world rigor while providing industry partners with deep, sustainable innovation.&rdquo;
+              </blockquote>
+            </div>
+
+            <div className="pt-4 border-t border-line">
+              <h4 className="font-display text-base font-semibold tracking-normal text-content">
+                Prof. Pradipta Kumar Nanda
+              </h4>
+              <p className="font-sans text-xs font-normal tracking-[0.01em] leading-relaxed text-content-muted mt-0.5">
+                Vice-Chancellor, Siksha &apos;O&apos; Anusandhan (SOA) Deemed to be University
+              </p>
+            </div>
+          </div>
+
+          {/* Photo on Right: Proper Uncropped Whole Figure Framing */}
+          <div className="md:col-span-5 relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-surface-3 border border-line shadow-2xl">
+            <Image
+              src="/conclave-moments/bengaluru-1/bengaluru-1-13.jpg"
+              alt="Vice-Chancellor Prof. Pradipta Kumar Nanda addressing the Allyship++ Conclave at podium"
+              fill
+              sizes="(max-width: 768px) 100vw, 40vw"
+              className="object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+              style={{ objectPosition: "50% 25%" }}
+            />
+            {/* Subtle Gradient Scrim & Rim Lighting */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none" />
+
+            {/* Glassmorphic VC Badge */}
+            <div className="absolute top-4 right-4 z-10">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md text-white/95 border border-accent/40 font-sans text-[10px] font-bold uppercase tracking-[0.16em] shadow-lg shadow-black/40">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+                Vice-Chancellor
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 6. THE BOARDROOM-TO-ARENA SYNTHESIS */}
       <section
         id="sports-synthesis"
