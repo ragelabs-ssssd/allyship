@@ -107,6 +107,17 @@ const testimonials: Testimonial[] = [
   },
   {
     quote:
+      "On an Olympic hockey turf as in any competitive enterprise, victory is never an individual triumph. It belongs to squads that communicate instinctively, absorb pressure selflessly, and lift each other up without hesitation.",
+    author: "Gurbux Singh",
+    role: "1964 Olympic Hockey Gold Medalist",
+    organization: "Indian Olympic Team Captain",
+    chapter: "Kolkata Conclave Keynote",
+    highlight: "Olympic Gold Medalist",
+    image: "/testimonials/gurbux-singh.jpg",
+    imagePosition: "50% 12%",
+  },
+  {
+    quote:
       "Young professionals don’t need perfect success stories, they need real ones. Talking about my setbacks here reminded me why struggle, when shared, becomes the most powerful form of mentorship.",
     author: "Dr. G. Srinivas Patnaik",
     role: "Secretary, Athletics Federation of India",

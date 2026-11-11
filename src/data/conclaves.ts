@@ -166,6 +166,7 @@ export const conclavesData: ConclaveChapter[] = [
         name: "Gurbux Singh",
         role: "1964 Olympic Hockey Gold Medalist",
         note: "Sports Legend Tribute on Olympic resilience and teamwork",
+        image: "/testimonials/gurbux-singh.jpg",
       },
       {
         name: "Gautam Sarkar",
