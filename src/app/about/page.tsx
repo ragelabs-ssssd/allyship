@@ -217,12 +217,12 @@ export default function AboutPage() {
           {/* Photo on Right: Proper Uncropped Whole Figure Framing */}
           <div className="md:col-span-5 relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-surface-3 border border-line shadow-2xl">
             <Image
-              src="/conclave-moments/bengaluru-1/bengaluru-1-13.jpg"
-              alt="Vice-Chancellor Prof. Pradipta Kumar Nanda addressing the Allyship++ Conclave at podium"
+              src="/leadership/pradipta-kumar-nanda.jpg"
+              alt="Vice-Chancellor Prof. Pradipta Kumar Nanda sharing academic direction at Allyship++ Conclave"
               fill
               sizes="(max-width: 768px) 100vw, 40vw"
               className="object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out"
-              style={{ objectPosition: "50% 25%" }}
+              style={{ objectPosition: "50% 20%" }}
             />
             {/* Subtle Gradient Scrim & Rim Lighting */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
