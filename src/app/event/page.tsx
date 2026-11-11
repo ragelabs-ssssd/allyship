@@ -250,8 +250,8 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
     photos: create24PhotoSlots("Bengaluru", [
       {
         src: "/conclave-moments/bengaluru-1/bengaluru-1-01.jpg",
-        caption: "Executive Panel Discussion on Practicing Allyship & Talent Strategy",
-        objectPosition: "50% 30%",
+        caption: "Commemorative Memento Felicitation on the Conclave Dais",
+        objectPosition: "50% 25%",
       },
       {
         src: "/conclave-moments/bengaluru-1/bengaluru-1-02.jpg",
