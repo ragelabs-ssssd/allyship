@@ -395,7 +395,6 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       {
         title: "Hyderabad Chapter | Official Conclave Film",
         desc: "Highlights from the Hyderabad conclave: conversations on leadership, young talent, and industry–academia collaboration.",
-        videoSrc: "/discover/soa-allyship-hyd-compressed.mp4",
         youtubeId: "8wSGKsWyQwk",
         tag: "Hyderabad",
       },
@@ -1724,9 +1723,9 @@ function EventContent() {
                           ) : currentMediaArchive.videos[0].youtubeId ? (
                             <iframe
                               className="w-full h-full"
-                              src={`https://www.youtube-nocookie.com/embed/${currentMediaArchive.videos[0].youtubeId}`}
+                              src={`https://www.youtube-nocookie.com/embed/${currentMediaArchive.videos[0].youtubeId}?rel=0`}
                               title={currentMediaArchive.videos[0].title}
-                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                               allowFullScreen
                             />
                           ) : (
@@ -1778,9 +1777,9 @@ function EventContent() {
                               ) : v.youtubeId ? (
                                 <iframe
                                   className="w-full h-full"
-                                  src={`https://www.youtube-nocookie.com/embed/${v.youtubeId}`}
+                                  src={`https://www.youtube-nocookie.com/embed/${v.youtubeId}?rel=0`}
                                   title={v.title}
-                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                   allowFullScreen
                                 />
                               ) : (
