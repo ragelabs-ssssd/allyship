@@ -480,8 +480,8 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
         objectPosition: "50% 30%",
       },
       {
-        src: "/conclave-moments/hyderabad-1/hyderabad-1-15.jpg",
-        caption: "Corporate Leadership Exchange During Executive High Tea",
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-executive-exchange.jpg",
+        caption: "Executive Leadership Roundtable & High-Impact Strategy Exchange",
         objectPosition: "50% 30%",
       },
       {
