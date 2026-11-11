@@ -450,8 +450,8 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
         objectPosition: "50% 30%",
       },
       {
-        src: "/conclave-moments/hyderabad-1/hyderabad-1-04.jpg",
-        caption: "Engaged Industry Delegates & Executives at Conclave Banquet Seating",
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-conclave-ensemble.jpg",
+        caption: "Grand Conclave Stage Alignment & University Dignitaries Ensemble",
         objectPosition: "50% 30%",
       },
       {
@@ -470,8 +470,8 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
         objectPosition: "50% 30%",
       },
       {
-        src: "/conclave-moments/hyderabad-1/hyderabad-1-13.jpg",
-        caption: "Roundtable Engagement on Talent Retention & Mentorship",
+        src: "/conclave-moments/hyderabad-1/hyderabad-1-stage-felicitation.jpg",
+        caption: "Honorary Conclave Felicitation & Memento Presentation on Dais",
         objectPosition: "50% 30%",
       },
       {
