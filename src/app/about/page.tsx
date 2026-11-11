@@ -200,7 +200,7 @@ export default function AboutPage() {
               </p>
 
               <blockquote className="font-display italic font-normal tracking-normal text-base sm:text-lg text-content leading-relaxed border-l-2 border-accent pl-5 py-3.5 bg-surface-2 rounded-r-xl shadow-inner">
-                &ldquo;True academic leadership cannot exist in isolation from industrial evolution. Through ALLYSHIP++, we bring the laboratory and the boardroom into an enduring covenant—equipping our scholars with real-world rigor while providing industry partners with deep, sustainable innovation.&rdquo;
+                &ldquo;India&apos;s economic ascendancy demands that premier higher-education institutions and commercial enterprises march in lockstep. ALLYSHIP++ is SOA&apos;s national commitment to turn university laboratories into high-octane engines of sovereign technological capability.&rdquo;
               </blockquote>
             </div>
 
