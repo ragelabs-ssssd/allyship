@@ -2,6 +2,7 @@ export interface ConclaveSpeaker {
   name: string;
   role: string;
   note?: string;
+  image?: string;
 }
 
 export interface ConclaveChapter {
@@ -40,6 +41,7 @@ export const conclavesData: ConclaveChapter[] = [
         name: "Anju Bobby George",
         role: "Olympian & First Indian World Athletics Championship Medalist",
         note: "Virtual Keynote on 'Leadership in Sports' and coach-athlete allyship",
+        image: "/testimonials/anju-bobby-george.jpg",
       },
     ],
     leadership: [
@@ -99,6 +101,7 @@ export const conclavesData: ConclaveChapter[] = [
         name: "Arshad Ayub",
         role: "Former Indian International Cricketer (Test & ODI)",
         note: "Chief Guest Keynote on Leadership & Collaboration in Dynamic Environments",
+        image: "/testimonials/arshad-ayub-v2.jpg",
       },
     ],
     leadership: [
@@ -380,6 +383,7 @@ export const conclavesData: ConclaveChapter[] = [
         name: "Dr. G. Srinivas Patnaik",
         role: "Secretary, Athletics Federation of India",
         note: "Fireside Chat on Discipline, Mentorship, Trust & Resilience in Young Talent",
+        image: "/testimonials/srinivas-patnaik.jpg",
       },
     ],
     leadership: [
@@ -440,6 +444,7 @@ export const conclavesData: ConclaveChapter[] = [
         name: "Premanand J.",
         role: "Paris Olympics National Sprint Coach & Former International Sprinter",
         note: "Fireside Chat on Resilience, Discipline, Leadership & Mentorship",
+        image: "/testimonials/premanand-j.jpg",
       },
     ],
     leadership: [

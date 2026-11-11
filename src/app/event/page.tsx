@@ -460,9 +460,9 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
         objectPosition: "50% 30%",
       },
       {
-        src: "/conclave-moments/hyderabad-1/hyderabad-1-11.jpg",
-        caption: "CXOs & Technology Leaders Exchanging Strategic Perspectives",
-        objectPosition: "50% 30%",
+        src: "/conclave-moments/hyderabad-1/arshad-ayub-perspective.jpg",
+        caption: "Chief Guest Arshad Ayub Delivering Keynote Perspective on Resilient Leadership",
+        objectPosition: "50% 20%",
       },
       {
         src: "/conclave-moments/hyderabad-1/hyderabad-1-12.jpg",
@@ -1363,7 +1363,7 @@ function EventContent() {
                       {currentConclave.sportsGuests.map((sg) => (
                         <div
                           key={sg.name}
-                          className="p-6 sm:p-7 rounded-3xl bg-gradient-to-br from-accent/15 via-surface-2 to-surface-2 border border-accent/40 shadow-xl space-y-3 relative overflow-hidden group"
+                          className="p-6 sm:p-7 rounded-3xl bg-gradient-to-br from-accent/15 via-surface-2 to-surface-2 border border-accent/40 shadow-xl space-y-4 relative overflow-hidden group"
                         >
                           <div className="flex items-center justify-between">
                             <span className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-widest text-accent font-bold px-3 py-1 rounded-full bg-accent/20 border border-accent/30">
@@ -1372,12 +1372,25 @@ function EventContent() {
                             </span>
                             <span className="text-xs text-content-muted font-mono">Special Guest</span>
                           </div>
-                          <div>
-                            <h4 className="font-display text-xl font-bold text-content mt-1 group-hover:text-accent transition-colors">
-                              {sg.name}
-                            </h4>
-                            <div className="text-xs font-semibold text-accent mt-0.5">
-                              {sg.role}
+                          <div className="flex items-center gap-4">
+                            {sg.image && (
+                              <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden border border-accent/40 shadow-md shrink-0 bg-surface-3">
+                                <Image
+                                  src={sg.image}
+                                  alt={sg.name}
+                                  fill
+                                  sizes="80px"
+                                  className="object-cover object-top"
+                                />
+                              </div>
+                            )}
+                            <div className="min-w-0">
+                              <h4 className="font-display text-xl font-bold text-content mt-1 group-hover:text-accent transition-colors">
+                                {sg.name}
+                              </h4>
+                              <div className="text-xs font-semibold text-accent mt-0.5">
+                                {sg.role}
+                              </div>
                             </div>
                           </div>
                           <p className="text-xs text-content-muted leading-relaxed italic pt-1 border-t border-line/60">
