@@ -151,6 +151,8 @@ interface ChapterMediaArchive {
     youtubeId?: string;
     videoSrc?: string;
     tag: string;
+    objectPosition?: string;
+    objectFit?: "cover" | "contain";
   }[];
   photos: {
     src: string;
@@ -248,9 +250,12 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       "Leadership and Collaboration Across Disciplines — Inaugural conclave dialogues with corporate and engineering leaders in Bengaluru.",
     videos: [
       {
-        title: "Bengaluru Chapter | Conclave Film",
+        title: "Bengaluru Chapter | Official Conclave Film",
         desc: "Keynote deliberations, corporate roundtable conversations, and inaugural chapter moments from the conclave floor.",
+        videoSrc: "/discover/bengaluru-1-conclave-film.mp4",
         tag: "Bengaluru Conclave Film",
+        objectPosition: "50% 25%",
+        objectFit: "cover",
       },
     ],
     photos: create24PhotoSlots("Bengaluru", [
@@ -1552,7 +1557,7 @@ function EventContent() {
 
                     {currentMediaArchive.videos.length === 1 ? (
                       <div className="bg-surface-2 rounded-2xl overflow-hidden border border-line grid grid-cols-1 lg:grid-cols-12">
-                        <div className="lg:col-span-8 relative aspect-video w-full bg-canvas overflow-hidden">
+                        <div className="lg:col-span-8 relative aspect-video w-full bg-surface-2 overflow-hidden">
                           {currentMediaArchive.videos[0].videoSrc ? (
                             <video
                               src={currentMediaArchive.videos[0].videoSrc}
@@ -1560,6 +1565,10 @@ function EventContent() {
                               playsInline
                               preload="metadata"
                               className="w-full h-full object-cover"
+                              style={{
+                                objectFit: currentMediaArchive.videos[0].objectFit || "cover",
+                                objectPosition: currentMediaArchive.videos[0].objectPosition || "50% 25%",
+                              }}
                             />
                           ) : currentMediaArchive.videos[0].youtubeId ? (
                             <iframe
@@ -1602,7 +1611,7 @@ function EventContent() {
                             key={v.youtubeId || v.videoSrc || vIdx}
                             className="bg-surface-2 rounded-2xl overflow-hidden border border-line flex flex-col justify-between"
                           >
-                            <div className="relative aspect-video w-full bg-canvas overflow-hidden">
+                            <div className="relative aspect-video w-full bg-surface-2 overflow-hidden">
                               {v.videoSrc ? (
                                 <video
                                   src={v.videoSrc}
@@ -1610,6 +1619,10 @@ function EventContent() {
                                   playsInline
                                   preload="metadata"
                                   className="w-full h-full object-cover"
+                                  style={{
+                                    objectFit: v.objectFit || "cover",
+                                    objectPosition: v.objectPosition || "50% 25%",
+                                  }}
                                 />
                               ) : v.youtubeId ? (
                                 <iframe
