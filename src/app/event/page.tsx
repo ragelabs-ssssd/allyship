@@ -310,8 +310,8 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/bengaluru-1/bengaluru-1-13.jpg",
-        caption: "Inaugural Address by Vice-Chancellor Prof. Pradipta Kumar Nanda",
-        objectPosition: "50% 25%",
+        caption: "Executive Panelist Addressing the Conclave during Strategic Deliberations",
+        objectPosition: "55% 25%",
       },
       {
         src: "/conclave-moments/bengaluru-1/bengaluru-1-14.jpg",
