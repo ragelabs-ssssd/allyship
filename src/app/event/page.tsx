@@ -260,13 +260,13 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/bengaluru-1/bengaluru-1-03.jpg",
-        caption: "Boardroom CXOs & Capability Heads in Conclave Deliberations",
-        objectPosition: "50% 35%",
+        caption: "Honorary Memento Presentation to Industry Dignitary by Prof. (Dr.) Raj Kumar Hota",
+        objectPosition: "50% 25%",
       },
       {
         src: "/conclave-moments/bengaluru-1/bengaluru-1-04.jpg",
-        caption: "Grand Conclave Stage Recognition & Institutional Partnership Honor",
-        objectPosition: "50% 30%",
+        caption: "Executive Dialogue & Camaraderie with Prof. (Dr.) Raj Kumar Hota",
+        objectPosition: "50% 25%",
       },
       {
         src: "/conclave-moments/bengaluru-1/bengaluru-1-05.jpg",
