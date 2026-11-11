@@ -255,8 +255,8 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/bengaluru-1/bengaluru-1-02.jpg",
-        caption: "Inaugural Dignitaries & Academic Leadership with Allyship++ Installation",
-        objectPosition: "50% 30%",
+        caption: "Corporate Delegates & Peer Networking at Bengaluru Conclave",
+        objectPosition: "50% 25%",
       },
       {
         src: "/conclave-moments/bengaluru-1/bengaluru-1-03.jpg",
