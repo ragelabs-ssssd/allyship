@@ -950,8 +950,8 @@ function EventContent() {
                 }
               }}
               className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full font-sans text-xs sm:text-sm font-medium tracking-wide transition-all whitespace-nowrap ${activeTab === t
-                  ? "bg-accent text-on-accent shadow-md font-semibold"
-                  : "bg-glass border border-line text-content-muted hover:text-content hover:bg-glass-strong"
+                ? "bg-accent text-on-accent shadow-md font-semibold"
+                : "bg-glass border border-line text-content-muted hover:text-content hover:bg-glass-strong"
                 }`}
             >
               {t === "Chapters" && "Conclave Chapters"}
@@ -992,8 +992,8 @@ function EventContent() {
                         type="button"
                         onClick={() => setSelectedChapter(idx)}
                         className={`relative group p-3.5 rounded-2xl border text-left transition-all duration-300 cursor-pointer overflow-visible ${isSelected
-                            ? "bg-accent/10 border-2 border-accent ring-4 ring-accent/20 shadow-xl text-content -translate-y-0.5"
-                            : "bg-surface-2 border-line hover:border-accent/60 text-content-muted hover:text-content hover:-translate-y-1 hover:shadow-md"
+                          ? "bg-accent/10 border-2 border-accent ring-4 ring-accent/20 shadow-xl text-content -translate-y-0.5"
+                          : "bg-surface-2 border-line hover:border-accent/60 text-content-muted hover:text-content hover:-translate-y-1 hover:shadow-md"
                           }`}
                       >
                         {/* Top Row: Edition Badge + Place Landmark Symbol Badge */}
@@ -1007,8 +1007,8 @@ function EventContent() {
                           </span>
                           <div
                             className={`w-8 h-8 rounded-xl flex items-center justify-center transition-all duration-300 ${isSelected
-                                ? "bg-accent/20 text-accent border border-accent/40 shadow-sm"
-                                : "bg-surface-3/80 text-content-muted border border-line group-hover:border-accent/40 group-hover:text-accent group-hover:bg-accent/10"
+                              ? "bg-accent/20 text-accent border border-accent/40 shadow-sm"
+                              : "bg-surface-3/80 text-content-muted border border-line group-hover:border-accent/40 group-hover:text-accent group-hover:bg-accent/10"
                               }`}
                             title={`${cleanCity} · ${cityMeta.landmark}`}
                           >
@@ -1032,8 +1032,8 @@ function EventContent() {
                         {/* Bottom Row: Thematic Focus / Active State indicator */}
                         <div
                           className={`mt-2.5 pt-2 border-t flex items-center justify-between font-sans text-[10px] ${isSelected
-                              ? "border-accent/30 text-accent font-semibold"
-                              : "border-line text-content-muted"
+                            ? "border-accent/30 text-accent font-semibold"
+                            : "border-line text-content-muted"
                             }`}
                         >
                           <span className="truncate">
@@ -1076,8 +1076,8 @@ function EventContent() {
                         type="button"
                         onClick={() => setSelectedChapter(idx)}
                         className={`relative group p-3.5 rounded-2xl border text-left transition-all duration-300 cursor-pointer overflow-visible ${isSelected
-                            ? "bg-accent/10 border-2 border-accent ring-4 ring-accent/20 shadow-xl text-content -translate-y-0.5"
-                            : "bg-surface-2 border-line hover:border-accent/60 text-content-muted hover:text-content hover:-translate-y-1 hover:shadow-md"
+                          ? "bg-accent/10 border-2 border-accent ring-4 ring-accent/20 shadow-xl text-content -translate-y-0.5"
+                          : "bg-surface-2 border-line hover:border-accent/60 text-content-muted hover:text-content hover:-translate-y-1 hover:shadow-md"
                           }`}
                       >
                         {/* Top Row: Edition Badge + Place Landmark Symbol Badge */}
@@ -1091,8 +1091,8 @@ function EventContent() {
                           </span>
                           <div
                             className={`w-8 h-8 rounded-xl flex items-center justify-center transition-all duration-300 ${isSelected
-                                ? "bg-accent/20 text-accent border border-accent/40 shadow-sm"
-                                : "bg-surface-3/80 text-content-muted border border-line group-hover:border-accent/40 group-hover:text-accent group-hover:bg-accent/10"
+                              ? "bg-accent/20 text-accent border border-accent/40 shadow-sm"
+                              : "bg-surface-3/80 text-content-muted border border-line group-hover:border-accent/40 group-hover:text-accent group-hover:bg-accent/10"
                               }`}
                             title={`${cleanCity} · ${cityMeta.landmark}`}
                           >
@@ -1116,8 +1116,8 @@ function EventContent() {
                         {/* Bottom Row: Thematic Focus / Active State indicator */}
                         <div
                           className={`mt-2.5 pt-2 border-t flex items-center justify-between font-sans text-[10px] ${isSelected
-                              ? "border-accent/30 text-accent font-semibold"
-                              : "border-line text-content-muted"
+                            ? "border-accent/30 text-accent font-semibold"
+                            : "border-line text-content-muted"
                             }`}
                         >
                           <span className="truncate">
@@ -1505,8 +1505,8 @@ function EventContent() {
                           type="button"
                           onClick={() => setSelectedMediaCity(chapterKey)}
                           className={`px-3 py-1.5 rounded-full font-sans text-xs font-medium transition-all cursor-pointer ${isSelected
-                              ? "bg-accent text-on-accent font-semibold shadow-sm"
-                              : "bg-surface-2 border border-line text-content-muted hover:text-content"
+                            ? "bg-accent text-on-accent font-semibold shadow-sm"
+                            : "bg-surface-2 border border-line text-content-muted hover:text-content"
                             }`}
                         >
                           {item.city}
@@ -1637,8 +1637,8 @@ function EventContent() {
                         <div
                           key={`${currentMediaArchive.id}-photo-${idx}`}
                           className={`group relative aspect-[4/3] rounded-2xl overflow-hidden transition-all duration-500 ${photo.src
-                              ? "bg-surface-2 border border-line shadow-sm hover:border-accent/50 hover:shadow-lg"
-                              : "bg-surface-2/60 border border-line hover:border-accent/40 flex flex-col items-center justify-center p-4 text-center"
+                            ? "bg-surface-2 border border-line shadow-sm hover:border-accent/50 hover:shadow-lg"
+                            : "bg-surface-2/60 border border-line hover:border-accent/40 flex flex-col items-center justify-center p-4 text-center"
                             }`}
                         >
                           {photo.src ? (
