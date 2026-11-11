@@ -295,8 +295,8 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/bengaluru-1/bengaluru-1-10.jpg",
-        caption: "Commemorative Memento Presentation to Industry Dignitaries",
-        objectPosition: "50% 30%",
+        caption: "Enterprise Delegates & Capability Heads Engaged in Conclave Dialogue",
+        objectPosition: "50% 45%",
       },
       {
         src: "/conclave-moments/bengaluru-1/bengaluru-1-11.jpg",
