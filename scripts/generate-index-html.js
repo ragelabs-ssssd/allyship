@@ -22,10 +22,6 @@ const conclavesData = [
     ],
     leadership: [
       {
-        name: "Prof. (Dr.) Manojranjan Nayak",
-        role: "Founder President & Chairman, SOA / ITER (Inaugural Address)"
-      },
-      {
         name: "Prof. (Dr.) Raj Kumar Hota",
         role: "Dean of Corporate Relations and Placement, Career Development and Industry Collaboration, SOA"
       }
@@ -95,7 +91,6 @@ const conclavesData = [
       { name: "Satyaprakash Krishna", role: "M.S. Dhoni's Early Mentor & Cricket Leader", note: "Keynote on identifying raw talent and nurturing championship mindset" }
     ],
     leadership: [
-      { name: "Prof. (Dr.) Manojranjan Nayak", role: "Founder President & Chairman, SOA / ITER" },
       { name: "Prof. (Dr.) Raj Kumar Hota", role: "Dean of Corporate Relations and Placement, Career Development and Industry Collaboration, SOA" }
     ],
     panelists: [
@@ -122,7 +117,6 @@ const conclavesData = [
       { name: "Anand Menezes", role: "Olympian & National Track Champion", note: "Insights on conditioning, resilience, and executive burnout mitigation" }
     ],
     leadership: [
-      { name: "Prof. (Dr.) Manojranjan Nayak", role: "Founder President & Chairman, SOA / ITER" },
       { name: "Prof. (Dr.) Raj Kumar Hota", role: "Dean of Corporate Relations and Placement, Career Development and Industry Collaboration, SOA" }
     ],
     panelists: [

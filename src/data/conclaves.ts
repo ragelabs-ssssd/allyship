@@ -271,10 +271,6 @@ export const conclavesData: ConclaveChapter[] = [
     ],
     leadership: [
       {
-        name: "Prof. (Dr.) Manojranjan Nayak",
-        role: "Founder President & Chairman, SOA / ITER (Inaugural Speech)",
-      },
-      {
         name: "Prof. (Dr.) Raj Kumar Hota",
         role: "Dean of Corporate Relations and Placement, Career Development and Industry Collaboration, SOA",
       },
@@ -329,10 +325,6 @@ export const conclavesData: ConclaveChapter[] = [
       },
     ],
     leadership: [
-      {
-        name: "Prof. (Dr.) Manojranjan Nayak",
-        role: "Founder President & Chairman, SOA / ITER (Institutional Keynote)",
-      },
       {
         name: "Prof. (Dr.) Raj Kumar Hota",
         role: "Dean of Corporate Relations and Placement, Career Development and Industry Collaboration, SOA",
@@ -389,10 +381,6 @@ export const conclavesData: ConclaveChapter[] = [
       },
     ],
     leadership: [
-      {
-        name: "Prof. (Dr.) Manojranjan Nayak",
-        role: "Founder President & Chairman, SOA / ITER (Institutional Address)",
-      },
       {
         name: "Prof. (Dr.) Raj Kumar Hota",
         role: "Dean of Corporate Relations and Placement, Career Development and Industry Collaboration, SOA",
