@@ -5,92 +5,30 @@ const momentsDir = 'public/conclave-moments/hyderabad-2';
 const candDir = 'public/conclave-moments/hyderabad-2/candidates';
 const resDir = 'public/photo-resources/hyderabad-2';
 
-// 1. 14 Master DSLR Camera Photos
+// 1. 22 Master DSLR Camera Photos
 const masterDslrPhotos = [
-  {
-    id: 'HYD2_DSLR_01_FRONT_ROW_LEADERSHIP',
-    file: 'HYD2_DSLR_01_FRONT_ROW_LEADERSHIP.jpg',
-    category: 'Leadership',
-    desc: 'SOA Leadership Delegation: Prof. (Dr.) Raj Kumar Hota & Corporate Dignitaries in Plenary Assembly (Orange Armchairs)'
-  },
-  {
-    id: 'HYD2_DSLR_02_STAGE_FELICITATION_MEMENTO',
-    file: 'HYD2_DSLR_02_STAGE_FELICITATION_MEMENTO.jpg',
-    category: 'Felicitations',
-    desc: 'Ceremonial Felicitation: SOA Leadership Presenting Commemorative Conclave Memento on Stage'
-  },
-  {
-    id: 'HYD2_DSLR_03_KEYNOTE_SPEAKER_MICROPHONE',
-    file: 'HYD2_DSLR_03_KEYNOTE_SPEAKER_MICROPHONE.jpg',
-    category: 'Keynote',
-    desc: 'Executive Keynote Dialogue: Industry Speaker Addressing the Hyderabad Conclave at Microphone'
-  },
-  {
-    id: 'HYD2_DSLR_04_WIDE_PLENARY_HALL_FRONT',
-    file: 'HYD2_DSLR_04_WIDE_PLENARY_HALL_FRONT.jpg',
-    category: 'Plenary',
-    desc: 'Grand Plenary Assembly: Enterprise Leaders & University Delegates at Le Meridien Hyderabad (Chandelier & Full Hall)'
-  },
-  {
-    id: 'HYD2_DSLR_05_PLENARY_ASSEMBLY_REAR_VIEW',
-    file: 'HYD2_DSLR_05_PLENARY_ASSEMBLY_REAR_VIEW.jpg',
-    category: 'Plenary',
-    desc: 'Plenary Hall Perspective: Corporate CXOs & Enterprise Leaders Facing Main Digital Dais Screen'
-  },
-  {
-    id: 'HYD2_DSLR_06_FRONT_ROW_DIGNITARIES',
-    file: 'HYD2_DSLR_06_FRONT_ROW_DIGNITARIES.jpg',
-    category: 'Enterprise',
-    desc: 'Corporate Leadership Perspectives: Senior Dignitaries Engaged in Plenary Deliberations'
-  },
-  {
-    id: 'HYD2_DSLR_07_CORPORATE_DELEGATES_ASSEMBLY',
-    file: 'HYD2_DSLR_07_CORPORATE_DELEGATES_ASSEMBLY.jpg',
-    category: 'Roundtable',
-    desc: 'Executive Roundtables: Corporate Delegates Collaborating at Le Meridien Hyderabad Banquet Tables'
-  },
-  {
-    id: 'HYD2_DSLR_08_HOTA_PODIUM_ADDRESS',
-    file: 'HYD2_DSLR_08_HOTA_PODIUM_ADDRESS.jpg',
-    category: 'Keynote',
-    desc: 'Prof. (Dr.) Raj Kumar Hota Delivering the Conclave Leadership Keynote Address from the Podium'
-  },
-  {
-    id: 'HYD2_DSLR_09_EXECUTIVE_PANEL_TRIO',
-    file: 'HYD2_DSLR_09_EXECUTIVE_PANEL_TRIO.jpg',
-    category: 'Panel',
-    desc: 'Executive Panel Deliberations: Corporate HR & Capability Leaders on Stage Addressing the Assembly'
-  },
-  {
-    id: 'HYD2_DSLR_10_DELEGATE_FLOOR_QA',
-    file: 'HYD2_DSLR_10_DELEGATE_FLOOR_QA.jpg',
-    category: 'Q&A',
-    desc: 'Interactive Floor Q&A: Corporate Delegate Engaging Conclave Panelists on Talent Readiness'
-  },
-  {
-    id: 'HYD2_DSLR_11_ACADEMIC_HONORS_SHAWL',
-    file: 'HYD2_DSLR_11_ACADEMIC_HONORS_SHAWL.jpg',
-    category: 'Felicitations',
-    desc: 'Academic Honors & Recognition: Commemorative Conclave Memento Presented to Corporate Dignitary'
-  },
-  {
-    id: 'HYD2_DSLR_12_PARTNER_MEMENTO_STAGE',
-    file: 'HYD2_DSLR_12_PARTNER_MEMENTO_STAGE.jpg',
-    category: 'Honors',
-    desc: 'Strategic Industry Partner Felicitation: SOA Leadership Presenting Honors to Corporate Luminary'
-  },
-  {
-    id: 'HYD2_DSLR_13_FLORAL_BOUQUET_WELCOME',
-    file: 'HYD2_DSLR_13_FLORAL_BOUQUET_WELCOME.jpg',
-    category: 'Alliances',
-    desc: 'Inaugural Stage Felicitation: Floral Bouquet & Conclave Welcome Bestowed on Keynote Speaker'
-  },
-  {
-    id: 'HYD2_DSLR_14_PLENARY_AUDIENCE_APPLAUSE',
-    file: 'HYD2_DSLR_14_PLENARY_AUDIENCE_APPLAUSE.jpg',
-    category: 'Finale',
-    desc: 'Grand Plenary Ovation: Corporate Delegates Celebrating Shared Purpose & Industry-Academia Synergy'
-  }
+  { id: 'HYD2_DSLR_01_FRONT_ROW_LEADERSHIP', file: 'HYD2_DSLR_01_FRONT_ROW_LEADERSHIP.jpg', category: 'Leadership', desc: 'SOA Leadership Delegation: Prof. (Dr.) Raj Kumar Hota & Corporate Dignitaries in Plenary Assembly (Orange Armchairs)' },
+  { id: 'HYD2_DSLR_02_STAGE_FELICITATION_MEMENTO', file: 'HYD2_DSLR_02_STAGE_FELICITATION_MEMENTO.jpg', category: 'Felicitations', desc: 'Ceremonial Felicitation: SOA Leadership Presenting Commemorative Conclave Memento on Stage' },
+  { id: 'HYD2_DSLR_03_KEYNOTE_SPEAKER_MICROPHONE', file: 'HYD2_DSLR_03_KEYNOTE_SPEAKER_MICROPHONE.jpg', category: 'Keynote', desc: 'Executive Keynote Dialogue: Industry Speaker Addressing the Hyderabad Conclave at Microphone' },
+  { id: 'HYD2_DSLR_04_WIDE_PLENARY_HALL_FRONT', file: 'HYD2_DSLR_04_WIDE_PLENARY_HALL_FRONT.jpg', category: 'Plenary', desc: 'Grand Plenary Assembly: Enterprise Leaders & University Delegates at Le Meridien Hyderabad (Chandelier & Full Hall)' },
+  { id: 'HYD2_DSLR_05_PLENARY_ASSEMBLY_REAR_VIEW', file: 'HYD2_DSLR_05_PLENARY_ASSEMBLY_REAR_VIEW.jpg', category: 'Plenary', desc: 'Plenary Hall Perspective: Corporate CXOs & Enterprise Leaders Facing Main Digital Dais Screen' },
+  { id: 'HYD2_DSLR_06_FRONT_ROW_DIGNITARIES', file: 'HYD2_DSLR_06_FRONT_ROW_DIGNITARIES.jpg', category: 'Enterprise', desc: 'Corporate Leadership Perspectives: Senior Dignitaries Engaged in Plenary Deliberations' },
+  { id: 'HYD2_DSLR_07_CORPORATE_DELEGATES_ASSEMBLY', file: 'HYD2_DSLR_07_CORPORATE_DELEGATES_ASSEMBLY.jpg', category: 'Roundtable', desc: 'Executive Roundtables: Corporate Delegates Collaborating at Le Meridien Hyderabad Banquet Tables' },
+  { id: 'HYD2_DSLR_08_HOTA_PODIUM_ADDRESS', file: 'HYD2_DSLR_08_HOTA_PODIUM_ADDRESS.jpg', category: 'Keynote', desc: 'Prof. (Dr.) Raj Kumar Hota Delivering the Conclave Leadership Keynote Address from the Podium' },
+  { id: 'HYD2_DSLR_09_EXECUTIVE_PANEL_TRIO', file: 'HYD2_DSLR_09_EXECUTIVE_PANEL_TRIO.jpg', category: 'Panel', desc: 'Executive Panel Deliberations: Corporate HR & Capability Leaders on Stage Addressing the Assembly' },
+  { id: 'HYD2_DSLR_10_DELEGATE_FLOOR_QA', file: 'HYD2_DSLR_10_DELEGATE_FLOOR_QA.jpg', category: 'Q&A', desc: 'Interactive Floor Q&A: Corporate Delegate Engaging Conclave Panelists on Talent Readiness' },
+  { id: 'HYD2_DSLR_11_ACADEMIC_HONORS_SHAWL', file: 'HYD2_DSLR_11_ACADEMIC_HONORS_SHAWL.jpg', category: 'Felicitations', desc: 'Academic Honors & Recognition: Commemorative Conclave Memento Presented to Corporate Dignitary' },
+  { id: 'HYD2_DSLR_12_PARTNER_MEMENTO_STAGE', file: 'HYD2_DSLR_12_PARTNER_MEMENTO_STAGE.jpg', category: 'Honors', desc: 'Strategic Industry Partner Felicitation: SOA Leadership Presenting Honors to Corporate Luminary' },
+  { id: 'HYD2_DSLR_13_FLORAL_BOUQUET_WELCOME', file: 'HYD2_DSLR_13_FLORAL_BOUQUET_WELCOME.jpg', category: 'Alliances', desc: 'Inaugural Stage Felicitation: Floral Bouquet & Conclave Welcome Bestowed on Keynote Speaker' },
+  { id: 'HYD2_DSLR_14_PLENARY_AUDIENCE_APPLAUSE', file: 'HYD2_DSLR_14_PLENARY_AUDIENCE_APPLAUSE.jpg', category: 'Finale', desc: 'Grand Plenary Ovation: Corporate Delegates Celebrating Shared Purpose & Industry-Academia Synergy' },
+  { id: 'HYD2_DSLR_15_VIP_FRONT_ROW_WIDE', file: 'HYD2_DSLR_15_VIP_FRONT_ROW_WIDE.jpg', category: 'Leadership', desc: 'Front Row Executive Assembly: SOA Leadership Delegation & Corporate Dignitaries at Le Meridien Hyderabad' },
+  { id: 'HYD2_DSLR_16_CONCLAVE_GROUP_SELFIE', file: 'HYD2_DSLR_16_CONCLAVE_GROUP_SELFIE.jpg', category: 'Networking', desc: 'Conclave Floor Camaraderie: Corporate HR Leaders & Young Professionals Capturing Conclave Memories' },
+  { id: 'HYD2_DSLR_17_GRAND_CONCLAVE_ENSEMBLE', file: 'HYD2_DSLR_17_GRAND_CONCLAVE_ENSEMBLE.jpg', category: 'Ensemble', desc: 'Grand Conclave Plenary Ensemble: 10 Distinguished Dignitaries, Panelists & Academic Leaders on Dais' },
+  { id: 'HYD2_DSLR_18_BIKRAM_NAYAK_PANEL_ADDRESS', file: 'HYD2_DSLR_18_BIKRAM_NAYAK_PANEL_ADDRESS.jpg', category: 'Panel', desc: 'Executive Panel Perspective: Bikram K. Nayak (VP HR, NCC Ltd) Deliberating on Emerging Workforce Capability' },
+  { id: 'HYD2_DSLR_19_FULL_PANEL_SANJAY_DHIR', file: 'HYD2_DSLR_19_FULL_PANEL_SANJAY_DHIR.jpg', category: 'Panel', desc: 'Conclave Panel Discourse: Moderator Prof. Sanjay Dhir (IIT Delhi) & Corporate Panelists on Stage' },
+  { id: 'HYD2_DSLR_20_PANEL_INTERACTIVE_MOMENT', file: 'HYD2_DSLR_20_PANEL_INTERACTIVE_MOMENT.jpg', category: 'Panel', desc: 'Interactive Panel Discourse: Industry Leaders Addressing Campus-to-Corporate Transitions' },
+  { id: 'HYD2_DSLR_21_SPORTS_GUEST_KEYNOTE', file: 'HYD2_DSLR_21_SPORTS_GUEST_KEYNOTE.jpg', category: 'Sports Guest', desc: 'Chief Guest Fireside: Dr. G. Srinivas Patnaik (Secretary, Athletics Federation of India) on Discipline & Grit' },
+  { id: 'HYD2_DSLR_22_ROSE_BOUQUET_FELICITATION', file: 'HYD2_DSLR_22_ROSE_BOUQUET_FELICITATION.jpg', category: 'Felicitations', desc: 'Dais Felicitation: Dr. G. Srinivas Patnaik Presenting Floral Honors to University Leadership' },
 ];
 
 // 2. 24 Currently Deployed Moments
@@ -103,21 +41,21 @@ const deployedMoments = [
   { id: 'hyderabad-2-06', file: 'hyderabad-2-06.jpg', category: 'Enterprise', desc: 'Corporate Leadership Perspectives: Senior Dignitaries Engaged in Plenary Deliberations' },
   { id: 'hyderabad-2-07', file: 'hyderabad-2-07.jpg', category: 'Plenary', desc: 'Plenary Hall Perspective: Corporate CXOs & Enterprise Leaders Facing Main Digital Dais' },
   { id: 'hyderabad-2-08', file: 'hyderabad-2-08.jpg', category: 'Roundtable', desc: 'Executive Roundtables: Corporate Delegates Collaborating at Le Meridien Hyderabad' },
-  { id: 'hyderabad-2-09', file: 'hyderabad-2-09.jpg', category: 'Curriculum', desc: 'Industry–Academia Synergy: Designing Future-Ready Curricula' },
+  { id: 'hyderabad-2-09', file: 'hyderabad-2-09.jpg', category: 'Leadership', desc: 'Front Row Executive Assembly: SOA Leadership Delegation & Corporate Dignitaries at Le Meridien Hyderabad' },
   { id: 'hyderabad-2-10', file: 'hyderabad-2-10.jpg', category: 'Panel', desc: 'Executive Panel Deliberations: Corporate HR & Capability Leaders Addressing the Assembly' },
-  { id: 'hyderabad-2-11', file: 'hyderabad-2-11.jpg', category: 'Panel', desc: 'Enterprise Technology Leaders Deliberating Strategic Mentorship' },
-  { id: 'hyderabad-2-12', file: 'hyderabad-2-12.jpg', category: 'Dialogue', desc: 'Leadership Dialogue on Innovation, IP & Sovereign Capability' },
+  { id: 'hyderabad-2-11', file: 'hyderabad-2-11.jpg', category: 'Panel', desc: 'Executive Panel Perspective: Bikram K. Nayak (VP HR, NCC Ltd) Deliberating on Emerging Workforce Capability' },
+  { id: 'hyderabad-2-12', file: 'hyderabad-2-12.jpg', category: 'Panel', desc: 'Conclave Panel Discourse: Moderator Prof. Sanjay Dhir (IIT Delhi) & Corporate Panelists on Stage' },
   { id: 'hyderabad-2-13', file: 'hyderabad-2-13.jpg', category: 'Q&A', desc: 'Interactive Floor Q&A: Corporate Delegate Engaging Conclave Panelists on Talent Readiness' },
-  { id: 'hyderabad-2-14', file: 'hyderabad-2-14.jpg', category: 'Mentorship', desc: 'Campus-to-Corporate Transitions: Mentorship in Action' },
+  { id: 'hyderabad-2-14', file: 'hyderabad-2-14.jpg', category: 'Panel', desc: 'Interactive Panel Discourse: Industry Leaders Addressing Campus-to-Corporate Transitions' },
   { id: 'hyderabad-2-15', file: 'hyderabad-2-15.jpg', category: 'Felicitations', desc: 'Ceremonial Felicitation: SOA Leadership Presenting Commemorative Conclave Memento on Stage' },
   { id: 'hyderabad-2-16', file: 'hyderabad-2-16.jpg', category: 'Felicitations', desc: 'Academic Honors & Recognition: Commemorative Conclave Memento Presented to Corporate Dignitary' },
   { id: 'hyderabad-2-17', file: 'hyderabad-2-17.jpg', category: 'Honors', desc: 'Strategic Industry Partner Felicitation: SOA Leadership Presenting Honors to Corporate Luminary' },
   { id: 'hyderabad-2-18', file: 'hyderabad-2-18.jpg', category: 'Alliances', desc: 'Inaugural Stage Felicitation: Floral Bouquet & Conclave Welcome Bestowed on Keynote Speaker' },
-  { id: 'hyderabad-2-19', file: 'hyderabad-2-19.jpg', category: 'Foyer', desc: 'Bilateral Leadership Exchanges in the Executive Foyer' },
-  { id: 'hyderabad-2-20', file: 'hyderabad-2-20.jpg', category: 'Networking', desc: 'Corporate Delegates & Tech Corridor Leaders Networking' },
-  { id: 'hyderabad-2-21', file: 'hyderabad-2-21.jpg', category: 'Consultation', desc: 'Enterprise HR Heads & University Leadership Consultations' },
+  { id: 'hyderabad-2-19', file: 'hyderabad-2-19.jpg', category: 'Sports Guest', desc: 'Chief Guest Fireside: Dr. G. Srinivas Patnaik (Secretary, Athletics Federation of India) on Discipline & Grit' },
+  { id: 'hyderabad-2-20', file: 'hyderabad-2-20.jpg', category: 'Felicitations', desc: 'Dais Felicitation: Dr. G. Srinivas Patnaik Presenting Floral Honors to University Leadership' },
+  { id: 'hyderabad-2-21', file: 'hyderabad-2-21.jpg', category: 'Networking', desc: 'Conclave Floor Camaraderie: Corporate HR Leaders & Young Professionals Capturing Conclave Memories' },
   { id: 'hyderabad-2-22', file: 'hyderabad-2-22.jpg', category: 'Partnerships', desc: 'Corporate Mentorship Partnerships Formed at Hyatt Hyderabad' },
-  { id: 'hyderabad-2-23', file: 'hyderabad-2-23.jpg', category: 'Ensemble', desc: 'Grand Conclave Ensemble: Luminaries, Faculty & Industry Leaders' },
+  { id: 'hyderabad-2-23', file: 'hyderabad-2-23.jpg', category: 'Ensemble', desc: 'Grand Conclave Plenary Ensemble: 10 Distinguished Dignitaries, Panelists & Academic Leaders on Dais' },
   { id: 'hyderabad-2-24', file: 'hyderabad-2-24.jpg', category: 'Finale', desc: 'Grand Plenary Ovation: Corporate Delegates Celebrating Shared Purpose & Industry-Academia Synergy' },
 ];
 
@@ -255,7 +193,7 @@ const html = `<!DOCTYPE html>
           Hyderabad Chapter 2.0 Conclave Moments & Local Photo Picker
         </h1>
         <p class="text-xs sm:text-sm text-white/60">
-          Browse all 106 photos (14 Master DSLR captures + 24 active deployed moments + 68 video frames), pick photos from your local PC folder, select your 24 favorites, and copy the list for chat.
+          Browse all ${allItems.length} photos (${masterDslrPhotos.length} Master DSLR captures + 24 active deployed moments + ${candFiles.length} video frames), pick photos from your local PC folder, select your 24 favorites, and copy the list for chat.
         </p>
       </div>
 
@@ -298,13 +236,13 @@ const html = `<!DOCTYPE html>
           All (<span id="count-all">${allItems.length}</span>)
         </button>
         <button onclick="filterSource('Master DSLR')" class="filter-tab px-3 py-1 rounded-lg text-xs font-semibold bg-surface-2 text-white/80 hover:bg-surface-3 transition" data-source="Master DSLR">
-          Master DSLR (14)
+          Master DSLR (${masterDslrPhotos.length})
         </button>
         <button onclick="filterSource('Active Moments')" class="filter-tab px-3 py-1 rounded-lg text-xs font-semibold bg-surface-2 text-white/80 hover:bg-surface-3 transition" data-source="Active Moments">
           Active Deployed (24)
         </button>
         <button onclick="filterSource('Video Candidates')" class="filter-tab px-3 py-1 rounded-lg text-xs font-semibold bg-surface-2 text-white/80 hover:bg-surface-3 transition" data-source="Video Candidates">
-          Candidate Frames (68)
+          Candidate Frames (${candFiles.length})
         </button>
         <button onclick="filterSource('Local Uploads')" class="filter-tab px-3 py-1 rounded-lg text-xs font-semibold bg-surface-2 text-white/80 hover:bg-surface-3 transition" data-source="Local Uploads">
           Local Files (<span id="count-local">0</span>)
@@ -401,7 +339,7 @@ const html = `<!DOCTYPE html>
   <script>
     const INITIAL_ITEMS = ${JSON.stringify(allItems, null, 2)};
     let allPhotos = [...INITIAL_ITEMS];
-    let selectedSet = new Set(INITIAL_ITEMS.filter(i => i.initialChecked).slice(0, 24).map(i => i.id));
+    let selectedSet = new Set(INITIAL_ITEMS.filter(i => i.sourceType === 'Active Moments').map(i => i.id));
     let currentFilter = 'all';
     let lightboxIndex = 0;
     let visiblePhotos = [];
@@ -651,4 +589,4 @@ const html = `<!DOCTYPE html>
 `;
 
 fs.writeFileSync('public/hyderabad-2-selector.html', html, 'utf8');
-console.log('Successfully regenerated public/hyderabad-2-selector.html with all 106 items!');
+console.log('Successfully regenerated public/hyderabad-2-selector.html with all 114 items!');

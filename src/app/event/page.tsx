@@ -260,7 +260,7 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/hyderabad-2/hyderabad-2-09.jpg",
-        caption: "Industry–Academia Synergy: Designing Future-Ready Curricula",
+        caption: "Front Row Executive Assembly: SOA Leadership Delegation & Corporate Dignitaries at Le Meridien Hyderabad",
         objectPosition: "50% 25%",
       },
       {
@@ -270,12 +270,12 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/hyderabad-2/hyderabad-2-11.jpg",
-        caption: "Enterprise Technology Leaders Deliberating Strategic Mentorship",
+        caption: "Executive Panel Perspective: Bikram K. Nayak (VP HR, NCC Ltd) Deliberating on Emerging Workforce Capability",
         objectPosition: "50% 25%",
       },
       {
         src: "/conclave-moments/hyderabad-2/hyderabad-2-12.jpg",
-        caption: "Leadership Dialogue on Innovation, IP & Sovereign Capability",
+        caption: "Conclave Panel Discourse: Moderator Prof. Sanjay Dhir (IIT Delhi) & Corporate Panelists on Stage",
         objectPosition: "50% 25%",
       },
       {
@@ -285,7 +285,7 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/hyderabad-2/hyderabad-2-14.jpg",
-        caption: "Campus-to-Corporate Transitions: Mentorship in Action",
+        caption: "Interactive Panel Discourse: Industry Leaders Addressing Campus-to-Corporate Transitions",
         objectPosition: "50% 25%",
       },
       {
@@ -310,17 +310,17 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/hyderabad-2/hyderabad-2-19.jpg",
-        caption: "Bilateral Leadership Exchanges in the Executive Foyer",
+        caption: "Chief Guest Fireside: Dr. G. Srinivas Patnaik (Secretary, Athletics Federation of India) on Discipline & Grit",
         objectPosition: "50% 25%",
       },
       {
         src: "/conclave-moments/hyderabad-2/hyderabad-2-20.jpg",
-        caption: "Corporate Delegates & Tech Corridor Leaders Networking",
+        caption: "Dais Felicitation: Dr. G. Srinivas Patnaik Presenting Floral Honors to University Leadership",
         objectPosition: "50% 25%",
       },
       {
         src: "/conclave-moments/hyderabad-2/hyderabad-2-21.jpg",
-        caption: "Enterprise HR Heads & University Leadership Consultations",
+        caption: "Conclave Floor Camaraderie: Corporate HR Leaders & Young Professionals Capturing Conclave Memories",
         objectPosition: "50% 25%",
       },
       {
@@ -330,7 +330,7 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/hyderabad-2/hyderabad-2-23.jpg",
-        caption: "Grand Conclave Ensemble: Luminaries, Faculty & Industry Leaders",
+        caption: "Grand Conclave Plenary Ensemble: 10 Distinguished Dignitaries, Panelists & Academic Leaders on Dais",
         objectPosition: "50% 30%",
       },
       {
