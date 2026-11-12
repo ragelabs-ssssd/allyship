@@ -3,41 +3,103 @@ import path from 'path';
 
 const momentsDir = 'public/conclave-moments/hyderabad-2';
 const candDir = 'public/conclave-moments/hyderabad-2/candidates';
+const resDir = 'public/photo-resources/hyderabad-2';
 
-// 1. 24 Currently Deployed Moments
-const deployedMoments = [
-  { id: 'hyderabad-2-01', file: 'hyderabad-2-01.jpg', category: 'Moments', desc: 'Ceremonial Lamp Lighting & Conclave Inaugural Blessing' },
-  { id: 'hyderabad-2-02', file: 'hyderabad-2-02.jpg', category: 'Moments', desc: 'Leadership Conclave Keynote Address from the Dais' },
-  { id: 'hyderabad-2-03', file: 'hyderabad-2-03.jpg', category: 'Moments', desc: 'Grand Plenary Assembly: Enterprise Leaders & University Delegates' },
-  { id: 'hyderabad-2-04', file: 'hyderabad-2-04.jpg', category: 'Moments', desc: 'Executive Panel Dialogue on Cross-Disciplinary Talent Architectures' },
-  { id: 'hyderabad-2-05', file: 'hyderabad-2-05.jpg', category: 'Moments', desc: 'Keynote Deliberations on Sovereign Technological Capabilities' },
-  { id: 'hyderabad-2-06', file: 'hyderabad-2-06.jpg', category: 'Moments', desc: 'Corporate Leadership Perspectives from the Hyderabad Tech Corridor' },
-  { id: 'hyderabad-2-07', file: 'hyderabad-2-07.jpg', category: 'Moments', desc: 'Plenary Assembly: CXOs, R&D Directors & Enterprise Mentors' },
-  { id: 'hyderabad-2-08', file: 'hyderabad-2-08.jpg', category: 'Moments', desc: 'Executive Roundtables: Practicing Allyship for Emerging Talent' },
-  { id: 'hyderabad-2-09', file: 'hyderabad-2-09.jpg', category: 'Moments', desc: 'Industry–Academia Synergy: Designing Future-Ready Curricula' },
-  { id: 'hyderabad-2-10', file: 'hyderabad-2-10.jpg', category: 'Moments', desc: 'Executive Panel Discourse: Cross-Disciplinary Skill Architectures' },
-  { id: 'hyderabad-2-11', file: 'hyderabad-2-11.jpg', category: 'Moments', desc: 'Enterprise Technology Leaders Deliberating Strategic Mentorship' },
-  { id: 'hyderabad-2-12', file: 'hyderabad-2-12.jpg', category: 'Moments', desc: 'Leadership Dialogue on Innovation, IP & Sovereign Capability' },
-  { id: 'hyderabad-2-13', file: 'hyderabad-2-13.jpg', category: 'Moments', desc: 'Interactive Floor Q&A: Corporate Mentors Engaging Young Innovators' },
-  { id: 'hyderabad-2-14', file: 'hyderabad-2-14.jpg', category: 'Moments', desc: 'Campus-to-Corporate Transitions: Mentorship in Action' },
-  { id: 'hyderabad-2-15', file: 'hyderabad-2-15.jpg', category: 'Moments', desc: 'Ceremonial Felicitation & Memento Presentation to Industry Luminaries' },
-  { id: 'hyderabad-2-16', file: 'hyderabad-2-16.jpg', category: 'Moments', desc: 'Academic Honors Bestowed on Corporate Partner Organizations' },
-  { id: 'hyderabad-2-17', file: 'hyderabad-2-17.jpg', category: 'Moments', desc: 'Strategic Industry Partner Recognition on the Conclave Dais' },
-  { id: 'hyderabad-2-18', file: 'hyderabad-2-18.jpg', category: 'Moments', desc: 'Leadership Camaraderie & Academic Alliances on Stage' },
-  { id: 'hyderabad-2-19', file: 'hyderabad-2-19.jpg', category: 'Moments', desc: 'Bilateral Leadership Exchanges in the Executive Foyer' },
-  { id: 'hyderabad-2-20', file: 'hyderabad-2-20.jpg', category: 'Moments', desc: 'Corporate Delegates & Tech Corridor Leaders Networking' },
-  { id: 'hyderabad-2-21', file: 'hyderabad-2-21.jpg', category: 'Moments', desc: 'Enterprise HR Heads & University Leadership Consultations' },
-  { id: 'hyderabad-2-22', file: 'hyderabad-2-22.jpg', category: 'Moments', desc: 'Corporate Mentorship Partnerships Formed at Hyatt Hyderabad' },
-  { id: 'hyderabad-2-23', file: 'hyderabad-2-23.jpg', category: 'Moments', desc: 'Grand Conclave Ensemble: Luminaries, Faculty & Industry Leaders' },
-  { id: 'hyderabad-2-24', file: 'hyderabad-2-24.jpg', category: 'Moments', desc: 'Celebrating Shared Purpose: Sovereign Technological Self-Reliance' },
+// 1. 7 Master DSLR Camera Photos
+const masterDslrPhotos = [
+  {
+    id: 'HYD2_DSLR_01_FRONT_ROW_LEADERSHIP',
+    file: 'HYD2_DSLR_01_FRONT_ROW_LEADERSHIP.jpg',
+    category: 'Leadership',
+    desc: 'SOA Leadership Delegation: Prof. (Dr.) Raj Kumar Hota & Corporate Dignitaries in Plenary Assembly (Orange Armchairs)'
+  },
+  {
+    id: 'HYD2_DSLR_02_STAGE_FELICITATION_MEMENTO',
+    file: 'HYD2_DSLR_02_STAGE_FELICITATION_MEMENTO.jpg',
+    category: 'Felicitations',
+    desc: 'Ceremonial Felicitation: SOA Leadership Presenting Commemorative Conclave Memento on Stage'
+  },
+  {
+    id: 'HYD2_DSLR_03_KEYNOTE_SPEAKER_MICROPHONE',
+    file: 'HYD2_DSLR_03_KEYNOTE_SPEAKER_MICROPHONE.jpg',
+    category: 'Keynote',
+    desc: 'Executive Keynote Dialogue: Industry Speaker Addressing the Hyderabad Conclave at Microphone'
+  },
+  {
+    id: 'HYD2_DSLR_04_WIDE_PLENARY_HALL_FRONT',
+    file: 'HYD2_DSLR_04_WIDE_PLENARY_HALL_FRONT.jpg',
+    category: 'Plenary',
+    desc: 'Grand Plenary Assembly: Enterprise Leaders & University Delegates at Le Meridien Hyderabad (Chandelier & Full Hall)'
+  },
+  {
+    id: 'HYD2_DSLR_05_PLENARY_ASSEMBLY_REAR_VIEW',
+    file: 'HYD2_DSLR_05_PLENARY_ASSEMBLY_REAR_VIEW.jpg',
+    category: 'Plenary',
+    desc: 'Plenary Hall Perspective: Corporate CXOs & Enterprise Leaders Facing Main Digital Dais Screen'
+  },
+  {
+    id: 'HYD2_DSLR_06_FRONT_ROW_DIGNITARIES',
+    file: 'HYD2_DSLR_06_FRONT_ROW_DIGNITARIES.jpg',
+    category: 'Enterprise',
+    desc: 'Corporate Leadership Perspectives: Senior Dignitaries Engaged in Plenary Deliberations'
+  },
+  {
+    id: 'HYD2_DSLR_07_CORPORATE_DELEGATES_ASSEMBLY',
+    file: 'HYD2_DSLR_07_CORPORATE_DELEGATES_ASSEMBLY.jpg',
+    category: 'Roundtable',
+    desc: 'Executive Roundtables: Corporate Delegates Collaborating at Le Meridien Hyderabad Banquet Tables'
+  }
 ];
 
-// 2. Candidate Frames Extracted Across the Video
+// 2. 24 Currently Deployed Moments
+const deployedMoments = [
+  { id: 'hyderabad-2-01', file: 'hyderabad-2-01.jpg', category: 'Tradition', desc: 'Ceremonial Lamp Lighting & Conclave Inaugural Blessing' },
+  { id: 'hyderabad-2-02', file: 'hyderabad-2-02.jpg', category: 'Keynote', desc: 'Executive Keynote Dialogue: Industry Speaker Addressing the Hyderabad Conclave' },
+  { id: 'hyderabad-2-03', file: 'hyderabad-2-03.jpg', category: 'Plenary', desc: 'Grand Plenary Assembly: Enterprise Leaders & University Delegates at Le Meridien Hyderabad' },
+  { id: 'hyderabad-2-04', file: 'hyderabad-2-04.jpg', category: 'Leadership', desc: 'SOA Leadership Delegation: Prof. (Dr.) Raj Kumar Hota & Corporate Dignitaries in Plenary Assembly' },
+  { id: 'hyderabad-2-05', file: 'hyderabad-2-05.jpg', category: 'Keynote', desc: 'Keynote Deliberations on Sovereign Technological Capabilities' },
+  { id: 'hyderabad-2-06', file: 'hyderabad-2-06.jpg', category: 'Enterprise', desc: 'Corporate Leadership Perspectives: Senior Dignitaries Engaged in Plenary Deliberations' },
+  { id: 'hyderabad-2-07', file: 'hyderabad-2-07.jpg', category: 'Plenary', desc: 'Plenary Hall Perspective: Corporate CXOs & Enterprise Leaders Facing Main Digital Dais' },
+  { id: 'hyderabad-2-08', file: 'hyderabad-2-08.jpg', category: 'Roundtable', desc: 'Executive Roundtables: Corporate Delegates Collaborating at Le Meridien Hyderabad' },
+  { id: 'hyderabad-2-09', file: 'hyderabad-2-09.jpg', category: 'Curriculum', desc: 'Industry–Academia Synergy: Designing Future-Ready Curricula' },
+  { id: 'hyderabad-2-10', file: 'hyderabad-2-10.jpg', category: 'Panel', desc: 'Executive Panel Discourse: Cross-Disciplinary Skill Architectures' },
+  { id: 'hyderabad-2-11', file: 'hyderabad-2-11.jpg', category: 'Panel', desc: 'Enterprise Technology Leaders Deliberating Strategic Mentorship' },
+  { id: 'hyderabad-2-12', file: 'hyderabad-2-12.jpg', category: 'Dialogue', desc: 'Leadership Dialogue on Innovation, IP & Sovereign Capability' },
+  { id: 'hyderabad-2-13', file: 'hyderabad-2-13.jpg', category: 'Q&A', desc: 'Interactive Floor Q&A: Corporate Mentors Engaging Young Innovators' },
+  { id: 'hyderabad-2-14', file: 'hyderabad-2-14.jpg', category: 'Mentorship', desc: 'Campus-to-Corporate Transitions: Mentorship in Action' },
+  { id: 'hyderabad-2-15', file: 'hyderabad-2-15.jpg', category: 'Felicitations', desc: 'Ceremonial Felicitation: SOA Leadership Presenting Commemorative Conclave Memento on Stage' },
+  { id: 'hyderabad-2-16', file: 'hyderabad-2-16.jpg', category: 'Felicitations', desc: 'Academic Honors Bestowed on Corporate Partner Organizations' },
+  { id: 'hyderabad-2-17', file: 'hyderabad-2-17.jpg', category: 'Honors', desc: 'Strategic Industry Partner Recognition on the Conclave Dais' },
+  { id: 'hyderabad-2-18', file: 'hyderabad-2-18.jpg', category: 'Alliances', desc: 'Leadership Camaraderie & Academic Alliances on Stage' },
+  { id: 'hyderabad-2-19', file: 'hyderabad-2-19.jpg', category: 'Foyer', desc: 'Bilateral Leadership Exchanges in the Executive Foyer' },
+  { id: 'hyderabad-2-20', file: 'hyderabad-2-20.jpg', category: 'Networking', desc: 'Corporate Delegates & Tech Corridor Leaders Networking' },
+  { id: 'hyderabad-2-21', file: 'hyderabad-2-21.jpg', category: 'Consultation', desc: 'Enterprise HR Heads & University Leadership Consultations' },
+  { id: 'hyderabad-2-22', file: 'hyderabad-2-22.jpg', category: 'Partnerships', desc: 'Corporate Mentorship Partnerships Formed at Hyatt Hyderabad' },
+  { id: 'hyderabad-2-23', file: 'hyderabad-2-23.jpg', category: 'Ensemble', desc: 'Grand Conclave Ensemble: Luminaries, Faculty & Industry Leaders' },
+  { id: 'hyderabad-2-24', file: 'hyderabad-2-24.jpg', category: 'Finale', desc: 'Celebrating Shared Purpose: Sovereign Technological Self-Reliance' },
+];
+
+// 3. Candidate Frames Extracted Across the Video
 const candFiles = fs.existsSync(candDir)
   ? fs.readdirSync(candDir).filter(f => f.endsWith('.jpg')).sort()
   : [];
 
 const allItems = [];
+
+// Add Master DSLR Photos
+for (const p of masterDslrPhotos) {
+  const relPath = `/photo-resources/hyderabad-2/${p.file}`;
+  allItems.push({
+    id: p.id,
+    file: p.file,
+    sourceType: 'Master DSLR',
+    previewUrl: relPath,
+    fullUrl: relPath,
+    category: p.category,
+    desc: p.desc,
+    initialChecked: true,
+  });
+}
 
 // Add Deployed Moments
 for (const m of deployedMoments) {
@@ -151,7 +213,7 @@ const html = `<!DOCTYPE html>
           Hyderabad Chapter 2.0 Conclave Moments & Local Photo Picker
         </h1>
         <p class="text-xs sm:text-sm text-white/60">
-          Browse all 92 pre-loaded moments & video candidate frames, pick photos from your local PC folder, select your 24 favorites, and copy the list for chat.
+          Browse all 99 photos (7 Master DSLR captures + 24 active deployed moments + 68 video frames), pick photos from your local PC folder, select your 24 favorites, and copy the list for chat.
         </p>
       </div>
 
@@ -191,7 +253,10 @@ const html = `<!DOCTYPE html>
       <!-- FILTER TABS -->
       <div class="flex items-center gap-1.5 overflow-x-auto custom-scroll pb-1">
         <button onclick="filterSource('all')" class="filter-tab active px-3 py-1 rounded-lg text-xs font-semibold bg-accent text-black transition" data-source="all">
-          All (<span id="count-all">92</span>)
+          All (<span id="count-all">${allItems.length}</span>)
+        </button>
+        <button onclick="filterSource('Master DSLR')" class="filter-tab px-3 py-1 rounded-lg text-xs font-semibold bg-surface-2 text-white/80 hover:bg-surface-3 transition" data-source="Master DSLR">
+          Master DSLR (7)
         </button>
         <button onclick="filterSource('Active Moments')" class="filter-tab px-3 py-1 rounded-lg text-xs font-semibold bg-surface-2 text-white/80 hover:bg-surface-3 transition" data-source="Active Moments">
           Active Deployed (24)
@@ -294,7 +359,7 @@ const html = `<!DOCTYPE html>
   <script>
     const INITIAL_ITEMS = ${JSON.stringify(allItems, null, 2)};
     let allPhotos = [...INITIAL_ITEMS];
-    let selectedSet = new Set(INITIAL_ITEMS.filter(i => i.initialChecked).map(i => i.id));
+    let selectedSet = new Set(INITIAL_ITEMS.filter(i => i.initialChecked).slice(0, 24).map(i => i.id));
     let currentFilter = 'all';
     let lightboxIndex = 0;
     let visiblePhotos = [];
@@ -323,6 +388,7 @@ const html = `<!DOCTYPE html>
             <!-- SOURCE BADGE -->
             <div class="absolute top-2 left-2 flex items-center gap-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold uppercase \${
+                photo.sourceType === 'Master DSLR' ? 'bg-purple-600 text-white' :
                 photo.sourceType === 'Active Moments' ? 'bg-emerald-500 text-black' :
                 photo.sourceType === 'Video Candidates' ? 'bg-amber-500 text-black' :
                 'bg-blue-500 text-white'
@@ -365,7 +431,6 @@ const html = `<!DOCTYPE html>
         selectedSet.delete(id);
       }
       updateSelectionUI();
-      // update card border style
       const card = document.getElementById('card-' + id);
       if (card) {
         if (selectedSet.has(id)) {
@@ -441,7 +506,7 @@ const html = `<!DOCTYPE html>
     }
 
     function resetToDefaults() {
-      selectedSet = new Set(INITIAL_ITEMS.filter(i => i.initialChecked).map(i => i.id));
+      selectedSet = new Set(INITIAL_ITEMS.filter(i => i.sourceType === 'Active Moments').map(i => i.id));
       renderGrid();
     }
 

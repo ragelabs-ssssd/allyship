@@ -225,17 +225,17 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/hyderabad-2/hyderabad-2-02.jpg",
-        caption: "Leadership Conclave Keynote Address from the Dais",
+        caption: "Executive Keynote Dialogue: Industry Speaker Addressing the Hyderabad Conclave",
         objectPosition: "50% 20%",
       },
       {
         src: "/conclave-moments/hyderabad-2/hyderabad-2-03.jpg",
-        caption: "Grand Plenary Assembly: Enterprise Leaders & University Delegates",
+        caption: "Grand Plenary Assembly: Enterprise Leaders & University Delegates at Le Meridien Hyderabad",
         objectPosition: "50% 30%",
       },
       {
         src: "/conclave-moments/hyderabad-2/hyderabad-2-04.jpg",
-        caption: "Executive Panel Dialogue on Cross-Disciplinary Talent Architectures",
+        caption: "SOA Leadership Delegation: Prof. (Dr.) Raj Kumar Hota & Corporate Dignitaries in Plenary Assembly",
         objectPosition: "50% 25%",
       },
       {
@@ -245,17 +245,17 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/hyderabad-2/hyderabad-2-06.jpg",
-        caption: "Corporate Leadership Perspectives from the Hyderabad Tech Corridor",
+        caption: "Corporate Leadership Perspectives: Senior Dignitaries Engaged in Plenary Deliberations",
         objectPosition: "50% 25%",
       },
       {
         src: "/conclave-moments/hyderabad-2/hyderabad-2-07.jpg",
-        caption: "Plenary Assembly: CXOs, R&D Directors & Enterprise Mentors",
+        caption: "Plenary Hall Perspective: Corporate CXOs & Enterprise Leaders Facing Main Digital Dais",
         objectPosition: "50% 30%",
       },
       {
         src: "/conclave-moments/hyderabad-2/hyderabad-2-08.jpg",
-        caption: "Executive Roundtables: Practicing Allyship for Emerging Talent",
+        caption: "Executive Roundtables: Corporate Delegates Collaborating at Le Meridien Hyderabad",
         objectPosition: "50% 25%",
       },
       {
@@ -290,7 +290,7 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/hyderabad-2/hyderabad-2-15.jpg",
-        caption: "Ceremonial Felicitation & Memento Presentation to Industry Luminaries",
+        caption: "Ceremonial Felicitation: SOA Leadership Presenting Commemorative Conclave Memento on Stage",
         objectPosition: "50% 25%",
       },
       {

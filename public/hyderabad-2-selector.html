@@ -75,7 +75,7 @@
           Hyderabad Chapter 2.0 Conclave Moments & Local Photo Picker
         </h1>
         <p class="text-xs sm:text-sm text-white/60">
-          Browse all 92 pre-loaded moments & video candidate frames, pick photos from your local PC folder, select your 24 favorites, and copy the list for chat.
+          Browse all 99 photos (7 Master DSLR captures + 24 active deployed moments + 68 video frames), pick photos from your local PC folder, select your 24 favorites, and copy the list for chat.
         </p>
       </div>
 
@@ -115,7 +115,10 @@
       <!-- FILTER TABS -->
       <div class="flex items-center gap-1.5 overflow-x-auto custom-scroll pb-1">
         <button onclick="filterSource('all')" class="filter-tab active px-3 py-1 rounded-lg text-xs font-semibold bg-accent text-black transition" data-source="all">
-          All (<span id="count-all">92</span>)
+          All (<span id="count-all">99</span>)
+        </button>
+        <button onclick="filterSource('Master DSLR')" class="filter-tab px-3 py-1 rounded-lg text-xs font-semibold bg-surface-2 text-white/80 hover:bg-surface-3 transition" data-source="Master DSLR">
+          Master DSLR (7)
         </button>
         <button onclick="filterSource('Active Moments')" class="filter-tab px-3 py-1 rounded-lg text-xs font-semibold bg-surface-2 text-white/80 hover:bg-surface-3 transition" data-source="Active Moments">
           Active Deployed (24)
@@ -218,6 +221,76 @@
   <script>
     const INITIAL_ITEMS = [
   {
+    "id": "HYD2_DSLR_01_FRONT_ROW_LEADERSHIP",
+    "file": "HYD2_DSLR_01_FRONT_ROW_LEADERSHIP.jpg",
+    "sourceType": "Master DSLR",
+    "previewUrl": "/photo-resources/hyderabad-2/HYD2_DSLR_01_FRONT_ROW_LEADERSHIP.jpg",
+    "fullUrl": "/photo-resources/hyderabad-2/HYD2_DSLR_01_FRONT_ROW_LEADERSHIP.jpg",
+    "category": "Leadership",
+    "desc": "SOA Leadership Delegation: Prof. (Dr.) Raj Kumar Hota & Corporate Dignitaries in Plenary Assembly (Orange Armchairs)",
+    "initialChecked": true
+  },
+  {
+    "id": "HYD2_DSLR_02_STAGE_FELICITATION_MEMENTO",
+    "file": "HYD2_DSLR_02_STAGE_FELICITATION_MEMENTO.jpg",
+    "sourceType": "Master DSLR",
+    "previewUrl": "/photo-resources/hyderabad-2/HYD2_DSLR_02_STAGE_FELICITATION_MEMENTO.jpg",
+    "fullUrl": "/photo-resources/hyderabad-2/HYD2_DSLR_02_STAGE_FELICITATION_MEMENTO.jpg",
+    "category": "Felicitations",
+    "desc": "Ceremonial Felicitation: SOA Leadership Presenting Commemorative Conclave Memento on Stage",
+    "initialChecked": true
+  },
+  {
+    "id": "HYD2_DSLR_03_KEYNOTE_SPEAKER_MICROPHONE",
+    "file": "HYD2_DSLR_03_KEYNOTE_SPEAKER_MICROPHONE.jpg",
+    "sourceType": "Master DSLR",
+    "previewUrl": "/photo-resources/hyderabad-2/HYD2_DSLR_03_KEYNOTE_SPEAKER_MICROPHONE.jpg",
+    "fullUrl": "/photo-resources/hyderabad-2/HYD2_DSLR_03_KEYNOTE_SPEAKER_MICROPHONE.jpg",
+    "category": "Keynote",
+    "desc": "Executive Keynote Dialogue: Industry Speaker Addressing the Hyderabad Conclave at Microphone",
+    "initialChecked": true
+  },
+  {
+    "id": "HYD2_DSLR_04_WIDE_PLENARY_HALL_FRONT",
+    "file": "HYD2_DSLR_04_WIDE_PLENARY_HALL_FRONT.jpg",
+    "sourceType": "Master DSLR",
+    "previewUrl": "/photo-resources/hyderabad-2/HYD2_DSLR_04_WIDE_PLENARY_HALL_FRONT.jpg",
+    "fullUrl": "/photo-resources/hyderabad-2/HYD2_DSLR_04_WIDE_PLENARY_HALL_FRONT.jpg",
+    "category": "Plenary",
+    "desc": "Grand Plenary Assembly: Enterprise Leaders & University Delegates at Le Meridien Hyderabad (Chandelier & Full Hall)",
+    "initialChecked": true
+  },
+  {
+    "id": "HYD2_DSLR_05_PLENARY_ASSEMBLY_REAR_VIEW",
+    "file": "HYD2_DSLR_05_PLENARY_ASSEMBLY_REAR_VIEW.jpg",
+    "sourceType": "Master DSLR",
+    "previewUrl": "/photo-resources/hyderabad-2/HYD2_DSLR_05_PLENARY_ASSEMBLY_REAR_VIEW.jpg",
+    "fullUrl": "/photo-resources/hyderabad-2/HYD2_DSLR_05_PLENARY_ASSEMBLY_REAR_VIEW.jpg",
+    "category": "Plenary",
+    "desc": "Plenary Hall Perspective: Corporate CXOs & Enterprise Leaders Facing Main Digital Dais Screen",
+    "initialChecked": true
+  },
+  {
+    "id": "HYD2_DSLR_06_FRONT_ROW_DIGNITARIES",
+    "file": "HYD2_DSLR_06_FRONT_ROW_DIGNITARIES.jpg",
+    "sourceType": "Master DSLR",
+    "previewUrl": "/photo-resources/hyderabad-2/HYD2_DSLR_06_FRONT_ROW_DIGNITARIES.jpg",
+    "fullUrl": "/photo-resources/hyderabad-2/HYD2_DSLR_06_FRONT_ROW_DIGNITARIES.jpg",
+    "category": "Enterprise",
+    "desc": "Corporate Leadership Perspectives: Senior Dignitaries Engaged in Plenary Deliberations",
+    "initialChecked": true
+  },
+  {
+    "id": "HYD2_DSLR_07_CORPORATE_DELEGATES_ASSEMBLY",
+    "file": "HYD2_DSLR_07_CORPORATE_DELEGATES_ASSEMBLY.jpg",
+    "sourceType": "Master DSLR",
+    "previewUrl": "/photo-resources/hyderabad-2/HYD2_DSLR_07_CORPORATE_DELEGATES_ASSEMBLY.jpg",
+    "fullUrl": "/photo-resources/hyderabad-2/HYD2_DSLR_07_CORPORATE_DELEGATES_ASSEMBLY.jpg",
+    "category": "Roundtable",
+    "desc": "Executive Roundtables: Corporate Delegates Collaborating at Le Meridien Hyderabad Banquet Tables",
+    "initialChecked": true
+  },
+  {
     "id": "hyderabad-2-01",
     "file": "hyderabad-2-01.jpg",
     "sourceType": "Active Moments",
@@ -234,7 +307,7 @@
     "previewUrl": "/conclave-moments/hyderabad-2/hyderabad-2-02.jpg",
     "fullUrl": "/conclave-moments/hyderabad-2/hyderabad-2-02.jpg",
     "category": "Active (Current)",
-    "desc": "Leadership Conclave Keynote Address from the Dais",
+    "desc": "Executive Keynote Dialogue: Industry Speaker Addressing the Hyderabad Conclave",
     "initialChecked": true
   },
   {
@@ -244,7 +317,7 @@
     "previewUrl": "/conclave-moments/hyderabad-2/hyderabad-2-03.jpg",
     "fullUrl": "/conclave-moments/hyderabad-2/hyderabad-2-03.jpg",
     "category": "Active (Current)",
-    "desc": "Grand Plenary Assembly: Enterprise Leaders & University Delegates",
+    "desc": "Grand Plenary Assembly: Enterprise Leaders & University Delegates at Le Meridien Hyderabad",
     "initialChecked": true
   },
   {
@@ -254,7 +327,7 @@
     "previewUrl": "/conclave-moments/hyderabad-2/hyderabad-2-04.jpg",
     "fullUrl": "/conclave-moments/hyderabad-2/hyderabad-2-04.jpg",
     "category": "Active (Current)",
-    "desc": "Executive Panel Dialogue on Cross-Disciplinary Talent Architectures",
+    "desc": "SOA Leadership Delegation: Prof. (Dr.) Raj Kumar Hota & Corporate Dignitaries in Plenary Assembly",
     "initialChecked": true
   },
   {
@@ -274,7 +347,7 @@
     "previewUrl": "/conclave-moments/hyderabad-2/hyderabad-2-06.jpg",
     "fullUrl": "/conclave-moments/hyderabad-2/hyderabad-2-06.jpg",
     "category": "Active (Current)",
-    "desc": "Corporate Leadership Perspectives from the Hyderabad Tech Corridor",
+    "desc": "Corporate Leadership Perspectives: Senior Dignitaries Engaged in Plenary Deliberations",
     "initialChecked": true
   },
   {
@@ -284,7 +357,7 @@
     "previewUrl": "/conclave-moments/hyderabad-2/hyderabad-2-07.jpg",
     "fullUrl": "/conclave-moments/hyderabad-2/hyderabad-2-07.jpg",
     "category": "Active (Current)",
-    "desc": "Plenary Assembly: CXOs, R&D Directors & Enterprise Mentors",
+    "desc": "Plenary Hall Perspective: Corporate CXOs & Enterprise Leaders Facing Main Digital Dais",
     "initialChecked": true
   },
   {
@@ -294,7 +367,7 @@
     "previewUrl": "/conclave-moments/hyderabad-2/hyderabad-2-08.jpg",
     "fullUrl": "/conclave-moments/hyderabad-2/hyderabad-2-08.jpg",
     "category": "Active (Current)",
-    "desc": "Executive Roundtables: Practicing Allyship for Emerging Talent",
+    "desc": "Executive Roundtables: Corporate Delegates Collaborating at Le Meridien Hyderabad",
     "initialChecked": true
   },
   {
@@ -364,7 +437,7 @@
     "previewUrl": "/conclave-moments/hyderabad-2/hyderabad-2-15.jpg",
     "fullUrl": "/conclave-moments/hyderabad-2/hyderabad-2-15.jpg",
     "category": "Active (Current)",
-    "desc": "Ceremonial Felicitation & Memento Presentation to Industry Luminaries",
+    "desc": "Ceremonial Felicitation: SOA Leadership Presenting Commemorative Conclave Memento on Stage",
     "initialChecked": true
   },
   {
@@ -1139,7 +1212,7 @@
   }
 ];
     let allPhotos = [...INITIAL_ITEMS];
-    let selectedSet = new Set(INITIAL_ITEMS.filter(i => i.initialChecked).map(i => i.id));
+    let selectedSet = new Set(INITIAL_ITEMS.filter(i => i.initialChecked).slice(0, 24).map(i => i.id));
     let currentFilter = 'all';
     let lightboxIndex = 0;
     let visiblePhotos = [];
@@ -1168,6 +1241,7 @@
             <!-- SOURCE BADGE -->
             <div class="absolute top-2 left-2 flex items-center gap-1.5">
               <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold uppercase ${
+                photo.sourceType === 'Master DSLR' ? 'bg-purple-600 text-white' :
                 photo.sourceType === 'Active Moments' ? 'bg-emerald-500 text-black' :
                 photo.sourceType === 'Video Candidates' ? 'bg-amber-500 text-black' :
                 'bg-blue-500 text-white'
@@ -1210,7 +1284,6 @@
         selectedSet.delete(id);
       }
       updateSelectionUI();
-      // update card border style
       const card = document.getElementById('card-' + id);
       if (card) {
         if (selectedSet.has(id)) {
@@ -1286,7 +1359,7 @@
     }
 
     function resetToDefaults() {
-      selectedSet = new Set(INITIAL_ITEMS.filter(i => i.initialChecked).map(i => i.id));
+      selectedSet = new Set(INITIAL_ITEMS.filter(i => i.sourceType === 'Active Moments').map(i => i.id));
       renderGrid();
     }
 
