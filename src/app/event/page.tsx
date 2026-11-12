@@ -205,7 +205,7 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
     city: "Hyderabad",
     date: "May 2026",
     editionBadge: "Allyship++ — 2nd Edition",
-    coverImage: "/conclave-moments/hyderabad-2/hyderabad-2-01.jpg",
+    coverImage: "/slides/IMG_7873.jpg",
     coverPosition: "50% 25%",
     subtitle:
       "Practicing Allyship for Emerging Talent — Keynote deliberations, campus-to-corporate transitions, and curated moments from Gachibowli.",
