@@ -220,7 +220,7 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
     photos: create24PhotoSlots("Hyderabad", [
       {
         src: "/conclave-moments/hyderabad-2/hyderabad-2-01.jpg",
-        caption: "Ceremonial Lamp Lighting & Conclave Inaugural Blessing",
+        caption: "Inaugural Conclave Presidential Address: Academic Leadership Welcoming Corporate Partners at the Podium",
         objectPosition: "50% 25%",
       },
       {
@@ -325,7 +325,7 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/hyderabad-2/hyderabad-2-22.jpg",
-        caption: "Corporate Mentorship Partnerships Formed at Hyatt Hyderabad",
+        caption: "Institutional Felicitation: Floral Honors Bestowed upon Conclave Convener Prof. (Dr.) Raj Kumar Hota",
         objectPosition: "50% 25%",
       },
       {

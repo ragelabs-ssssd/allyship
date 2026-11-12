@@ -5,7 +5,7 @@ const momentsDir = 'public/conclave-moments/hyderabad-2';
 const candDir = 'public/conclave-moments/hyderabad-2/candidates';
 const resDir = 'public/photo-resources/hyderabad-2';
 
-// 1. 22 Master DSLR Camera Photos
+// 1. 24 Master DSLR Camera Photos
 const masterDslrPhotos = [
   { id: 'HYD2_DSLR_01_FRONT_ROW_LEADERSHIP', file: 'HYD2_DSLR_01_FRONT_ROW_LEADERSHIP.jpg', category: 'Leadership', desc: 'SOA Leadership Delegation: Prof. (Dr.) Raj Kumar Hota & Corporate Dignitaries in Plenary Assembly (Orange Armchairs)' },
   { id: 'HYD2_DSLR_02_STAGE_FELICITATION_MEMENTO', file: 'HYD2_DSLR_02_STAGE_FELICITATION_MEMENTO.jpg', category: 'Felicitations', desc: 'Ceremonial Felicitation: SOA Leadership Presenting Commemorative Conclave Memento on Stage' },
@@ -29,11 +29,13 @@ const masterDslrPhotos = [
   { id: 'HYD2_DSLR_20_PANEL_INTERACTIVE_MOMENT', file: 'HYD2_DSLR_20_PANEL_INTERACTIVE_MOMENT.jpg', category: 'Panel', desc: 'Interactive Panel Discourse: Industry Leaders Addressing Campus-to-Corporate Transitions' },
   { id: 'HYD2_DSLR_21_SPORTS_GUEST_KEYNOTE', file: 'HYD2_DSLR_21_SPORTS_GUEST_KEYNOTE.jpg', category: 'Sports Guest', desc: 'Chief Guest Fireside: Dr. G. Srinivas Patnaik (Secretary, Athletics Federation of India) on Discipline & Grit' },
   { id: 'HYD2_DSLR_22_ROSE_BOUQUET_FELICITATION', file: 'HYD2_DSLR_22_ROSE_BOUQUET_FELICITATION.jpg', category: 'Felicitations', desc: 'Dais Felicitation: Dr. G. Srinivas Patnaik Presenting Floral Honors to University Leadership' },
+  { id: 'HYD2_DSLR_23_PODIUM_INAUGURAL_ADDRESS', file: 'HYD2_DSLR_23_PODIUM_INAUGURAL_ADDRESS.jpg', category: 'Keynote', desc: 'Inaugural Conclave Presidential Address: Academic Leadership Welcoming Corporate Partners at the Podium' },
+  { id: 'HYD2_DSLR_24_HOTA_FLORAL_FELICITATION', file: 'HYD2_DSLR_24_HOTA_FLORAL_FELICITATION.jpg', category: 'Felicitations', desc: 'Institutional Felicitation: Floral Honors Bestowed upon Conclave Convener Prof. (Dr.) Raj Kumar Hota' },
 ];
 
-// 2. 24 Currently Deployed Moments
+// 2. 24 Currently Deployed Moments (100% Authentic DSLR)
 const deployedMoments = [
-  { id: 'hyderabad-2-01', file: 'hyderabad-2-01.jpg', category: 'Tradition', desc: 'Ceremonial Lamp Lighting & Conclave Inaugural Blessing' },
+  { id: 'hyderabad-2-01', file: 'hyderabad-2-01.jpg', category: 'Keynote', desc: 'Inaugural Conclave Presidential Address: Academic Leadership Welcoming Corporate Partners at the Podium' },
   { id: 'hyderabad-2-02', file: 'hyderabad-2-02.jpg', category: 'Keynote', desc: 'Executive Keynote Dialogue: Industry Speaker Addressing the Hyderabad Conclave' },
   { id: 'hyderabad-2-03', file: 'hyderabad-2-03.jpg', category: 'Plenary', desc: 'Grand Plenary Assembly: Enterprise Leaders & University Delegates at Le Meridien Hyderabad' },
   { id: 'hyderabad-2-04', file: 'hyderabad-2-04.jpg', category: 'Leadership', desc: 'SOA Leadership Delegation: Prof. (Dr.) Raj Kumar Hota & Corporate Dignitaries in Plenary Assembly' },
@@ -54,7 +56,7 @@ const deployedMoments = [
   { id: 'hyderabad-2-19', file: 'hyderabad-2-19.jpg', category: 'Sports Guest', desc: 'Chief Guest Fireside: Dr. G. Srinivas Patnaik (Secretary, Athletics Federation of India) on Discipline & Grit' },
   { id: 'hyderabad-2-20', file: 'hyderabad-2-20.jpg', category: 'Felicitations', desc: 'Dais Felicitation: Dr. G. Srinivas Patnaik Presenting Floral Honors to University Leadership' },
   { id: 'hyderabad-2-21', file: 'hyderabad-2-21.jpg', category: 'Networking', desc: 'Conclave Floor Camaraderie: Corporate HR Leaders & Young Professionals Capturing Conclave Memories' },
-  { id: 'hyderabad-2-22', file: 'hyderabad-2-22.jpg', category: 'Partnerships', desc: 'Corporate Mentorship Partnerships Formed at Hyatt Hyderabad' },
+  { id: 'hyderabad-2-22', file: 'hyderabad-2-22.jpg', category: 'Felicitations', desc: 'Institutional Felicitation: Floral Honors Bestowed upon Conclave Convener Prof. (Dr.) Raj Kumar Hota' },
   { id: 'hyderabad-2-23', file: 'hyderabad-2-23.jpg', category: 'Ensemble', desc: 'Grand Conclave Plenary Ensemble: 10 Distinguished Dignitaries, Panelists & Academic Leaders on Dais' },
   { id: 'hyderabad-2-24', file: 'hyderabad-2-24.jpg', category: 'Finale', desc: 'Grand Plenary Ovation: Corporate Delegates Celebrating Shared Purpose & Industry-Academia Synergy' },
 ];
@@ -589,4 +591,4 @@ const html = `<!DOCTYPE html>
 `;
 
 fs.writeFileSync('public/hyderabad-2-selector.html', html, 'utf8');
-console.log('Successfully regenerated public/hyderabad-2-selector.html with all 114 items!');
+console.log('Successfully regenerated public/hyderabad-2-selector.html with all 116 items!');
