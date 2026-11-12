@@ -9,19 +9,13 @@ if (!fs.existsSync(outDir)) {
   fs.mkdirSync(outDir, { recursive: true });
 }
 
-// 12 Elite Curated Moments - Strictly crowded plenary, awarding, Olympic fireside, VC address, and panel exchange
+// 12 Elite Curated Moments - Strictly stage, honors, Olympic fireside, VC address, and panel exchange
 export const chennaiMoments = [
-  // ROW 1: Plenary Hall & Ceremonial Honors
+  // ROW 1: Plenary Ensemble & Stage Honors
   {
     src: 'CON01670.JPG',
     caption: 'Grand Conclave Plenary Ensemble: Corporate Leaders & SOA Academic Leadership at Chennai',
     pos: '50% 35%',
-    type: 'full'
-  },
-  {
-    src: 'CON01643.JPG',
-    caption: 'Plenary Assembly & Audience Perspective: Corporate Delegates Engaged at Hyatt Regency Chennai',
-    pos: '50% 30%',
     type: 'full'
   },
   {
@@ -36,14 +30,14 @@ export const chennaiMoments = [
     pos: '50% 30%',
     type: 'vip-crop'
   },
-
-  // ROW 2: Olympic Fireside & Presidential Address
   {
     src: 'CON01493.JPG',
     caption: 'Inaugural Felicitation & Welcome Honor for Olympic Luminary Premanand J.',
     pos: '50% 25%',
     type: 'full'
   },
+
+  // ROW 2: Olympic Fireside & VC Address
   {
     src: 'CON01502.JPG',
     caption: 'Plenary Fireside Session: Paris Olympics National Sprint Coach Premanand J. on Dais',
@@ -62,11 +56,17 @@ export const chennaiMoments = [
     pos: '50% 20%',
     type: 'full'
   },
-
-  // ROW 3: Strategic Panel Deliberations & Dais Lineup
   {
     src: 'CON01567.JPG',
     caption: 'Strategic Panel Deliberations: Practicing Allyship as a Core Corporate Responsibility',
+    pos: '50% 30%',
+    type: 'full'
+  },
+
+  // ROW 3: Panel Deliberations & Lineup
+  {
+    src: 'CON01587.JPG',
+    caption: 'Enterprise Leaders Examining Cross-Disciplinary Talent Development & Innovation',
     pos: '50% 30%',
     type: 'full'
   },

@@ -251,42 +251,42 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/chennai-2/chennai-2-02.jpg",
-        caption: "Plenary Assembly & Audience Perspective: Corporate Delegates Engaged at Hyatt Regency Chennai",
-        objectPosition: "50% 30%",
-      },
-      {
-        src: "/conclave-moments/chennai-2/chennai-2-03.jpg",
         caption: "Ceremonial Shawl & Commemorative Conclave Memento Presentation to Olympic Sprint Coach Premanand J.",
         objectPosition: "50% 25%",
       },
       {
-        src: "/conclave-moments/chennai-2/chennai-2-04.jpg",
+        src: "/conclave-moments/chennai-2/chennai-2-03.jpg",
         caption: "Dignitaries & Chief Luminaries on Dais at the ALLYSHIP 2.0 Chennai Chapter",
         objectPosition: "50% 30%",
       },
       {
-        src: "/conclave-moments/chennai-2/chennai-2-05.jpg",
+        src: "/conclave-moments/chennai-2/chennai-2-04.jpg",
         caption: "Inaugural Felicitation & Welcome Honor for Olympic Luminary Premanand J.",
         objectPosition: "50% 25%",
       },
       {
-        src: "/conclave-moments/chennai-2/chennai-2-06.jpg",
+        src: "/conclave-moments/chennai-2/chennai-2-05.jpg",
         caption: "Plenary Fireside Session: Paris Olympics National Sprint Coach Premanand J. on Dais",
         objectPosition: "50% 30%",
       },
       {
-        src: "/conclave-moments/chennai-2/chennai-2-07.jpg",
+        src: "/conclave-moments/chennai-2/chennai-2-06.jpg",
         caption: "Fireside Dialogue: Olympic Lessons in Mentorship, Resilience & Sustained Performance",
         objectPosition: "50% 20%",
       },
       {
-        src: "/conclave-moments/chennai-2/chennai-2-08.jpg",
+        src: "/conclave-moments/chennai-2/chennai-2-07.jpg",
         caption: "Vice-Chancellor Prof. (Dr.) Pradipta Kumar Nanda Delivering the Presidential Conclave Address",
         objectPosition: "50% 20%",
       },
       {
-        src: "/conclave-moments/chennai-2/chennai-2-09.jpg",
+        src: "/conclave-moments/chennai-2/chennai-2-08.jpg",
         caption: "Strategic Panel Deliberations: Practicing Allyship as a Core Corporate Responsibility",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/chennai-2/chennai-2-09.jpg",
+        caption: "Enterprise Leaders Examining Cross-Disciplinary Talent Development & Innovation",
         objectPosition: "50% 30%",
       },
       {
