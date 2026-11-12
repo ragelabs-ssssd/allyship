@@ -240,7 +240,7 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/hyderabad-2/hyderabad-2-05.jpg",
-        caption: "Keynote Deliberations on Sovereign Technological Capabilities",
+        caption: "Prof. (Dr.) Raj Kumar Hota Delivering the Conclave Leadership Keynote Address from the Podium",
         objectPosition: "50% 20%",
       },
       {
@@ -265,7 +265,7 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/hyderabad-2/hyderabad-2-10.jpg",
-        caption: "Executive Panel Discourse: Cross-Disciplinary Skill Architectures",
+        caption: "Executive Panel Deliberations: Corporate HR & Capability Leaders Addressing the Assembly",
         objectPosition: "50% 25%",
       },
       {
@@ -280,7 +280,7 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/hyderabad-2/hyderabad-2-13.jpg",
-        caption: "Interactive Floor Q&A: Corporate Mentors Engaging Young Innovators",
+        caption: "Interactive Floor Q&A: Corporate Delegate Engaging Conclave Panelists on Talent Readiness",
         objectPosition: "50% 25%",
       },
       {
@@ -295,17 +295,17 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/hyderabad-2/hyderabad-2-16.jpg",
-        caption: "Academic Honors Bestowed on Corporate Partner Organizations",
+        caption: "Academic Honors & Recognition: Commemorative Conclave Memento Presented to Corporate Dignitary",
         objectPosition: "50% 25%",
       },
       {
         src: "/conclave-moments/hyderabad-2/hyderabad-2-17.jpg",
-        caption: "Strategic Industry Partner Recognition on the Conclave Dais",
+        caption: "Strategic Industry Partner Felicitation: SOA Leadership Presenting Honors to Corporate Luminary",
         objectPosition: "50% 25%",
       },
       {
         src: "/conclave-moments/hyderabad-2/hyderabad-2-18.jpg",
-        caption: "Leadership Camaraderie & Academic Alliances on Stage",
+        caption: "Inaugural Stage Felicitation: Floral Bouquet & Conclave Welcome Bestowed on Keynote Speaker",
         objectPosition: "50% 25%",
       },
       {
@@ -335,7 +335,7 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
       },
       {
         src: "/conclave-moments/hyderabad-2/hyderabad-2-24.jpg",
-        caption: "Celebrating Shared Purpose: Sovereign Technological Self-Reliance",
+        caption: "Grand Plenary Ovation: Corporate Delegates Celebrating Shared Purpose & Industry-Academia Synergy",
         objectPosition: "50% 25%",
       },
     ]),
