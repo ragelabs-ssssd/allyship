@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALLYSHIP++ | Hyderabad 2.0 Conclave Moments & Video</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            accent: '#C5A869',
+            'accent-light': '#E8D5A7',
+            canvas: '#0B0F19',
+            surface: '#111827',
+            'surface-2': '#1F2937',
+            'surface-3': '#374151',
+            line: 'rgba(255, 255, 255, 0.12)',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #0B0F19; color: #FFFFFF; font-family: 'Inter', sans-serif; }
+    .badge-number {
+      background: #C5A869;
+      color: #000;
+      font-weight: 800;
+      width: 26px;
+      height: 26px;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+  </style>
+</head>
+<body class="min-h-screen pb-32">
+
+  <!-- TOP STICKY BAR -->
+  <header class="sticky top-0 z-40 bg-surface/95 backdrop-blur-md border-b border-line px-4 sm:px-6 py-4 shadow-xl">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
+      <div>
+        <div class="flex items-center gap-3">
+          <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-accent/15 text-accent border border-accent/30">
+            Conclave Media Review
+          </span>
+          <h1 class="text-xl sm:text-2xl font-display font-extrabold tracking-tight text-white">
+            Hyderabad 2.0 Conclave Film & 24 Moments
+          </h1>
+        </div>
+        <p class="text-xs text-gray-400 mt-1">
+          24 full HD conclave moments curated directly from the master 1080p film (<span class="font-mono text-accent">SOA Allyship++ 2.O Hyd-02.mp4</span>).
+        </p>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="/event#hyderabad-2" class="px-4 py-2.5 rounded-xl bg-accent hover:bg-accent-light text-black font-extrabold text-xs uppercase tracking-wider transition-all shadow-lg shadow-accent/20 flex items-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          View on Main Event Page
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MASTER VIDEO PLAYER PREVIEW -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-6">
+    <div class="bg-surface-2 border border-line rounded-2xl overflow-hidden p-4 sm:p-6 shadow-2xl">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-accent font-mono">Official Conclave Film</span>
+          <h2 class="text-lg font-bold text-white">Hyderabad Chapter 2.0 | Gachibowli Tech Corridor</h2>
+        </div>
+        <span class="text-xs font-mono text-gray-400 bg-surface-3 px-3 py-1 rounded-md">1080p Full HD • 01:42</span>
+      </div>
+      <div class="relative aspect-video w-full rounded-xl overflow-hidden bg-black border border-white/10 shadow-inner">
+        <video 
+          src="/discover/hyderabad-2-conclave-film.mp4" 
+          controls 
+          playsinline 
+          class="w-full h-full object-cover"
+        ></video>
+      </div>
+    </div>
+  </section>
+
+  <!-- 24 CONCLAVE MOMENTS GRID -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 pt-8">
+    <div class="flex items-center justify-between mb-6">
+      <div>
+        <h2 class="text-xl font-display font-extrabold text-white">Curated 24 Conclave Moments</h2>
+        <p class="text-xs text-gray-400">Captured in full 1080p resolution across all chapters of the conclave.</p>
+      </div>
+      <span class="text-xs font-mono text-accent font-bold bg-accent/10 border border-accent/30 px-3 py-1 rounded-lg">
+        24 / 24 Moments Active
+      </span>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[16/9] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/hyderabad-2/hyderabad-2-01.jpg', 'Inaugural Conclave Assembly & ALLYSHIP 2.0 Hyderabad Stage Wall')">
+            <img 
+              src="/conclave-moments/hyderabad-2/hyderabad-2-01.jpg" 
+              alt="Inaugural Conclave Assembly & ALLYSHIP 2.0 Hyderabad Stage Wall" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">1</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Stage & Wall
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">hyderabad-2-01.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Inaugural Conclave Assembly & ALLYSHIP 2.0 Hyderabad Stage Wall
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[16/9] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/hyderabad-2/hyderabad-2-02.jpg', 'Ceremonial Conclave Lamp Lighting & Auspicious Invocation')">
+            <img 
+              src="/conclave-moments/hyderabad-2/hyderabad-2-02.jpg" 
+              alt="Ceremonial Conclave Lamp Lighting & Auspicious Invocation" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">2</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Tradition
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">hyderabad-2-02.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Ceremonial Conclave Lamp Lighting & Auspicious Invocation
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[16/9] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/hyderabad-2/hyderabad-2-03.jpg', 'Distinguished Dais Leadership & University Dignitaries')">
+            <img 
+              src="/conclave-moments/hyderabad-2/hyderabad-2-03.jpg" 
+              alt="Distinguished Dais Leadership & University Dignitaries" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">3</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Dais Leadership
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">hyderabad-2-03.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Distinguished Dais Leadership & University Dignitaries
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[16/9] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/hyderabad-2/hyderabad-2-04.jpg', 'Presidential Conclave Address: Academic & Scientific Excellence')">
+            <img 
+              src="/conclave-moments/hyderabad-2/hyderabad-2-04.jpg" 
+              alt="Presidential Conclave Address: Academic & Scientific Excellence" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">4</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Keynote
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">hyderabad-2-04.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Presidential Conclave Address: Academic & Scientific Excellence
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[16/9] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/hyderabad-2/hyderabad-2-05.jpg', 'Keynote Deliberations on Sovereign Technological Capabilities')">
+            <img 
+              src="/conclave-moments/hyderabad-2/hyderabad-2-05.jpg" 
+              alt="Keynote Deliberations on Sovereign Technological Capabilities" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">5</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Keynote
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">hyderabad-2-05.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Keynote Deliberations on Sovereign Technological Capabilities
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[16/9] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/hyderabad-2/hyderabad-2-06.jpg', 'Corporate Leadership Perspectives from the Hyderabad Tech Corridor')">
+            <img 
+              src="/conclave-moments/hyderabad-2/hyderabad-2-06.jpg" 
+              alt="Corporate Leadership Perspectives from the Hyderabad Tech Corridor" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">6</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Enterprise
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">hyderabad-2-06.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Corporate Leadership Perspectives from the Hyderabad Tech Corridor
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[16/9] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/hyderabad-2/hyderabad-2-07.jpg', 'Plenary Assembly: CXOs, R&D Directors & Enterprise Mentors')">
+            <img 
+              src="/conclave-moments/hyderabad-2/hyderabad-2-07.jpg" 
+              alt="Plenary Assembly: CXOs, R&D Directors & Enterprise Mentors" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">7</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Plenary
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">hyderabad-2-07.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Plenary Assembly: CXOs, R&D Directors & Enterprise Mentors
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[16/9] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/hyderabad-2/hyderabad-2-08.jpg', 'Executive Roundtables: Practicing Allyship for Emerging Talent')">
+            <img 
+              src="/conclave-moments/hyderabad-2/hyderabad-2-08.jpg" 
+              alt="Executive Roundtables: Practicing Allyship for Emerging Talent" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">8</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Roundtable
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">hyderabad-2-08.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Executive Roundtables: Practicing Allyship for Emerging Talent
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[16/9] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/hyderabad-2/hyderabad-2-09.jpg', 'Industry–Academia Synergy: Designing Future-Ready Curricula')">
+            <img 
+              src="/conclave-moments/hyderabad-2/hyderabad-2-09.jpg" 
+              alt="Industry–Academia Synergy: Designing Future-Ready Curricula" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">9</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Curriculum
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">hyderabad-2-09.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Industry–Academia Synergy: Designing Future-Ready Curricula
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[16/9] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/hyderabad-2/hyderabad-2-10.jpg', 'Executive Panel Discourse: Cross-Disciplinary Skill Architectures')">
+            <img 
+              src="/conclave-moments/hyderabad-2/hyderabad-2-10.jpg" 
+              alt="Executive Panel Discourse: Cross-Disciplinary Skill Architectures" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">10</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Panel
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">hyderabad-2-10.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Executive Panel Discourse: Cross-Disciplinary Skill Architectures
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[16/9] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/hyderabad-2/hyderabad-2-11.jpg', 'Enterprise Technology Leaders Deliberating Strategic Mentorship')">
+            <img 
+              src="/conclave-moments/hyderabad-2/hyderabad-2-11.jpg" 
+              alt="Enterprise Technology Leaders Deliberating Strategic Mentorship" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">11</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Panel
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">hyderabad-2-11.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Enterprise Technology Leaders Deliberating Strategic Mentorship
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[16/9] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/hyderabad-2/hyderabad-2-12.jpg', 'Leadership Dialogue on Innovation, IP & Sovereign Capability')">
+            <img 
+              src="/conclave-moments/hyderabad-2/hyderabad-2-12.jpg" 
+              alt="Leadership Dialogue on Innovation, IP & Sovereign Capability" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">12</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Dialogue
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">hyderabad-2-12.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Leadership Dialogue on Innovation, IP & Sovereign Capability
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[16/9] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/hyderabad-2/hyderabad-2-13.jpg', 'Interactive Floor Q&A: Corporate Mentors Engaging Young Innovators')">
+            <img 
+              src="/conclave-moments/hyderabad-2/hyderabad-2-13.jpg" 
+              alt="Interactive Floor Q&A: Corporate Mentors Engaging Young Innovators" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">13</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Q&A
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">hyderabad-2-13.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Interactive Floor Q&A: Corporate Mentors Engaging Young Innovators
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[16/9] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/hyderabad-2/hyderabad-2-14.jpg', 'Campus-to-Corporate Transitions: Mentorship in Action')">
+            <img 
+              src="/conclave-moments/hyderabad-2/hyderabad-2-14.jpg" 
+              alt="Campus-to-Corporate Transitions: Mentorship in Action" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">14</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Mentorship
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">hyderabad-2-14.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Campus-to-Corporate Transitions: Mentorship in Action
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[16/9] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/hyderabad-2/hyderabad-2-15.jpg', 'Ceremonial Felicitation & Memento Presentation to Industry Luminaries')">
+            <img 
+              src="/conclave-moments/hyderabad-2/hyderabad-2-15.jpg" 
+              alt="Ceremonial Felicitation & Memento Presentation to Industry Luminaries" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">15</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Felicitations
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">hyderabad-2-15.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Ceremonial Felicitation & Memento Presentation to Industry Luminaries
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[16/9] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/hyderabad-2/hyderabad-2-16.jpg', 'Academic Honors Bestowed on Corporate Partner Organizations')">
+            <img 
+              src="/conclave-moments/hyderabad-2/hyderabad-2-16.jpg" 
+              alt="Academic Honors Bestowed on Corporate Partner Organizations" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">16</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Felicitations
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">hyderabad-2-16.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Academic Honors Bestowed on Corporate Partner Organizations
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[16/9] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/hyderabad-2/hyderabad-2-17.jpg', 'Strategic Industry Partner Recognition on the Conclave Dais')">
+            <img 
+              src="/conclave-moments/hyderabad-2/hyderabad-2-17.jpg" 
+              alt="Strategic Industry Partner Recognition on the Conclave Dais" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">17</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Honors
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">hyderabad-2-17.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Strategic Industry Partner Recognition on the Conclave Dais
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[16/9] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/hyderabad-2/hyderabad-2-18.jpg', 'Leadership Camaraderie & Academic Alliances on Stage')">
+            <img 
+              src="/conclave-moments/hyderabad-2/hyderabad-2-18.jpg" 
+              alt="Leadership Camaraderie & Academic Alliances on Stage" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">18</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Alliances
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">hyderabad-2-18.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Leadership Camaraderie & Academic Alliances on Stage
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[16/9] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/hyderabad-2/hyderabad-2-19.jpg', 'Bilateral Leadership Exchanges in the Executive Foyer')">
+            <img 
+              src="/conclave-moments/hyderabad-2/hyderabad-2-19.jpg" 
+              alt="Bilateral Leadership Exchanges in the Executive Foyer" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">19</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Foyer
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">hyderabad-2-19.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Bilateral Leadership Exchanges in the Executive Foyer
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[16/9] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/hyderabad-2/hyderabad-2-20.jpg', 'Corporate Delegates & Tech Corridor Leaders Networking')">
+            <img 
+              src="/conclave-moments/hyderabad-2/hyderabad-2-20.jpg" 
+              alt="Corporate Delegates & Tech Corridor Leaders Networking" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">20</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Networking
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">hyderabad-2-20.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Corporate Delegates & Tech Corridor Leaders Networking
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[16/9] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/hyderabad-2/hyderabad-2-21.jpg', 'Enterprise HR Heads & University Leadership Consultations')">
+            <img 
+              src="/conclave-moments/hyderabad-2/hyderabad-2-21.jpg" 
+              alt="Enterprise HR Heads & University Leadership Consultations" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">21</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Consultation
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">hyderabad-2-21.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Enterprise HR Heads & University Leadership Consultations
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[16/9] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/hyderabad-2/hyderabad-2-22.jpg', 'Corporate Mentorship Partnerships Formed at Hyatt Hyderabad')">
+            <img 
+              src="/conclave-moments/hyderabad-2/hyderabad-2-22.jpg" 
+              alt="Corporate Mentorship Partnerships Formed at Hyatt Hyderabad" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">22</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Partnerships
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">hyderabad-2-22.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Corporate Mentorship Partnerships Formed at Hyatt Hyderabad
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[16/9] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/hyderabad-2/hyderabad-2-23.jpg', 'Grand Conclave Ensemble: Luminaries, Faculty & Industry Leaders')">
+            <img 
+              src="/conclave-moments/hyderabad-2/hyderabad-2-23.jpg" 
+              alt="Grand Conclave Ensemble: Luminaries, Faculty & Industry Leaders" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">23</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Ensemble
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">hyderabad-2-23.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Grand Conclave Ensemble: Luminaries, Faculty & Industry Leaders
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[16/9] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/hyderabad-2/hyderabad-2-24.jpg', 'Celebrating Shared Purpose: Sovereign Technological Self-Reliance')">
+            <img 
+              src="/conclave-moments/hyderabad-2/hyderabad-2-24.jpg" 
+              alt="Celebrating Shared Purpose: Sovereign Technological Self-Reliance" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">24</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Finale
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">hyderabad-2-24.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Celebrating Shared Purpose: Sovereign Technological Self-Reliance
+            </p>
+          </div>
+        </div>
+      
+    </div>
+  </main>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-lg flex items-center justify-center p-4 hidden" onclick="closeLightbox()">
+    <div class="max-w-5xl max-h-[90vh] flex flex-col items-center">
+      <img id="lightboxImg" src="" alt="" class="max-w-full max-h-[80vh] object-contain rounded-xl border border-line shadow-2xl" />
+      <p id="lightboxCaption" class="text-sm text-gray-300 mt-3 text-center max-w-2xl font-medium"></p>
+      <button class="mt-4 px-4 py-1.5 rounded-lg bg-surface-2 hover:bg-surface-3 text-xs text-gray-400 uppercase tracking-wider font-bold border border-line cursor-pointer">
+        Click anywhere to close
+      </button>
+    </div>
+  </div>
+
+  <script>
+    function openLightbox(src, caption) {
+      document.getElementById('lightboxImg').src = src;
+      document.getElementById('lightboxCaption').innerText = caption;
+      document.getElementById('lightbox').classList.remove('hidden');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

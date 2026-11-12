@@ -205,19 +205,140 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
     city: "Hyderabad",
     date: "May 2026",
     editionBadge: "Allyship++ — 2nd Edition",
-    coverImage: "/slides/IMG_7873.jpg",
+    coverImage: "/conclave-moments/hyderabad-2/hyderabad-2-01.jpg",
     coverPosition: "50% 25%",
     subtitle:
       "Practicing Allyship for Emerging Talent — Keynote deliberations, campus-to-corporate transitions, and curated moments from Gachibowli.",
     videos: [
       {
-        title: "Hyderabad Chapter | Conclave Film",
-        desc: "Conversations on guiding early-career professionals, campus-to-workplace transition, and empathetic leadership.",
-        youtubeId: "8wSGKsWyQwk",
-        tag: "Hyderabad",
+        title: "Hyderabad Chapter (2.0) | Official Conclave Film",
+        desc: "Keynote deliberations, campus-to-corporate transitions, and corporate mentor dialogues from the Hyderabad Tech Corridor.",
+        videoSrc: "/discover/hyderabad-2-conclave-film.mp4",
+        tag: "Hyderabad 2.0 Conclave Film",
       },
     ],
-    photos: create24PhotoSlots("Hyderabad"),
+    photos: create24PhotoSlots("Hyderabad", [
+      {
+        src: "/conclave-moments/hyderabad-2/hyderabad-2-01.jpg",
+        caption: "Inaugural Conclave Assembly & ALLYSHIP 2.0 Hyderabad Stage Wall",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-2/hyderabad-2-02.jpg",
+        caption: "Ceremonial Conclave Lamp Lighting & Auspicious Invocation",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-2/hyderabad-2-03.jpg",
+        caption: "Distinguished Dais Leadership & University Dignitaries",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-2/hyderabad-2-04.jpg",
+        caption: "Presidential Conclave Address: Academic & Scientific Excellence",
+        objectPosition: "50% 20%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-2/hyderabad-2-05.jpg",
+        caption: "Keynote Deliberations on Sovereign Technological Capabilities",
+        objectPosition: "50% 20%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-2/hyderabad-2-06.jpg",
+        caption: "Corporate Leadership Perspectives from the Hyderabad Tech Corridor",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-2/hyderabad-2-07.jpg",
+        caption: "Plenary Assembly: CXOs, R&D Directors & Enterprise Mentors",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-2/hyderabad-2-08.jpg",
+        caption: "Executive Roundtables: Practicing Allyship for Emerging Talent",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-2/hyderabad-2-09.jpg",
+        caption: "Industry–Academia Synergy: Designing Future-Ready Curricula",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-2/hyderabad-2-10.jpg",
+        caption: "Executive Panel Discourse: Cross-Disciplinary Skill Architectures",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-2/hyderabad-2-11.jpg",
+        caption: "Enterprise Technology Leaders Deliberating Strategic Mentorship",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-2/hyderabad-2-12.jpg",
+        caption: "Leadership Dialogue on Innovation, IP & Sovereign Capability",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-2/hyderabad-2-13.jpg",
+        caption: "Interactive Floor Q&A: Corporate Mentors Engaging Young Innovators",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-2/hyderabad-2-14.jpg",
+        caption: "Campus-to-Corporate Transitions: Mentorship in Action",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-2/hyderabad-2-15.jpg",
+        caption: "Ceremonial Felicitation & Memento Presentation to Industry Luminaries",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-2/hyderabad-2-16.jpg",
+        caption: "Academic Honors Bestowed on Corporate Partner Organizations",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-2/hyderabad-2-17.jpg",
+        caption: "Strategic Industry Partner Recognition on the Conclave Dais",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-2/hyderabad-2-18.jpg",
+        caption: "Leadership Camaraderie & Academic Alliances on Stage",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-2/hyderabad-2-19.jpg",
+        caption: "Bilateral Leadership Exchanges in the Executive Foyer",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-2/hyderabad-2-20.jpg",
+        caption: "Corporate Delegates & Tech Corridor Leaders Networking",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-2/hyderabad-2-21.jpg",
+        caption: "Enterprise HR Heads & University Leadership Consultations",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-2/hyderabad-2-22.jpg",
+        caption: "Corporate Mentorship Partnerships Formed at Hyatt Hyderabad",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-2/hyderabad-2-23.jpg",
+        caption: "Grand Conclave Ensemble: Luminaries, Faculty & Industry Leaders",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/hyderabad-2/hyderabad-2-24.jpg",
+        caption: "Celebrating Shared Purpose: Sovereign Technological Self-Reliance",
+        objectPosition: "50% 25%",
+      },
+    ]),
   },
   "chennai-2": {
     id: "chennai-2",
