@@ -2,52 +2,84 @@ import fs from 'fs';
 import path from 'path';
 
 const momentsDir = 'public/conclave-moments/hyderabad-2';
+const candDir = 'public/conclave-moments/hyderabad-2/candidates';
 
-// 1. Remove temporary sample_*.jpg files
-if (fs.existsSync(momentsDir)) {
-  const allFiles = fs.readdirSync(momentsDir);
-  for (const f of allFiles) {
-    if (f.startsWith('sample_')) {
-      fs.unlinkSync(path.join(momentsDir, f));
-    }
-  }
-}
-
-// 2. 24 Curated Moments for Hyderabad 2.0
-const moments = [
-  { id: 'hyderabad-2-01', caption: 'Ceremonial Lamp Lighting & Conclave Inaugural Blessing', category: 'Tradition' },
-  { id: 'hyderabad-2-02', caption: 'Leadership Conclave Keynote Address from the Dais', category: 'Keynote' },
-  { id: 'hyderabad-2-03', caption: 'Grand Plenary Assembly: Enterprise Leaders & University Delegates', category: 'Plenary' },
-  { id: 'hyderabad-2-04', caption: 'Executive Panel Dialogue on Cross-Disciplinary Talent Architectures', category: 'Panel' },
-  { id: 'hyderabad-2-05', caption: 'Keynote Deliberations on Sovereign Technological Capabilities', category: 'Keynote' },
-  { id: 'hyderabad-2-06', caption: 'Corporate Leadership Perspectives from the Hyderabad Tech Corridor', category: 'Enterprise' },
-  { id: 'hyderabad-2-07', caption: 'Plenary Assembly: CXOs, R&D Directors & Enterprise Mentors', category: 'Plenary' },
-  { id: 'hyderabad-2-08', caption: 'Executive Roundtables: Practicing Allyship for Emerging Talent', category: 'Roundtable' },
-  { id: 'hyderabad-2-09', caption: 'Industry–Academia Synergy: Designing Future-Ready Curricula', category: 'Curriculum' },
-  { id: 'hyderabad-2-10', caption: 'Executive Panel Discourse: Cross-Disciplinary Skill Architectures', category: 'Panel' },
-  { id: 'hyderabad-2-11', caption: 'Enterprise Technology Leaders Deliberating Strategic Mentorship', category: 'Panel' },
-  { id: 'hyderabad-2-12', caption: 'Leadership Dialogue on Innovation, IP & Sovereign Capability', category: 'Dialogue' },
-  { id: 'hyderabad-2-13', caption: 'Interactive Floor Q&A: Corporate Mentors Engaging Young Innovators', category: 'Q&A' },
-  { id: 'hyderabad-2-14', caption: 'Campus-to-Corporate Transitions: Mentorship in Action', category: 'Mentorship' },
-  { id: 'hyderabad-2-15', caption: 'Ceremonial Felicitation & Memento Presentation to Industry Luminaries', category: 'Felicitations' },
-  { id: 'hyderabad-2-16', caption: 'Academic Honors Bestowed on Corporate Partner Organizations', category: 'Felicitations' },
-  { id: 'hyderabad-2-17', caption: 'Strategic Industry Partner Recognition on the Conclave Dais', category: 'Honors' },
-  { id: 'hyderabad-2-18', caption: 'Leadership Camaraderie & Academic Alliances on Stage', category: 'Alliances' },
-  { id: 'hyderabad-2-19', caption: 'Bilateral Leadership Exchanges in the Executive Foyer', category: 'Foyer' },
-  { id: 'hyderabad-2-20', caption: 'Corporate Delegates & Tech Corridor Leaders Networking', category: 'Networking' },
-  { id: 'hyderabad-2-21', caption: 'Enterprise HR Heads & University Leadership Consultations', category: 'Consultation' },
-  { id: 'hyderabad-2-22', caption: 'Corporate Mentorship Partnerships Formed at Hyatt Hyderabad', category: 'Partnerships' },
-  { id: 'hyderabad-2-23', caption: 'Grand Conclave Ensemble: Luminaries, Faculty & Industry Leaders', category: 'Ensemble' },
-  { id: 'hyderabad-2-24', caption: 'Celebrating Shared Purpose: Sovereign Technological Self-Reliance', category: 'Finale' },
+// 1. 24 Currently Deployed Moments
+const deployedMoments = [
+  { id: 'hyderabad-2-01', file: 'hyderabad-2-01.jpg', category: 'Moments', desc: 'Ceremonial Lamp Lighting & Conclave Inaugural Blessing' },
+  { id: 'hyderabad-2-02', file: 'hyderabad-2-02.jpg', category: 'Moments', desc: 'Leadership Conclave Keynote Address from the Dais' },
+  { id: 'hyderabad-2-03', file: 'hyderabad-2-03.jpg', category: 'Moments', desc: 'Grand Plenary Assembly: Enterprise Leaders & University Delegates' },
+  { id: 'hyderabad-2-04', file: 'hyderabad-2-04.jpg', category: 'Moments', desc: 'Executive Panel Dialogue on Cross-Disciplinary Talent Architectures' },
+  { id: 'hyderabad-2-05', file: 'hyderabad-2-05.jpg', category: 'Moments', desc: 'Keynote Deliberations on Sovereign Technological Capabilities' },
+  { id: 'hyderabad-2-06', file: 'hyderabad-2-06.jpg', category: 'Moments', desc: 'Corporate Leadership Perspectives from the Hyderabad Tech Corridor' },
+  { id: 'hyderabad-2-07', file: 'hyderabad-2-07.jpg', category: 'Moments', desc: 'Plenary Assembly: CXOs, R&D Directors & Enterprise Mentors' },
+  { id: 'hyderabad-2-08', file: 'hyderabad-2-08.jpg', category: 'Moments', desc: 'Executive Roundtables: Practicing Allyship for Emerging Talent' },
+  { id: 'hyderabad-2-09', file: 'hyderabad-2-09.jpg', category: 'Moments', desc: 'Industry–Academia Synergy: Designing Future-Ready Curricula' },
+  { id: 'hyderabad-2-10', file: 'hyderabad-2-10.jpg', category: 'Moments', desc: 'Executive Panel Discourse: Cross-Disciplinary Skill Architectures' },
+  { id: 'hyderabad-2-11', file: 'hyderabad-2-11.jpg', category: 'Moments', desc: 'Enterprise Technology Leaders Deliberating Strategic Mentorship' },
+  { id: 'hyderabad-2-12', file: 'hyderabad-2-12.jpg', category: 'Moments', desc: 'Leadership Dialogue on Innovation, IP & Sovereign Capability' },
+  { id: 'hyderabad-2-13', file: 'hyderabad-2-13.jpg', category: 'Moments', desc: 'Interactive Floor Q&A: Corporate Mentors Engaging Young Innovators' },
+  { id: 'hyderabad-2-14', file: 'hyderabad-2-14.jpg', category: 'Moments', desc: 'Campus-to-Corporate Transitions: Mentorship in Action' },
+  { id: 'hyderabad-2-15', file: 'hyderabad-2-15.jpg', category: 'Moments', desc: 'Ceremonial Felicitation & Memento Presentation to Industry Luminaries' },
+  { id: 'hyderabad-2-16', file: 'hyderabad-2-16.jpg', category: 'Moments', desc: 'Academic Honors Bestowed on Corporate Partner Organizations' },
+  { id: 'hyderabad-2-17', file: 'hyderabad-2-17.jpg', category: 'Moments', desc: 'Strategic Industry Partner Recognition on the Conclave Dais' },
+  { id: 'hyderabad-2-18', file: 'hyderabad-2-18.jpg', category: 'Moments', desc: 'Leadership Camaraderie & Academic Alliances on Stage' },
+  { id: 'hyderabad-2-19', file: 'hyderabad-2-19.jpg', category: 'Moments', desc: 'Bilateral Leadership Exchanges in the Executive Foyer' },
+  { id: 'hyderabad-2-20', file: 'hyderabad-2-20.jpg', category: 'Moments', desc: 'Corporate Delegates & Tech Corridor Leaders Networking' },
+  { id: 'hyderabad-2-21', file: 'hyderabad-2-21.jpg', category: 'Moments', desc: 'Enterprise HR Heads & University Leadership Consultations' },
+  { id: 'hyderabad-2-22', file: 'hyderabad-2-22.jpg', category: 'Moments', desc: 'Corporate Mentorship Partnerships Formed at Hyatt Hyderabad' },
+  { id: 'hyderabad-2-23', file: 'hyderabad-2-23.jpg', category: 'Moments', desc: 'Grand Conclave Ensemble: Luminaries, Faculty & Industry Leaders' },
+  { id: 'hyderabad-2-24', file: 'hyderabad-2-24.jpg', category: 'Moments', desc: 'Celebrating Shared Purpose: Sovereign Technological Self-Reliance' },
 ];
 
-// 3. Build public/hyderabad-2-selector.html
+// 2. Candidate Frames Extracted Across the Video
+const candFiles = fs.existsSync(candDir)
+  ? fs.readdirSync(candDir).filter(f => f.endsWith('.jpg')).sort()
+  : [];
+
+const allItems = [];
+
+// Add Deployed Moments
+for (const m of deployedMoments) {
+  const relPath = `/conclave-moments/hyderabad-2/${m.file}`;
+  allItems.push({
+    id: m.id,
+    file: m.file,
+    sourceType: 'Active Moments',
+    previewUrl: relPath,
+    fullUrl: relPath,
+    category: 'Active (Current)',
+    desc: m.desc,
+    initialChecked: true,
+  });
+}
+
+// Add Candidate Frames
+for (const f of candFiles) {
+  const relPath = `/conclave-moments/hyderabad-2/candidates/${f}`;
+  const timeMatch = f.match(/_([0-9.]+)s/);
+  const timeSec = timeMatch ? `${timeMatch[1]}s` : '';
+  allItems.push({
+    id: f.replace('.jpg', ''),
+    file: f,
+    sourceType: 'Video Candidates',
+    previewUrl: relPath,
+    fullUrl: relPath,
+    category: `Candidate (${timeSec})`,
+    desc: `HD Video Capture at timestamp ${timeSec} — Hyderabad 2.0 Conclave Film`,
+    initialChecked: false,
+  });
+}
+
+console.log(`Total items compiled: ${allItems.length}`);
+
+// Generate HTML
 const html = `<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ALLYSHIP++ | Hyderabad 2.0 Conclave Moments & Video</title>
+  <title>ALLYSHIP++ | Hyderabad 2.0 Conclave Moments & Local Photo Picker</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -90,6 +122,17 @@ const html = `<!DOCTYPE html>
       font-size: 12px;
       font-family: 'JetBrains Mono', monospace;
     }
+    .custom-scroll::-webkit-scrollbar {
+      height: 6px;
+      width: 6px;
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: #111827;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #374151;
+      border-radius: 3px;
+    }
   </style>
 </head>
 <body class="min-h-screen pb-32">
@@ -99,120 +142,406 @@ const html = `<!DOCTYPE html>
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
       <div>
         <div class="flex items-center gap-3">
-          <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-accent/15 text-accent border border-accent/30">
-            Conclave Media Review
+          <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-mono font-semibold bg-accent/20 text-accent border border-accent/40">
+            HYDERABAD 2.0 • PHOTO SELECTOR
           </span>
-          <h1 class="text-xl sm:text-2xl font-display font-extrabold tracking-tight text-white">
-            Hyderabad 2.0 Conclave Film & 24 Moments
-          </h1>
+          <span class="text-xs text-white/50 font-mono">Le Meridien, Gachibowli</span>
         </div>
-        <p class="text-xs text-gray-400 mt-1">
-          24 full HD conclave moments curated directly from the master 1080p film (<span class="font-mono text-accent">SOA Allyship++ 2.O Hyd-02.mp4</span>).
+        <h1 class="text-xl sm:text-2xl font-black font-display tracking-tight text-white mt-1">
+          Hyderabad Chapter 2.0 Conclave Moments & Local Photo Picker
+        </h1>
+        <p class="text-xs sm:text-sm text-white/60">
+          Browse all 92 pre-loaded moments & video candidate frames, pick photos from your local PC folder, select your 24 favorites, and copy the list for chat.
         </p>
       </div>
 
-      <div class="flex items-center gap-3">
-        <a href="/event#hyderabad-2" class="px-4 py-2.5 rounded-xl bg-accent hover:bg-accent-light text-black font-extrabold text-xs uppercase tracking-wider transition-all shadow-lg shadow-accent/20 flex items-center gap-2">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-          View on Main Event Page
-        </a>
+      <!-- COUNTER & ACTIONS -->
+      <div class="flex items-center gap-3 self-end md:self-center">
+        <div class="bg-surface-2 border border-line px-4 py-2 rounded-xl text-center">
+          <div class="text-[10px] uppercase font-mono tracking-wider text-white/50">Selected</div>
+          <div id="selection-counter" class="text-lg font-black font-mono text-accent">24 / 24</div>
+        </div>
+
+        <button onclick="copySelectionForChat()" class="inline-flex items-center gap-2 bg-gradient-to-r from-accent to-accent-light text-black font-bold text-sm px-4 py-2.5 rounded-xl hover:brightness-110 active:scale-95 transition shadow-lg shadow-accent/20">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" /></svg>
+          <span>📋 Copy 24 for Chat</span>
+        </button>
+
+        <button onclick="resetToDefaults()" class="border border-line bg-surface-2 hover:bg-surface-3 text-white/80 text-xs px-3 py-2.5 rounded-xl font-medium transition" title="Reset selection to default active 24 moments">
+          Reset (Active 24)
+        </button>
+      </div>
+    </div>
+
+    <!-- LOCAL FOLDER & FILE PICKER BAR -->
+    <div class="max-w-7xl mx-auto mt-4 pt-3 border-t border-line/60 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2">
+        <span class="text-xs font-mono uppercase text-accent font-semibold tracking-wider">📁 Local Pickers:</span>
+        <label class="cursor-pointer inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold px-3 py-1.5 rounded-lg transition shadow">
+          <span>📁 Choose Local Folder</span>
+          <input type="file" id="local-folder-input" webkitdirectory directory multiple class="hidden" onchange="handleLocalFiles(event)" />
+        </label>
+        <label class="cursor-pointer inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-semibold px-3 py-1.5 rounded-lg transition shadow">
+          <span>🖼️ Pick Images Directly</span>
+          <input type="file" id="local-files-input" multiple accept="image/*" class="hidden" onchange="handleLocalFiles(event)" />
+        </label>
+        <span id="local-files-status" class="text-xs text-white/50 font-mono italic">No local folder selected yet</span>
+      </div>
+
+      <!-- FILTER TABS -->
+      <div class="flex items-center gap-1.5 overflow-x-auto custom-scroll pb-1">
+        <button onclick="filterSource('all')" class="filter-tab active px-3 py-1 rounded-lg text-xs font-semibold bg-accent text-black transition" data-source="all">
+          All (<span id="count-all">92</span>)
+        </button>
+        <button onclick="filterSource('Active Moments')" class="filter-tab px-3 py-1 rounded-lg text-xs font-semibold bg-surface-2 text-white/80 hover:bg-surface-3 transition" data-source="Active Moments">
+          Active Deployed (24)
+        </button>
+        <button onclick="filterSource('Video Candidates')" class="filter-tab px-3 py-1 rounded-lg text-xs font-semibold bg-surface-2 text-white/80 hover:bg-surface-3 transition" data-source="Video Candidates">
+          Candidate Frames (68)
+        </button>
+        <button onclick="filterSource('Local Uploads')" class="filter-tab px-3 py-1 rounded-lg text-xs font-semibold bg-surface-2 text-white/80 hover:bg-surface-3 transition" data-source="Local Uploads">
+          Local Files (<span id="count-local">0</span>)
+        </button>
       </div>
     </div>
   </header>
 
-  <!-- MASTER VIDEO PLAYER PREVIEW -->
+  <!-- MASTER VIDEO PREVIEW ACCORDION -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-6">
-    <div class="bg-surface-2 border border-line rounded-2xl overflow-hidden p-4 sm:p-6 shadow-2xl">
-      <div class="flex items-center justify-between mb-4">
-        <div>
-          <span class="text-[11px] font-bold uppercase tracking-wider text-accent font-mono">Official Conclave Film</span>
-          <h2 class="text-lg font-bold text-white">Hyderabad Chapter 2.0 | Gachibowli Tech Corridor</h2>
+    <details class="bg-surface border border-line rounded-2xl overflow-hidden group">
+      <summary class="px-5 py-4 cursor-pointer font-bold flex items-center justify-between text-sm sm:text-base hover:bg-surface-2 transition select-none">
+        <div class="flex items-center gap-3">
+          <span class="text-accent text-lg">🎬</span>
+          <span>Hyderabad 2.0 Conclave Film (1080p Master Video)</span>
+          <span class="text-xs font-mono bg-accent/20 text-accent px-2 py-0.5 rounded-full">01:42 Full HD</span>
         </div>
-        <span class="text-xs font-mono text-gray-400 bg-surface-3 px-3 py-1 rounded-md">1080p Full HD • 01:42</span>
+        <span class="text-xs text-white/50 font-mono group-open:rotate-180 transition-transform">▼ Click to expand video</span>
+      </summary>
+      <div class="p-5 border-t border-line bg-canvas/60">
+        <video controls class="w-full max-h-[460px] rounded-xl bg-black shadow-2xl mx-auto" preload="metadata">
+          <source src="/discover/hyderabad-2-conclave-film.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p class="text-xs text-white/50 mt-3 font-mono text-center">
+          Location: <code class="text-accent">public/discover/hyderabad-2-conclave-film.mp4</code> — All candidate frames below were extracted from this film.
+        </p>
       </div>
-      <div class="relative aspect-video w-full rounded-xl overflow-hidden bg-black border border-white/10 shadow-inner">
-        <video 
-          src="/discover/hyderabad-2-conclave-film.mp4" 
-          controls 
-          playsinline 
-          class="w-full h-full object-cover"
-        ></video>
-      </div>
-    </div>
+    </details>
   </section>
 
-  <!-- 24 CONCLAVE MOMENTS GRID -->
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 pt-8">
-    <div class="flex items-center justify-between mb-6">
-      <div>
-        <h2 class="text-xl font-display font-extrabold text-white">Curated 24 Conclave Moments</h2>
-        <p class="text-xs text-gray-400">Captured in full 1080p resolution across all chapters of the conclave.</p>
+  <!-- PHOTO GALLERY GRID -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 pt-6">
+    <div class="flex items-center justify-between mb-4">
+      <div class="text-xs sm:text-sm text-white/60">
+        Click any photo card to zoom into high-res lightbox. Use the checkbox to select/deselect for your 24 picks.
       </div>
-      <span class="text-xs font-mono text-accent font-bold bg-accent/10 border border-accent/30 px-3 py-1 rounded-lg">
-        24 / 24 Moments Active
-      </span>
+      <div class="flex items-center gap-2">
+        <button onclick="selectAllVisible()" class="text-xs text-accent hover:underline font-mono">Select Visible</button>
+        <span class="text-white/20">•</span>
+        <button onclick="deselectAll()" class="text-xs text-white/50 hover:underline font-mono">Deselect All</button>
+      </div>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-      ${moments.map((m, idx) => `
-        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
-          <div class="relative aspect-[16/9] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/hyderabad-2/${m.id}.jpg', '${m.caption}')">
-            <img 
-              src="/conclave-moments/hyderabad-2/${m.id}.jpg" 
-              alt="${m.caption}" 
-              loading="lazy" 
-              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-            <div class="absolute top-2.5 left-2.5">
-              <span class="badge-number shadow-lg">${idx + 1}</span>
-            </div>
-            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
-              ${m.category}
-            </span>
-            <button 
-              type="button" 
-              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
-              title="Inspect full screen"
-            >
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
-            </button>
-          </div>
-          <div class="p-3.5 space-y-1">
-            <span class="font-mono text-[11px] font-bold text-accent">${m.id}.jpg</span>
-            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
-              ${m.caption}
-            </p>
-          </div>
-        </div>
-      `).join('')}
+    <div id="photos-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <!-- Items dynamically populated via JS -->
     </div>
   </main>
 
-  <!-- LIGHTBOX MODAL -->
-  <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-lg flex items-center justify-center p-4 hidden" onclick="closeLightbox()">
-    <div class="max-w-5xl max-h-[90vh] flex flex-col items-center">
-      <img id="lightboxImg" src="" alt="" class="max-w-full max-h-[80vh] object-contain rounded-xl border border-line shadow-2xl" />
-      <p id="lightboxCaption" class="text-sm text-gray-300 mt-3 text-center max-w-2xl font-medium"></p>
-      <button class="mt-4 px-4 py-1.5 rounded-lg bg-surface-2 hover:bg-surface-3 text-xs text-gray-400 uppercase tracking-wider font-bold border border-line cursor-pointer">
-        Click anywhere to close
-      </button>
+  <!-- BOTTOM FLOATING SELECTED TRAY -->
+  <footer id="bottom-tray" class="fixed bottom-0 inset-x-0 z-40 bg-surface/95 backdrop-blur-lg border-t border-line shadow-2xl p-3 transform transition-transform">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+      <div class="flex items-center gap-3 min-w-0">
+        <div class="flex items-center gap-2">
+          <span class="text-xs font-mono font-bold text-accent uppercase tracking-wider">Your Picks:</span>
+          <span id="tray-counter" class="text-xs font-mono font-bold px-2 py-0.5 rounded bg-surface-2 text-white border border-line">24 / 24</span>
+        </div>
+        <!-- Thumbnails strip -->
+        <div id="tray-strip" class="flex items-center gap-1.5 overflow-x-auto custom-scroll py-1 max-w-[50vw]">
+          <!-- Thumbnails rendered here -->
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2 shrink-0">
+        <button onclick="copySelectionForChat()" class="bg-gradient-to-r from-accent to-accent-light text-black font-bold text-xs sm:text-sm px-4 py-2 rounded-xl hover:brightness-110 active:scale-95 transition shadow-lg">
+          📋 Copy 24 for Chat
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FULLSCREEN LIGHTBOX -->
+  <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex flex-col items-center justify-center p-4">
+    <button onclick="closeLightbox()" class="absolute top-4 right-4 z-50 bg-white/10 hover:bg-white/20 text-white rounded-full p-2.5 transition">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+    </button>
+    <button onclick="prevLightbox()" class="absolute left-4 top-1/2 -translate-y-1/2 z-50 bg-white/10 hover:bg-white/20 text-white rounded-full p-3 transition">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+    </button>
+    <button onclick="nextLightbox()" class="absolute right-4 top-1/2 -translate-y-1/2 z-50 bg-white/10 hover:bg-white/20 text-white rounded-full p-3 transition">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+    </button>
+
+    <div class="max-w-5xl max-h-[82vh] flex flex-col items-center justify-center">
+      <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[75vh] object-contain rounded-xl shadow-2xl" />
+      <div class="mt-3 text-center">
+        <div id="lightbox-title" class="font-bold text-white text-base"></div>
+        <div id="lightbox-desc" class="text-xs text-white/60 font-mono mt-1"></div>
+      </div>
     </div>
   </div>
 
+  <!-- SCRIPT -->
   <script>
-    function openLightbox(src, caption) {
-      document.getElementById('lightboxImg').src = src;
-      document.getElementById('lightboxCaption').innerText = caption;
+    const INITIAL_ITEMS = ${JSON.stringify(allItems, null, 2)};
+    let allPhotos = [...INITIAL_ITEMS];
+    let selectedSet = new Set(INITIAL_ITEMS.filter(i => i.initialChecked).map(i => i.id));
+    let currentFilter = 'all';
+    let lightboxIndex = 0;
+    let visiblePhotos = [];
+
+    function renderGrid() {
+      const grid = document.getElementById('photos-grid');
+      grid.innerHTML = '';
+
+      visiblePhotos = allPhotos.filter(p => {
+        if (currentFilter === 'all') return true;
+        return p.sourceType === currentFilter;
+      });
+
+      visiblePhotos.forEach((photo, idx) => {
+        const isChecked = selectedSet.has(photo.id);
+        const card = document.createElement('div');
+        card.className = \`group relative bg-surface border rounded-xl overflow-hidden transition-all duration-200 hover:border-accent/60 hover:shadow-xl \${
+          isChecked ? 'border-accent bg-accent/5 ring-1 ring-accent' : 'border-line'
+        }\`;
+        card.id = \`card-\${photo.id}\`;
+
+        card.innerHTML = \`
+          <div class="relative aspect-video bg-black overflow-hidden cursor-pointer" onclick="openLightbox(\${idx})">
+            <img src="\${photo.previewUrl}" alt="\${photo.id}" loading="lazy" class="w-full h-full object-cover transition duration-300 group-hover:scale-105" />
+            
+            <!-- SOURCE BADGE -->
+            <div class="absolute top-2 left-2 flex items-center gap-1.5">
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold uppercase \${
+                photo.sourceType === 'Active Moments' ? 'bg-emerald-500 text-black' :
+                photo.sourceType === 'Video Candidates' ? 'bg-amber-500 text-black' :
+                'bg-blue-500 text-white'
+              }">
+                \${photo.sourceType}
+              </span>
+              \${isChecked ? '<span class="badge-number">✓</span>' : ''}
+            </div>
+          </div>
+
+          <div class="p-3">
+            <div class="flex items-start justify-between gap-2">
+              <div class="min-w-0">
+                <div class="font-mono text-xs font-bold text-accent truncate" title="\${photo.id}">\${photo.id}</div>
+                <div class="text-xs text-white/80 line-clamp-2 mt-0.5" title="\${photo.desc}">\${photo.desc}</div>
+              </div>
+
+              <!-- CHECKBOX -->
+              <input type="checkbox" id="check-\${photo.id}" \${isChecked ? 'checked' : ''} onchange="toggleSelect('\${photo.id}', this.checked)" class="w-5 h-5 rounded border-line bg-surface-2 text-accent focus:ring-accent cursor-pointer shrink-0 mt-0.5" />
+            </div>
+          </div>
+        \`;
+
+        grid.appendChild(card);
+      });
+
+      updateSelectionUI();
+    }
+
+    function toggleSelect(id, checked) {
+      if (checked) {
+        if (selectedSet.size >= 24) {
+          alert('You have already selected 24 moments. Deselect one first if you want to replace it!');
+          const cb = document.getElementById('check-' + id);
+          if (cb) cb.checked = false;
+          return;
+        }
+        selectedSet.add(id);
+      } else {
+        selectedSet.delete(id);
+      }
+      updateSelectionUI();
+      // update card border style
+      const card = document.getElementById('card-' + id);
+      if (card) {
+        if (selectedSet.has(id)) {
+          card.classList.add('border-accent', 'bg-accent/5', 'ring-1', 'ring-accent');
+          card.classList.remove('border-line');
+        } else {
+          card.classList.remove('border-accent', 'bg-accent/5', 'ring-1', 'ring-accent');
+          card.classList.add('border-line');
+        }
+      }
+    }
+
+    function updateSelectionUI() {
+      const count = selectedSet.size;
+      const counterEl = document.getElementById('selection-counter');
+      const trayCounterEl = document.getElementById('tray-counter');
+      if (counterEl) {
+        counterEl.textContent = \`\${count} / 24\`;
+        counterEl.className = \`text-lg font-black font-mono \${count === 24 ? 'text-emerald-400' : 'text-accent'}\`;
+      }
+      if (trayCounterEl) {
+        trayCounterEl.textContent = \`\${count} / 24\`;
+      }
+
+      // Update tray thumbnails
+      const trayStrip = document.getElementById('tray-strip');
+      if (trayStrip) {
+        trayStrip.innerHTML = '';
+        let num = 1;
+        selectedSet.forEach(id => {
+          const item = allPhotos.find(p => p.id === id);
+          if (item) {
+            const thumb = document.createElement('div');
+            thumb.className = 'relative shrink-0 w-12 h-8 rounded border border-accent/60 overflow-hidden cursor-pointer group';
+            thumb.title = \`#\${num}: \${item.id}\`;
+            thumb.innerHTML = \`
+              <img src="\${item.previewUrl}" class="w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-black/40 flex items-center justify-center font-mono font-bold text-[10px] text-accent">#\${num}</div>
+              <button onclick="event.stopPropagation(); toggleSelect('\${item.id}', false); renderGrid();" class="absolute -top-1 -right-1 bg-red-600 text-white rounded-full w-4 h-4 text-[9px] flex items-center justify-center opacity-0 group-hover:opacity-100 transition">✕</button>
+            \`;
+            trayStrip.appendChild(thumb);
+            num++;
+          }
+        });
+      }
+    }
+
+    function filterSource(source) {
+      currentFilter = source;
+      document.querySelectorAll('.filter-tab').forEach(btn => {
+        if (btn.getAttribute('data-source') === source) {
+          btn.classList.add('active', 'bg-accent', 'text-black');
+          btn.classList.remove('bg-surface-2', 'text-white/80');
+        } else {
+          btn.classList.remove('active', 'bg-accent', 'text-black');
+          btn.classList.add('bg-surface-2', 'text-white/80');
+        }
+      });
+      renderGrid();
+    }
+
+    function selectAllVisible() {
+      for (const p of visiblePhotos) {
+        if (selectedSet.size >= 24) break;
+        selectedSet.add(p.id);
+      }
+      renderGrid();
+    }
+
+    function deselectAll() {
+      selectedSet.clear();
+      renderGrid();
+    }
+
+    function resetToDefaults() {
+      selectedSet = new Set(INITIAL_ITEMS.filter(i => i.initialChecked).map(i => i.id));
+      renderGrid();
+    }
+
+    // LOCAL FILE & FOLDER HANDLING
+    function handleLocalFiles(event) {
+      const files = Array.from(event.target.files);
+      if (!files.length) return;
+
+      const imgFiles = files.filter(f => f.type.startsWith('image/') || /\\.(jpg|jpeg|png|webp)$/i.test(f.name));
+      if (!imgFiles.length) {
+        alert('No image files found in the selected folder/files.');
+        return;
+      }
+
+      document.getElementById('local-files-status').textContent = \`Loaded \${imgFiles.length} local images\`;
+      document.getElementById('count-local').textContent = imgFiles.length;
+
+      imgFiles.forEach(f => {
+        const url = URL.createObjectURL(f);
+        allPhotos.push({
+          id: f.name.replace(/\\.[^/.]+$/, ''),
+          file: f.name,
+          sourceType: 'Local Uploads',
+          previewUrl: url,
+          fullUrl: url,
+          category: 'Local File',
+          desc: \`Local file: \${f.name} (\${(f.size / 1024).toFixed(0)} KB)\`,
+          initialChecked: false,
+        });
+      });
+
+      document.getElementById('count-all').textContent = allPhotos.length;
+      filterSource('Local Uploads');
+    }
+
+    // COPY EXPORT
+    function copySelectionForChat() {
+      const list = Array.from(selectedSet).map((id, index) => {
+        const item = allPhotos.find(p => p.id === id);
+        return \`#\${index + 1}: \${id} (\${item ? item.sourceType : 'Photo'}) — \${item ? item.desc : ''}\`;
+      });
+
+      const text = \`HYDERABAD CHAPTER 2.0 CONCLAVE MOMENTS SELECTION (\${selectedSet.size} / 24):\\n\\n\` + list.join('\\n');
+      navigator.clipboard.writeText(text).then(() => {
+        alert(\`Copied \${selectedSet.size} selections to clipboard! Paste it directly in the chat.\`);
+      }).catch(err => {
+        prompt('Copy selection manually:', text);
+      });
+    }
+
+    // LIGHTBOX
+    function openLightbox(idx) {
+      lightboxIndex = idx;
+      updateLightboxContent();
       document.getElementById('lightbox').classList.remove('hidden');
     }
 
     function closeLightbox() {
       document.getElementById('lightbox').classList.add('hidden');
     }
+
+    function prevLightbox() {
+      if (lightboxIndex > 0) {
+        lightboxIndex--;
+      } else {
+        lightboxIndex = visiblePhotos.length - 1;
+      }
+      updateLightboxContent();
+    }
+
+    function nextLightbox() {
+      if (lightboxIndex < visiblePhotos.length - 1) {
+        lightboxIndex++;
+      } else {
+        lightboxIndex = 0;
+      }
+      updateLightboxContent();
+    }
+
+    function updateLightboxContent() {
+      const item = visiblePhotos[lightboxIndex];
+      if (!item) return;
+      document.getElementById('lightbox-img').src = item.fullUrl;
+      document.getElementById('lightbox-title').textContent = item.id;
+      document.getElementById('lightbox-desc').textContent = item.desc;
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (document.getElementById('lightbox').classList.contains('hidden')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') prevLightbox();
+      if (e.key === 'ArrowRight') nextLightbox();
+    });
+
+    // Initial render
+    renderGrid();
   </script>
 </body>
-</html>`;
+</html>
+`;
 
-fs.writeFileSync('public/hyderabad-2-selector.html', html);
+fs.writeFileSync('public/hyderabad-2-selector.html', html, 'utf8');
 console.log('Successfully generated public/hyderabad-2-selector.html!');
-
