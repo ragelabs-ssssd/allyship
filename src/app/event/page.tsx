@@ -220,23 +220,23 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
     photos: create24PhotoSlots("Hyderabad", [
       {
         src: "/conclave-moments/hyderabad-2/hyderabad-2-01.jpg",
-        caption: "Inaugural Conclave Assembly & ALLYSHIP 2.0 Hyderabad Stage Wall",
-        objectPosition: "50% 30%",
+        caption: "Ceremonial Lamp Lighting & Conclave Inaugural Blessing",
+        objectPosition: "50% 25%",
       },
       {
         src: "/conclave-moments/hyderabad-2/hyderabad-2-02.jpg",
-        caption: "Ceremonial Conclave Lamp Lighting & Auspicious Invocation",
-        objectPosition: "50% 25%",
+        caption: "Leadership Conclave Keynote Address from the Dais",
+        objectPosition: "50% 20%",
       },
       {
         src: "/conclave-moments/hyderabad-2/hyderabad-2-03.jpg",
-        caption: "Distinguished Dais Leadership & University Dignitaries",
-        objectPosition: "50% 25%",
+        caption: "Grand Plenary Assembly: Enterprise Leaders & University Delegates",
+        objectPosition: "50% 30%",
       },
       {
         src: "/conclave-moments/hyderabad-2/hyderabad-2-04.jpg",
-        caption: "Presidential Conclave Address: Academic & Scientific Excellence",
-        objectPosition: "50% 20%",
+        caption: "Executive Panel Dialogue on Cross-Disciplinary Talent Architectures",
+        objectPosition: "50% 25%",
       },
       {
         src: "/conclave-moments/hyderabad-2/hyderabad-2-05.jpg",

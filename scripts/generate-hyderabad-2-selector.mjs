@@ -15,10 +15,10 @@ if (fs.existsSync(momentsDir)) {
 
 // 2. 24 Curated Moments for Hyderabad 2.0
 const moments = [
-  { id: 'hyderabad-2-01', caption: 'Inaugural Conclave Assembly & ALLYSHIP 2.0 Hyderabad Stage Wall', category: 'Stage & Wall' },
-  { id: 'hyderabad-2-02', caption: 'Ceremonial Conclave Lamp Lighting & Auspicious Invocation', category: 'Tradition' },
-  { id: 'hyderabad-2-03', caption: 'Distinguished Dais Leadership & University Dignitaries', category: 'Dais Leadership' },
-  { id: 'hyderabad-2-04', caption: 'Presidential Conclave Address: Academic & Scientific Excellence', category: 'Keynote' },
+  { id: 'hyderabad-2-01', caption: 'Ceremonial Lamp Lighting & Conclave Inaugural Blessing', category: 'Tradition' },
+  { id: 'hyderabad-2-02', caption: 'Leadership Conclave Keynote Address from the Dais', category: 'Keynote' },
+  { id: 'hyderabad-2-03', caption: 'Grand Plenary Assembly: Enterprise Leaders & University Delegates', category: 'Plenary' },
+  { id: 'hyderabad-2-04', caption: 'Executive Panel Dialogue on Cross-Disciplinary Talent Architectures', category: 'Panel' },
   { id: 'hyderabad-2-05', caption: 'Keynote Deliberations on Sovereign Technological Capabilities', category: 'Keynote' },
   { id: 'hyderabad-2-06', caption: 'Corporate Leadership Perspectives from the Hyderabad Tech Corridor', category: 'Enterprise' },
   { id: 'hyderabad-2-07', caption: 'Plenary Assembly: CXOs, R&D Directors & Enterprise Mentors', category: 'Plenary' },
