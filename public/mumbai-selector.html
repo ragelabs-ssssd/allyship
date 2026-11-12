@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALLYSHIP++ | Mumbai Chapter 1 Photo Selector & Narrative Order</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            accent: '#C5A869',
+            'accent-light': '#E8D5A7',
+            canvas: '#0B0F19',
+            surface: '#111827',
+            'surface-2': '#1F2937',
+            'surface-3': '#374151',
+            line: 'rgba(255, 255, 255, 0.12)',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #0B0F19; color: #FFFFFF; font-family: 'Inter', sans-serif; }
+    .badge-number {
+      background: #C5A869;
+      color: #000;
+      font-weight: 800;
+      width: 26px;
+      height: 26px;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+  </style>
+</head>
+<body class="min-h-screen pb-32">
+
+  <header class="sticky top-0 z-40 bg-surface/95 backdrop-blur-md border-b border-line px-4 sm:px-6 py-4 shadow-xl">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
+      <div>
+        <div class="flex items-center gap-3">
+          <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-accent/15 text-accent border border-accent/30">
+            Curated Photo Narrative
+          </span>
+          <h1 class="text-xl sm:text-2xl font-display font-extrabold tracking-tight text-white">
+            Mumbai Chapter 1.0 Photo Gallery
+          </h1>
+          <span class="text-xs bg-surface-3 text-gray-300 font-mono px-2 py-0.5 rounded-md font-semibold">
+            18 Curated Unique Photos
+          </span>
+        </div>
+        <p class="text-xs text-gray-400 mt-1">
+          De-duplicated, color-calibrated, and chronologically ordered from arrival to grand ensemble. (1 low-res duplicate excluded).
+        </p>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="/event#mumbai-1" class="px-4 py-2.5 rounded-xl bg-accent hover:bg-accent-light text-black font-extrabold text-xs uppercase tracking-wider transition-all shadow-lg shadow-accent/20 flex items-center gap-2 cursor-pointer">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          View on Event Page
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- AUDIT SUMMARY BAR -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 pt-6">
+    <div class="bg-surface-2 border border-line rounded-2xl p-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center font-bold">✓</div>
+        <div>
+          <span class="font-bold text-white">De-duplication Audit Complete:</span>
+          <span class="text-gray-300 ml-1">Photo #5 (838x586, 86 KB) was identified as a lower-resolution duplicate of Photo #13 and excluded. All 18 remaining photos are unique, sharp, and sequenced.</span>
+        </div>
+      </div>
+      <span class="px-2.5 py-1 rounded bg-surface-3 text-gray-300 font-mono shrink-0">18 Active Moments</span>
+    </div>
+  </section>
+
+  <!-- GRID OF PHOTOS -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 pt-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[4/3] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/mumbai-1/mumbai-1-01.jpg', 'VIP Delegation & Conclave Organizing Committee Arrival at the Official Media Wall')">
+            <img 
+              src="/conclave-moments/mumbai-1/mumbai-1-01.jpg" 
+              alt="VIP Delegation & Conclave Organizing Committee Arrival at the Official Media Wall" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">1</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Media Wall
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">mumbai-1-01.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              VIP Delegation & Conclave Organizing Committee Arrival at the Official Media Wall
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[4/3] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/mumbai-1/mumbai-1-02.jpg', 'Industry Delegates & University Partners Gathering at the ALLYSHIP Conclave Backdrop')">
+            <img 
+              src="/conclave-moments/mumbai-1/mumbai-1-02.jpg" 
+              alt="Industry Delegates & University Partners Gathering at the ALLYSHIP Conclave Backdrop" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">2</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Media Wall
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">mumbai-1-02.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Industry Delegates & University Partners Gathering at the ALLYSHIP Conclave Backdrop
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[4/3] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/mumbai-1/mumbai-1-03.jpg', 'Corporate HR Leaders & Academic Delegates Welcomed at Hyatt Mumbai')">
+            <img 
+              src="/conclave-moments/mumbai-1/mumbai-1-03.jpg" 
+              alt="Corporate HR Leaders & Academic Delegates Welcomed at Hyatt Mumbai" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">3</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Media Wall
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">mumbai-1-03.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Corporate HR Leaders & Academic Delegates Welcomed at Hyatt Mumbai
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[4/3] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/mumbai-1/mumbai-1-04.jpg', 'Conclave Community & Delegate Camaraderie at the Official Media Wall')">
+            <img 
+              src="/conclave-moments/mumbai-1/mumbai-1-04.jpg" 
+              alt="Conclave Community & Delegate Camaraderie at the Official Media Wall" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">4</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Camaraderie
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">mumbai-1-04.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Conclave Community & Delegate Camaraderie at the Official Media Wall
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[4/3] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/mumbai-1/mumbai-1-05.jpg', 'Pre-Session Executive Networking & Collaborative Discourse in the Conclave Foyer')">
+            <img 
+              src="/conclave-moments/mumbai-1/mumbai-1-05.jpg" 
+              alt="Pre-Session Executive Networking & Collaborative Discourse in the Conclave Foyer" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">5</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Networking
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">mumbai-1-05.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Pre-Session Executive Networking & Collaborative Discourse in the Conclave Foyer
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[4/3] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/mumbai-1/mumbai-1-06.jpg', 'Bilateral Leadership Consultation on Talent Transformation & Cross-Industry Synergies')">
+            <img 
+              src="/conclave-moments/mumbai-1/mumbai-1-06.jpg" 
+              alt="Bilateral Leadership Consultation on Talent Transformation & Cross-Industry Synergies" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">6</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Networking
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">mumbai-1-06.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Bilateral Leadership Consultation on Talent Transformation & Cross-Industry Synergies
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[4/3] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/mumbai-1/mumbai-1-07.jpg', 'Inaugural Conclave Address: Emcee & Leadership Welcome at the Podium')">
+            <img 
+              src="/conclave-moments/mumbai-1/mumbai-1-07.jpg" 
+              alt="Inaugural Conclave Address: Emcee & Leadership Welcome at the Podium" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">7</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Podium Address
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">mumbai-1-07.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Inaugural Conclave Address: Emcee & Leadership Welcome at the Podium
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[4/3] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/mumbai-1/mumbai-1-08.jpg', 'Stage Welcome & Ceremonial Handshake for Guest of Honor Nilesh Kulkarni')">
+            <img 
+              src="/conclave-moments/mumbai-1/mumbai-1-08.jpg" 
+              alt="Stage Welcome & Ceremonial Handshake for Guest of Honor Nilesh Kulkarni" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">8</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Stage Welcome
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">mumbai-1-08.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Stage Welcome & Ceremonial Handshake for Guest of Honor Nilesh Kulkarni
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[4/3] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/mumbai-1/mumbai-1-09.jpg', 'Grand Felicitation of Olympian & Keynote Speaker Nilesh Kulkarni with Ceremonial Shawl & Bouquet')">
+            <img 
+              src="/conclave-moments/mumbai-1/mumbai-1-09.jpg" 
+              alt="Grand Felicitation of Olympian & Keynote Speaker Nilesh Kulkarni with Ceremonial Shawl & Bouquet" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">9</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Felicitation
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">mumbai-1-09.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Grand Felicitation of Olympian & Keynote Speaker Nilesh Kulkarni with Ceremonial Shawl & Bouquet
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[4/3] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/mumbai-1/mumbai-1-10.jpg', 'Keynote Fireside Dialogue: High-Performance Culture & Athletic Rigor in Corporate Leadership')">
+            <img 
+              src="/conclave-moments/mumbai-1/mumbai-1-10.jpg" 
+              alt="Keynote Fireside Dialogue: High-Performance Culture & Athletic Rigor in Corporate Leadership" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">10</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Fireside Chat
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">mumbai-1-10.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Keynote Fireside Dialogue: High-Performance Culture & Athletic Rigor in Corporate Leadership
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[4/3] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/mumbai-1/mumbai-1-11.jpg', 'Presentation of the Sacred Konark Sun Temple Wheel Memento to Nilesh Kulkarni')">
+            <img 
+              src="/conclave-moments/mumbai-1/mumbai-1-11.jpg" 
+              alt="Presentation of the Sacred Konark Sun Temple Wheel Memento to Nilesh Kulkarni" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">11</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Honors & Memento
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">mumbai-1-11.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Presentation of the Sacred Konark Sun Temple Wheel Memento to Nilesh Kulkarni
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[4/3] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/mumbai-1/mumbai-1-12.jpg', 'Executive Panel Deliberations: Building Resilient, Inclusive & Empowered Workplace Ecosystems')">
+            <img 
+              src="/conclave-moments/mumbai-1/mumbai-1-12.jpg" 
+              alt="Executive Panel Deliberations: Building Resilient, Inclusive & Empowered Workplace Ecosystems" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">12</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Panel Deliberations
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">mumbai-1-12.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Executive Panel Deliberations: Building Resilient, Inclusive & Empowered Workplace Ecosystems
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[4/3] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/mumbai-1/mumbai-1-13.jpg', 'Corporate Leadership Address: Industry Mentor Sharing Insights on Strategic Talent Capability')">
+            <img 
+              src="/conclave-moments/mumbai-1/mumbai-1-13.jpg" 
+              alt="Corporate Leadership Address: Industry Mentor Sharing Insights on Strategic Talent Capability" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">13</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Panel Deliberations
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">mumbai-1-13.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Corporate Leadership Address: Industry Mentor Sharing Insights on Strategic Talent Capability
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[4/3] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/mumbai-1/mumbai-1-14.jpg', 'Conclave Plenary Assembly: Corporate Delegates Engaged in the Executive Lounge')">
+            <img 
+              src="/conclave-moments/mumbai-1/mumbai-1-14.jpg" 
+              alt="Conclave Plenary Assembly: Corporate Delegates Engaged in the Executive Lounge" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">14</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Audience Assembly
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">mumbai-1-14.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Conclave Plenary Assembly: Corporate Delegates Engaged in the Executive Lounge
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[4/3] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/mumbai-1/mumbai-1-15.jpg', 'Focused Delegate Engagement: Corporate Leader Reflecting on Conclave Deliberations')">
+            <img 
+              src="/conclave-moments/mumbai-1/mumbai-1-15.jpg" 
+              alt="Focused Delegate Engagement: Corporate Leader Reflecting on Conclave Deliberations" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">15</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Audience Candid
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">mumbai-1-15.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Focused Delegate Engagement: Corporate Leader Reflecting on Conclave Deliberations
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[4/3] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/mumbai-1/mumbai-1-16.jpg', 'Warmth & Camaraderie: Delegate Heartwarming Gesture from the Assembly Floor')">
+            <img 
+              src="/conclave-moments/mumbai-1/mumbai-1-16.jpg" 
+              alt="Warmth & Camaraderie: Delegate Heartwarming Gesture from the Assembly Floor" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">16</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Audience Candid
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">mumbai-1-16.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Warmth & Camaraderie: Delegate Heartwarming Gesture from the Assembly Floor
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[4/3] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/mumbai-1/mumbai-1-17.jpg', 'Conclave Organizing Committee & Core Leadership on the Mumbai Main Stage')">
+            <img 
+              src="/conclave-moments/mumbai-1/mumbai-1-17.jpg" 
+              alt="Conclave Organizing Committee & Core Leadership on the Mumbai Main Stage" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">17</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Organizing Leadership
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">mumbai-1-17.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Conclave Organizing Committee & Core Leadership on the Mumbai Main Stage
+            </p>
+          </div>
+        </div>
+      
+        <div class="group relative bg-surface-2 border border-line hover:border-accent/60 rounded-2xl overflow-hidden transition-all duration-300 shadow-lg hover:shadow-2xl">
+          <div class="relative aspect-[4/3] w-full bg-surface-3 overflow-hidden cursor-pointer" onclick="openLightbox('/conclave-moments/mumbai-1/mumbai-1-18.jpg', 'Grand Conclave Finale Ensemble: University Leadership, Keynote Dignitaries & Industry Mentors')">
+            <img 
+              src="/conclave-moments/mumbai-1/mumbai-1-18.jpg" 
+              alt="Grand Conclave Finale Ensemble: University Leadership, Keynote Dignitaries & Industry Mentors" 
+              loading="lazy" 
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <div class="absolute top-2.5 left-2.5">
+              <span class="badge-number shadow-lg">18</span>
+            </div>
+            <span class="absolute top-2.5 right-2.5 text-[9px] font-bold uppercase tracking-wider bg-black/70 backdrop-blur-md px-2 py-0.5 rounded-md border border-white/10 text-gray-300">
+              Finale Ensemble
+            </span>
+            <button 
+              type="button" 
+              class="absolute bottom-2.5 right-2.5 w-7 h-7 rounded-full bg-black/75 hover:bg-accent text-white hover:text-black flex items-center justify-center backdrop-blur-md transition-all opacity-85 hover:opacity-100"
+              title="Inspect full screen"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
+            </button>
+          </div>
+          <div class="p-3.5 space-y-1">
+            <span class="font-mono text-[11px] font-bold text-accent">mumbai-1-18.jpg</span>
+            <p class="text-xs text-gray-300 leading-snug line-clamp-2">
+              Grand Conclave Finale Ensemble: University Leadership, Keynote Dignitaries & Industry Mentors
+            </p>
+          </div>
+        </div>
+      
+    </div>
+  </main>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-lg flex items-center justify-center p-4 hidden" onclick="closeLightbox()">
+    <div class="max-w-5xl max-h-[90vh] flex flex-col items-center">
+      <img id="lightboxImg" src="" alt="" class="max-w-full max-h-[80vh] object-contain rounded-xl border border-line shadow-2xl" />
+      <p id="lightboxCaption" class="text-sm text-gray-300 mt-3 text-center max-w-2xl font-medium"></p>
+      <button class="mt-4 px-4 py-1.5 rounded-lg bg-surface-2 hover:bg-surface-3 text-xs text-gray-400 uppercase tracking-wider font-bold border border-line cursor-pointer">
+        Click anywhere to close
+      </button>
+    </div>
+  </div>
+
+  <script>
+    function openLightbox(src, caption) {
+      document.getElementById('lightboxImg').src = src;
+      document.getElementById('lightboxCaption').innerText = caption;
+      document.getElementById('lightbox').classList.remove('hidden');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.add('hidden');
+    }
+  </script>
+</body>
+</html>

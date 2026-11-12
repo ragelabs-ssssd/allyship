@@ -923,23 +923,93 @@ const CHAPTER_ARCHIVES: Record<string, ChapterMediaArchive> = {
     photos: [
       {
         src: "/conclave-moments/mumbai-1/mumbai-1-01.jpg",
-        caption: "Corporate & Academic Leadership Delegation at the Mumbai Conclave Backdrop",
-        objectPosition: "50% 25%",
+        caption: "VIP Delegation & Conclave Organizing Committee Arrival at the Official Media Wall",
+        objectPosition: "50% 20%",
       },
       {
         src: "/conclave-moments/mumbai-1/mumbai-1-02.jpg",
-        caption: "Executive Dignitaries & Organizers on the Mumbai Conclave Floor",
+        caption: "Industry Delegates & University Partners Gathering at the ALLYSHIP Conclave Backdrop",
         objectPosition: "50% 25%",
       },
       {
         src: "/conclave-moments/mumbai-1/mumbai-1-03.jpg",
-        caption: "Main Stage Fireside Deliberation: Leadership Dialogue on Talent & Culture",
-        objectPosition: "50% 30%",
+        caption: "Corporate HR Leaders & Academic Delegates Welcomed at Hyatt Mumbai",
+        objectPosition: "50% 25%",
       },
       {
         src: "/conclave-moments/mumbai-1/mumbai-1-04.jpg",
-        caption: "High-Performance Culture & Strategic Allyship Panel Discussion",
+        caption: "Conclave Community & Delegate Camaraderie at the Official Media Wall",
         objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/mumbai-1/mumbai-1-05.jpg",
+        caption: "Pre-Session Executive Networking & Collaborative Discourse in the Conclave Foyer",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/mumbai-1/mumbai-1-06.jpg",
+        caption: "Bilateral Leadership Consultation on Talent Transformation & Cross-Industry Synergies",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/mumbai-1/mumbai-1-07.jpg",
+        caption: "Inaugural Conclave Address: Emcee & Leadership Welcome at the Podium",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/mumbai-1/mumbai-1-08.jpg",
+        caption: "Stage Welcome & Ceremonial Handshake for Guest of Honor Nilesh Kulkarni",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/mumbai-1/mumbai-1-09.jpg",
+        caption: "Grand Felicitation of Olympian & Keynote Speaker Nilesh Kulkarni with Ceremonial Shawl & Bouquet",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/mumbai-1/mumbai-1-10.jpg",
+        caption: "Keynote Fireside Dialogue: High-Performance Culture & Athletic Rigor in Corporate Leadership",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/mumbai-1/mumbai-1-11.jpg",
+        caption: "Presentation of the Sacred Konark Sun Temple Wheel Memento to Nilesh Kulkarni",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/mumbai-1/mumbai-1-12.jpg",
+        caption: "Executive Panel Deliberations: Building Resilient, Inclusive & Empowered Workplace Ecosystems",
+        objectPosition: "50% 30%",
+      },
+      {
+        src: "/conclave-moments/mumbai-1/mumbai-1-13.jpg",
+        caption: "Corporate Leadership Address: Industry Mentor Sharing Insights on Strategic Talent Capability",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/mumbai-1/mumbai-1-14.jpg",
+        caption: "Conclave Plenary Assembly: Corporate Delegates Engaged in the Executive Lounge",
+        objectPosition: "50% 35%",
+      },
+      {
+        src: "/conclave-moments/mumbai-1/mumbai-1-15.jpg",
+        caption: "Focused Delegate Engagement: Corporate Leader Reflecting on Conclave Deliberations",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/mumbai-1/mumbai-1-16.jpg",
+        caption: "Warmth & Camaraderie: Delegate Heartwarming Gesture from the Assembly Floor",
+        objectPosition: "50% 25%",
+      },
+      {
+        src: "/conclave-moments/mumbai-1/mumbai-1-17.jpg",
+        caption: "Conclave Organizing Committee & Core Leadership on the Mumbai Main Stage",
+        objectPosition: "50% 20%",
+      },
+      {
+        src: "/conclave-moments/mumbai-1/mumbai-1-18.jpg",
+        caption: "Grand Conclave Finale Ensemble: University Leadership, Keynote Dignitaries & Industry Mentors",
+        objectPosition: "50% 25%",
       },
     ],
   },
