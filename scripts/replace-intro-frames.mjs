@@ -50,3 +50,4 @@ for (const m of newMoments) {
   const st = fs.statSync(outFile);
   console.log(`Replaced ${m.id}.jpg at ${m.timestamp}s (${(st.size / 1024).toFixed(0)} KB)`);
 }
+

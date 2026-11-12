@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALLYSHIP++ | Out-of-the-Box Chapter Navigation Concepts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            accent: '#C5A869',
+            'accent-light': '#E8D5A7',
+            'accent-dark': '#9A7E3E',
+            canvas: 'var(--canvas)',
+            surface: 'var(--surface)',
+            'surface-2': 'var(--surface-2)',
+            'surface-3': 'var(--surface-3)',
+            line: 'var(--line)',
+            content: 'var(--content)',
+            'content-muted': 'var(--content-muted)',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root[data-theme="dark"] {
+      --canvas: #070707;
+      --surface: #111111;
+      --surface-2: #191919;
+      --surface-3: #222222;
+      --line: rgba(255, 255, 255, 0.12);
+      --content: #FFFFFF;
+      --content-muted: #9CA3AF;
+      --glow-accent: rgba(197, 168, 105, 0.25);
+    }
+    :root[data-theme="light"] {
+      --canvas: #F8F6F1;
+      --surface: #FFFFFF;
+      --surface-2: #F1ECE1;
+      --surface-3: #E5DFC0;
+      --line: rgba(15, 23, 42, 0.12);
+      --content: #0F172A;
+      --content-muted: #64748B;
+      --glow-accent: rgba(197, 168, 105, 0.2);
+    }
+    body {
+      background-color: var(--canvas);
+      color: var(--content);
+      font-family: 'Inter', sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      overflow-x: hidden;
+    }
+    .font-display { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-serif { font-family: 'Playfair Display', serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+
+    /* Custom scrollbar for filmstrip */
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+    /* Radar Pulse animation */
+    @keyframes radarPulse {
+      0% { transform: scale(0.95); opacity: 0.9; box-shadow: 0 0 0 0 rgba(197, 168, 105, 0.7); }
+      70% { transform: scale(1.15); opacity: 1; box-shadow: 0 0 0 14px rgba(197, 168, 105, 0); }
+      100% { transform: scale(0.95); opacity: 0.9; box-shadow: 0 0 0 0 rgba(197, 168, 105, 0); }
+    }
+    .radar-active {
+      animation: radarPulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+    }
+
+    /* Ambient Cinema Backdrop Glow */
+    .cinema-glow {
+      background: radial-gradient(circle at 50% 30%, var(--glow-accent) 0%, transparent 70%);
+    }
+
+    /* 3D Card Perspective */
+    .perspective-container {
+      perspective: 1200px;
+    }
+    .card-3d {
+      transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease;
+    }
+    .card-3d:hover {
+      transform: translateY(-8px) rotateX(4deg) scale(1.02);
+    }
+  </style>
+</head>
+<body class="min-h-screen py-8 px-4 sm:px-8 max-w-[1400px] mx-auto">
+
+  <!-- Top Navigation & Brand Header -->
+  <header class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 border-b border-line mb-10">
+    <div class="space-y-1">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-accent animate-ping"></span>
+        <span class="font-mono text-xs uppercase tracking-[0.25em] text-accent font-semibold">
+          High-Concept UX Explorations
+        </span>
+      </div>
+      <h1 class="font-display text-2xl sm:text-4xl font-black tracking-tight text-content">
+        Beyond Buttons: 3 Out-of-the-Box Chapter Navigators
+      </h1>
+      <p class="text-sm text-content-muted max-w-2xl leading-relaxed">
+        Replacing static pills with memorable, tactile, and cinematic interactions crafted specifically for C-suite executive storytelling.
+      </p>
+    </div>
+
+    <!-- Theme & Quick Actions -->
+    <div class="flex items-center gap-3">
+      <button onclick="toggleTheme()" class="px-4 py-2.5 rounded-full border border-line bg-surface text-xs font-semibold flex items-center gap-2 hover:border-accent transition-colors shadow-sm">
+        <span id="theme-icon">☀️ Light Mode</span>
+      </button>
+      <a href="http://localhost:3000/event#videos-section" class="px-5 py-2.5 rounded-full bg-accent text-black font-bold text-xs hover:brightness-110 transition-all shadow-lg flex items-center gap-1.5">
+        <span>View Current Site</span>
+        <span>↗</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Big Concept Selector Cards -->
+  <section class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+    <!-- Concept A -->
+    <button onclick="switchConcept('A')" id="btn-concept-A" class="concept-tab text-left p-6 rounded-3xl border-2 border-accent bg-surface-2 ring-4 ring-accent/20 transition-all relative overflow-hidden group shadow-xl">
+      <div class="absolute -right-4 -bottom-4 text-7xl font-black font-display text-line opacity-20 pointer-events-none group-hover:scale-110 transition-transform">
+        01
+      </div>
+      <div class="relative z-10 space-y-2">
+        <div class="flex items-center justify-between">
+          <span class="px-2.5 py-0.5 rounded-full bg-accent/20 text-accent font-mono text-[10px] font-bold uppercase tracking-wider">
+            Concept A · Spatial
+          </span>
+          <span class="text-xs text-accent font-semibold">Interactive</span>
+        </div>
+        <h3 class="font-display text-lg font-bold text-content">
+          The Pan-India Radar Map
+        </h3>
+        <p class="text-xs text-content-muted leading-relaxed">
+          A stylized vector flight-corridor map of India. Clicking a glowing city node pulses the corridor and projects its media stage below.
+        </p>
+      </div>
+    </button>
+
+    <!-- Concept B -->
+    <button onclick="switchConcept('B')" id="btn-concept-B" class="concept-tab text-left p-6 rounded-3xl border border-line bg-surface hover:border-accent/60 transition-all relative overflow-hidden group">
+      <div class="absolute -right-4 -bottom-4 text-7xl font-black font-display text-line opacity-20 pointer-events-none group-hover:scale-110 transition-transform">
+        02
+      </div>
+      <div class="relative z-10 space-y-2">
+        <div class="flex items-center justify-between">
+          <span class="px-2.5 py-0.5 rounded-full bg-surface-3 text-content-muted font-mono text-[10px] font-bold uppercase tracking-wider">
+            Concept B · Panoramic
+          </span>
+          <span class="text-xs text-content-muted">Horizontal Scrub</span>
+        </div>
+        <h3 class="font-display text-lg font-bold text-content">
+          Cinematic Scrubbing Filmstrip
+        </h3>
+        <p class="text-xs text-content-muted leading-relaxed">
+          Apple Keynote-inspired widescreen filmstrip. Gliding or clicking oversized chapter frames smoothly morphs the main projection screen.
+        </p>
+      </div>
+    </button>
+
+    <!-- Concept C -->
+    <button onclick="switchConcept('C')" id="btn-concept-C" class="concept-tab text-left p-6 rounded-3xl border border-line bg-surface hover:border-accent/60 transition-all relative overflow-hidden group">
+      <div class="absolute -right-4 -bottom-4 text-7xl font-black font-display text-line opacity-20 pointer-events-none group-hover:scale-110 transition-transform">
+        03
+      </div>
+      <div class="relative z-10 space-y-2">
+        <div class="flex items-center justify-between">
+          <span class="px-2.5 py-0.5 rounded-full bg-surface-3 text-content-muted font-mono text-[10px] font-bold uppercase tracking-wider">
+            Concept C · Chronograph
+          </span>
+          <span class="text-xs text-content-muted">Dial Controller</span>
+        </div>
+        <h3 class="font-display text-lg font-bold text-content">
+          The Executive Chronograph Dial
+        </h3>
+        <p class="text-xs text-content-muted leading-relaxed">
+          Inspired by luxury watch bezels & camera aperture rings. A tactile curved rotary track with chapter index markers and coordinate telemetry.
+        </p>
+      </div>
+    </button>
+  </section>
+
+  <!-- ========================================================
+       CONCEPT A: THE PAN-INDIA RADAR MAP
+       ======================================================== -->
+  <section id="concept-A" class="concept-view space-y-8">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-5 rounded-2xl bg-accent/10 border border-accent/25">
+      <div class="flex items-center gap-3">
+        <span class="text-2xl">🗺️</span>
+        <div>
+          <h4 class="font-display text-sm font-bold text-accent">Concept A: Spatial Radar Corridor</h4>
+          <p class="text-xs text-content-muted mt-0.5">Click any glowing beacon on the map or the edition toggle to stream that chapter’s conclave film.</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <button onclick="filterRadarEdition('2.0')" id="radar-filter-2" class="px-3.5 py-1.5 rounded-full bg-accent text-black font-bold text-xs shadow-md transition-all">
+          Edition 2.0 (2024)
+        </button>
+        <button onclick="filterRadarEdition('1.0')" id="radar-filter-1" class="px-3.5 py-1.5 rounded-full bg-surface border border-line text-content-muted font-medium text-xs hover:text-content transition-all">
+          Edition 1.0 (2023)
+        </button>
+      </div>
+    </div>
+
+    <!-- Map & Stage Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <!-- Left: Interactive Stylized India Map Canvas (5 cols) -->
+      <div class="lg:col-span-5 rounded-3xl border border-line bg-surface p-6 sm:p-8 relative overflow-hidden shadow-2xl">
+        <div class="flex items-center justify-between mb-4 pb-3 border-b border-line">
+          <div>
+            <span class="font-mono text-[11px] uppercase tracking-widest text-accent font-semibold block">Flight Telemetry</span>
+            <span class="text-xs text-content-muted" id="map-telemetry">Active: Hyderabad (17.3850° N, 78.4867° E)</span>
+          </div>
+          <span class="px-2 py-1 rounded bg-accent/15 text-accent font-mono text-[10px] font-bold">RADAR LIVE</span>
+        </div>
+
+        <!-- Stylized Minimal SVG Map with Active Nodes -->
+        <div class="relative w-full aspect-[4/5] max-h-[460px] mx-auto flex items-center justify-center">
+          <svg viewBox="0 0 400 460" class="w-full h-full" fill="none" stroke="currentColor">
+            <!-- Simplified Geographic Silhouette Outline of India -->
+            <path d="M 180,30 L 220,50 L 250,90 L 230,120 L 280,150 L 330,180 L 300,210 L 270,220 L 260,260 L 230,320 L 195,420 L 160,340 L 130,280 L 110,230 L 120,180 L 150,140 L 140,90 Z" 
+                  class="stroke-line" stroke-width="1.5" stroke-dasharray="3 3" fill="var(--surface-2)" fill-opacity="0.5" />
+
+            <!-- Flight Corridors from SOA HQ (Bhubaneswar approx 280, 240) -->
+            <!-- Bhubaneswar to Bengaluru -->
+            <path id="path-blr" d="M 280,240 Q 230,280 185,340" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="4 4" class="flight-line transition-all duration-500" />
+            <!-- Bhubaneswar to Hyderabad -->
+            <path id="path-hyd" d="M 280,240 Q 240,260 200,290" stroke="#C5A869" stroke-width="2.5" class="flight-line transition-all duration-500" />
+            <!-- Bhubaneswar to Chennai -->
+            <path id="path-che" d="M 280,240 Q 250,300 220,350" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="4 4" class="flight-line transition-all duration-500" />
+            <!-- Bhubaneswar to Kolkata -->
+            <path id="path-kol" d="M 280,240 Q 290,210 305,200" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="4 4" class="flight-line transition-all duration-500" />
+            <!-- Bhubaneswar to Mumbai -->
+            <path id="path-mum" d="M 280,240 Q 200,240 145,260" stroke="var(--line)" stroke-width="1.5" stroke-dasharray="4 4" class="flight-line transition-all duration-500" />
+
+            <!-- SOA Headquarters Anchor Beacon -->
+            <g transform="translate(280, 240)">
+              <circle r="6" fill="#C5A869" />
+              <circle r="12" stroke="#C5A869" stroke-width="1" opacity="0.6" />
+              <text x="12" y="4" fill="#C5A869" font-size="9" font-family="'JetBrains Mono', monospace" font-weight="bold">SOA HUB (Bhubaneswar)</text>
+            </g>
+
+            <!-- Clickable City Nodes -->
+            <!-- Hyderabad (200, 290) -->
+            <g transform="translate(200, 290)" class="cursor-pointer group" onclick="selectRadarChapter('hyderabad-2')">
+              <circle id="node-circle-hyd" r="9" fill="#C5A869" class="radar-active" />
+              <circle r="4" fill="#000" />
+              <text x="-15" y="-14" fill="var(--content)" font-size="11" font-family="'Plus Jakarta Sans', sans-serif" font-weight="bold" text-anchor="middle">Hyderabad</text>
+              <text x="-15" y="-3" fill="#C5A869" font-size="8" font-family="'JetBrains Mono', monospace" text-anchor="middle">ITC Kohenur</text>
+            </g>
+
+            <!-- Bengaluru (185, 340) -->
+            <g transform="translate(185, 340)" class="cursor-pointer group" onclick="selectRadarChapter('bengaluru-2')">
+              <circle id="node-circle-blr" r="7" fill="var(--surface-3)" stroke="#C5A869" stroke-width="1.5" class="group-hover:fill-accent transition-colors" />
+              <text x="-20" y="18" fill="var(--content)" font-size="11" font-family="'Plus Jakarta Sans', sans-serif" font-weight="bold" text-anchor="middle">Bengaluru</text>
+              <text x="-20" y="28" fill="var(--content-muted)" font-size="8" font-family="'JetBrains Mono', monospace" text-anchor="middle">Leela Palace</text>
+            </g>
+
+            <!-- Chennai (220, 350) -->
+            <g transform="translate(220, 350)" class="cursor-pointer group" onclick="selectRadarChapter('chennai-2')">
+              <circle id="node-circle-che" r="7" fill="var(--surface-3)" stroke="#C5A869" stroke-width="1.5" class="group-hover:fill-accent transition-colors" />
+              <text x="40" y="16" fill="var(--content)" font-size="11" font-family="'Plus Jakarta Sans', sans-serif" font-weight="bold" text-anchor="middle">Chennai</text>
+              <text x="40" y="26" fill="var(--content-muted)" font-size="8" font-family="'JetBrains Mono', monospace" text-anchor="middle">Taj Coromandel</text>
+            </g>
+
+            <!-- Kolkata (305, 200) -->
+            <g transform="translate(305, 200)" class="cursor-pointer group" onclick="selectRadarChapter('kolkata-1')">
+              <circle id="node-circle-kol" r="7" fill="var(--surface-3)" stroke="#C5A869" stroke-width="1.5" class="group-hover:fill-accent transition-colors" />
+              <text x="35" y="4" fill="var(--content)" font-size="11" font-family="'Plus Jakarta Sans', sans-serif" font-weight="bold">Kolkata</text>
+              <text x="35" y="14" fill="var(--content-muted)" font-size="8" font-family="'JetBrains Mono', monospace">JW Marriott</text>
+            </g>
+
+            <!-- Mumbai (145, 260) -->
+            <g transform="translate(145, 260)" class="cursor-pointer group" onclick="selectRadarChapter('mumbai-1')">
+              <circle id="node-circle-mum" r="7" fill="var(--surface-3)" stroke="#C5A869" stroke-width="1.5" class="group-hover:fill-accent transition-colors" />
+              <text x="-40" y="4" fill="var(--content)" font-size="11" font-family="'Plus Jakarta Sans', sans-serif" font-weight="bold">Mumbai</text>
+              <text x="-40" y="14" fill="var(--content-muted)" font-size="8" font-family="'JetBrains Mono', monospace">St. Regis</text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="mt-4 pt-4 border-t border-line flex items-center justify-between text-xs text-content-muted">
+          <span>Click any city beacon above</span>
+          <span class="text-accent font-semibold font-mono">5 Major Metro Hubs</span>
+        </div>
+      </div>
+
+      <!-- Right: Cinema Projection Screen (7 cols) -->
+      <div class="lg:col-span-7 space-y-6">
+        <div class="rounded-3xl border border-line bg-surface p-6 sm:p-8 shadow-2xl relative overflow-hidden cinema-glow">
+          <!-- Top Badge & Edition Metadata -->
+          <div class="flex items-center justify-between gap-4 pb-5 border-b border-line">
+            <div class="flex items-center gap-2">
+              <span id="stage-edition-badge" class="px-3 py-1 rounded-full bg-accent/15 border border-accent/30 text-accent font-mono text-xs font-bold uppercase tracking-wider">
+                Allyship++ 2.0 · July 2024
+              </span>
+              <span id="stage-venue-badge" class="px-3 py-1 rounded-full bg-surface-2 border border-line text-xs font-medium text-content-muted">
+                ITC Kohenur, HITEC City
+              </span>
+            </div>
+            <span class="text-xs font-mono text-content-muted">Official Deliberation</span>
+          </div>
+
+          <!-- Dynamic Chapter Title & Synopsis -->
+          <div class="space-y-2 my-5">
+            <h2 id="stage-title" class="font-display text-2xl sm:text-3xl font-extrabold text-content">
+              Hyderabad Chapter — Conclave Deliberation
+            </h2>
+            <p id="stage-desc" class="text-sm text-content-muted leading-relaxed">
+              Practicing Allyship at the Organizational Level — CXO and scientific leadership discourses examining human-centric talent biomes within the Hyderabad Tech Corridor.
+            </p>
+          </div>
+
+          <!-- Video Projection Frame -->
+          <div class="aspect-video w-full rounded-2xl bg-surface-2 border border-line overflow-hidden relative group shadow-2xl flex items-center justify-center">
+            <img id="stage-thumb" src="/slides/CON01670.jpg" alt="Video frame" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors"></div>
+            
+            <button onclick="alert('Playing Hyderabad Conclave Film (38m)')" class="relative z-10 w-16 h-16 rounded-full bg-accent text-black flex items-center justify-center text-xl font-black shadow-2xl group-hover:scale-110 transition-transform">
+              ▶
+            </button>
+            <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs text-white">
+              <span class="px-3 py-1 bg-black/70 rounded-full backdrop-blur-md font-mono">Full Video Deliberation (38m 20s)</span>
+              <span class="px-3 py-1 bg-black/70 rounded-full backdrop-blur-md">4K UHD Master</span>
+            </div>
+          </div>
+
+          <!-- Mini Photo Filmstrip Strip -->
+          <div class="mt-6 pt-5 border-t border-line space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="font-display text-xs font-bold uppercase tracking-wider text-content">
+                Curated Photographic Archives
+              </span>
+              <span class="text-xs text-accent font-semibold cursor-pointer hover:underline">
+                View All 24 Photos →
+              </span>
+            </div>
+            <div id="stage-photos" class="grid grid-cols-4 sm:grid-cols-6 gap-2">
+              <div class="aspect-square rounded-xl bg-surface-2 border border-line overflow-hidden"><img src="/conclave-moments/hyderabad-1/hyderabad-1-01.jpg" class="w-full h-full object-cover"></div>
+              <div class="aspect-square rounded-xl bg-surface-2 border border-line overflow-hidden"><img src="/conclave-moments/hyderabad-1/hyderabad-1-02.jpg" class="w-full h-full object-cover"></div>
+              <div class="aspect-square rounded-xl bg-surface-2 border border-line overflow-hidden"><img src="/conclave-moments/hyderabad-1/hyderabad-1-03.jpg" class="w-full h-full object-cover"></div>
+              <div class="aspect-square rounded-xl bg-surface-2 border border-line overflow-hidden"><img src="/conclave-moments/hyderabad-1/hyderabad-1-04.jpg" class="w-full h-full object-cover"></div>
+              <div class="aspect-square rounded-xl bg-surface-2 border border-line overflow-hidden"><img src="/conclave-moments/hyderabad-1/hyderabad-1-05.jpg" class="w-full h-full object-cover"></div>
+              <div class="aspect-square rounded-xl bg-surface-2 border border-line overflow-hidden flex items-center justify-center font-bold text-xs text-accent bg-accent/10">+19</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       CONCEPT B: CINEMATIC SCRUBBING FILMSTRIP
+       ======================================================== -->
+  <section id="concept-B" class="concept-view hidden space-y-8">
+    <div class="p-5 rounded-2xl bg-accent/10 border border-accent/25 flex items-center gap-3">
+      <span class="text-2xl">🎞️</span>
+      <div>
+        <h4 class="font-display text-sm font-bold text-accent">Concept B: Panoramic Scrubbing Reel</h4>
+        <p class="text-xs text-content-muted mt-0.5">Scrub or click the widescreen cinematic cards below. Notice how the hero theater updates smoothly without awkward in-card pills.</p>
+      </div>
+    </div>
+
+    <!-- Active Stage Projection -->
+    <div class="rounded-3xl border border-line bg-surface p-6 sm:p-10 shadow-2xl space-y-6">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-line">
+        <div>
+          <span id="filmstrip-tag" class="font-mono text-xs font-bold uppercase tracking-widest text-accent block">
+            Featured Chapter · Allyship++ 2.0
+          </span>
+          <h2 id="filmstrip-title" class="font-display text-2xl sm:text-4xl font-black mt-1">
+            Bengaluru 2.0 — The Silicon Valley Deliberation
+          </h2>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="px-4 py-1.5 rounded-full bg-accent/15 border border-accent/30 text-accent font-semibold text-xs">
+            The Leela Palace
+          </span>
+          <button onclick="alert('Expanding to Cinema Fullscreen')" class="px-4 py-1.5 rounded-full bg-surface-2 border border-line text-xs font-semibold hover:border-accent">
+            Fullscreen Theater ⛶
+          </button>
+        </div>
+      </div>
+
+      <!-- Hero Video Player -->
+      <div class="aspect-[21/9] w-full rounded-2xl bg-surface-2 border border-line overflow-hidden relative group shadow-2xl flex items-center justify-center">
+        <img id="filmstrip-hero-img" src="/slides/CON01666.jpg" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/25 transition-colors"></div>
+        <button class="relative z-10 w-20 h-20 rounded-full bg-accent text-black flex items-center justify-center text-2xl font-black shadow-2xl group-hover:scale-110 transition-transform">
+          ▶
+        </button>
+        <div class="absolute bottom-6 left-6 text-white space-y-1">
+          <span class="text-xs font-mono uppercase tracking-widest text-accent block">Keynote Dialogue</span>
+          <h4 class="font-display text-lg font-bold">Bridging R&D Centers with Academia</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Horizontal Scrub Reel (Apple Keynote Style) -->
+    <div class="space-y-3">
+      <div class="flex items-center justify-between px-2">
+        <span class="font-mono text-xs font-bold uppercase tracking-widest text-content-muted">
+          Pan-India Chapters Filmstrip (7 Conclaves)
+        </span>
+        <span class="text-xs text-accent font-semibold">Scroll horizontally or click card →</span>
+      </div>
+
+      <!-- Horizontal Scrollable Container -->
+      <div class="flex gap-4 overflow-x-auto pb-6 pt-2 no-scrollbar scroll-smooth">
+        <!-- Chapter 1: Bengaluru 2.0 -->
+        <div onclick="selectFilmstrip('bengaluru-2')" class="filmstrip-card flex-shrink-0 w-72 rounded-2xl border-2 border-accent bg-surface-2 p-3 space-y-3 cursor-pointer ring-4 ring-accent/20 transition-all shadow-xl hover:-translate-y-1">
+          <div class="aspect-video rounded-xl bg-surface-3 overflow-hidden relative">
+            <img src="/slides/CON01666.jpg" class="w-full h-full object-cover">
+            <span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-black/70 text-white font-mono text-[9px] font-bold">2.0 · 2024</span>
+          </div>
+          <div>
+            <h5 class="font-display text-sm font-bold text-content">Bengaluru 2.0</h5>
+            <p class="text-[11px] text-content-muted">The Leela Palace · July 2024</p>
+          </div>
+        </div>
+
+        <!-- Chapter 2: Hyderabad 2.0 -->
+        <div onclick="selectFilmstrip('hyderabad-2')" class="filmstrip-card flex-shrink-0 w-72 rounded-2xl border border-line bg-surface p-3 space-y-3 cursor-pointer hover:border-accent transition-all hover:-translate-y-1">
+          <div class="aspect-video rounded-xl bg-surface-3 overflow-hidden relative">
+            <img src="/slides/CON01670.jpg" class="w-full h-full object-cover">
+            <span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-black/70 text-white font-mono text-[9px] font-bold">2.0 · 2024</span>
+          </div>
+          <div>
+            <h5 class="font-display text-sm font-bold text-content">Hyderabad 2.0</h5>
+            <p class="text-[11px] text-content-muted">ITC Kohenur · July 2024</p>
+          </div>
+        </div>
+
+        <!-- Chapter 3: Chennai 2.0 -->
+        <div onclick="selectFilmstrip('chennai-2')" class="filmstrip-card flex-shrink-0 w-72 rounded-2xl border border-line bg-surface p-3 space-y-3 cursor-pointer hover:border-accent transition-all hover:-translate-y-1">
+          <div class="aspect-video rounded-xl bg-surface-3 overflow-hidden relative">
+            <img src="/slides/CON01672.jpg" class="w-full h-full object-cover">
+            <span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-black/70 text-white font-mono text-[9px] font-bold">2.0 · 2024</span>
+          </div>
+          <div>
+            <h5 class="font-display text-sm font-bold text-content">Chennai 2.0</h5>
+            <p class="text-[11px] text-content-muted">Taj Coromandel · Aug 2024</p>
+          </div>
+        </div>
+
+        <!-- Chapter 4: Kolkata 1.0 -->
+        <div onclick="selectFilmstrip('kolkata-1')" class="filmstrip-card flex-shrink-0 w-72 rounded-2xl border border-line bg-surface p-3 space-y-3 cursor-pointer hover:border-accent transition-all hover:-translate-y-1">
+          <div class="aspect-video rounded-xl bg-surface-3 overflow-hidden relative">
+            <img src="/slides/CON01674.jpg" class="w-full h-full object-cover">
+            <span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-black/70 text-white font-mono text-[9px] font-bold">1.0 · 2023</span>
+          </div>
+          <div>
+            <h5 class="font-display text-sm font-bold text-content">Kolkata 1.0</h5>
+            <p class="text-[11px] text-content-muted">JW Marriott · Nov 2023</p>
+          </div>
+        </div>
+
+        <!-- Chapter 5: Mumbai 1.0 -->
+        <div onclick="selectFilmstrip('mumbai-1')" class="filmstrip-card flex-shrink-0 w-72 rounded-2xl border border-line bg-surface p-3 space-y-3 cursor-pointer hover:border-accent transition-all hover:-translate-y-1">
+          <div class="aspect-video rounded-xl bg-surface-3 overflow-hidden relative">
+            <img src="/slides/CON01676.jpg" class="w-full h-full object-cover">
+            <span class="absolute top-2 left-2 px-2 py-0.5 rounded bg-black/70 text-white font-mono text-[9px] font-bold">1.0 · 2024</span>
+          </div>
+          <div>
+            <h5 class="font-display text-sm font-bold text-content">Mumbai 1.0</h5>
+            <p class="text-[11px] text-content-muted">The St. Regis · Jan 2024</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       CONCEPT C: THE CHRONOGRAPH DIAL CONTROLLER
+       ======================================================== -->
+  <section id="concept-C" class="concept-view hidden space-y-8">
+    <div class="p-5 rounded-2xl bg-accent/10 border border-accent/25 flex items-center gap-3">
+      <span class="text-2xl">⏱️</span>
+      <div>
+        <h4 class="font-display text-sm font-bold text-accent">Concept C: The Executive Chronograph Stepper</h4>
+        <p class="text-xs text-content-muted mt-0.5">Precision luxury instrument dial. Scrub between indexed markers 01 to 07 with live telemetry readout.</p>
+      </div>
+    </div>
+
+    <!-- Watchmaker Instrument Container -->
+    <div class="rounded-3xl border border-line bg-surface p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+      <!-- Top Chronograph Track -->
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-8 border-b border-line mb-8">
+        <div>
+          <span class="font-mono text-xs uppercase tracking-[0.25em] text-accent font-bold">
+            CHRONOGRAPH INDEX: CHAPTER 02 OF 07
+          </span>
+          <h3 id="chrono-city" class="font-display text-3xl sm:text-5xl font-black text-content tracking-tight mt-1">
+            HYDERABAD 2.0
+          </h3>
+          <p id="chrono-coords" class="font-mono text-xs text-content-muted mt-1">
+            COORD: 17.3850° N, 78.4867° E · ELEV: 542m · VENUE: ITC KOHENUR
+          </p>
+        </div>
+
+        <!-- Rotary Index Buttons -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-2">
+          <button onclick="setChrono(1)" id="chrono-btn-1" class="chrono-btn w-11 h-11 rounded-2xl border border-line bg-surface-2 text-content-muted font-mono font-bold text-xs hover:border-accent transition-all flex items-center justify-center">01</button>
+          <button onclick="setChrono(2)" id="chrono-btn-2" class="chrono-btn w-11 h-11 rounded-2xl border-2 border-accent bg-accent text-black font-mono font-black text-xs shadow-lg transition-all flex items-center justify-center">02</button>
+          <button onclick="setChrono(3)" id="chrono-btn-3" class="chrono-btn w-11 h-11 rounded-2xl border border-line bg-surface-2 text-content-muted font-mono font-bold text-xs hover:border-accent transition-all flex items-center justify-center">03</button>
+          <button onclick="setChrono(4)" id="chrono-btn-4" class="chrono-btn w-11 h-11 rounded-2xl border border-line bg-surface-2 text-content-muted font-mono font-bold text-xs hover:border-accent transition-all flex items-center justify-center">04</button>
+          <button onclick="setChrono(5)" id="chrono-btn-5" class="chrono-btn w-11 h-11 rounded-2xl border border-line bg-surface-2 text-content-muted font-mono font-bold text-xs hover:border-accent transition-all flex items-center justify-center">05</button>
+          <button onclick="setChrono(6)" id="chrono-btn-6" class="chrono-btn w-11 h-11 rounded-2xl border border-line bg-surface-2 text-content-muted font-mono font-bold text-xs hover:border-accent transition-all flex items-center justify-center">06</button>
+          <button onclick="setChrono(7)" id="chrono-btn-7" class="chrono-btn w-11 h-11 rounded-2xl border border-line bg-surface-2 text-content-muted font-mono font-bold text-xs hover:border-accent transition-all flex items-center justify-center">07</button>
+        </div>
+      </div>
+
+      <!-- Precision Media Deck -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <!-- Big Media Viewport -->
+        <div class="lg:col-span-8 aspect-video rounded-2xl bg-surface-2 border border-line overflow-hidden relative shadow-2xl group flex items-center justify-center">
+          <img id="chrono-img" src="/slides/CON01670.jpg" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          <div class="absolute inset-0 bg-black/40"></div>
+          <button class="relative z-10 w-16 h-16 rounded-full bg-accent text-black flex items-center justify-center text-xl font-bold shadow-2xl">
+            ▶
+          </button>
+        </div>
+
+        <!-- Telemetry Data Console -->
+        <div class="lg:col-span-4 space-y-5">
+          <div class="p-5 rounded-2xl bg-surface-2 border border-line space-y-4">
+            <span class="font-mono text-[10px] text-accent font-bold uppercase tracking-widest block">Executive Summary</span>
+            <h4 id="chrono-theme" class="font-display text-base font-bold text-content">
+              Practicing Allyship at the Organizational Level
+            </h4>
+            <div class="space-y-2 pt-2 border-t border-line text-xs">
+              <div class="flex justify-between text-content-muted">
+                <span>Participating CXOs:</span>
+                <span class="font-mono text-content font-semibold">38 Leaders</span>
+              </div>
+              <div class="flex justify-between text-content-muted">
+                <span>Key Corporate Hubs:</span>
+                <span class="font-mono text-content font-semibold">HITEC City & Gachibowli</span>
+              </div>
+              <div class="flex justify-between text-content-muted">
+                <span>Deliberation Length:</span>
+                <span class="font-mono text-content font-semibold">38 Minutes</span>
+              </div>
+            </div>
+          </div>
+
+          <button onclick="alert('Downloading Executive Keynote Brief')" class="w-full py-3 rounded-2xl bg-surface-3 hover:bg-accent hover:text-black font-semibold text-xs border border-line transition-all shadow-sm">
+            Download Conclave Executive Brief (PDF) ↓
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Logic Script -->
+  <script>
+    // Theme toggle
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      document.getElementById('theme-icon').textContent = next === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
+    }
+
+    // Concept Switcher
+    function switchConcept(concept) {
+      document.querySelectorAll('.concept-view').forEach(el => el.classList.add('hidden'));
+      document.getElementById('concept-' + concept).classList.remove('hidden');
+
+      document.querySelectorAll('.concept-tab').forEach(el => {
+        el.classList.remove('border-accent', 'bg-surface-2', 'ring-4', 'ring-accent/20', 'border-2');
+        el.classList.add('border-line', 'bg-surface');
+      });
+
+      const activeBtn = document.getElementById('btn-concept-' + concept);
+      activeBtn.classList.remove('border-line', 'bg-surface');
+      activeBtn.classList.add('border-accent', 'bg-surface-2', 'ring-4', 'ring-accent/20', 'border-2');
+    }
+
+    // Chapter Data
+    const chapters = {
+      'hyderabad-2': {
+        title: 'Hyderabad 2.0 — Conclave Deliberation',
+        edition: 'Allyship++ 2.0 · July 2024',
+        venue: 'ITC Kohenur, HITEC City',
+        desc: 'Practicing Allyship at the Organizational Level — CXO and scientific leadership discourses examining human-centric talent biomes within the Hyderabad Tech Corridor.',
+        img: '/slides/CON01670.jpg',
+        telemetry: 'Active: Hyderabad (17.3850° N, 78.4867° E)',
+        pathId: 'path-hyd'
+      },
+      'bengaluru-2': {
+        title: 'Bengaluru 2.0 — Innovation & Human Capital',
+        edition: 'Allyship++ 2.0 · July 2024',
+        venue: 'The Leela Palace, Bengaluru',
+        desc: 'Bridging deep R&D centers with university talent ecosystems — keynotes with 40+ VP & Director level engineering leaders.',
+        img: '/slides/CON01666.jpg',
+        telemetry: 'Active: Bengaluru (12.9716° N, 77.5946° E)',
+        pathId: 'path-blr'
+      },
+      'chennai-2': {
+        title: 'Chennai 2.0 — Strategic Synergy Conclave',
+        edition: 'Allyship++ 2.0 · August 2024',
+        venue: 'Taj Coromandel, Chennai',
+        desc: 'Manufacturing, deep tech, and healthcare executive corridor connecting Tamil Nadu industrial corridors with Eastern India academia.',
+        img: '/slides/CON01672.jpg',
+        telemetry: 'Active: Chennai (13.0827° N, 80.2707° E)',
+        pathId: 'path-che'
+      },
+      'kolkata-1': {
+        title: 'Kolkata 1.0 — Eastern Gateway Conclave',
+        edition: 'Allyship++ 1.0 · November 2023',
+        venue: 'JW Marriott, Kolkata',
+        desc: 'Inaugural edition exploring leadership, retention, and digital transformation across eastern industrial giants.',
+        img: '/slides/CON01674.jpg',
+        telemetry: 'Active: Kolkata (22.5726° N, 88.3639° E)',
+        pathId: 'path-kol'
+      },
+      'mumbai-1': {
+        title: 'Mumbai 1.0 — Financial Capital Conclave',
+        edition: 'Allyship++ 1.0 · January 2024',
+        venue: 'The St. Regis, Mumbai',
+        desc: 'BFSI, conglomerate governance, and future workforce agility with CXOs from the Nariman Point and BKC corridors.',
+        img: '/slides/CON01676.jpg',
+        telemetry: 'Active: Mumbai (19.0760° N, 72.8777° E)',
+        pathId: 'path-mum'
+      }
+    };
+
+    // Concept A Radar Select
+    function selectRadarChapter(key) {
+      const data = chapters[key];
+      if (!data) return;
+
+      document.getElementById('stage-title').textContent = data.title;
+      document.getElementById('stage-edition-badge').textContent = data.edition;
+      document.getElementById('stage-venue-badge').textContent = data.venue;
+      document.getElementById('stage-desc').textContent = data.desc;
+      document.getElementById('stage-thumb').src = data.img;
+      document.getElementById('map-telemetry').textContent = data.telemetry;
+
+      // Update path colors
+      ['path-blr', 'path-hyd', 'path-che', 'path-kol', 'path-mum'].forEach(id => {
+        const p = document.getElementById(id);
+        if (p) {
+          p.setAttribute('stroke', id === data.pathId ? '#C5A869' : 'var(--line)');
+          p.setAttribute('stroke-width', id === data.pathId ? '2.5' : '1.5');
+        }
+      });
+    }
+
+    function filterRadarEdition(ed) {
+      if (ed === '2.0') {
+        document.getElementById('radar-filter-2').className = 'px-3.5 py-1.5 rounded-full bg-accent text-black font-bold text-xs shadow-md transition-all';
+        document.getElementById('radar-filter-1').className = 'px-3.5 py-1.5 rounded-full bg-surface border border-line text-content-muted font-medium text-xs hover:text-content transition-all';
+        selectRadarChapter('hyderabad-2');
+      } else {
+        document.getElementById('radar-filter-1').className = 'px-3.5 py-1.5 rounded-full bg-accent text-black font-bold text-xs shadow-md transition-all';
+        document.getElementById('radar-filter-2').className = 'px-3.5 py-1.5 rounded-full bg-surface border border-line text-content-muted font-medium text-xs hover:text-content transition-all';
+        selectRadarChapter('kolkata-1');
+      }
+    }
+
+    // Concept B Filmstrip Select
+    function selectFilmstrip(key) {
+      const data = chapters[key];
+      if (!data) return;
+
+      document.getElementById('filmstrip-title').textContent = data.title;
+      document.getElementById('filmstrip-hero-img').src = data.img;
+      document.getElementById('filmstrip-tag').textContent = data.edition;
+
+      // Highlight active card
+      document.querySelectorAll('.filmstrip-card').forEach(el => {
+        el.className = 'filmstrip-card flex-shrink-0 w-72 rounded-2xl border border-line bg-surface p-3 space-y-3 cursor-pointer hover:border-accent transition-all hover:-translate-y-1';
+      });
+      event.currentTarget.className = 'filmstrip-card flex-shrink-0 w-72 rounded-2xl border-2 border-accent bg-surface-2 p-3 space-y-3 cursor-pointer ring-4 ring-accent/20 transition-all shadow-xl hover:-translate-y-1';
+    }
+
+    // Concept C Chronograph
+    const chronoData = [
+      { city: 'BENGALURU 2.0', coords: 'COORD: 12.9716° N, 77.5946° E · ELEV: 920m · VENUE: THE LEELA PALACE', theme: 'Innovation & Deep Tech Human Capital', img: '/slides/CON01666.jpg' },
+      { city: 'HYDERABAD 2.0', coords: 'COORD: 17.3850° N, 78.4867° E · ELEV: 542m · VENUE: ITC KOHENUR', theme: 'Practicing Allyship at the Organizational Level', img: '/slides/CON01670.jpg' },
+      { city: 'CHENNAI 2.0', coords: 'COORD: 13.0827° N, 80.2707° E · ELEV: 6m · VENUE: TAJ COROMANDEL', theme: 'Strategic Synergy & Industrial Corridors', img: '/slides/CON01672.jpg' },
+      { city: 'BENGALURU 1.0', coords: 'COORD: 12.9716° N, 77.5946° E · ELEV: 920m · VENUE: THE LEELA PALACE', theme: 'Inaugural Southern Tech Roundtable', img: '/slides/CON01666.jpg' },
+      { city: 'HYDERABAD 1.0', coords: 'COORD: 17.3850° N, 78.4867° E · ELEV: 542m · VENUE: ITC KOHENUR', theme: 'Biotech & Engineering Leadership', img: '/slides/CON01670.jpg' },
+      { city: 'KOLKATA 1.0', coords: 'COORD: 22.5726° N, 88.3639° E · ELEV: 9m · VENUE: JW MARRIOTT', theme: 'Eastern Gateway Leadership & Digital Transformation', img: '/slides/CON01674.jpg' },
+      { city: 'MUMBAI 1.0', coords: 'COORD: 19.0760° N, 72.8777° E · ELEV: 14m · VENUE: THE ST. REGIS', theme: 'BFSI & Conglomerate Governance Corridors', img: '/slides/CON01676.jpg' }
+    ];
+
+    function setChrono(idx) {
+      const item = chronoData[idx - 1];
+      if (!item) return;
+
+      document.getElementById('chrono-city').textContent = item.city;
+      document.getElementById('chrono-coords').textContent = item.coords;
+      document.getElementById('chrono-theme').textContent = item.theme;
+      document.getElementById('chrono-img').src = item.img;
+
+      // Update button styles
+      for (let i = 1; i <= 7; i++) {
+        const btn = document.getElementById('chrono-btn-' + i);
+        if (i === idx) {
+          btn.className = 'chrono-btn w-11 h-11 rounded-2xl border-2 border-accent bg-accent text-black font-mono font-black text-xs shadow-lg transition-all flex items-center justify-center';
+        } else {
+          btn.className = 'chrono-btn w-11 h-11 rounded-2xl border border-line bg-surface-2 text-content-muted font-mono font-bold text-xs hover:border-accent transition-all flex items-center justify-center';
+        }
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALLYSHIP++ | Conclave Moments Review</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            accent: '#C5A869',
+            'accent-light': '#E8D5A7',
+            canvas: 'var(--canvas)',
+            surface: 'var(--surface)',
+            'surface-2': 'var(--surface-2)',
+            'surface-3': 'var(--surface-3)',
+            line: 'var(--line)',
+            content: 'var(--content)',
+            'content-muted': 'var(--content-muted)',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root[data-theme="dark"] {
+      --canvas: #090909;
+      --surface: #121212;
+      --surface-2: #1A1A1A;
+      --surface-3: #242424;
+      --line: rgba(255, 255, 255, 0.12);
+      --content: #FFFFFF;
+      --content-muted: #9CA3AF;
+    }
+    :root[data-theme="light"] {
+      --canvas: #F8F6F1;
+      --surface: #FFFFFF;
+      --surface-2: #F1ECE2;
+      --surface-3: #E4DEC5;
+      --line: rgba(15, 23, 42, 0.12);
+      --content: #0F172A;
+      --content-muted: #64748B;
+    }
+    body {
+      background-color: var(--canvas);
+      color: var(--content);
+      font-family: 'Inter', sans-serif;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+    .font-display { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+  </style>
+</head>
+<body class="min-h-screen py-8 px-4 sm:px-8 max-w-[1400px] mx-auto">
+
+  <!-- Header -->
+  <header class="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-line mb-8">
+    <div>
+      <span class="font-mono text-xs uppercase tracking-[0.2em] text-accent font-bold block">
+        Interactive Architecture Review
+      </span>
+      <h1 class="font-display text-2xl sm:text-4xl font-extrabold tracking-tight mt-1">
+        Conclave Moments — 3 Clean Ways (No In-Card Switcher)
+      </h1>
+      <p class="text-sm text-content-muted mt-2 max-w-2xl leading-relaxed">
+        Test all 3 solutions live below to see how chapter media should open without repetitive city buttons inside the card.
+      </p>
+    </div>
+
+    <!-- Theme toggle -->
+    <div class="flex items-center gap-3">
+      <button onclick="toggleTheme()" class="px-4 py-2 rounded-full border border-line bg-surface text-xs font-semibold hover:border-accent transition-colors shadow-sm">
+        <span id="theme-icon">☀️ Light Mode</span>
+      </button>
+      <a href="http://localhost:3000/event#videos-section" class="px-5 py-2 rounded-full bg-accent text-black font-bold text-xs hover:brightness-110 transition-all shadow-md">
+        Live Site ↗
+      </a>
+    </div>
+  </header>
+
+  <!-- Big 3 Tabs -->
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+    <!-- Way 1 -->
+    <button onclick="showWay(1)" id="btn-way-1" class="way-tab p-5 rounded-3xl border-2 border-accent bg-surface-2 text-left ring-4 ring-accent/20 transition-all shadow-xl">
+      <div class="flex items-center justify-between mb-2">
+        <span class="px-2.5 py-0.5 rounded-full bg-accent/20 text-accent font-mono text-[10px] font-bold uppercase">
+          Way 1 · Recommended
+        </span>
+        <span class="text-xs text-accent font-semibold">Inline Expand</span>
+      </div>
+      <h3 class="font-display text-lg font-bold">Inline Card Drawer</h3>
+      <p class="text-xs text-content-muted mt-1 leading-relaxed">
+        Clicking a card expands its video & photos right in place below the card. No new page, no in-card city buttons.
+      </p>
+    </button>
+
+    <!-- Way 2 -->
+    <button onclick="showWay(2)" id="btn-way-2" class="way-tab p-5 rounded-3xl border border-line bg-surface text-left hover:border-accent/60 transition-all">
+      <div class="flex items-center justify-between mb-2">
+        <span class="px-2.5 py-0.5 rounded-full bg-surface-3 text-content-muted font-mono text-[10px] font-bold uppercase">
+          Way 2 · Executive
+        </span>
+        <span class="text-xs text-content-muted">Stage Theater</span>
+      </div>
+      <h3 class="font-display text-lg font-bold">Permanent Cinema Stage</h3>
+      <p class="text-xs text-content-muted mt-1 leading-relaxed">
+        A master video screen sits above. Clicking any of the 7 cards updates the screen with zero switcher pills.
+      </p>
+    </button>
+
+    <!-- Way 3 -->
+    <button onclick="showWay(3)" id="btn-way-3" class="way-tab p-5 rounded-3xl border border-line bg-surface text-left hover:border-accent/60 transition-all">
+      <div class="flex items-center justify-between mb-2">
+        <span class="px-2.5 py-0.5 rounded-full bg-surface-3 text-content-muted font-mono text-[10px] font-bold uppercase">
+          Way 3 · Cinematic
+        </span>
+        <span class="text-xs text-content-muted">Modal Lightbox</span>
+      </div>
+      <h3 class="font-display text-lg font-bold">Fullscreen Modal</h3>
+      <p class="text-xs text-content-muted mt-1 leading-relaxed">
+        Clicking a card pops open an immersive overlay. Pressing ESC or Close takes you right back to the grid.
+      </p>
+    </button>
+  </div>
+
+
+  <!-- ========================================================
+       WAY 1: INLINE CARD DRAWER (EXPANDS BELOW CLICKED CARD)
+       ======================================================== -->
+  <section id="way-1-content" class="way-section space-y-6">
+    <div class="p-4 rounded-2xl bg-accent/10 border border-accent/25 text-xs text-accent flex items-center justify-between">
+      <span>👇 <strong>Click any chapter card below</strong> to see it smoothly expand open directly under the cards:</span>
+      <span class="font-mono font-bold">ZERO IN-CARD CITY BUTTONS</span>
+    </div>
+
+    <!-- 3-Card Row (Edition 2.0) -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Bengaluru 2.0 -->
+      <div onclick="expandCard('bengaluru-2')" class="cursor-pointer group rounded-3xl border border-line bg-surface overflow-hidden hover:border-accent/60 transition-all shadow-lg hover:-translate-y-1">
+        <div class="aspect-video relative overflow-hidden bg-black">
+          <img src="/slides/CON01666.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/60 text-accent font-mono text-[10px] font-bold">
+            July 2024 · 2.0
+          </span>
+        </div>
+        <div class="p-5 space-y-3">
+          <h4 class="font-display text-base font-bold text-content group-hover:text-accent transition-colors">
+            Bengaluru 2.0 | Conclave Moments
+          </h4>
+          <p class="text-xs text-content-muted">The Leela Palace · Innovation & Human Capital</p>
+          <div class="pt-3 border-t border-line flex items-center justify-between text-xs font-semibold text-accent">
+            <span>Click to Expand Video & Photos</span>
+            <span>↓</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hyderabad 2.0 -->
+      <div onclick="expandCard('hyderabad-2')" class="cursor-pointer group rounded-3xl border-2 border-accent bg-surface-2 overflow-hidden ring-4 ring-accent/20 transition-all shadow-xl hover:-translate-y-1">
+        <div class="aspect-video relative overflow-hidden bg-black">
+          <img src="/slides/CON01670.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/60 text-accent font-mono text-[10px] font-bold">
+            July 2024 · 2.0 (Active)
+          </span>
+        </div>
+        <div class="p-5 space-y-3">
+          <h4 class="font-display text-base font-bold text-content text-accent">
+            Hyderabad 2.0 | Conclave Moments
+          </h4>
+          <p class="text-xs text-content-muted">ITC Kohenur · Practicing Allyship at the Organizational Level</p>
+          <div class="pt-3 border-t border-line flex items-center justify-between text-xs font-semibold text-accent">
+            <span>Currently Open Below</span>
+            <span>✓</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chennai 2.0 -->
+      <div onclick="expandCard('chennai-2')" class="cursor-pointer group rounded-3xl border border-line bg-surface overflow-hidden hover:border-accent/60 transition-all shadow-lg hover:-translate-y-1">
+        <div class="aspect-video relative overflow-hidden bg-black">
+          <img src="/slides/CON01672.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+          <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/60 text-accent font-mono text-[10px] font-bold">
+            Aug 2024 · 2.0
+          </span>
+        </div>
+        <div class="p-5 space-y-3">
+          <h4 class="font-display text-base font-bold text-content group-hover:text-accent transition-colors">
+            Chennai 2.0 | Conclave Moments
+          </h4>
+          <p class="text-xs text-content-muted">Taj Coromandel · Strategic Synergy Conclave</p>
+          <div class="pt-3 border-t border-line flex items-center justify-between text-xs font-semibold text-accent">
+            <span>Click to Expand Video & Photos</span>
+            <span>↓</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Expanded Drawer Directly Below -->
+    <div id="expanded-drawer" class="rounded-3xl border border-accent/40 bg-surface p-6 sm:p-10 shadow-2xl space-y-8 animate-fadeIn">
+      <div class="flex items-center justify-between pb-6 border-b border-line">
+        <div>
+          <span id="drawer-edition" class="px-3 py-1 rounded-full bg-accent/15 border border-accent/30 text-accent font-mono text-xs font-bold uppercase tracking-wider">
+            Allyship++ 2.0 · July 2024
+          </span>
+          <h3 id="drawer-title" class="font-display text-2xl sm:text-3xl font-extrabold text-content mt-2">
+            Hyderabad 2.0 — Conclave Moments
+          </h3>
+          <p id="drawer-desc" class="text-xs sm:text-sm text-content-muted mt-1">
+            ITC Kohenur, Hyderabad · CXO & leadership deliberations across the technology corridor.
+          </p>
+        </div>
+        <button onclick="closeDrawer()" class="px-4 py-2 rounded-full bg-surface-2 border border-line text-xs font-semibold hover:bg-accent hover:text-black transition-all flex items-center gap-1.5">
+          <span>✕</span>
+          <span>Close Chapter</span>
+        </button>
+      </div>
+
+      <!-- Media Content Inside Drawer -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- Video -->
+        <div class="lg:col-span-7 aspect-video rounded-2xl bg-surface-2 border border-line overflow-hidden relative group shadow-xl flex items-center justify-center">
+          <img id="drawer-video-thumb" src="/slides/CON01670.jpg" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-black/40"></div>
+          <button class="relative z-10 w-16 h-16 rounded-full bg-accent text-black flex items-center justify-center text-xl font-bold shadow-2xl">▶</button>
+          <span class="absolute bottom-3 left-3 px-3 py-1 bg-black/70 text-white rounded-full text-xs font-mono">Watch Full Deliberation (38m)</span>
+        </div>
+
+        <!-- Photos -->
+        <div class="lg:col-span-5 space-y-3">
+          <div class="flex items-center justify-between">
+            <h5 class="font-display text-xs font-bold uppercase tracking-wider text-content">Curated Photographic Reel</h5>
+            <span class="text-xs text-accent font-semibold">24 Photos</span>
+          </div>
+          <div class="grid grid-cols-3 gap-2">
+            <div class="aspect-square rounded-xl bg-surface-2 overflow-hidden border border-line"><img src="/conclave-moments/hyderabad-1/hyderabad-1-01.jpg" class="w-full h-full object-cover"></div>
+            <div class="aspect-square rounded-xl bg-surface-2 overflow-hidden border border-line"><img src="/conclave-moments/hyderabad-1/hyderabad-1-02.jpg" class="w-full h-full object-cover"></div>
+            <div class="aspect-square rounded-xl bg-surface-2 overflow-hidden border border-line"><img src="/conclave-moments/hyderabad-1/hyderabad-1-03.jpg" class="w-full h-full object-cover"></div>
+            <div class="aspect-square rounded-xl bg-surface-2 overflow-hidden border border-line"><img src="/conclave-moments/hyderabad-1/hyderabad-1-04.jpg" class="w-full h-full object-cover"></div>
+            <div class="aspect-square rounded-xl bg-surface-2 overflow-hidden border border-line"><img src="/conclave-moments/hyderabad-1/hyderabad-1-05.jpg" class="w-full h-full object-cover"></div>
+            <div class="aspect-square rounded-xl bg-surface-2 overflow-hidden border border-line flex items-center justify-center font-bold text-accent text-xs">+19</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       WAY 2: PERMANENT CINEMA STAGE (CARDS CONTROL THE SCREEN)
+       ======================================================== -->
+  <section id="way-2-content" class="way-section hidden space-y-8">
+    <div class="p-4 rounded-2xl bg-accent/10 border border-accent/25 text-xs text-accent">
+      🎬 <strong>Master Theater Stage:</strong> The video screen is permanently positioned. Clicking any chapter card below smoothly streams that city without opening new pages or cluttered toolbars.
+    </div>
+
+    <!-- The Master Theater -->
+    <div class="rounded-3xl border border-line bg-surface p-6 sm:p-10 shadow-2xl space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-line">
+        <div>
+          <span id="stage-badge" class="font-mono text-xs font-bold uppercase tracking-widest text-accent block">
+            STREAMING · ALLYSHIP++ 2.0 (JULY 2024)
+          </span>
+          <h2 id="stage-heading" class="font-display text-2xl sm:text-4xl font-extrabold text-content mt-1">
+            Hyderabad 2.0 — Conclave Deliberation
+          </h2>
+          <p id="stage-sub" class="text-xs sm:text-sm text-content-muted mt-1">
+            ITC Kohenur, Hyderabad · Practicing Allyship at the Organizational Level
+          </p>
+        </div>
+        <span class="px-4 py-2 rounded-full bg-surface-2 border border-line text-xs font-mono text-content-muted">
+          Active: Chapter 02 of 07
+        </span>
+      </div>
+
+      <!-- Theater Frame -->
+      <div class="aspect-[21/9] rounded-2xl bg-surface-2 border border-line overflow-hidden relative shadow-2xl flex items-center justify-center group">
+        <img id="stage-img" src="/slides/CON01670.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+        <div class="absolute inset-0 bg-black/40"></div>
+        <button class="relative z-10 w-20 h-20 rounded-full bg-accent text-black flex items-center justify-center text-2xl font-black shadow-2xl">▶</button>
+      </div>
+    </div>
+
+    <!-- Chapter Selectors Below Theater -->
+    <div class="space-y-4">
+      <span class="font-mono text-xs uppercase tracking-widest text-content-muted font-bold block px-1">
+        Select Chapter to Play:
+      </span>
+      <div class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
+        <button onclick="setStage('blr2')" class="stage-btn p-3 rounded-2xl border border-line bg-surface text-left hover:border-accent transition-all">
+          <span class="text-[9px] font-mono text-content-muted block">2.0 · 2024</span>
+          <span class="font-display text-xs font-bold block text-content mt-0.5">Bengaluru</span>
+        </button>
+        <button onclick="setStage('hyd2')" class="stage-btn p-3 rounded-2xl border-2 border-accent bg-surface-2 text-left ring-2 ring-accent/30 transition-all shadow-md">
+          <span class="text-[9px] font-mono text-accent font-bold block">2.0 · Active</span>
+          <span class="font-display text-xs font-bold block text-accent mt-0.5">Hyderabad</span>
+        </button>
+        <button onclick="setStage('che2')" class="stage-btn p-3 rounded-2xl border border-line bg-surface text-left hover:border-accent transition-all">
+          <span class="text-[9px] font-mono text-content-muted block">2.0 · 2024</span>
+          <span class="font-display text-xs font-bold block text-content mt-0.5">Chennai</span>
+        </button>
+        <button onclick="setStage('blr1')" class="stage-btn p-3 rounded-2xl border border-line bg-surface text-left hover:border-accent transition-all">
+          <span class="text-[9px] font-mono text-content-muted block">1.0 · 2023</span>
+          <span class="font-display text-xs font-bold block text-content mt-0.5">Bengaluru</span>
+        </button>
+        <button onclick="setStage('hyd1')" class="stage-btn p-3 rounded-2xl border border-line bg-surface text-left hover:border-accent transition-all">
+          <span class="text-[9px] font-mono text-content-muted block">1.0 · 2023</span>
+          <span class="font-display text-xs font-bold block text-content mt-0.5">Hyderabad</span>
+        </button>
+        <button onclick="setStage('kol1')" class="stage-btn p-3 rounded-2xl border border-line bg-surface text-left hover:border-accent transition-all">
+          <span class="text-[9px] font-mono text-content-muted block">1.0 · 2023</span>
+          <span class="font-display text-xs font-bold block text-content mt-0.5">Kolkata</span>
+        </button>
+        <button onclick="setStage('mum1')" class="stage-btn p-3 rounded-2xl border border-line bg-surface text-left hover:border-accent transition-all">
+          <span class="text-[9px] font-mono text-content-muted block">1.0 · 2024</span>
+          <span class="font-display text-xs font-bold block text-content mt-0.5">Mumbai</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================
+       WAY 3: FULLSCREEN CINEMATIC MODAL
+       ======================================================== -->
+  <section id="way-3-content" class="way-section hidden space-y-6">
+    <div class="p-4 rounded-2xl bg-accent/10 border border-accent/25 text-xs text-accent">
+      ✨ <strong>Modal Overlay:</strong> Clicking a card pops open a dark luxury modal. You never lose your place on the page!
+    </div>
+
+    <div class="p-10 rounded-3xl border border-line bg-surface text-center space-y-4">
+      <h3 class="font-display text-xl font-bold">Experience the Modal Interaction</h3>
+      <p class="text-sm text-content-muted max-w-lg mx-auto">
+        Click the button below to see how a chapter card opens into a clean modal with video and 24 curated photos:
+      </p>
+      <button onclick="openModal()" class="px-6 py-3 rounded-full bg-accent text-black font-bold text-sm shadow-xl hover:brightness-110 transition-all">
+        Open Sample "Hyderabad 2.0" Lightbox Modal
+      </button>
+    </div>
+  </section>
+
+  <!-- Modal Component for Way 3 -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-8 hidden">
+    <div class="bg-surface border border-line rounded-3xl max-w-5xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-10 shadow-2xl space-y-6 relative">
+      <div class="flex items-center justify-between pb-4 border-b border-line">
+        <span class="px-3 py-1 rounded-full bg-accent/15 text-accent font-mono text-xs font-bold">
+          Allyship++ 2.0 · July 2024 · ITC Kohenur
+        </span>
+        <button onclick="closeModal()" class="w-8 h-8 rounded-full bg-surface-2 border border-line flex items-center justify-center text-sm hover:bg-accent hover:text-black transition-colors">
+          ✕
+        </button>
+      </div>
+
+      <div class="space-y-1">
+        <h3 class="font-display text-2xl font-extrabold text-content">Hyderabad — Conclave Deliberation</h3>
+        <p class="text-xs text-content-muted">Practicing Allyship at the Organizational Level</p>
+      </div>
+
+      <div class="aspect-video rounded-2xl bg-surface-2 overflow-hidden relative flex items-center justify-center">
+        <img src="/slides/CON01670.jpg" class="w-full h-full object-cover">
+        <button class="w-16 h-16 rounded-full bg-accent text-black flex items-center justify-center text-xl font-bold shadow-xl">▶</button>
+      </div>
+
+      <div class="pt-4 border-t border-line text-right">
+        <button onclick="closeModal()" class="px-5 py-2 rounded-full bg-surface-2 text-xs font-semibold hover:border-accent border border-line">
+          Close Lightbox (ESC)
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- JavaScript logic -->
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      document.getElementById('theme-icon').textContent = next === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
+    }
+
+    function showWay(num) {
+      document.querySelectorAll('.way-section').forEach(el => el.classList.add('hidden'));
+      document.getElementById(`way-${num}-content`).classList.remove('hidden');
+
+      document.querySelectorAll('.way-tab').forEach(el => {
+        el.className = 'way-tab p-5 rounded-3xl border border-line bg-surface text-left hover:border-accent/60 transition-all';
+      });
+
+      const active = document.getElementById(`btn-way-${num}`);
+      active.className = 'way-tab p-5 rounded-3xl border-2 border-accent bg-surface-2 text-left ring-4 ring-accent/20 transition-all shadow-xl';
+    }
+
+    // Drawer data
+    const drawerData = {
+      'hyderabad-2': { title: 'Hyderabad 2.0 — Conclave Moments', edition: 'Allyship++ 2.0 · July 2024', desc: 'ITC Kohenur, Hyderabad · Practicing Allyship at the Organizational Level.', img: '/slides/CON01670.jpg' },
+      'bengaluru-2': { title: 'Bengaluru 2.0 — Conclave Moments', edition: 'Allyship++ 2.0 · July 2024', desc: 'The Leela Palace, Bengaluru · Innovation & Deep Tech Human Capital.', img: '/slides/CON01666.jpg' },
+      'chennai-2': { title: 'Chennai 2.0 — Conclave Moments', edition: 'Allyship++ 2.0 · August 2024', desc: 'Taj Coromandel, Chennai · Strategic Synergy & Industrial Corridors.', img: '/slides/CON01672.jpg' },
+    };
+
+    function expandCard(key) {
+      const d = drawerData[key];
+      if (!d) return;
+      document.getElementById('drawer-title').textContent = d.title;
+      document.getElementById('drawer-edition').textContent = d.edition;
+      document.getElementById('drawer-desc').textContent = d.desc;
+      document.getElementById('drawer-video-thumb').src = d.img;
+      document.getElementById('expanded-drawer').classList.remove('hidden');
+      document.getElementById('expanded-drawer').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function closeDrawer() {
+      document.getElementById('expanded-drawer').classList.add('hidden');
+    }
+
+    // Stage data
+    const stageItems = {
+      'blr2': { heading: 'Bengaluru 2.0 — Innovation & Deep Tech', badge: 'STREAMING · ALLYSHIP++ 2.0 (JULY 2024)', sub: 'The Leela Palace · Southern Innovation Corridor', img: '/slides/CON01666.jpg' },
+      'hyd2': { heading: 'Hyderabad 2.0 — Conclave Deliberation', badge: 'STREAMING · ALLYSHIP++ 2.0 (JULY 2024)', sub: 'ITC Kohenur · Practicing Allyship at the Organizational Level', img: '/slides/CON01670.jpg' },
+      'che2': { heading: 'Chennai 2.0 — Strategic Synergy', badge: 'STREAMING · ALLYSHIP++ 2.0 (AUGUST 2024)', sub: 'Taj Coromandel · Manufacturing & Tech Corridors', img: '/slides/CON01672.jpg' },
+      'blr1': { heading: 'Bengaluru 1.0 — Inaugural Deliberation', badge: 'STREAMING · ALLYSHIP++ 1.0 (2023)', sub: 'The Leela Palace · Academic & Industry Bridges', img: '/slides/CON01666.jpg' },
+      'hyd1': { heading: 'Hyderabad 1.0 — Inaugural Deliberation', badge: 'STREAMING · ALLYSHIP++ 1.0 (2023)', sub: 'ITC Kohenur · Biotech & Engineering Biomes', img: '/slides/CON01670.jpg' },
+      'kol1': { heading: 'Kolkata 1.0 — Eastern Gateway', badge: 'STREAMING · ALLYSHIP++ 1.0 (2023)', sub: 'JW Marriott · Leadership in Eastern India', img: '/slides/CON01674.jpg' },
+      'mum1': { heading: 'Mumbai 1.0 — Financial Capital Summit', badge: 'STREAMING · ALLYSHIP++ 1.0 (2024)', sub: 'The St. Regis · BFSI & Corporate Governance', img: '/slides/CON01676.jpg' },
+    };
+
+    function setStage(id) {
+      const s = stageItems[id];
+      if (!s) return;
+      document.getElementById('stage-heading').textContent = s.heading;
+      document.getElementById('stage-badge').textContent = s.badge;
+      document.getElementById('stage-sub').textContent = s.sub;
+      document.getElementById('stage-img').src = s.img;
+    }
+
+    // Modal
+    function openModal() {
+      document.getElementById('lightbox-modal').classList.remove('hidden');
+    }
+    function closeModal() {
+      document.getElementById('lightbox-modal').classList.add('hidden');
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+</body>
+</html>

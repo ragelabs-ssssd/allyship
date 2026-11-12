@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALLYSHIP++ | Button Style Live Review</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0A0D14;
+      --surface: #111520;
+      --surface-2: #181E2C;
+      --line: rgba(255, 255, 255, 0.08);
+      --accent: #C5A869;
+      --accent-hover: #D8BD7E;
+      --on-accent: #0A0D14;
+      --text: #F3F4F6;
+      --text-secondary: #9CA3AF;
+      --text-muted: #6B7280;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      padding: 48px 24px;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      background: rgba(197, 168, 105, 0.12);
+      border: 1px solid rgba(197, 168, 105, 0.3);
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: var(--text-secondary);
+      font-size: 15px;
+    }
+
+    /* Comparison Stack */
+    .option-row {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 24px 28px;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      transition: all 0.2s ease;
+    }
+
+    .option-row:hover {
+      border-color: rgba(197, 168, 105, 0.4);
+      background: var(--surface-2);
+    }
+
+    .option-meta {
+      flex: 1;
+      min-width: 260px;
+    }
+
+    .opt-tag {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 4px;
+    }
+
+    .opt-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #FFF;
+      margin-bottom: 4px;
+    }
+
+    .opt-desc {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .button-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    /* Common Button Base */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 9999px;
+      background: var(--accent);
+      color: var(--on-accent);
+      font-family: inherit;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 13px 26px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(197, 168, 105, 0.3);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 24px;
+      border-radius: 9999px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--line);
+      text-decoration: none;
+    }
+
+    /* Option A: Unified Clean Inline Arrow */
+    .btn-a {
+      gap: 10px;
+    }
+    .btn-a svg {
+      width: 16px;
+      height: 16px;
+      stroke-width: 2.25;
+      stroke: var(--on-accent);
+      fill: none;
+      transition: transform 0.2s ease;
+    }
+    .btn-a:hover svg {
+      transform: translateX(4px);
+    }
+
+    /* Option B: Pure Typographic Pill (No Icon) */
+    .btn-b {
+      padding: 13px 30px;
+      letter-spacing: 0.01em;
+    }
+
+    /* Option C: Upward Diagonal Arrow (↗) */
+    .btn-c {
+      gap: 8px;
+    }
+    .btn-c svg {
+      width: 16px;
+      height: 16px;
+      stroke-width: 2.25;
+      stroke: var(--on-accent);
+      fill: none;
+      transition: transform 0.2s ease;
+    }
+    .btn-c:hover svg {
+      transform: translate(2px, -2px);
+    }
+
+    /* Option D: Minimalist Hairline Chevron (›) */
+    .btn-d {
+      gap: 8px;
+    }
+    .btn-d svg {
+      width: 14px;
+      height: 14px;
+      stroke-width: 2.5;
+      stroke: var(--on-accent);
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: transform 0.2s ease;
+    }
+    .btn-d:hover svg {
+      transform: translateX(3px);
+    }
+
+    /* Option E: Flush Tinted Capsule Ring */
+    .btn-e {
+      gap: 12px;
+      padding: 10px 12px 10px 24px;
+    }
+    .btn-e .capsule {
+      width: 26px;
+      height: 26px;
+      border-radius: 9999px;
+      background: rgba(10, 13, 20, 0.14);
+      border: 1px solid rgba(10, 13, 20, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+    .btn-e .capsule svg {
+      width: 13px;
+      height: 13px;
+      stroke-width: 2.25;
+      stroke: var(--on-accent);
+      fill: none;
+      transition: transform 0.2s ease;
+    }
+    .btn-e:hover .capsule {
+      background: rgba(10, 13, 20, 0.25);
+    }
+    .btn-e:hover .capsule svg {
+      transform: translateX(2px);
+    }
+
+    /* Current flawed for comparison */
+    .btn-flawed {
+      gap: 12px;
+    }
+    .btn-flawed .circle {
+      width: 24px;
+      height: 24px;
+      border-radius: 9999px;
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      line-height: 1;
+    }
+
+    .cta-banner {
+      margin-top: 40px;
+      text-align: center;
+      padding: 36px;
+      background: var(--surface);
+      border-radius: 20px;
+      border: 1px solid var(--line);
+    }
+
+    .cta-banner h2 {
+      font-size: 18px;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .cta-banner p {
+      color: var(--text-secondary);
+      font-size: 14px;
+      max-width: 580px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge">Visual Review</div>
+      <h1>Primary Button Arrow & Alignment Styles</h1>
+      <p class="subtitle">Hover over each option below to test its alignment, balance, and hover transition.</p>
+    </header>
+
+    <!-- BEFORE (Current Flawed) -->
+    <div class="option-row" style="background: rgba(239,68,68,0.06); border-color: rgba(239,68,68,0.25);">
+      <div class="option-meta">
+        <div class="opt-tag" style="color: #F87171;">Current Version (Misaligned)</div>
+        <div class="opt-title" style="color: #FCA5A5;">Crude Unicode Text Arrow in Dark Bubble</div>
+        <div class="opt-desc">Uses raw text character <code>→</code>. Sits off-center vertically and breaks the professional look.</div>
+      </div>
+      <div class="button-group">
+        <button class="btn-primary btn-flawed" style="opacity: 0.85; pointer-events: none;">
+          <span>Request Executive Invitation</span>
+          <span class="circle">→</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- OPTION A (RECOMMENDED: Site Standard) -->
+    <div class="option-row" style="border-color: rgba(197, 168, 105, 0.55); box-shadow: 0 0 20px rgba(197, 168, 105, 0.08);">
+      <div class="option-meta">
+        <div class="opt-tag">Option A · Recommended (Site-Wide Unified Standard)</div>
+        <div class="opt-title">Clean Inline SVG Vector Arrow</div>
+        <div class="opt-desc">Removes the heavy black bubble entirely. Uses a razor-sharp vector arrow directly on the gold pill. 100% consistent with <code>/event</code>, <code>/impact</code>, and <code>/collaborate</code>.</div>
+      </div>
+      <div class="button-group">
+        <button class="btn-primary btn-a">
+          <span>Request Executive Invitation</span>
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <span class="btn-secondary">Explore Chapters</span>
+      </div>
+    </div>
+
+    <!-- OPTION B (Pure Typography) -->
+    <div class="option-row">
+      <div class="option-meta">
+        <div class="opt-tag">Option B · Pure Minimalist</div>
+        <div class="opt-title">Pure Typographic Pill (No Icon)</div>
+        <div class="opt-desc">Completely removes all arrow icons. Clean, dignified, quiet luxury aesthetic that relies strictly on elegant typography and balanced padding.</div>
+      </div>
+      <div class="button-group">
+        <button class="btn-primary btn-b">
+          <span>Request Executive Invitation</span>
+        </button>
+        <span class="btn-secondary">Explore Chapters</span>
+      </div>
+    </div>
+
+    <!-- OPTION C (Executive Diagonal) -->
+    <div class="option-row">
+      <div class="option-meta">
+        <div class="opt-tag">Option C · Executive Institution</div>
+        <div class="opt-title">Diagonal Arrow (ArrowUpRight ↗)</div>
+        <div class="opt-desc">Features an upward-diagonal vector arrow. Universally recognized in private university convocations and corporate alliances.</div>
+      </div>
+      <div class="button-group">
+        <button class="btn-primary btn-c">
+          <span>Request Executive Invitation</span>
+          <svg viewBox="0 0 24 24"><path d="M7 17L17 7M7 7h10v10"/></svg>
+        </button>
+        <span class="btn-secondary">Explore Chapters</span>
+      </div>
+    </div>
+
+    <!-- OPTION D (Swiss Minimalist Chevron) -->
+    <div class="option-row">
+      <div class="option-meta">
+        <div class="opt-tag">Option D · Editorial Swiss</div>
+        <div class="opt-title">Hairline Right Chevron (›)</div>
+        <div class="opt-desc">A minimal right-pointing chevron with rounded ends. Subtle, modern, and perfectly aligned with the font baseline.</div>
+      </div>
+      <div class="button-group">
+        <button class="btn-primary btn-d">
+          <span>Request Executive Invitation</span>
+          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+        <span class="btn-secondary">Explore Chapters</span>
+      </div>
+    </div>
+
+    <!-- OPTION E (Flush Tinted Capsule) -->
+    <div class="option-row">
+      <div class="option-meta">
+        <div class="opt-tag">Option E · Soft Contrast</div>
+        <div class="opt-title">Tinted Inset Ring with Centered Vector</div>
+        <div class="opt-desc">If you prefer having a subtle circular container, this uses a soft tinted ring with a mathematically centered SVG vector (not raw text).</div>
+      </div>
+      <div class="button-group">
+        <button class="btn-primary btn-e">
+          <span>Request Executive Invitation</span>
+          <span class="capsule">
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </button>
+        <span class="btn-secondary">Explore Chapters</span>
+      </div>
+    </div>
+
+    <div class="cta-banner">
+      <h2>Which option would you like to apply?</h2>
+      <p>Tell me <strong>Option A, B, C, D, or E</strong>, and I will immediately update the buttons across the live codebase and push to production!</p>
+    </div>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vice-Chancellor Prof. Pradipta Kumar Nanda — 10 Dialogue Options</title>
+  <style>
+    :root {
+      --bg: #090a0d;
+      --card-bg: #12141a;
+      --card-border: #1f232d;
+      --accent: #c5a869;
+      --accent-light: #e5cb8f;
+      --accent-subtle: rgba(197, 168, 105, 0.12);
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      padding: 36px 20px 80px;
+      line-height: 1.5;
+    }
+    .container { max-width: 1200px; margin: 0 auto; }
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--card-border);
+    }
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-subtle);
+      border: 1px solid rgba(197, 168, 105, 0.3);
+      padding: 5px 16px;
+      border-radius: 9999px;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 15px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    /* Live Preview Section */
+    .preview-box {
+      background: linear-gradient(135deg, #141720, #0d0f15);
+      border: 1.5px solid var(--accent);
+      border-radius: 24px;
+      padding: 36px;
+      margin-bottom: 48px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 35px rgba(197, 168, 105, 0.12);
+    }
+    .preview-header {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid rgba(197, 168, 105, 0.2);
+      padding-bottom: 12px;
+    }
+    .preview-grid {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 36px;
+      align-items: center;
+    }
+    @media (max-width: 860px) {
+      .preview-grid { grid-template-columns: 1fr; }
+    }
+    .quote-display {
+      font-size: 20px;
+      font-style: italic;
+      color: #fff;
+      line-height: 1.65;
+      border-left: 3px solid var(--accent);
+      padding-left: 24px;
+      min-height: 120px;
+      display: flex;
+      align-items: center;
+    }
+    .author-info { margin-top: 20px; padding-left: 27px; }
+    .author-name { font-size: 17px; font-weight: 700; color: #fff; }
+    .author-role { font-size: 13px; color: var(--text-muted); margin-top: 2px; }
+    
+    .vc-photo-card {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4/3;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--card-border);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+      background: #000;
+    }
+    .vc-photo-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 20%;
+      display: block;
+    }
+    .vc-tag {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(0,0,0,0.75);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(197, 168, 105, 0.4);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 4px 10px;
+      border-radius: 9999px;
+    }
+
+    /* Options Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 22px;
+    }
+    .opt-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.25s ease;
+      position: relative;
+    }
+    .opt-card:hover {
+      border-color: rgba(197, 168, 105, 0.6);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+    }
+    .opt-card.active {
+      border-color: var(--accent);
+      background: #171a22;
+      box-shadow: 0 0 25px rgba(197, 168, 105, 0.2);
+    }
+    .opt-num {
+      position: absolute;
+      top: 22px;
+      right: 22px;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--accent);
+      background: var(--accent-subtle);
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(197, 168, 105, 0.3);
+    }
+    .opt-tag {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-light);
+      margin-bottom: 4px;
+    }
+    .opt-tone {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .opt-text {
+      font-size: 14.5px;
+      color: #e2e8f0;
+      line-height: 1.65;
+      font-style: italic;
+      margin-bottom: 22px;
+      flex-grow: 1;
+    }
+    .btn-row {
+      display: flex;
+      gap: 10px;
+      padding-top: 16px;
+      border-top: 1px solid var(--card-border);
+    }
+    button {
+      flex: 1;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-preview {
+      background: var(--accent-subtle);
+      color: var(--accent-light);
+      border: 1px solid rgba(197, 168, 105, 0.4);
+    }
+    .btn-preview:hover {
+      background: var(--accent);
+      color: #000;
+    }
+    .btn-copy {
+      background: #1e222d;
+      color: #cbd5e1;
+      border: 1px solid #2d3342;
+    }
+    .btn-copy:hover {
+      background: #282f40;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="badge">Vice-Chancellor Dialogue Suite</span>
+      <h1>Prof. Pradipta Kumar Nanda</h1>
+      <p class="subtitle">10 curated presidential dialogues crafted for the Vice-Chancellor mandate card on the About Page. Click <strong>"Preview in Card"</strong> to see each option rendered live alongside his updated conclave portrait.</p>
+    </header>
+
+    <!-- Live Card Mockup -->
+    <div class="preview-box">
+      <div class="preview-header">
+        <span>● Live About Page Card Preview</span>
+        <span id="active-label" style="color: var(--accent-light); margin-left: auto;">Showing Option #1 (Current Baseline)</span>
+      </div>
+      <div class="preview-grid">
+        <div>
+          <div class="quote-display" id="live-quote">
+            “True academic leadership cannot exist in isolation from industrial evolution. Through ALLYSHIP++, we bring the laboratory and the boardroom into an enduring covenant—equipping our scholars with real-world rigor while providing industry partners with deep, sustainable innovation.”
+          </div>
+          <div class="author-info">
+            <div class="author-name">Prof. Pradipta Kumar Nanda</div>
+            <div class="author-role">Vice-Chancellor, Siksha 'O' Anusandhan (SOA) Deemed to be University</div>
+          </div>
+        </div>
+        <div class="vc-photo-card">
+          <img src="/leadership/pradipta-kumar-nanda.jpg" alt="Prof. Pradipta Kumar Nanda" />
+          <div class="vc-tag">Vice-Chancellor</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10 Options Grid -->
+    <div class="grid">
+      
+      <div class="opt-card active" id="card-1">
+        <div class="opt-num">#1</div>
+        <div>
+          <div class="opt-tag">Institutional Covenant</div>
+          <div class="opt-tone">Strategic & Enduring (Current Baseline)</div>
+          <div class="opt-text">&ldquo;True academic leadership cannot exist in isolation from industrial evolution. Through ALLYSHIP++, we bring the laboratory and the boardroom into an enduring covenant—equipping our scholars with real-world rigor while providing industry partners with deep, sustainable innovation.&rdquo;</div>
+        </div>
+        <div class="btn-row">
+          <button class="btn-preview" onclick="previewQuote(1)">Preview in Card</button>
+          <button class="btn-copy" onclick="copyQuote(1)">Copy Quote</button>
+        </div>
+      </div>
+
+
+      <div class="opt-card " id="card-2">
+        <div class="opt-num">#2</div>
+        <div>
+          <div class="opt-tag">Lab-to-Enterprise Pipeline</div>
+          <div class="opt-tone">Applied Research & Enterprise Impact</div>
+          <div class="opt-text">&ldquo;A university’s true measure is not merely in the degrees it confers, but in the industrial complexities its scholars resolve. ALLYSHIP++ bridges academic curiosity with corporate velocity, ensuring our laboratories actively power the next frontier of enterprise engineering.&rdquo;</div>
+        </div>
+        <div class="btn-row">
+          <button class="btn-preview" onclick="previewQuote(2)">Preview in Card</button>
+          <button class="btn-copy" onclick="copyQuote(2)">Copy Quote</button>
+        </div>
+      </div>
+
+
+      <div class="opt-card " id="card-3">
+        <div class="opt-num">#3</div>
+        <div>
+          <div class="opt-tag">Curriculum Co-Creation</div>
+          <div class="opt-tone">Pedagogical Agility & Zero-Day Readiness</div>
+          <div class="opt-text">&ldquo;When universities co-architect curriculum directly alongside chief technology officers and industry pioneers, we eliminate the traditional onboarding learning curve. Our graduates do not merely enter the corporate ecosystem—they accelerate it from day one.&rdquo;</div>
+        </div>
+        <div class="btn-row">
+          <button class="btn-preview" onclick="previewQuote(3)">Preview in Card</button>
+          <button class="btn-copy" onclick="copyQuote(3)">Copy Quote</button>
+        </div>
+      </div>
+
+
+      <div class="opt-card " id="card-4">
+        <div class="opt-num">#4</div>
+        <div>
+          <div class="opt-tag">Enduring Strategic Alliances</div>
+          <div class="opt-tone">Relational Trust over Transactional Hiring</div>
+          <div class="opt-text">&ldquo;University-industry collaboration can no longer be confined to annual recruitment drives. Through ALLYSHIP++, SOA establishes generational covenants with enterprise partners—grounded in shared research patents, mutual mentorship, and transformative talent stewardship.&rdquo;</div>
+        </div>
+        <div class="btn-row">
+          <button class="btn-preview" onclick="previewQuote(4)">Preview in Card</button>
+          <button class="btn-copy" onclick="copyQuote(4)">Copy Quote</button>
+        </div>
+      </div>
+
+
+      <div class="opt-card " id="card-5">
+        <div class="opt-num">#5</div>
+        <div>
+          <div class="opt-tag">Human-Centered Rigor in the AI Era</div>
+          <div class="opt-tone">Ethical Leadership & Technological Mastery</div>
+          <div class="opt-text">&ldquo;In an era of relentless algorithmic acceleration, our highest academic responsibility is cultivating grounded, resilient thinkers who combine deep technological mastery with unshakeable ethical clarity and human empathy.&rdquo;</div>
+        </div>
+        <div class="btn-row">
+          <button class="btn-preview" onclick="previewQuote(5)">Preview in Card</button>
+          <button class="btn-copy" onclick="copyQuote(5)">Copy Quote</button>
+        </div>
+      </div>
+
+
+      <div class="opt-card " id="card-6">
+        <div class="opt-num">#6</div>
+        <div>
+          <div class="opt-tag">Sovereign Innovation & National Mandate</div>
+          <div class="opt-tone">National Growth & High-Tech Self-Reliance</div>
+          <div class="opt-text">&ldquo;India’s economic ascendancy demands that premier higher-education institutions and commercial enterprises march in lockstep. ALLYSHIP++ is SOA’s national commitment to turn university laboratories into high-octane engines of sovereign technological capability.&rdquo;</div>
+        </div>
+        <div class="btn-row">
+          <button class="btn-preview" onclick="previewQuote(6)">Preview in Card</button>
+          <button class="btn-copy" onclick="copyQuote(6)">Copy Quote</button>
+        </div>
+      </div>
+
+
+      <div class="opt-card " id="card-7">
+        <div class="opt-num">#7</div>
+        <div>
+          <div class="opt-tag">The Authentic Allyship Mandate</div>
+          <div class="opt-tone">Psychological Safety & Sponsoring Ambition</div>
+          <div class="opt-text">&ldquo;Academic leadership is fundamentally about creating safe harbors for bold intellects to experiment, question, and pioneer. Authentic allyship gives our scholars the runway, institutional backing, and corporate sponsorship to rewrite industry benchmarks without fear of failure.&rdquo;</div>
+        </div>
+        <div class="btn-row">
+          <button class="btn-preview" onclick="previewQuote(7)">Preview in Card</button>
+          <button class="btn-copy" onclick="copyQuote(7)">Copy Quote</button>
+        </div>
+      </div>
+
+
+      <div class="opt-card " id="card-8">
+        <div class="opt-num">#8</div>
+        <div>
+          <div class="opt-tag">Cross-Disciplinary Synthesis</div>
+          <div class="opt-tone">Holistic Problem-Solving</div>
+          <div class="opt-text">&ldquo;Modern global challenges do not respect departmental boundaries. By converging medical research, engineering rigor, legal frameworks, and executive boardroom dialogue under ALLYSHIP++, SOA unlocks holistic solutions to India’s most critical industrial imperatives.&rdquo;</div>
+        </div>
+        <div class="btn-row">
+          <button class="btn-preview" onclick="previewQuote(8)">Preview in Card</button>
+          <button class="btn-copy" onclick="copyQuote(8)">Copy Quote</button>
+        </div>
+      </div>
+
+
+      <div class="opt-card " id="card-9">
+        <div class="opt-num">#9</div>
+        <div>
+          <div class="opt-tag">Mentorship & Executive Stewardship</div>
+          <div class="opt-tone">Transformational Leadership & Coaching</div>
+          <div class="opt-text">&ldquo;Scholars do not just need lectures; they need executive champions who believe in their potential before the market does. ALLYSHIP++ bridges student aspirations with seasoned CXO mentorship, forging leaders who thrive under dynamic pressure.&rdquo;</div>
+        </div>
+        <div class="btn-row">
+          <button class="btn-preview" onclick="previewQuote(9)">Preview in Card</button>
+          <button class="btn-copy" onclick="copyQuote(9)">Copy Quote</button>
+        </div>
+      </div>
+
+
+      <div class="opt-card " id="card-10">
+        <div class="opt-num">#10</div>
+        <div>
+          <div class="opt-tag">Constructing the Future of Work</div>
+          <div class="opt-tone">Crisp, Authoritative & Concise</div>
+          <div class="opt-text">&ldquo;We do not prepare students for the future of work; together with industry leadership, we construct it. ALLYSHIP++ transforms our classrooms into living crucibles of modern enterprise innovation.&rdquo;</div>
+        </div>
+        <div class="btn-row">
+          <button class="btn-preview" onclick="previewQuote(10)">Preview in Card</button>
+          <button class="btn-copy" onclick="copyQuote(10)">Copy Quote</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const quotes = [{"id":1,"tag":"Institutional Covenant","tone":"Strategic & Enduring (Current Baseline)","text":"True academic leadership cannot exist in isolation from industrial evolution. Through ALLYSHIP++, we bring the laboratory and the boardroom into an enduring covenant—equipping our scholars with real-world rigor while providing industry partners with deep, sustainable innovation."},{"id":2,"tag":"Lab-to-Enterprise Pipeline","tone":"Applied Research & Enterprise Impact","text":"A university’s true measure is not merely in the degrees it confers, but in the industrial complexities its scholars resolve. ALLYSHIP++ bridges academic curiosity with corporate velocity, ensuring our laboratories actively power the next frontier of enterprise engineering."},{"id":3,"tag":"Curriculum Co-Creation","tone":"Pedagogical Agility & Zero-Day Readiness","text":"When universities co-architect curriculum directly alongside chief technology officers and industry pioneers, we eliminate the traditional onboarding learning curve. Our graduates do not merely enter the corporate ecosystem—they accelerate it from day one."},{"id":4,"tag":"Enduring Strategic Alliances","tone":"Relational Trust over Transactional Hiring","text":"University-industry collaboration can no longer be confined to annual recruitment drives. Through ALLYSHIP++, SOA establishes generational covenants with enterprise partners—grounded in shared research patents, mutual mentorship, and transformative talent stewardship."},{"id":5,"tag":"Human-Centered Rigor in the AI Era","tone":"Ethical Leadership & Technological Mastery","text":"In an era of relentless algorithmic acceleration, our highest academic responsibility is cultivating grounded, resilient thinkers who combine deep technological mastery with unshakeable ethical clarity and human empathy."},{"id":6,"tag":"Sovereign Innovation & National Mandate","tone":"National Growth & High-Tech Self-Reliance","text":"India’s economic ascendancy demands that premier higher-education institutions and commercial enterprises march in lockstep. ALLYSHIP++ is SOA’s national commitment to turn university laboratories into high-octane engines of sovereign technological capability."},{"id":7,"tag":"The Authentic Allyship Mandate","tone":"Psychological Safety & Sponsoring Ambition","text":"Academic leadership is fundamentally about creating safe harbors for bold intellects to experiment, question, and pioneer. Authentic allyship gives our scholars the runway, institutional backing, and corporate sponsorship to rewrite industry benchmarks without fear of failure."},{"id":8,"tag":"Cross-Disciplinary Synthesis","tone":"Holistic Problem-Solving","text":"Modern global challenges do not respect departmental boundaries. By converging medical research, engineering rigor, legal frameworks, and executive boardroom dialogue under ALLYSHIP++, SOA unlocks holistic solutions to India’s most critical industrial imperatives."},{"id":9,"tag":"Mentorship & Executive Stewardship","tone":"Transformational Leadership & Coaching","text":"Scholars do not just need lectures; they need executive champions who believe in their potential before the market does. ALLYSHIP++ bridges student aspirations with seasoned CXO mentorship, forging leaders who thrive under dynamic pressure."},{"id":10,"tag":"Constructing the Future of Work","tone":"Crisp, Authoritative & Concise","text":"We do not prepare students for the future of work; together with industry leadership, we construct it. ALLYSHIP++ transforms our classrooms into living crucibles of modern enterprise innovation."}];
+
+    function previewQuote(id) {
+      const q = quotes.find(item => item.id === id);
+      if (!q) return;
+      document.getElementById('live-quote').innerText = '“' + q.text + '”';
+      document.getElementById('active-label').innerText = 'Previewing Option #' + q.id + ' (' + q.tag + ')';
+      
+      document.querySelectorAll('.opt-card').forEach(c => c.classList.remove('active'));
+      const activeCard = document.getElementById('card-' + id);
+      if (activeCard) activeCard.classList.add('active');
+
+      window.scrollTo({ top: 120, behavior: 'smooth' });
+    }
+
+    function copyQuote(id) {
+      const q = quotes.find(item => item.id === id);
+      if (!q) return;
+      navigator.clipboard.writeText(q.text).then(() => {
+        alert('Copied Option #' + id + ' to clipboard!');
+      });
+    }
+  </script>
+</body>
+</html>

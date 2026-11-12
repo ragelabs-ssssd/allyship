@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALLYSHIP++ | Elevated Hero Transition Concepts (V2)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: ['class', '[data-theme="dark"]'],
+      theme: {
+        extend: {
+          colors: {
+            accent: '#C5A869',
+            'accent-light': '#E8D5A7',
+            'accent-dark': '#9A7E3E',
+            canvas: 'var(--canvas)',
+            surface: 'var(--surface)',
+            'surface-2': 'var(--surface-2)',
+            'surface-3': 'var(--surface-3)',
+            line: 'var(--line)',
+            content: 'var(--content)',
+            'content-muted': 'var(--content-muted)',
+            'content-secondary': 'var(--content-secondary)',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root[data-theme="dark"] {
+      --canvas: #0A0A0A;
+      --surface: #121212;
+      --surface-2: #171717;
+      --surface-3: #222222;
+      --line: rgba(255, 255, 255, 0.1);
+      --content: #FFFFFF;
+      --content-muted: #8E8E93;
+      --content-secondary: #C7C7CC;
+    }
+    :root[data-theme="light"] {
+      --canvas: #F8F6F1;
+      --surface: #FFFFFF;
+      --surface-2: #F1ECE2;
+      --surface-3: #E4DEC5;
+      --line: rgba(15, 23, 42, 0.1);
+      --content: #0F172A;
+      --content-muted: #64748B;
+      --content-secondary: #334155;
+    }
+    body {
+      background-color: var(--canvas);
+      color: var(--content);
+      font-family: 'Inter', sans-serif;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+    .font-display { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+
+    @keyframes smoothMarquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: max-content;
+      animation: smoothMarquee 38s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+  </style>
+</head>
+<body class="min-h-screen py-8 px-4 sm:px-8 max-w-[1720px] mx-auto space-y-16">
+
+  <!-- TOP HEADER -->
+  <header class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-line">
+    <div>
+      <div class="flex items-center gap-2 mb-2">
+        <span class="px-2.5 py-0.5 rounded-full bg-accent/20 text-accent font-mono text-[10px] font-bold uppercase tracking-wider">
+          High-Luxury Elevation V2
+        </span>
+        <span class="text-xs text-content-muted font-mono">Bespoke Architectural Concepts</span>
+      </div>
+      <h1 class="font-display text-2xl sm:text-4xl font-extrabold tracking-tight">
+        Next-Level Hero Transition Concepts
+      </h1>
+      <p class="text-sm text-content-muted mt-1 max-w-3xl leading-relaxed">
+        Moving away from standard card boxes into cinematic, experiential, and luxury typography transitions tailored for C-suite and institutional audiences.
+      </p>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <button onclick="toggleTheme()" class="px-4 py-2 rounded-full border border-line bg-surface text-xs font-semibold hover:border-accent transition-colors shadow-sm">
+        <span id="theme-icon">☀️ Light Mode</span>
+      </button>
+      <a href="http://localhost:3000" target="_blank" class="px-5 py-2 rounded-full bg-accent text-black font-bold text-xs hover:brightness-110 transition-all shadow-md">
+        View Live Site ↗
+      </a>
+    </div>
+  </header>
+
+  <!-- CONCEPT A: CINEMATIC CONCLAVE HORIZON FILMSTRIP -->
+  <section class="space-y-4 p-6 sm:p-8 rounded-3xl bg-surface border-2 border-accent shadow-2xl relative">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-line">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="px-2.5 py-0.5 rounded-full bg-accent text-black font-mono text-[10px] font-bold uppercase">Concept A · Luxury Visual</span>
+          <span class="text-xs font-mono text-accent font-bold">Panoramic Conclave Filmstrip</span>
+        </div>
+        <h2 class="text-xl sm:text-2xl font-bold font-display text-content mt-1">The 5-City Conclave Horizon (Cinematic Filmstrip)</h2>
+        <p class="text-xs text-content-muted mt-0.5">
+          Instead of empty boxes or static text, an ultra-wide panoramic photo filmstrip capturing real boardroom energy across Bengaluru, Hyderabad, Chennai, Kolkata, and Mumbai.
+        </p>
+      </div>
+    </div>
+
+    <!-- Live Render Preview -->
+    <div class="pt-4 overflow-hidden rounded-2xl border border-line bg-black">
+      <div class="p-4 sm:p-6 border-b border-white/10 flex items-center justify-between">
+        <div class="flex items-center gap-2.5">
+          <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+          <span class="font-mono text-xs font-bold tracking-[0.2em] text-accent uppercase">
+            Conclave Footprint in Motion · 7 National Editions
+          </span>
+        </div>
+        <span class="text-xs font-mono text-neutral-400 hidden sm:inline">
+          500+ CXOs · 4 Olympic Mentors · 5 Commercial Hubs
+        </span>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-1 p-2 bg-neutral-950">
+        <!-- City 1 -->
+        <div class="relative group h-48 sm:h-56 rounded-xl overflow-hidden cursor-pointer">
+          <img src="/bengaluru-1.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Bengaluru Conclave">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+          <div class="absolute top-3 left-3 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[9px] font-mono text-accent border border-white/10">
+            1.0 &amp; 2.0
+          </div>
+          <div class="absolute bottom-3 left-3 right-3">
+            <h4 class="font-display text-sm font-bold text-white">Bengaluru</h4>
+            <p class="text-[10px] text-neutral-300 font-sans truncate">Metropolitan Tech Hub</p>
+          </div>
+        </div>
+
+        <!-- City 2 -->
+        <div class="relative group h-48 sm:h-56 rounded-xl overflow-hidden cursor-pointer">
+          <img src="/hyderabad-1.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Hyderabad Conclave">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+          <div class="absolute top-3 left-3 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[9px] font-mono text-accent border border-white/10">
+            1.0 &amp; 2.0
+          </div>
+          <div class="absolute bottom-3 left-3 right-3">
+            <h4 class="font-display text-sm font-bold text-white">Hyderabad</h4>
+            <p class="text-[10px] text-neutral-300 font-sans truncate">Gachibowli Tech Corridor</p>
+          </div>
+        </div>
+
+        <!-- City 3 -->
+        <div class="relative group h-48 sm:h-56 rounded-xl overflow-hidden cursor-pointer">
+          <img src="/kolkata-1.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Kolkata Conclave">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+          <div class="absolute top-3 left-3 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[9px] font-mono text-neutral-400 border border-white/10">
+            1.0 Series
+          </div>
+          <div class="absolute bottom-3 left-3 right-3">
+            <h4 class="font-display text-sm font-bold text-white">Kolkata</h4>
+            <p class="text-[10px] text-neutral-300 font-sans truncate">Eastern Commercial Hub</p>
+          </div>
+        </div>
+
+        <!-- City 4 -->
+        <div class="relative group h-48 sm:h-56 rounded-xl overflow-hidden cursor-pointer">
+          <img src="/mumbai-1.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Mumbai Conclave">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+          <div class="absolute top-3 left-3 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[9px] font-mono text-neutral-400 border border-white/10">
+            1.0 Series
+          </div>
+          <div class="absolute bottom-3 left-3 right-3">
+            <h4 class="font-display text-sm font-bold text-white">Mumbai</h4>
+            <p class="text-[10px] text-neutral-300 font-sans truncate">Financial Capital Hub</p>
+          </div>
+        </div>
+
+        <!-- City 5 -->
+        <div class="relative group h-48 sm:h-56 rounded-xl overflow-hidden cursor-pointer col-span-2 md:col-span-1">
+          <img src="/slides/CON01670.jpg" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Chennai Conclave">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+          <div class="absolute top-3 left-3 px-2 py-0.5 rounded-full bg-accent text-black font-bold text-[9px] font-mono">
+            2.0 Flagship
+          </div>
+          <div class="absolute bottom-3 left-3 right-3">
+            <h4 class="font-display text-sm font-bold text-accent">Chennai</h4>
+            <p class="text-[10px] text-neutral-300 font-sans truncate">Executive Leadership Conclave</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONCEPT B: KINETIC LUXURY TYPOGRAPHY RIBBON (ULTRA-CLEAN) -->
+  <section class="space-y-4 p-6 sm:p-8 rounded-3xl bg-surface border border-line shadow-xl">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-line">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="px-2.5 py-0.5 rounded-full bg-accent/20 text-accent font-mono text-[10px] font-bold uppercase">Concept B · High-Fashion Editorial</span>
+          <span class="text-xs font-mono text-content-muted">Kinetic Gold Typographic Marquee</span>
+        </div>
+        <h2 class="text-xl sm:text-2xl font-bold font-display text-content mt-1">The Kinetic Institutional Thesis (Continuous Gold Stream)</h2>
+        <p class="text-xs text-content-muted mt-0.5">
+          Ultra-slim, sophisticated typography ribbon gliding seamlessly across the screen. No boxes, no clutter — pure executive gravitas.
+        </p>
+      </div>
+    </div>
+
+    <!-- Live Render Preview -->
+    <div class="pt-4 overflow-hidden rounded-2xl border-y border-line bg-[#0E0E0E] py-6 select-none force-dark">
+      <div class="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+        <div class="animate-marquee flex items-center gap-12 font-display text-sm sm:text-base tracking-wide font-medium text-neutral-300">
+          <span class="flex items-center gap-3">
+            <span class="text-accent text-xs">✦</span>
+            <span>SIKSHA &lsquo;O&rsquo; ANUSANDHAN DEEMED UNIVERSITY</span>
+          </span>
+          <span class="flex items-center gap-3">
+            <span class="text-accent text-xs">✦</span>
+            <span class="text-white font-bold">WHERE RELATIONSHIPS PRECEDE RECRUITMENT</span>
+          </span>
+          <span class="flex items-center gap-3">
+            <span class="text-accent text-xs">✦</span>
+            <span class="italic text-accent">500+ Boardroom CXOs</span>
+          </span>
+          <span class="flex items-center gap-3">
+            <span class="text-accent text-xs">✦</span>
+            <span>CHAMPIONSHIP PSYCHOLOGY IN THE BOARDROOM</span>
+          </span>
+          <span class="flex items-center gap-3">
+            <span class="text-accent text-xs">✦</span>
+            <span class="text-white font-bold">ALLYSHIP 1.0 (4 EDITIONS) &amp; CHAPTER 2.0 (3 EDITIONS)</span>
+          </span>
+          <span class="flex items-center gap-3">
+            <span class="text-accent text-xs">✦</span>
+            <span>BENGALURU · HYDERABAD · KOLKATA · MUMBAI · CHENNAI</span>
+          </span>
+          <span class="flex items-center gap-3">
+            <span class="text-accent text-xs">✦</span>
+            <span class="italic text-accent">Olympic Mentors &amp; Corporate Chairs</span>
+          </span>
+
+          <!-- Duplicated for seamless loop -->
+          <span class="flex items-center gap-3">
+            <span class="text-accent text-xs">✦</span>
+            <span>SIKSHA &lsquo;O&rsquo; ANUSANDHAN DEEMED UNIVERSITY</span>
+          </span>
+          <span class="flex items-center gap-3">
+            <span class="text-accent text-xs">✦</span>
+            <span class="text-white font-bold">WHERE RELATIONSHIPS PRECEDE RECRUITMENT</span>
+          </span>
+          <span class="flex items-center gap-3">
+            <span class="text-accent text-xs">✦</span>
+            <span class="italic text-accent">500+ Boardroom CXOs</span>
+          </span>
+          <span class="flex items-center gap-3">
+            <span class="text-accent text-xs">✦</span>
+            <span>CHAMPIONSHIP PSYCHOLOGY IN THE BOARDROOM</span>
+          </span>
+          <span class="flex items-center gap-3">
+            <span class="text-accent text-xs">✦</span>
+            <span class="text-white font-bold">ALLYSHIP 1.0 (4 EDITIONS) &amp; CHAPTER 2.0 (3 EDITIONS)</span>
+          </span>
+          <span class="flex items-center gap-3">
+            <span class="text-accent text-xs">✦</span>
+            <span>BENGALURU · HYDERABAD · KOLKATA · MUMBAI · CHENNAI</span>
+          </span>
+          <span class="flex items-center gap-3">
+            <span class="text-accent text-xs">✦</span>
+            <span class="italic text-accent">Olympic Mentors &amp; Corporate Chairs</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONCEPT C: MINIMALIST DIRECT DOCK (REMOVE ENTIRELY / MERGE INTO IMPACT METRICS) -->
+  <section class="space-y-4 p-6 sm:p-8 rounded-3xl bg-surface border border-line shadow-xl">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-line">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="px-2.5 py-0.5 rounded-full bg-accent/20 text-accent font-mono text-[10px] font-bold uppercase">Concept C · The Purist</span>
+          <span class="text-xs font-mono text-content-muted">Zero Intermediate Clutter</span>
+        </div>
+        <h2 class="text-xl sm:text-2xl font-bold font-display text-content mt-1">Direct Bleed into Impact Metrics (Remove the Strip Entirely)</h2>
+        <p class="text-xs text-content-muted mt-0.5">
+          Eliminates the filler row altogether. The Cinematic Hero naturally transitions straight into the animated <strong>Impact Numbers</strong> (7 National Conclaves, 500+ CXOs, 4 Olympic Mentors).
+        </p>
+      </div>
+    </div>
+
+    <!-- Live Render Preview -->
+    <div class="pt-4 p-8 rounded-2xl border border-line bg-surface-2 text-center space-y-4">
+      <div class="max-w-2xl mx-auto space-y-3">
+        <span class="text-xs font-mono uppercase tracking-[0.2em] text-accent block font-bold">
+          [ Hero Ends ]
+        </span>
+        <div class="w-12 h-0.5 bg-accent/40 mx-auto"></div>
+        <h3 class="font-display text-lg font-bold text-content">
+          Hero flows seamlessly directly into:
+        </h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-2">
+          <div class="p-4 rounded-xl bg-surface border border-line font-mono text-xs">
+            <div class="text-accent text-xl font-bold">7</div>
+            <div class="text-content-muted text-[10px] mt-1">National Conclaves</div>
+          </div>
+          <div class="p-4 rounded-xl bg-surface border border-line font-mono text-xs">
+            <div class="text-accent text-xl font-bold">500+</div>
+            <div class="text-content-muted text-[10px] mt-1">Boardroom CXOs</div>
+          </div>
+          <div class="p-4 rounded-xl bg-surface border border-line font-mono text-xs">
+            <div class="text-accent text-xl font-bold">4</div>
+            <div class="text-content-muted text-[10px] mt-1">Olympic Mentors</div>
+          </div>
+          <div class="p-4 rounded-xl bg-surface border border-line font-mono text-xs">
+            <div class="text-accent text-xl font-bold">30 Yrs</div>
+            <div class="text-content-muted text-[10px] mt-1">Academic Inquiry</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONCEPT D: THE GOLD DIGNITARY RIBBON (SOA LEADERSHIP × OLYMPIC ICONS) -->
+  <section class="space-y-4 p-6 sm:p-8 rounded-3xl bg-surface border border-line shadow-xl">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-line">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="px-2.5 py-0.5 rounded-full bg-accent/20 text-accent font-mono text-[10px] font-bold uppercase">Concept D · Authority Badge</span>
+          <span class="text-xs font-mono text-content-muted">Executive Endorsement Strip</span>
+        </div>
+        <h2 class="text-xl sm:text-2xl font-bold font-display text-content mt-1">The Dignitary Endorsement Strip (SOA × Olympic × CXO Leadership)</h2>
+        <p class="text-xs text-content-muted mt-0.5">
+          A compact, luxury metallic strip establishing the 3 pillars of leadership behind ALLYSHIP++ with authentic portrait thumbnails.
+        </p>
+      </div>
+    </div>
+
+    <!-- Live Render Preview -->
+    <div class="pt-4">
+      <div class="rounded-2xl border border-line bg-surface-2 p-6 sm:p-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 divide-y md:divide-y-0 md:divide-x divide-line">
+          <!-- Col 1 -->
+          <div class="flex items-center gap-4 pr-4">
+            <img src="/chairman-manojranjan-nayak.png" class="w-14 h-14 rounded-2xl object-cover border border-accent/40 shrink-0" alt="Prof. Manojranjan Nayak">
+            <div class="space-y-0.5">
+              <span class="text-[9px] font-mono uppercase tracking-wider text-accent font-bold block">Academic Vision</span>
+              <h4 class="font-display text-sm font-bold text-content">Prof. Manojranjan Nayak</h4>
+              <p class="text-xs text-content-muted">Founder President &amp; Chairman, SOA</p>
+            </div>
+          </div>
+
+          <!-- Col 2 -->
+          <div class="flex items-center gap-4 pt-4 md:pt-0 md:px-6">
+            <img src="/testimonials/anju-bobby-george.jpg" class="w-14 h-14 rounded-2xl object-cover border border-accent/40 shrink-0" alt="Anju Bobby George">
+            <div class="space-y-0.5">
+              <span class="text-[9px] font-mono uppercase tracking-wider text-accent font-bold block">Olympic Mentorship</span>
+              <h4 class="font-display text-sm font-bold text-content">Anju Bobby George</h4>
+              <p class="text-xs text-content-muted">Olympian &amp; World Championship Medalist</p>
+            </div>
+          </div>
+
+          <!-- Col 3 -->
+          <div class="flex items-center gap-4 pt-4 md:pt-0 md:pl-6">
+            <img src="/testimonials/pb-kotur-v2.jpg" class="w-14 h-14 rounded-2xl object-cover border border-accent/40 shrink-0" alt="Dr. P.B. Kotur">
+            <div class="space-y-0.5">
+              <span class="text-[9px] font-mono uppercase tracking-wider text-accent font-bold block">Corporate Convener</span>
+              <h4 class="font-display text-sm font-bold text-content">Dr. P.B. Kotur</h4>
+              <p class="text-xs text-content-muted">Global Head, Engineering Academy, LTTS</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JAVASCRIPT FOR THEME TOGGLE -->
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', next);
+      document.getElementById('theme-icon').textContent = next === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
+    }
+  </script>
+</body>
+</html>
+
