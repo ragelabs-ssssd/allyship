@@ -166,17 +166,17 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
       <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-32 min-h-[640px] lg:min-h-[720px] flex items-center border-b border-line overflow-hidden">
         <HeroBackdrop videoSrc={SOA_VIDEO_SRC} align="right" />
         <div className="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full flex justify-end">
-          <div className="max-w-3xl space-y-6 text-left sm:text-right flex flex-col items-start sm:items-end">
+          <div className="max-w-4xl space-y-6 text-left sm:text-right flex flex-col items-start sm:items-end">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-2 border border-accent/30 shadow-sm font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
               <span>Enterprise Partnership Portal</span>
             </div>
 
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05] text-left sm:text-right">
+            <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-content leading-[1.08] text-left sm:text-right">
               <span className="block sm:whitespace-nowrap">Where Industry &amp; Academia</span>
               <span className="block italic font-normal sm:whitespace-nowrap">Co-Create the Future</span>
             </h1>
 
-            <p className="text-base sm:text-lg font-display text-content-muted italic text-left sm:text-right">
+            <p className="text-base sm:text-lg font-serif text-content-muted italic text-left sm:text-right lg:whitespace-nowrap">
               Co-Innovate. Sponsor Applied Research. Build Strategic Talent Corridors.
             </p>
 
