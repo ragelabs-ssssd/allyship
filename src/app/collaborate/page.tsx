@@ -171,7 +171,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
               <span>Enterprise Partnership Portal</span>
             </div>
 
-            <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-content leading-[1.08] text-left sm:text-right">
+            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-content leading-[1.05] text-left sm:text-right">
               <span className="block sm:whitespace-nowrap">Where Industry &amp; Academia</span>
               <span className="block italic font-normal sm:whitespace-nowrap">Co-Create the Future</span>
             </h1>

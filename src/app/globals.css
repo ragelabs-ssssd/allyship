@@ -3,11 +3,11 @@
 @theme {
   /* Standardized Typography System */
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-display: "Unbounded", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Newsreader", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 
   /* Aliases for backwards compatibility */
-  --font-heading: "Unbounded", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-accent: "Newsreader", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
@@ -117,7 +117,7 @@
 
     /* Typography Font Family Tokens */
     --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-    --font-display: "Unbounded", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+    --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
     --font-serif: "Newsreader", ui-serif, Georgia, serif;
     --font-heading: var(--font-display);
     --font-body: var(--font-sans);
@@ -238,9 +238,9 @@
   /* Global Typography Hierarchy Standard */
   h1 {
     font-family: var(--font-display);
-    font-size: clamp(1.875rem, 4.2vw, 3.75rem);
+    font-size: clamp(2.25rem, 5vw, 4.5rem);
     font-weight: 700;
-    line-height: 1.08;
+    line-height: 1.05;
     letter-spacing: -0.025em;
     color: var(--t-content);
     text-wrap: balance;
