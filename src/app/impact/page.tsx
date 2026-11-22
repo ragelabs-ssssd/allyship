@@ -137,7 +137,7 @@ export default function ImpactPage() {
       summary: "1964 Olympic hockey gold medalist Gurbux Singh, footballer Gautam Sarkar, and Dhoni's mentor Satyaprakash Krishna joined PwC, Lexmark, and Fortune 500 DEI advisors to deliberate digital transformation and workplace inclusion.",
       quote: "Honoring India's greatest athletic icons while laying the roadmap for modern inclusive workplaces.",
       link: "https://www.soa.ac.in/general-notifications/2024/9/30/soa-organises-allyship-conclave-at-kolkata",
-      image: "/CON01638.JPG",
+      image: "/conclave-moments/kolkata-1/kolkata-1-01.jpg",
     },
     {
       id: "around-chennai",
