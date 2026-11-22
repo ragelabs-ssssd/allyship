@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALLYSHIP++ — Motion Lab: Section 2 (Hero Section)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #08080A;
+      --surface: #121215;
+      --surface-2: #18181C;
+      --line: rgba(255, 255, 255, 0.12);
+      --gold: #C5A869;
+      --text: #FFFFFF;
+      --muted: #A1A1AA;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      padding: 36px 24px 110px;
+      line-height: 1.5;
+    }
+    .container { max-width: 1480px; margin: 0 auto; }
+    .header {
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 30px;
+    }
+    .done-pill {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      color: #6EE7B7;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+      margin-right: 8px;
+    }
+    .step-badge {
+      display: inline-block;
+      font-family: 'Unbounded', sans-serif;
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #0A0A0A;
+      background: var(--gold);
+      padding: 5px 12px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+    h1 { font-family: 'Unbounded', sans-serif; font-size: clamp(22px, 2.8vw, 32px); font-weight: 800; }
+    .sub { color: var(--muted); font-size: 14px; margin-top: 8px; max-width: 760px; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 24px; }
+    @media (max-width: 500px) { .grid { grid-template-columns: 1fr; } }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.2s ease;
+    }
+    .card:hover { border-color: rgba(197, 168, 105, 0.55); }
+    .card.selected { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold); }
+    .card-head {
+      padding: 13px 18px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #141418;
+    }
+    .opt-num {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--gold);
+      background: rgba(197, 168, 105, 0.12);
+      border: 1px solid rgba(197, 168, 105, 0.35);
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+    .trig { font-size: 10.5px; color: var(--muted); font-family: monospace; }
+
+    .demo {
+      height: 165px;
+      background: #070709;
+      padding: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+    }
+    .card-body {
+      padding: 16px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 12px;
+      flex: 1;
+    }
+    .opt-name { font-family: 'Unbounded', sans-serif; font-size: 14px; font-weight: 700; }
+    .opt-desc { font-size: 12.5px; color: var(--muted); margin-top: 4px; }
+    .pick-btn {
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--surface-2);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      width: 100%;
+    }
+    .card.selected .pick-btn { background: var(--gold); color: #0A0A0A; border-color: var(--gold); }
+
+    .u { font-family: 'Unbounded', sans-serif; }
+    .gold { color: var(--gold); }
+
+    @keyframes riseMask { 0% { transform: translateY(115%); opacity: 0; } 20%, 80% { transform: translateY(0); opacity: 1; } 100% { transform: translateY(-115%); opacity: 0; } }
+    .mask-l { animation: riseMask 3.2s cubic-bezier(0.16,1,0.3,1) infinite; }
+
+    @keyframes wipe { 0% { clip-path: inset(0 100% 0 0); } 30%, 80% { clip-path: inset(0 0% 0 0); } 100% { clip-path: inset(0 0% 0 100%); } }
+    .wipe-w { animation: wipe 3s cubic-bezier(0.22,1,0.36,1) infinite; color: var(--gold); }
+
+    @keyframes kenBurns { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } }
+    .kb { position: absolute; inset: 0; background: url('/slides/CON01670.jpg') center/cover; opacity: 0.45; animation: kenBurns 9s ease-in-out infinite; }
+
+    @keyframes shimmerTxt { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
+    .gold-shim { background: linear-gradient(90deg, #C5A869 0%, #FFF3D1 45%, #C5A869 100%); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: shimmerTxt 3.5s linear infinite; }
+
+    @keyframes pulseGrid { 0%, 100% { opacity: 0.15; } 50% { opacity: 0.45; } }
+    .mesh-bg { position: absolute; inset: 0; background-image: radial-gradient(rgba(197,168,105,0.4) 1px, transparent 1px); background-size: 16px 16px; animation: pulseGrid 4s ease-in-out infinite; }
+
+    .action-bar {
+      position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%);
+      background: rgba(16, 16, 20, 0.95); backdrop-filter: blur(14px);
+      border: 1px solid rgba(197, 168, 105, 0.5); border-radius: 999px;
+      padding: 10px 14px 10px 22px; display: flex; align-items: center; gap: 16px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.75); z-index: 60;
+    }
+    .copy-btn { background: var(--gold); color: #0A0A0A; border: none; padding: 8px 18px; border-radius: 999px; font-size: 12px; font-weight: 700; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <span class="done-pill">&#10003; Section 1 Applied: Navbar #04 (Floating Island Scroll Morph)</span>
+        <span class="step-badge">Section 2 of 7 &bull; Hero Section</span>
+        <h1>15 Creative Hero Motion Options</h1>
+        <p class="sub">Test all 15 Hero interactions below. Reply with your chosen <strong>Hero #</strong> (or multiple, e.g., <em>1, 3, 6</em>), and we&rsquo;ll apply them and advance to <strong>Section 3: About &amp; Stats</strong>!</p>
+      </div>
+    </div>
+
+    <div class="grid" id="grid"></div>
+  </div>
+
+  <div class="action-bar">
+    <span style="font-size:12px; color:#E4E4E7;" id="selText">0 Hero options selected</span>
+    <button class="copy-btn" id="copyBtn">Copy Hero Picks</button>
+  </div>
+
+  <script>
+    const options = [
+      { n: 1, name: 'Masked Line-by-Line Rising Curtain', trig: 'on-load', desc: 'Headline lines slide cleanly upward out of invisible baseline masks in 120ms steps.', demo: `<div style="overflow:hidden;"><div class="u mask-l" style="font-size:15px;">WHERE INDUSTRY <span class="gold">MEETS</span></div></div>` },
+      { n: 2, name: 'Kinetic Gold Keyword Clip-Wipe', trig: 'interval (3.2s)', desc: 'Rotating RESEARCH / INNOVATION / PARTNERSHIPS wipes horizontally in gold.', demo: `<div class="u" style="font-size:17px;"><span class="wipe-w">RESEARCH</span></div>` },
+      { n: 3, name: 'Cursor-Tracking Gold Spotlight', trig: 'cursor-move', desc: 'Warm radial gold light glides smoothly behind the hero typography following your pointer.', demo: `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;cursor:crosshair;background:radial-gradient(circle 80px at var(--hx,50%) var(--hy,50%), rgba(197,168,105,0.34), transparent);" onmousemove="const r=this.getBoundingClientRect();this.style.setProperty('--hx',(event.clientX-r.left)+'px');this.style.setProperty('--hy',(event.clientY-r.top)+'px');"><span class="u" style="font-size:12px;">Move Cursor Here</span></div>` },
+      { n: 4, name: 'Scroll-Linked Depth Parallax', trig: 'scroll-scrub', desc: 'Hero background scales 1.0 → 1.08 while headline floats upward at 0.85x scroll speed.', demo: `<div style="text-align:center;"><div class="u gold" style="font-size:13px;">0.85x Text &bull; 1.08x Photo</div><div style="font-size:11px;color:var(--muted);margin-top:4px;">Scroll-scrubbed depth</div></div>` },
+      { n: 5, name: 'Liquid Metallic Gold Text Shimmer', trig: 'ambient (3.5s)', desc: 'A liquid champagne-gold light reflection sweeps gently across RESEARCH.', demo: `<div class="u gold-shim" style="font-size:20px;">RESEARCH</div>` },
+      { n: 6, name: 'Magnetic Primary CTA Pull', trig: 'cursor-move', desc: 'Request Executive Invitation pill pulls toward the cursor within a 24px radius.', demo: `<button style="background:var(--gold);color:#0A0A0A;padding:10px 20px;border-radius:999px;font-weight:700;font-size:12px;border:none;cursor:pointer;transition:transform 0.16s;" onmousemove="const r=this.getBoundingClientRect();this.style.transform='translate('+((event.clientX-r.left-r.width/2)*0.24)+'px,'+((event.clientY-r.top-r.height/2)*0.24)+'px)'" onmouseleave="this.style.transform='none'">Request Invitation &rsaquo;</button>` },
+      { n: 7, name: 'Hero Photo Ken Burns Drift', trig: 'ambient (18s)', desc: 'Ultra-slow 1.0 → 1.06 breathing zoom across the right/background conclave stage photo.', demo: `<div class="kb"></div><span class="u" style="position:relative;z-index:2;font-size:12px;">Cinematic Photo Drift</span>` },
+      { n: 8, name: '3D Tilt on Right Photo Showcase', trig: 'cursor-move', desc: 'Hero right-hand conclave photo frame tilts subtly in 3D perspective on hover.', demo: `<div style="width:180px;height:105px;border-radius:12px;background:url('/slides/CON01670.jpg') center/cover;border:1px solid rgba(197,168,105,0.45);transition:transform 0.15s;cursor:pointer;" onmousemove="const r=this.getBoundingClientRect();this.style.transform='perspective(500px) rotateX('+(((r.height/2-(event.clientY-r.top))/r.height)*14)+'deg) rotateY('+((((event.clientX-r.left)-r.width/2)/r.width)*14)+'deg)'" onmouseleave="this.style.transform='none'"></div>` },
+      { n: 9, name: 'City Footprint Sequential Spark', trig: 'on-load + hover', desc: '6 city names (Bengaluru → Bhubaneswar) illuminate sequentially in gold.', demo: `<div style="font-size:11px;display:flex;gap:8px;"><span class="gold">Bengaluru</span><span>&bull;</span><span class="gold">Hyderabad</span><span>&bull;</span><span>Chennai</span></div>` },
+      { n: 10, name: 'Architectural Dot-Matrix Pulse', trig: 'ambient', desc: 'Subtle gold coordinate dot-grid breathes softly behind the hero stage.', demo: `<div class="mesh-bg"></div><span class="u" style="position:relative;z-index:2;font-size:12px;">Coordinate Grid</span>` },
+      { n: 11, name: 'Scroll-Down Indicator Bounce', trig: 'ambient', desc: 'Minimal vertical gold scroll line pulses gently at bottom edge of hero.', demo: `<div style="display:flex;flex-direction:column;align-items:center;gap:6px;"><span style="font-size:9px;letter-spacing:0.2em;color:var(--gold);">SCROLL</span><div style="width:1px;height:32px;background:linear-gradient(180deg,var(--gold),transparent);"></div></div>` },
+      { n: 12, name: 'Blur-to-Sharp Focus Unveil', trig: 'on-load', desc: 'Hero paragraph and badge transition smoothly from blur(8px) → crisp focus.', demo: `<div style="font-size:13px;color:#e4e4e7;filter:blur(0px);transition:filter 0.5s;" onmouseover="this.style.filter='blur(3px)'" onmouseout="this.style.filter='blur(0px)'">Blur-to-Sharp Focus Reveal</div>` },
+      { n: 13, name: 'Floating Stat Pill Micro-Levitation', trig: 'ambient (6s)', desc: 'Overlaid hero metric badge (500+ CXOs) floats effortlessly ±4px vertically.', demo: `<div style="padding:8px 16px;border-radius:12px;background:#141418;border:1px solid rgba(197,168,105,0.45);font-size:11px;transition:transform 0.4s;cursor:pointer;" onmouseover="this.style.transform='translateY(-6px)'" onmouseout="this.style.transform='none'"><span class="u gold">500+</span> CXOs &bull; 6 Cities</div>` },
+      { n: 14, name: 'CTA Icon Slide-Through Arrow', trig: 'hover', desc: 'Chevron › inside the CTA button slides out right and enters cleanly from left on hover.', demo: `<button style="background:var(--gold);color:#0A0A0A;padding:9px 18px;border-radius:999px;font-weight:700;font-size:12px;border:none;cursor:pointer;" onmouseover="this.querySelector('b').style.transform='translateX(5px)'" onmouseout="this.querySelector('b').style.transform='none'">Explore Chapters <b style="display:inline-block;transition:transform 0.2s;">&rarr;</b></button>` },
+      { n: 15, name: 'Gold Border Trace on Secondary CTA', trig: 'hover', desc: 'Explore Metro Chapters button illuminates a crisp gold border sweep on hover.', demo: `<button style="background:#141418;color:#fff;padding:9px 18px;border-radius:999px;font-weight:600;font-size:12px;border:1px solid var(--line);cursor:pointer;transition:all 0.25s;" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'" onmouseout="this.style.borderColor='var(--line)';this.style.color='#fff'">Explore Metro Chapters &darr;</button>` }
+    ];
+
+    const picked = new Set();
+    const grid = document.getElementById('grid');
+    const selText = document.getElementById('selText');
+
+    function render() {
+      grid.innerHTML = options.map(o => {
+        const key = 'Hero #' + String(o.n).padStart(2, '0');
+        const isSel = picked.has(key);
+        return `
+          <div class="card ${isSel ? 'selected' : ''}">
+            <div class="card-head">
+              <span class="opt-num">${key}</span>
+              <span class="trig">${o.trig}</span>
+            </div>
+            <div class="demo">${o.demo}</div>
+            <div class="card-body">
+              <div>
+                <div class="opt-name">${o.name}</div>
+                <p class="opt-desc">${o.desc}</p>
+              </div>
+              <button class="pick-btn" onclick="toggle('${key}')">
+                ${isSel ? '&#10003; Selected ' + key : 'Select ' + key}
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    window.toggle = (k) => {
+      if (picked.has(k)) picked.delete(k); else picked.add(k);
+      selText.textContent = picked.size ? `${picked.size} Hero option${picked.size > 1 ? 's' : ''} selected` : '0 Hero options selected';
+      render();
+    };
+
+    document.getElementById('copyBtn').addEventListener('click', () => {
+      const txt = 'Apply ' + [...picked].join(', ') + ' and show Section 3 (About & Stats)';
+      navigator.clipboard?.writeText(txt);
+      const b = document.getElementById('copyBtn');
+      b.textContent = 'Copied!';
+      setTimeout(() => b.textContent = 'Copy Hero Picks', 1800);
+    });
+
+    render();
+  </script>
+</body>
+</html>

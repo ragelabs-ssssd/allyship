@@ -44,14 +44,14 @@ export function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-[var(--ease-out-expo)] ${
+        className={`fixed left-0 right-0 z-50 transition-all duration-500 ease-[var(--ease-out-expo)] ${
           isScrolled
-            ? "nav-editorial shadow-2xl"
-            : "bg-gradient-to-b from-canvas/50 via-canvas/25 to-transparent dark:from-canvas/95 dark:via-canvas/70 dark:to-transparent backdrop-blur-[2px]"
+            ? "top-3 mx-3 sm:mx-6 lg:mx-auto max-w-[1640px] rounded-full border border-accent/30 bg-canvas/85 backdrop-blur-xl shadow-[0_18px_50px_rgba(0,0,0,0.65)]"
+            : "top-0 bg-gradient-to-b from-canvas/50 via-canvas/25 to-transparent dark:from-canvas/95 dark:via-canvas/70 dark:to-transparent backdrop-blur-[2px]"
         }`}
       >
-        <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
-          <div className={`flex items-center justify-between transition-all duration-300 ${isScrolled ? "h-16 sm:h-[72px]" : "h-20 sm:h-22 lg:h-24"}`}>
+        <div className={`mx-auto transition-all duration-500 ${isScrolled ? "px-5 sm:px-8" : "max-w-[1720px] px-6 sm:px-8 lg:px-12 xl:px-16"}`}>
+          <div className={`flex items-center justify-between transition-all duration-300 ${isScrolled ? "h-16 sm:h-[70px]" : "h-20 sm:h-22 lg:h-24"}`}>
             {/* Logo */}
             <Link
               href="/"
