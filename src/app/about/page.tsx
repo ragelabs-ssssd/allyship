@@ -124,10 +124,10 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="pt-2">
+            <div className="pt-1">
               <a
                 href="#journey-pillars"
-                className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-accent hover:text-content transition-colors"
+                className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-accent hover:text-content transition-colors leading-none"
               >
                 <span>Explore the Institutional Architecture</span>
                 <ArrowRight className="w-4 h-4" />
@@ -138,14 +138,14 @@ export default function AboutPage() {
           {/* Right Column: The Conclave Mandate Banner Visual (Chennai Conclave high-res background with blur & razor-sharp typography) */}
           <div id="manifesto" className="lg:col-span-6 w-full flex scroll-mt-28">
             <div className="w-full h-full">
-              <div className="relative rounded-3xl bg-[#0A0A0A] border border-white/10 shadow-2xl overflow-hidden force-dark group hover:border-accent/40 transition-all duration-500 h-full min-h-[380px] sm:min-h-[420px] flex items-center justify-center p-6 sm:p-10 lg:p-12 text-center select-none">
+              <div className="relative rounded-3xl bg-[#0A0A0A] border border-white/10 shadow-2xl overflow-hidden force-dark group hover:border-accent/40 transition-all duration-500 h-full min-h-[320px] lg:min-h-0 flex items-center justify-center p-6 sm:p-8 lg:p-10 text-center select-none">
                 {/* Background Image: High-Resolution Chennai Conclave Delegation with Cinematic Blur */}
                 <div className="absolute inset-0">
                   <Image
                     src="/slides/CON01670.jpg"
                     alt="Allyship++ Chennai Conclave Delegation"
                     fill
-                    className="object-cover object-[center_25%] group-hover:scale-105 transition-transform duration-1000 ease-out"
+                    className="object-cover object-[center_20%] group-hover:scale-105 transition-transform duration-1000 ease-out"
                     priority
                   />
                   {/* Subtle blur overlay + dark cinematic grade */}
