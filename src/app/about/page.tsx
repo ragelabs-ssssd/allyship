@@ -88,29 +88,31 @@ export default function AboutPage() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 2xl:gap-24 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 items-stretch">
           {/* Left Column: 3-Paragraph Relatable Narrative */}
-          <div className="lg:col-span-6 xl:col-span-6 space-y-6 text-left md:text-justify">
-            <p className="text-base text-content-secondary leading-relaxed font-normal text-left md:text-justify">
-              For too long, university-industry ties were limited to annual campus visits. ALLYSHIP was founded on a simple truth: preparing future talent requires continuous dialogue, not periodic transactions. Instead of waiting behind gates, Siksha &lsquo;O&rsquo; Anusandhan stepped directly into metropolitan boardrooms across India to listen. We asked: <em>How do we build workplaces where young talent genuinely thrives?</em>
-            </p>
-
-            <p className="text-base text-content-secondary leading-relaxed font-normal text-left md:text-justify">
-              The <code className="text-accent bg-glass-strong px-2 py-0.5 rounded border border-line font-mono font-semibold">++</code> signifies compounding impact—moving beyond hiring metrics toward psychological safety, executive mentorship, and curricula co-designed with corporate practitioners.
-            </p>
-
-            <p className="text-base text-content-secondary leading-relaxed font-normal text-left md:text-justify">
-              Uniting Olympic mentors with boardroom chairs, we draw on a timeless athletic truth: potential turns into excellence only when trusted mentors guide talent through setbacks.
-            </p>
-
-            {/* Living Standard Callout Card */}
-            <div className="p-5 rounded-2xl bg-surface-2 border border-accent/25 space-y-2 mt-4">
-              <span className="text-[11px] font-bold font-heading uppercase tracking-widest text-accent block text-left">
-                The Living Standard · Practicing Allyship
-              </span>
-              <p className="text-xs sm:text-sm text-content-secondary leading-relaxed italic text-left md:text-justify">
-                &ldquo;A diversity policy says what an organization intends on paper. Allyship is what happens on an ordinary Friday—who is heard in a meeting, who is trusted with a challenging project, and who speaks up when an early-career colleague is overlooked.&rdquo;
+          <div className="lg:col-span-6 flex flex-col justify-between space-y-6 text-left md:text-justify">
+            <div className="space-y-5">
+              <p className="text-base text-content-secondary leading-relaxed font-normal text-left md:text-justify">
+                For too long, university-industry ties were limited to annual campus visits. ALLYSHIP was founded on a simple truth: preparing future talent requires continuous dialogue, not periodic transactions. Instead of waiting behind gates, Siksha &lsquo;O&rsquo; Anusandhan stepped directly into metropolitan boardrooms across India to listen. We asked: <em>How do we build workplaces where young talent genuinely thrives?</em>
               </p>
+
+              <p className="text-base text-content-secondary leading-relaxed font-normal text-left md:text-justify">
+                The <code className="text-accent bg-glass-strong px-2 py-0.5 rounded border border-line font-mono font-semibold">++</code> signifies compounding impact—moving beyond hiring metrics toward psychological safety, executive mentorship, and curricula co-designed with corporate practitioners.
+              </p>
+
+              <p className="text-base text-content-secondary leading-relaxed font-normal text-left md:text-justify">
+                Uniting Olympic mentors with boardroom chairs, we draw on a timeless athletic truth: potential turns into excellence only when trusted mentors guide talent through setbacks.
+              </p>
+
+              {/* Living Standard Callout Card */}
+              <div className="p-5 rounded-2xl bg-surface-2 border border-accent/25 space-y-2">
+                <span className="text-[11px] font-bold font-heading uppercase tracking-widest text-accent block text-left">
+                  The Living Standard · Practicing Allyship
+                </span>
+                <p className="text-xs sm:text-sm text-content-secondary leading-relaxed italic text-left md:text-justify">
+                  &ldquo;A diversity policy says what an organization intends on paper. Allyship is what happens on an ordinary Friday—who is heard in a meeting, who is trusted with a challenging project, and who speaks up when an early-career colleague is overlooked.&rdquo;
+                </p>
+              </div>
             </div>
 
             <div className="pt-2">
@@ -125,9 +127,9 @@ export default function AboutPage() {
           </div>
 
           {/* Right Column: The Conclave Mandate Banner Visual (Chennai Conclave high-res background with blur & razor-sharp typography) */}
-          <div id="manifesto" className="lg:col-span-6 xl:col-span-6 w-full flex justify-center lg:justify-end scroll-mt-28">
-            <div className="w-full max-w-xl lg:max-w-none xl:max-w-[640px] 2xl:max-w-[700px]">
-              <div className="relative rounded-3xl bg-[#0A0A0A] border border-white/10 shadow-2xl overflow-hidden force-dark group hover:border-accent/40 transition-all duration-500 h-[380px] sm:h-[440px] md:h-[480px] lg:h-[500px] xl:h-[520px] 2xl:h-[540px] flex items-center justify-center p-6 sm:p-10 lg:p-12 text-center select-none">
+          <div id="manifesto" className="lg:col-span-6 w-full flex scroll-mt-28">
+            <div className="w-full h-full">
+              <div className="relative rounded-3xl bg-[#0A0A0A] border border-white/10 shadow-2xl overflow-hidden force-dark group hover:border-accent/40 transition-all duration-500 h-full min-h-[380px] sm:min-h-[420px] flex items-center justify-center p-6 sm:p-10 lg:p-12 text-center select-none">
                 {/* Background Image: High-Resolution Chennai Conclave Delegation with Cinematic Blur */}
                 <div className="absolute inset-0">
                   <Image
