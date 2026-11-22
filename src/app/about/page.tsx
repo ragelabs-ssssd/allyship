@@ -68,7 +68,7 @@ export default function AboutPage() {
               The ALLYSHIP<span className="text-accent">++</span> Thesis
             </h1>
 
-            <p className="text-lg sm:text-xl font-display text-content-muted max-w-3xl mx-auto italic">
+            <p className="text-lg sm:text-xl font-display text-content-muted max-w-5xl mx-auto italic">
               Where Relationships Precede Recruitment — Bridging Three Decades of Academic Inquiry with the Leaders Shaping India&rsquo;s Future.
             </p>
 
@@ -90,20 +90,20 @@ export default function AboutPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 2xl:gap-24 items-start">
           {/* Left Column: 4-Paragraph Relatable Narrative */}
-          <div className="lg:col-span-6 xl:col-span-6 space-y-6 text-justify hyphens-auto">
-            <p className="max-w-[68ch] text-base text-content-secondary leading-relaxed font-normal text-justify hyphens-auto">
+          <div className="lg:col-span-6 xl:col-span-6 space-y-6 text-justify">
+            <p className="text-base text-content-secondary leading-relaxed font-normal text-justify">
               For too long, university-industry ties were limited to annual campus visits. ALLYSHIP was founded on a simple truth: preparing future talent requires continuous dialogue, not periodic transactions.
             </p>
 
-            <p className="max-w-[68ch] text-base text-content-secondary leading-relaxed font-normal text-justify hyphens-auto">
+            <p className="text-base text-content-secondary leading-relaxed font-normal text-justify">
               Instead of waiting behind gates, Siksha &lsquo;O&rsquo; Anusandhan stepped directly into metropolitan boardrooms across India to listen. We asked: <em>How do we build workplaces where young talent genuinely thrives?</em>
             </p>
 
-            <p className="max-w-[68ch] text-base text-content-secondary leading-relaxed font-normal text-justify hyphens-auto">
+            <p className="text-base text-content-secondary leading-relaxed font-normal text-justify">
               The <code className="text-accent bg-glass-strong px-2 py-0.5 rounded border border-line font-mono font-semibold">++</code> signifies compounding impact—moving beyond hiring metrics toward psychological safety, executive mentorship, and curricula co-designed with corporate practitioners.
             </p>
 
-            <p className="max-w-[68ch] text-base text-content-secondary leading-relaxed font-normal text-justify hyphens-auto">
+            <p className="text-base text-content-secondary leading-relaxed font-normal text-justify">
               Uniting Olympic mentors with boardroom chairs, we draw on a timeless athletic truth: potential turns into excellence only when trusted mentors guide talent through setbacks.
             </p>
 
@@ -302,7 +302,7 @@ export default function AboutPage() {
       >
         <div className="bg-gradient-to-br from-surface-2 via-surface to-surface-sunken text-content rounded-3xl p-8 sm:p-12 lg:p-16 border border-line shadow-2xl space-y-12">
           {/* Section Header */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-stretch">
             <div className="lg:col-span-7 space-y-4">
               <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
                 Championship Psychology in the Boardroom
@@ -310,20 +310,20 @@ export default function AboutPage() {
               <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
                 Why Olympic Champions Anchor Allyship++
               </h2>
-              <p className="text-sm sm:text-base text-content-secondary leading-relaxed font-normal">
+              <p className="text-sm sm:text-base text-content-secondary leading-relaxed font-normal text-justify">
                 High-performance athletics represents the ultimate meritocratic arena in which psychological safety, coach-athlete allyship, discipline, and mutual trust under extreme pressure directly dictate collective triumph.
               </p>
-              <p className="text-sm sm:text-base text-content-secondary leading-relaxed font-normal">
+              <p className="text-sm sm:text-base text-content-secondary leading-relaxed font-normal text-justify">
                 From Olympic podiums to global corporate boardrooms, SOA conclaves demonstrate that nurturing young talent requires the exact blend of discipline, empathy, and transformative mentorship practiced by elite national coaches.
               </p>
             </div>
 
-            <div className="lg:col-span-5 p-6 rounded-2xl bg-surface-3 border border-accent/30 space-y-3">
+            <div className="lg:col-span-5 p-6 sm:p-8 rounded-2xl bg-surface-3 border border-accent/30 flex flex-col justify-center space-y-3">
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-accent">
                 <Medal className="w-4 h-4" />
                 <span>The Core Athletic Parallel</span>
               </div>
-              <p className="text-sm text-content-secondary leading-relaxed italic">
+              <p className="text-sm text-content-secondary leading-relaxed italic text-justify">
                 &ldquo;An Olympic coach doesn&apos;t run the anchor leg; they eliminate friction, absorb external pressure, and build unshakeable psychological safety so emerging talent can execute without fear under championship stakes. That is the definition of executive allyship.&rdquo;
               </p>
             </div>

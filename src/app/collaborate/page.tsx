@@ -180,7 +180,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
               Co-Innovate. Sponsor Applied Research. Build Strategic Talent Corridors.
             </p>
 
-            <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-xl font-normal text-left sm:text-right">
+            <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal text-left sm:text-right">
               From co-founding Centres of Excellence with Tech Mahindra and LTTS to sponsoring R&amp;D challenges with NITI Aayog, Siksha &lsquo;O&rsquo; Anusandhan offers global enterprises an agile, high-velocity talent ecosystem.
             </p>
 

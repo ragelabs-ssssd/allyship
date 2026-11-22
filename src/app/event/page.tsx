@@ -1120,7 +1120,7 @@ function EventContent() {
                 Where Corporate Chairs, Olympians, and Thinkers Connect
               </p>
 
-              <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-xl font-normal">
+              <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal text-justify">
                 From Bhubaneswar to India&apos;s key economic hubs, Siksha &lsquo;O&rsquo; Anusandhan brings academic leadership directly to industry—listening to corporate demands, guiding young talent, and building alliances beyond hiring cycles.
               </p>
 
@@ -1811,7 +1811,7 @@ function EventContent() {
               <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap scroll-mt-24">
                 Chapter-Wise Conclave Moments
               </h2>
-              <p className="text-base text-content-secondary max-w-2xl leading-relaxed">
+              <p className="text-base text-content-secondary max-w-4xl leading-relaxed">
                 Explore official conclave films, keynote conversations, and curated chapter photography across India&apos;s premier corporate hubs.
               </p>
             </div>
@@ -2012,7 +2012,7 @@ function EventContent() {
                   <h3 className="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-content tracking-tight">
                     {currentMediaArchive.city} — Conclave Moments
                   </h3>
-                  <p className="font-sans text-sm sm:text-base text-content-secondary max-w-3xl leading-relaxed">
+                  <p className="font-sans text-sm sm:text-base text-content-secondary max-w-5xl leading-relaxed">
                     {currentMediaArchive.subtitle}
                   </p>
                 </div>

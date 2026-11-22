@@ -64,7 +64,7 @@ export default function ResourcesPage() {
           Resource Library &amp; Toolkits
         </h1>
 
-        <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl mx-auto font-normal">
+        <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-4xl mx-auto font-normal">
           Peer-reviewed guides, real-time intervention scripts, meeting checklists, and research briefings. Free to read, download, and share.
         </p>
       </div>

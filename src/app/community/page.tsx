@@ -96,7 +96,7 @@ export default function CommunityPage() {
           <span className="text-accent sm:whitespace-nowrap">Connect &amp; Mentor.</span>
         </h1>
 
-        <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl mx-auto font-normal">
+        <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-4xl mx-auto font-normal">
           Allyship++ brings together corporate executives, HR leaders, academicians, alumni, and emerging professionals across India. Between conclave editions, our working circles and interactive sessions create space to exchange ideas, mentor young talent, and build inclusive workplaces together.
         </p>
 

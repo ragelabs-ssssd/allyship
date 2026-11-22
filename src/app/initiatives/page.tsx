@@ -50,7 +50,7 @@ export default function InitiativesPage() {
           Initiatives &amp; Learning Labs
         </h1>
 
-        <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl mx-auto font-normal">
+        <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-4xl mx-auto font-normal">
           Actionable, curriculum-embedded programs designed for corporate leaders, engineering cohorts, and community practitioners to dismantle structural barriers and institutionalize measurable inclusion.
         </p>
       </div>

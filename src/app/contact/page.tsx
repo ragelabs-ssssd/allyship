@@ -105,7 +105,7 @@ export default function ContactPage() {
             <span className="text-accent">Conclave Secretariat</span>
           </h1>
 
-          <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl mx-auto font-normal">
+          <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-4xl mx-auto font-normal">
             Whether inquiring about delegation seats for upcoming national conclaves, submitting enterprise challenge briefs, or co-establishing on-campus Centres of Excellence, the SOA Conclave Secretariat and Corporate Relations Directorate are at your service.
           </p>
         </div>
