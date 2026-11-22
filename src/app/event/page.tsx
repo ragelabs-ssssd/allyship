@@ -1120,7 +1120,7 @@ function EventContent() {
                 Where Corporate Chairs, Olympians, and Thinkers Connect
               </p>
 
-              <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal text-left md:max-w-[70%]">
+              <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal text-left md:max-w-[75%]">
                 From Bhubaneswar to India&apos;s key economic hubs, Siksha &lsquo;O&rsquo; Anusandhan brings academic leadership directly to industry—listening to corporate demands, guiding young talent, and building alliances beyond hiring cycles.
               </p>
 
@@ -1261,8 +1261,8 @@ function EventContent() {
                 <Users className="w-6 h-6" />
               </div>
               <div>
-                <span className="font-display text-xs font-bold tracking-[0.14em] text-accent uppercase block">
-                  Year-Round Capability Co-Creation
+                <span className="font-display text-[11px] font-bold tracking-[0.06em] text-accent uppercase block">
+                  Capability Co-Creation
                 </span>
                 <h3 className="font-display text-lg font-bold tracking-tight text-content mt-1">
                   Ending Transactional Recruitment
@@ -1284,7 +1284,7 @@ function EventContent() {
                 <Medal className="w-6 h-6" />
               </div>
               <div>
-                <span className="font-display text-xs font-bold tracking-[0.14em] text-accent uppercase block">
+                <span className="font-display text-[11px] font-bold tracking-[0.06em] text-accent uppercase block">
                   Championship Psychology
                 </span>
                 <h3 className="font-display text-lg font-bold tracking-tight text-content mt-1">
@@ -1307,9 +1307,7 @@ function EventContent() {
                 <ShieldCheck className="w-6 h-6" />
               </div>
               <div>
-                <span className="font-display text-xs font-bold tracking-[0.12em] leading-snug text-accent uppercase block">
-                  Workplace Culture &amp;
-                  <br />
+                <span className="font-display text-[11px] font-bold tracking-[0.06em] text-accent uppercase block">
                   Psychological Safety
                 </span>
                 <h3 className="font-display text-lg font-bold tracking-tight text-content mt-1">
@@ -1332,7 +1330,7 @@ function EventContent() {
                 <Building className="w-6 h-6" />
               </div>
               <div>
-                <span className="font-display text-xs font-bold tracking-[0.14em] text-accent uppercase block">
+                <span className="font-display text-[11px] font-bold tracking-[0.06em] text-accent uppercase block">
                   Enterprise Research Hubs
                 </span>
                 <h3 className="font-display text-lg font-bold tracking-tight text-content mt-1">
