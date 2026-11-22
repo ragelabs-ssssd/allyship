@@ -117,7 +117,7 @@
 
     /* Typography Font Family Tokens */
     --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-    --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+    --font-display: "Unbounded", ui-sans-serif, system-ui, sans-serif;
     --font-serif: "Newsreader", ui-serif, Georgia, serif;
     --font-heading: var(--font-display);
     --font-body: var(--font-sans);
