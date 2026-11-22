@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -11,22 +11,12 @@ import { ThemeToggle } from "./ThemeToggle";
 export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isInviteOpen, setIsInviteOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect -- client-only hydration; runs once after mount
     setIsMobileMenuOpen(false);
   }, [pathname]);
-
-  const handleScroll = useCallback(() => {
-    setIsScrolled(window.scrollY > 40);
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [handleScroll]);
 
   const navLinks = [
     { name: "About", href: "/about" },
@@ -44,14 +34,10 @@ export function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-[var(--ease-out-expo)] ${
-          isScrolled
-            ? "nav-editorial shadow-2xl"
-            : "bg-gradient-to-b from-canvas/50 via-canvas/25 to-transparent dark:from-canvas/95 dark:via-canvas/70 dark:to-transparent backdrop-blur-[2px]"
-        }`}
+        className="absolute top-0 left-0 right-0 z-50 bg-gradient-to-b from-canvas/50 via-canvas/25 to-transparent dark:from-canvas/95 dark:via-canvas/70 dark:to-transparent backdrop-blur-[2px]"
       >
         <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
-          <div className={`flex items-center justify-between transition-all duration-300 ${isScrolled ? "h-16 sm:h-[70px]" : "h-20 sm:h-22 lg:h-24"}`}>
+          <div className="flex items-center justify-between h-20 sm:h-22 lg:h-24">
             {/* Logo */}
             <Link
               href="/"
