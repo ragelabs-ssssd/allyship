@@ -430,8 +430,8 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
               Submit an Industry Problem Statement
             </h2>
-            <p className="text-base text-content-secondary leading-relaxed font-normal text-left max-w-[35ch]">
-              Submit your enterprise bottleneck, AI prototyping need, or research challenge directly to our corporate team.
+            <p className="text-base text-content-secondary leading-relaxed font-normal text-left max-w-[44ch]">
+              Submit your enterprise bottleneck, AI prototyping need, or research challenge directly to our corporate team. We pair your brief with SOA faculty leads and student squads for rapid PoCs.
             </p>
 
             <div className="bg-surface rounded-2xl p-6 border border-line shadow-sm space-y-3">
