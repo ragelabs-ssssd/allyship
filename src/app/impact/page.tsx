@@ -180,7 +180,7 @@ export default function ImpactPage() {
                 <span className="italic font-normal">Impact</span>
               </h1>
 
-              <p className="text-base sm:text-lg font-display text-content-muted italic lg:whitespace-nowrap">
+              <p className="text-base sm:text-lg font-serif text-content-muted italic">
                 Moving Beyond Metrics to Transform Education and Work
               </p>
 

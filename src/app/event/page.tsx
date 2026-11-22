@@ -1116,7 +1116,7 @@ function EventContent() {
                 <span className="italic font-normal">Conclaves</span>
               </h1>
 
-              <p className="text-base sm:text-lg font-display text-content-muted italic lg:whitespace-nowrap">
+              <p className="text-base sm:text-lg font-serif text-content-muted italic">
                 Where Corporate Chairs, Olympians, and Thinkers Connect
               </p>
 
@@ -1808,7 +1808,7 @@ function EventContent() {
               <span className="text-xs font-bold font-heading uppercase tracking-[0.2em] text-accent block">
                 Conclave Moments
               </span>
-              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap scroll-mt-24">
+              <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight scroll-mt-24">
                 Chapter-Wise Conclave Moments
               </h2>
               <p className="text-base text-content-secondary max-w-4xl leading-relaxed">
