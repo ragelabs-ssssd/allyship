@@ -89,14 +89,10 @@ export default function AboutPage() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 2xl:gap-24 items-start">
-          {/* Left Column: 4-Paragraph Relatable Narrative */}
+          {/* Left Column: 3-Paragraph Relatable Narrative */}
           <div className="lg:col-span-6 xl:col-span-6 space-y-6 text-left md:text-justify">
             <p className="text-base text-content-secondary leading-relaxed font-normal text-left md:text-justify">
-              For too long, university-industry ties were limited to annual campus visits. ALLYSHIP was founded on a simple truth: preparing future talent requires continuous dialogue, not periodic transactions.
-            </p>
-
-            <p className="text-base text-content-secondary leading-relaxed font-normal text-left md:text-justify">
-              Instead of waiting behind gates, Siksha &lsquo;O&rsquo; Anusandhan stepped directly into metropolitan boardrooms across India to listen. We asked: <em>How do we build workplaces where young talent genuinely thrives?</em>
+              For too long, university-industry ties were limited to annual campus visits. ALLYSHIP was founded on a simple truth: preparing future talent requires continuous dialogue, not periodic transactions. Instead of waiting behind gates, Siksha &lsquo;O&rsquo; Anusandhan stepped directly into metropolitan boardrooms across India to listen. We asked: <em>How do we build workplaces where young talent genuinely thrives?</em>
             </p>
 
             <p className="text-base text-content-secondary leading-relaxed font-normal text-left md:text-justify">
