@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALLYSHIP++ — 12 Body Fonts Paired with Unbounded Headings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Instrument+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Onest:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Public+Sans:wght@400;500;600;700&family=Sora:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Unbounded:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #08080A;
+      --surface: #121215;
+      --line: rgba(255, 255, 255, 0.12);
+      --gold: #C5A869;
+      --text: #FFFFFF;
+      --muted: #A1A1AA;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      padding: 36px 24px 96px;
+    }
+    .container { max-width: 1480px; margin: 0 auto; }
+    .header {
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 28px;
+    }
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 6px;
+    }
+    h1 {
+      font-family: 'Unbounded', sans-serif;
+      font-size: clamp(22px, 2.8vw, 32px);
+      font-weight: 800;
+    }
+    .sub { color: var(--muted); font-size: 14px; margin-top: 8px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(560px, 1fr));
+      gap: 26px;
+    }
+    @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.2s ease;
+    }
+    .card:hover { border-color: rgba(197, 168, 105, 0.55); }
+    .card.selected { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold); }
+    .card-top {
+      padding: 14px 22px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #141418;
+    }
+    .opt-pill {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      background: rgba(197, 168, 105, 0.12);
+      border: 1px solid rgba(197, 168, 105, 0.35);
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+    .stage {
+      padding: 28px 24px;
+      background:
+        linear-gradient(90deg, rgba(10, 9, 7, 0.94) 0%, rgba(22, 18, 12, 0.86) 100%),
+        url('/slides/CON01670.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      flex: 1;
+    }
+    .heading-fixed {
+      font-family: 'Unbounded', sans-serif;
+      font-weight: 800;
+      font-size: clamp(24px, 2.5vw, 34px);
+      line-height: 1.06;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+    }
+    .heading-fixed span { color: var(--gold); }
+    .lead-copy {
+      color: #F4F4F5;
+      font-size: 17px;
+      line-height: 1.55;
+      font-weight: 500;
+    }
+    .body-copy {
+      color: #D4D4D8;
+      font-size: 15px;
+      line-height: 1.65;
+      max-width: 65ch;
+    }
+    .ui-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .micro {
+      font-size: 12px;
+      color: #A1A1AA;
+      letter-spacing: 0.02em;
+    }
+    .cta {
+      background: var(--gold);
+      color: #0A0A0A;
+      padding: 9px 18px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      border: none;
+    }
+    .card-foot {
+      padding: 12px 22px;
+      background: #101013;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .pick-btn {
+      padding: 7px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #18181B;
+      color: #FFF;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .card.selected .pick-btn {
+      background: var(--gold);
+      color: #0A0A0A;
+      border-color: var(--gold);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <span class="eyebrow">Unbounded Heading + 12 Body Font Pairings</span>
+      <h1>Compare 12 Body &amp; UI Copy Fonts with Unbounded</h1>
+      <p class="sub">Every card keeps your finalized <strong>Unbounded</strong> headline and swaps only the Lead, Body Bio, Agenda Micro-Copy, and CTA button font.</p>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+
+  <script>
+    const bodies = [
+      { id: 1, name: 'Inter', group: 'Crisp Neo-Grotesque', title: 'Swiss Executive Clarity', css: "font-family:'Inter',sans-serif;" },
+      { id: 2, name: 'DM Sans', group: 'Crisp Neo-Grotesque', title: 'Clean Geometric Precision', css: "font-family:'DM Sans',sans-serif;" },
+      { id: 3, name: 'Instrument Sans', group: 'Crisp Neo-Grotesque', title: 'Editorial Sharpness', css: "font-family:'Instrument Sans',sans-serif;" },
+      { id: 4, name: 'Public Sans', group: 'Crisp Neo-Grotesque', title: 'Institutional Neutrality', css: "font-family:'Public Sans',sans-serif;" },
+      { id: 5, name: 'Plus Jakarta Sans', group: 'Warm Humanist', title: 'Contemporary Executive Warmth', css: "font-family:'Plus Jakarta Sans',sans-serif;" },
+      { id: 6, name: 'Manrope', group: 'Warm Humanist', title: 'Refined Modern Poise', css: "font-family:'Manrope',sans-serif;" },
+      { id: 7, name: 'Figtree', group: 'Warm Humanist', title: 'Approachable Openness', css: "font-family:'Figtree',sans-serif;" },
+      { id: 8, name: 'Onest', group: 'Warm Humanist', title: 'Effortless Interface Rhythm', css: "font-family:'Onest',sans-serif;" },
+      { id: 9, name: 'Space Grotesk', group: 'Avant-Garde & Editorial', title: 'Architectural Kinship', css: "font-family:'Space Grotesk',sans-serif;" },
+      { id: 10, name: 'Sora', group: 'Avant-Garde & Editorial', title: 'Kinetic Tech-Summit', css: "font-family:'Sora',sans-serif;" },
+      { id: 11, name: 'Newsreader', group: 'Avant-Garde & Editorial', title: 'Monograph Literary Luxury', css: "font-family:'Newsreader',serif;" },
+      { id: 12, name: 'IBM Plex Sans', group: 'Avant-Garde & Editorial', title: 'Precision Engineered', css: "font-family:'IBM Plex Sans',sans-serif;" }
+    ];
+
+    const grid = document.getElementById('grid');
+    let selected = null;
+
+    function render() {
+      grid.innerHTML = bodies.map(b => `
+        <div class="card ${selected === b.id ? 'selected' : ''}">
+          <div class="card-top">
+            <span class="opt-pill">Option #${b.id} &bull; ${b.name}</span>
+            <span style="font-size:12px; color:#A1A1AA;">${b.group}</span>
+          </div>
+          <div class="stage">
+            <div class="heading-fixed">WHERE INDUSTRY<br>MEETS <span>RESEARCH</span></div>
+            <p class="lead-copy" style="${b.css}">
+              A national initiative by Siksha &lsquo;O&rsquo; Anusandhan uniting corporate boardrooms and academic leadership.
+            </p>
+            <p class="body-copy" style="${b.css}">
+              Convened by Prof. (Dr.) Raj Kumar Hota across six metropolitan chapters, Allyship++ moves beyond seasonal hiring toward sustained mentorship, psychological safety, and co-authored industry curricula.
+            </p>
+            <div class="ui-bar">
+              <span class="micro" style="${b.css}">09:30 AM IST &bull; Le Meridien, Hyderabad &bull; 500+ CXOs</span>
+              <button class="cta" style="${b.css}">Request Executive Invitation &rsaquo;</button>
+            </div>
+          </div>
+          <div class="card-foot">
+            <span style="font-size:12px; color:#E4E4E7; font-weight:600;">${b.title}</span>
+            <button class="pick-btn" onclick="pick(${b.id})">
+              ${selected === b.id ? '&#10003; Selected #' + b.id : 'Select #' + b.id}
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    window.pick = (id) => { selected = id; render(); };
+    render();
+  </script>
+</body>
+</html>
