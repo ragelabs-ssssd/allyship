@@ -184,7 +184,7 @@ export default function ImpactPage() {
                 Moving Beyond Metrics to Transform Education and Work
               </p>
 
-              <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal text-left md:max-w-[75%]">
+              <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal text-left md:max-w-[80%]">
                 The true measure of an alliance extends far beyond recruitment cycles. Impact is seen when boardroom leaders help reshape syllabi, establish campus labs, and equip first-generation graduates to lead with quiet confidence.
               </p>
 

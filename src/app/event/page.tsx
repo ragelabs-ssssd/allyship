@@ -1120,7 +1120,7 @@ function EventContent() {
                 Where Corporate Chairs, Olympians, and Thinkers Connect
               </p>
 
-              <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal text-left md:max-w-[75%]">
+              <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal text-left md:max-w-[80%]">
                 From Bhubaneswar to India&apos;s key economic hubs, Siksha &lsquo;O&rsquo; Anusandhan brings academic leadership directly to industry—listening to corporate demands, guiding young talent, and building alliances beyond hiring cycles.
               </p>
 
@@ -2177,8 +2177,8 @@ function EventContent() {
                             <div
                               key={`${currentMediaArchive.id}-photo-${idx}`}
                               className={`group relative aspect-[4/3] rounded-2xl overflow-hidden transition-all duration-500 ${photo.src
-                                  ? "bg-surface-2 border border-line shadow-sm hover:border-accent/50 hover:shadow-lg"
-                                  : "bg-surface-2/60 border border-dashed border-line/80 hover:border-accent/40 flex flex-col items-center justify-center p-4 text-center"
+                                ? "bg-surface-2 border border-line shadow-sm hover:border-accent/50 hover:shadow-lg"
+                                : "bg-surface-2/60 border border-dashed border-line/80 hover:border-accent/40 flex flex-col items-center justify-center p-4 text-center"
                                 }`}
                             >
                               {photo.src ? (
