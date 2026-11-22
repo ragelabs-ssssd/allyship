@@ -176,7 +176,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
               <span className="block italic font-normal sm:whitespace-nowrap">Co-Create the Future</span>
             </h1>
 
-            <p className="text-base sm:text-lg font-serif text-content-muted italic text-left sm:text-right lg:whitespace-nowrap">
+            <p className="text-base sm:text-lg font-display text-content-muted italic text-left sm:text-right lg:whitespace-nowrap">
               Co-Innovate. Sponsor Applied Research. Build Strategic Talent Corridors.
             </p>
 

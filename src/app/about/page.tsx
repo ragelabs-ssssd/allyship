@@ -69,7 +69,7 @@ export default function AboutPage() {
               The ALLYSHIP<span className="text-accent">++</span> Thesis
             </h1>
 
-            <p className="text-lg sm:text-xl font-serif text-content-muted max-w-5xl mx-auto italic">
+            <p className="text-lg sm:text-xl font-display text-content-muted max-w-5xl mx-auto italic">
               Where Relationships Precede Recruitment — Bridging Three Decades of Academic Inquiry with the Leaders Shaping India&rsquo;s Future.
             </p>
 
