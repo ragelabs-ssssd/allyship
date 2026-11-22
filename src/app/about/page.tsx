@@ -277,6 +277,37 @@ export default function AboutPage() {
                 &ldquo;Allyship provided an excellent platform for distinguished industry leaders, professionals and academicians to exchange perspectives on leadership, resilience, mentorship and the importance of translating allyship into everyday organizational practices.&rdquo;
               </blockquote>
             </div>
+
+            {/* Host Campus Split Feature (Option #17) */}
+            <Link
+              href="/discover-soa"
+              className="group/campus grid grid-cols-1 sm:grid-cols-12 rounded-2xl overflow-hidden bg-surface-2 border border-line hover:border-accent/50 transition-all duration-300 shadow-lg flex-1"
+            >
+              <div className="sm:col-span-5 relative min-h-[160px] sm:min-h-full overflow-hidden bg-surface-3">
+                <Image
+                  src="/soa-campus-aerial.jpg"
+                  alt="Siksha 'O' Anusandhan University Campus"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 18vw"
+                  className="object-cover group-hover/campus:scale-105 transition-transform duration-700 ease-out"
+                />
+              </div>
+              <div className="sm:col-span-7 p-5 sm:p-6 flex flex-col justify-center space-y-2.5">
+                <span className="font-display text-[11px] font-bold uppercase tracking-[0.16em] text-accent block">
+                  Host University
+                </span>
+                <h4 className="font-display text-base sm:text-lg font-bold text-content leading-snug group-hover/campus:text-accent transition-colors">
+                  Siksha &lsquo;O&rsquo; Anusandhan
+                </h4>
+                <p className="font-sans text-xs sm:text-sm text-content-secondary leading-relaxed">
+                  A multidisciplinary academic ecosystem anchoring Allyship++ across India.
+                </p>
+                <span className="inline-flex items-center gap-1.5 pt-1 font-display text-xs font-bold text-accent">
+                  <span>Explore Campus</span>
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover/campus:translate-x-1" />
+                </span>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
