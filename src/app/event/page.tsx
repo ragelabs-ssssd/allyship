@@ -2178,11 +2178,10 @@ function EventContent() {
                           return (
                             <div
                               key={`${currentMediaArchive.id}-photo-${idx}`}
-                              className={`group relative aspect-[4/3] rounded-2xl overflow-hidden transition-all duration-500 ${
-                                photo.src
+                              className={`group relative aspect-[4/3] rounded-2xl overflow-hidden transition-all duration-500 ${photo.src
                                   ? "bg-surface-2 border border-line shadow-sm hover:border-accent/50 hover:shadow-lg"
                                   : "bg-surface-2/60 border border-dashed border-line/80 hover:border-accent/40 flex flex-col items-center justify-center p-4 text-center"
-                              }`}
+                                }`}
                             >
                               {photo.src ? (
                                 <>
