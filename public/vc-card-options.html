@@ -3,18 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ALLYSHIP++ — 8 Out-of-the-Box Options Below VC Quote</title>
+  <title>ALLYSHIP++ — Fresh Executive Options Below VC Quote</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #08080A;
-      --surface: #121215;
+      --surface: #111114;
       --surface-2: #18181C;
-      --line: rgba(255, 255, 255, 0.12);
+      --line: rgba(255, 255, 255, 0.11);
       --gold: #C5A869;
+      --gold-dim: rgba(197, 168, 105, 0.25);
       --text: #FFFFFF;
+      --secondary: #D4D4D8;
       --muted: #A1A1AA;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -22,41 +24,53 @@
       background: var(--bg);
       color: var(--text);
       font-family: 'Inter', sans-serif;
-      padding: 36px 24px 96px;
-      line-height: 1.5;
+      padding: 40px 24px 96px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
     }
-    .container { max-width: 1460px; margin: 0 auto; }
+    .container { max-width: 1440px; margin: 0 auto; }
     .header {
       padding-bottom: 24px;
       border-bottom: 1px solid var(--line);
-      margin-bottom: 30px;
+      margin-bottom: 32px;
     }
     .eyebrow {
-      font-size: 11px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.18em;
       color: var(--gold);
       display: block;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
-    h1 { font-family: 'Unbounded', sans-serif; font-size: clamp(22px, 2.8vw, 32px); font-weight: 800; }
-    .sub { color: var(--muted); font-size: 14px; margin-top: 8px; max-width: 760px; }
+    h1 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(24px, 3vw, 34px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .sub { color: var(--muted); font-size: 15px; margin-top: 8px; max-width: 740px; }
 
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(460px, 1fr)); gap: 26px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+      gap: 28px;
+    }
     @media (max-width: 540px) { .grid { grid-template-columns: 1fr; } }
 
     .card {
       background: var(--surface);
       border: 1px solid var(--line);
-      border-radius: 22px;
+      border-radius: 20px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      transition: border-color 0.2s ease;
+      transition: border-color 0.25s ease;
     }
-    .card:hover { border-color: rgba(197, 168, 105, 0.55); }
+    .card:hover { border-color: rgba(197, 168, 105, 0.45); }
     .card.selected { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold); }
+
     .card-head {
       padding: 14px 20px;
       border-bottom: 1px solid var(--line);
@@ -66,227 +80,374 @@
       background: #141418;
     }
     .opt-pill {
-      font-family: 'Unbounded', sans-serif;
-      font-size: 10px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px;
       font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
       color: var(--gold);
       background: rgba(197, 168, 105, 0.12);
       border: 1px solid rgba(197, 168, 105, 0.35);
       padding: 4px 10px;
       border-radius: 999px;
     }
+    .opt-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+    }
+
     .stage {
-      height: 220px;
-      background: #070709;
-      padding: 20px;
+      min-height: 220px;
+      background: #09090B;
+      padding: 28px 24px;
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
-      overflow: hidden;
-      border-bottom: 1px solid var(--line);
     }
+
     .foot {
       padding: 14px 20px;
+      border-top: 1px solid var(--line);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 14px;
-      font-size: 12.5px;
+      gap: 12px;
+      font-size: 13px;
       color: var(--muted);
+      background: var(--surface);
     }
     .pick-btn {
-      padding: 7px 16px;
+      padding: 7px 14px;
       border-radius: 999px;
-      border: 1px solid var(--line);
-      background: var(--surface-2);
-      color: #fff;
+      border: 1px solid rgba(197, 168, 105, 0.45);
+      background: transparent;
+      color: var(--gold);
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 12px;
       font-weight: 700;
       cursor: pointer;
       white-space: nowrap;
+      transition: all 0.2s ease;
     }
-    .card.selected .pick-btn { background: var(--gold); color: #0A0A0A; border-color: var(--gold); }
-    .u { font-family: 'Unbounded', sans-serif; }
-    .ser { font-family: 'Newsreader', serif; font-style: italic; }
-    .gold { color: var(--gold); }
+    .pick-btn:hover, .card.selected .pick-btn {
+      background: var(--gold);
+      color: #08080A;
+    }
 
-    /* Option 1: Compass */
-    .compass { display: flex; align-items: center; gap: 20px; width: 100%; justify-content: center; }
-    .comp-ring { width: 120px; height: 120px; border-radius: 999px; border: 1px solid rgba(197,168,105,0.45); position: relative; display: flex; align-items: center; justify-content: center; }
-    .needle { width: 2px; height: 50px; background: linear-gradient(180deg, var(--gold) 50%, transparent 50%); transition: transform 0.4s cubic-bezier(0.16,1,0.3,1); }
-    .c-pts { display: flex; flex-direction: column; gap: 6px; }
-    .c-pt { font-size: 11px; padding: 4px 10px; border-radius: 8px; border: 1px solid var(--line); cursor: pointer; background: #141418; }
-    .c-pt.act { border-color: var(--gold); color: var(--gold); }
+    /* Option 9: Executive Dossier */
+    .dossier {
+      width: 100%;
+      background: var(--surface-2);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 20px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .seal {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      border: 1.5px solid var(--gold);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      background: rgba(197, 168, 105, 0.08);
+    }
+    .seal span {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      line-height: 1.1;
+    }
+    .seal small { font-size: 9px; color: var(--muted); letter-spacing: 0.14em; }
 
-    /* Option 2: Typewriter */
-    .cursor { display: inline-block; width: 2px; height: 16px; background: var(--gold); animation: blink 1s infinite; vertical-align: middle; }
-    @keyframes blink { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+    /* Option 10: Hairline Ledger */
+    .ledger {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .ledger-col {
+      padding: 18px 14px;
+      border-right: 1px solid var(--line);
+    }
+    .ledger-col:last-child { border-right: none; }
+    .ledger-num {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 0.12em;
+      margin-bottom: 6px;
+    }
+    .ledger-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .ledger-desc { font-size: 12px; color: var(--muted); line-height: 1.45; }
 
-    /* Option 3: Arc Pulse */
-    @keyframes travel { 0% { offset-distance: 0%; } 100% { offset-distance: 100%; } }
+    /* Option 11: Interactive Tabs */
+    .tabs-box {
+      width: 100%;
+      background: var(--surface-2);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .tabs-nav {
+      display: flex;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,255,255,0.02);
+    }
+    .tab-btn {
+      flex: 1;
+      padding: 11px 12px;
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      color: var(--muted);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .tab-btn.active {
+      color: var(--gold);
+      border-bottom-color: var(--gold);
+      background: rgba(197, 168, 105, 0.06);
+    }
+    .tab-body { padding: 18px 20px; font-size: 13.5px; color: var(--secondary); min-height: 92px; }
 
-    /* Option 5: Voice Bar */
-    .bars { display: flex; align-items: center; gap: 4px; height: 36px; }
-    .bar { width: 3px; background: var(--gold); border-radius: 99px; animation: eq 1.1s ease-in-out infinite; }
-    @keyframes eq { 0%, 100% { height: 10px; opacity: 0.4; } 50% { height: 32px; opacity: 1; } }
+    /* Option 12: Dual Action Dock */
+    .dock {
+      width: 100%;
+      background: var(--surface-2);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .dock-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .dock-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 11px 14px;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: #0D0D10;
+      color: var(--text);
+      text-decoration: none;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      transition: border-color 0.2s ease;
+    }
+    .dock-link:hover { border-color: var(--gold); color: var(--gold); }
 
-    /* Option 7: Slim Accordion */
-    .slim-list { width: 100%; display: flex; flex-direction: column; gap: 6px; }
-    .slim-row { padding: 8px 12px; border-radius: 10px; border: 1px solid var(--line); background: #141418; font-size: 11.5px; cursor: pointer; transition: border-color 0.2s; }
-    .slim-row:hover { border-color: var(--gold); }
-    .slim-sub { font-size: 10.5px; color: var(--muted); display: none; margin-top: 4px; }
-    .slim-row.open .slim-sub { display: block; }
+    /* Option 13: Typographic Monolith */
+    .monolith {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 16px 8px;
+      border-top: 1px solid var(--gold-dim);
+      border-bottom: 1px solid var(--gold-dim);
+    }
+    .stat-block { flex: 1; }
+    .stat-val {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 30px;
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+    .stat-val span { color: var(--gold); }
+    .stat-lbl { font-size: 12px; color: var(--muted); margin-top: 4px; }
+    .v-rule { width: 1px; height: 54px; background: var(--line); }
+
+    /* Option 14: Clean Colophon */
+    .colophon {
+      width: 100%;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .colophon p {
+      font-family: 'Newsreader', serif;
+      font-style: italic;
+      font-size: 16px;
+      color: var(--secondary);
+      line-height: 1.5;
+    }
+    .colophon a {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="header">
-      <span class="eyebrow">Office Card Removed &bull; Choose Replacement</span>
-      <h1>8 Out-of-the-Box Ideas for Below the VC Quote</h1>
-      <p class="sub">The NIRF #15 / NAAC A++ card has been removed from <strong>/about</strong>. Test these 8 completely different replacements live and tell me which <strong>Option #(1–8)</strong> you want!</p>
+      <span class="eyebrow">Fresh Executive Concepts &bull; Below VC Quote</span>
+      <h1>6 Refined Architectural Options (9–14)</h1>
+      <p class="sub">Rebuilt using your actual site typography (<strong>Plus Jakarta Sans</strong>, <strong>Inter</strong>, and <strong>Newsreader</strong>) without gimmicks. Pick any <strong>Option #(9–14)</strong> to place below the VC Quote on <strong>/about</strong>.</p>
     </div>
 
     <div class="grid">
-      <!-- 1 -->
-      <div class="card" data-id="1">
-        <div class="card-head"><span class="opt-pill">Option #01</span><span style="font-size:13px;font-weight:700;">Interactive Leadership Compass</span></div>
+      <!-- Option 9 -->
+      <div class="card" data-id="9">
+        <div class="card-head"><span class="opt-pill">Option #09</span><span class="opt-title">Executive Dossier &amp; Seal</span></div>
         <div class="stage">
-          <div class="compass">
-            <div class="comp-ring"><div class="needle" id="needle"></div></div>
-            <div class="c-pts" id="cPts">
-              <div class="c-pt act" onclick="rot(0,this)">N &bull; Empathy</div>
-              <div class="c-pt" onclick="rot(90,this)">E &bull; Respect</div>
-              <div class="c-pt" onclick="rot(180,this)">S &bull; Mentorship</div>
-              <div class="c-pt" onclick="rot(270,this)">W &bull; Innovation</div>
+          <div class="dossier">
+            <div style="display:flex;align-items:center;gap:14px;">
+              <div class="seal"><span>SOA</span><small>VC</small></div>
+              <div>
+                <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);">Office of the Vice-Chancellor</div>
+                <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:15px;font-weight:700;color:#fff;margin-top:2px;">Siksha &lsquo;O&rsquo; Anusandhan</div>
+                <div style="font-size:12.5px;color:var(--muted);margin-top:2px;">Deemed to be University &bull; Bhubaneswar</div>
+              </div>
+            </div>
+            <a href="/discover-soa" style="color:var(--gold);font-size:18px;text-decoration:none;font-weight:700;" aria-label="Explore SOA">&rarr;</a>
+          </div>
+        </div>
+        <div class="foot"><span>Crisp credential seal + university anchor with subtle link arrow.</span><button class="pick-btn" onclick="pick(9)">Select #09</button></div>
+      </div>
+
+      <!-- Option 10 -->
+      <div class="card" data-id="10">
+        <div class="card-head"><span class="opt-pill">Option #10</span><span class="opt-title">3-Column Swiss Hairline Ledger</span></div>
+        <div class="stage">
+          <div class="ledger">
+            <div class="ledger-col">
+              <div class="ledger-num">01</div>
+              <div class="ledger-title">Academic Rigor</div>
+              <div class="ledger-desc">Future-ready talent grounded in research.</div>
+            </div>
+            <div class="ledger-col">
+              <div class="ledger-num">02</div>
+              <div class="ledger-title">Industry Dialogue</div>
+              <div class="ledger-desc">Direct boardroom-to-campus exchange.</div>
+            </div>
+            <div class="ledger-col">
+              <div class="ledger-num">03</div>
+              <div class="ledger-title">Inclusive Culture</div>
+              <div class="ledger-desc">Empathy and mutual respect at scale.</div>
             </div>
           </div>
         </div>
-        <div class="foot"><span>Rotating gold compass pointing to the 4 core values in the VC&rsquo;s address.</span><button class="pick-btn" onclick="pick(1)">Select #01</button></div>
+        <div class="foot"><span>No heavy card box — pure editorial hairline columns aligned to the grid.</span><button class="pick-btn" onclick="pick(10)">Select #10</button></div>
       </div>
 
-      <!-- 2 -->
-      <div class="card" data-id="2">
-        <div class="card-head"><span class="opt-pill">Option #02</span><span style="font-size:13px;font-weight:700;">Live Typewriter Highlight Stream</span></div>
+      <!-- Option 11 -->
+      <div class="card" data-id="11">
+        <div class="card-head"><span class="opt-pill">Option #11</span><span class="opt-title">Tabbed Institutional Lens</span></div>
         <div class="stage">
-          <div style="text-align:center;max-width:340px;">
-            <div style="font-size:10px;letter-spacing:0.18em;color:var(--gold);margin-bottom:8px;">VC KEYNOTE EXCERPT</div>
-            <div class="ser" style="font-size:17px;color:#fff;"><span id="typeOut"></span><span class="cursor"></span></div>
-          </div>
-        </div>
-        <div class="foot"><span>Types out key phrases from his message cleanly with a blinking gold cursor.</span><button class="pick-btn" onclick="pick(2)">Select #02</button></div>
-      </div>
-
-      <!-- 3 -->
-      <div class="card" data-id="3">
-        <div class="card-head"><span class="opt-pill">Option #03</span><span style="font-size:13px;font-weight:700;">Kinetic Academia &harr; Industry Arc</span></div>
-        <div class="stage">
-          <div style="width:100%;max-width:340px;text-align:center;">
-            <svg viewBox="0 0 300 85" width="100%" height="85">
-              <path d="M 30 70 Q 150 -10 270 70" fill="none" stroke="rgba(197,168,105,0.4)" stroke-width="1.5" stroke-dasharray="4 4" />
-              <circle cx="30" cy="70" r="6" fill="#C5A869" />
-              <circle cx="270" cy="70" r="6" fill="#C5A869" />
-              <circle r="4" fill="#fff">
-                <animateMotion dur="2.6s" repeatCount="indefinite" path="M 30 70 Q 150 -10 270 70" />
-              </circle>
-            </svg>
-            <div style="display:flex;justify-content:space-between;font-size:11px;font-weight:700;margin-top:4px;"><span class="gold">SOA ACADEMIA</span><span class="gold">GLOBAL INDUSTRY</span></div>
-          </div>
-        </div>
-        <div class="foot"><span>Animated SVG bridge visualizing the continuous dialogue between campus and boardroom.</span><button class="pick-btn" onclick="pick(3)">Select #03</button></div>
-      </div>
-
-      <!-- 4 -->
-      <div class="card" data-id="4">
-        <div class="card-head"><span class="opt-pill">Option #04</span><span style="font-size:13px;font-weight:700;">Interactive National Footprint Pins</span></div>
-        <div class="stage">
-          <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;max-width:320px;">
-            <span class="c-pt act">Bhubaneswar (HQ)</span>
-            <span class="c-pt">Bengaluru</span>
-            <span class="c-pt">Hyderabad</span>
-            <span class="c-pt">Kolkata</span>
-            <span class="c-pt">Mumbai</span>
-            <span class="c-pt">Chennai</span>
-          </div>
-        </div>
-        <div class="foot"><span>Interactive city hub pins linking directly to each regional chapter archive.</span><button class="pick-btn" onclick="pick(4)">Select #04</button></div>
-      </div>
-
-      <!-- 5 -->
-      <div class="card" data-id="5">
-        <div class="card-head"><span class="opt-pill">Option #05</span><span style="font-size:13px;font-weight:700;">Audio-Waveform Executive Brief</span></div>
-        <div class="stage">
-          <div style="display:flex;align-items:center;gap:16px;padding:14px 20px;border-radius:16px;background:#141418;border:1px solid rgba(197,168,105,0.35);">
-            <div class="bars">
-              <div class="bar" style="animation-delay:0s"></div>
-              <div class="bar" style="animation-delay:0.2s"></div>
-              <div class="bar" style="animation-delay:0.4s"></div>
-              <div class="bar" style="animation-delay:0.1s"></div>
-              <div class="bar" style="animation-delay:0.3s"></div>
-              <div class="bar" style="animation-delay:0.5s"></div>
+          <div class="tabs-box">
+            <div class="tabs-nav">
+              <button class="tab-btn active" onclick="setTab(0, this)">Mandate</button>
+              <button class="tab-btn" onclick="setTab(1, this)">Leadership</button>
+              <button class="tab-btn" onclick="setTab(2, this)">University</button>
             </div>
-            <div style="font-size:11.5px;"><strong class="gold">VC Address Summary</strong><br><span style="color:var(--muted);">Inclusive &amp; Compassionate Leadership</span></div>
+            <div class="tab-body" id="tabBody">
+              Strengthening meaningful collaboration between academia and industry to nurture responsible leadership and address emerging professional challenges.
+            </div>
           </div>
         </div>
-        <div class="foot"><span>Live equalizer waveform paired with a 1-line thematic summary of his address.</span><button class="pick-btn" onclick="pick(5)">Select #05</button></div>
+        <div class="foot"><span>Compact 3-tab executive summary — interactive without visual noise.</span><button class="pick-btn" onclick="pick(11)">Select #11</button></div>
       </div>
 
-      <!-- 6 -->
-      <div class="card" data-id="6">
-        <div class="card-head"><span class="opt-pill">Option #06</span><span style="font-size:13px;font-weight:700;">VC Podium Address Photo Strip</span></div>
-        <div class="stage" style="padding:14px;">
-          <div style="width:100%;height:100%;border-radius:14px;overflow:hidden;position:relative;border:1px solid var(--line);">
-            <img src="/conclave-moments/chennai-2/chennai-2-11.jpg" style="width:100%;height:100%;object-fit:cover;object-position:50% 20%;" alt="Podium" />
-            <div style="position:absolute;inset:auto 0 0 0;background:linear-gradient(transparent,rgba(0,0,0,0.85));padding:10px 12px;font-size:11px;color:#fff;">Delivering the Presidential Conclave Address</div>
-          </div>
-        </div>
-        <div class="foot"><span>Replaces the text card with a candid action photo of Prof. Nanda at the podium.</span><button class="pick-btn" onclick="pick(6)">Select #06</button></div>
-      </div>
-
-      <!-- 7 -->
-      <div class="card" data-id="7">
-        <div class="card-head"><span class="opt-pill">Option #07</span><span style="font-size:13px;font-weight:700;">3-Strip Expandable Pillars</span></div>
+      <!-- Option 12 -->
+      <div class="card" data-id="12">
+        <div class="card-head"><span class="opt-pill">Option #12</span><span class="opt-title">Dual-Action Executive Dock</span></div>
         <div class="stage">
-          <div class="slim-list">
-            <div class="slim-row open" onclick="this.classList.toggle('open')"><strong>01 &bull; Inclusive Culture</strong><div class="slim-sub">Empathy, mutual respect, and opportunity for all.</div></div>
-            <div class="slim-row" onclick="this.classList.toggle('open')"><strong>02 &bull; Industry Synergy</strong><div class="slim-sub">Preparing future-ready professionals together.</div></div>
-            <div class="slim-row" onclick="this.classList.toggle('open')"><strong>03 &bull; Responsible Innovation</strong><div class="slim-sub">Addressing emerging professional challenges.</div></div>
+          <div class="dock">
+            <div style="display:flex;align-items:center;justify-content:space-between;">
+              <span style="font-size:11.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);">Institutional Pathways</span>
+              <span style="font-size:12px;color:var(--muted);">Bhubaneswar, Odisha</span>
+            </div>
+            <div class="dock-actions">
+              <a href="/discover-soa" class="dock-link"><span>Discover SOA</span><span>&rarr;</span></a>
+              <a href="/collaborate" class="dock-link"><span>Partner With Us</span><span>&rarr;</span></a>
+            </div>
           </div>
         </div>
-        <div class="foot"><span>Ultra-slim expandable strips distilled from his letter — click to expand each one.</span><button class="pick-btn" onclick="pick(7)">Select #07</button></div>
+        <div class="foot"><span>Turns the space below the quote into two direct navigation pathways.</span><button class="pick-btn" onclick="pick(12)">Select #12</button></div>
       </div>
 
-      <!-- 8 -->
-      <div class="card" data-id="8">
-        <div class="card-head"><span class="opt-pill">Option #08</span><span style="font-size:13px;font-weight:700;">Pure Breathing Space + Single Pill</span></div>
+      <!-- Option 13 -->
+      <div class="card" data-id="13">
+        <div class="card-head"><span class="opt-pill">Option #13</span><span class="opt-title">Typographic Pull-Stat Monolith</span></div>
         <div class="stage">
-          <a href="/discover-soa" style="padding:12px 24px;border-radius:999px;border:1px solid var(--gold);color:var(--gold);text-decoration:none;font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;">Explore Siksha &lsquo;O&rsquo; Anusandhan &rarr;</a>
+          <div class="monolith">
+            <div class="stat-block">
+              <div class="stat-val">15<span>th</span></div>
+              <div class="stat-lbl">NIRF University Ranking in India</div>
+            </div>
+            <div class="v-rule"></div>
+            <div class="stat-block">
+              <div class="stat-val">A<span>++</span></div>
+              <div class="stat-lbl">NAAC Institutional Accreditation</div>
+            </div>
+          </div>
         </div>
-        <div class="foot"><span>No extra box at all — clean open space and a single gold link pill below the quote.</span><button class="pick-btn" onclick="pick(8)">Select #08</button></div>
+        <div class="foot"><span>Editorial display numerals with hairline dividers — zero nested boxes.</span><button class="pick-btn" onclick="pick(13)">Select #13</button></div>
+      </div>
+
+      <!-- Option 14 -->
+      <div class="card" data-id="14">
+        <div class="card-head"><span class="opt-pill">Option #14</span><span class="opt-title">Editorial Colophon (Zero-Box)</span></div>
+        <div class="stage">
+          <div class="colophon">
+            <p>&ldquo;Issued from the Office of the Vice-Chancellor, Siksha &lsquo;O&rsquo; Anusandhan (Deemed to be University), in pursuit of compassionate and inclusive leadership.&rdquo;</p>
+            <a href="/discover-soa">Explore Siksha &lsquo;O&rsquo; Anusandhan &rarr;</a>
+          </div>
+        </div>
+        <div class="foot"><span>Pure typography + top hairline — lets the VC Quote breathe cleanly.</span><button class="pick-btn" onclick="pick(14)">Select #14</button></div>
       </div>
     </div>
   </div>
 
   <script>
-    function rot(deg, el) {
-      document.getElementById('needle').style.transform = 'rotate(' + deg + 'deg)';
-      document.querySelectorAll('#cPts .c-pt').forEach(p => p.classList.remove('act'));
-      el.classList.add('act');
-    }
-    const phrases = [
-      '“Empathy, mutual respect, and mentorship.”',
-      '“Strong industry–academia partnerships.”',
-      '“Building an inclusive, compassionate society.”'
+    const tabTexts = [
+      'Strengthening meaningful collaboration between academia and industry to nurture responsible leadership and address emerging professional challenges.',
+      'Bringing together corporate stalwarts, Olympic champions, and senior academicians to translate allyship into everyday organizational practice.',
+      'Ranked #15 among Universities in India (NIRF 2025) and NAAC A++ accredited — advancing interdisciplinary research and industry readiness.'
     ];
-    let pi = 0, ci = 0;
-    function typeLoop() {
-      const txt = phrases[pi];
-      document.getElementById('typeOut').textContent = txt.slice(0, ci++);
-      if (ci <= txt.length) setTimeout(typeLoop, 45);
-      else setTimeout(() => { ci = 0; pi = (pi + 1) % phrases.length; typeLoop(); }, 1800);
+    function setTab(idx, btn) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tabBody').textContent = tabTexts[idx];
     }
-    typeLoop();
-
     function pick(id) {
       document.querySelectorAll('.card').forEach(c => {
         const s = c.dataset.id == id;

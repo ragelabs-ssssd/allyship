@@ -94,7 +94,7 @@ export function CinematicHero({ onOpenInvite }: CinematicHeroProps) {
   const activeWord = ROTATING_WORDS[activeWordIndex];
 
   return (
-    <section className="relative min-h-[92vh] lg:min-h-screen flex items-center pt-32 pb-16 sm:pt-36 lg:pt-40 xl:pt-44 lg:pb-24 overflow-hidden bg-canvas">
+    <section className="relative min-h-[92vh] lg:min-h-screen flex items-center pt-28 pb-14 sm:pt-32 lg:pt-40 xl:pt-44 lg:pb-24 overflow-hidden bg-canvas">
       {/* Decorative background film (muted, looping, non-interactive) */}
       <HeroBackdrop />
 
@@ -122,7 +122,7 @@ export function CinematicHero({ onOpenInvite }: CinematicHeroProps) {
             <div className="space-y-4">
               <h1
                 aria-label={`WHERE INDUSTRY MEETS ${activeWord.text}`}
-                className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-[-0.025em] leading-[1.1] text-content uppercase select-none"
+                className="font-display text-[2rem] sm:text-5xl lg:text-6xl font-extrabold tracking-[-0.025em] leading-[1.1] text-content uppercase select-none"
               >
                 {/* Accessible text for crawlers & screen readers */}
                 <span className="sr-only">

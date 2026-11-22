@@ -181,13 +181,19 @@ export function TestimonialCarousel() {
 
         {/* Embla Carousel Viewport */}
         <div className="overflow-hidden cursor-grab active:cursor-grabbing" ref={emblaRef}>
-          <div className="flex -ml-6 sm:-ml-8">
+          <div className="flex -ml-6 sm:-ml-8 py-2">
             {testimonials.map((item, idx) => (
               <div
                 key={idx}
                 className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.333%] pl-6 sm:pl-8"
               >
-                <div className="h-full flex flex-col bg-surface-3 rounded-2xl border border-line shadow-lg hover:border-accent/60 transition-all duration-300 overflow-hidden">
+                <div
+                  className={`h-full flex flex-col bg-surface-3 rounded-2xl border shadow-lg hover:border-accent/60 transition-all duration-500 overflow-hidden ${
+                    selectedIndex === idx
+                      ? "border-accent/45 opacity-100 scale-100"
+                      : "border-line opacity-80 lg:opacity-85 scale-[0.985]"
+                  }`}
+                >
                   {/* Portrait — the focal point of the card */}
                   <div className="relative aspect-[4/3] w-full overflow-hidden bg-surface-2 on-media">
                     {item.image ? (
