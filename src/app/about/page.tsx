@@ -90,29 +90,29 @@ export default function AboutPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 2xl:gap-24 items-start">
           {/* Left Column: 4-Paragraph Relatable Narrative */}
-          <div className="lg:col-span-6 xl:col-span-6 space-y-6 text-left">
-            <p className="max-w-[68ch] text-base text-content-secondary leading-relaxed font-normal">
+          <div className="lg:col-span-6 xl:col-span-6 space-y-6 text-justify hyphens-auto">
+            <p className="max-w-[68ch] text-base text-content-secondary leading-relaxed font-normal text-justify hyphens-auto">
               For too long, university-industry ties were limited to annual campus visits. ALLYSHIP was founded on a simple truth: preparing future talent requires continuous dialogue, not periodic transactions.
             </p>
 
-            <p className="max-w-[68ch] text-base text-content-secondary leading-relaxed font-normal">
+            <p className="max-w-[68ch] text-base text-content-secondary leading-relaxed font-normal text-justify hyphens-auto">
               Instead of waiting behind gates, Siksha &lsquo;O&rsquo; Anusandhan stepped directly into metropolitan boardrooms across India to listen. We asked: <em>How do we build workplaces where young talent genuinely thrives?</em>
             </p>
 
-            <p className="max-w-[68ch] text-base text-content-secondary leading-relaxed font-normal">
+            <p className="max-w-[68ch] text-base text-content-secondary leading-relaxed font-normal text-justify hyphens-auto">
               The <code className="text-accent bg-glass-strong px-2 py-0.5 rounded border border-line font-mono font-semibold">++</code> signifies compounding impact—moving beyond hiring metrics toward psychological safety, executive mentorship, and curricula co-designed with corporate practitioners.
             </p>
 
-            <p className="max-w-[68ch] text-base text-content-secondary leading-relaxed font-normal">
+            <p className="max-w-[68ch] text-base text-content-secondary leading-relaxed font-normal text-justify hyphens-auto">
               Uniting Olympic mentors with boardroom chairs, we draw on a timeless athletic truth: potential turns into excellence only when trusted mentors guide talent through setbacks.
             </p>
 
             {/* Living Standard Callout Card */}
             <div className="p-5 rounded-2xl bg-surface-2 border border-accent/25 space-y-2 mt-4">
-              <span className="text-[10px] font-bold font-heading uppercase tracking-widest text-accent block">
+              <span className="text-[10px] font-bold font-heading uppercase tracking-widest text-accent block text-left">
                 The Living Standard · Practicing Allyship
               </span>
-              <p className="text-xs sm:text-sm text-content-secondary leading-relaxed italic">
+              <p className="text-xs sm:text-sm text-content-secondary leading-relaxed italic text-justify hyphens-auto">
                 &ldquo;A diversity policy says what an organization intends on paper. Allyship is what happens on an ordinary Friday—who is heard in a meeting, who is trusted with a challenging project, and who speaks up when an early-career colleague is overlooked.&rdquo;
               </p>
             </div>
