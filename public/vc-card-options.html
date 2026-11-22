@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ALLYSHIP++ — Fresh Executive Options Below VC Quote</title>
+  <title>ALLYSHIP++ — New In-Context Directions for VC Section</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
@@ -14,7 +14,6 @@
       --surface-2: #18181C;
       --line: rgba(255, 255, 255, 0.11);
       --gold: #C5A869;
-      --gold-dim: rgba(197, 168, 105, 0.25);
       --text: #FFFFFF;
       --secondary: #D4D4D8;
       --muted: #A1A1AA;
@@ -50,7 +49,7 @@
       font-weight: 800;
       letter-spacing: -0.02em;
     }
-    .sub { color: var(--muted); font-size: 15px; margin-top: 8px; max-width: 740px; }
+    .sub { color: var(--muted); font-size: 15px; margin-top: 8px; max-width: 780px; }
 
     .grid {
       display: grid;
@@ -99,9 +98,9 @@
     }
 
     .stage {
-      min-height: 220px;
+      min-height: 240px;
       background: #09090B;
-      padding: 28px 24px;
+      padding: 24px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -136,323 +135,253 @@
       color: #08080A;
     }
 
-    /* Option 9: Executive Dossier */
-    .dossier {
+    /* #15: Official Signature & Letterhead Endorsement */
+    .letterhead {
       width: 100%;
-      background: var(--surface-2);
-      border: 1px solid var(--line);
+      position: relative;
+      background: radial-gradient(circle at top right, rgba(197, 168, 105, 0.09), transparent 60%), #121216;
+      border: 1px solid rgba(197, 168, 105, 0.28);
       border-radius: 16px;
-      padding: 20px 22px;
+      padding: 22px 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 18px;
+      gap: 16px;
     }
-    .seal {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      border: 1.5px solid var(--gold);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      background: rgba(197, 168, 105, 0.08);
-    }
-    .seal span {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      color: var(--gold);
-      line-height: 1.1;
-    }
-    .seal small { font-size: 9px; color: var(--muted); letter-spacing: 0.14em; }
+    .sig-wrap { text-align: right; }
 
-    /* Option 10: Hairline Ledger */
-    .ledger {
+    /* #16: 3-Frame Candid Conclave Strip */
+    .strip-grid {
       width: 100%;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
+      gap: 10px;
     }
-    .ledger-col {
-      padding: 18px 14px;
-      border-right: 1px solid var(--line);
-    }
-    .ledger-col:last-child { border-right: none; }
-    .ledger-num {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      color: var(--gold);
-      letter-spacing: 0.12em;
-      margin-bottom: 6px;
-    }
-    .ledger-title {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--text);
-      margin-bottom: 4px;
-    }
-    .ledger-desc { font-size: 12px; color: var(--muted); line-height: 1.45; }
-
-    /* Option 11: Interactive Tabs */
-    .tabs-box {
-      width: 100%;
-      background: var(--surface-2);
-      border: 1px solid var(--line);
-      border-radius: 16px;
+    .mini-frame {
+      position: relative;
+      aspect-ratio: 4 / 3;
+      border-radius: 12px;
       overflow: hidden;
+      border: 1px solid var(--line);
     }
-    .tabs-nav {
-      display: flex;
-      border-bottom: 1px solid var(--line);
-      background: rgba(255,255,255,0.02);
+    .mini-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 20%;
+      transition: transform 0.4s ease;
     }
-    .tab-btn {
-      flex: 1;
-      padding: 11px 12px;
-      background: none;
-      border: none;
-      border-bottom: 2px solid transparent;
-      color: var(--muted);
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 12px;
+    .mini-frame:hover img { transform: scale(1.06); }
+    .mini-cap {
+      position: absolute;
+      inset: auto 0 0 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.88));
+      padding: 14px 8px 6px;
+      font-size: 10.5px;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-    .tab-btn.active {
       color: var(--gold);
-      border-bottom-color: var(--gold);
-      background: rgba(197, 168, 105, 0.06);
     }
-    .tab-body { padding: 18px 20px; font-size: 13.5px; color: var(--secondary); min-height: 92px; }
 
-    /* Option 12: Dual Action Dock */
-    .dock {
+    /* #17: Campus Split Card */
+    .campus-split {
       width: 100%;
-      background: var(--surface-2);
-      border: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 140px 1fr;
       border-radius: 16px;
-      padding: 18px 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-    .dock-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-    .dock-link {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 11px 14px;
-      border-radius: 10px;
+      overflow: hidden;
       border: 1px solid var(--line);
-      background: #0D0D10;
-      color: var(--text);
-      text-decoration: none;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 12px;
-      font-weight: 700;
-      transition: border-color 0.2s ease;
+      background: var(--surface-2);
     }
-    .dock-link:hover { border-color: var(--gold); color: var(--gold); }
-
-    /* Option 13: Typographic Monolith */
-    .monolith {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 16px 8px;
-      border-top: 1px solid var(--gold-dim);
-      border-bottom: 1px solid var(--gold-dim);
-    }
-    .stat-block { flex: 1; }
-    .stat-val {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 30px;
-      font-weight: 800;
-      color: var(--text);
-      letter-spacing: -0.02em;
-      line-height: 1.1;
-    }
-    .stat-val span { color: var(--gold); }
-    .stat-lbl { font-size: 12px; color: var(--muted); margin-top: 4px; }
-    .v-rule { width: 1px; height: 54px; background: var(--line); }
-
-    /* Option 14: Clean Colophon */
-    .colophon {
-      width: 100%;
-      border-top: 1px solid var(--line);
-      padding-top: 18px;
+    .campus-img { position: relative; min-height: 124px; }
+    .campus-img img { width: 100%; height: 100%; object-fit: cover; }
+    .campus-info {
+      padding: 16px 18px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      justify-content: center;
+      gap: 6px;
     }
-    .colophon p {
+
+    /* #18: Zero Extra Card (Taller Portrait + Vertical Centering Preview) */
+    .mini-layout {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1.2fr 0.9fr;
+      gap: 14px;
+      align-items: center;
+    }
+    .mock-lines div { height: 7px; border-radius: 4px; background: rgba(255,255,255,0.12); margin-bottom: 7px; }
+    .mock-right { display: flex; flex-direction: column; gap: 8px; }
+    .mock-photo {
+      aspect-ratio: 1 / 1;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(197,168,105,0.4);
+    }
+    .mock-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 18%; }
+    .mock-quote {
+      border-left: 2px solid var(--gold);
+      background: var(--surface-2);
+      padding: 8px 10px;
+      border-radius: 0 8px 8px 0;
       font-family: 'Newsreader', serif;
       font-style: italic;
-      font-size: 16px;
+      font-size: 11px;
       color: var(--secondary);
-      line-height: 1.5;
     }
-    .colophon a {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--gold);
-      text-decoration: none;
+
+    /* #19: Overlapping Quote on Portrait (No 3rd Card Needed) */
+    .overlap-wrap {
+      width: 100%;
+      max-width: 340px;
+      position: relative;
+      padding-bottom: 26px;
+    }
+    .overlap-img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+    }
+    .overlap-img img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 18%; }
+    .overlap-card {
+      position: relative;
+      margin: -34px 14px 0;
+      background: #16161B;
+      border: 1px solid rgba(197, 168, 105, 0.38);
+      border-left: 3px solid var(--gold);
+      border-radius: 12px;
+      padding: 12px 14px;
+      box-shadow: 0 14px 28px rgba(0,0,0,0.65);
     }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="header">
-      <span class="eyebrow">Fresh Executive Concepts &bull; Below VC Quote</span>
-      <h1>6 Refined Architectural Options (9–14)</h1>
-      <p class="sub">Rebuilt using your actual site typography (<strong>Plus Jakarta Sans</strong>, <strong>Inter</strong>, and <strong>Newsreader</strong>) without gimmicks. Pick any <strong>Option #(9–14)</strong> to place below the VC Quote on <strong>/about</strong>.</p>
+      <span class="eyebrow">New Directions &bull; Completely Different Approaches</span>
+      <h1>5 High-Craft Ways to Resolve Below the VC Quote (15–19)</h1>
+      <p class="sub">Moving away from generic text boxes. Pick whether you want an <strong>official endorsement seal</strong>, a <strong>candid photo strip</strong>, a <strong>campus split card</strong>, or <strong>no 3rd card at all</strong> (re-balancing the photo + quote directly).</p>
     </div>
 
     <div class="grid">
-      <!-- Option 9 -->
-      <div class="card" data-id="9">
-        <div class="card-head"><span class="opt-pill">Option #09</span><span class="opt-title">Executive Dossier &amp; Seal</span></div>
+      <!-- Option 15 -->
+      <div class="card" data-id="15">
+        <div class="card-head"><span class="opt-pill">Option #15</span><span class="opt-title">Official Presidential Endorsement</span></div>
         <div class="stage">
-          <div class="dossier">
-            <div style="display:flex;align-items:center;gap:14px;">
-              <div class="seal"><span>SOA</span><small>VC</small></div>
-              <div>
-                <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);">Office of the Vice-Chancellor</div>
-                <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:15px;font-weight:700;color:#fff;margin-top:2px;">Siksha &lsquo;O&rsquo; Anusandhan</div>
-                <div style="font-size:12.5px;color:var(--muted);margin-top:2px;">Deemed to be University &bull; Bhubaneswar</div>
+          <div class="letterhead">
+            <div>
+              <div style="font-size:10.5px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);">Endorsed &amp; Presided</div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:15px;font-weight:700;color:#fff;margin-top:3px;">Office of the Vice-Chancellor</div>
+              <div style="font-size:12px;color:var(--muted);margin-top:2px;">Bhubaneswar, Odisha &bull; Est. 2007</div>
+            </div>
+            <div class="sig-wrap">
+              <svg width="118" height="36" viewBox="0 0 140 42" fill="none" aria-hidden="true">
+                <path d="M8 32C18 14 26 8 31 18C35 26 24 31 20 27C28 21 44 10 52 22C56 28 49 30 57 22C65 14 73 25 81 19C89 13 96 24 106 18C116 12 124 20 134 15" stroke="#C5A869" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+              <div style="font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);">Prof. (Dr.) P. K. Nanda</div>
+            </div>
+          </div>
+        </div>
+        <div class="foot"><span>Tactile dark stationery card with subtle gold signature flourish.</span><button class="pick-btn" onclick="pick(15)">Select #15</button></div>
+      </div>
+
+      <!-- Option 16 -->
+      <div class="card" data-id="16">
+        <div class="card-head"><span class="opt-pill">Option #16</span><span class="opt-title">3-Frame Candid Conclave Strip</span></div>
+        <div class="stage">
+          <div class="strip-grid">
+            <div class="mini-frame">
+              <img src="/conclave-moments/chennai-2/chennai-2-11.jpg" alt="Podium Address" />
+              <div class="mini-cap">Keynote</div>
+            </div>
+            <div class="mini-frame">
+              <img src="/conclave-moments/chennai-2/chennai-2-05.jpg" alt="Panel Dialogue" />
+              <div class="mini-cap">Dialogue</div>
+            </div>
+            <div class="mini-frame">
+              <img src="/conclave-moments/kolkata-1/kolkata-1-01.jpg" alt="Felicitation" />
+              <div class="mini-cap">Honoring</div>
+            </div>
+          </div>
+        </div>
+        <div class="foot"><span>Pure visual storytelling — 3 candid conclave frames with zero extra text clutter.</span><button class="pick-btn" onclick="pick(16)">Select #16</button></div>
+      </div>
+
+      <!-- Option 17 -->
+      <div class="card" data-id="17">
+        <div class="card-head"><span class="opt-pill">Option #17</span><span class="opt-title">Host Campus Split Feature</span></div>
+        <div class="stage">
+          <div class="campus-split">
+            <div class="campus-img">
+              <img src="/soa-campus-aerial.jpg" alt="SOA Campus" />
+            </div>
+            <div class="campus-info">
+              <div style="font-size:10.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);">Host University</div>
+              <div style="font-family:'Plus Jakarta Sans',sans-serif;font-size:14.5px;font-weight:700;color:#fff;">Siksha &lsquo;O&rsquo; Anusandhan</div>
+              <div style="font-size:12px;color:var(--muted);">A multidisciplinary academic ecosystem anchoring Allyship++ across India.</div>
+              <a href="/discover-soa" style="font-size:11.5px;font-weight:700;color:var(--gold);text-decoration:none;margin-top:2px;">Explore Campus &rarr;</a>
+            </div>
+          </div>
+        </div>
+        <div class="foot"><span>Pairs SOA&rsquo;s aerial campus photo with a direct link to Discover SOA.</span><button class="pick-btn" onclick="pick(17)">Select #17</button></div>
+      </div>
+
+      <!-- Option 18 -->
+      <div class="card" data-id="18">
+        <div class="card-head"><span class="opt-pill">Option #18</span><span class="opt-title">Remove 3rd Card &bull; Square Portrait + Centered</span></div>
+        <div class="stage">
+          <div class="mini-layout">
+            <div class="mock-lines">
+              <div style="width:45%;background:var(--gold);height:6px;margin-bottom:10px;"></div>
+              <div style="width:95%"></div>
+              <div style="width:90%"></div>
+              <div style="width:92%"></div>
+              <div style="width:85%"></div>
+              <div style="width:94%"></div>
+              <div style="width:88%"></div>
+              <div style="width:72%"></div>
+              <div style="width:90%"></div>
+              <div style="width:65%;margin-bottom:0"></div>
+            </div>
+            <div class="mock-right">
+              <div class="mock-photo"><img src="/leadership/pradipta-kumar-nanda.jpg" alt="VC" /></div>
+              <div class="mock-quote">&ldquo;Translating allyship into everyday organizational practices.&rdquo;</div>
+            </div>
+          </div>
+        </div>
+        <div class="foot"><span>No 3rd box at all — taller 1:1 portrait + vertically centered right column.</span><button class="pick-btn" onclick="pick(18)">Select #18</button></div>
+      </div>
+
+      <!-- Option 19 -->
+      <div class="card" data-id="19">
+        <div class="card-head"><span class="opt-pill">Option #19</span><span class="opt-title">Overlapping Editorial Quote Card</span></div>
+        <div class="stage">
+          <div class="overlap-wrap">
+            <div class="overlap-img">
+              <img src="/leadership/pradipta-kumar-nanda.jpg" alt="VC" />
+            </div>
+            <div class="overlap-card">
+              <div style="font-family:'Newsreader',serif;font-style:italic;font-size:12.5px;color:#fff;line-height:1.45;">
+                &ldquo;Allyship provided an excellent platform for distinguished industry leaders, professionals and academicians...&rdquo;
               </div>
             </div>
-            <a href="/discover-soa" style="color:var(--gold);font-size:18px;text-decoration:none;font-weight:700;" aria-label="Explore SOA">&rarr;</a>
           </div>
         </div>
-        <div class="foot"><span>Crisp credential seal + university anchor with subtle link arrow.</span><button class="pick-btn" onclick="pick(9)">Select #09</button></div>
-      </div>
-
-      <!-- Option 10 -->
-      <div class="card" data-id="10">
-        <div class="card-head"><span class="opt-pill">Option #10</span><span class="opt-title">3-Column Swiss Hairline Ledger</span></div>
-        <div class="stage">
-          <div class="ledger">
-            <div class="ledger-col">
-              <div class="ledger-num">01</div>
-              <div class="ledger-title">Academic Rigor</div>
-              <div class="ledger-desc">Future-ready talent grounded in research.</div>
-            </div>
-            <div class="ledger-col">
-              <div class="ledger-num">02</div>
-              <div class="ledger-title">Industry Dialogue</div>
-              <div class="ledger-desc">Direct boardroom-to-campus exchange.</div>
-            </div>
-            <div class="ledger-col">
-              <div class="ledger-num">03</div>
-              <div class="ledger-title">Inclusive Culture</div>
-              <div class="ledger-desc">Empathy and mutual respect at scale.</div>
-            </div>
-          </div>
-        </div>
-        <div class="foot"><span>No heavy card box — pure editorial hairline columns aligned to the grid.</span><button class="pick-btn" onclick="pick(10)">Select #10</button></div>
-      </div>
-
-      <!-- Option 11 -->
-      <div class="card" data-id="11">
-        <div class="card-head"><span class="opt-pill">Option #11</span><span class="opt-title">Tabbed Institutional Lens</span></div>
-        <div class="stage">
-          <div class="tabs-box">
-            <div class="tabs-nav">
-              <button class="tab-btn active" onclick="setTab(0, this)">Mandate</button>
-              <button class="tab-btn" onclick="setTab(1, this)">Leadership</button>
-              <button class="tab-btn" onclick="setTab(2, this)">University</button>
-            </div>
-            <div class="tab-body" id="tabBody">
-              Strengthening meaningful collaboration between academia and industry to nurture responsible leadership and address emerging professional challenges.
-            </div>
-          </div>
-        </div>
-        <div class="foot"><span>Compact 3-tab executive summary — interactive without visual noise.</span><button class="pick-btn" onclick="pick(11)">Select #11</button></div>
-      </div>
-
-      <!-- Option 12 -->
-      <div class="card" data-id="12">
-        <div class="card-head"><span class="opt-pill">Option #12</span><span class="opt-title">Dual-Action Executive Dock</span></div>
-        <div class="stage">
-          <div class="dock">
-            <div style="display:flex;align-items:center;justify-content:space-between;">
-              <span style="font-size:11.5px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);">Institutional Pathways</span>
-              <span style="font-size:12px;color:var(--muted);">Bhubaneswar, Odisha</span>
-            </div>
-            <div class="dock-actions">
-              <a href="/discover-soa" class="dock-link"><span>Discover SOA</span><span>&rarr;</span></a>
-              <a href="/collaborate" class="dock-link"><span>Partner With Us</span><span>&rarr;</span></a>
-            </div>
-          </div>
-        </div>
-        <div class="foot"><span>Turns the space below the quote into two direct navigation pathways.</span><button class="pick-btn" onclick="pick(12)">Select #12</button></div>
-      </div>
-
-      <!-- Option 13 -->
-      <div class="card" data-id="13">
-        <div class="card-head"><span class="opt-pill">Option #13</span><span class="opt-title">Typographic Pull-Stat Monolith</span></div>
-        <div class="stage">
-          <div class="monolith">
-            <div class="stat-block">
-              <div class="stat-val">15<span>th</span></div>
-              <div class="stat-lbl">NIRF University Ranking in India</div>
-            </div>
-            <div class="v-rule"></div>
-            <div class="stat-block">
-              <div class="stat-val">A<span>++</span></div>
-              <div class="stat-lbl">NAAC Institutional Accreditation</div>
-            </div>
-          </div>
-        </div>
-        <div class="foot"><span>Editorial display numerals with hairline dividers — zero nested boxes.</span><button class="pick-btn" onclick="pick(13)">Select #13</button></div>
-      </div>
-
-      <!-- Option 14 -->
-      <div class="card" data-id="14">
-        <div class="card-head"><span class="opt-pill">Option #14</span><span class="opt-title">Editorial Colophon (Zero-Box)</span></div>
-        <div class="stage">
-          <div class="colophon">
-            <p>&ldquo;Issued from the Office of the Vice-Chancellor, Siksha &lsquo;O&rsquo; Anusandhan (Deemed to be University), in pursuit of compassionate and inclusive leadership.&rdquo;</p>
-            <a href="/discover-soa">Explore Siksha &lsquo;O&rsquo; Anusandhan &rarr;</a>
-          </div>
-        </div>
-        <div class="foot"><span>Pure typography + top hairline — lets the VC Quote breathe cleanly.</span><button class="pick-btn" onclick="pick(14)">Select #14</button></div>
+        <div class="foot"><span>Eliminates the gap by overlapping the quote card cleanly over the photo&rsquo;s lower edge.</span><button class="pick-btn" onclick="pick(19)">Select #19</button></div>
       </div>
     </div>
   </div>
 
   <script>
-    const tabTexts = [
-      'Strengthening meaningful collaboration between academia and industry to nurture responsible leadership and address emerging professional challenges.',
-      'Bringing together corporate stalwarts, Olympic champions, and senior academicians to translate allyship into everyday organizational practice.',
-      'Ranked #15 among Universities in India (NIRF 2025) and NAAC A++ accredited — advancing interdisciplinary research and industry readiness.'
-    ];
-    function setTab(idx, btn) {
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      document.getElementById('tabBody').textContent = tabTexts[idx];
-    }
     function pick(id) {
       document.querySelectorAll('.card').forEach(c => {
         const s = c.dataset.id == id;
         c.classList.toggle('selected', s);
-        c.querySelector('.pick-btn').innerHTML = s ? '&#10003; Selected #' + String(id).padStart(2, '0') : 'Select #' + String(c.dataset.id).padStart(2, '0');
+        c.querySelector('.pick-btn').innerHTML = s ? '&#10003; Selected #' + id : 'Select #' + c.dataset.id;
       });
     }
   </script>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALLYSHIP++ — 15 Architectural, Artistic &amp; Modernist Font Systems</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Baskervville:ital@0;1&family=Bellefair&family=Bricolage+Grotesque:wght@600;700;800&family=Cormorant+SC:wght@600;700&family=DM+Sans:wght@400;500;600&family=Darker+Grotesque:wght@600;700;800&family=Elsie:wght@400;900&family=Forum&family=Gruppo&family=Inter:wght@400;500;600&family=Italiana&family=Libre+Baskerville:ital,wght@0,700;1,400&family=Manrope:wght@400;500;600;700&family=Michroma&family=Outfit:wght@500;700&family=Philosopher:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Poiret+One&family=Rufina:wght@700&family=Space+Grotesk:wght@500;600;700&family=Spectral:ital,wght@0,500;1,500&family=Syne:wght@600;700;800&family=Syncopate:wght@700&family=Tenor+Sans&family=Viaoda+Libre&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0A0A0A;
+      --surface: #121214;
+      --surface-2: #18181B;
+      --line: rgba(255, 255, 255, 0.11);
+      --text: #FFFFFF;
+      --muted: #A1A1AA;
+      --gold: #C5A869;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      padding: 36px 24px 96px;
+      line-height: 1.5;
+    }
+    .container { max-width: 1480px; margin: 0 auto; }
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 20px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 28px;
+    }
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 6px;
+    }
+    h1 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .sub {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 6px;
+      max-width: 780px;
+    }
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 28px;
+    }
+    .filter-btn {
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      border-color: var(--gold);
+      background: rgba(197, 168, 105, 0.14);
+      color: var(--gold);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+      gap: 26px;
+    }
+    .pkg-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+    .pkg-card:hover {
+      border-color: rgba(197, 168, 105, 0.55);
+      transform: translateY(-2px);
+    }
+    .pkg-card.selected {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 1px var(--gold);
+    }
+    .pkg-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+    .pkg-num {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--gold);
+      background: rgba(197, 168, 105, 0.12);
+      border: 1px solid rgba(197, 168, 105, 0.35);
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+    .pkg-group { font-size: 11px; color: var(--muted); }
+    .preview-stage {
+      background: radial-gradient(circle at top right, rgba(197, 168, 105, 0.08), transparent 55%), #070709;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 26px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .badge-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    .gold-pill {
+      display: inline-block;
+      background: rgba(197, 168, 105, 0.14);
+      border: 1px solid rgba(197, 168, 105, 0.4);
+      color: var(--gold);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .hero-line { color: #ffffff; line-height: 1.1; }
+    .sub-line { color: #d4d4d8; line-height: 1.4; }
+    .body-line { color: #a1a1aa; font-size: 14px; line-height: 1.65; }
+    .ui-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .cta-btn {
+      background: var(--gold);
+      color: #0A0A0A;
+      padding: 8px 18px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      border: none;
+    }
+    .font-specs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      font-size: 11.5px;
+      background: var(--surface-2);
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+    }
+    .spec-item span { display: block; color: var(--muted); font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .spec-item strong { color: #fff; font-weight: 600; }
+    .select-btn {
+      width: 100%;
+      padding: 10px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: var(--surface-2);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .pkg-card.selected .select-btn {
+      background: var(--gold);
+      color: #0A0A0A;
+      border-color: var(--gold);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <span class="eyebrow">ALLYSHIP++ &bull; Architectural &amp; Modernist Gallery</span>
+        <h1>15 Distinct, Non-Calligraphy Artistic &amp; Executive Systems</h1>
+        <p class="sub">Zero cursive scripts, zero generic defaults — built with <strong>Art-Deco geometry</strong>, <strong>sculptural flared serifs</strong>, <strong>museum small-caps</strong>, and <strong>wide luxury automotive/architectural proportions</strong>.</p>
+      </div>
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" data-group="all">All 15 Packages</button>
+      <button class="filter-btn" data-group="1">1&ndash;4: Art-Deco &amp; Architectural</button>
+      <button class="filter-btn" data-group="2">5&ndash;8: Sculptural &amp; Flared Modernist</button>
+      <button class="filter-btn" data-group="3">9&ndash;12: Museum Gallery &amp; Small-Caps</button>
+      <button class="filter-btn" data-group="4">13&ndash;15: Wide Luxury &amp; Exhibition</button>
+    </div>
+
+    <div class="grid" id="pkgGrid"></div>
+  </div>
+
+  <script>
+    const packages = [
+      {
+        id: 1, group: '1', name: 'Art-Deco Geometric', vibe: 'Sleek 1920s Architectural Elegance',
+        accent: 'Poiret One', heading: 'Plus Jakarta Sans', sub: 'Tenor Sans', body: 'Inter',
+        hStyle: "font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:30px; letter-spacing:-0.025em;",
+        sStyle: "font-family:'Tenor Sans',sans-serif; font-size:16px; letter-spacing:0.01em;",
+        bStyle: "font-family:'Inter',sans-serif;",
+        heroHtml: `Where Industry <span style="font-family:'Poiret One',sans-serif;color:#C5A869;font-size:1.18em;letter-spacing:0.04em;">ELEVATES</span> Talent`
+      },
+      {
+        id: 2, group: '1', name: 'Milanese Hairline', vibe: 'High-Fashion Magazine Spread',
+        accent: 'Italiana', heading: 'Syne', sub: 'DM Sans', body: 'Inter',
+        hStyle: "font-family:'Syne',sans-serif; font-weight:700; font-size:30px; letter-spacing:-0.03em;",
+        sStyle: "font-family:'DM Sans',sans-serif; font-weight:500; font-size:15px;",
+        bStyle: "font-family:'Inter',sans-serif;",
+        heroHtml: `Designing <span style="font-family:'Italiana',serif;color:#C5A869;font-size:1.22em;letter-spacing:0.03em;">CONSCIOUS</span> Leadership`
+      },
+      {
+        id: 3, group: '1', name: 'Bauhaus Rounded', vibe: 'Calm Futuristic Architectural Lab',
+        accent: 'Gruppo', heading: 'Space Grotesk', sub: 'Work Sans', body: 'Inter',
+        hStyle: "font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:30px; letter-spacing:-0.03em;",
+        sStyle: "font-family:'Work Sans',sans-serif; font-weight:500; font-size:15px;",
+        bStyle: "font-family:'Inter',sans-serif;",
+        heroHtml: `Building <span style="font-family:'Gruppo',sans-serif;color:#C5A869;font-size:1.22em;letter-spacing:0.08em;text-transform:uppercase;">RESILIENT</span> Teams`
+      },
+      {
+        id: 4, group: '1', name: 'Roman Forum Modern', vibe: 'Classical Proportions + Clean Grid',
+        accent: 'Forum', heading: 'Outfit', sub: 'Manrope', body: 'Inter',
+        hStyle: "font-family:'Outfit',sans-serif; font-weight:700; font-size:31px; letter-spacing:-0.02em;",
+        sStyle: "font-family:'Manrope',sans-serif; font-weight:500; font-size:15px;",
+        bStyle: "font-family:'Inter',sans-serif;",
+        heroHtml: `The <span style="font-family:'Forum',serif;color:#C5A869;font-size:1.18em;letter-spacing:0.05em;text-transform:uppercase;">Covenant</span> of Allyship`
+      },
+      {
+        id: 5, group: '2', name: 'Diamond Terminal', vibe: 'Sculptural Serif with Razor Edges',
+        accent: 'Viaoda Libre', heading: 'Plus Jakarta Sans', sub: 'DM Sans', body: 'Inter',
+        hStyle: "font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:30px; letter-spacing:-0.025em;",
+        sStyle: "font-family:'DM Sans',sans-serif; font-weight:500; font-size:15px;",
+        bStyle: "font-family:'Inter',sans-serif;",
+        heroHtml: `Practicing <span style="font-family:'Viaoda Libre',serif;color:#C5A869;font-size:1.25em;letter-spacing:0.02em;">Inclusive</span> Excellence`
+      },
+      {
+        id: 6, group: '2', name: 'Flared Editorial', vibe: 'Fashion-House Contrast Terminals',
+        accent: 'Elsie', heading: 'Space Grotesk', sub: 'Plus Jakarta Sans', body: 'Inter',
+        hStyle: "font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:30px; letter-spacing:-0.03em;",
+        sStyle: "font-family:'Plus Jakarta Sans',sans-serif; font-weight:600; font-size:15px;",
+        bStyle: "font-family:'Inter',sans-serif;",
+        heroHtml: `Leaders Who <span style="font-family:'Elsie',serif;font-weight:900;color:#C5A869;font-size:1.12em;">Ignite</span> Change`
+      },
+      {
+        id: 7, group: '2', name: 'Stenciled Press', vibe: 'Art-Book Stencil Serif + Neo-Grotesk',
+        accent: 'Rufina', heading: 'Bricolage Grotesque', sub: 'Work Sans', body: 'Inter',
+        hStyle: "font-family:'Bricolage Grotesque',sans-serif; font-weight:800; font-size:31px; letter-spacing:-0.03em;",
+        sStyle: "font-family:'Work Sans',sans-serif; font-weight:500; font-size:15px;",
+        bStyle: "font-family:'Inter',sans-serif;",
+        heroHtml: `Shaping <span style="font-family:'Rufina',serif;font-weight:700;color:#C5A869;font-size:1.14em;">Sovereign</span> Talent`
+      },
+      {
+        id: 8, group: '2', name: 'Curved Philosophy', vibe: 'Distinctive Sweeping Sans-Serif Hybrid',
+        accent: 'Philosopher', heading: 'Outfit', sub: 'Manrope', body: 'Inter',
+        hStyle: "font-family:'Outfit',sans-serif; font-weight:700; font-size:31px; letter-spacing:-0.02em;",
+        sStyle: "font-family:'Manrope',sans-serif; font-weight:500; font-size:15px;",
+        bStyle: "font-family:'Inter',sans-serif;",
+        heroHtml: `Empathy as <span style="font-family:'Philosopher',sans-serif;font-style:italic;font-weight:700;color:#C5A869;font-size:1.12em;">Strategy</span>`
+      },
+      {
+        id: 9, group: '3', name: 'Museum Small-Caps', vibe: 'Prestigious Endowment & Plaque Aesthetic',
+        accent: 'Cormorant SC', heading: 'Plus Jakarta Sans', sub: 'Inter', body: 'Inter',
+        hStyle: "font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:30px; letter-spacing:-0.025em;",
+        sStyle: "font-family:'Inter',sans-serif; font-weight:500; font-size:15px;",
+        bStyle: "font-family:'Inter',sans-serif;",
+        heroHtml: `The <span style="font-family:'Cormorant SC',serif;font-weight:700;color:#C5A869;font-size:1.16em;letter-spacing:0.05em;">Allyship</span> Mandate`
+      },
+      {
+        id: 10, group: '3', name: 'Parisian Gallery', vibe: 'Contemporary Art Exhibition Contrast',
+        accent: 'Baskervville', heading: 'Syne', sub: 'Plus Jakarta Sans', body: 'Inter',
+        hStyle: "font-family:'Syne',sans-serif; font-weight:700; font-size:30px; letter-spacing:-0.03em;",
+        sStyle: "font-family:'Plus Jakarta Sans',sans-serif; font-weight:500; font-size:15px;",
+        bStyle: "font-family:'Inter',sans-serif;",
+        heroHtml: `Beyond Hiring: <span style="font-family:'Baskervville',serif;font-style:italic;color:#C5A869;font-size:1.15em;">Mentorship</span>`
+      },
+      {
+        id: 11, group: '3', name: 'Didone Razor', vibe: 'Crisp Architectural Luxury Contrast',
+        accent: 'Antic Didone', heading: 'Space Grotesk', sub: 'DM Sans', body: 'Inter',
+        hStyle: "font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:30px; letter-spacing:-0.03em;",
+        sStyle: "font-family:'DM Sans',sans-serif; font-weight:500; font-size:15px;",
+        bStyle: "font-family:'Inter',sans-serif;",
+        heroHtml: `Where <span style="font-family:'Antic Didone',serif;color:#C5A869;font-size:1.18em;letter-spacing:0.04em;">VISION</span> Meets Action`
+      },
+      {
+        id: 12, group: '3', name: 'Cultural Placard', vibe: 'Warm Editorial Dignity',
+        accent: 'Bellefair', heading: 'Tenor Sans', sub: 'Work Sans', body: 'Inter',
+        hStyle: "font-family:'Tenor Sans',sans-serif; font-size:31px; letter-spacing:-0.01em;",
+        sStyle: "font-family:'Work Sans',sans-serif; font-weight:500; font-size:15px;",
+        bStyle: "font-family:'Inter',sans-serif;",
+        heroHtml: `Uniting <span style="font-family:'Bellefair',serif;color:#C5A869;font-size:1.22em;">Academia</span> &amp; Industry`
+      },
+      {
+        id: 13, group: '4', name: 'Wide Horizon Luxury', vibe: 'Automotive / Polestar Wide Stance',
+        accent: 'Syncopate', heading: 'Plus Jakarta Sans', sub: 'DM Sans', body: 'Inter',
+        hStyle: "font-family:'Plus Jakarta Sans',sans-serif; font-weight:700; font-size:30px; letter-spacing:-0.025em;",
+        sStyle: "font-family:'DM Sans',sans-serif; font-weight:500; font-size:15px;",
+        bStyle: "font-family:'Inter',sans-serif;",
+        heroHtml: `National <span style="font-family:'Syncopate',sans-serif;font-weight:700;color:#C5A869;font-size:0.78em;letter-spacing:0.06em;">ALLYSHIP</span> Forum`
+      },
+      {
+        id: 14, group: '4', name: 'Precision Future', vibe: 'Extended Geometric Horizon',
+        accent: 'Michroma', heading: 'Outfit', sub: 'Manrope', body: 'Inter',
+        hStyle: "font-family:'Outfit',sans-serif; font-weight:700; font-size:30px; letter-spacing:-0.02em;",
+        sStyle: "font-family:'Manrope',sans-serif; font-weight:500; font-size:15px;",
+        bStyle: "font-family:'Inter',sans-serif;",
+        heroHtml: `Workforce <span style="font-family:'Michroma',sans-serif;color:#C5A869;font-size:0.78em;letter-spacing:0.05em;">2030</span> Ready`
+      },
+      {
+        id: 15, group: '4', name: 'London Exhibition', vibe: 'Oversized Condensed + Literary Italic',
+        accent: 'Libre Baskerville', heading: 'Darker Grotesque', sub: 'Spectral', body: 'Inter',
+        hStyle: "font-family:'Darker Grotesque',sans-serif; font-weight:800; font-size:37px; letter-spacing:-0.02em; line-height:0.95;",
+        sStyle: "font-family:'Spectral',serif; font-style:italic; font-size:17px;",
+        bStyle: "font-family:'Inter',sans-serif;",
+        heroHtml: `Practicing <span style="font-family:'Libre Baskerville',serif;font-style:italic;color:#C5A869;font-size:0.78em;">Authentic</span> Allyship`
+      }
+    ];
+
+    const grid = document.getElementById('pkgGrid');
+    let selectedId = null;
+
+    function render(group = 'all') {
+      const list = group === 'all' ? packages : packages.filter(p => p.group === group);
+      grid.innerHTML = list.map(p => `
+        <div class="pkg-card ${selectedId === p.id ? 'selected' : ''}" data-id="${p.id}">
+          <div class="pkg-top">
+            <span class="pkg-num">Option #${p.id}</span>
+            <span class="pkg-group">${p.vibe}</span>
+          </div>
+          <div style="font-size:18px; font-weight:700; font-family:'Plus Jakarta Sans',sans-serif;">${p.name}</div>
+
+          <div class="preview-stage">
+            <div class="badge-row">
+              <span class="gold-pill" style="${p.bStyle}">Keynote Forum</span>
+              <span style="${p.bStyle} font-size:11px; color:#a1a1aa;">SOA &bull; ALLYSHIP++</span>
+            </div>
+            <div class="hero-line" style="${p.hStyle}">${p.heroHtml}</div>
+            <div class="sub-line" style="${p.sStyle}">Executive Roundtables, Olympian Firesides &amp; Academic Partnerships.</div>
+            <p class="body-line" style="${p.bStyle}">Convening CHROs, capability heads, and university leadership to cultivate inclusive, resilient workplaces across India.</p>
+            <div class="ui-row">
+              <span style="font-family:'${p.accent}',serif,sans-serif; font-size:15px; color:#C5A869; letter-spacing:0.04em;">6 CITIES &bull; 500+ CXOS</span>
+              <button class="cta-btn" style="${p.bStyle}">Get Invited</button>
+            </div>
+          </div>
+
+          <div class="font-specs">
+            <div class="spec-item"><span>Signature Accent</span><strong>${p.accent}</strong></div>
+            <div class="spec-item"><span>Primary Heading</span><strong>${p.heading}</strong></div>
+            <div class="spec-item"><span>Subheading</span><strong>${p.sub}</strong></div>
+            <div class="spec-item"><span>Body &amp; UI</span><strong>${p.body}</strong></div>
+          </div>
+
+          <button class="select-btn" onclick="selectPkg(${p.id})">
+            ${selectedId === p.id ? '&#10003; Selected — Option #' + p.id : 'Select Option #' + p.id}
+          </button>
+        </div>
+      `).join('');
+    }
+
+    window.selectPkg = (id) => {
+      selectedId = id;
+      render(document.querySelector('.filter-btn.active').dataset.group);
+    };
+
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        render(btn.dataset.group);
+      });
+    });
+
+    render();
+  </script>
+</body>
+</html>

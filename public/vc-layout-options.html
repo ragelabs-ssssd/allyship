@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALLYSHIP++ — 15 Creative Layouts for Vice Chancellor Section</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #08080A;
+      --surface: #121215;
+      --surface-2: #18181C;
+      --line: rgba(255, 255, 255, 0.12);
+      --gold: #C5A869;
+      --text: #FFFFFF;
+      --muted: #A1A1AA;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      padding: 36px 24px 96px;
+      line-height: 1.5;
+    }
+    .container { max-width: 1520px; margin: 0 auto; }
+    .header {
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 32px;
+    }
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 6px;
+    }
+    h1 {
+      font-family: 'Unbounded', sans-serif;
+      font-size: clamp(22px, 2.8vw, 32px);
+      font-weight: 800;
+    }
+    .sub { color: var(--muted); font-size: 14px; margin-top: 8px; max-width: 780px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(560px, 1fr));
+      gap: 28px;
+    }
+    @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.25s ease;
+    }
+    .card:hover { border-color: rgba(197, 168, 105, 0.55); }
+    .card.selected { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold); }
+    .card-head {
+      padding: 15px 22px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #141418;
+    }
+    .opt-pill {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--gold);
+      background: rgba(197, 168, 105, 0.12);
+      border: 1px solid rgba(197, 168, 105, 0.35);
+      padding: 4px 10px;
+      border-radius: 999px;
+      text-transform: uppercase;
+    }
+    .opt-title {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .stage {
+      height: 360px;
+      background: #09090B;
+      padding: 20px;
+      overflow: hidden;
+      position: relative;
+      border-bottom: 1px solid var(--line);
+    }
+    .card-foot {
+      padding: 14px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+    .pick-btn {
+      padding: 7px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--surface-2);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .card.selected .pick-btn {
+      background: var(--gold);
+      color: #0A0A0A;
+      border-color: var(--gold);
+    }
+
+    /* Micro typography inside previews */
+    .u { font-family: 'Unbounded', sans-serif; }
+    .ser { font-family: 'Newsreader', serif; font-style: italic; }
+    .gold { color: var(--gold); }
+    .vc-img {
+      background: url('/leadership/pradipta-kumar-nanda.jpg') 50% 20%/cover no-repeat;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+    }
+    .vc-podium {
+      background: url('/conclave-moments/chennai-2/chennai-2-11.jpg') 50% 20%/cover no-repeat;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+    }
+    .mini-p { font-size: 10.5px; color: #D4D4D8; line-height: 1.5; text-align: justify; }
+    .mini-h { font-family: 'Unbounded', sans-serif; font-size: 13px; font-weight: 700; color: #fff; }
+    .mini-sig { font-size: 10px; color: var(--gold); font-weight: 600; }
+
+    /* Layout specific styles */
+    .v1-top { display: flex; gap: 14px; align-items: center; padding-bottom: 12px; border-bottom: 1px solid var(--line); margin-bottom: 12px; }
+    .v1-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+    .v2 { display: grid; grid-template-columns: 190px 1fr; gap: 18px; height: 100%; }
+    .v3 { max-width: 440px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; gap: 10px; align-items: center; }
+
+    .v5 { display: grid; grid-template-columns: 32px 1fr 170px; gap: 12px; height: 100%; }
+    .v5-spine { writing-mode: vertical-rl; transform: rotate(180deg); font-size: 9px; letter-spacing: 0.22em; color: var(--gold); border-left: 1px solid var(--line); display: flex; align-items: center; justify-content: center; font-weight: 700; }
+
+    .v6 { display: grid; grid-template-columns: 42% 58%; height: 100%; margin: -20px; }
+    .v6-left { background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.92) 100%), url('/leadership/pradipta-kumar-nanda.jpg') 50% 20%/cover; padding: 18px; display: flex; flex-direction: column; justify-content: flex-end; }
+    .v6-right { padding: 20px; display: flex; flex-direction: column; justify-content: space-between; }
+
+    .v7-tabs { display: flex; gap: 6px; margin-bottom: 10px; }
+    .v7-tab { font-size: 10px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line); background: #141418; color: var(--muted); cursor: pointer; }
+    .v7-tab.active { border-color: var(--gold); color: var(--gold); background: rgba(197,168,105,0.12); }
+
+    .v9 { display: grid; grid-template-columns: 165px 1fr 1fr; gap: 14px; height: 100%; align-items: start; }
+
+    .v10 { height: 100%; border: 1px solid rgba(197,168,105,0.4); border-radius: 14px; padding: 14px; display: grid; grid-template-columns: 110px 1fr 110px; gap: 12px; align-items: center; }
+
+    .v12-top { background: linear-gradient(135deg, #18181D 0%, #0D0D10 100%); padding: 14px; border-radius: 14px; display: flex; justify-content: space-between; align-items: center; clip-path: polygon(0 0, 100% 0, 100% 84%, 0 100%); margin-bottom: 10px; }
+
+    .v13-row { display: grid; grid-template-columns: 28px 1fr; gap: 8px; align-items: baseline; padding-bottom: 6px; border-bottom: 1px dashed rgba(255,255,255,0.08); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <span class="eyebrow">About Page &bull; Vice Chancellor Section Only</span>
+      <h1>15 Out-of-the-Box Layouts for "Message from the Vice Chancellor"</h1>
+      <p class="sub">Every concept below solves the empty space below Prof. (Dr.) Pradipta Kumar Nanda&rsquo;s portrait in a completely different way. Click tabs/toggles in #07 &amp; #11, and pick the layout # you want for <strong>/about</strong>!</p>
+    </div>
+
+    <div class="grid">
+      <!-- 01 -->
+      <div class="card" data-id="1">
+        <div class="card-head"><span class="opt-pill">VC Layout #01</span><span class="opt-title">Executive Banner + 2-Column Magazine Flow</span></div>
+        <div class="stage">
+          <div class="v1-top">
+            <div class="vc-img" style="width:110px; height:82px; flex-shrink:0;"></div>
+            <div>
+              <div class="mini-h">Message from the Vice Chancellor</div>
+              <div class="mini-sig" style="margin-top:4px;">Prof. (Dr.) Pradipta Kumar Nanda &bull; SOA University</div>
+            </div>
+          </div>
+          <div class="v1-cols">
+            <p class="mini-p">It gives me immense pleasure to be associated with Allyship, an initiative of Siksha &lsquo;O&rsquo; Anusandhan aimed at promoting inclusive leadership, meaningful industry engagement and collaborative workplace cultures. In today&rsquo;s rapidly evolving environment, allyship calls for empathy and mutual respect.</p>
+            <p class="mini-p">At SOA, we strongly believe that meaningful collaboration between academia and industry is essential for nurturing responsible leadership and addressing emerging challenges. I extend my best wishes to the entire team for their continued success.</p>
+          </div>
+        </div>
+        <div class="card-foot"><span>Photo &amp; title sit across the top; the 6 paragraphs flow evenly in 2 balanced magazine columns below.</span><button class="pick-btn" onclick="pick(1)">Select #01</button></div>
+      </div>
+
+      <!-- 02 -->
+      <div class="card" data-id="2">
+        <div class="card-head"><span class="opt-pill">VC Layout #02</span><span class="opt-title">Portrait + Signature Left, Letter Right</span></div>
+        <div class="stage">
+          <div class="v2">
+            <div style="display:flex; flex-direction:column; justify-content:space-between;">
+              <div class="vc-img" style="width:100%; aspect-ratio:4/3;"></div>
+              <div style="padding:10px; border-radius:10px; background:#141418; border:1px solid var(--line);">
+                <div style="font-size:11px; font-weight:700;">Prof. (Dr.) Pradipta K. Nanda</div>
+                <div style="font-size:10px; color:var(--gold);">Vice Chancellor, SOA</div>
+              </div>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <div class="mini-h">Message from the Vice Chancellor</div>
+              <p class="mini-p">It gives me immense pleasure to be associated with Allyship, an initiative of Siksha &lsquo;O&rsquo; Anusandhan aimed at promoting inclusive leadership and collaborative workplace cultures.</p>
+              <p class="mini-p">Allyship provided an excellent platform for distinguished industry leaders and academicians to exchange perspectives on leadership, resilience, and mentorship.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-foot"><span>Swaps sides: Portrait + Official Signature anchor the left; the full letter reads cleanly on the right.</span><button class="pick-btn" onclick="pick(2)">Select #02</button></div>
+      </div>
+
+      <!-- 03 -->
+      <div class="card" data-id="3">
+        <div class="card-head"><span class="opt-pill">VC Layout #03</span><span class="opt-title">Centered Editorial Monograph</span></div>
+        <div class="stage">
+          <div class="v3">
+            <div class="vc-img" style="width:180px; height:120px;"></div>
+            <div class="mini-h">Message from the Vice Chancellor</div>
+            <p class="mini-p" style="text-align:center;">It gives me immense pleasure to be associated with Allyship, an initiative of Siksha &lsquo;O&rsquo; Anusandhan aimed at promoting inclusive leadership and meaningful industry engagement.</p>
+            <div class="mini-sig">Prof. (Dr.) Pradipta Kumar Nanda &bull; Vice Chancellor</div>
+          </div>
+        </div>
+        <div class="card-foot"><span>Single centered editorial column (like a printed university foreword) — zero side gaps at all.</span><button class="pick-btn" onclick="pick(3)">Select #03</button></div>
+      </div>
+
+      <!-- 04 -->
+      <div class="card" data-id="4">
+        <div class="card-head"><span class="opt-pill">VC Layout #04</span><span class="opt-title">Magazine Text-Wrap Around Portrait</span></div>
+        <div class="stage">
+          <div class="mini-h" style="margin-bottom:10px;">Message from the Vice Chancellor</div>
+          <div>
+            <div class="vc-img" style="float:right; width:175px; height:130px; margin:0 0 10px 16px;"></div>
+            <p class="mini-p">It gives me immense pleasure to be associated with Allyship, an initiative of Siksha &lsquo;O&rsquo; Anusandhan (Deemed to be University) aimed at promoting inclusive leadership, meaningful industry engagement and collaborative workplace cultures. In today&rsquo;s rapidly evolving professional environment, allyship is a shared responsibility calling for empathy and mutual respect. Allyship provided an excellent platform for industry leaders, professionals and academicians to exchange perspectives on leadership and resilience. At SOA, we strongly believe meaningful collaboration between academia and industry is essential for nurturing responsible leadership. <span class="gold">— Prof. (Dr.) Pradipta Kumar Nanda</span></p>
+          </div>
+        </div>
+        <div class="card-foot"><span>Classic editorial float: text wraps around the photo on top, then flows full-width underneath it!</span><button class="pick-btn" onclick="pick(4)">Select #04</button></div>
+      </div>
+
+      <!-- 05 -->
+      <div class="card" data-id="5">
+        <div class="card-head"><span class="opt-pill">VC Layout #05</span><span class="opt-title">Swiss Spine + Center Letter + Right Portrait</span></div>
+        <div class="stage">
+          <div class="v5">
+            <div class="v5-spine u">OFFICE OF THE VC</div>
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <div class="mini-h">Message from the VC</div>
+              <p class="mini-p">It gives me immense pleasure to be associated with Allyship, promoting inclusive leadership and meaningful industry engagement.</p>
+              <p class="mini-p">At SOA, meaningful collaboration between academia and industry is essential for nurturing responsible leadership.</p>
+              <div class="mini-sig">Prof. (Dr.) Pradipta Kumar Nanda</div>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <div class="vc-img" style="width:100%; height:130px;"></div>
+              <div class="ser" style="font-size:11px; color:#d4d4d8; padding:8px; background:#141418; border-radius:8px;">&ldquo;Building inclusive, high-performing organizations.&rdquo;</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-foot"><span>Vertical Swiss typography spine framing the letter and right-hand portrait.</span><button class="pick-btn" onclick="pick(5)">Select #05</button></div>
+      </div>
+
+      <!-- 06 -->
+      <div class="card" data-id="6">
+        <div class="card-head"><span class="opt-pill">VC Layout #06</span><span class="opt-title">50/50 Full-Bleed Portrait Curtain</span></div>
+        <div class="stage">
+          <div class="v6">
+            <div class="v6-left">
+              <div style="font-size:12px; font-weight:700; color:#fff;">Prof. (Dr.) Pradipta K. Nanda</div>
+              <div style="font-size:10px; color:var(--gold);">Vice Chancellor, SOA</div>
+            </div>
+            <div class="v6-right">
+              <div class="mini-h">Message from the VC</div>
+              <p class="mini-p">It gives me immense pleasure to be associated with Allyship, an initiative of Siksha &lsquo;O&rsquo; Anusandhan aimed at promoting inclusive leadership and collaborative workplace cultures.</p>
+              <p class="mini-p">I deeply appreciate everyone associated with this endeavour and extend my best wishes for their continued success.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-foot"><span>Portrait fills 100% height of the left edge-to-edge curtain — zero empty space anywhere.</span><button class="pick-btn" onclick="pick(6)">Select #06</button></div>
+      </div>
+
+      <!-- 07 -->
+      <div class="card" data-id="7">
+        <div class="card-head"><span class="opt-pill">VC Layout #07</span><span class="opt-title">Interactive Tabbed Address (Click Tabs)</span></div>
+        <div class="stage">
+          <div style="display:grid; grid-template-columns:170px 1fr; gap:16px; height:100%; align-items:center;">
+            <div class="vc-img" style="width:100%; height:190px;"></div>
+            <div>
+              <div class="mini-h" style="margin-bottom:8px;">Message from the VC</div>
+              <div class="v7-tabs" id="v7Tabs">
+                <button class="v7-tab active" onclick="setV7(0)">The Message</button>
+                <button class="v7-tab" onclick="setV7(1)">Key Quote</button>
+                <button class="v7-tab" onclick="setV7(2)">Signature</button>
+              </div>
+              <p class="mini-p" id="v7Body">It gives me immense pleasure to be associated with Allyship, an initiative of Siksha &lsquo;O&rsquo; Anusandhan aimed at promoting inclusive leadership, meaningful industry engagement and collaborative workplace cultures.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-foot"><span>Keeps the section compact and equal-height by organizing the address into 3 clean interactive tabs.</span><button class="pick-btn" onclick="pick(7)">Select #07</button></div>
+      </div>
+
+      <!-- 08 -->
+      <div class="card" data-id="8">
+        <div class="card-head"><span class="opt-pill">VC Layout #08</span><span class="opt-title">Pull-Quote Banner Top + Split Below</span></div>
+        <div class="stage">
+          <div class="ser" style="font-size:13px; color:#fff; padding:12px; border-left:2px solid var(--gold); background:#141418; margin-bottom:14px;">
+            &ldquo;Allyship is much more than a concept; it is a shared responsibility that calls for empathy, mutual respect, mentorship and the willingness to empower others.&rdquo;
+          </div>
+          <div style="display:grid; grid-template-columns:160px 1fr; gap:16px;">
+            <div>
+              <div class="vc-img" style="width:100%; height:115px; margin-bottom:6px;"></div>
+              <div class="mini-sig">Prof. (Dr.) P. K. Nanda</div>
+            </div>
+            <p class="mini-p">It gives me immense pleasure to be associated with Allyship, an initiative of Siksha &lsquo;O&rsquo; Anusandhan aimed at promoting inclusive leadership. At SOA, we strongly believe meaningful collaboration between academia and industry nurtures responsible leadership.</p>
+          </div>
+        </div>
+        <div class="card-foot"><span>Hero pull-quote spans across the top, uniting portrait and letter underneath.</span><button class="pick-btn" onclick="pick(8)">Select #08</button></div>
+      </div>
+
+      <!-- 09 -->
+      <div class="card" data-id="9">
+        <div class="card-head"><span class="opt-pill">VC Layout #09</span><span class="opt-title">3-Column Broadsheet (Portrait | Part I | Part II)</span></div>
+        <div class="stage">
+          <div class="mini-h" style="margin-bottom:10px;">Message from the Vice Chancellor</div>
+          <div class="v9">
+            <div>
+              <div class="vc-img" style="width:100%; height:120px; margin-bottom:6px;"></div>
+              <div class="mini-sig">Prof. (Dr.) Pradipta K. Nanda</div>
+            </div>
+            <p class="mini-p">It gives me immense pleasure to be associated with Allyship, an initiative of Siksha &lsquo;O&rsquo; Anusandhan aimed at promoting inclusive leadership. Allyship is a shared responsibility calling for empathy and mutual respect.</p>
+            <p class="mini-p">At SOA, we strongly believe meaningful collaboration between academia and industry is essential for nurturing responsible leadership. I extend my best wishes to the entire team for their continued success.</p>
+          </div>
+        </div>
+        <div class="card-foot"><span>Splits the 6 paragraphs into 2 columns beside the portrait — all 3 columns end at the exact same height!</span><button class="pick-btn" onclick="pick(9)">Select #09</button></div>
+      </div>
+
+      <!-- 10 -->
+      <div class="card" data-id="10">
+        <div class="card-head"><span class="opt-pill">VC Layout #10</span><span class="opt-title">Museum Passe-Partout Dual Frame</span></div>
+        <div class="stage">
+          <div class="v10">
+            <div class="vc-img" style="width:100%; height:140px;"></div>
+            <div style="text-align:center;">
+              <div class="mini-h" style="margin-bottom:8px;">Vice Chancellor&rsquo;s Note</div>
+              <p class="mini-p" style="text-align:center;">Promoting inclusive leadership, meaningful industry engagement and collaborative workplace cultures across India.</p>
+              <div class="mini-sig" style="margin-top:8px;">Prof. (Dr.) P. K. Nanda</div>
+            </div>
+            <div class="vc-podium" style="width:100%; height:140px;"></div>
+          </div>
+        </div>
+        <div class="card-foot"><span>1px gold museum frame with Portrait on left, Podium photo on right, and letter centered.</span><button class="pick-btn" onclick="pick(10)">Select #10</button></div>
+      </div>
+
+      <!-- 11 -->
+      <div class="card" data-id="11">
+        <div class="card-head"><span class="opt-pill">VC Layout #11</span><span class="opt-title">Compact Preview + Expandable Full Letter</span></div>
+        <div class="stage">
+          <div style="display:grid; grid-template-columns:1fr 200px; gap:16px; align-items:center; height:100%;">
+            <div style="display:flex; flex-direction:column; gap:10px;">
+              <div class="mini-h">Message from the Vice Chancellor</div>
+              <p class="mini-p">It gives me immense pleasure to be associated with Allyship, an initiative of Siksha &lsquo;O&rsquo; Anusandhan aimed at promoting inclusive leadership, meaningful industry engagement and collaborative workplace cultures.</p>
+              <span style="font-size:11px; color:var(--gold); font-weight:700; cursor:pointer;" onclick="this.textContent = this.textContent.includes('Read') ? 'Showing full 6-paragraph address ↑' : 'Read Complete Address (6 Paragraphs) ↓'">Read Complete Address (6 Paragraphs) &darr;</span>
+            </div>
+            <div class="vc-img" style="width:100%; height:150px;"></div>
+          </div>
+        </div>
+        <div class="card-foot"><span>Starts at the exact same height as the photo; clicking expands the full 6-paragraph message smoothly.</span><button class="pick-btn" onclick="pick(11)">Select #11</button></div>
+      </div>
+
+      <!-- 12 -->
+      <div class="card" data-id="12">
+        <div class="card-head"><span class="opt-pill">VC Layout #12</span><span class="opt-title">Angled Header Cut + 2-Col Letter</span></div>
+        <div class="stage">
+          <div class="v12-top">
+            <div>
+              <div class="mini-h">Message from the Vice Chancellor</div>
+              <div class="mini-sig" style="margin-top:4px;">Prof. (Dr.) Pradipta Kumar Nanda</div>
+            </div>
+            <div class="vc-img" style="width:95px; height:72px;"></div>
+          </div>
+          <div class="v1-cols">
+            <p class="mini-p">It gives me immense pleasure to be associated with Allyship, promoting inclusive leadership and meaningful industry engagement.</p>
+            <p class="mini-p">Meaningful collaboration between academia and industry is essential for nurturing responsible leadership and innovation.</p>
+          </div>
+        </div>
+        <div class="card-foot"><span>Architectural diagonal top banner holding title &amp; portrait, with 2-column letter below.</span><button class="pick-btn" onclick="pick(12)">Select #12</button></div>
+      </div>
+
+      <!-- 13 -->
+      <div class="card" data-id="13">
+        <div class="card-head"><span class="opt-pill">VC Layout #13</span><span class="opt-title">Annotated Letter (01–06 Marginalia)</span></div>
+        <div class="stage">
+          <div style="display:grid; grid-template-columns:165px 1fr; gap:16px;">
+            <div>
+              <div class="vc-img" style="width:100%; height:125px; margin-bottom:8px;"></div>
+              <div class="mini-sig">Prof. (Dr.) P. K. Nanda</div>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <div class="v13-row"><span class="u gold" style="font-size:10px;">01</span><p class="mini-p">Promoting inclusive leadership and meaningful industry engagement.</p></div>
+              <div class="v13-row"><span class="u gold" style="font-size:10px;">02</span><p class="mini-p">Allyship is a shared responsibility calling for empathy and mentorship.</p></div>
+              <div class="v13-row"><span class="u gold" style="font-size:10px;">03</span><p class="mini-p">Exchanging perspectives on leadership, resilience, and practice.</p></div>
+              <div class="v13-row"><span class="u gold" style="font-size:10px;">04</span><p class="mini-p">Nurturing responsible leadership and innovation across SOA.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-foot"><span>Pairs the letter with numbered gold editorial markers (`01`–`06`) for rapid executive scanning.</span><button class="pick-btn" onclick="pick(13)">Select #13</button></div>
+      </div>
+
+      <!-- 14 -->
+      <div class="card" data-id="14">
+        <div class="card-head"><span class="opt-pill">VC Layout #14</span><span class="opt-title">Dual-Photo Stack (Portrait + Podium)</span></div>
+        <div class="stage">
+          <div style="display:grid; grid-template-columns:1fr 195px; gap:16px; height:100%;">
+            <div style="display:flex; flex-direction:column; justify-content:space-between;">
+              <div class="mini-h">Message from the Vice Chancellor</div>
+              <p class="mini-p">It gives me immense pleasure to be associated with Allyship, an initiative of Siksha &lsquo;O&rsquo; Anusandhan aimed at promoting inclusive leadership and collaborative workplace cultures.</p>
+              <p class="mini-p">At SOA, we strongly believe meaningful collaboration between academia and industry is essential for nurturing responsible leadership.</p>
+              <div class="mini-sig">Prof. (Dr.) Pradipta Kumar Nanda</div>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:10px;">
+              <div class="vc-img" style="width:100%; flex:1;"></div>
+              <div class="vc-podium" style="width:100%; flex:1;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-foot"><span>Stacks 2 real photos (Portrait + Conclave Podium Address) on the right to naturally match the letter&rsquo;s height.</span><button class="pick-btn" onclick="pick(14)">Select #14</button></div>
+      </div>
+
+      <!-- 15 -->
+      <div class="card" data-id="15">
+        <div class="card-head"><span class="opt-pill">VC Layout #15</span><span class="opt-title">Glass Folio Over Blurred Stage Backdrop</span></div>
+        <div class="stage" style="background:linear-gradient(rgba(8,8,10,0.82),rgba(8,8,10,0.9)), url('/conclave-moments/chennai-2/chennai-2-11.jpg') center/cover;">
+          <div style="height:100%; border-radius:16px; background:rgba(18,18,22,0.75); backdrop-filter:blur(12px); border:1px solid rgba(197,168,105,0.35); padding:16px; display:grid; grid-template-columns:1fr 150px; gap:14px; align-items:center;">
+            <div>
+              <div class="mini-h" style="margin-bottom:8px;">Message from the VC</div>
+              <p class="mini-p">It gives me immense pleasure to be associated with Allyship, promoting inclusive leadership and meaningful industry engagement across India.</p>
+              <div class="mini-sig" style="margin-top:8px;">Prof. (Dr.) Pradipta Kumar Nanda</div>
+            </div>
+            <div class="vc-img" style="width:100%; height:130px;"></div>
+          </div>
+        </div>
+        <div class="card-foot"><span>Translucent glassmorphic dossier card floating over a subtle blurred conclave stage photo.</span><button class="pick-btn" onclick="pick(15)">Select #15</button></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const v7Texts = [
+      "It gives me immense pleasure to be associated with Allyship, an initiative of Siksha \u2018O\u2019 Anusandhan aimed at promoting inclusive leadership, meaningful industry engagement and collaborative workplace cultures.",
+      "\u201cAllyship provided an excellent platform for distinguished industry leaders, professionals and academicians to exchange perspectives on leadership, resilience, mentorship and everyday organizational practices.\u201d",
+      "Prof. (Dr.) Pradipta Kumar Nanda \u2014 Vice Chancellor, Siksha \u2018O\u2019 Anusandhan (Deemed to be University), Bhubaneswar."
+    ];
+    function setV7(idx) {
+      document.querySelectorAll('#v7Tabs .v7-tab').forEach((t, i) => t.classList.toggle('active', i === idx));
+      document.getElementById('v7Body').textContent = v7Texts[idx];
+    }
+    function pick(id) {
+      document.querySelectorAll('.card').forEach(c => {
+        const isSel = c.dataset.id == id;
+        c.classList.toggle('selected', isSel);
+        c.querySelector('.pick-btn').innerHTML = isSel ? '&#10003; Selected #' + String(id).padStart(2, '0') : 'Select #' + String(c.dataset.id).padStart(2, '0');
+      });
+    }
+  </script>
+</body>
+</html>

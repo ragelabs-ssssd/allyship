@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALLYSHIP++ — 15 Out-of-the-Box Layout Concepts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #08080A;
+      --surface: #111114;
+      --surface-2: #18181C;
+      --line: rgba(255, 255, 255, 0.12);
+      --gold: #C5A869;
+      --text: #FFFFFF;
+      --muted: #A1A1AA;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      padding: 36px 24px 96px;
+      line-height: 1.5;
+    }
+    .container { max-width: 1520px; margin: 0 auto; }
+    .header {
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 16px;
+    }
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 6px;
+    }
+    h1 {
+      font-family: 'Unbounded', sans-serif;
+      font-size: clamp(22px, 2.8vw, 34px);
+      font-weight: 800;
+    }
+    .sub { color: var(--muted); font-size: 14px; margin-top: 6px; max-width: 760px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(560px, 1fr));
+      gap: 28px;
+    }
+    @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+
+    .layout-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.25s ease;
+    }
+    .layout-card:hover { border-color: rgba(197, 168, 105, 0.55); }
+    .layout-card.selected { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold); }
+
+    .card-head {
+      padding: 16px 22px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      background: #141418;
+    }
+    .opt-pill {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--gold);
+      background: rgba(197, 168, 105, 0.12);
+      border: 1px solid rgba(197, 168, 105, 0.35);
+      padding: 4px 10px;
+      border-radius: 999px;
+      text-transform: uppercase;
+    }
+    .opt-title {
+      font-family: 'Unbounded', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    /* Visual Canvas Stage */
+    .canvas {
+      height: 340px;
+      background: #070709;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--line);
+    }
+    .card-desc {
+      padding: 14px 22px;
+      font-size: 13px;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+    }
+    .pick-btn {
+      padding: 7px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--surface-2);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .layout-card.selected .pick-btn {
+      background: var(--gold);
+      color: #0A0A0A;
+      border-color: var(--gold);
+    }
+
+    /* Shared helpers inside canvases */
+    .u { font-family: 'Unbounded', sans-serif; }
+    .ser { font-family: 'Newsreader', serif; font-style: italic; }
+    .gold { color: var(--gold); }
+    .btn-mini {
+      display: inline-block;
+      background: var(--gold);
+      color: #0A0A0A;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 999px;
+    }
+    .pill-mini {
+      display: inline-block;
+      border: 1px solid rgba(197,168,105,0.45);
+      color: var(--gold);
+      font-size: 9px;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    /* 1. Full-Bleed Cinema + Floating Dock */
+    .l1 {
+      background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.88) 100%), url('/slides/CON01670.jpg') center/cover;
+      height: 100%; padding: 22px; display: flex; flex-direction: column; justify-content: flex-end; position: relative;
+    }
+    .l1-dock {
+      position: absolute; bottom: 20px; right: 20px; background: rgba(12,12,15,0.8); backdrop-filter: blur(10px);
+      border: 1px solid rgba(197,168,105,0.35); border-radius: 14px; padding: 10px 14px; font-size: 10px;
+    }
+
+    /* 2. 50/50 Vertical Curtain */
+    .l2 { display: grid; grid-template-columns: 1fr 1fr; height: 100%; }
+    .l2-left { padding: 24px; display: flex; flex-direction: column; justify-content: space-between; background: #0B0B0E; }
+    .l2-right { background: url('/IMG_7873.jpg') center/cover; position: relative; }
+    .l2-tag { position: absolute; bottom: 16px; left: -24px; background: var(--gold); color: #0A0A0A; padding: 6px 12px; border-radius: 8px; font-size: 10px; font-weight: 800; }
+
+    /* 3. Swiss Broadsheet Grid */
+    .l3 { display: grid; grid-template-columns: 44px 1fr 1fr; grid-template-rows: 1fr 1fr; height: 100%; }
+    .l3-spine { grid-row: 1 / 3; border-right: 1px solid var(--line); writing-mode: vertical-rl; transform: rotate(180deg); display: flex; align-items: center; justify-content: center; font-size: 10px; letter-spacing: 0.25em; color: var(--gold); font-weight: 700; }
+    .l3-cell { padding: 16px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); display: flex; flex-direction: column; justify-content: space-between; }
+
+    /* 4. Kinetic Bento Mosaic */
+    .l4 { padding: 14px; display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: 1fr 1fr; gap: 8px; height: 100%; }
+    .bento { border-radius: 12px; border: 1px solid var(--line); padding: 12px; background: #141418; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; }
+    .b-hero { grid-column: 1 / 3; grid-row: 1 / 3; background: linear-gradient(135deg, #16161B, #0A0A0C); }
+    .b-img1 { grid-column: 3 / 5; background: url('/slides/CON01670.jpg') center/cover; }
+
+    /* 5. Diagonal Wedge */
+    .l5 { position: relative; height: 100%; background: #0A0A0C; }
+    .l5-photo { position: absolute; inset: 0; background: url('/slides/CON01670.jpg') center/cover; clip-path: polygon(52% 0, 100% 0, 100% 100%, 36% 100%); }
+    .l5-text { position: relative; z-index: 2; width: 52%; height: 100%; padding: 26px; display: flex; flex-direction: column; justify-content: center; gap: 12px; }
+
+    /* 6. Concentric Orbital Hub */
+    .l6 { height: 100%; display: flex; align-items: center; justify-content: center; position: relative; background: radial-gradient(circle, rgba(197,168,105,0.12) 0%, transparent 65%); }
+    .ring { position: absolute; border-radius: 999px; border: 1px dashed rgba(197,168,105,0.3); }
+    .c-node { position: absolute; font-size: 9.5px; padding: 4px 9px; border-radius: 999px; background: #121215; border: 1px solid rgba(197,168,105,0.45); color: #fff; cursor: pointer; }
+    .c-node:hover { background: var(--gold); color: #000; }
+
+    /* 7. 3-Panel Triptych Filmstrip */
+    .l7 { height: 100%; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 4px; position: relative; }
+    .l7-p { background-size: cover; background-position: center; filter: brightness(0.42); }
+    .l7-over { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px; }
+
+    /* 8. Z-Layer Collage */
+    .l8 { height: 100%; position: relative; padding: 20px; display: flex; align-items: center; justify-content: center; }
+    .l8-bg { position: absolute; font-size: 62px; font-weight: 800; color: rgba(255,255,255,0.04); top: 14px; left: 16px; }
+    .l8-photo { position: absolute; width: 230px; height: 180px; right: 24px; top: 28px; border-radius: 14px; background: url('/IMG_7873.jpg') center/cover; border: 1px solid var(--line); }
+    .l8-front { position: relative; z-index: 2; width: 300px; margin-right: 120px; margin-top: 40px; background: rgba(18,18,22,0.92); backdrop-filter: blur(12px); border: 1px solid rgba(197,168,105,0.45); border-radius: 16px; padding: 18px; }
+
+    /* 9. Persistent Left-Rail Index */
+    .l9 { display: grid; grid-template-columns: 115px 1fr; height: 100%; }
+    .l9-rail { border-right: 1px solid var(--line); padding: 18px 12px; display: flex; flex-direction: column; justify-content: space-between; font-size: 10px; color: var(--muted); background: #0C0C0E; }
+    .l9-main { padding: 24px; display: flex; flex-direction: column; justify-content: space-between; }
+
+    /* 10. Giant Watermark + Center Spotlight */
+    .l10 { height: 100%; display: flex; align-items: center; justify-content: center; position: relative; }
+    .l10-wm { position: absolute; font-size: 86px; font-weight: 800; color: rgba(197,168,105,0.06); white-space: nowrap; }
+    .l10-box { position: relative; z-index: 2; text-align: center; max-width: 390px; padding: 22px; border-radius: 18px; background: rgba(12,12,15,0.85); border: 1px solid rgba(197,168,105,0.35); }
+
+    /* 11. 4-Quadrant Crosshair */
+    .l11 { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; height: 100%; }
+    .l11-q { padding: 16px; border: 0.5px solid rgba(197,168,105,0.22); display: flex; flex-direction: column; justify-content: center; }
+
+    /* 12. Stepped Cascade */
+    .l12 { height: 100%; padding: 18px 24px; display: flex; flex-direction: column; justify-content: space-between; }
+    .step-1 { align-self: flex-start; max-width: 72%; }
+    .step-2 { align-self: center; max-width: 65%; padding: 10px 14px; border-left: 2px solid var(--gold); background: rgba(255,255,255,0.03); font-size: 12px; }
+    .step-3 { align-self: flex-end; display: flex; gap: 10px; align-items: center; }
+
+    /* 13. Dual Marquee Broadcast */
+    .l13 { height: 100%; display: flex; flex-direction: column; justify-content: space-between; }
+    .tick { padding: 7px 14px; background: var(--gold); color: #0A0A0A; font-size: 10px; font-weight: 800; letter-spacing: 0.14em; white-space: nowrap; overflow: hidden; }
+    .tick.dark { background: #141418; color: var(--gold); border-top: 1px solid var(--line); }
+
+    /* 14. Framed Gallery Passe-Partout */
+    .l14 { height: 100%; padding: 16px; background: #050506; }
+    .l14-mat { height: 100%; border: 1px solid rgba(197,168,105,0.45); display: grid; grid-template-columns: 80px 1fr 80px; gap: 12px; padding: 14px; align-items: center; }
+    .l14-side { height: 100%; border-radius: 10px; background-size: cover; background-position: center; opacity: 0.7; }
+
+    /* 15. Interactive Split Blades */
+    .l15 { height: 100%; display: flex; gap: 4px; padding: 10px; }
+    .blade { flex: 1; border-radius: 14px; border: 1px solid var(--line); background: #141418; padding: 14px; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer; transition: flex 0.35s ease, border-color 0.2s; overflow: hidden; position: relative; }
+    .blade.active { flex: 2.6; border-color: var(--gold); }
+    .blade-bg { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0.22; transition: opacity 0.3s; }
+    .blade.active .blade-bg { opacity: 0.45; }
+    .blade-c { position: relative; z-index: 2; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <span class="eyebrow">ALLYSHIP++ &bull; Creative Architecture Lab</span>
+        <h1>15 Out-of-the-Box Layout Concepts</h1>
+        <p class="sub">15 completely different structural ways to present Allyship (rendered with your <strong>Unbounded + Inter</strong> system). Hover or click interactive layouts (#6 &amp; #15), and select the layout # you want to build!</p>
+      </div>
+    </div>
+
+    <div class="grid">
+      <!-- 01 -->
+      <div class="layout-card" data-id="1">
+        <div class="card-head"><span class="opt-pill">Layout #01</span><span class="opt-title">Full-Bleed Cinema + Floating Dock</span></div>
+        <div class="canvas">
+          <div class="l1">
+            <span class="pill-mini" style="width:fit-content; margin-bottom:10px;">SOA Leadership Series</span>
+            <div class="u" style="font-size:20px; line-height:1.1; max-width:70%;">WHERE INDUSTRY <span class="gold">MEETS RESEARCH</span></div>
+            <div style="margin-top:12px;"><span class="btn-mini">Request Invitation &rsaquo;</span></div>
+            <div class="l1-dock">
+              <div style="color:var(--gold); font-weight:700;">6 METRO CHAPTERS</div>
+              <div style="color:#d4d4d8;">BLR &bull; HYD &bull; KOL &bull; MUM &bull; CHE</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-desc"><span>Edge-to-edge photography with bottom-left headline &amp; floating city dock.</span><button class="pick-btn" onclick="pick(1)">Select #01</button></div>
+      </div>
+
+      <!-- 02 -->
+      <div class="layout-card" data-id="2">
+        <div class="card-head"><span class="opt-pill">Layout #02</span><span class="opt-title">50/50 Split Vertical Curtain</span></div>
+        <div class="canvas">
+          <div class="l2">
+            <div class="l2-left">
+              <span class="pill-mini" style="width:fit-content;">National Conclave</span>
+              <div>
+                <div class="u" style="font-size:17px; line-height:1.1;">INDUSTRY MEETS <span class="gold">RESEARCH</span></div>
+                <p style="font-size:11px; color:var(--muted); margin-top:8px;">Bridging corporate boardrooms and academic excellence.</p>
+              </div>
+              <span class="btn-mini" style="width:fit-content;">Get Invited &rsaquo;</span>
+            </div>
+            <div class="l2-right">
+              <div class="l2-tag u">500+ CXOS</div>
+            </div>
+          </div>
+        </div>
+        <div class="card-desc"><span>Crisp dark editorial half paired with full-height photo &amp; overlapping gold badge.</span><button class="pick-btn" onclick="pick(2)">Select #02</button></div>
+      </div>
+
+      <!-- 03 -->
+      <div class="layout-card" data-id="3">
+        <div class="card-head"><span class="opt-pill">Layout #03</span><span class="opt-title">Swiss Broadsheet Spine Grid</span></div>
+        <div class="canvas">
+          <div class="l3">
+            <div class="l3-spine u">ALLYSHIP++ &bull; EDITION 2.0</div>
+            <div class="l3-cell">
+              <span style="font-size:10px; color:var(--gold); font-weight:700;">01 / MANDATE</span>
+              <div class="u" style="font-size:15px;">WHERE INDUSTRY <span class="gold">MEETS</span> TALENT</div>
+            </div>
+            <div class="l3-cell" style="background:url('/slides/CON01670.jpg') center/cover;"></div>
+            <div class="l3-cell">
+              <p style="font-size:11px; color:#d4d4d8;">6 Metropolitan Conclaves uniting CHROs, Olympians &amp; University Deans.</p>
+              <span class="btn-mini" style="width:fit-content;">Explore &rarr;</span>
+            </div>
+            <div class="l3-cell">
+              <div class="u gold" style="font-size:24px;">150+</div>
+              <span style="font-size:11px; color:var(--muted);">Global Enterprise Partners</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-desc"><span>Monocle-style hairline grid with vertical rotated typography spine.</span><button class="pick-btn" onclick="pick(3)">Select #03</button></div>
+      </div>
+
+      <!-- 04 -->
+      <div class="layout-card" data-id="4">
+        <div class="card-head"><span class="opt-pill">Layout #04</span><span class="opt-title">Kinetic Bento Mosaic</span></div>
+        <div class="canvas">
+          <div class="l4">
+            <div class="bento b-hero">
+              <span class="pill-mini" style="width:fit-content;">Allyship++ 2.0</span>
+              <div class="u" style="font-size:16px;">WHERE INDUSTRY <span class="gold">MEETS RESEARCH</span></div>
+              <span class="btn-mini" style="width:fit-content;">Request Invite</span>
+            </div>
+            <div class="bento b-img1"></div>
+            <div class="bento"><div class="u gold" style="font-size:18px;">500+</div><div style="font-size:10px; color:var(--muted);">Boardroom CXOs</div></div>
+            <div class="bento"><div class="ser" style="font-size:12px;">&ldquo;Beyond hiring.&rdquo;</div><div style="font-size:9px; color:var(--gold);">CHRO FORUM</div></div>
+          </div>
+        </div>
+        <div class="card-desc"><span>No traditional banner — opens straight into modular interactive Bento tiles.</span><button class="pick-btn" onclick="pick(4)">Select #04</button></div>
+      </div>
+
+      <!-- 05 -->
+      <div class="layout-card" data-id="5">
+        <div class="card-head"><span class="opt-pill">Layout #05</span><span class="opt-title">Diagonal Architectural Wedge</span></div>
+        <div class="canvas">
+          <div class="l5">
+            <div class="l5-photo"></div>
+            <div class="l5-text">
+              <span class="pill-mini" style="width:fit-content;">National Series</span>
+              <div class="u" style="font-size:18px; line-height:1.1;">INDUSTRY MEETS <span class="gold">MENTORSHIP</span></div>
+              <p style="font-size:11px; color:#d4d4d8;">Dynamic geometric split cutting clean typography into live photography.</p>
+              <span class="btn-mini" style="width:fit-content;">Join Conclave</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-desc"><span>High-energy diagonal wedge breaking away from horizontal rectangles.</span><button class="pick-btn" onclick="pick(5)">Select #05</button></div>
+      </div>
+
+      <!-- 06 -->
+      <div class="layout-card" data-id="6">
+        <div class="card-head"><span class="opt-pill">Layout #06</span><span class="opt-title">Concentric Orbital Hub (Hover Cities)</span></div>
+        <div class="canvas">
+          <div class="l6">
+            <div class="ring" style="width:185px; height:185px;"></div>
+            <div class="ring" style="width:275px; height:275px;"></div>
+            <div style="text-align:center; z-index:2; max-width:170px;">
+              <div class="u gold" style="font-size:12px;">ALLYSHIP++</div>
+              <div style="font-size:11px; color:#d4d4d8; margin-top:4px;">Click a city hub to preview</div>
+            </div>
+            <div class="c-node" style="top:24px; left:42%;">Bengaluru</div>
+            <div class="c-node" style="bottom:24px; left:42%;">Hyderabad</div>
+            <div class="c-node" style="left:16%; top:46%;">Chennai</div>
+            <div class="c-node" style="right:16%; top:46%;">Mumbai</div>
+            <div class="c-node" style="top:64px; right:22%;">Kolkata</div>
+          </div>
+        </div>
+        <div class="card-desc"><span>Interactive radial city map orbiting the central Allyship core.</span><button class="pick-btn" onclick="pick(6)">Select #06</button></div>
+      </div>
+
+      <!-- 07 -->
+      <div class="layout-card" data-id="7">
+        <div class="card-head"><span class="opt-pill">Layout #07</span><span class="opt-title">3-Panel Cinema Triptych</span></div>
+        <div class="canvas">
+          <div class="l7">
+            <div class="l7-p" style="background-image:url('/slides/CON01670.jpg');"></div>
+            <div class="l7-p" style="background-image:url('/IMG_7873.jpg');"></div>
+            <div class="l7-p" style="background-image:url('/conclave-moments/hyderabad-2/hyderabad-2-17.jpg');"></div>
+            <div class="l7-over">
+              <span class="pill-mini" style="margin-bottom:10px;">6 Cities &bull; 1 Vision</span>
+              <div class="u" style="font-size:21px;">WHERE INDUSTRY MEETS <span class="gold">RESEARCH</span></div>
+              <div style="margin-top:12px;"><span class="btn-mini">Explore Chapters</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-desc"><span>Three side-by-side conclave photo panels unified by centered monumental type.</span><button class="pick-btn" onclick="pick(7)">Select #07</button></div>
+      </div>
+
+      <!-- 08 -->
+      <div class="layout-card" data-id="8">
+        <div class="card-head"><span class="opt-pill">Layout #08</span><span class="opt-title">Overlapping 3D Z-Layer Collage</span></div>
+        <div class="canvas">
+          <div class="l8">
+            <div class="l8-bg u">ALLYSHIP</div>
+            <div class="l8-photo"></div>
+            <div class="l8-front">
+              <span class="pill-mini" style="margin-bottom:8px;">Editorial Layer</span>
+              <div class="u" style="font-size:15px;">MEETS <span class="gold">LEADERSHIP</span></div>
+              <p style="font-size:11px; color:var(--muted); margin:8px 0;">Floating glassmorphic foreground overlapping live photography.</p>
+              <span class="btn-mini">Get Invited</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-desc"><span>Staggered Z-axis depth with watermark, photo layer, and glass card.</span><button class="pick-btn" onclick="pick(8)">Select #08</button></div>
+      </div>
+
+      <!-- 09 -->
+      <div class="layout-card" data-id="9">
+        <div class="card-head"><span class="opt-pill">Layout #09</span><span class="opt-title">Persistent Left-Rail Exhibition</span></div>
+        <div class="canvas">
+          <div class="l9">
+            <div class="l9-rail">
+              <div class="u gold" style="font-size:11px;">SOA++</div>
+              <div style="display:flex; flex-direction:column; gap:8px;">
+                <span style="color:#fff; font-weight:700;">01 Overview</span>
+                <span>02 Chapters</span>
+                <span>03 Leadership</span>
+                <span>04 Impact</span>
+              </div>
+              <span style="font-size:9px;">2026</span>
+            </div>
+            <div class="l9-main">
+              <span class="pill-mini" style="width:fit-content;">Chapter Dossier</span>
+              <div class="u" style="font-size:20px;">WHERE INDUSTRY MEETS <span class="gold">INNOVATION</span></div>
+              <span class="btn-mini" style="width:fit-content;">Request Invitation</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-desc"><span>Architectural sidebar index paired with an uncluttered exhibition canvas.</span><button class="pick-btn" onclick="pick(9)">Select #09</button></div>
+      </div>
+
+      <!-- 10 -->
+      <div class="layout-card" data-id="10">
+        <div class="card-head"><span class="opt-pill">Layout #10</span><span class="opt-title">Giant Watermark + Centerpiece</span></div>
+        <div class="canvas">
+          <div class="l10">
+            <div class="l10-wm u">ALLYSHIP++</div>
+            <div class="l10-box">
+              <span class="pill-mini" style="margin-bottom:8px;">Executive Forum</span>
+              <div class="u" style="font-size:18px;">INDUSTRY MEETS <span class="gold">TALENT</span></div>
+              <p style="font-size:11px; color:var(--muted); margin:10px 0;">Centered focal card floating over oversized architectural typography.</p>
+              <span class="btn-mini">Explore Chapters</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-desc"><span>Bold background brand typography framing a razor-sharp central focal card.</span><button class="pick-btn" onclick="pick(10)">Select #10</button></div>
+      </div>
+
+      <!-- 11 -->
+      <div class="layout-card" data-id="11">
+        <div class="card-head"><span class="opt-pill">Layout #11</span><span class="opt-title">4-Quadrant Crosshair Grid</span></div>
+        <div class="canvas">
+          <div class="l11">
+            <div class="l11-q"><span class="pill-mini" style="width:fit-content; margin-bottom:6px;">01</span><div class="u" style="font-size:15px;">WHERE INDUSTRY <span class="gold">MEETS</span></div></div>
+            <div class="l11-q" style="background:url('/slides/CON01670.jpg') center/cover;"></div>
+            <div class="l11-q"><p style="font-size:11px; color:#d4d4d8;">Building enduring relationships across 6 Indian metro hubs.</p></div>
+            <div class="l11-q" style="align-items:flex-start;"><div class="u gold" style="font-size:18px; margin-bottom:8px;">RESEARCH</div><span class="btn-mini">Get Invited &rsaquo;</span></div>
+          </div>
+        </div>
+        <div class="card-desc"><span>Precision 2&times;2 architectural crosshair dividing headline, photo, mission &amp; CTA.</span><button class="pick-btn" onclick="pick(11)">Select #11</button></div>
+      </div>
+
+      <!-- 12 -->
+      <div class="layout-card" data-id="12">
+        <div class="card-head"><span class="opt-pill">Layout #12</span><span class="opt-title">Stepped Z-Cascade Flow</span></div>
+        <div class="canvas">
+          <div class="l12">
+            <div class="step-1">
+              <span class="pill-mini" style="margin-bottom:6px;">01 &bull; Opening</span>
+              <div class="u" style="font-size:18px;">WHERE INDUSTRY MEETS <span class="gold">RESEARCH</span></div>
+            </div>
+            <div class="step-2">
+              Bringing corporate leaders, academic thinkers, and national icons into one dialogue.
+            </div>
+            <div class="step-3">
+              <span style="font-size:11px; color:var(--muted);">6 Metro Chapters</span>
+              <span class="btn-mini">Request Invite &rsaquo;</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-desc"><span>Diagonal staircase flow guiding the eye naturally from top-left to bottom-right CTA.</span><button class="pick-btn" onclick="pick(12)">Select #12</button></div>
+      </div>
+
+      <!-- 13 -->
+      <div class="layout-card" data-id="13">
+        <div class="card-head"><span class="opt-pill">Layout #13</span><span class="opt-title">Dual Marquee Live Broadcast</span></div>
+        <div class="canvas">
+          <div class="l13">
+            <div class="tick u">BENGALURU &bull; HYDERABAD &bull; KOLKATA &bull; MUMBAI &bull; CHENNAI &bull; BHUBANESWAR</div>
+            <div style="padding:22px; text-align:center;">
+              <div class="u" style="font-size:20px;">INDUSTRY MEETS <span class="gold">LEADERSHIP</span></div>
+              <p style="font-size:12px; color:var(--muted); margin:8px 0 12px;">Live summit energy framed by opposing editorial ribbons.</p>
+              <span class="btn-mini">Join Series</span>
+            </div>
+            <div class="tick dark u">500+ CXOS &bull; 150+ ENTERPRISE PARTNERS &bull; NIRF #15 UNIVERSITY</div>
+          </div>
+        </div>
+        <div class="card-desc"><span>Kinetic top-and-bottom ticker bars framing a focused summit stage.</span><button class="pick-btn" onclick="pick(13)">Select #13</button></div>
+      </div>
+
+      <!-- 14 -->
+      <div class="layout-card" data-id="14">
+        <div class="card-head"><span class="opt-pill">Layout #14</span><span class="opt-title">Gallery Passe-Partout Frame</span></div>
+        <div class="canvas">
+          <div class="l14">
+            <div class="l14-mat">
+              <div class="l14-side" style="background-image:url('/slides/CON01670.jpg');"></div>
+              <div style="text-align:center; display:flex; flex-direction:column; gap:10px; align-items:center;">
+                <span class="pill-mini">Curated Exhibition</span>
+                <div class="u" style="font-size:17px;">ALLYSHIP <span class="gold">2.0</span></div>
+                <p style="font-size:11px; color:var(--muted);">Where relationships precede recruitment.</p>
+                <span class="btn-mini">Enter Gallery</span>
+              </div>
+              <div class="l14-side" style="background-image:url('/IMG_7873.jpg');"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-desc"><span>1px gold museum mat framing symmetrical vertical portrait side-strips.</span><button class="pick-btn" onclick="pick(14)">Select #14</button></div>
+      </div>
+
+      <!-- 15 -->
+      <div class="layout-card" data-id="15">
+        <div class="card-head"><span class="opt-pill">Layout #15</span><span class="opt-title">Interactive Accordion Blades (Click Blades)</span></div>
+        <div class="canvas">
+          <div class="l15" id="blades">
+            <div class="blade active" onclick="openBlade(0)">
+              <div class="blade-bg" style="background-image:url('/conclave-moments/hyderabad-2/hyderabad-2-17.jpg');"></div>
+              <div class="blade-c"><div class="u gold" style="font-size:11px;">01</div><div class="u" style="font-size:13px;">HYDERABAD</div></div>
+            </div>
+            <div class="blade" onclick="openBlade(1)">
+              <div class="blade-bg" style="background-image:url('/slides/CON01670.jpg');"></div>
+              <div class="blade-c"><div class="u gold" style="font-size:11px;">02</div><div class="u" style="font-size:13px;">CHENNAI</div></div>
+            </div>
+            <div class="blade" onclick="openBlade(2)">
+              <div class="blade-bg" style="background-image:url('/IMG_7873.jpg');"></div>
+              <div class="blade-c"><div class="u gold" style="font-size:11px;">03</div><div class="u" style="font-size:13px;">MUMBAI</div></div>
+            </div>
+            <div class="blade" onclick="openBlade(3)">
+              <div class="blade-bg" style="background-image:url('/bengaluru-2.jpg');"></div>
+              <div class="blade-c"><div class="u gold" style="font-size:11px;">04</div><div class="u" style="font-size:13px;">BENGALURU</div></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-desc"><span>4 expandable vertical chapter blades that glide open on click/hover.</span><button class="pick-btn" onclick="pick(15)">Select #15</button></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function pick(id) {
+      document.querySelectorAll('.layout-card').forEach(c => {
+        const isSel = c.dataset.id == id;
+        c.classList.toggle('selected', isSel);
+        c.querySelector('.pick-btn').innerHTML = isSel ? '&#10003; Selected #' + String(id).padStart(2, '0') : 'Select #' + String(c.dataset.id).padStart(2, '0');
+      });
+    }
+    function openBlade(idx) {
+      document.querySelectorAll('#blades .blade').forEach((b, i) => b.classList.toggle('active', i === idx));
+    }
+  </script>
+</body>
+</html>
