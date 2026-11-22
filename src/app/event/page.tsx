@@ -1116,7 +1116,7 @@ function EventContent() {
                 <span className="italic font-normal">Conclaves</span>
               </h1>
 
-              <p className="text-base sm:text-lg font-serif text-content-muted italic">
+              <p className="text-base sm:text-lg font-display text-content-muted italic">
                 Where Corporate Chairs, Olympians, and Thinkers Connect
               </p>
 

@@ -36,7 +36,7 @@ export default function DiscoverSoaPage() {
               <span className="italic font-normal sm:whitespace-nowrap">Siksha &lsquo;O&rsquo; Anusandhan</span>
             </h1>
 
-            <p className="text-base sm:text-lg font-serif text-content-muted italic">
+            <p className="text-base sm:text-lg font-display text-content-muted italic">
               Three Decades of Exploration · A Living Vision for Tomorrow
             </p>
 
