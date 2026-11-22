@@ -364,7 +364,7 @@ export default function AboutPage() {
 
       {/* 7. INSTITUTIONAL CALL TO ACTION */}
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
-        <div className="relative rounded-3xl p-8 sm:p-14 lg:p-16 text-center border border-line shadow-2xl max-w-4xl mx-auto space-y-8 bg-gradient-to-b from-surface-2 to-surface overflow-hidden">
+        <div className="relative rounded-3xl p-8 sm:p-14 lg:p-16 text-center border border-line shadow-2xl max-w-5xl mx-auto space-y-8 bg-gradient-to-b from-surface-2 to-surface overflow-hidden">
           {/* Subtle gold glow behind card */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-[radial-gradient(ellipse_at_center,rgba(197,168,105,0.15),transparent_70%)] pointer-events-none" />
 
@@ -377,7 +377,7 @@ export default function AboutPage() {
               Engage with SOA Leadership
             </h2>
 
-            <p className="text-base sm:text-lg text-content-secondary max-w-xl mx-auto leading-relaxed font-normal">
+            <p className="text-base sm:text-lg text-content-secondary max-w-3xl mx-auto leading-relaxed font-normal">
               Corporate directors, talent strategists, and engineering leaders are invited to join our closed-door conclaves, co-author live curricula, and co-establish dedicated campus Centres of Excellence.
             </p>
           </div>
