@@ -7,6 +7,7 @@ import {
   ShieldCheck,
   ArrowRight,
   Medal,
+  Quote,
 } from "lucide-react";
 import { GetInvitedModal } from "@/components/GetInvitedModal";
 import { HeroBackdrop } from "@/components/HeroBackdrop";
@@ -182,10 +183,10 @@ export default function AboutPage() {
         id="vice-chancellor-mandate"
         className="py-16 lg:py-20 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line"
       >
-        <div className="bg-surface rounded-3xl p-8 sm:p-12 border border-line shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-start group">
+        <div className="bg-surface rounded-3xl p-8 sm:p-12 border border-line shadow-xl overflow-hidden grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-stretch group">
           {/* Text on Left */}
-          <div className="md:col-span-7 space-y-6">
-            <div className="space-y-4">
+          <div className="lg:col-span-7 flex flex-col justify-between space-y-6">
+            <div className="space-y-5">
               <div className="space-y-1.5">
                 <span className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-accent block">
                   Academic Direction &amp; Leadership
@@ -195,7 +196,7 @@ export default function AboutPage() {
                 </h2>
               </div>
 
-              <div className="space-y-4 font-sans text-sm sm:text-base font-normal tracking-[0.01em] leading-relaxed text-content-secondary">
+              <div className="space-y-4 font-sans text-[15px] sm:text-base font-normal tracking-[0.005em] leading-[1.78] text-content-secondary text-justify hyphens-auto">
                 <p>
                   It gives me immense pleasure to be associated with Allyship, an initiative of Siksha &lsquo;O&rsquo; Anusandhan (Deemed to be University) aimed at promoting inclusive leadership, meaningful industry engagement and collaborative workplace cultures.
                 </p>
@@ -217,39 +218,78 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="pt-4 border-t border-line">
-              <h4 className="font-display text-base font-semibold tracking-normal text-content">
-                Prof. (Dr.) Pradipta Kumar Nanda
-              </h4>
-              <p className="font-sans text-xs font-normal tracking-[0.01em] leading-relaxed text-content-muted mt-0.5">
-                Vice Chancellor
-              </p>
-              <p className="font-sans text-xs font-normal tracking-[0.01em] leading-relaxed text-content-muted">
-                Siksha &lsquo;O&rsquo; Anusandhan (Deemed to be University)
-              </p>
+            <div className="pt-5 border-t border-line flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+              <div>
+                <h4 className="font-display text-lg font-bold tracking-normal text-content">
+                  Prof. (Dr.) Pradipta Kumar Nanda
+                </h4>
+                <p className="font-sans text-xs font-medium tracking-[0.02em] text-accent mt-0.5">
+                  Vice Chancellor &bull; Siksha &lsquo;O&rsquo; Anusandhan (Deemed to be University)
+                </p>
+              </div>
             </div>
           </div>
 
-          {/* Photo on Right: Proper Uncropped Whole Figure Framing */}
-          <div className="md:col-span-5 md:sticky md:top-28 relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-surface-3 border border-line shadow-2xl">
-            <Image
-              src="/leadership/pradipta-kumar-nanda.jpg"
-              alt="Vice-Chancellor Prof. Pradipta Kumar Nanda sharing academic direction at Allyship++ Conclave"
-              fill
-              sizes="(max-width: 768px) 100vw, 40vw"
-              className="object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out"
-              style={{ objectPosition: "50% 20%" }}
-            />
-            {/* Subtle Gradient Scrim & Rim Lighting */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
-            <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none" />
+          {/* Right Column: Photo + Filled Editorial Cards Below */}
+          <div className="lg:col-span-5 flex flex-col justify-between gap-6">
+            {/* Photo Card */}
+            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-surface-3 border border-line shadow-2xl">
+              <Image
+                src="/leadership/pradipta-kumar-nanda.jpg"
+                alt="Vice-Chancellor Prof. Pradipta Kumar Nanda sharing academic direction at Allyship++ Conclave"
+                fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                className="object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+                style={{ objectPosition: "50% 20%" }}
+              />
+              {/* Subtle Gradient Scrim & Rim Lighting */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none" />
 
-            {/* Glassmorphic VC Badge */}
-            <div className="absolute top-4 right-4 z-10">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md text-white/95 border border-accent/40 font-sans text-[10px] font-bold uppercase tracking-[0.16em] shadow-lg shadow-black/40">
-                <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-                Vice-Chancellor
-              </span>
+              {/* Glassmorphic VC Badge */}
+              <div className="absolute top-4 right-4 z-10">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md text-white/95 border border-accent/40 font-sans text-[10px] font-bold uppercase tracking-[0.16em] shadow-lg shadow-black/40">
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+                  Vice-Chancellor
+                </span>
+              </div>
+            </div>
+
+            {/* Pull-Quote Excerpt Card */}
+            <div className="p-6 rounded-2xl bg-surface-2 border border-line space-y-3">
+              <Quote className="w-6 h-6 text-accent opacity-80" />
+              <blockquote className="font-serif italic text-base sm:text-lg leading-relaxed text-content text-justify hyphens-auto">
+                &ldquo;Allyship is much more than a concept; it is a shared responsibility that calls for empathy, mutual respect, mentorship and the willingness to empower others.&rdquo;
+              </blockquote>
+            </div>
+
+            {/* Institutional Office & Credentials Card */}
+            <div className="p-6 rounded-2xl bg-surface-2 border border-line space-y-4 flex-1 flex flex-col justify-between">
+              <div className="space-y-3">
+                <span className="font-display text-[10px] font-bold uppercase tracking-[0.18em] text-accent block">
+                  Office of the Vice-Chancellor
+                </span>
+                <div className="grid grid-cols-2 gap-3 pt-1">
+                  <div className="p-3 rounded-xl bg-surface border border-line">
+                    <div className="font-heading text-lg font-bold text-content">NIRF #15</div>
+                    <div className="font-sans text-[11px] text-content-muted mt-0.5">University in India</div>
+                  </div>
+                  <div className="p-3 rounded-xl bg-surface border border-line">
+                    <div className="font-heading text-lg font-bold text-content">NAAC A++</div>
+                    <div className="font-sans text-[11px] text-content-muted mt-0.5">Accredited University</div>
+                  </div>
+                </div>
+                <p className="font-sans text-xs text-content-muted leading-relaxed text-justify">
+                  Strengthening industry-academia partnerships, responsible leadership, and inclusive workplace cultures across India.
+                </p>
+              </div>
+              <Link
+                href="/discover-soa"
+                className="inline-flex items-center justify-between w-full pt-3 border-t border-line text-xs font-display font-bold uppercase tracking-[0.14em] text-accent hover:text-content transition-colors"
+              >
+                <span>Explore Siksha &lsquo;O&rsquo; Anusandhan</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
           </div>
         </div>
