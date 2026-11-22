@@ -76,7 +76,7 @@ export default function DiscoverSoaPage() {
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
             NIRF India Rankings — 2025
           </h2>
-          <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal max-w-5xl mx-auto lg:whitespace-nowrap">
+          <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal max-w-5xl mx-auto">
             Consistently ranked among India&apos;s Top 25 Universities across every edition of the NIRF framework.
           </p>
         </div>
@@ -94,7 +94,7 @@ export default function DiscoverSoaPage() {
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
             International Rankings &amp; Worldwide Impact
           </h2>
-          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-5xl mx-auto lg:whitespace-nowrap">
+          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-5xl mx-auto">
             Ranked among elite global institutions by Quacquarelli Symonds (QS World) and Times Higher Education (THE).
           </p>
         </div>
@@ -111,7 +111,7 @@ export default function DiscoverSoaPage() {
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
             Accreditations &amp; Sovereign Recognitions
           </h2>
-          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-5xl mx-auto lg:whitespace-nowrap">
+          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-5xl mx-auto">
             Validated by national statutory authorities, healthcare boards, laboratory accreditors, and global standards bodies.
           </p>
         </div>

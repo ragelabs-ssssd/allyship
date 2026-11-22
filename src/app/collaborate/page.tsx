@@ -176,7 +176,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
               <span className="block italic font-normal sm:whitespace-nowrap">Co-Create the Future</span>
             </h1>
 
-            <p className="text-base sm:text-lg font-display text-content-muted italic text-left sm:text-right lg:whitespace-nowrap">
+            <p className="text-base sm:text-lg font-display text-content-muted italic text-left sm:text-right">
               Co-Innovate. Sponsor Applied Research. Build Strategic Talent Corridors.
             </p>
 
@@ -214,7 +214,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
             Enterprise Collaboration Pathways
           </h2>
-          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-5xl mx-auto lg:whitespace-nowrap">
+          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-5xl mx-auto">
             Bilateral corporate engagements accelerating enterprise innovation, research, and talent resilience.
           </p>
         </div>
@@ -266,7 +266,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
             A Trusted Bridge to Enterprise Leadership
           </h2>
-          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-5xl lg:whitespace-nowrap">
+          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-5xl">
             Decades of sustained corporate trust across engineering, management, clinical sciences, and research.
           </p>
         </div>
@@ -328,7 +328,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
             Research Infrastructure &amp; Living Laboratories
           </h2>
-          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-5xl mx-auto lg:whitespace-nowrap">
+          <p className="text-base text-content-secondary leading-relaxed font-normal max-w-5xl mx-auto">
             A 127-acre academic biome encompassing enterprise engineering labs, teaching hospitals, and research hubs.
           </p>
         </div>
@@ -430,7 +430,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
               Submit an Industry Problem Statement
             </h2>
-            <p className="text-base text-content-secondary leading-relaxed font-normal max-w-2xl lg:whitespace-nowrap">
+            <p className="text-base text-content-secondary leading-relaxed font-normal text-left md:text-justify">
               Submit your enterprise bottleneck, AI prototyping need, or research challenge directly to our corporate team.
             </p>
 
