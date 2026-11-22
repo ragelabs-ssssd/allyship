@@ -177,12 +177,12 @@ export default function AboutPage() {
         <BentoGridConcept />
       </section>
 
-      {/* 4. MESSAGE FROM VICE-CHANCELLOR PROF. PRADIPTA KUMAR NANDA */}
+      {/* 4. MESSAGE FROM THE VICE CHANCELLOR */}
       <section
         id="vice-chancellor-mandate"
         className="py-16 lg:py-20 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line"
       >
-        <div className="bg-surface rounded-3xl p-8 sm:p-12 border border-line shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-center group">
+        <div className="bg-surface rounded-3xl p-8 sm:p-12 border border-line shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-start group">
           {/* Text on Left */}
           <div className="md:col-span-7 space-y-6">
             <div className="space-y-4">
@@ -191,31 +191,47 @@ export default function AboutPage() {
                   Academic Direction &amp; Leadership
                 </span>
                 <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-[1.15] text-content">
-                  Message from Prof. Pradipta Kumar Nanda
+                  Message from the Vice Chancellor
                 </h2>
               </div>
 
-              <p className="font-sans text-sm sm:text-base font-normal tracking-[0.01em] leading-relaxed text-content-muted">
-                As Vice-Chancellor of Siksha &apos;O&apos; Anusandhan (SOA) Deemed to be University, Prof. Pradipta Kumar Nanda steers the institution&apos;s academic architecture, national research mandates, and transformative industry-academia covenants.
-              </p>
-
-              <blockquote className="font-display italic font-normal tracking-normal text-base sm:text-lg text-content leading-relaxed border-l-2 border-accent pl-5 py-3.5 bg-surface-2 rounded-r-xl shadow-inner">
-                &ldquo;India&apos;s economic ascendancy demands that premier higher-education institutions and commercial enterprises march in lockstep. ALLYSHIP++ is SOA&apos;s national commitment to turn university laboratories into high-octane engines of sovereign technological capability.&rdquo;
-              </blockquote>
+              <div className="space-y-4 font-sans text-sm sm:text-base font-normal tracking-[0.01em] leading-relaxed text-content-secondary">
+                <p>
+                  It gives me immense pleasure to be associated with Allyship, an initiative of Siksha &lsquo;O&rsquo; Anusandhan (Deemed to be University) aimed at promoting inclusive leadership, meaningful industry engagement and collaborative workplace cultures.
+                </p>
+                <p>
+                  In today&apos;s rapidly evolving professional environment, allyship is much more than a concept; it is a shared responsibility that calls for empathy, mutual respect, mentorship and the willingness to empower others. Building inclusive and high-performing organizations requires leaders who value diversity, encourage collaboration and create opportunities for everyone to contribute and grow.
+                </p>
+                <p>
+                  Allyship provided an excellent platform for distinguished industry leaders, professionals and academicians to exchange perspectives on leadership, resilience, mentorship and the importance of translating allyship into everyday organizational practices. The inspiring interactions and thought-provoking deliberations reaffirmed the importance of strong industry-academia partnerships in preparing future-ready professionals and organizations.
+                </p>
+                <p>
+                  At SOA, we strongly believe that meaningful collaboration between academia and industry is essential for nurturing responsible leadership, encouraging innovation and addressing emerging professional challenges. Initiatives such as Allyship strengthen this commitment by bringing diverse perspectives together and inspiring positive action.
+                </p>
+                <p>
+                  The various activities and programmes undertaken under this initiative demonstrate our collective commitment to building a more inclusive and compassionate society. I deeply appreciate the efforts of everyone associated with this endeavour and encourage them to continue working towards strengthening the spirit of Allyship.
+                </p>
+                <p>
+                  I extend my best wishes to the entire team for their continued efforts and success.
+                </p>
+              </div>
             </div>
 
             <div className="pt-4 border-t border-line">
               <h4 className="font-display text-base font-semibold tracking-normal text-content">
-                Prof. Pradipta Kumar Nanda
+                Prof. (Dr.) Pradipta Kumar Nanda
               </h4>
               <p className="font-sans text-xs font-normal tracking-[0.01em] leading-relaxed text-content-muted mt-0.5">
-                Vice-Chancellor, Siksha &apos;O&apos; Anusandhan (SOA) Deemed to be University
+                Vice Chancellor
+              </p>
+              <p className="font-sans text-xs font-normal tracking-[0.01em] leading-relaxed text-content-muted">
+                Siksha &lsquo;O&rsquo; Anusandhan (Deemed to be University)
               </p>
             </div>
           </div>
 
           {/* Photo on Right: Proper Uncropped Whole Figure Framing */}
-          <div className="md:col-span-5 relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-surface-3 border border-line shadow-2xl">
+          <div className="md:col-span-5 md:sticky md:top-28 relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-surface-3 border border-line shadow-2xl">
             <Image
               src="/leadership/pradipta-kumar-nanda.jpg"
               alt="Vice-Chancellor Prof. Pradipta Kumar Nanda sharing academic direction at Allyship++ Conclave"
