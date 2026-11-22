@@ -170,7 +170,7 @@ export function InitiativeEnrollmentForm({ initiative }: EnrollmentFormProps) {
         </button>
       </div>
 
-      <div className="flex items-center gap-2 text-[11px] text-content-muted justify-center pt-1">
+      <div className="flex items-center gap-2 text-xs text-content-muted justify-center pt-1">
         <ShieldCheck className="w-3.5 h-3.5 text-success" />
         <span>Strict privacy. We never share attendee lists.</span>
       </div>

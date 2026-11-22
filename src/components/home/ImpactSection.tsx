@@ -92,7 +92,7 @@ export function ImpactSection() {
         {/* Section Header */}
         <SectionReveal className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 pb-8 border-b border-line">
           <div>
-            <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
+            <span className="font-sans text-xs font-semibold uppercase tracking-[0.14em] text-accent">
               The Reach of Our Alliance
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight mt-2">
@@ -101,7 +101,7 @@ export function ImpactSection() {
           </div>
           <Link
             href="/impact"
-            className="inline-flex items-center gap-1.5 font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-content-secondary hover:text-accent transition-colors group shrink-0"
+            className="inline-flex items-center gap-1.5 font-sans text-xs font-semibold uppercase tracking-[0.14em] text-content-secondary hover:text-accent transition-colors group shrink-0"
           >
             <span>View Full Impact Dossier</span>
             <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

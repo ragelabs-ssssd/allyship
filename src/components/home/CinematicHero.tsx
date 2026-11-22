@@ -113,7 +113,7 @@ export function CinematicHero({ onOpenInvite }: CinematicHeroProps) {
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className="flex items-center gap-3 flex-wrap"
             >
-              <span className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-surface-2 border border-accent/30 shadow-sm font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
+              <span className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-surface-2 border border-accent/30 shadow-sm font-sans text-xs font-semibold uppercase tracking-[0.14em] text-accent">
                 <span>Siksha &lsquo;O&rsquo; Anusandhan Leadership Series</span>
               </span>
             </motion.div>
@@ -353,7 +353,7 @@ export function CinematicHero({ onOpenInvite }: CinematicHeroProps) {
                 <div className="absolute bottom-0 inset-x-0 p-5 sm:p-6 lg:p-7 text-content space-y-1.5 sm:space-y-2 z-30 pointer-events-none">
                   <div className="flex items-center gap-2">
                     <span className="inline-block w-2.5 h-2.5 rounded-full bg-accent animate-pulse" />
-                    <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
+                    <span className="font-sans text-xs font-semibold uppercase tracking-[0.14em] text-accent">
                       Live Conclave Archives
                     </span>
                   </div>
@@ -395,7 +395,7 @@ export function CinematicHero({ onOpenInvite }: CinematicHeroProps) {
                   <p className="font-display text-xs font-semibold text-content leading-tight">
                     National Conclaves
                   </p>
-                  <p className="font-sans text-[11px] text-content-muted">
+                  <p className="font-sans text-xs text-content-muted">
                     Across 6 Tech Hubs
                   </p>
                 </div>

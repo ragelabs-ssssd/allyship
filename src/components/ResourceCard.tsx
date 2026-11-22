@@ -47,7 +47,7 @@ export function ResourceCard({ resource }: ResourceCardProps) {
         {/* Top Badges & Bookmark */}
         <div className="flex items-center justify-between gap-2 mb-3">
           <span
-            className={`text-[11px] font-bold font-heading px-3 py-1 rounded-full border uppercase tracking-wider ${
+            className={`text-xs font-bold font-heading px-3 py-1 rounded-full border uppercase tracking-wider ${
               categoryColor[resource.category] || "bg-surface-2 text-content-secondary border-line"
             }`}
           >
@@ -55,7 +55,7 @@ export function ResourceCard({ resource }: ResourceCardProps) {
           </span>
 
           <div className="flex items-center gap-2">
-            <span className="inline-flex items-center gap-1 text-[11px] text-content-muted font-medium">
+            <span className="inline-flex items-center gap-1 text-xs text-content-muted font-medium">
               <Clock className="w-3 h-3 text-accent" />
               {resource.readTime}
             </span>
@@ -93,7 +93,7 @@ export function ResourceCard({ resource }: ResourceCardProps) {
           {resource.tags.slice(0, 3).map((tag) => (
             <span
               key={tag}
-              className="text-[11px] font-medium text-content-secondary bg-surface-2 px-2 py-0.5 rounded-md border border-line"
+              className="text-xs font-medium text-content-secondary bg-surface-2 px-2 py-0.5 rounded-md border border-line"
             >
               #{tag}
             </span>
@@ -103,7 +103,7 @@ export function ResourceCard({ resource }: ResourceCardProps) {
 
       {/* Footer */}
       <div className="pt-5 mt-4 border-t border-line flex items-center justify-between">
-        <span className="text-[11px] text-content-muted">
+        <span className="text-xs text-content-muted">
           By {resource.author.name}
         </span>
         <Link

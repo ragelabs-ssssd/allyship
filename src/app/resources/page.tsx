@@ -55,7 +55,7 @@ export default function ResourcesPage() {
     <div className="flex flex-col gap-12 sm:gap-16 pb-20 sm:pb-24 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 pt-32 sm:pt-36 lg:pt-40">
       {/* Header */}
       <div className="text-center max-w-4xl mx-auto space-y-4">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-[11px] font-bold font-heading tracking-[0.14em] uppercase shadow-sm">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-[0.14em] uppercase shadow-sm">
           <BookOpen className="w-3.5 h-3.5 text-accent" />
           <span>Open Educational Repository</span>
         </div>
@@ -101,7 +101,7 @@ export default function ResourcesPage() {
 
         {/* Category Pills */}
         <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-line">
-          <span className="text-[11px] font-bold uppercase tracking-wider text-content-muted mr-1 font-heading">
+          <span className="text-xs font-bold uppercase tracking-wider text-content-muted mr-1 font-heading">
             Format:
           </span>
           {categories.map((cat) => (
@@ -122,7 +122,7 @@ export default function ResourcesPage() {
 
         {/* Tag Filters */}
         <div className="flex flex-wrap items-center gap-1.5 pt-1">
-          <span className="text-[11px] font-bold uppercase tracking-wider text-content-muted mr-1 font-heading">
+          <span className="text-xs font-bold uppercase tracking-wider text-content-muted mr-1 font-heading">
             Tags:
           </span>
           {allTags.map((tag) => {
@@ -132,7 +132,7 @@ export default function ResourcesPage() {
                 key={tag}
                 type="button"
                 onClick={() => setSelectedTag(isTagActive ? null : tag)}
-                className={`text-[11px] font-medium px-2.5 py-1 rounded-lg transition-all ${
+                className={`text-xs font-medium px-2.5 py-1 rounded-lg transition-all ${
                   isTagActive
                     ? "bg-accent text-on-accent shadow-sm font-bold"
                     : "bg-surface-2 text-content-muted hover:text-content border border-line"

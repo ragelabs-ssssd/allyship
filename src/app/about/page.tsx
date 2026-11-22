@@ -61,7 +61,7 @@ export default function AboutPage() {
 
         <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 relative z-10 w-full">
           <div className="max-w-4xl mx-auto text-center space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-2 border border-accent/30 shadow-sm font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-2 border border-accent/30 shadow-sm font-sans text-xs font-semibold uppercase tracking-[0.14em] text-accent">
               <span>Institutional Philosophy &amp; Mandate</span>
             </div>
 
@@ -81,7 +81,7 @@ export default function AboutPage() {
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
         {/* Section Heading - Single Line */}
         <div className="space-y-2 text-left mb-8 lg:mb-12">
-          <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
+          <span className="text-xs font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             The Origin &amp; Mandate
           </span>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-[42px] xl:text-5xl font-bold text-content tracking-tight md:whitespace-nowrap">
@@ -115,7 +115,7 @@ export default function AboutPage() {
                   transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
                   className="absolute left-0 top-0 bottom-0 w-[3px] bg-accent origin-top"
                 />
-                <span className="text-[11px] font-bold font-heading uppercase tracking-widest text-accent block text-left">
+                <span className="text-xs font-bold font-heading uppercase tracking-widest text-accent block text-left">
                   The Living Standard · Practicing Allyship
                 </span>
                 <p className="text-xs sm:text-sm text-content-secondary leading-relaxed italic text-left md:text-justify">
@@ -156,7 +156,7 @@ export default function AboutPage() {
 
                 {/* Razor-Sharp Vector Typography (Exact Conclave Mandate Concept) */}
                 <div className="relative z-10 max-w-lg mx-auto flex flex-col items-center justify-center space-y-4 sm:space-y-5">
-                  <span className="text-[11px] font-heading font-bold uppercase tracking-[0.3em] text-accent block">
+                  <span className="text-xs font-heading font-bold uppercase tracking-[0.3em] text-accent block">
                     The Conclave Mandate
                   </span>
 
@@ -167,7 +167,7 @@ export default function AboutPage() {
                     Trajectories.
                   </h3>
 
-                  <p className="text-[11px] md:text-xs font-mono text-content-secondary uppercase tracking-[0.18em] pt-1 sm:pt-2 text-white/80 max-w-md leading-relaxed">
+                  <p className="text-xs md:text-xs font-mono text-content-secondary uppercase tracking-[0.18em] pt-1 sm:pt-2 text-white/80 max-w-md leading-relaxed">
                     7 National Conclaves &middot; 500+ Boardroom CXOs
                   </p>
                 </div>
@@ -195,7 +195,7 @@ export default function AboutPage() {
           <div className="lg:col-span-7 flex flex-col justify-between space-y-6">
             <div className="space-y-5">
               <div className="space-y-1.5">
-                <span className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-accent block">
+                <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-accent block">
                   Academic Direction &amp; Leadership
                 </span>
                 <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-[1.15] text-content">
@@ -255,7 +255,7 @@ export default function AboutPage() {
 
               {/* Glassmorphic VC Badge */}
               <div className="absolute top-4 right-4 z-10">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md text-white/95 border border-accent/40 font-sans text-[11px] font-bold uppercase tracking-[0.16em] shadow-lg shadow-black/40">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md text-white/95 border border-accent/40 font-sans text-xs font-bold uppercase tracking-[0.16em] shadow-lg shadow-black/40">
                   <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
                   Vice-Chancellor
                 </span>
@@ -290,7 +290,7 @@ export default function AboutPage() {
           {/* Section Header */}
           <div className="space-y-8">
             <div className="space-y-3">
-              <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
+              <span className="text-xs font-bold font-heading uppercase tracking-[0.2em] text-accent block">
                 Championship Psychology in the Boardroom
               </span>
               <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
@@ -332,17 +332,17 @@ export default function AboutPage() {
                   className="p-5 rounded-2xl bg-surface-3 border border-line hover:border-accent/50 transition-all flex flex-col justify-between space-y-3 group"
                 >
                   <div className="space-y-2">
-                    <span className="text-[11px] font-bold font-heading uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-glass text-accent border border-line block w-fit">
+                    <span className="text-xs font-bold font-heading uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-glass text-accent border border-line block w-fit">
                       {sa.city}
                     </span>
                     <h4 className="font-heading text-sm font-bold text-content group-hover:text-accent transition-colors">
                       {sa.legend}
                     </h4>
-                    <p className="text-[11px] font-medium text-content-muted">
+                    <p className="text-xs font-medium text-content-muted">
                       {sa.role}
                     </p>
                   </div>
-                  <p className="text-[11px] text-content-secondary leading-relaxed pt-2 border-t border-line font-normal">
+                  <p className="text-xs text-content-secondary leading-relaxed pt-2 border-t border-line font-normal">
                     {sa.domain}
                   </p>
                 </div>
@@ -359,7 +359,7 @@ export default function AboutPage() {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-[radial-gradient(ellipse_at_center,rgba(197,168,105,0.15),transparent_70%)] pointer-events-none" />
 
           <div className="relative z-10 space-y-4">
-            <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full font-heading text-[11px] font-bold uppercase tracking-[0.14em] text-accent bg-surface-3 border border-accent/30 shadow-sm">
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full font-heading text-xs font-bold uppercase tracking-[0.14em] text-accent bg-surface-3 border border-accent/30 shadow-sm">
               Executive Conclave Participation
             </span>
 

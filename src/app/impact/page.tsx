@@ -171,7 +171,7 @@ export default function ImpactPage() {
         <div className="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             <div className="lg:col-span-7 space-y-6 max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-2 border border-accent/30 shadow-sm font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-2 border border-accent/30 shadow-sm font-sans text-xs font-semibold uppercase tracking-[0.14em] text-accent">
                 <span>Institutional Dividends · Sustainable Progress</span>
               </div>
 
@@ -218,13 +218,13 @@ export default function ImpactPage() {
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-5 text-content">
-                    <span className="text-[11px] font-bold font-heading text-accent-light uppercase tracking-wider">
+                    <span className="text-xs font-bold font-heading text-accent-light uppercase tracking-wider">
                       Industry &amp; Academia
                     </span>
                     <span className="text-sm font-bold text-content mt-0.5">
                       Shared Perspectives Across 5 Corporate Capitals
                     </span>
-                    <span className="text-[11px] text-content-secondary mt-0.5">
+                    <span className="text-xs text-content-secondary mt-0.5">
                       National Media Coverage · 7 Conclave Editions
                     </span>
                   </div>
@@ -238,7 +238,7 @@ export default function ImpactPage() {
       {/* 2. THREE QUALITATIVE OUTCOME PILLARS */}
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
         <div className="text-center w-full max-w-7xl mx-auto mb-16 space-y-3 flex flex-col items-center justify-center">
-          <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
+          <span className="text-xs font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             Institutional Progress
           </span>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-[34px] xl:text-[42px] font-bold text-content tracking-tight text-center">
@@ -256,7 +256,7 @@ export default function ImpactPage() {
               className="bg-surface rounded-3xl p-8 border border-line shadow-lg hover:border-accent/80 hover:shadow-[0_0_24px_rgba(201,169,110,0.15)] transition-all flex flex-col justify-between space-y-6 text-content"
             >
               <div className="space-y-4">
-                <span className="inline-block text-[11px] font-bold font-heading uppercase tracking-wider px-3 py-1 rounded-full bg-glass-strong text-accent border border-accent/30">
+                <span className="inline-block text-xs font-bold font-heading uppercase tracking-wider px-3 py-1 rounded-full bg-glass-strong text-accent border border-accent/30">
                   {p.badge}
                 </span>
                 <h3 className="font-heading text-xl font-bold text-content">
@@ -279,7 +279,7 @@ export default function ImpactPage() {
       {/* 3. IN THE PRESS — 9 NEWSPAPER & MEDIA CLIPPINGS */}
       <section id="press-coverage" className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line">
         <div className="text-center w-full max-w-7xl mx-auto mb-16 space-y-3 flex flex-col items-center justify-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-2 border border-accent/30 shadow-sm font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-2 border border-accent/30 shadow-sm font-sans text-xs font-semibold uppercase tracking-[0.14em] text-accent">
             <Newspaper className="w-3.5 h-3.5" />
             <span>National &amp; Regional Media Chronicle</span>
           </div>
@@ -314,14 +314,14 @@ export default function ImpactPage() {
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100"
                 />
-                <div className="absolute top-4 left-4 bg-black/80 backdrop-blur-md text-accent border border-accent/30 text-[11px] font-bold font-heading uppercase tracking-[0.14em] px-3 py-1 rounded-full">
+                <div className="absolute top-4 left-4 bg-black/80 backdrop-blur-md text-accent border border-accent/30 text-xs font-bold font-heading uppercase tracking-[0.14em] px-3 py-1 rounded-full">
                   {c.outlet}
                 </div>
               </div>
 
               <div className="p-7 space-y-4 flex-1 flex flex-col justify-between">
                 <div>
-                  <span className="text-[11px] text-content-muted">
+                  <span className="text-xs text-content-muted">
                     {c.date}
                   </span>
                   <h3 className="font-display leading-snug text-base font-bold text-content group-hover:text-accent transition-colors mt-1 line-clamp-2">

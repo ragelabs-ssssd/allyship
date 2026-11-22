@@ -305,7 +305,7 @@ export function AccreditationsShowcase({ onOpenSlide }: AccreditationsShowcasePr
             <div className="space-y-3">
               <div className="flex items-center justify-between">
                 <span
-                  className={`text-[11px] font-mono uppercase font-bold px-2.5 py-0.5 rounded-full border ${
+                  className={`text-xs font-mono uppercase font-bold px-2.5 py-0.5 rounded-full border ${
                     item.badgeType === "gold"
                       ? "bg-accent/15 border-accent/40 text-accent"
                       : item.badgeType === "accent"
@@ -332,8 +332,8 @@ export function AccreditationsShowcase({ onOpenSlide }: AccreditationsShowcasePr
               </p>
             </div>
 
-            <div className="pt-3 border-t border-line/60 flex items-center justify-between text-[11px] font-mono text-content-muted">
-              <span className="uppercase text-[11px] tracking-wider text-accent/90">
+            <div className="pt-3 border-t border-line/60 flex items-center justify-between text-xs font-mono text-content-muted">
+              <span className="uppercase text-xs tracking-wider text-accent/90">
                 {item.categoryLabel}
               </span>
               {item.stat && (

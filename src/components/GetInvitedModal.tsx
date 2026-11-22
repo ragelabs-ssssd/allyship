@@ -98,7 +98,7 @@ export function GetInvitedModal({ isOpen, onClose }: GetInvitedModalProps) {
               <Building2 className="w-5 h-5" />
             </div>
             <div>
-              <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent block">
+              <span className="font-sans text-xs font-semibold uppercase tracking-[0.14em] text-accent block">
                 Executive Delegation
               </span>
               <h2 id="invite-modal-title" className="font-display text-xl sm:text-2xl font-bold tracking-[-0.025em] leading-[1.1] text-content">
@@ -129,7 +129,7 @@ export function GetInvitedModal({ isOpen, onClose }: GetInvitedModalProps) {
                 Thank you for your interest in ALLYSHIP++. Our Conclave Secretariat will review your credentials and dispatch formal itinerary details.
               </p>
               <div className="p-4 bg-surface-2 rounded-xl border border-line max-w-xs mx-auto">
-                <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-content-muted block">
+                <span className="font-sans text-xs font-semibold uppercase tracking-[0.14em] text-content-muted block">
                   Reference Dossier Number
                 </span>
                 <span className="font-display text-base font-bold tracking-normal text-accent mt-1 block">
@@ -161,7 +161,7 @@ export function GetInvitedModal({ isOpen, onClose }: GetInvitedModalProps) {
                 <div>
                   <label
                     htmlFor="invite-full-name"
-                    className="block font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-content-secondary mb-1.5"
+                    className="block font-sans text-xs font-semibold uppercase tracking-[0.14em] text-content-secondary mb-1.5"
                   >
                     Full Name <span className="text-accent ml-0.5">*</span>
                   </label>
@@ -184,7 +184,7 @@ export function GetInvitedModal({ isOpen, onClose }: GetInvitedModalProps) {
                 <div>
                   <label
                     htmlFor="invite-email"
-                    className="block font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-content-secondary mb-1.5"
+                    className="block font-sans text-xs font-semibold uppercase tracking-[0.14em] text-content-secondary mb-1.5"
                   >
                     Corporate Email <span className="text-accent ml-0.5">*</span>
                   </label>
@@ -209,7 +209,7 @@ export function GetInvitedModal({ isOpen, onClose }: GetInvitedModalProps) {
                 <div>
                   <label
                     htmlFor="invite-company"
-                    className="block font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-content-secondary mb-1.5"
+                    className="block font-sans text-xs font-semibold uppercase tracking-[0.14em] text-content-secondary mb-1.5"
                   >
                     Company / Organization <span className="text-accent ml-0.5">*</span>
                   </label>
@@ -232,7 +232,7 @@ export function GetInvitedModal({ isOpen, onClose }: GetInvitedModalProps) {
                 <div>
                   <label
                     htmlFor="invite-designation"
-                    className="block font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-content-secondary mb-1.5"
+                    className="block font-sans text-xs font-semibold uppercase tracking-[0.14em] text-content-secondary mb-1.5"
                   >
                     Designation / Title
                   </label>
@@ -253,7 +253,7 @@ export function GetInvitedModal({ isOpen, onClose }: GetInvitedModalProps) {
               <div>
                 <label
                   htmlFor="invite-industry"
-                  className="block font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-content-secondary mb-1.5"
+                  className="block font-sans text-xs font-semibold uppercase tracking-[0.14em] text-content-secondary mb-1.5"
                 >
                   Industry Vertical
                 </label>
@@ -276,7 +276,7 @@ export function GetInvitedModal({ isOpen, onClose }: GetInvitedModalProps) {
               <div>
                 <label
                   htmlFor="invite-message"
-                  className="block font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-content-secondary mb-1.5"
+                  className="block font-sans text-xs font-semibold uppercase tracking-[0.14em] text-content-secondary mb-1.5"
                 >
                   Specific Collaboration Interest (Optional)
                 </label>
@@ -291,7 +291,7 @@ export function GetInvitedModal({ isOpen, onClose }: GetInvitedModalProps) {
               </div>
 
               <div className="pt-2 flex flex-col-reverse sm:flex-row items-center justify-between gap-4">
-                <div className="flex items-center gap-1.5 font-sans text-[11px] text-content-muted">
+                <div className="flex items-center gap-1.5 font-sans text-xs text-content-muted">
                   <ShieldCheck className="w-3.5 h-3.5 text-accent" />
                   <span>Complimentary • By Invitation Only</span>
                 </div>

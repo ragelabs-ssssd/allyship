@@ -73,7 +73,7 @@ export function PressTicker() {
               className="flex items-center gap-3.5 px-4 py-2.5 rounded-2xl bg-surface border border-line hover:border-accent/60 hover:shadow-md transition-all group shrink-0"
             >
               {/* Outlet Pill */}
-              <span className="px-2.5 py-1 rounded-lg bg-surface-3 text-content font-mono font-bold text-[11px] tracking-wider border border-line/50 group-hover:border-accent/40 group-hover:text-accent transition-colors">
+              <span className="px-2.5 py-1 rounded-lg bg-surface-3 text-content font-mono font-bold text-xs tracking-wider border border-line/50 group-hover:border-accent/40 group-hover:text-accent transition-colors">
                 {item.outlet}
               </span>
 
@@ -83,7 +83,7 @@ export function PressTicker() {
               </span>
 
               {/* Conclave Tag Badge */}
-              <span className="font-mono text-[11px] font-semibold text-accent/90 bg-accent/10 px-2 py-0.5 rounded-md border border-accent/25 shrink-0 hidden md:inline-flex items-center gap-1">
+              <span className="font-mono text-xs font-semibold text-accent/90 bg-accent/10 px-2 py-0.5 rounded-md border border-accent/25 shrink-0 hidden md:inline-flex items-center gap-1">
                 <span>{item.conclaveTag}</span>
                 {item.link.startsWith("http") && <ExternalLink className="w-2.5 h-2.5 opacity-60" />}
               </span>

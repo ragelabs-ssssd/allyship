@@ -42,7 +42,7 @@ export default function InitiativesPage() {
     <div className="flex flex-col gap-12 sm:gap-16 pb-20 sm:pb-24 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 pt-32 sm:pt-36 lg:pt-40">
       {/* Header */}
       <div className="text-center max-w-4xl mx-auto space-y-4">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-[11px] font-bold font-heading tracking-[0.14em] uppercase shadow-sm">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-[0.14em] uppercase shadow-sm">
           <span>Active Programs &amp; Cohorts</span>
         </div>
 
@@ -89,7 +89,7 @@ export default function InitiativesPage() {
 
         {/* Category Pills */}
         <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-line">
-          <span className="text-[11px] font-bold uppercase tracking-wider text-content-muted mr-1 font-heading">
+          <span className="text-xs font-bold uppercase tracking-wider text-content-muted mr-1 font-heading">
             Category:
           </span>
           {categories.map((c) => (

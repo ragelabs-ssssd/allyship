@@ -74,10 +74,10 @@ export function Navbar() {
                     ++
                   </span>
                 </span>
-                <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.16em] text-accent mt-1 opacity-95 group-hover:opacity-100 transition-all duration-300">
+                <span className="font-sans text-xs font-semibold uppercase tracking-[0.16em] text-accent mt-1 opacity-95 group-hover:opacity-100 transition-all duration-300">
                   Siksha &lsquo;O&rsquo; Anusandhan
                 </span>
-                <span className="font-sans text-[11px] font-medium tracking-[0.02em] text-content-muted group-hover:text-content mt-0.5 transition-colors whitespace-nowrap">
+                <span className="font-sans text-xs font-medium tracking-[0.02em] text-content-muted group-hover:text-content mt-0.5 transition-colors whitespace-nowrap">
                   Deemed to be University · Category 1 Autonomy
                 </span>
               </div>

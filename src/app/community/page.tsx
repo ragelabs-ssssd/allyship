@@ -86,7 +86,7 @@ export default function CommunityPage() {
     <div className="flex flex-col gap-16 sm:gap-24 pb-20 sm:pb-24 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 pt-32 sm:pt-36 lg:pt-40">
       {/* 1. Header */}
       <section className="text-center max-w-4xl mx-auto space-y-4">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-[11px] font-bold font-heading tracking-[0.14em] uppercase shadow-sm">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-[0.14em] uppercase shadow-sm">
           <Users className="w-3.5 h-3.5 text-accent" />
           <span>The Allyship++ Network</span>
         </div>
@@ -120,7 +120,7 @@ export default function CommunityPage() {
       {/* 2. Community Working Circles */}
       <section className="space-y-8">
         <div>
-          <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block mb-2">
+          <span className="text-xs font-bold font-heading uppercase tracking-[0.2em] text-accent block mb-2">
             Ongoing Dialogue
           </span>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
@@ -139,7 +139,7 @@ export default function CommunityPage() {
             >
               <div>
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
-                  <span className="text-[11px] font-bold font-heading uppercase tracking-wider px-3 py-1 rounded-full bg-surface-2 text-accent border border-line">
+                  <span className="text-xs font-bold font-heading uppercase tracking-wider px-3 py-1 rounded-full bg-surface-2 text-accent border border-line">
                     {circle.memberBadge}
                   </span>
                   <span className="text-xs text-content-muted font-medium">{circle.cadence}</span>
@@ -170,7 +170,7 @@ export default function CommunityPage() {
       <section id="events" className="space-y-8">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
           <div>
-            <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block mb-2">
+            <span className="text-xs font-bold font-heading uppercase tracking-[0.2em] text-accent block mb-2">
               Interactive Gatherings
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">

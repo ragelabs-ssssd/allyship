@@ -23,7 +23,7 @@ export default function PrivacyPage() {
         </div>
 
         <div className="space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-[11px] font-bold font-heading tracking-[0.14em] uppercase shadow-sm">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-[0.14em] uppercase shadow-sm">
             <ShieldCheck className="w-3.5 h-3.5" />
             <span>Privacy &amp; Institutional Data Ethics</span>
           </div>

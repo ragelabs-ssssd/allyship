@@ -83,7 +83,7 @@ export function FaqAccordion({ faqs, allowFilter = true }: FaqAccordionProps) {
                 >
                   <p>{faq.answer}</p>
                   <div className="mt-4">
-                    <span className="text-[11px] font-semibold text-accent uppercase tracking-wider">
+                    <span className="text-xs font-semibold text-accent uppercase tracking-wider">
                       Category: {faq.category}
                     </span>
                   </div>

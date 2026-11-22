@@ -44,7 +44,7 @@ export function ChapterBentoGrid() {
         {/* Section Header */}
         <div className="flex flex-col xl:flex-row xl:items-end justify-between gap-6 mb-16 pb-8 border-b border-line">
           <SectionReveal>
-            <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
+            <span className="font-sans text-xs font-semibold uppercase tracking-[0.14em] text-accent">
               A Continuing National Dialogue
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight mt-2">
@@ -128,10 +128,10 @@ export function ChapterBentoGrid() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
 
                   <div className="absolute top-4 left-4 flex items-center gap-2">
-                    <span className="px-3 py-1 rounded-full font-sans text-[11px] font-semibold tracking-[0.14em] uppercase bg-black/70 backdrop-blur-md text-white border border-line">
+                    <span className="px-3 py-1 rounded-full font-sans text-xs font-semibold tracking-[0.14em] uppercase bg-black/70 backdrop-blur-md text-white border border-line">
                       {getEditionLabel(featured.edition, activeCycle)}
                     </span>
-                    <span className="px-3 py-1 rounded-full font-sans text-[11px] font-semibold tracking-[0.14em] uppercase bg-accent text-on-accent">
+                    <span className="px-3 py-1 rounded-full font-sans text-xs font-semibold tracking-[0.14em] uppercase bg-accent text-on-accent">
                       Featured
                     </span>
                   </div>
@@ -157,7 +157,7 @@ export function ChapterBentoGrid() {
                       <span>{featured.turnout}</span>
                     </div>
 
-                    <span className="inline-flex items-center gap-1.5 font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-content group-hover:text-accent transition-colors">
+                    <span className="inline-flex items-center gap-1.5 font-sans text-xs font-semibold uppercase tracking-[0.14em] text-content group-hover:text-accent transition-colors">
                       <span>Full Chapter Briefing</span>
                       <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                     </span>
@@ -190,7 +190,7 @@ export function ChapterBentoGrid() {
                     <div className={`sm:col-span-7 ${sideChapters.length === 3 ? "p-4 sm:p-5" : "p-5"} flex flex-col justify-between space-y-2`}>
                       <div>
                         <div className="flex items-center justify-between gap-2 mb-1">
-                          <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
+                          <span className="font-sans text-xs font-semibold uppercase tracking-[0.14em] text-accent">
                             {getEditionLabel(chapter.edition, activeCycle)}
                           </span>
                           <span className="font-sans text-xs text-content-muted font-medium">
@@ -205,7 +205,7 @@ export function ChapterBentoGrid() {
                         </p>
                       </div>
 
-                      <div className="flex items-center justify-between pt-2 border-t border-line text-[11px]">
+                      <div className="flex items-center justify-between pt-2 border-t border-line text-xs">
                         <span className="font-sans text-xs text-content-muted truncate pr-2 flex-1">
                           {chapter.venue}
                         </span>
@@ -237,13 +237,13 @@ export function ChapterBentoGrid() {
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     <div className="absolute top-3 left-3">
-                      <span className="px-2.5 py-0.5 rounded-full font-sans text-[11px] uppercase tracking-[0.14em] bg-black/70 backdrop-blur-md text-white font-semibold border border-line">
+                      <span className="px-2.5 py-0.5 rounded-full font-sans text-xs uppercase tracking-[0.14em] bg-black/70 backdrop-blur-md text-white font-semibold border border-line">
                         {getCityLabel(chapter.city, activeCycle)}
                       </span>
                     </div>
                   </div>
                   <div className="p-5 space-y-2">
-                    <span className="font-sans text-[11px] text-content-muted uppercase tracking-[0.14em] block font-medium">
+                    <span className="font-sans text-xs text-content-muted uppercase tracking-[0.14em] block font-medium">
                       {chapter.date} • {getEditionLabel(chapter.edition, activeCycle)}
                     </span>
                     <h4 className="font-display text-base font-semibold tracking-normal text-content line-clamp-1 group-hover:text-accent transition-colors">

@@ -52,7 +52,7 @@ export function InitiativeCard({ initiative, variant = "detailed" }: InitiativeC
 
           <div className="flex flex-wrap gap-1.5 justify-end">
             <span
-              className={`text-[11px] font-bold font-heading px-3 py-1 rounded-full border uppercase tracking-wider ${
+              className={`text-xs font-bold font-heading px-3 py-1 rounded-full border uppercase tracking-wider ${
                 categoryColor[initiative.category] || "bg-surface-2 text-content-secondary border-line"
               }`}
             >
@@ -84,7 +84,7 @@ export function InitiativeCard({ initiative, variant = "detailed" }: InitiativeC
             <Video className="w-3.5 h-3.5 text-accent" />
             {initiative.format}
           </span>
-          <span className="inline-flex items-center gap-1 text-[11px] font-medium text-success bg-success-bg px-2.5 py-1 rounded-lg border border-success-border">
+          <span className="inline-flex items-center gap-1 text-xs font-medium text-success bg-success-bg px-2.5 py-1 rounded-lg border border-success-border">
             {initiative.status}
           </span>
         </div>
@@ -92,7 +92,7 @@ export function InitiativeCard({ initiative, variant = "detailed" }: InitiativeC
         {/* Key outcomes snippet if detailed */}
         {variant === "detailed" && initiative.keyOutcomes.length > 0 && (
           <div className="mt-5 pt-4 border-t border-line space-y-1.5">
-            <div className="text-[11px] font-bold font-heading uppercase tracking-wider text-content-muted">
+            <div className="text-xs font-bold font-heading uppercase tracking-wider text-content-muted">
               Key Focus:
             </div>
             <div className="flex items-start gap-1.5 text-xs text-content-secondary">

@@ -51,7 +51,7 @@ export function EventCard({ event }: EventCardProps) {
       <div>
         {/* Header Tags */}
         <div className="flex items-center justify-between gap-2 mb-3">
-          <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] px-3 py-1 rounded-full bg-surface-2 text-accent border border-line">
+          <span className="font-sans text-xs font-semibold uppercase tracking-[0.14em] px-3 py-1 rounded-full bg-surface-2 text-accent border border-line">
             {event.format}
           </span>
           <div className="flex items-center gap-1.5 font-sans text-xs text-content-muted font-medium">

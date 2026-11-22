@@ -184,7 +184,7 @@ export default async function InitiativeDetailPage({ params }: PageProps) {
         <div className="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
           <div className="bg-surface rounded-3xl p-6 sm:p-7 border border-line shadow-xl space-y-6">
             <div className="border-b border-line pb-4">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-content-muted block mb-1">
+              <span className="text-xs font-bold uppercase tracking-wider text-content-muted block mb-1">
                 Meeting Logistics
               </span>
               <div className="flex items-start gap-2.5 text-xs text-content-secondary">

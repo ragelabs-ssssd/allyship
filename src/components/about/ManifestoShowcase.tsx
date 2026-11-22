@@ -27,7 +27,7 @@ export function ManifestoShowcase() {
 
         {/* Content Overlay */}
         <div className="relative z-10 max-w-3xl mx-auto space-y-5 sr-only">
-          <span className="text-[11px] font-mono uppercase tracking-[0.3em] text-accent font-bold block">
+          <span className="text-xs font-mono uppercase tracking-[0.3em] text-accent font-bold block">
             THE CONCLAVE MANDATE
           </span>
 

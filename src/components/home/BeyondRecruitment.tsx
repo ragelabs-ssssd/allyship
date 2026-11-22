@@ -32,7 +32,7 @@ export function BeyondRecruitment() {
         {/* Section Header */}
         <div className="text-center w-full max-w-7xl mx-auto space-y-4 mb-16 flex flex-col items-center justify-center">
           <SectionReveal className="w-full flex flex-col items-center text-center">
-            <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
+            <span className="font-sans text-xs font-semibold uppercase tracking-[0.14em] text-accent">
               The Deeper Purpose
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-[34px] xl:text-[42px] font-bold text-content tracking-tight mt-2 text-center lg:whitespace-nowrap">

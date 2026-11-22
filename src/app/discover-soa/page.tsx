@@ -27,7 +27,7 @@ export default function DiscoverSoaPage() {
         <HeroBackdrop videoSrc={SOA_VIDEO_SRC} />
         <div className="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full">
           <div className="max-w-3xl space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-2 border border-accent/30 shadow-sm font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-2 border border-accent/30 shadow-sm font-sans text-xs font-semibold uppercase tracking-[0.14em] text-accent">
               <span>Deemed to be University · Category-I Autonomy</span>
             </div>
 
@@ -69,7 +69,7 @@ export default function DiscoverSoaPage() {
       {/* 2. NIRF INDIA RANKINGS - 2025 SECTION (Screenshot 1) */}
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
         <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent/10 border border-accent/30 text-accent text-[11px] font-bold font-heading tracking-[0.14em] uppercase">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent/10 border border-accent/30 text-accent text-xs font-bold font-heading tracking-[0.14em] uppercase">
             <Trophy className="w-3.5 h-3.5" />
             <span>Ministry of Education · Govt. of India</span>
           </div>
@@ -88,7 +88,7 @@ export default function DiscoverSoaPage() {
       {/* 3. OTHER RANKINGS SECTION: QS & THE + SWACHHATA (Screenshot 2) */}
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line">
         <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
-          <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
+          <span className="text-xs font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             Global Benchmarking &amp; Accolades
           </span>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
@@ -105,7 +105,7 @@ export default function DiscoverSoaPage() {
       {/* 4. ACCREDITATIONS & MAJOR RECOGNITIONS (Screenshots 3 & 4) */}
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line">
         <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
-          <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
+          <span className="text-xs font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             National &amp; International Certifications
           </span>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
@@ -123,7 +123,7 @@ export default function DiscoverSoaPage() {
       {/* 5. EVOLUTION & GROWTH (Screenshot 5) */}
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line">
         <div className="text-center w-full max-w-7xl mx-auto mb-16 space-y-3 flex flex-col items-center justify-center">
-          <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
+          <span className="text-xs font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             Three Decades of Institutional Nation-Building
           </span>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-[34px] xl:text-[42px] font-bold text-content tracking-tight text-center">

@@ -167,7 +167,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
         <HeroBackdrop videoSrc={SOA_VIDEO_SRC} align="right" />
         <div className="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 w-full flex justify-end">
           <div className="max-w-4xl space-y-6 text-left sm:text-right flex flex-col items-start sm:items-end">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-2 border border-accent/30 shadow-sm font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-2 border border-accent/30 shadow-sm font-sans text-xs font-semibold uppercase tracking-[0.14em] text-accent">
               <span>Enterprise Partnership Portal</span>
             </div>
 
@@ -208,7 +208,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
       {/* 2. FOUR CORPORATE PARTNERSHIP PILLARS */}
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full">
         <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
-          <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
+          <span className="text-xs font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             Four Strategic Tracks
           </span>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
@@ -274,7 +274,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
         <div className="bg-surface rounded-3xl overflow-hidden border border-line shadow-xl">
           <div className="px-6 pt-4 pb-2 text-xs text-content-muted flex items-center justify-between gap-2 sm:hidden border-b border-line/60">
             <span className="font-semibold text-accent">Placement Statistics</span>
-            <span className="inline-flex items-center gap-1 text-[11px]">
+            <span className="inline-flex items-center gap-1 text-xs">
               Swipe horizontally <ArrowRight className="w-3 h-3 text-accent" />
             </span>
           </div>
@@ -322,7 +322,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
       {/* 4. OFFICIAL CAMPUS INFRASTRUCTURE */}
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line">
         <div className="text-center max-w-5xl mx-auto mb-16 space-y-3">
-          <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
+          <span className="text-xs font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             127-Acre Academic Ecosystem
           </span>
           <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
@@ -343,7 +343,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
                 sizes="(max-width: 768px) 100vw, 25vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-2 text-content border border-line text-[11px] font-bold font-heading uppercase tracking-wider">
+              <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-2 text-content border border-line text-xs font-bold font-heading uppercase tracking-wider">
                 Main Campus
               </span>
             </div>
@@ -364,7 +364,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
                 sizes="(max-width: 768px) 100vw, 25vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-2 text-content border border-line text-[11px] font-bold font-heading uppercase tracking-wider">
+              <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-2 text-content border border-line text-xs font-bold font-heading uppercase tracking-wider">
                 ITER Engineering
               </span>
             </div>
@@ -385,7 +385,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
                 sizes="(max-width: 768px) 100vw, 25vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-2 text-content border border-line text-[11px] font-bold font-heading uppercase tracking-wider">
+              <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-2 text-content border border-line text-xs font-bold font-heading uppercase tracking-wider">
                 Convention Hall
               </span>
             </div>
@@ -406,7 +406,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
                 sizes="(max-width: 768px) 100vw, 25vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-2 text-content border border-line text-[11px] font-bold font-heading uppercase tracking-wider">
+              <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-2 text-content border border-line text-xs font-bold font-heading uppercase tracking-wider">
                 Innovation Labs
               </span>
             </div>
@@ -424,7 +424,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
       <section id="submit-challenge" className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full scroll-mt-28 border-t border-line">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 2xl:gap-24 items-start">
           <div className="lg:col-span-5 space-y-6">
-            <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
+            <span className="text-xs font-bold font-heading uppercase tracking-[0.2em] text-accent block">
               Direct Executive Interface
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">

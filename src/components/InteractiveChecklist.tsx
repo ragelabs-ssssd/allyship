@@ -77,7 +77,7 @@ export function InteractiveChecklist() {
     <div className="bg-surface rounded-3xl p-6 sm:p-8 border border-line shadow-xl">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-line">
         <div>
-          <span className="text-[11px] font-bold uppercase tracking-wider text-accent">
+          <span className="text-xs font-bold uppercase tracking-wider text-accent">
             Interactive Tool
           </span>
           <h3 className="font-heading text-xl font-bold text-content mt-0.5">
@@ -91,7 +91,7 @@ export function InteractiveChecklist() {
         <div className="flex items-center gap-3">
           <div className="text-right">
             <span className="text-lg font-bold text-accent">{progressPercent}%</span>
-            <span className="block text-[11px] text-content-muted font-medium">
+            <span className="block text-xs text-content-muted font-medium">
               {completedCount} of {CHECKLIST_ITEMS.length} completed
             </span>
           </div>
@@ -139,7 +139,7 @@ export function InteractiveChecklist() {
 
               <div className="flex-1">
                 <div className="flex items-center gap-2">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-content-muted">
+                  <span className="text-xs font-bold uppercase tracking-wider text-content-muted">
                     {item.category}
                   </span>
                 </div>

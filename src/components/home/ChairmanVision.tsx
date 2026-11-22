@@ -27,7 +27,7 @@ export function ChairmanVision() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90" />
                 
                 <div className="absolute bottom-4 left-4 right-4 text-content">
-                  <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
+                  <span className="font-sans text-xs font-semibold uppercase tracking-[0.14em] text-accent">
                     Founding Visionary
                   </span>
                   <h4 className="font-display text-xl sm:text-2xl font-bold tracking-normal text-content leading-snug">
@@ -47,7 +47,7 @@ export function ChairmanVision() {
           {/* Right Column: Editorial Quote & Philosophy */}
           <SectionReveal className="lg:col-span-7 xl:col-span-7 space-y-8" direction="right">
             <div className="space-y-4">
-              <span className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-accent block">Institutional Stewardship</span>
+              <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-accent block">Institutional Stewardship</span>
               <Quote className="w-12 h-12 text-accent opacity-80" />
               <blockquote className="font-serif italic font-normal tracking-normal text-2xl sm:text-3xl lg:text-4xl leading-[1.4] text-content">
                 &ldquo;Allyship is not a transactional summit. It is an enduring covenant between
@@ -78,7 +78,7 @@ export function ChairmanVision() {
             <div className="pt-2">
               <Link
                 href="/discover-soa"
-                className="inline-flex items-center gap-2 font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-content-secondary hover:text-accent transition-colors group"
+                className="inline-flex items-center gap-2 font-sans text-xs font-semibold uppercase tracking-[0.14em] text-content-secondary hover:text-accent transition-colors group"
               >
                 <span>Explore the Institutional Legacy of SOA</span>
                 <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

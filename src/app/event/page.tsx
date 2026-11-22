@@ -1107,7 +1107,7 @@ function EventContent() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Left Column: Editorial Headline & Copy */}
             <div className="lg:col-span-7 space-y-6 max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-2 border border-accent/30 shadow-sm font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-2 border border-accent/30 shadow-sm font-sans text-xs font-semibold uppercase tracking-[0.14em] text-accent">
                 <span>A Continuing National Dialogue · 7 Editions</span>
               </div>
 
@@ -1209,7 +1209,7 @@ function EventContent() {
 
                   {/* Cinematic Vignette & Animated Caption Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/10 flex flex-col justify-end p-5 sm:p-6 text-content pointer-events-none">
-                    <span className="text-[11px] font-bold font-heading text-accent-light uppercase tracking-[0.16em]">
+                    <span className="text-xs font-bold font-heading text-accent-light uppercase tracking-[0.16em]">
                       National Conclave Series
                     </span>
                     <AnimatePresence mode="wait">
@@ -1223,7 +1223,7 @@ function EventContent() {
                         <p className="text-sm sm:text-base font-bold text-content mt-0.5 leading-snug">
                           {eventHeroImages[heroSlide].title}
                         </p>
-                        <p className="text-[11px] text-content-secondary mt-0.5">
+                        <p className="text-xs text-content-secondary mt-0.5">
                           {eventHeroImages[heroSlide].subtitle}
                         </p>
                       </motion.div>
@@ -1239,7 +1239,7 @@ function EventContent() {
       {/* 2. INSTITUTIONAL PHILOSOPHY & MANDATE */}
       <section className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-b border-line">
         <div className="text-center max-w-6xl mx-auto space-y-3 mb-16">
-          <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
+          <span className="text-xs font-bold font-heading uppercase tracking-[0.2em] text-accent block">
             The Institutional Mandate
           </span>
 
@@ -1261,7 +1261,7 @@ function EventContent() {
                 <Users className="w-6 h-6" />
               </div>
               <div>
-                <span className="font-display text-[11px] font-bold tracking-[0.14em] text-accent uppercase block">
+                <span className="font-display text-xs font-bold tracking-[0.14em] text-accent uppercase block">
                   Year-Round Capability Co-Creation
                 </span>
                 <h3 className="font-display text-lg font-bold tracking-tight text-content mt-1">
@@ -1284,7 +1284,7 @@ function EventContent() {
                 <Medal className="w-6 h-6" />
               </div>
               <div>
-                <span className="font-display text-[11px] font-bold tracking-[0.14em] text-accent uppercase block">
+                <span className="font-display text-xs font-bold tracking-[0.14em] text-accent uppercase block">
                   Championship Psychology
                 </span>
                 <h3 className="font-display text-lg font-bold tracking-tight text-content mt-1">
@@ -1307,7 +1307,7 @@ function EventContent() {
                 <ShieldCheck className="w-6 h-6" />
               </div>
               <div>
-                <span className="font-display text-[11px] font-bold tracking-[0.04em] xl:tracking-[0.06em] text-accent uppercase block whitespace-nowrap">
+                <span className="font-display text-xs font-bold tracking-[0.02em] xl:tracking-[0.04em] text-accent uppercase block whitespace-nowrap">
                   Workplace Culture &amp; Psychological Safety
                 </span>
                 <h3 className="font-display text-lg font-bold tracking-tight text-content mt-1">
@@ -1330,7 +1330,7 @@ function EventContent() {
                 <Building className="w-6 h-6" />
               </div>
               <div>
-                <span className="font-display text-[11px] font-bold tracking-[0.14em] text-accent uppercase block">
+                <span className="font-display text-xs font-bold tracking-[0.14em] text-accent uppercase block">
                   Enterprise Research Hubs
                 </span>
                 <h3 className="font-display text-lg font-bold tracking-tight text-content mt-1">
@@ -1356,7 +1356,7 @@ function EventContent() {
           <div className="md:col-span-7 space-y-6">
             <div className="space-y-4">
               <div className="space-y-1.5">
-                <span className="font-display text-[11px] font-bold uppercase tracking-[0.2em] text-accent block">
+                <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-accent block">
                   Academic Direction &amp; Leadership
                 </span>
                 <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-[1.15] text-content">
@@ -1399,7 +1399,7 @@ function EventContent() {
 
             {/* Glassmorphic Convener Badge */}
             <div className="absolute top-4 right-4 z-10">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md text-white/95 border border-accent/40 font-sans text-[11px] font-bold uppercase tracking-[0.16em] shadow-lg shadow-black/40">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md text-white/95 border border-accent/40 font-sans text-xs font-bold uppercase tracking-[0.16em] shadow-lg shadow-black/40">
                 <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
                 Conclave Convener
               </span>
@@ -1474,7 +1474,7 @@ function EventContent() {
                         {/* Top Row: Edition Badge + Place Landmark Symbol Badge */}
                         <div className="flex items-center justify-between gap-1 mb-2">
                           <span
-                            className={`font-mono text-[11px] font-bold tracking-wider flex items-center gap-1.5 ${isSelected ? "text-accent" : "text-content-secondary group-hover:text-accent"
+                            className={`font-mono text-xs font-bold tracking-wider flex items-center gap-1.5 ${isSelected ? "text-accent" : "text-content-secondary group-hover:text-accent"
                               }`}
                           >
                             {isSelected && <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />}
@@ -1499,14 +1499,14 @@ function EventContent() {
                           >
                             {cleanCity}
                           </h4>
-                          <p className="font-sans text-[11px] text-content-muted truncate">
+                          <p className="font-sans text-xs text-content-muted truncate">
                             {c.date}
                           </p>
                         </div>
 
                         {/* Bottom Row: Thematic Focus / Active State indicator */}
                         <div
-                          className={`mt-2.5 pt-2 border-t flex items-center justify-between font-sans text-[11px] ${isSelected
+                          className={`mt-2.5 pt-2 border-t flex items-center justify-between font-sans text-xs ${isSelected
                             ? "border-accent/30 text-accent font-semibold"
                             : "border-line text-content-muted"
                             }`}
@@ -1558,7 +1558,7 @@ function EventContent() {
                         {/* Top Row: Edition Badge + Place Landmark Symbol Badge */}
                         <div className="flex items-center justify-between gap-1 mb-2">
                           <span
-                            className={`font-mono text-[11px] font-bold tracking-wider flex items-center gap-1.5 ${isSelected ? "text-accent" : "text-content-secondary group-hover:text-accent"
+                            className={`font-mono text-xs font-bold tracking-wider flex items-center gap-1.5 ${isSelected ? "text-accent" : "text-content-secondary group-hover:text-accent"
                               }`}
                           >
                             {isSelected && <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />}
@@ -1583,14 +1583,14 @@ function EventContent() {
                           >
                             {cleanCity}
                           </h4>
-                          <p className="font-sans text-[11px] text-content-muted truncate">
+                          <p className="font-sans text-xs text-content-muted truncate">
                             {c.date}
                           </p>
                         </div>
 
                         {/* Bottom Row: Thematic Focus / Active State indicator */}
                         <div
-                          className={`mt-2.5 pt-2 border-t flex items-center justify-between font-sans text-[11px] ${isSelected
+                          className={`mt-2.5 pt-2 border-t flex items-center justify-between font-sans text-xs ${isSelected
                             ? "border-accent/30 text-accent font-semibold"
                             : "border-line text-content-muted"
                             }`}
@@ -1671,7 +1671,7 @@ function EventContent() {
                           className="p-6 sm:p-7 rounded-3xl bg-gradient-to-br from-accent/15 via-surface-2 to-surface-2 border border-accent/40 shadow-xl space-y-4 relative overflow-hidden group"
                         >
                           <div className="flex items-center justify-between">
-                            <span className="inline-flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-widest text-accent font-bold px-3 py-1 rounded-full bg-accent/20 border border-accent/30">
+                            <span className="inline-flex items-center gap-1.5 font-mono text-xs uppercase tracking-widest text-accent font-bold px-3 py-1 rounded-full bg-accent/20 border border-accent/30">
                               <Medal className="w-3.5 h-3.5" />
                               Sports Keynote Spotlight
                             </span>
@@ -1742,7 +1742,7 @@ function EventContent() {
                           className="p-6 rounded-3xl bg-surface-2 border border-line hover:border-accent transition-all shadow-md flex flex-col sm:flex-row sm:items-center justify-between gap-4"
                         >
                           <div className="space-y-1">
-                            <span className="font-mono text-[11px] uppercase tracking-widest text-accent font-bold block">
+                            <span className="font-mono text-xs uppercase tracking-widest text-accent font-bold block">
                               Conclave Discussion Moderator
                             </span>
                             <h4 className="font-display text-lg font-bold text-content">
@@ -1781,7 +1781,7 @@ function EventContent() {
                             key={p.name}
                             className="p-5 rounded-2xl bg-surface-2 border border-line hover:border-accent/60 transition-all hover:-translate-y-0.5 space-y-1.5 shadow-sm"
                           >
-                            <span className="text-[11px] font-mono uppercase tracking-wider text-accent font-semibold block">
+                            <span className="text-xs font-mono uppercase tracking-wider text-accent font-semibold block">
                               Panelist
                             </span>
                             <h5 className="font-display text-sm font-bold text-content leading-snug">
@@ -1805,7 +1805,7 @@ function EventContent() {
         {activeTab === "Videos" && (
           <div id="videos-section" className="space-y-12 scroll-mt-24 pt-4">
             <div className="max-w-5xl space-y-3">
-              <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
+              <span className="text-xs font-bold font-heading uppercase tracking-[0.2em] text-accent block">
                 Conclave Moments
               </span>
               <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight sm:whitespace-nowrap scroll-mt-24">
@@ -1862,14 +1862,14 @@ function EventContent() {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent group-hover:from-black/50 transition-colors" />
 
-                            <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[11px] font-heading font-bold uppercase tracking-[0.14em] text-accent">
+                            <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-xs font-heading font-bold uppercase tracking-[0.14em] text-accent">
                               {archive.date}
                             </div>
                           </div>
 
                           <div className="p-6 space-y-4 flex-1 flex flex-col justify-between">
                             <div>
-                              <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent block mb-1">
+                              <span className="font-sans text-xs font-semibold uppercase tracking-[0.14em] text-accent block mb-1">
                                 {archive.editionBadge}
                               </span>
                               <h4 className="font-display text-lg sm:text-xl font-bold tracking-normal text-content leading-snug group-hover:text-accent transition-colors">
@@ -1934,14 +1934,14 @@ function EventContent() {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent group-hover:from-black/50 transition-colors" />
 
-                            <div className="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-[11px] font-heading font-bold uppercase tracking-[0.14em] text-accent">
+                            <div className="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-xs font-heading font-bold uppercase tracking-[0.14em] text-accent">
                               {archive.date}
                             </div>
                           </div>
 
                           <div className="p-6 space-y-4 flex-1 flex flex-col justify-between">
                             <div>
-                              <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent block mb-1">
+                              <span className="font-sans text-xs font-semibold uppercase tracking-[0.14em] text-accent block mb-1">
                                 {archive.editionBadge}
                               </span>
                               <h4 className="font-display text-base sm:text-lg font-bold tracking-normal text-content leading-snug group-hover:text-accent transition-colors">
@@ -1977,7 +1977,7 @@ function EventContent() {
                       <ChevronLeft className="w-4 h-4" />
                       All Chapter Cards
                     </button>
-                    <span className="px-3 py-1 rounded-full bg-accent/15 border border-accent/30 text-accent font-sans text-[11px] font-semibold uppercase tracking-[0.14em]">
+                    <span className="px-3 py-1 rounded-full bg-accent/15 border border-accent/30 text-accent font-sans text-xs font-semibold uppercase tracking-[0.14em]">
                       {currentMediaArchive.editionBadge} · {currentMediaArchive.date}
                     </span>
                   </div>
@@ -2006,7 +2006,7 @@ function EventContent() {
 
                 {/* Opened Card Title */}
                 <div className="space-y-2">
-                  <span className="text-[11px] font-bold font-heading uppercase tracking-[0.18em] text-accent block">
+                  <span className="text-xs font-bold font-heading uppercase tracking-[0.18em] text-accent block">
                     {currentMediaArchive.editionBadge}
                   </span>
                   <h3 className="font-display text-2xl sm:text-3xl lg:text-4xl font-extrabold text-content tracking-tight">
@@ -2076,7 +2076,7 @@ function EventContent() {
                           )}
                         </div>
                         <div className="lg:col-span-4 p-6 sm:p-8 flex flex-col justify-center space-y-3 border-t lg:border-t-0 lg:border-l border-line">
-                          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/15 border border-accent/30 text-accent text-[11px] font-semibold uppercase tracking-[0.14em] w-fit">
+                          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/15 border border-accent/30 text-accent text-xs font-semibold uppercase tracking-[0.14em] w-fit">
                             {currentMediaArchive.videos[0].tag}
                           </span>
                           <h5 className="font-display text-lg sm:text-xl font-bold text-content leading-snug">
@@ -2131,7 +2131,7 @@ function EventContent() {
                               )}
                             </div>
                             <div className="p-5 space-y-1.5">
-                              <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent block">
+                              <span className="font-sans text-xs font-semibold uppercase tracking-[0.14em] text-accent block">
                                 {v.tag}
                               </span>
                               <h5 className="font-display text-base sm:text-lg font-semibold text-content leading-snug">
@@ -2206,7 +2206,7 @@ function EventContent() {
                                   <div className="text-xs font-heading font-bold uppercase tracking-[0.14em] text-content">
                                     Conclave Moment {slotNumber}
                                   </div>
-                                  <div className="text-[11px] font-sans text-content-muted">
+                                  <div className="text-xs font-sans text-content-muted">
                                     {currentMediaArchive.city} Photo Space
                                   </div>
                                 </div>

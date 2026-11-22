@@ -95,7 +95,7 @@ export default function ContactPage() {
       <section className="relative pt-32 pb-16 lg:pt-40 lg:pb-24 border-b border-line overflow-hidden">
         <HeroBackdrop />
         <div className="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 text-center space-y-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-[11px] font-bold font-heading tracking-[0.14em] uppercase">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-accent-subtle border border-accent/30 text-accent text-xs font-bold font-heading tracking-[0.14em] uppercase">
             <Mail className="w-3.5 h-3.5" />
             <span>Secretariat & Executive Desk</span>
           </div>
@@ -142,7 +142,7 @@ export default function ContactPage() {
                 <div className="space-y-1">
                   <p className="font-semibold">{statusMessage.text}</p>
                   {statusMessage.ref && (
-                    <p className="text-[11px] text-success">
+                    <p className="text-xs text-success">
                       Reference ID: {statusMessage.ref}
                     </p>
                   )}
@@ -276,7 +276,7 @@ export default function ContactPage() {
           <div className="lg:col-span-5 space-y-6">
             {/* Executive Leadership Desk Card */}
             <div className="bg-surface rounded-3xl p-8 sm:p-10 border border-line shadow-2xl space-y-4">
-              <span className="text-[11px] font-bold font-heading uppercase tracking-[0.14em] text-accent px-3 py-1 rounded-full bg-accent-subtle border border-accent/30 block w-fit">
+              <span className="text-xs font-bold font-heading uppercase tracking-[0.14em] text-accent px-3 py-1 rounded-full bg-accent-subtle border border-accent/30 block w-fit">
                 Conclave Leadership &amp; Corporate Relations
               </span>
               <div>
@@ -341,7 +341,7 @@ export default function ContactPage() {
               </div>
 
               <div className="pt-6 border-t border-line">
-                <span className="text-[11px] font-bold font-heading uppercase tracking-wider text-accent block mb-2">
+                <span className="text-xs font-bold font-heading uppercase tracking-wider text-accent block mb-2">
                   Institutional Mandate
                 </span>
                 <p className="text-xs text-content-secondary leading-relaxed">
@@ -355,7 +355,7 @@ export default function ContactPage() {
         {/* Frequently Asked Questions */}
         <div className="mt-20 pt-16 border-t border-line space-y-10">
           <div className="text-center max-w-5xl mx-auto space-y-3 mb-12">
-            <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
+            <span className="text-xs font-bold font-heading uppercase tracking-[0.2em] text-accent block">
               Instant Answers
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">

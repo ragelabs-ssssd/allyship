@@ -152,7 +152,7 @@ export function TestimonialCarousel() {
         {/* Header & Controls */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 pb-6 border-b border-line">
           <SectionReveal>
-            <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
+            <span className="font-sans text-xs font-semibold uppercase tracking-[0.14em] text-accent">
               Voices of Conclave Luminaries
             </span>
             <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight mt-2">
@@ -210,7 +210,7 @@ export function TestimonialCarousel() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
 
                     {item.highlight && (
-                      <span className="absolute top-3 right-3 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-sans text-[11px] font-semibold uppercase tracking-[0.14em] bg-black/70 text-accent-light border border-accent/40 backdrop-blur-md">
+                      <span className="absolute top-3 right-3 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-sans text-xs font-semibold uppercase tracking-[0.14em] bg-black/70 text-accent-light border border-accent/40 backdrop-blur-md">
                         <Award className="w-3 h-3" />
                         {item.highlight}
                       </span>
@@ -239,7 +239,7 @@ export function TestimonialCarousel() {
                       <p className="font-sans text-xs font-semibold text-accent">
                         {item.organization}
                       </p>
-                      <p className="font-sans text-[11px] text-content-muted uppercase tracking-[0.14em] pt-0.5 font-medium">
+                      <p className="font-sans text-xs text-content-muted uppercase tracking-[0.14em] pt-0.5 font-medium">
                         {item.chapter}
                       </p>
                     </div>

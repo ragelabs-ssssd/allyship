@@ -18,7 +18,7 @@ export default function Error({
   return (
     <div className="min-h-[80vh] flex items-center justify-center bg-canvas px-6 pt-32 pb-24">
       <div className="text-center max-w-lg space-y-6">
-        <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-2 border border-line text-[11px] font-semibold uppercase tracking-[0.14em] text-accent">
+        <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-2 border border-line text-xs font-semibold uppercase tracking-[0.14em] text-accent">
           <AlertTriangle className="w-3.5 h-3.5" />
           Something Went Wrong
         </span>

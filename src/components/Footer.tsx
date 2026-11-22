@@ -65,10 +65,10 @@ export function Footer() {
                     ++
                   </span>
                 </span>
-                <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.16em] text-accent mt-1">
+                <span className="font-sans text-xs font-semibold uppercase tracking-[0.16em] text-accent mt-1">
                   Siksha &lsquo;O&rsquo; Anusandhan
                 </span>
-                <span className="font-sans text-[11px] font-medium tracking-[0.02em] text-content-muted mt-0.5">
+                <span className="font-sans text-xs font-medium tracking-[0.02em] text-content-muted mt-0.5">
                   Deemed to be University · Category 1 Autonomy
                 </span>
               </div>
@@ -81,13 +81,13 @@ export function Footer() {
 
 
             <div className="flex flex-wrap gap-2 pt-1 text-xs font-sans">
-              <span className="px-3 py-1 rounded-full bg-surface-2 border border-line text-content-secondary font-medium text-[11px]">
+              <span className="px-3 py-1 rounded-full bg-surface-2 border border-line text-content-secondary font-medium text-xs">
                 NIRF #15 in Universities
               </span>
-              <span className="px-3 py-1 rounded-full bg-surface-2 border border-line text-content-secondary font-medium text-[11px]">
+              <span className="px-3 py-1 rounded-full bg-surface-2 border border-line text-content-secondary font-medium text-xs">
                 NAAC A++ Grade
               </span>
-              <span className="px-3 py-1 rounded-full bg-surface-2 border border-line text-content-secondary font-medium text-[11px]">
+              <span className="px-3 py-1 rounded-full bg-surface-2 border border-line text-content-secondary font-medium text-xs">
                 Top 27 Overall India
               </span>
             </div>
@@ -96,7 +96,7 @@ export function Footer() {
           {/* Col 2: Dossier Index (4 cols) */}
           <div className="lg:col-span-4 space-y-4">
             <div className="pb-2 border-b border-line">
-              <h4 className="font-sans text-[11px] font-semibold uppercase tracking-[0.16em] text-accent">
+              <h4 className="font-sans text-xs font-semibold uppercase tracking-[0.16em] text-accent">
                 Explore Dossiers
               </h4>
             </div>
@@ -116,7 +116,7 @@ export function Footer() {
 
           {/* Col 3: Executive Briefing & Direct Secretariat Dispatch (3 cols) */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="font-sans text-[11px] font-semibold uppercase tracking-[0.16em] text-accent">
+            <h4 className="font-sans text-xs font-semibold uppercase tracking-[0.16em] text-accent">
               Executive Briefings
             </h4>
             <p className="font-sans text-xs text-content-muted leading-relaxed">
@@ -153,7 +153,7 @@ export function Footer() {
             )}
 
             <div className="pt-4">
-              <div className="text-[11px] font-sans uppercase tracking-wider text-content-faint mb-1.5">
+              <div className="text-xs font-sans uppercase tracking-wider text-content-faint mb-1.5">
                 Secretariat Direct
               </div>
               <Link
@@ -174,7 +174,7 @@ export function Footer() {
         <div className="py-6 border-b border-line flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs">
           <div className="flex items-center gap-2 text-accent">
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-            <span className="font-sans text-[11px] uppercase font-bold tracking-widest text-accent">
+            <span className="font-sans text-xs uppercase font-bold tracking-widest text-accent">
               Active Chapter Footprint
             </span>
           </div>

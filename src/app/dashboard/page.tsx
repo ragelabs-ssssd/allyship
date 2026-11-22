@@ -141,7 +141,7 @@ export default function DashboardPage() {
             <span>{tab.label}</span>
             {tab.count && (
               <span
-                className={`px-1.5 py-0.5 rounded-full text-[11px] ${
+                className={`px-1.5 py-0.5 rounded-full text-xs ${
                   activeTab === tab.id ? "bg-black/15 text-on-accent" : "bg-glass-strong text-content-secondary"
                 }`}
               >
@@ -166,7 +166,7 @@ export default function DashboardPage() {
                 </div>
 
                 <div>
-                  <span className="text-[11px] font-bold uppercase tracking-widest text-accent">
+                  <span className="text-xs font-bold uppercase tracking-widest text-accent">
                     Official Recognition
                   </span>
                   <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-content mt-1">
@@ -179,13 +179,13 @@ export default function DashboardPage() {
 
                 <div className="pt-4 border-t border-line grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
                   <div>
-                    <span className="text-content-muted block text-[11px]">Registered Focus Areas:</span>
+                    <span className="text-content-muted block text-xs">Registered Focus Areas:</span>
                     <span className="font-semibold text-content capitalize">
                       {pledge.focusAreas.join(", ")}
                     </span>
                   </div>
                   <div>
-                    <span className="text-content-muted block text-[11px]">Credential Date:</span>
+                    <span className="text-content-muted block text-xs">Credential Date:</span>
                     <span className="font-semibold text-content">
                       {new Date(pledge.createdAt).toLocaleDateString()}
                     </span>
@@ -271,7 +271,7 @@ export default function DashboardPage() {
                   className="p-5 bg-surface-2 rounded-2xl border border-line flex items-start justify-between gap-4"
                 >
                   <div className="space-y-1">
-                    <span className="text-[11px] font-bold uppercase tracking-wider text-accent">
+                    <span className="text-xs font-bold uppercase tracking-wider text-accent">
                       {res.categoryLabel}
                     </span>
                     <Link
