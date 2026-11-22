@@ -2231,7 +2231,7 @@ function EventContent() {
               <span className="font-heading text-xs font-bold uppercase tracking-widest text-accent">
                 The Conclave Mission
               </span>
-              <blockquote className="font-display italic font-normal tracking-normal text-2xl sm:text-3xl lg:text-4xl text-content leading-[1.35]">
+              <blockquote className="font-display italic font-normal tracking-normal text-[1.35rem] sm:text-[1.6875rem] lg:text-[2.025rem] text-content leading-[1.35]">
                 &ldquo;Rather than waiting for industry to visit our campus, we bring academic dialogue directly to the cities where corporate leadership shapes the future of work.&rdquo;
               </blockquote>
               <p className="font-sans text-sm font-normal tracking-[0.01em] leading-relaxed text-content-secondary">
