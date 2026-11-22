@@ -1120,7 +1120,7 @@ function EventContent() {
                 Where Corporate Chairs, Olympians, and Thinkers Connect
               </p>
 
-              <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal text-left">
+              <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal text-left md:max-w-[70%]">
                 From Bhubaneswar to India&apos;s key economic hubs, Siksha &lsquo;O&rsquo; Anusandhan brings academic leadership directly to industry—listening to corporate demands, guiding young talent, and building alliances beyond hiring cycles.
               </p>
 
