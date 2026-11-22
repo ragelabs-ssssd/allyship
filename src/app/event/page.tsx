@@ -2056,9 +2056,15 @@ function EventContent() {
                               allowFullScreen
                             />
                           ) : (
-                            <div className="relative w-full h-full bg-gradient-to-br from-surface-2 via-surface-3 to-canvas flex flex-col items-center justify-center p-6 text-center border-dashed border border-line/80">
-                              <div className="w-14 h-14 rounded-full bg-accent/15 border border-accent/30 flex items-center justify-center text-accent mb-3 shadow-lg shadow-accent/5">
-                                <Play className="w-6 h-6 ml-0.5" />
+                            <div className="relative w-full h-full bg-gradient-to-br from-surface-2 via-surface-3 to-canvas flex flex-col items-center justify-center p-6 text-center border-dashed border border-line/80 group">
+                              <div className="relative mb-3">
+                                <span
+                                  aria-hidden="true"
+                                  className="absolute inset-0 rounded-full bg-accent/25 animate-ping opacity-60"
+                                />
+                                <div className="relative w-14 h-14 rounded-full bg-accent/15 border border-accent/40 flex items-center justify-center text-accent shadow-[0_0_0_6px_rgba(197,168,105,0.12)] group-hover:scale-110 transition-transform duration-300">
+                                  <Play className="w-6 h-6 ml-0.5" />
+                                </div>
                               </div>
                               <span className="font-heading text-xs sm:text-sm font-bold uppercase tracking-[0.16em] text-content">
                                 {currentMediaArchive.city} Conclave Film Space
@@ -2110,8 +2116,16 @@ function EventContent() {
                                   allowFullScreen
                                 />
                               ) : (
-                                <div className="relative aspect-video w-full bg-gradient-to-br from-surface-2 to-surface-3 flex flex-col items-center justify-center p-6 text-center">
-                                  <Play className="w-8 h-8 text-accent mb-2" />
+                                <div className="relative aspect-video w-full bg-gradient-to-br from-surface-2 to-surface-3 flex flex-col items-center justify-center p-6 text-center group">
+                                  <div className="relative mb-3">
+                                    <span
+                                      aria-hidden="true"
+                                      className="absolute inset-0 rounded-full bg-accent/25 animate-ping opacity-60"
+                                    />
+                                    <div className="relative w-14 h-14 rounded-full bg-accent/15 border border-accent/40 flex items-center justify-center text-accent shadow-[0_0_0_6px_rgba(197,168,105,0.12)] group-hover:scale-110 transition-transform duration-300">
+                                      <Play className="w-7 h-7 ml-0.5" />
+                                    </div>
+                                  </div>
                                   <span className="text-xs font-semibold uppercase tracking-wider text-content">Video Slot Ready</span>
                                 </div>
                               )}

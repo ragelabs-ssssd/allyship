@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ALLYSHIP++ — Motion Lab: Section 4 (Speakers &amp; Leadership)</title>
+  <title>ALLYSHIP++ — Motion Lab: Section 6 (Partners, Press &amp; Testimonials)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
@@ -94,9 +94,9 @@
     .trig { font-size: 10.5px; color: var(--muted); font-family: monospace; }
 
     .demo {
-      height: 165px;
+      height: 160px;
       background: #070709;
-      padding: 18px;
+      padding: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -126,23 +126,19 @@
       width: 100%;
     }
     .card.selected .pick-btn { background: var(--gold); color: #0A0A0A; border-color: var(--gold); }
-
     .u { font-family: 'Unbounded', sans-serif; }
     .gold { color: var(--gold); }
 
-    .port-box { width: 105px; height: 115px; border-radius: 14px; overflow: hidden; border: 1px solid var(--line); position: relative; cursor: pointer; }
-    .port-box img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; transition: all 0.55s cubic-bezier(0.16,1,0.3,1); }
-    .port-mono img { filter: grayscale(100%); }
-    .port-mono:hover img { filter: grayscale(0%); transform: scale(1.07); }
+    @keyframes marq { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    @keyframes marqRev { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
+    .t-row { width: 100%; overflow: hidden; white-space: nowrap; }
+    .t-track { display: inline-flex; gap: 18px; animation: marq 10s linear infinite; font-size: 11px; color: var(--gold); font-weight: 700; }
+    .t-track.rev { animation: marqRev 11s linear infinite; color: #d4d4d8; margin-top: 6px; }
+    .demo:hover .t-track { animation-play-state: paused; }
 
-    @keyframes pulseDot { 0%, 100% { transform: scale(1); opacity: 0.9; } 50% { transform: scale(2.2); opacity: 0; } }
-    .beacon { position: relative; width: 8px; height: 8px; border-radius: 999px; background: var(--gold); display: inline-block; }
-    .beacon::after { content: ''; position: absolute; inset: 0; border-radius: 999px; border: 1px solid var(--gold); animation: pulseDot 2s infinite; }
-
-    .drawer-card { width: 170px; height: 120px; border-radius: 14px; overflow: hidden; position: relative; border: 1px solid var(--line); cursor: pointer; }
-    .drawer-card img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; }
-    .drawer-bio { position: absolute; inset: auto 0 0 0; background: rgba(10,10,12,0.9); padding: 8px 10px; font-size: 10px; transform: translateY(100%); transition: transform 0.3s ease; }
-    .drawer-card:hover .drawer-bio { transform: translateY(0); }
+    @keyframes timerBar { 0% { transform: scaleX(0); } 100% { transform: scaleX(1); } }
+    .slide-bar { width: 75%; height: 2px; background: rgba(255,255,255,0.12); position: relative; overflow: hidden; }
+    .slide-bar::after { content: ''; position: absolute; inset: 0; background: var(--gold); transform-origin: left; animation: timerBar 4s linear infinite; }
 
     .action-bar {
       position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%);
@@ -158,11 +154,12 @@
   <div class="container">
     <div class="header">
       <div>
-        <span class="done-pill">&#10003; Navbar #04 Applied</span>
-        <span class="done-pill">&#10003; About #03 Applied</span>
-        <span class="step-badge">Section 4 of 7 &bull; Speakers &amp; Leadership Cards</span>
-        <h1>15 Creative Speakers &amp; Leadership Motion Options</h1>
-        <p class="sub">Test all 15 Leadership/Speaker Card interactions below. Reply with your chosen <strong>Speakers #(s)</strong>, and we&rsquo;ll apply them and move to <strong>Section 5: Event Agenda &amp; Timeline</strong>!</p>
+        <span class="done-pill">&#10003; Navbar #04</span>
+        <span class="done-pill">&#10003; About #03</span>
+        <span class="done-pill">&#10003; Agenda #14</span>
+        <span class="step-badge">Section 6 of 7 &bull; Partners, Press &amp; Testimonials</span>
+        <h1>15 Creative Partners &amp; Carousel Motion Options</h1>
+        <p class="sub">Test all 15 Ticker, Partner &amp; Testimonial Carousel interactions below. Reply with your chosen <strong>Partners #(s)</strong>, or say <em>&ldquo;next&rdquo;</em> for the final section: <strong>Section 7: CTA &amp; Footer</strong>!</p>
       </div>
     </div>
 
@@ -170,27 +167,27 @@
   </div>
 
   <div class="action-bar">
-    <span style="font-size:12px; color:#E4E4E7;" id="selText">0 Speakers options selected</span>
-    <button class="copy-btn" id="copyBtn">Copy Speakers Picks</button>
+    <span style="font-size:12px; color:#E4E4E7;" id="selText">0 Partners options selected</span>
+    <button class="copy-btn" id="copyBtn">Copy Partners Picks</button>
   </div>
 
   <script>
     const options = [
-      { n: 1, name: 'Monochrome-to-Color + Zoom', trig: 'hover', desc: 'Portraits rest in editorial grayscale and warm smoothly to color with 1.07x zoom on hover.', demo: `<div class="port-box port-mono"><img src="/chairman-manojranjan-nayak.png" alt="Chairman" /></div>` },
-      { n: 2, name: '3D Perspective Card Tilt', trig: 'cursor-move', desc: 'Leadership cards tilt ±5deg toward your cursor in 3D space with smooth spring return.', demo: `<div style="width:180px;padding:14px;border-radius:14px;background:#141418;border:1px solid rgba(197,168,105,0.4);text-align:center;transition:transform 0.15s;cursor:pointer;" onmousemove="const r=this.getBoundingClientRect();this.style.transform='perspective(450px) rotateX('+(((r.height/2-(event.clientY-r.top))/r.height)*18)+'deg) rotateY('+((((event.clientX-r.left)-r.width/2)/r.width)*18)+'deg)'" onmouseleave="this.style.transform='none'"><div class="u gold" style="font-size:11px;">Prof. Raj K. Hota</div><div style="font-size:10px;color:var(--muted);margin-top:4px;">Hover 3D Tilt</div></div>` },
-      { n: 3, name: 'Editorial Corner Bracket Expand', trig: 'hover', desc: 'Gold L-bracket corner accents expand 5px outward around the portrait on hover.', demo: `<div style="position:relative;width:105px;height:105px;cursor:pointer;" onmouseover="this.querySelector('b').style.transform='translate(6px,6px)'" onmouseout="this.querySelector('b').style.transform='none'"><div class="port-box" style="width:100%;height:100%;"><img src="/leadership/pradipta-kumar-nanda.jpg" alt="VC" /></div><b style="position:absolute;bottom:-5px;right:-5px;width:44px;height:44px;border-right:2px solid var(--gold);border-bottom:2px solid var(--gold);border-radius:0 0 12px 0;transition:transform 0.3s;pointer-events:none;"></b></div>` },
-      { n: 4, name: 'Cursor-Tracking Border Spotlight', trig: 'cursor-move', desc: 'A warm radial gold glow tracks the pointer across neighboring speaker card borders.', demo: `<div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;cursor:crosshair;background:radial-gradient(circle 75px at var(--sx,50%) var(--sy,50%), rgba(197,168,105,0.34), transparent);" onmousemove="const r=this.getBoundingClientRect();this.style.setProperty('--sx',(event.clientX-r.left)+'px');this.style.setProperty('--sy',(event.clientY-r.top)+'px');"><span style="font-size:11px;">Move Cursor Over Cards</span></div>` },
-      { n: 5, name: 'Sliding Bio Drawer Overlay', trig: 'hover', desc: 'Hovering any speaker photo smoothly slides up their role & quote bio from the bottom edge.', demo: `<div class="drawer-card"><img src="/leadership/pradipta-kumar-nanda.jpg" alt="VC" /><div class="drawer-bio"><strong class="gold">Prof. P. K. Nanda</strong><br>Vice-Chancellor, SOA</div></div>` },
-      { n: 6, name: 'Vertical Clip-Path Portrait Unveil', trig: 'scroll-into-view', desc: 'Chairman & VC portraits wipe smoothly open vertically from 15% inset on scroll entry.', demo: `<div style="font-size:12px;color:var(--gold);">Vertical Clip-Path Unveil</div>` },
-      { n: 7, name: 'Subtle Live Status Beacon Ring', trig: 'ambient (2s)', desc: 'Founding Visionary & Vice-Chancellor pills emit a calm breathing gold ring.', demo: `<div style="display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:#141418;border:1px solid rgba(197,168,105,0.4);font-size:10.5px;"><span class="beacon"></span><span>VICE-CHANCELLOR</span></div>` },
-      { n: 8, name: 'Staggered Panelist Roster Cascade', trig: 'chapter-switch', desc: 'Corporate panelist cards cascade cleanly 55ms apart whenever you switch city chapters.', demo: `<div style="display:flex;gap:6px;"><div style="width:36px;height:48px;background:#18181C;border:1px solid var(--gold);border-radius:8px;"></div><div style="width:36px;height:48px;background:#18181C;border:1px solid var(--line);border-radius:8px;margin-top:6px;"></div><div style="width:36px;height:48px;background:#18181C;border:1px solid var(--line);border-radius:8px;margin-top:12px;"></div></div>` },
-      { n: 9, name: 'Sibling Focus Dimming on Grid', trig: 'hover', desc: 'Hovering one speaker card gently dims sibling cards to 45% to highlight that leader.', demo: `<div style="display:flex;gap:8px;" onmouseover="if(event.target.dataset.c){[...this.children].forEach(c=>c.style.opacity=c===event.target?'1':'0.35')}" onmouseout="[...this.children].forEach(c=>c.style.opacity='1')"><div data-c="1" style="padding:10px 14px;background:#18181C;border:1px solid var(--line);border-radius:10px;font-size:11px;cursor:pointer;transition:opacity 0.2s;">Speaker 1</div><div data-c="2" style="padding:10px 14px;background:#18181C;border:1px solid var(--line);border-radius:10px;font-size:11px;cursor:pointer;transition:opacity 0.2s;">Speaker 2</div></div>` },
-      { n: 10, name: 'Quote Mark Slide-In', trig: 'scroll-into-view', desc: 'Oversized serif quotation mark glides 12px horizontally into place before the quote.', demo: `<span style="font-family:'Newsreader',serif;font-size:52px;color:var(--gold);line-height:1;transition:transform 0.3s;cursor:pointer;" onmouseover="this.style.transform='translateX(6px)'" onmouseout="this.style.transform='none'">&ldquo;</span>` },
-      { n: 11, name: 'Role Badge Gold Fill Flip', trig: 'hover', desc: 'Session Chair / Guest Speaker pill transitions smoothly to solid gold fill on card hover.', demo: `<span style="padding:5px 14px;border-radius:999px;border:1px solid var(--gold);color:var(--gold);font-size:11px;font-weight:700;cursor:pointer;transition:all 0.25s;" onmouseover="this.style.background='var(--gold)';this.style.color='#0A0A0A'" onmouseout="this.style.background='transparent';this.style.color='var(--gold)'">Session Chair</span>` },
-      { n: 12, name: 'Parallax Portrait Offset', trig: 'scroll-scrub', desc: 'Portrait frame drifts gently ±10px vertically relative to the adjacent quote column.', demo: `<span style="font-size:12px;color:var(--gold);">±10px Scroll Portrait Offset</span>` },
-      { n: 13, name: 'Circular Avatar Ring Rotation', trig: 'hover', desc: 'Dashed gold outer ring rotates slowly around circular speaker portraits on hover.', demo: `<div style="width:72px;height:72px;border-radius:999px;border:1.5px dashed var(--gold);padding:4px;cursor:pointer;transition:transform 0.8s ease;" onmouseover="this.style.transform='rotate(90deg)'" onmouseout="this.style.transform='none'"><div style="width:100%;height:100%;border-radius:999px;background:url('/chairman-manojranjan-nayak.png') center/cover;"></div></div>` },
-      { n: 14, name: 'Name Underline Wipe on Hover', trig: 'hover', desc: 'A sleek gold underline wipes left-to-right beneath the speaker name on card hover.', demo: `<div style="cursor:pointer;" onmouseover="this.querySelector('div').style.transform='scaleX(1)'" onmouseout="this.querySelector('div').style.transform='scaleX(0)'"><span style="font-size:13px;font-weight:700;">Prof. Sanjay Dhir, IIT Delhi</span><div style="height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 0.3s;"></div></div>` },
-      { n: 15, name: 'Modal Bio Quick-Expand', trig: 'click', desc: 'Clicking a compact speaker card expands a crisp blurred spotlight bio overlay.', demo: `<span style="font-size:11.5px;color:var(--gold);border:1px solid rgba(197,168,105,0.35);padding:6px 14px;border-radius:999px;">Click &rarr; Quick Bio Spotlight</span>` }
+      { n: 1, name: 'Dual-Direction Opposing Marquee', trig: 'ambient + hover', desc: 'Press headlines and partner logos glide in opposite directions and pause on hover.', demo: `<div style="width:100%;"><div class="t-row"><div class="t-track"><span>TIMES OF INDIA &bull;</span><span>ECONOMIC TIMES &bull;</span><span>INDIAN EXPRESS &bull;</span><span>TIMES OF INDIA &bull;</span><span>ECONOMIC TIMES &bull;</span></div></div><div class="t-row"><div class="t-track rev"><span>MICROSOFT &bull;</span><span>DELL &bull;</span><span>AKAMAI &bull;</span><span>RECKITT &bull;</span><span>MICROSOFT &bull;</span><span>DELL &bull;</span></div></div></div>` },
+      { n: 2, name: 'Velocity-Reactive Scroll Ticker', trig: 'scroll-velocity', desc: 'Scrolling faster accelerates the press marquee, then eases back to cruise speed.', demo: `<span style="font-size:12px;color:var(--gold);">Scroll-Velocity Dynamic Speed</span>` },
+      { n: 3, name: 'Scale & Focus Carousel', trig: 'slide-change', desc: 'Active testimonial card scales to 1.0 full brightness while neighbors dim at 0.94.', demo: `<div style="display:flex;gap:8px;align-items:center;"><div style="width:40px;height:44px;background:#141418;opacity:0.45;border-radius:8px;"></div><div style="width:68px;height:58px;background:#18181C;border:1px solid var(--gold);border-radius:8px;"></div><div style="width:40px;height:44px;background:#141418;opacity:0.45;border-radius:8px;"></div></div>` },
+      { n: 4, name: 'Chapter Bento Ken Burns Hover', trig: 'hover', desc: 'Hovering any Bento chapter card zooms its photo 1.07x and slides the arrow right.', demo: `<div style="width:155px;height:95px;border-radius:12px;overflow:hidden;border:1px solid var(--line);cursor:pointer;"><img src="/bengaluru-2.jpg" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;" onmouseover="this.style.transform='scale(1.09)'" onmouseout="this.style.transform='none'" /></div>` },
+      { n: 5, name: 'Press Badge Gold Rim Glint', trig: 'hover', desc: 'Media pills (Times of India, Indian Express) illuminate a crisp gold rim on hover.', demo: `<span style="padding:7px 14px;border-radius:999px;border:1px solid var(--line);font-size:11.5px;cursor:pointer;transition:all 0.25s;" onmouseover="this.style.borderColor='var(--gold)';this.style.color='var(--gold)'" onmouseout="this.style.borderColor='var(--line)';this.style.color='#fff'">Economic Times &rarr;</span>` },
+      { n: 6, name: 'Slide Progress Timer Line', trig: 'autoplay (4s)', desc: 'A sleek 2px gold progress bar fills beneath the active testimonial slide.', demo: `<div class="slide-bar"></div>` },
+      { n: 7, name: 'Partner Badge Magnetic Lift', trig: 'hover', desc: 'Enterprise partner pills lift 3px and brighten from 70% → 100% opacity.', demo: `<span style="opacity:0.7;padding:7px 14px;border-radius:10px;background:#141418;border:1px solid var(--line);font-size:11.5px;cursor:pointer;transition:all 0.2s;" onmouseover="this.style.opacity='1';this.style.transform='translateY(-3px)';this.style.borderColor='var(--gold)'" onmouseout="this.style.opacity='0.7';this.style.transform='none';this.style.borderColor='var(--line)'">L&amp;T Technology Services</span>` },
+      { n: 8, name: '3D Card Depth Carousel Tilt', trig: 'cursor-move', desc: 'Testimonial cards tilt subtly toward cursor in 3D space.', demo: `<div style="width:165px;padding:12px;border-radius:12px;background:#141418;border:1px solid rgba(197,168,105,0.4);font-size:11px;text-align:center;transition:transform 0.15s;cursor:pointer;" onmousemove="const r=this.getBoundingClientRect();this.style.transform='perspective(400px) rotateX('+(((r.height/2-(event.clientY-r.top))/r.height)*16)+'deg) rotateY('+((((event.clientX-r.left)-r.width/2)/r.width)*16)+'deg)'" onmouseleave="this.style.transform='none'">&ldquo;True allyship.&rdquo;</div>` },
+      { n: 9, name: 'Quote Crossfade Blur Transition', trig: 'slide-change', desc: 'Switching quotes softly blurs out old text and crisp-focuses the new quote.', demo: `<span style="font-family:'Newsreader',serif;font-style:italic;font-size:15px;">Smooth Blur Crossfade</span>` },
+      { n: 10, name: 'Edge Fade Mask on Logo Ticker', trig: 'ambient', desc: 'Soft CSS mask fades logos cleanly into obsidian on left and right edges.', demo: `<div style="width:85%;padding:8px;text-align:center;font-size:11px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 20%,#000 80%,transparent);mask-image:linear-gradient(90deg,transparent,#000 20%,#000 80%,transparent);">Microsoft &bull; Dell &bull; Akamai &bull; Reckitt</div>` },
+      { n: 11, name: 'Staggered Partner Grid Reveal', trig: 'scroll-into-view', desc: 'Organization badges pop cleanly into view 40ms apart.', demo: `<div style="display:flex;gap:6px;"><span style="padding:4px 8px;border:1px solid var(--gold);border-radius:6px;font-size:10px;">Dell</span><span style="padding:4px 8px;border:1px solid var(--line);border-radius:6px;font-size:10px;">BNY</span><span style="padding:4px 8px;border:1px solid var(--line);border-radius:6px;font-size:10px;">TCS</span></div>` },
+      { n: 12, name: 'Chapter Badge Pulse on Hover', trig: 'hover', desc: 'City badges in ChapterBentoGrid glow gold when hovering the card.', demo: `<span style="padding:4px 12px;border-radius:999px;background:rgba(197,168,105,0.15);border:1px solid var(--gold);color:var(--gold);font-size:10.5px;">BENGALURU 2.0</span>` },
+      { n: 13, name: 'Interactive Quote Star Rating Pop', trig: 'hover', desc: 'Olympian & CXO achievement tags scale cleanly on card hover.', demo: `<span class="gold" style="font-size:12px;">&#9733; Olympian Keynote</span>` },
+      { n: 14, name: 'Swipe Drag Momentum Physics', trig: 'drag / swipe', desc: 'Tactile spring momentum when dragging through testimonials on touch or mouse.', demo: `<span style="font-size:11.5px;color:var(--muted);">Drag &larr; &rarr; Momentum</span>` },
+      { n: 15, name: 'Press Clip Modal Zoom Preview', trig: 'click', desc: 'Clicking a press headline scales open the media record modal smoothly.', demo: `<span style="font-size:11.5px;color:var(--gold);border-bottom:1px dashed var(--gold);">Click &rarr; Press Dossier Modal</span>` }
     ];
 
     const picked = new Set();
@@ -199,7 +196,7 @@
 
     function render() {
       grid.innerHTML = options.map(o => {
-        const key = 'Speakers #' + String(o.n).padStart(2, '0');
+        const key = 'Partners #' + String(o.n).padStart(2, '0');
         const isSel = picked.has(key);
         return `
           <div class="card ${isSel ? 'selected' : ''}">
@@ -224,16 +221,16 @@
 
     window.toggle = (k) => {
       if (picked.has(k)) picked.delete(k); else picked.add(k);
-      selText.textContent = picked.size ? `${picked.size} Speakers option${picked.size > 1 ? 's' : ''} selected` : '0 Speakers options selected';
+      selText.textContent = picked.size ? `${picked.size} Partners option${picked.size > 1 ? 's' : ''} selected` : '0 Partners options selected';
       render();
     };
 
     document.getElementById('copyBtn').addEventListener('click', () => {
-      const txt = 'Apply ' + [...picked].join(', ') + ' and show Section 5 (Agenda & Timeline)';
+      const txt = 'Apply ' + [...picked].join(', ') + ' and show Section 7 (CTA & Footer)';
       navigator.clipboard?.writeText(txt);
       const b = document.getElementById('copyBtn');
       b.textContent = 'Copied!';
-      setTimeout(() => b.textContent = 'Copy Speakers Picks', 1800);
+      setTimeout(() => b.textContent = 'Copy Partners Picks', 1800);
     });
 
     render();
