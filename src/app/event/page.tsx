@@ -1307,8 +1307,10 @@ function EventContent() {
                 <ShieldCheck className="w-6 h-6" />
               </div>
               <div>
-                <span className="font-display text-xs font-bold tracking-[0.02em] xl:tracking-[0.04em] text-accent uppercase block whitespace-nowrap">
-                  Workplace Culture &amp; Psychological Safety
+                <span className="font-display text-xs font-bold tracking-[0.12em] leading-snug text-accent uppercase block">
+                  Workplace Culture &amp;
+                  <br />
+                  Psychological Safety
                 </span>
                 <h3 className="font-display text-lg font-bold tracking-tight text-content mt-1">
                   Everyday Duty Over Symbolic Compliance
