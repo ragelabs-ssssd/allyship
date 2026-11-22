@@ -55,7 +55,7 @@ export function GlobalRankingsShowcase() {
             {/* Hero Accolade */}
             <div className="p-5 rounded-2xl bg-surface-3 border border-accent/40 flex items-center justify-between gap-4">
               <div>
-                <span className="text-[10px] font-mono uppercase tracking-wider text-content-muted block">
+                <span className="text-[11px] font-mono uppercase tracking-wider text-content-muted block">
                   Apex Regional Standing
                 </span>
                 <h3 className="font-heading text-xl sm:text-2xl font-black text-content mt-0.5">
@@ -86,7 +86,7 @@ export function GlobalRankingsShowcase() {
                         {m.value}
                       </span>
                       {m.highlight && (
-                        <span className="text-[10px] font-mono text-content-muted uppercase">
+                        <span className="text-[11px] font-mono text-content-muted uppercase">
                           {m.highlight}
                         </span>
                       )}
@@ -120,7 +120,7 @@ export function GlobalRankingsShowcase() {
             {/* Hero Accolade */}
             <div className="p-5 rounded-2xl bg-surface-3 border border-accent/40 flex items-center justify-between gap-4">
               <div>
-                <span className="text-[10px] font-mono uppercase tracking-wider text-content-muted block">
+                <span className="text-[11px] font-mono uppercase tracking-wider text-content-muted block">
                   Reputational Benchmark
                 </span>
                 <h3 className="font-heading text-xl sm:text-2xl font-black text-content mt-0.5">
@@ -151,7 +151,7 @@ export function GlobalRankingsShowcase() {
                         {m.value}
                       </span>
                       {m.highlight && (
-                        <span className="text-[10px] font-mono text-content-muted uppercase">
+                        <span className="text-[11px] font-mono text-content-muted uppercase">
                           {m.highlight}
                         </span>
                       )}
@@ -176,7 +176,7 @@ export function GlobalRankingsShowcase() {
             <Trophy className="w-7 h-7" />
           </div>
           <div className="space-y-1">
-            <span className="text-[10px] font-mono uppercase font-bold text-accent tracking-wider">
+            <span className="text-[11px] font-mono uppercase font-bold text-accent tracking-wider">
               MHRD · Government of India
             </span>
             <h4 className="font-heading text-lg font-bold text-content">
@@ -193,7 +193,7 @@ export function GlobalRankingsShowcase() {
             <Gem className="w-7 h-7 text-accent" />
           </div>
           <div className="space-y-1">
-            <span className="text-[10px] font-mono uppercase font-bold text-accent tracking-wider">
+            <span className="text-[11px] font-mono uppercase font-bold text-accent tracking-wider">
               QS I-GAUGE Indian University Rating
             </span>
             <h4 className="font-heading text-lg font-bold text-content">

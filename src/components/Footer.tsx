@@ -49,7 +49,7 @@ export function Footer() {
           {/* Col 1: Institutional Essence (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
             <Link href="/" className="inline-flex items-center gap-3.5 sm:gap-4 group">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 relative flex items-center justify-center rounded-full bg-glass-strong p-2 border border-line-strong group-hover:border-accent transition-colors shadow-md shrink-0 -mt-1">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 relative flex items-center justify-center rounded-full bg-glass-strong p-2 border border-line-strong group-hover:border-accent transition-colors shadow-md shrink-0">
                 <Image
                   src="/soa-logo.png"
                   alt="Siksha 'O' Anusandhan (SOA) Crest"
@@ -65,10 +65,10 @@ export function Footer() {
                     ++
                   </span>
                 </span>
-                <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.2em] text-accent mt-1">
+                <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.16em] text-accent mt-1">
                   Siksha &lsquo;O&rsquo; Anusandhan
                 </span>
-                <span className="font-sans text-[9px] font-medium tracking-[0.04em] text-content-muted mt-0.5">
+                <span className="font-sans text-[11px] font-medium tracking-[0.02em] text-content-muted mt-0.5">
                   Deemed to be University · Category 1 Autonomy
                 </span>
               </div>
@@ -153,7 +153,7 @@ export function Footer() {
             )}
 
             <div className="pt-4">
-              <div className="text-[10px] font-sans uppercase tracking-wider text-content-faint mb-1.5">
+              <div className="text-[11px] font-sans uppercase tracking-wider text-content-faint mb-1.5">
                 Secretariat Direct
               </div>
               <Link

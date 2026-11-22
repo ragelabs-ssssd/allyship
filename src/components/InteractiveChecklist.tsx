@@ -91,7 +91,7 @@ export function InteractiveChecklist() {
         <div className="flex items-center gap-3">
           <div className="text-right">
             <span className="text-lg font-bold text-accent">{progressPercent}%</span>
-            <span className="block text-[10px] text-content-muted font-medium">
+            <span className="block text-[11px] text-content-muted font-medium">
               {completedCount} of {CHECKLIST_ITEMS.length} completed
             </span>
           </div>
@@ -139,7 +139,7 @@ export function InteractiveChecklist() {
 
               <div className="flex-1">
                 <div className="flex items-center gap-2">
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-content-muted">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-content-muted">
                     {item.category}
                   </span>
                 </div>

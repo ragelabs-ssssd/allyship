@@ -40,7 +40,7 @@ export default function DiscoverSoaPage() {
               Three Decades of Exploration · A Living Vision for Tomorrow
             </p>
 
-            <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal text-justify">
+            <p className="text-base sm:text-lg text-content-secondary leading-relaxed max-w-2xl font-normal text-left md:text-justify">
               Founded to empower eastern talent, Siksha &lsquo;O&rsquo; Anusandhan has grown into one of India&apos;s top 15 universities (NIRF #15). Across three decades, we connect rigorous academic research with leaders shaping the future of work.
             </p>
 

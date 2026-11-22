@@ -163,10 +163,10 @@ export function NirfRankingsShowcase({ onOpenSlide }: NirfRankingsShowcaseProps)
               className="rounded-2xl p-6 bg-surface-2 border border-line hover:border-accent transition-all duration-300 hover:-translate-y-1 shadow-md flex flex-col justify-between space-y-4 group"
             >
               <div className="flex items-center justify-between">
-                <span className="text-[10px] font-mono text-accent uppercase font-bold">
+                <span className="text-[11px] font-mono text-accent uppercase font-bold">
                   {item.highlight}
                 </span>
-                <span className="text-[10px] font-mono text-content-muted">2025</span>
+                <span className="text-[11px] font-mono text-content-muted">2025</span>
               </div>
 
               <div>

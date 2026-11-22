@@ -90,29 +90,29 @@ export default function AboutPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 2xl:gap-24 items-start">
           {/* Left Column: 4-Paragraph Relatable Narrative */}
-          <div className="lg:col-span-6 xl:col-span-6 space-y-6 text-justify">
-            <p className="text-base text-content-secondary leading-relaxed font-normal text-justify">
+          <div className="lg:col-span-6 xl:col-span-6 space-y-6 text-left md:text-justify">
+            <p className="text-base text-content-secondary leading-relaxed font-normal text-left md:text-justify">
               For too long, university-industry ties were limited to annual campus visits. ALLYSHIP was founded on a simple truth: preparing future talent requires continuous dialogue, not periodic transactions.
             </p>
 
-            <p className="text-base text-content-secondary leading-relaxed font-normal text-justify">
+            <p className="text-base text-content-secondary leading-relaxed font-normal text-left md:text-justify">
               Instead of waiting behind gates, Siksha &lsquo;O&rsquo; Anusandhan stepped directly into metropolitan boardrooms across India to listen. We asked: <em>How do we build workplaces where young talent genuinely thrives?</em>
             </p>
 
-            <p className="text-base text-content-secondary leading-relaxed font-normal text-justify">
+            <p className="text-base text-content-secondary leading-relaxed font-normal text-left md:text-justify">
               The <code className="text-accent bg-glass-strong px-2 py-0.5 rounded border border-line font-mono font-semibold">++</code> signifies compounding impact—moving beyond hiring metrics toward psychological safety, executive mentorship, and curricula co-designed with corporate practitioners.
             </p>
 
-            <p className="text-base text-content-secondary leading-relaxed font-normal text-justify">
+            <p className="text-base text-content-secondary leading-relaxed font-normal text-left md:text-justify">
               Uniting Olympic mentors with boardroom chairs, we draw on a timeless athletic truth: potential turns into excellence only when trusted mentors guide talent through setbacks.
             </p>
 
             {/* Living Standard Callout Card */}
             <div className="p-5 rounded-2xl bg-surface-2 border border-accent/25 space-y-2 mt-4">
-              <span className="text-[10px] font-bold font-heading uppercase tracking-widest text-accent block text-left">
+              <span className="text-[11px] font-bold font-heading uppercase tracking-widest text-accent block text-left">
                 The Living Standard · Practicing Allyship
               </span>
-              <p className="text-xs sm:text-sm text-content-secondary leading-relaxed italic text-justify hyphens-auto">
+              <p className="text-xs sm:text-sm text-content-secondary leading-relaxed italic text-left md:text-justify">
                 &ldquo;A diversity policy says what an organization intends on paper. Allyship is what happens on an ordinary Friday—who is heard in a meeting, who is trusted with a challenging project, and who speaks up when an early-career colleague is overlooked.&rdquo;
               </p>
             </div>
@@ -149,7 +149,7 @@ export default function AboutPage() {
 
                 {/* Razor-Sharp Vector Typography (Exact Conclave Mandate Concept) */}
                 <div className="relative z-10 max-w-lg mx-auto flex flex-col items-center justify-center space-y-4 sm:space-y-5">
-                  <span className="text-[10px] sm:text-[11px] font-heading font-bold uppercase tracking-[0.3em] text-accent block">
+                  <span className="text-[11px] font-heading font-bold uppercase tracking-[0.3em] text-accent block">
                     The Conclave Mandate
                   </span>
 
@@ -160,7 +160,7 @@ export default function AboutPage() {
                     Trajectories.
                   </h3>
 
-                  <p className="text-[10px] sm:text-[11px] md:text-xs font-mono text-content-secondary uppercase tracking-[0.18em] pt-1 sm:pt-2 text-white/80 max-w-md leading-relaxed">
+                  <p className="text-[11px] md:text-xs font-mono text-content-secondary uppercase tracking-[0.18em] pt-1 sm:pt-2 text-white/80 max-w-md leading-relaxed">
                     7 National Conclaves &middot; 500+ Boardroom CXOs
                   </p>
                 </div>
@@ -196,7 +196,7 @@ export default function AboutPage() {
                 </h2>
               </div>
 
-              <div className="space-y-4 font-sans text-[15px] sm:text-base font-normal tracking-[0.005em] leading-[1.78] text-content-secondary text-justify hyphens-auto">
+              <div className="space-y-4 font-sans text-[15px] sm:text-base font-normal tracking-[0.005em] leading-[1.78] text-content-secondary text-left md:text-justify">
                 <p>
                   It gives me immense pleasure to be associated with Allyship, an initiative of Siksha &lsquo;O&rsquo; Anusandhan (Deemed to be University) aimed at promoting inclusive leadership, meaningful industry engagement and collaborative workplace cultures.
                 </p>
@@ -248,7 +248,7 @@ export default function AboutPage() {
 
               {/* Glassmorphic VC Badge */}
               <div className="absolute top-4 right-4 z-10">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md text-white/95 border border-accent/40 font-sans text-[10px] font-bold uppercase tracking-[0.16em] shadow-lg shadow-black/40">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md text-white/95 border border-accent/40 font-sans text-[11px] font-bold uppercase tracking-[0.16em] shadow-lg shadow-black/40">
                   <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
                   Vice-Chancellor
                 </span>
@@ -258,7 +258,7 @@ export default function AboutPage() {
             {/* Pull-Quote Excerpt Card */}
             <div className="p-6 rounded-2xl bg-surface-2 border border-line space-y-3">
               <Quote className="w-6 h-6 text-accent opacity-80" />
-              <blockquote className="font-serif italic text-base sm:text-lg leading-relaxed text-content text-justify">
+              <blockquote className="font-serif italic text-base sm:text-lg leading-relaxed text-content text-left md:text-justify">
                 &ldquo;Allyship provided an excellent platform for distinguished industry leaders, professionals and academicians to exchange perspectives on leadership, resilience, mentorship and the importance of translating allyship into everyday organizational practices.&rdquo;
               </blockquote>
             </div>
@@ -266,7 +266,7 @@ export default function AboutPage() {
             {/* Institutional Office & Credentials Card */}
             <div className="p-6 rounded-2xl bg-surface-2 border border-line space-y-4 flex-1 flex flex-col justify-between">
               <div className="space-y-3">
-                <span className="font-display text-[10px] font-bold uppercase tracking-[0.18em] text-accent block">
+                <span className="font-display text-[11px] font-bold uppercase tracking-[0.18em] text-accent block">
                   Office of the Vice-Chancellor
                 </span>
                 <div className="grid grid-cols-2 gap-3 pt-1">
@@ -279,7 +279,7 @@ export default function AboutPage() {
                     <div className="font-sans text-[11px] text-content-muted mt-0.5">Accredited University</div>
                   </div>
                 </div>
-                <p className="font-sans text-xs text-content-muted leading-relaxed text-justify">
+                <p className="font-sans text-xs text-content-muted leading-relaxed text-left md:text-justify">
                   Strengthening industry-academia partnerships, responsible leadership, and inclusive workplace cultures across India.
                 </p>
               </div>
@@ -310,10 +310,10 @@ export default function AboutPage() {
               <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
                 Why Olympic Champions Anchor Allyship++
               </h2>
-              <p className="text-sm sm:text-base text-content-secondary leading-relaxed font-normal text-justify">
+              <p className="text-sm sm:text-base text-content-secondary leading-relaxed font-normal text-left md:text-justify">
                 High-performance athletics represents the ultimate meritocratic arena in which psychological safety, coach-athlete allyship, discipline, and mutual trust under extreme pressure directly dictate collective triumph.
               </p>
-              <p className="text-sm sm:text-base text-content-secondary leading-relaxed font-normal text-justify">
+              <p className="text-sm sm:text-base text-content-secondary leading-relaxed font-normal text-left md:text-justify">
                 From Olympic podiums to global corporate boardrooms, SOA conclaves demonstrate that nurturing young talent requires the exact blend of discipline, empathy, and transformative mentorship practiced by elite national coaches.
               </p>
             </div>
@@ -323,7 +323,7 @@ export default function AboutPage() {
                 <Medal className="w-4 h-4" />
                 <span>The Core Athletic Parallel</span>
               </div>
-              <p className="text-sm text-content-secondary leading-relaxed italic text-justify">
+              <p className="text-sm text-content-secondary leading-relaxed italic text-left md:text-justify">
                 &ldquo;An Olympic coach doesn&apos;t run the anchor leg; they eliminate friction, absorb external pressure, and build unshakeable psychological safety so emerging talent can execute without fear under championship stakes. That is the definition of executive allyship.&rdquo;
               </p>
             </div>
@@ -341,7 +341,7 @@ export default function AboutPage() {
                   className="p-5 rounded-2xl bg-surface-3 border border-line hover:border-accent/50 transition-all flex flex-col justify-between space-y-3 group"
                 >
                   <div className="space-y-2">
-                    <span className="text-[10px] font-bold font-heading uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-glass text-accent border border-line block w-fit">
+                    <span className="text-[11px] font-bold font-heading uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-glass text-accent border border-line block w-fit">
                       {sa.city}
                     </span>
                     <h4 className="font-heading text-sm font-bold text-content group-hover:text-accent transition-colors">

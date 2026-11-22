@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALLYSHIP++ — UI/UX Audit: Existing vs. Proposed Comparison</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --canvas: #0A0A0A;
+      --surface: #121212;
+      --surface-2: #181818;
+      --line: rgba(255, 255, 255, 0.12);
+      --content: #FFFFFF;
+      --secondary: #E4E4E7;
+      --muted: #9CA3AF;
+      --accent: #C5A869;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--canvas);
+      color: var(--content);
+      font-family: 'Inter', sans-serif;
+      padding: 36px 24px 96px;
+      line-height: 1.6;
+    }
+    .container { max-width: 1440px; margin: 0 auto; }
+
+    /* Top Header */
+    .topbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 20px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 36px;
+    }
+    .eyebrow {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 6px;
+    }
+    h1 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(24px, 3vw, 34px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 6px;
+      max-width: 720px;
+    }
+    .summary-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: rgba(197, 168, 105, 0.12);
+      border: 1px solid rgba(197, 168, 105, 0.35);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* Fix Section Block */
+    .fix-section {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px;
+      margin-bottom: 32px;
+    }
+    .fix-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 24px;
+    }
+    .fix-title-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .priority-badge {
+      padding: 4px 11px;
+      border-radius: 999px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    .p-critical { background: rgba(248, 113, 113, 0.15); color: #FCA5A5; border: 1px solid rgba(248, 113, 113, 0.4); }
+    .p-high { background: rgba(251, 191, 36, 0.15); color: #FCD34D; border: 1px solid rgba(251, 191, 36, 0.4); }
+    .p-medium { background: rgba(197, 168, 105, 0.15); color: #E8D5A7; border: 1px solid rgba(197, 168, 105, 0.4); }
+
+    .fix-heading {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .approve-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--surface-2);
+      color: var(--secondary);
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.2s ease;
+    }
+    .approve-toggle.checked {
+      border-color: var(--accent);
+      background: rgba(197, 168, 105, 0.15);
+      color: var(--accent);
+    }
+
+    /* Comparison Split Grid */
+    .compare-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 22px;
+    }
+    .pane {
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: var(--surface-2);
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .pane.new-pane {
+      border-color: rgba(197, 168, 105, 0.4);
+      background: linear-gradient(180deg, rgba(197, 168, 105, 0.04) 0%, var(--surface-2) 100%);
+    }
+    .pane-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+    .tag-old { color: #FCA5A5; }
+    .tag-new { color: #6EE7B7; }
+    .ratio-pill {
+      font-family: monospace;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 6px;
+      background: rgba(0, 0, 0, 0.45);
+    }
+
+    /* Demo Boxes */
+    .demo-dark {
+      background: #0A0A0A;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 14px;
+      padding: 18px;
+    }
+    .demo-surface {
+      background: #181818;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 14px;
+    }
+    .demo-light {
+      background: #F7F5F0;
+      border: 1px solid rgba(15,23,42,0.12);
+      border-radius: 14px;
+      padding: 18px;
+      color: #0F172A;
+    }
+    .swatch-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 8px 0;
+      border-bottom: 1px dashed rgba(128,128,128,0.22);
+    }
+    .swatch-row:last-child { border-bottom: none; }
+    .swatch-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: monospace;
+      font-size: 11px;
+    }
+    .swatch-dot {
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+
+    /* Sticky Footer Bar */
+    .action-bar {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(18, 18, 22, 0.92);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(197, 168, 105, 0.45);
+      border-radius: 999px;
+      padding: 10px 14px 10px 22px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+      z-index: 50;
+    }
+    .btn-copy {
+      background: var(--accent);
+      color: #0A0A0A;
+      border: none;
+      padding: 9px 18px;
+      border-radius: 999px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .btn-copy:hover { background: #D4B97B; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <div>
+        <span class="eyebrow">Executive UI/UX Audit &bull; Visual Diff</span>
+        <h1>Existing vs. Proposed Improvements</h1>
+        <p class="subtitle">Compare every audit fix side-by-side against the current live styling. Toggle the fixes you approve below, then tell me to apply them live.</p>
+      </div>
+      <div class="summary-pill">
+        <span id="countText">5 of 5 Fixes Selected</span>
+      </div>
+    </div>
+
+    <!-- FIX 1: CONTRAST -->
+    <section class="fix-section">
+      <div class="fix-header">
+        <div class="fix-title-row">
+          <span class="priority-badge p-critical">Fix #1 &bull; Critical</span>
+          <h2 class="fix-heading">WCAG 2.1 AA Contrast for Muted &amp; Faint Text</h2>
+        </div>
+        <label class="approve-toggle checked" data-fix="Fix #1 (Contrast)">
+          <input type="checkbox" checked style="display:none;" />
+          <span>&#10003; Approved</span>
+        </label>
+      </div>
+      <div class="compare-grid">
+        <!-- EXISTING -->
+        <div class="pane">
+          <div class="pane-label">
+            <span class="tag-old">&#10005; Existing (Live Today)</span>
+            <span class="ratio-pill">3.67:1 &ndash; 4.44:1 FAIL</span>
+          </div>
+          <div class="demo-dark">
+            <div class="demo-surface">
+              <div class="swatch-row">
+                <span style="color:#6B7280; font-size:14px;">Dark Mode Faint Text (#6B7280 on #181818)</span>
+                <span class="ratio-pill" style="color:#FCA5A5;">3.67:1</span>
+              </div>
+              <div class="swatch-row">
+                <span style="color:#6B7280; font-size:14px;">Dark Mode Faint Text (#6B7280 on #0A0A0A)</span>
+                <span class="ratio-pill" style="color:#FCA5A5;">4.10:1</span>
+              </div>
+            </div>
+          </div>
+          <div class="demo-light">
+            <div class="swatch-row">
+              <span style="color:#64748B; font-size:14px;">Light Mode Muted (#64748B on #F7F5F0)</span>
+              <span class="ratio-pill" style="background:rgba(15,23,42,0.08); color:#B91C1C;">4.37:1</span>
+            </div>
+            <div class="swatch-row">
+              <span style="color:#6B7280; font-size:14px;">Light Mode Faint (#6B7280 on #F7F5F0)</span>
+              <span class="ratio-pill" style="background:rgba(15,23,42,0.08); color:#B91C1C;">4.44:1</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- NEW -->
+        <div class="pane new-pane">
+          <div class="pane-label">
+            <span class="tag-new">&#10003; Proposed (WCAG AA Compliant)</span>
+            <span class="ratio-pill" style="color:#6EE7B7;">5.65:1 &ndash; 6.82:1 PASS</span>
+          </div>
+          <div class="demo-dark">
+            <div class="demo-surface">
+              <div class="swatch-row">
+                <span style="color:#8E95A2; font-size:14px;">Dark Mode Faint Text (#8E95A2 on #181818)</span>
+                <span class="ratio-pill" style="color:#6EE7B7;">5.65:1</span>
+              </div>
+              <div class="swatch-row">
+                <span style="color:#8E95A2; font-size:14px;">Dark Mode Faint Text (#8E95A2 on #0A0A0A)</span>
+                <span class="ratio-pill" style="color:#6EE7B7;">6.30:1</span>
+              </div>
+            </div>
+          </div>
+          <div class="demo-light">
+            <div class="swatch-row">
+              <span style="color:#475569; font-size:14px;">Light Mode Muted (#475569 on #F7F5F0)</span>
+              <span class="ratio-pill" style="background:rgba(15,23,42,0.08); color:#047857;">6.82:1</span>
+            </div>
+            <div class="swatch-row">
+              <span style="color:#525866; font-size:14px;">Light Mode Faint (#525866 on #F7F5F0)</span>
+              <span class="ratio-pill" style="background:rgba(15,23,42,0.08); color:#047857;">6.10:1</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FIX 2: MICRO-TYPOGRAPHY -->
+    <section class="fix-section">
+      <div class="fix-header">
+        <div class="fix-title-row">
+          <span class="priority-badge p-high">Fix #2 &bull; High</span>
+          <h2 class="fix-heading">Eliminate Micro-Typography Below 11px</h2>
+        </div>
+        <label class="approve-toggle checked" data-fix="Fix #2 (Typography Scale)">
+          <input type="checkbox" checked style="display:none;" />
+          <span>&#10003; Approved</span>
+        </label>
+      </div>
+      <div class="compare-grid">
+        <div class="pane">
+          <div class="pane-label">
+            <span class="tag-old">&#10005; Existing (8.5px / 9px / 10px)</span>
+          </div>
+          <div class="demo-dark" style="display:flex; flex-direction:column; gap:14px;">
+            <div>
+              <div style="font-family:'Plus Jakarta Sans'; font-size:18px; font-weight:800;">ALLYSHIP<span style="color:#C5A869; font-size:12px;">++</span></div>
+              <div style="font-size:10px; font-weight:600; text-transform:uppercase; letter-spacing:0.2em; color:#C5A869;">Siksha &lsquo;O&rsquo; Anusandhan</div>
+              <div style="font-size:8.5px; color:#9CA3AF; margin-top:2px;">Deemed to be University &middot; Category 1 Autonomy</div>
+            </div>
+            <div>
+              <span style="display:inline-block; padding:4px 10px; border-radius:999px; border:1px solid rgba(197,168,105,0.4); font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:0.16em; color:#E4E4E7;">Vice-Chancellor (10px)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pane new-pane">
+          <div class="pane-label">
+            <span class="tag-new">&#10003; Proposed (11px Minimum Floor)</span>
+          </div>
+          <div class="demo-dark" style="display:flex; flex-direction:column; gap:14px;">
+            <div>
+              <div style="font-family:'Plus Jakarta Sans'; font-size:18px; font-weight:800;">ALLYSHIP<span style="color:#C5A869; font-size:12px;">++</span></div>
+              <div style="font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.16em; color:#C5A869;">Siksha &lsquo;O&rsquo; Anusandhan</div>
+              <div style="font-size:11px; color:#A1A1AA; margin-top:2px;">Deemed to be University &middot; Category 1 Autonomy</div>
+            </div>
+            <div>
+              <span style="display:inline-block; padding:4px 12px; border-radius:999px; border:1px solid rgba(197,168,105,0.4); font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.12em; color:#FFFFFF;">Vice-Chancellor (11px)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FIX 3: RESPONSIVE JUSTIFICATION -->
+    <section class="fix-section">
+      <div class="fix-header">
+        <div class="fix-title-row">
+          <span class="priority-badge p-high">Fix #3 &bull; High</span>
+          <h2 class="fix-heading">Responsive Justification (Clean Mobile, Justified Desktop)</h2>
+        </div>
+        <label class="approve-toggle checked" data-fix="Fix #3 (Responsive Justification)">
+          <input type="checkbox" checked style="display:none;" />
+          <span>&#10003; Approved</span>
+        </label>
+      </div>
+      <div class="compare-grid">
+        <div class="pane">
+          <div class="pane-label">
+            <span class="tag-old">&#10005; Existing (Forced Justify on Narrow Screens)</span>
+          </div>
+          <div class="demo-dark" style="max-width:290px;">
+            <p style="font-size:14px; color:#E4E4E7; text-align:justify; line-height:1.65;">
+              Building inclusive and high-performing organizations requires leaders who value diversity, encourage collaboration and create opportunities for everyone.
+            </p>
+            <div style="font-size:11px; color:#FCA5A5; margin-top:8px;">Notice uneven word rivers on narrow viewports</div>
+          </div>
+        </div>
+
+        <div class="pane new-pane">
+          <div class="pane-label">
+            <span class="tag-new">&#10003; Proposed (text-left md:text-justify)</span>
+          </div>
+          <div class="demo-dark" style="max-width:290px;">
+            <p style="font-size:14px; color:#E4E4E7; text-align:left; line-height:1.65;">
+              Building inclusive and high-performing organizations requires leaders who value diversity, encourage collaboration and create opportunities for everyone.
+            </p>
+            <div style="font-size:11px; color:#6EE7B7; margin-top:8px;">Mobile stays crisp left-aligned; desktop (&ge;768px) stays justified</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FIX 4: FONT & SELECTION TOKENS -->
+    <section class="fix-section">
+      <div class="fix-header">
+        <div class="fix-title-row">
+          <span class="priority-badge p-medium">Fix #4 &bull; Medium</span>
+          <h2 class="fix-heading">Unified Editorial Serif Subtitles &amp; Champagne Gold Selection</h2>
+        </div>
+        <label class="approve-toggle checked" data-fix="Fix #4 (Font & Selection Tokens)">
+          <input type="checkbox" checked style="display:none;" />
+          <span>&#10003; Approved</span>
+        </label>
+      </div>
+      <div class="compare-grid">
+        <div class="pane">
+          <div class="pane-label">
+            <span class="tag-old">&#10005; Existing (Sans Italic + Amber Highlight)</span>
+          </div>
+          <div class="demo-dark">
+            <p style="font-family:'Plus Jakarta Sans',sans-serif; font-style:italic; font-size:18px; color:#9CA3AF;">
+              Where Relationships Precede Recruitment — Bridging Three Decades of Academic Inquiry.
+            </p>
+            <div style="margin-top:12px; font-size:12px;">
+              Highlight color: <span style="background:rgba(245,158,11,0.25); padding:2px 6px; border-radius:4px;">Amber-500 (off-brand)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pane new-pane">
+          <div class="pane-label">
+            <span class="tag-new">&#10003; Proposed (Newsreader Serif + Gold Highlight)</span>
+          </div>
+          <div class="demo-dark">
+            <p style="font-family:'Newsreader',serif; font-style:italic; font-size:20px; color:#D4D4D8;">
+              Where Relationships Precede Recruitment — Bridging Three Decades of Academic Inquiry.
+            </p>
+            <div style="margin-top:12px; font-size:12px;">
+              Highlight color: <span style="background:rgba(197,168,105,0.24); padding:2px 6px; border-radius:4px; color:#E8D5A7;">Champagne Gold (#C5A869)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FIX 5: STICKY NAVBAR & FOOTER ALIGNMENT -->
+    <section class="fix-section">
+      <div class="fix-header">
+        <div class="fix-title-row">
+          <span class="priority-badge p-medium">Fix #5 &bull; Medium</span>
+          <h2 class="fix-heading">Compact Sticky Navbar + Aligned Footer Crest</h2>
+        </div>
+        <label class="approve-toggle checked" data-fix="Fix #5 (Navbar & Footer Alignment)">
+          <input type="checkbox" checked style="display:none;" />
+          <span>&#10003; Approved</span>
+        </label>
+      </div>
+      <div class="compare-grid">
+        <div class="pane">
+          <div class="pane-label">
+            <span class="tag-old">&#10005; Existing</span>
+          </div>
+          <div class="demo-dark" style="font-size:13px; color:#9CA3AF; display:flex; flex-direction:column; gap:10px;">
+            <div>&bull; Header completely slides off-screen (<code>-translate-y-full</code>) when scrolling down past 200px.</div>
+            <div>&bull; Footer circular crest has <code>-mt-1</code> offset, sitting slightly higher than the text lockup.</div>
+          </div>
+        </div>
+
+        <div class="pane new-pane">
+          <div class="pane-label">
+            <span class="tag-new">&#10003; Proposed</span>
+          </div>
+          <div class="demo-dark" style="font-size:13px; color:#E4E4E7; display:flex; flex-direction:column; gap:10px;">
+            <div>&bull; Header stays pinned as a sleek, compact bar on scroll so navigation &amp; theme toggle remain accessible.</div>
+            <div>&bull; Footer crest aligns optically center-to-center with the wordmark (removing <code>-mt-1</code>).</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="action-bar">
+    <span style="font-size:12px; color:#E4E4E7;" id="barStatus">5 fixes approved — ready to apply</span>
+    <button class="btn-copy" id="copyBtn">Copy Approved List</button>
+  </div>
+
+  <script>
+    const toggles = document.querySelectorAll('.approve-toggle');
+    const countText = document.getElementById('countText');
+    const barStatus = document.getElementById('barStatus');
+    const copyBtn = document.getElementById('copyBtn');
+
+    function updateSummary() {
+      const active = [...toggles].filter(t => t.classList.contains('checked')).map(t => t.dataset.fix);
+      countText.textContent = `${active.length} of ${toggles.length} Fixes Selected`;
+      barStatus.textContent = active.length
+        ? `${active.length} fix${active.length > 1 ? 'es' : ''} approved — ready to apply`
+        : 'No fixes selected';
+      return active;
+    }
+
+    toggles.forEach(t => {
+      t.addEventListener('click', (e) => {
+        e.preventDefault();
+        t.classList.toggle('checked');
+        const span = t.querySelector('span');
+        span.innerHTML = t.classList.contains('checked') ? '&#10003; Approved' : 'Select Fix';
+        updateSummary();
+      });
+    });
+
+    copyBtn.addEventListener('click', () => {
+      const active = updateSummary();
+      const text = 'Apply these UI/UX audit fixes live: ' + active.join(', ');
+      navigator.clipboard?.writeText(text);
+      copyBtn.textContent = 'Copied!';
+      setTimeout(() => copyBtn.textContent = 'Copy Approved List', 1800);
+    });
+  </script>
+</body>
+</html>

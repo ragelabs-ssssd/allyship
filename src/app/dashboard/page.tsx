@@ -141,7 +141,7 @@ export default function DashboardPage() {
             <span>{tab.label}</span>
             {tab.count && (
               <span
-                className={`px-1.5 py-0.5 rounded-full text-[10px] ${
+                className={`px-1.5 py-0.5 rounded-full text-[11px] ${
                   activeTab === tab.id ? "bg-black/15 text-on-accent" : "bg-glass-strong text-content-secondary"
                 }`}
               >
@@ -271,7 +271,7 @@ export default function DashboardPage() {
                   className="p-5 bg-surface-2 rounded-2xl border border-line flex items-start justify-between gap-4"
                 >
                   <div className="space-y-1">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-accent">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-accent">
                       {res.categoryLabel}
                     </span>
                     <Link

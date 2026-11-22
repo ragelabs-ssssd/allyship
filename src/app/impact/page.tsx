@@ -184,7 +184,7 @@ export default function ImpactPage() {
                 Moving Beyond Metrics to Transform Education and Work
               </p>
 
-              <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal text-justify">
+              <p className="text-base sm:text-lg text-content-secondary leading-relaxed font-normal text-left md:text-justify">
                 The true measure of an alliance extends far beyond recruitment cycles. Impact is seen when boardroom leaders help reshape syllabi, establish campus labs, and equip first-generation graduates to lead with quiet confidence.
               </p>
 
@@ -256,7 +256,7 @@ export default function ImpactPage() {
               className="bg-surface rounded-3xl p-8 border border-line shadow-lg hover:border-accent/80 hover:shadow-[0_0_24px_rgba(201,169,110,0.15)] transition-all flex flex-col justify-between space-y-6 text-content"
             >
               <div className="space-y-4">
-                <span className="inline-block text-[10px] font-bold font-heading uppercase tracking-wider px-3 py-1 rounded-full bg-glass-strong text-accent border border-accent/30">
+                <span className="inline-block text-[11px] font-bold font-heading uppercase tracking-wider px-3 py-1 rounded-full bg-glass-strong text-accent border border-accent/30">
                   {p.badge}
                 </span>
                 <h3 className="font-heading text-xl font-bold text-content">
@@ -314,7 +314,7 @@ export default function ImpactPage() {
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100"
                 />
-                <div className="absolute top-4 left-4 bg-black/80 backdrop-blur-md text-accent border border-accent/30 text-[10px] font-bold font-heading uppercase tracking-[0.14em] px-3 py-1 rounded-full">
+                <div className="absolute top-4 left-4 bg-black/80 backdrop-blur-md text-accent border border-accent/30 text-[11px] font-bold font-heading uppercase tracking-[0.14em] px-3 py-1 rounded-full">
                   {c.outlet}
                 </div>
               </div>

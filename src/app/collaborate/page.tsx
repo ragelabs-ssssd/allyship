@@ -343,7 +343,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
                 sizes="(max-width: 768px) 100vw, 25vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-2 text-content border border-line text-[10px] font-bold font-heading uppercase tracking-wider">
+              <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-2 text-content border border-line text-[11px] font-bold font-heading uppercase tracking-wider">
                 Main Campus
               </span>
             </div>
@@ -364,7 +364,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
                 sizes="(max-width: 768px) 100vw, 25vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-2 text-content border border-line text-[10px] font-bold font-heading uppercase tracking-wider">
+              <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-2 text-content border border-line text-[11px] font-bold font-heading uppercase tracking-wider">
                 ITER Engineering
               </span>
             </div>
@@ -385,7 +385,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
                 sizes="(max-width: 768px) 100vw, 25vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-2 text-content border border-line text-[10px] font-bold font-heading uppercase tracking-wider">
+              <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-2 text-content border border-line text-[11px] font-bold font-heading uppercase tracking-wider">
                 Convention Hall
               </span>
             </div>
@@ -406,7 +406,7 @@ Sent via SOA University Allyship++ Platform (https://www.placements.soa.ac.in)`;
                 sizes="(max-width: 768px) 100vw, 25vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
               />
-              <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-2 text-content border border-line text-[10px] font-bold font-heading uppercase tracking-wider">
+              <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-surface-2 text-content border border-line text-[11px] font-bold font-heading uppercase tracking-wider">
                 Innovation Labs
               </span>
             </div>

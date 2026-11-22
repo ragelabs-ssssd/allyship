@@ -12,8 +12,6 @@ export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isInviteOpen, setIsInviteOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isHidden, setIsHidden] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -22,18 +20,8 @@ export function Navbar() {
   }, [pathname]);
 
   const handleScroll = useCallback(() => {
-    const currentScrollY = window.scrollY;
-
-    setIsScrolled(currentScrollY > 40);
-
-    if (currentScrollY > lastScrollY && currentScrollY > 200) {
-      setIsHidden(true);
-    } else {
-      setIsHidden(false);
-    }
-
-    setLastScrollY(currentScrollY);
-  }, [lastScrollY]);
+    setIsScrolled(window.scrollY > 40);
+  }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -56,16 +44,14 @@ export function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-[var(--ease-out-expo)] ${
-          isHidden && !isMobileMenuOpen ? "-translate-y-full" : "translate-y-0"
-        } ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-[var(--ease-out-expo)] ${
           isScrolled
             ? "nav-editorial shadow-2xl"
             : "bg-gradient-to-b from-canvas/50 via-canvas/25 to-transparent dark:from-canvas/95 dark:via-canvas/70 dark:to-transparent backdrop-blur-[2px]"
         }`}
       >
         <div className="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 xl:px-16">
-          <div className="flex items-center justify-between h-20 sm:h-22 lg:h-24">
+          <div className={`flex items-center justify-between transition-all duration-300 ${isScrolled ? "h-16 sm:h-[72px]" : "h-20 sm:h-22 lg:h-24"}`}>
             {/* Logo */}
             <Link
               href="/"
@@ -88,10 +74,10 @@ export function Navbar() {
                     ++
                   </span>
                 </span>
-                <span className="font-sans text-[10px] font-semibold uppercase tracking-[0.2em] text-accent mt-1 opacity-95 group-hover:opacity-100 transition-all duration-300">
+                <span className="font-sans text-[11px] font-semibold uppercase tracking-[0.16em] text-accent mt-1 opacity-95 group-hover:opacity-100 transition-all duration-300">
                   Siksha &lsquo;O&rsquo; Anusandhan
                 </span>
-                <span className="font-sans text-[8.5px] sm:text-[9px] font-medium tracking-[0.02em] sm:tracking-[0.04em] text-content-muted group-hover:text-content mt-0.5 transition-colors whitespace-nowrap">
+                <span className="font-sans text-[11px] font-medium tracking-[0.02em] text-content-muted group-hover:text-content mt-0.5 transition-colors whitespace-nowrap">
                   Deemed to be University · Category 1 Autonomy
                 </span>
               </div>

@@ -669,11 +669,11 @@ export function TimelineShowcase() {
           </div>
 
           <div className="hidden lg:flex items-center gap-2 text-xs font-mono text-content-muted">
-            <span className="px-2.5 py-1 rounded-full bg-accent/15 border border-accent/40 text-accent font-bold text-[10px]">
+            <span className="px-2.5 py-1 rounded-full bg-accent/15 border border-accent/40 text-accent font-bold text-[11px]">
               1996 ITER
             </span>
             <ArrowRight className="w-3 h-3 text-accent shrink-0" />
-            <span className="px-2.5 py-1 rounded-full bg-accent/15 border border-accent/40 text-accent font-bold text-[10px]">
+            <span className="px-2.5 py-1 rounded-full bg-accent/15 border border-accent/40 text-accent font-bold text-[11px]">
               2026 AI
             </span>
           </div>
@@ -703,10 +703,10 @@ export function TimelineShowcase() {
 
                     {/* Top Badges */}
                     <div className="absolute top-3 left-3 right-3 flex items-center justify-between gap-1.5 z-10">
-                      <span className="font-mono text-[10px] font-bold text-accent px-2.5 py-0.5 rounded-full bg-black/75 backdrop-blur-md border border-accent/40 shadow-sm">
+                      <span className="font-mono text-[11px] font-bold text-accent px-2.5 py-0.5 rounded-full bg-black/75 backdrop-blur-md border border-accent/40 shadow-sm">
                         {node.year}
                       </span>
-                      <span className="text-[10px] font-mono text-[#F4E8C1] font-bold px-2 py-0.5 rounded-md bg-black/65 backdrop-blur-md border border-white/10">
+                      <span className="text-[11px] font-mono text-[#F4E8C1] font-bold px-2 py-0.5 rounded-md bg-black/65 backdrop-blur-md border border-white/10">
                         {node.acronym}
                       </span>
                     </div>
@@ -715,10 +715,10 @@ export function TimelineShowcase() {
                   {/* Card Body */}
                   <div className="p-5 space-y-2.5">
                     <div className="flex items-center justify-between gap-2">
-                      <span className="text-[10px] font-mono uppercase text-content-muted font-bold tracking-wider truncate">
+                      <span className="text-[11px] font-mono uppercase text-content-muted font-bold tracking-wider truncate">
                         {node.badge}
                       </span>
-                      <span className="text-[10px] font-mono text-accent font-bold shrink-0">
+                      <span className="text-[11px] font-mono text-accent font-bold shrink-0">
                         Exit 0{idx + 1}
                       </span>
                     </div>
@@ -740,8 +740,8 @@ export function TimelineShowcase() {
 
                 {/* Card Footer */}
                 <div className="p-4 pt-3 border-t border-line/60 bg-surface-1/40 flex flex-col gap-1 text-[11px] font-mono">
-                  <span className="text-content-muted text-[10px] truncate">{node.laneName}</span>
-                  <span className="text-accent font-semibold text-[10px] truncate">{node.achievement}</span>
+                  <span className="text-content-muted text-[11px] truncate">{node.laneName}</span>
+                  <span className="text-accent font-semibold text-[11px] truncate">{node.achievement}</span>
                 </div>
               </div>
             );
@@ -775,7 +775,7 @@ export function TimelineShowcase() {
                     <span className="text-sm font-mono text-[#F4E8C1] font-bold block">
                       {node.acronym}
                     </span>
-                    <span className="text-[10px] font-mono text-white/80 uppercase tracking-wider">
+                    <span className="text-[11px] font-mono text-white/80 uppercase tracking-wider">
                       {node.badge}
                     </span>
                   </div>

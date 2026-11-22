@@ -93,7 +93,7 @@ export function ResourceCard({ resource }: ResourceCardProps) {
           {resource.tags.slice(0, 3).map((tag) => (
             <span
               key={tag}
-              className="text-[10px] font-medium text-content-secondary bg-surface-2 px-2 py-0.5 rounded-md border border-line"
+              className="text-[11px] font-medium text-content-secondary bg-surface-2 px-2 py-0.5 rounded-md border border-line"
             >
               #{tag}
             </span>
