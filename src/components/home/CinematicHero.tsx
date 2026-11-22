@@ -122,7 +122,7 @@ export function CinematicHero({ onOpenInvite }: CinematicHeroProps) {
             <div className="space-y-4">
               <h1
                 aria-label={`WHERE INDUSTRY MEETS ${activeWord.text}`}
-                className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-[-0.025em] leading-[1.1] text-content uppercase select-none"
+                className="font-display text-2xl sm:text-4xl lg:text-[42px] xl:text-[50px] font-extrabold tracking-[-0.02em] leading-[1.12] text-content uppercase select-none"
               >
                 {/* Accessible text for crawlers & screen readers */}
                 <span className="sr-only">

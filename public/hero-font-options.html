@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALLYSHIP++ — 20 Hero Font Style Options</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow+Condensed:wght@700;800&family=Bebas+Neue&family=Big+Shoulders+Display:wght@800&family=Bodoni+Moda:ital,wght@1,700&family=Bricolage+Grotesque:wght@700;800&family=Cinzel:wght@700&family=Cormorant+Garamond:ital,wght@1,700&family=DM+Sans:wght@400;500;700&family=Darker+Grotesque:wght@800&family=Fraunces:ital,wght@1,700&family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600;700&family=Italiana&family=Libre+Baskerville:ital@1&family=Manrope:wght@400;500;600;700&family=Montserrat:wght@700;800&family=Newsreader:ital,wght@0,500;1,500&family=Onest:wght@400;500;600&family=Oswald:wght@700&family=Outfit:wght@700;800&family=Playfair+Display:wght@700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Sora:wght@600;700&family=Space+Grotesk:wght@600;700&family=Syne:wght@700;800&family=Tenor+Sans&family=Unbounded:wght@700;800&family=Urbanist:wght@700;800&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #08080A;
+      --surface: #121215;
+      --line: rgba(255, 255, 255, 0.12);
+      --gold: #C5A869;
+      --text: #FFFFFF;
+      --muted: #A1A1AA;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      padding: 36px 24px 96px;
+    }
+    .container { max-width: 1500px; margin: 0 auto; }
+    .header {
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 16px;
+    }
+    .eyebrow-top {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 6px;
+    }
+    h1 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(24px, 3vw, 34px);
+      font-weight: 800;
+    }
+    .sub-top { color: var(--muted); font-size: 14px; margin-top: 4px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(580px, 1fr));
+      gap: 28px;
+    }
+    @media (max-width: 640px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+    .option-card {
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      overflow: hidden;
+      background: var(--surface);
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.2s ease;
+    }
+    .option-card:hover { border-color: rgba(197, 168, 105, 0.55); }
+    .option-card.selected { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold); }
+    .option-meta {
+      padding: 14px 22px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      background: #141418;
+    }
+    .opt-badge {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      background: rgba(197, 168, 105, 0.12);
+      border: 1px solid rgba(197, 168, 105, 0.35);
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+    .opt-fonts { font-size: 12px; color: #E4E4E7; font-weight: 600; }
+
+    /* Hero Sample Stage matching screenshot */
+    .hero-sample {
+      position: relative;
+      padding: 34px 28px;
+      background:
+        linear-gradient(90deg, rgba(10, 9, 7, 0.92) 0%, rgba(22, 18, 12, 0.84) 55%, rgba(28, 22, 14, 0.78) 100%),
+        url('/slides/CON01670.jpg') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      flex: 1;
+    }
+    .pill-eyebrow {
+      display: inline-block;
+      width: fit-content;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(197, 168, 105, 0.35);
+      background: rgba(10, 10, 10, 0.45);
+      color: var(--gold);
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    .hero-h {
+      color: #FFFFFF;
+      line-height: 1.03;
+      font-size: clamp(28px, 3.2vw, 44px);
+    }
+    .hero-h .accent-word { color: var(--gold); }
+    .hero-p {
+      color: #E4E4E7;
+      font-size: 15px;
+      line-height: 1.6;
+      max-width: 600px;
+    }
+    .cities-line {
+      font-size: 12px;
+      color: #A1A1AA;
+    }
+    .cities-line strong { color: #FFFFFF; font-weight: 600; }
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding-top: 4px;
+    }
+    .btn-gold {
+      background: var(--gold);
+      color: #0A0A0A;
+      padding: 11px 22px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      border: none;
+    }
+    .btn-dark {
+      background: rgba(20, 20, 22, 0.85);
+      color: #FFFFFF;
+      padding: 11px 22px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .choose-bar {
+      padding: 12px 22px;
+      background: #101013;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: flex-end;
+    }
+    .choose-btn {
+      padding: 7px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #18181B;
+      color: #FFF;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .option-card.selected .choose-btn {
+      background: var(--gold);
+      color: #0A0A0A;
+      border-color: var(--gold);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div>
+        <span class="eyebrow-top">Allyship Hero Sample &bull; 20 Typography Styles</span>
+        <h1>Choose Your Favorite Font Style (Options 1&ndash;20)</h1>
+        <p class="sub-top">All 20 options render your exact hero text (<strong>WHERE INDUSTRY MEETS RESEARCH</strong>) so you can compare them apples-to-apples.</p>
+      </div>
+    </div>
+
+    <div class="grid" id="grid"></div>
+  </div>
+
+  <script>
+    const options = [
+      {
+        id: 1, title: 'Current Baseline', fonts: 'Plus Jakarta Sans + Inter',
+        hCss: "font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:-0.025em;",
+        aCss: "", bCss: "font-family:'Inter',sans-serif;"
+      },
+      {
+        id: 2, title: 'Executive Avant-Garde', fonts: 'Syne + Instrument Serif (Accent) + Inter',
+        hCss: "font-family:'Syne',sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:-0.03em;",
+        aCss: "font-family:'Instrument Serif',serif; font-style:italic; font-weight:400; text-transform:none; font-size:1.18em;",
+        bCss: "font-family:'Inter',sans-serif;"
+      },
+      {
+        id: 3, title: 'Swiss Modernist', fonts: 'Space Grotesk + Inter',
+        hCss: "font-family:'Space Grotesk',sans-serif; font-weight:700; text-transform:uppercase; letter-spacing:-0.03em;",
+        aCss: "", bCss: "font-family:'Inter',sans-serif;"
+      },
+      {
+        id: 4, title: 'Bold Condensed Summit', fonts: 'Oswald + Plus Jakarta Sans',
+        hCss: "font-family:'Oswald',sans-serif; font-weight:700; text-transform:uppercase; letter-spacing:0.02em; font-size:48px;",
+        aCss: "", bCss: "font-family:'Plus Jakarta Sans',sans-serif;"
+      },
+      {
+        id: 5, title: 'High-Impact Stage', fonts: 'Barlow Condensed + DM Sans',
+        hCss: "font-family:'Barlow Condensed',sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:0.01em; font-size:52px; line-height:0.95;",
+        aCss: "", bCss: "font-family:'DM Sans',sans-serif;"
+      },
+      {
+        id: 6, title: 'Architectural Luxury', fonts: 'Outfit + Cormorant Garamond (Accent) + Manrope',
+        hCss: "font-family:'Outfit',sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:-0.02em;",
+        aCss: "font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:700; text-transform:none; font-size:1.15em;",
+        bCss: "font-family:'Manrope',sans-serif;"
+      },
+      {
+        id: 7, title: 'Tech-Forward Forum', fonts: 'Sora + Inter',
+        hCss: "font-family:'Sora',sans-serif; font-weight:700; text-transform:uppercase; letter-spacing:-0.03em;",
+        aCss: "", bCss: "font-family:'Inter',sans-serif;"
+      },
+      {
+        id: 8, title: 'Monumental Editorial', fonts: 'Bebas Neue + Instrument Serif (Accent) + Inter',
+        hCss: "font-family:'Bebas Neue',sans-serif; letter-spacing:0.03em; font-size:54px; line-height:0.94;",
+        aCss: "font-family:'Instrument Serif',serif; font-style:italic; font-size:0.96em;",
+        bCss: "font-family:'Inter',sans-serif;"
+      },
+      {
+        id: 9, title: 'Broadsheet Authority', fonts: 'Playfair Display + Plus Jakarta Sans',
+        hCss: "font-family:'Playfair Display',serif; font-weight:800; letter-spacing:-0.02em;",
+        aCss: "font-style:italic;", bCss: "font-family:'Plus Jakarta Sans',sans-serif;"
+      },
+      {
+        id: 10, title: 'Minimalist Prestige', fonts: 'DM Sans + Newsreader (Accent)',
+        hCss: "font-family:'DM Sans',sans-serif; font-weight:700; text-transform:uppercase; letter-spacing:-0.025em;",
+        aCss: "font-family:'Newsreader',serif; font-style:italic; text-transform:none; font-size:1.12em;",
+        bCss: "font-family:'DM Sans',sans-serif;"
+      },
+      {
+        id: 11, title: 'Sharp Industrial', fonts: 'Big Shoulders Display + Work Sans',
+        hCss: "font-family:'Big Shoulders Display',sans-serif; font-weight:800; text-transform:uppercase; font-size:54px; line-height:0.94;",
+        aCss: "", bCss: "font-family:'Work Sans',sans-serif;"
+      },
+      {
+        id: 12, title: 'Contemporary Think-Tank', fonts: 'Bricolage Grotesque + Inter',
+        hCss: "font-family:'Bricolage Grotesque',sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:-0.03em;",
+        aCss: "", bCss: "font-family:'Inter',sans-serif;"
+      },
+      {
+        id: 13, title: 'Classic Sovereign', fonts: 'Cinzel + Manrope',
+        hCss: "font-family:'Cinzel',serif; font-weight:700; letter-spacing:0.03em; font-size:38px;",
+        aCss: "", bCss: "font-family:'Manrope',sans-serif;"
+      },
+      {
+        id: 14, title: 'Editorial Contrast', fonts: 'Archivo Black + Bodoni Moda (Accent) + Inter',
+        hCss: "font-family:'Archivo Black',sans-serif; text-transform:uppercase; letter-spacing:-0.02em;",
+        aCss: "font-family:'Bodoni Moda',serif; font-style:italic; text-transform:none; font-size:1.08em;",
+        bCss: "font-family:'Inter',sans-serif;"
+      },
+      {
+        id: 15, title: 'Crisp Corporate', fonts: 'Montserrat + Newsreader (Accent) + Inter',
+        hCss: "font-family:'Montserrat',sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:-0.02em;",
+        aCss: "font-family:'Newsreader',serif; font-style:italic; text-transform:none; font-size:1.12em;",
+        bCss: "font-family:'Inter',sans-serif;"
+      },
+      {
+        id: 16, title: 'Refined Gallery', fonts: 'Tenor Sans + Italiana (Accent) + Inter',
+        hCss: "font-family:'Tenor Sans',sans-serif; text-transform:uppercase; letter-spacing:0.02em;",
+        aCss: "font-family:'Italiana',serif; font-size:1.1em;",
+        bCss: "font-family:'Inter',sans-serif;"
+      },
+      {
+        id: 17, title: 'Bold Geometric', fonts: 'Urbanist + Fraunces (Accent) + Onest',
+        hCss: "font-family:'Urbanist',sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:-0.02em;",
+        aCss: "font-family:'Fraunces',serif; font-style:italic; text-transform:none; font-size:1.08em;",
+        bCss: "font-family:'Onest',sans-serif;"
+      },
+      {
+        id: 18, title: 'Clean Extended', fonts: 'Unbounded + Inter',
+        hCss: "font-family:'Unbounded',sans-serif; font-weight:800; text-transform:uppercase; letter-spacing:-0.02em; font-size:34px;",
+        aCss: "", bCss: "font-family:'Inter',sans-serif;"
+      },
+      {
+        id: 19, title: 'Literary Leadership', fonts: 'Newsreader + Plus Jakarta Sans',
+        hCss: "font-family:'Newsreader',serif; font-weight:500; letter-spacing:-0.02em; font-size:44px;",
+        aCss: "font-style:italic;", bCss: "font-family:'Plus Jakarta Sans',sans-serif;"
+      },
+      {
+        id: 20, title: 'Exhibition Grotesk', fonts: 'Darker Grotesque + Libre Baskerville (Accent) + Inter',
+        hCss: "font-family:'Darker Grotesque',sans-serif; font-weight:800; text-transform:uppercase; font-size:50px; line-height:0.92;",
+        aCss: "font-family:'Libre Baskerville',serif; font-style:italic; text-transform:none; font-size:0.82em;",
+        bCss: "font-family:'Inter',sans-serif;"
+      }
+    ];
+
+    const grid = document.getElementById('grid');
+    let selectedId = null;
+
+    function render() {
+      grid.innerHTML = options.map(o => `
+        <div class="option-card ${selectedId === o.id ? 'selected' : ''}">
+          <div class="option-meta">
+            <span class="opt-badge">Option #${o.id} &bull; ${o.title}</span>
+            <span class="opt-fonts">${o.fonts}</span>
+          </div>
+          <div class="hero-sample">
+            <span class="pill-eyebrow" style="${o.bCss}">Siksha &lsquo;O&rsquo; Anusandhan Leadership Series</span>
+            <div class="hero-h" style="${o.hCss}">
+              WHERE INDUSTRY<br>
+              MEETS <span class="accent-word" style="${o.aCss}">RESEARCH</span>
+            </div>
+            <p class="hero-p" style="${o.bCss}">
+              A national initiative by Siksha &lsquo;O&rsquo; Anusandhan that brings corporate leaders, academic thinkers, and national icons into a shared conversation—building enduring relationships, mentoring emerging talent, and shaping the future of work.
+            </p>
+            <div class="cities-line" style="${o.bCss}">
+              <strong>Conclave Cities:</strong> Bengaluru &bull; Hyderabad &bull; Kolkata &bull; Mumbai &bull; Chennai &bull; Bhubaneswar
+            </div>
+            <div class="btn-row">
+              <button class="btn-gold" style="${o.bCss}">Request Executive Invitation &rsaquo;</button>
+              <button class="btn-dark" style="${o.bCss}">Explore Metro Chapters &#8964;</button>
+            </div>
+          </div>
+          <div class="choose-bar">
+            <button class="choose-btn" onclick="pick(${o.id})">
+              ${selectedId === o.id ? '&#10003; Selected Option #' + o.id : 'Select Option #' + o.id}
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    window.pick = (id) => {
+      selectedId = id;
+      render();
+    };
+
+    render();
+  </script>
+</body>
+</html>
