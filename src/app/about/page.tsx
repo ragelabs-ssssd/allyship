@@ -298,30 +298,35 @@ export default function AboutPage() {
       >
         <div className="bg-gradient-to-br from-surface-2 via-surface to-surface-sunken text-content rounded-3xl p-8 sm:p-12 lg:p-16 border border-line shadow-2xl space-y-12">
           {/* Section Header */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-stretch">
-            <div className="lg:col-span-7 space-y-4">
+          <div className="space-y-8">
+            <div className="space-y-3">
               <span className="text-[11px] font-bold font-heading uppercase tracking-[0.2em] text-accent block">
                 Championship Psychology in the Boardroom
               </span>
               <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-content tracking-tight">
                 Why Olympic Champions Anchor Allyship++
               </h2>
-              <p className="text-sm sm:text-base text-content-secondary leading-relaxed font-normal text-left md:text-justify">
-                High-performance athletics represents the ultimate meritocratic arena in which psychological safety, coach-athlete allyship, discipline, and mutual trust under extreme pressure directly dictate collective triumph.
-              </p>
-              <p className="text-sm sm:text-base text-content-secondary leading-relaxed font-normal text-left md:text-justify">
-                From Olympic podiums to global corporate boardrooms, SOA conclaves demonstrate that nurturing young talent requires the exact blend of discipline, empathy, and transformative mentorship practiced by elite national coaches.
-              </p>
             </div>
 
-            <div className="lg:col-span-5 p-6 sm:p-8 rounded-2xl bg-surface-3 border border-accent/30 flex flex-col justify-center space-y-3">
-              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-accent">
-                <Medal className="w-4 h-4" />
-                <span>The Core Athletic Parallel</span>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-center">
+              <div className="lg:col-span-7 space-y-4">
+                <p className="text-sm sm:text-base text-content-secondary leading-relaxed font-normal text-left md:text-justify">
+                  High-performance athletics represents the ultimate meritocratic arena in which psychological safety, coach-athlete allyship, discipline, and mutual trust under extreme pressure directly dictate collective triumph.
+                </p>
+                <p className="text-sm sm:text-base text-content-secondary leading-relaxed font-normal text-left md:text-justify">
+                  From Olympic podiums to global corporate boardrooms, SOA conclaves demonstrate that nurturing young talent requires the exact blend of discipline, empathy, and transformative mentorship practiced by elite national coaches.
+                </p>
               </div>
-              <p className="text-sm text-content-secondary leading-relaxed italic text-left md:text-justify">
-                &ldquo;An Olympic coach doesn&apos;t run the anchor leg; they eliminate friction, absorb external pressure, and build unshakeable psychological safety so emerging talent can execute without fear under championship stakes. That is the definition of executive allyship.&rdquo;
-              </p>
+
+              <div className="lg:col-span-5 p-6 sm:p-7 rounded-2xl bg-surface-3 border border-accent/30 space-y-3">
+                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-accent">
+                  <Medal className="w-4 h-4 shrink-0" />
+                  <span>The Core Athletic Parallel</span>
+                </div>
+                <p className="text-sm text-content-secondary leading-relaxed italic text-left md:text-justify">
+                  &ldquo;An Olympic coach doesn&apos;t run the anchor leg; they eliminate friction, absorb external pressure, and build unshakeable psychological safety so emerging talent can execute without fear under championship stakes. That is the definition of executive allyship.&rdquo;
+                </p>
+              </div>
             </div>
           </div>
 
