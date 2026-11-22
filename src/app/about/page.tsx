@@ -258,8 +258,8 @@ export default function AboutPage() {
             {/* Pull-Quote Excerpt Card */}
             <div className="p-6 rounded-2xl bg-surface-2 border border-line space-y-3">
               <Quote className="w-6 h-6 text-accent opacity-80" />
-              <blockquote className="font-serif italic text-base sm:text-lg leading-relaxed text-content text-justify hyphens-auto">
-                &ldquo;Allyship is much more than a concept; it is a shared responsibility that calls for empathy, mutual respect, mentorship and the willingness to empower others.&rdquo;
+              <blockquote className="font-serif italic text-base sm:text-lg leading-relaxed text-content text-justify">
+                &ldquo;Allyship provided an excellent platform for distinguished industry leaders, professionals and academicians to exchange perspectives on leadership, resilience, mentorship and the importance of translating allyship into everyday organizational practices.&rdquo;
               </blockquote>
             </div>
 
