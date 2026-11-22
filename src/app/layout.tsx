@@ -12,7 +12,7 @@ import { Footer } from "@/components/Footer";
  * The CSS custom properties are defined directly in globals.css.
  */
 const FONT_STYLESHEET =
-  "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap";
+  "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Unbounded:wght@600;700;800&display=swap";
 
 export const viewport: Viewport = {
   themeColor: "#0A0A0A",
