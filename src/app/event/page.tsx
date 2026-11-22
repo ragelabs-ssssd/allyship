@@ -1635,7 +1635,7 @@ function EventContent() {
                       {currentConclave.date}
                     </span>
                   </div>
-                  <h2 className="font-display text-xl sm:text-2xl md:text-3xl lg:text-[1.85rem] xl:text-[2.25rem] 2xl:text-4xl font-black tracking-tight leading-tight text-content scroll-mt-24 md:whitespace-nowrap overflow-hidden text-ellipsis">
+                  <h2 className="font-display text-xl sm:text-2xl md:text-3xl lg:text-[1.85rem] xl:text-[2.25rem] 2xl:text-4xl font-black tracking-tight leading-tight text-content scroll-mt-24">
                     {currentConclave.city}: {currentConclave.title}
                   </h2>
                   <div className="flex items-center gap-2 font-sans text-xs text-content-muted">
