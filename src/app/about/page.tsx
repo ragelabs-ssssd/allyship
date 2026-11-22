@@ -277,35 +277,6 @@ export default function AboutPage() {
                 &ldquo;Allyship provided an excellent platform for distinguished industry leaders, professionals and academicians to exchange perspectives on leadership, resilience, mentorship and the importance of translating allyship into everyday organizational practices.&rdquo;
               </blockquote>
             </div>
-
-            {/* Institutional Office & Credentials Card */}
-            <div className="p-6 rounded-2xl bg-surface-2 border border-line space-y-4 flex-1 flex flex-col justify-between">
-              <div className="space-y-3">
-                <span className="font-display text-[11px] font-bold uppercase tracking-[0.18em] text-accent block">
-                  Office of the Vice-Chancellor
-                </span>
-                <div className="grid grid-cols-2 gap-3 pt-1">
-                  <div className="p-3 rounded-xl bg-surface border border-line">
-                    <div className="font-heading text-lg font-bold text-content">NIRF #15</div>
-                    <div className="font-sans text-[11px] text-content-muted mt-0.5">University in India</div>
-                  </div>
-                  <div className="p-3 rounded-xl bg-surface border border-line">
-                    <div className="font-heading text-lg font-bold text-content">NAAC A++</div>
-                    <div className="font-sans text-[11px] text-content-muted mt-0.5">Accredited University</div>
-                  </div>
-                </div>
-                <p className="font-sans text-xs text-content-muted leading-relaxed text-left md:text-justify">
-                  Strengthening industry-academia partnerships, responsible leadership, and inclusive workplace cultures across India.
-                </p>
-              </div>
-              <Link
-                href="/discover-soa"
-                className="inline-flex items-center justify-between w-full pt-3 border-t border-line text-xs font-display font-bold uppercase tracking-[0.14em] text-accent hover:text-content transition-colors"
-              >
-                <span>Explore Siksha &lsquo;O&rsquo; Anusandhan</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
           </div>
         </div>
       </section>
