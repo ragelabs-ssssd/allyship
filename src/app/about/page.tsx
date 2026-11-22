@@ -118,7 +118,7 @@ export default function AboutPage() {
                 <span className="text-xs font-bold font-heading uppercase tracking-widest text-accent block text-left">
                   The Living Standard · Practicing Allyship
                 </span>
-                <p className="text-xs sm:text-sm text-content-secondary leading-relaxed italic text-left">
+                <p className="text-sm sm:text-base text-content-secondary leading-relaxed italic text-left">
                   &ldquo;A diversity policy says what an organization intends on paper. Allyship is what happens on an ordinary Friday—who is heard in a meeting, who is trusted with a challenging project, and who speaks up when an early-career colleague is overlooked.&rdquo;
                 </p>
               </div>
@@ -167,7 +167,7 @@ export default function AboutPage() {
                     Trajectories.
                   </h3>
 
-                  <p className="text-xs md:text-xs font-mono text-content-secondary uppercase tracking-[0.18em] pt-1 sm:pt-2 text-white/80 max-w-md leading-relaxed">
+                  <p className="text-xs font-mono text-content-secondary uppercase tracking-[0.18em] pt-1 sm:pt-2 text-white/80 max-w-md leading-relaxed">
                     7 National Conclaves &middot; 500+ Boardroom CXOs
                   </p>
                 </div>
@@ -203,7 +203,7 @@ export default function AboutPage() {
                 </h2>
               </div>
 
-              <div className="space-y-4 font-sans text-[15px] sm:text-base font-normal tracking-[0.005em] leading-[1.78] text-content-secondary text-left">
+              <div className="space-y-4 font-sans text-base font-normal tracking-[0.005em] leading-[1.78] text-content-secondary text-left">
                 <p>
                   It gives me immense pleasure to be associated with Allyship, an initiative of Siksha &lsquo;O&rsquo; Anusandhan (Deemed to be University) aimed at promoting inclusive leadership, meaningful industry engagement and collaborative workplace cultures.
                 </p>
