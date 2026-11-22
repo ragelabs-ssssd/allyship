@@ -93,16 +93,16 @@ export default function AboutPage() {
           {/* Left Column: 3-Paragraph Relatable Narrative */}
           <div className="lg:col-span-6 flex flex-col justify-between space-y-6 text-left">
             <div className="space-y-5">
-              <p className="text-base text-content-secondary leading-relaxed font-normal text-left">
-                For too long, university-industry ties were limited to annual campus visits. ALLYSHIP was founded on a simple truth: preparing future talent requires continuous dialogue, not periodic transactions. Instead of waiting behind gates, Siksha &lsquo;O&rsquo; Anusandhan stepped directly into metropolitan boardrooms across India to listen. We asked: <em>How do we build workplaces where young talent genuinely thrives?</em>
+              <p className="text-base text-content-secondary leading-relaxed font-normal text-left md:text-justify">
+                For too long, university-industry ties were limited to annual campus visits. ALLYSHIP was founded on a simple truth: preparing future talent requires continuous dialogue, not periodic transactions. Instead of waiting behind gates, Siksha &lsquo;O&rsquo; Anusandhan stepped directly into metropolitan boardrooms across India to listen. Together, we asked: <em>How do we build workplaces where young talent genuinely thrives and leads?</em>
               </p>
 
-              <p className="text-base text-content-secondary leading-relaxed font-normal text-left">
-                The <code className="text-accent bg-glass-strong px-2 py-0.5 rounded border border-line font-mono font-semibold">++</code> signifies compounding impact—moving beyond hiring metrics toward psychological safety, executive mentorship, and curricula co-designed with corporate practitioners.
+              <p className="text-base text-content-secondary leading-relaxed font-normal text-left md:text-justify">
+                The <code className="text-accent bg-glass-strong px-2 py-0.5 rounded border border-line font-mono font-semibold">++</code> signifies compounding impact—moving beyond hiring metrics toward psychological safety, executive mentorship, and academic curricula co-designed alongside senior corporate practitioners and industry leaders.
               </p>
 
-              <p className="text-base text-content-secondary leading-relaxed font-normal text-left">
-                Uniting Olympic mentors with boardroom chairs, we draw on a timeless athletic truth: potential turns into excellence only when trusted mentors guide talent through setbacks.
+              <p className="text-base text-content-secondary leading-relaxed font-normal text-left md:text-justify">
+                Uniting Olympic mentors with boardroom chairs, we draw on a timeless athletic truth: raw potential turns into lasting excellence only when trusted mentors guide emerging talent through real-world setbacks and pressure.
               </p>
 
               {/* Living Standard Callout Card */}
