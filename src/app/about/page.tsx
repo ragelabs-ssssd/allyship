@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 import {
   ShieldCheck,
   ArrowRight,
@@ -105,7 +106,15 @@ export default function AboutPage() {
               </p>
 
               {/* Living Standard Callout Card */}
-              <div className="p-5 rounded-2xl bg-surface-2 border border-accent/25 space-y-2">
+              <div className="relative pl-5 p-5 rounded-2xl bg-surface-2 border border-accent/25 space-y-2 overflow-hidden">
+                <motion.span
+                  aria-hidden="true"
+                  initial={{ scaleY: 0 }}
+                  whileInView={{ scaleY: 1 }}
+                  viewport={{ once: true, amount: 0.4 }}
+                  transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+                  className="absolute left-0 top-0 bottom-0 w-[3px] bg-accent origin-top"
+                />
                 <span className="text-[11px] font-bold font-heading uppercase tracking-widest text-accent block text-left">
                   The Living Standard · Practicing Allyship
                 </span>
@@ -254,7 +263,15 @@ export default function AboutPage() {
             </div>
 
             {/* Pull-Quote Excerpt Card */}
-            <div className="p-6 rounded-2xl bg-surface-2 border border-line space-y-3">
+            <div className="relative pl-7 p-6 rounded-2xl bg-surface-2 border border-line space-y-3 overflow-hidden">
+              <motion.span
+                aria-hidden="true"
+                initial={{ scaleY: 0 }}
+                whileInView={{ scaleY: 1 }}
+                viewport={{ once: true, amount: 0.4 }}
+                transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+                className="absolute left-0 top-0 bottom-0 w-[3px] bg-accent origin-top"
+              />
               <Quote className="w-6 h-6 text-accent opacity-80" />
               <blockquote className="font-serif italic text-base sm:text-lg leading-relaxed text-content text-left md:text-justify">
                 &ldquo;Allyship provided an excellent platform for distinguished industry leaders, professionals and academicians to exchange perspectives on leadership, resilience, mentorship and the importance of translating allyship into everyday organizational practices.&rdquo;
