@@ -91,17 +91,17 @@ export default function AboutPage() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 items-stretch">
           {/* Left Column: 3-Paragraph Relatable Narrative */}
-          <div className="lg:col-span-6 flex flex-col justify-between space-y-6 text-left md:text-justify">
+          <div className="lg:col-span-6 flex flex-col justify-between space-y-6 text-left">
             <div className="space-y-5">
-              <p className="text-base text-content-secondary leading-relaxed font-normal text-left md:text-justify">
+              <p className="text-base text-content-secondary leading-relaxed font-normal text-left">
                 For too long, university-industry ties were limited to annual campus visits. ALLYSHIP was founded on a simple truth: preparing future talent requires continuous dialogue, not periodic transactions. Instead of waiting behind gates, Siksha &lsquo;O&rsquo; Anusandhan stepped directly into metropolitan boardrooms across India to listen. We asked: <em>How do we build workplaces where young talent genuinely thrives?</em>
               </p>
 
-              <p className="text-base text-content-secondary leading-relaxed font-normal text-left md:text-justify">
+              <p className="text-base text-content-secondary leading-relaxed font-normal text-left">
                 The <code className="text-accent bg-glass-strong px-2 py-0.5 rounded border border-line font-mono font-semibold">++</code> signifies compounding impact—moving beyond hiring metrics toward psychological safety, executive mentorship, and curricula co-designed with corporate practitioners.
               </p>
 
-              <p className="text-base text-content-secondary leading-relaxed font-normal text-left md:text-justify">
+              <p className="text-base text-content-secondary leading-relaxed font-normal text-left">
                 Uniting Olympic mentors with boardroom chairs, we draw on a timeless athletic truth: potential turns into excellence only when trusted mentors guide talent through setbacks.
               </p>
 
@@ -118,7 +118,7 @@ export default function AboutPage() {
                 <span className="text-xs font-bold font-heading uppercase tracking-widest text-accent block text-left">
                   The Living Standard · Practicing Allyship
                 </span>
-                <p className="text-xs sm:text-sm text-content-secondary leading-relaxed italic text-left md:text-justify">
+                <p className="text-xs sm:text-sm text-content-secondary leading-relaxed italic text-left">
                   &ldquo;A diversity policy says what an organization intends on paper. Allyship is what happens on an ordinary Friday—who is heard in a meeting, who is trusted with a challenging project, and who speaks up when an early-career colleague is overlooked.&rdquo;
                 </p>
               </div>
@@ -203,7 +203,7 @@ export default function AboutPage() {
                 </h2>
               </div>
 
-              <div className="space-y-4 font-sans text-[15px] sm:text-base font-normal tracking-[0.005em] leading-[1.78] text-content-secondary text-left md:text-justify">
+              <div className="space-y-4 font-sans text-[15px] sm:text-base font-normal tracking-[0.005em] leading-[1.78] text-content-secondary text-left">
                 <p>
                   It gives me immense pleasure to be associated with Allyship, an initiative of Siksha &lsquo;O&rsquo; Anusandhan (Deemed to be University) aimed at promoting inclusive leadership, meaningful industry engagement and collaborative workplace cultures.
                 </p>
@@ -273,7 +273,7 @@ export default function AboutPage() {
                 className="absolute left-0 top-0 bottom-0 w-[3px] bg-accent origin-top"
               />
               <Quote className="w-6 h-6 text-accent opacity-80" />
-              <blockquote className="font-serif italic text-base sm:text-lg leading-relaxed text-content text-left md:text-justify">
+              <blockquote className="font-serif italic text-base sm:text-lg leading-relaxed text-content text-left">
                 &ldquo;Allyship provided an excellent platform for distinguished industry leaders, professionals and academicians to exchange perspectives on leadership, resilience, mentorship and the importance of translating allyship into everyday organizational practices.&rdquo;
               </blockquote>
             </div>
@@ -331,10 +331,10 @@ export default function AboutPage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-center">
               <div className="lg:col-span-7 space-y-4">
-                <p className="text-sm sm:text-base text-content-secondary leading-relaxed font-normal text-left md:text-justify">
+                <p className="text-sm sm:text-base text-content-secondary leading-relaxed font-normal text-left">
                   High-performance athletics represents the ultimate meritocratic arena in which psychological safety, coach-athlete allyship, discipline, and mutual trust under extreme pressure directly dictate collective triumph.
                 </p>
-                <p className="text-sm sm:text-base text-content-secondary leading-relaxed font-normal text-left md:text-justify">
+                <p className="text-sm sm:text-base text-content-secondary leading-relaxed font-normal text-left">
                   From Olympic podiums to global corporate boardrooms, SOA conclaves demonstrate that nurturing young talent requires the exact blend of discipline, empathy, and transformative mentorship practiced by elite national coaches.
                 </p>
               </div>
@@ -344,7 +344,7 @@ export default function AboutPage() {
                   <Medal className="w-4 h-4 shrink-0" />
                   <span>The Core Athletic Parallel</span>
                 </div>
-                <p className="text-sm text-content-secondary leading-relaxed italic text-left md:text-justify">
+                <p className="text-sm text-content-secondary leading-relaxed italic text-left">
                   &ldquo;An Olympic coach doesn&apos;t run the anchor leg; they eliminate friction, absorb external pressure, and build unshakeable psychological safety so emerging talent can execute without fear under championship stakes. That is the definition of executive allyship.&rdquo;
                 </p>
               </div>

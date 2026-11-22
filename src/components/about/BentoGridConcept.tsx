@@ -45,7 +45,7 @@ export function BentoGridConcept() {
             <h3 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-content tracking-tight">
               Enduring Relationships Beyond Recruitment
             </h3>
-            <p className="text-sm sm:text-base text-content-secondary leading-relaxed font-normal text-left md:text-justify">
+            <p className="text-sm sm:text-base text-content-secondary leading-relaxed font-normal text-left">
               By replacing one-off hiring cycles with year-round collaboration, SOA bridges classroom inquiry with executive boardrooms. Over 500 enterprise leaders and 150+ multinational partners actively help mentor, guide, and inspire future generations.
             </p>
           </div>
