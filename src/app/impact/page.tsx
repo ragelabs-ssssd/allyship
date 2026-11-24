@@ -276,6 +276,74 @@ export default function ImpactPage() {
         </div>
       </section>
 
+      {/* 2.5 MESSAGE FROM THE PRO-VICE-CHANCELLOR (PHOTO LEFT, MESSAGE RIGHT) */}
+      <section id="pro-vc-message" className="py-16 lg:py-20 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line">
+        <div className="bg-surface rounded-3xl p-8 sm:p-12 border border-line shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-center group">
+          {/* Photo on Left */}
+          <div className="md:col-span-5 relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-surface-3 border border-line shadow-2xl">
+            <Image
+              src="/leadership/pro-vc-soa.jpg"
+              alt="Pro-Vice-Chancellor addressing the Allyship++ 2.0 Conclave at Siksha 'O' Anusandhan"
+              fill
+              sizes="(max-width: 768px) 100vw, 40vw"
+              className="object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+              style={{ objectPosition: "50% 20%" }}
+            />
+            {/* Subtle Gradient Scrim & Rim Lighting */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+            <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none" />
+
+            {/* Glassmorphic Pro-VC Badge */}
+            <div className="absolute top-4 right-4 z-10">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md text-white/95 border border-accent/40 font-sans text-xs font-bold uppercase tracking-[0.16em] shadow-lg shadow-black/40">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+                Pro-Vice-Chancellor
+              </span>
+            </div>
+          </div>
+
+          {/* Message on Right */}
+          <div className="md:col-span-7 space-y-6">
+            <div className="space-y-4">
+              <div className="space-y-1.5">
+                <span className="font-display text-xs font-bold uppercase tracking-[0.2em] text-accent block">
+                  Academic Direction &amp; Leadership
+                </span>
+                <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-[1.15] text-content">
+                  Message from the Pro-Vice-Chancellor
+                </h2>
+              </div>
+
+              <div className="space-y-3 font-sans text-sm sm:text-base font-normal tracking-[0.01em] leading-relaxed text-content-muted">
+                <p>
+                  I am extremely delighted to know that our University is organising Allyship at different locations, which is much demanded in today&rsquo;s world.
+                </p>
+                <p>
+                  Our strength as a multidisciplinary University comes from the diversity of our people, perspectives, and lived experiences. Strong academia&ndash;industry partnerships start with active allyship&mdash;the commitment to listening with empathy and challenging unfair barriers.
+                </p>
+              </div>
+
+              <blockquote className="font-display italic font-normal tracking-normal text-base sm:text-lg text-content leading-relaxed border-l-2 border-accent pl-5 py-3.5 bg-surface-2 rounded-r-xl shadow-inner">
+                &ldquo;Industry&ndash;academia interface is essential to bridge the gap between theoretical education and real-world workforce demands, driving innovation, employability, and economic growth. In a rapidly evolving economy like India, with initiatives of NEP 2020 and skill-development missions, we must emphasize practical learning through strong partnership towards the benefits of students and staff, and our University is committed to such.&rdquo;
+              </blockquote>
+
+              <p className="font-sans text-sm sm:text-base font-normal tracking-[0.01em] leading-relaxed text-content-muted">
+                I am very much thankful to Prof. R. K. Hota and his team for the great effort in organising this Allyship. I wish it great success.
+              </p>
+            </div>
+
+            <div className="pt-4 border-t border-line">
+              <h4 className="font-display text-base font-semibold tracking-normal text-content">
+                Office of the Pro-Vice-Chancellor
+              </h4>
+              <p className="font-sans text-xs font-normal tracking-[0.01em] leading-relaxed text-content-muted mt-0.5">
+                Siksha &lsquo;O&rsquo; Anusandhan (Deemed to be University) &middot; Bhubaneswar
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 3. IN THE PRESS — 9 NEWSPAPER & MEDIA CLIPPINGS */}
       <section id="press-coverage" className="py-20 lg:py-28 px-6 sm:px-8 lg:px-12 xl:px-16 max-w-[1720px] mx-auto w-full border-t border-line">
         <div className="text-center w-full max-w-7xl mx-auto mb-16 space-y-3 flex flex-col items-center justify-center">
