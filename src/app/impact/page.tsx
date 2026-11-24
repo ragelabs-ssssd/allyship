@@ -287,7 +287,7 @@ export default function ImpactPage() {
             <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-surface-3 border border-line shadow-2xl">
               <Image
                 src="/leadership/pro-vc-soa.jpg"
-                alt="Pro-Vice-Chancellor addressing the Allyship++ 2.0 Conclave at Siksha 'O' Anusandhan"
+                alt="Pro-Vice-Chancellor Prof. (Dr.) Prashanta Kumar Patra addressing the Allyship++ 2.0 Conclave at Siksha 'O' Anusandhan"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 className="object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out"
@@ -354,7 +354,7 @@ export default function ImpactPage() {
             <div className="pt-5 border-t border-line flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
               <div>
                 <h4 className="font-display text-lg font-bold tracking-normal text-content">
-                  Office of the Pro-Vice-Chancellor
+                  Prof. (Dr.) Prashanta Kumar Patra
                 </h4>
                 <p className="font-sans text-xs font-medium tracking-[0.02em] text-accent mt-0.5">
                   Pro-Vice-Chancellor &bull; Siksha &lsquo;O&rsquo; Anusandhan (Deemed to be University)
