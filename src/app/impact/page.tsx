@@ -346,7 +346,7 @@ export default function ImpactPage() {
                   Industry&ndash;academia interface is essential to bridge the gap between theoretical education and real-world workforce demands, driving innovation, employability, and economic growth. In a rapidly evolving economy like India, with initiatives of NEP 2020 and skill-development missions, we must emphasize practical learning through strong partnership towards the benefits of students and staff, and our University is committed to such.
                 </p>
                 <p>
-                  I am very much thankful to Prof. R. K. Hota and his team for the great effort in organising this Allyship. I wish it great success.
+                  I deeply appreciate the dedicated efforts of the entire organising team behind this initiative and wish Allyship++ every continued success.
                 </p>
               </div>
             </div>
