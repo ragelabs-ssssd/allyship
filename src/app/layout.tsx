@@ -58,6 +58,11 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  icons: {
+    icon: "/soa-logo.png",
+    shortcut: "/soa-logo.png",
+    apple: "/soa-logo.png",
+  },
 };
 
 export default function RootLayout({
