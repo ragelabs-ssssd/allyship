@@ -59,9 +59,9 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: "/soa-logo.png",
-    shortcut: "/soa-logo.png",
-    apple: "/soa-logo.png",
+    icon: "/soa-logo.png?v=2",
+    shortcut: "/soa-logo.png?v=2",
+    apple: "/soa-logo.png?v=2",
   },
 };
 
