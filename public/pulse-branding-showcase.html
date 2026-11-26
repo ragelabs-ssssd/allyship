@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALLYSHIP++ · 10 Strategic Branding Option Types (PULSE Architecture Translation)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Unbounded:wght@400;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800&family=Cinzel:wght@600;700;900&family=Syne:wght@700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            gold: '#D4AF37',
+            canvas: '#0B0D11',
+            surface: '#12161D',
+            'surface-2': '#191F28',
+            'surface-3': '#222A36',
+            line: '#28313E',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            display: ['"Unbounded"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+            serif: ['"Playfair Display"', 'serif'],
+            grotesk: ['"Space Grotesk"', 'sans-serif'],
+            classic: ['"Cinzel"', 'serif'],
+            impact: ['"Bebas Neue"', 'sans-serif'],
+            syne: ['"Syne"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom Scrollbars */
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #0B0D11; }
+    ::-webkit-scrollbar-thumb { background: #28313E; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #D4AF37; }
+
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: max-content;
+      animation: marquee 30s linear infinite;
+    }
+    .animate-marquee:hover { animation-play-state: paused; }
+
+    /* Dynamic CSS Variables for the 10 Option Types */
+    :root {
+      --brand-accent: #D4AF37;
+      --brand-accent-glow: rgba(212, 175, 55, 0.25);
+      --brand-canvas: #0A0A0A;
+      --brand-surface: #141414;
+      --brand-surface-2: #1E1E1E;
+      --brand-surface-3: #282828;
+      --brand-border: #2C2C2C;
+      --brand-font-display: 'Unbounded', sans-serif;
+      --brand-font-body: 'Plus Jakarta Sans', sans-serif;
+      --brand-radius: 9999px;
+      --brand-card-radius: 1.5rem;
+    }
+
+    /* Option 01: PULSE Kinetic Athletic Editorial */
+    .opt-pulse {
+      --brand-accent: #CCFF00;
+      --brand-accent-glow: rgba(204, 255, 0, 0.25);
+      --brand-canvas: #090909;
+      --brand-surface: #121212;
+      --brand-surface-2: #1A1A1A;
+      --brand-surface-3: #242424;
+      --brand-border: #2D2D2D;
+      --brand-font-display: 'Unbounded', sans-serif;
+      --brand-radius: 9999px;
+      --brand-card-radius: 1.75rem;
+    }
+
+    /* Option 02: Sovereign Gold & Architectural Obsidian */
+    .opt-sovereign-gold {
+      --brand-accent: #D4AF37;
+      --brand-accent-glow: rgba(212, 175, 55, 0.25);
+      --brand-canvas: #060709;
+      --brand-surface: #0E1015;
+      --brand-surface-2: #151820;
+      --brand-surface-3: #1E222D;
+      --brand-border: #282D3B;
+      --brand-font-display: 'Unbounded', sans-serif;
+      --brand-radius: 9999px;
+      --brand-card-radius: 1.5rem;
+    }
+
+    /* Option 03: Deep-Tech Living Lab & Telemetry */
+    .opt-deep-tech {
+      --brand-accent: #00F0FF;
+      --brand-accent-glow: rgba(0, 240, 255, 0.3);
+      --brand-canvas: #040812;
+      --brand-surface: #0A1124;
+      --brand-surface-2: #101B36;
+      --brand-surface-3: #18284E;
+      --brand-border: #1F3666;
+      --brand-font-display: 'JetBrains Mono', monospace;
+      --brand-radius: 0.5rem;
+      --brand-card-radius: 1rem;
+    }
+
+    /* Option 04: Davos Plenary & Corporate Summit */
+    .opt-davos-plenary {
+      --brand-accent: #38BDF8;
+      --brand-accent-glow: rgba(56, 189, 248, 0.25);
+      --brand-canvas: #070E1B;
+      --brand-surface: #0D192E;
+      --brand-surface-2: #142442;
+      --brand-surface-3: #1D335B;
+      --brand-border: #254173;
+      --brand-font-display: 'Cinzel', serif;
+      --brand-radius: 9999px;
+      --brand-card-radius: 1.25rem;
+    }
+
+    /* Option 05: Championship Crucible (Olympic Gold) */
+    .opt-olympic-crucible {
+      --brand-accent: #F59E0B;
+      --brand-accent-glow: rgba(245, 158, 11, 0.3);
+      --brand-canvas: #0A0806;
+      --brand-surface: #14100C;
+      --brand-surface-2: #1F1913;
+      --brand-surface-3: #2D241C;
+      --brand-border: #3D3227;
+      --brand-font-display: 'Unbounded', sans-serif;
+      --brand-radius: 9999px;
+      --brand-card-radius: 1.5rem;
+    }
+
+    /* Option 06: Swiss International Modernist */
+    .opt-swiss-international {
+      --brand-accent: #FF3300;
+      --brand-accent-glow: rgba(255, 51, 0, 0.25);
+      --brand-canvas: #0D0E10;
+      --brand-surface: #151619;
+      --brand-surface-2: #1F2024;
+      --brand-surface-3: #2A2B30;
+      --brand-border: #383A42;
+      --brand-font-display: 'Inter', sans-serif;
+      --brand-radius: 0.25rem;
+      --brand-card-radius: 0.5rem;
+    }
+
+    /* Option 07: Neo-Brutalist Raw Power */
+    .opt-neo-brutalist {
+      --brand-accent: #FFE600;
+      --brand-accent-glow: rgba(255, 230, 0, 0.4);
+      --brand-canvas: #000000;
+      --brand-surface: #101010;
+      --brand-surface-2: #1A1A1A;
+      --brand-surface-3: #262626;
+      --brand-border: #FFFFFF;
+      --brand-font-display: 'Space Grotesk', sans-serif;
+      --brand-radius: 0px;
+      --brand-card-radius: 0px;
+    }
+
+    /* Option 08: Confidential Executive Dossier */
+    .opt-executive-dossier {
+      --brand-accent: #EAB308;
+      --brand-accent-glow: rgba(234, 179, 8, 0.25);
+      --brand-canvas: #0F0F10;
+      --brand-surface: #18191B;
+      --brand-surface-2: #222327;
+      --brand-surface-3: #2E3036;
+      --brand-border: #3E414A;
+      --brand-font-display: 'JetBrains Mono', monospace;
+      --brand-radius: 0.35rem;
+      --brand-card-radius: 0.75rem;
+    }
+
+    /* Option 09: Apple Spatial Glassmorphic Aurora */
+    .opt-aurora-spatial {
+      --brand-accent: #A855F7;
+      --brand-accent-glow: rgba(168, 85, 247, 0.3);
+      --brand-canvas: #070714;
+      --brand-surface: #0E0E24;
+      --brand-surface-2: #171738;
+      --brand-surface-3: #232252;
+      --brand-border: #33316E;
+      --brand-font-display: 'Plus Jakarta Sans', sans-serif;
+      --brand-radius: 9999px;
+      --brand-card-radius: 2rem;
+    }
+
+    /* Option 10: Temple City Heritage Meets Silicon Velocity */
+    .opt-kalinga-modern {
+      --brand-accent: #F97316;
+      --brand-accent-glow: rgba(249, 115, 22, 0.3);
+      --brand-canvas: #0C0806;
+      --brand-surface: #160F0C;
+      --brand-surface-2: #221813;
+      --brand-surface-3: #30231C;
+      --brand-border: #423127;
+      --brand-font-display: 'Playfair Display', serif;
+      --brand-radius: 9999px;
+      --brand-card-radius: 1.5rem;
+    }
+
+    /* Ruler ticks simulation for leadership strip */
+    .ruler-ticks {
+      background-image: repeating-linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.25) 0px,
+        rgba(255, 255, 255, 0.25) 1px,
+        transparent 1px,
+        transparent 8px
+      );
+      height: 6px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body id="dynamic-brand-body" class="opt-pulse bg-[#0A0A0A] text-white font-sans antialiased min-h-screen transition-colors duration-500">
+
+  <!-- ========================================================================= -->
+  <!-- FLOATING STRATEGIC BRAND SELECTOR (10 OPTION TYPES DOCK)                  -->
+  <!-- ========================================================================= -->
+  <aside class="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-5xl bg-[#121212]/95 backdrop-blur-2xl border border-[#2D2D2D] rounded-full p-2 shadow-2xl shadow-black/80 flex items-center justify-between gap-2 overflow-x-auto">
+    <div class="flex items-center gap-2 pl-3 shrink-0">
+      <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+      <span class="text-[11px] font-mono font-bold tracking-wider text-gray-400 uppercase hidden sm:inline">
+        Brand Option:
+      </span>
+    </div>
+
+    <!-- 10 Option Buttons -->
+    <div class="flex items-center gap-1.5 overflow-x-auto py-1 px-1 text-xs font-mono">
+      <button onclick="setBrandOption('opt-pulse', '01. PULSE Kinetic Athletic')" id="btn-opt-1" class="px-3.5 py-1.5 rounded-full bg-white text-black font-bold whitespace-nowrap transition-all shadow-md">
+        01. PULSE Kinetic
+      </button>
+      <button onclick="setBrandOption('opt-sovereign-gold', '02. Sovereign Gold Obsidian')" id="btn-opt-2" class="px-3 py-1.5 rounded-full text-gray-300 hover:text-white hover:bg-white/10 whitespace-nowrap transition-all">
+        02. Sovereign Gold
+      </button>
+      <button onclick="setBrandOption('opt-deep-tech', '03. Deep-Tech Living Lab')" id="btn-opt-3" class="px-3 py-1.5 rounded-full text-gray-300 hover:text-white hover:bg-white/10 whitespace-nowrap transition-all">
+        03. Deep-Tech
+      </button>
+      <button onclick="setBrandOption('opt-davos-plenary', '04. Davos World Economic Forum')" id="btn-opt-4" class="px-3 py-1.5 rounded-full text-gray-300 hover:text-white hover:bg-white/10 whitespace-nowrap transition-all">
+        04. Davos Plenary
+      </button>
+      <button onclick="setBrandOption('opt-olympic-crucible', '05. Olympic Crucible Discipline')" id="btn-opt-5" class="px-3 py-1.5 rounded-full text-gray-300 hover:text-white hover:bg-white/10 whitespace-nowrap transition-all">
+        05. Olympic Crucible
+      </button>
+      <button onclick="setBrandOption('opt-swiss-international', '06. Swiss Modernist Strict')" id="btn-opt-6" class="px-3 py-1.5 rounded-full text-gray-300 hover:text-white hover:bg-white/10 whitespace-nowrap transition-all">
+        06. Swiss Modernist
+      </button>
+      <button onclick="setBrandOption('opt-neo-brutalist', '07. Neo-Brutalist Raw Power')" id="btn-opt-7" class="px-3 py-1.5 rounded-full text-gray-300 hover:text-white hover:bg-white/10 whitespace-nowrap transition-all">
+        07. Neo-Brutalist
+      </button>
+      <button onclick="setBrandOption('opt-executive-dossier', '08. Confidential Executive Dossier')" id="btn-opt-8" class="px-3 py-1.5 rounded-full text-gray-300 hover:text-white hover:bg-white/10 whitespace-nowrap transition-all">
+        08. Executive Dossier
+      </button>
+      <button onclick="setBrandOption('opt-aurora-spatial', '09. Apple Spatial Glassmorphic')" id="btn-opt-9" class="px-3 py-1.5 rounded-full text-gray-300 hover:text-white hover:bg-white/10 whitespace-nowrap transition-all">
+        09. Spatial Aurora
+      </button>
+      <button onclick="setBrandOption('opt-kalinga-modern', '10. Temple City Heritage & AI')" id="btn-opt-10" class="px-3 py-1.5 rounded-full text-gray-300 hover:text-white hover:bg-white/10 whitespace-nowrap transition-all">
+        10. Kalinga Modern
+      </button>
+    </div>
+
+    <!-- Active Indicator -->
+    <div class="pr-3 pl-2 shrink-0 border-l border-white/10 hidden md:flex items-center gap-2">
+      <span id="active-brand-label" class="text-[11px] font-mono text-emerald-400 font-bold whitespace-nowrap">
+        01. PULSE Kinetic
+      </span>
+    </div>
+  </aside>
+
+  <!-- ========================================================================= -->
+  <!-- 1. FIRST SECTION: CONSTANT VIDEO HERO (UNTOUCHED & FULLY FUNCTIONAL)       -->
+  <!-- ========================================================================= -->
+  <section class="relative min-h-[92vh] flex items-center justify-center overflow-hidden border-b border-[#2C2C2C]">
+    <!-- Live Background Video (Maintained Constant as instructed) -->
+    <div class="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        class="absolute left-1/2 top-1/2 h-[56.25vw] min-h-[100vh] w-[100vw] min-w-[177.78vh] -translate-x-1/2 -translate-y-1/2 object-cover brightness-[0.85] contrast-[1.1] saturate-[1.1]"
+      >
+        <source src="/logos/mono/soa-video-background/soa-campus-compressed.mp4" type="video/mp4" />
+      </video>
+      <!-- Deep Cinematic Scrim -->
+      <div class="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-black/60 to-black/80"></div>
+    </div>
+
+    <!-- Top Constant Navigation -->
+    <nav class="absolute top-0 left-0 right-0 z-20 px-6 sm:px-12 py-6 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-black/60 backdrop-blur-md border border-white/20 flex items-center justify-center font-display font-black text-sm text-white">
+          S
+        </div>
+        <div>
+          <span class="font-display font-black text-xl text-white tracking-wider">ALLYSHIP<span class="brand-accent-text text-[#CCFF00]">++</span></span>
+          <span class="block text-[10px] font-mono text-gray-400 tracking-widest uppercase">SIKSHA 'O' ANUSANDHAN DEEMED TO BE UNIVERSITY</span>
+        </div>
+      </div>
+
+      <div class="hidden lg:flex items-center gap-8 text-xs font-mono font-semibold tracking-wider uppercase text-gray-300">
+        <a href="#pulse-subhero" class="hover:text-white transition-colors">Conclave Cities</a>
+        <a href="#pulse-journey" class="hover:text-white transition-colors">Strategic Tracks</a>
+        <a href="#pulse-labs" class="hover:text-white transition-colors">Living Labs</a>
+        <a href="#pulse-tiers" class="hover:text-white transition-colors">Partnership Tiers</a>
+        <a href="#pulse-roster" class="hover:text-white transition-colors">Leadership</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <span class="hidden sm:inline px-3 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/15 text-xs font-mono text-gray-300">
+          NIRF #15 NATIONAL RANK
+        </span>
+        <a href="http://localhost:3005/collaborate#submit-challenge" target="_blank" class="brand-accent-bg brand-radius px-5 py-2.5 bg-[#CCFF00] text-black font-bold text-xs font-mono uppercase tracking-wider shadow-lg hover:scale-105 transition-all">
+          Get Invited
+        </a>
+      </div>
+    </nav>
+
+    <!-- Constant Video Hero Content -->
+    <div class="relative z-10 max-w-[1720px] mx-auto px-6 sm:px-12 w-full pt-20 pb-16 flex flex-col items-center text-center space-y-6">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/70 backdrop-blur-md border border-white/20 text-xs font-mono font-semibold text-gray-300">
+        <span class="w-2 h-2 rounded-full brand-accent-bg bg-[#CCFF00] animate-pulse"></span>
+        <span>20&deg; 17&prime; 38&Prime; N &middot; 85&deg; 49&prime; 44&Prime; E &bull; BHUBANESWAR, INDIA &bull; EST. 1996</span>
+      </div>
+
+      <h1 class="font-display text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight text-white leading-[1.05] max-w-5xl">
+        Where Industry &amp; Academia <br>
+        <span class="brand-accent-text text-[#CCFF00] italic font-normal">Co-Create</span> the Future
+      </h1>
+
+      <p class="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl font-normal leading-relaxed">
+        Connecting Fortune 500 boardrooms with 15,000+ scholars, 18 Centres of Excellence, and Atal Incubation under NITI Aayog across 6 corporate capitals.
+      </p>
+
+      <div class="pt-4 flex flex-wrap items-center justify-center gap-4">
+        <a href="#pulse-subhero" class="brand-accent-bg brand-radius px-8 py-4 bg-[#CCFF00] text-black font-bold text-xs font-mono uppercase tracking-wider shadow-xl hover:scale-105 transition-all">
+          Explore The Design Translation &darr;
+        </a>
+        <a href="http://localhost:3005/collaborate" target="_blank" class="brand-radius px-8 py-4 bg-black/60 backdrop-blur-md border border-white/20 text-white font-bold text-xs font-mono uppercase tracking-wider hover:bg-white/10 transition-all">
+          Open Collaborate Portal
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 2. SECTION: PULSE MONUMENTAL MARQUEE & SUB-HERO WITH CITY PILLS           -->
+  <!-- ========================================================================= -->
+  <section id="pulse-subhero" class="relative py-12 border-b border-[#2C2C2C] bg-[#0E0E0E]">
+    <!-- High-Velocity Marquee Ribbon (Slide 1 Reference) -->
+    <div class="py-3.5 bg-black border-y border-[#2C2C2C] overflow-hidden select-none">
+      <div class="animate-marquee gap-8 font-mono text-xs uppercase tracking-[0.25em] text-gray-400">
+        <span class="text-white">&copy; BEYOND RECRUITMENT.</span>
+        <span class="brand-accent-text text-[#CCFF00]">&bull; ACTIVE ALLYSHIP.</span>
+        <span class="text-white">&copy; WHERE FUTURES ARE CO-CREATED.</span>
+        <span class="brand-accent-text text-[#CCFF00]">&bull; 15,000+ SCHOLARS GUIDED.</span>
+        <span class="text-white">&copy; TECH MAHINDRA CLOUD COE.</span>
+        <span class="brand-accent-text text-[#CCFF00]">&bull; LTTS MEDICAL AI BIOME.</span>
+        <span class="text-white">&copy; BLUE STAR HVAC SKILL HUB.</span>
+        <span class="brand-accent-text text-[#CCFF00]">&bull; AIC-SOA ATAL INCUBATION NITI AAYOG.</span>
+      </div>
+    </div>
+
+    <!-- Editorial Sub-Hero with City Pills (Slide 1 & 3 Reference) -->
+    <div class="max-w-5xl mx-auto px-6 py-16 text-center space-y-8">
+      <div class="text-xs font-mono uppercase tracking-widest text-gray-400">
+        ( CONVENE ACROSS 6 METROPOLITAN CHAPTERS &bull; SHAPE TOMORROW'S WORKFORCE )
+      </div>
+
+      <h2 class="font-display text-2xl sm:text-4xl lg:text-5xl font-bold text-white leading-snug tracking-tight">
+        We're bringing enterprise leadership together&mdash;across corporate capitals, multidisciplinary faculties, and day-one talent.
+      </h2>
+
+      <!-- Oval City Pills + CXO Avatar Stack -->
+      <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+        <button onclick="filterCity('bengaluru')" class="brand-radius px-5 py-2.5 bg-[#1A1A1A] hover:bg-white hover:text-black border border-[#2D2D2D] text-xs font-mono font-bold uppercase tracking-wider text-white transition-all">
+          [ BENGALURU ]
+        </button>
+        <button onclick="filterCity('hyderabad')" class="brand-radius px-5 py-2.5 bg-[#1A1A1A] hover:bg-white hover:text-black border border-[#2D2D2D] text-xs font-mono font-bold uppercase tracking-wider text-white transition-all">
+          [ HYDERABAD ]
+        </button>
+        <button onclick="filterCity('kolkata')" class="brand-radius px-5 py-2.5 bg-[#1A1A1A] hover:bg-white hover:text-black border border-[#2D2D2D] text-xs font-mono font-bold uppercase tracking-wider text-white transition-all">
+          [ KOLKATA ]
+        </button>
+        <button onclick="filterCity('mumbai')" class="brand-radius px-5 py-2.5 bg-[#1A1A1A] hover:bg-white hover:text-black border border-[#2D2D2D] text-xs font-mono font-bold uppercase tracking-wider text-white transition-all">
+          [ MUMBAI ]
+        </button>
+        <button onclick="filterCity('chennai')" class="brand-radius px-5 py-2.5 bg-[#1A1A1A] hover:bg-white hover:text-black border border-[#2D2D2D] text-xs font-mono font-bold uppercase tracking-wider text-white transition-all">
+          [ CHENNAI ]
+        </button>
+        <button onclick="filterCity('bhubaneswar')" class="brand-radius px-5 py-2.5 bg-[#1A1A1A] hover:bg-white hover:text-black border border-[#2D2D2D] text-xs font-mono font-bold uppercase tracking-wider text-white transition-all">
+          [ BHUBANESWAR ]
+        </button>
+
+        <!-- 500+ CXO Badge -->
+        <div class="flex items-center gap-2 pl-2">
+          <div class="flex -space-x-2">
+            <img class="inline-block h-8 w-8 rounded-full ring-2 ring-black object-cover" src="/testimonials/pb-kotur-v2.jpg" alt="CXO">
+            <img class="inline-block h-8 w-8 rounded-full ring-2 ring-black object-cover" src="/leadership/pro-vc-soa.jpg" alt="CXO">
+            <img class="inline-block h-8 w-8 rounded-full ring-2 ring-black object-cover" src="/IMG_7328_whole_4_3.jpg" alt="CXO">
+          </div>
+          <span class="brand-radius px-3 py-1 bg-[#1A1A1A] border border-[#2D2D2D] text-xs font-mono font-bold text-white">
+            500+ CXOs
+          </span>
+        </div>
+      </div>
+
+      <div class="text-[11px] font-mono text-gray-500 uppercase tracking-widest pt-2">
+        COME FOR THE TALENT. STAY FOR THE GENERATIONAL ALLYSHIP.
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 3. SECTION: 02 [ ALLYSHIP IS A JOURNEY ] OVERSIZED TYPOGRAPHIC STACK       -->
+  <!-- (Direct translation of Slide 3 from Reference)                            -->
+  <!-- ========================================================================= -->
+  <section id="pulse-journey" class="py-24 px-6 sm:px-12 border-b border-[#2C2C2C] bg-[#090909]">
+    <div class="max-w-[1720px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      <!-- Left Meta Column -->
+      <div class="lg:col-span-3 space-y-6 lg:sticky lg:top-24">
+        <div class="text-xs font-mono uppercase tracking-[0.2em] text-gray-400">
+          02 [ ALLYSHIP IS A JOURNEY ]
+        </div>
+        <div class="font-display text-5xl font-black text-white">
+          02
+        </div>
+        <p class="text-xs font-mono text-gray-400 leading-relaxed uppercase">
+          MEET SCHOLARS, CO-ESTABLISH RESEARCH LABS, IMPROVE WORKPLACE CULTURE, AND BE PART OF AN ACADEMIC-CORPORATE BIOME THAT ELEVATES INDIAN HIGHER EDUCATION.
+        </p>
+        <div class="pt-4 border-t border-[#2C2C2C] text-xs font-mono text-gray-500">
+          / ESTABLISHED SINCE 1996
+        </div>
+      </div>
+
+      <!-- Right Interactive Stack -->
+      <div class="lg:col-span-9 space-y-12">
+        <!-- Interactive Typographic List Items -->
+        <div class="space-y-6">
+          <!-- Item 1: Active -->
+          <div onclick="selectPulseTrack(1)" id="pulse-track-1" class="cursor-pointer group p-8 rounded-3xl bg-[#141414] border border-[#2D2D2D] hover:border-[#CCFF00] transition-all duration-300">
+            <div class="flex flex-wrap items-baseline justify-between gap-4">
+              <h3 class="font-display text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight group-hover:text-[#CCFF00] transition-colors">
+                Centres of Excellence
+              </h3>
+              <span class="font-mono text-2xl font-bold brand-accent-text text-[#CCFF00]">
+                18
+              </span>
+            </div>
+
+            <!-- Floating Skill Pill Tags (Slide 3 reference: [MUSCLE TIGHTNESS] [OVERSTIMULATION]...) -->
+            <div class="mt-6 flex flex-wrap gap-2 text-xs font-mono">
+              <span class="px-3 py-1 rounded-full bg-black/60 border border-white/15 text-gray-300">
+                [ SERVICENOW ]
+              </span>
+              <span class="px-3 py-1 rounded-full bg-black/60 border border-white/15 text-gray-300">
+                [ CLOUD ARCHITECTURE ]
+              </span>
+              <span class="px-3 py-1 rounded-full bg-black/60 border border-white/15 text-gray-300">
+                [ MEDICAL AI BIOME ]
+              </span>
+              <span class="px-3 py-1 rounded-full bg-black/60 border border-white/15 text-gray-300">
+                [ EMBEDDED SYSTEMS ]
+              </span>
+              <span class="px-3 py-1 rounded-full bg-black/60 border border-white/15 text-gray-300">
+                [ HVAC SMART THERMAL ]
+              </span>
+            </div>
+
+            <p class="mt-4 text-sm text-gray-300 leading-relaxed max-w-3xl">
+              Co-establish physical on-campus research hubs modeled on Tech Mahindra and L&amp;T Technology Services. Dedicated laboratory space, enterprise tooling, and year-round talent incubation.
+            </p>
+          </div>
+
+          <!-- Item 2 -->
+          <div onclick="selectPulseTrack(2)" id="pulse-track-2" class="cursor-pointer group p-8 rounded-3xl bg-[#0F0F0F] border border-[#222222] hover:border-[#CCFF00] hover:bg-[#141414] transition-all duration-300">
+            <div class="flex flex-wrap items-baseline justify-between gap-4">
+              <h3 class="font-display text-3xl sm:text-5xl lg:text-6xl font-black text-gray-400 tracking-tight group-hover:text-white transition-colors">
+                Industry Challenges
+              </h3>
+              <span class="font-mono text-2xl font-bold text-gray-500 group-hover:text-[#CCFF00]">
+                24
+              </span>
+            </div>
+            <p class="mt-4 text-sm text-gray-400 leading-relaxed max-w-3xl hidden group-hover:block transition-all">
+              Pair your engineering bottleneck or deep-tech PoC requirement directly with faculty researchers and student cohorts under AIC-SOA Atal Incubation Centre supported by NITI Aayog.
+            </p>
+          </div>
+
+          <!-- Item 3 -->
+          <div onclick="selectPulseTrack(3)" id="pulse-track-3" class="cursor-pointer group p-8 rounded-3xl bg-[#0F0F0F] border border-[#222222] hover:border-[#CCFF00] hover:bg-[#141414] transition-all duration-300">
+            <div class="flex flex-wrap items-baseline justify-between gap-4">
+              <h3 class="font-display text-3xl sm:text-5xl lg:text-6xl font-black text-gray-400 tracking-tight group-hover:text-white transition-colors">
+                Executive Advisory
+              </h3>
+              <span class="font-mono text-2xl font-bold text-gray-500 group-hover:text-[#CCFF00]">
+                500
+              </span>
+            </div>
+            <p class="mt-4 text-sm text-gray-400 leading-relaxed max-w-3xl hidden group-hover:block transition-all">
+              Shape dynamic course curricula, guest masterclasses, and corporate mentorship frameworks alongside senior faculty and academic senate chairs.
+            </p>
+          </div>
+
+          <!-- Item 4 -->
+          <div onclick="selectPulseTrack(4)" id="pulse-track-4" class="cursor-pointer group p-8 rounded-3xl bg-[#0F0F0F] border border-[#222222] hover:border-[#CCFF00] hover:bg-[#141414] transition-all duration-300">
+            <div class="flex flex-wrap items-baseline justify-between gap-4">
+              <h3 class="font-display text-3xl sm:text-5xl lg:text-6xl font-black text-gray-400 tracking-tight group-hover:text-white transition-colors">
+                Mentorship Fellowships
+              </h3>
+              <span class="font-mono text-2xl font-bold text-gray-500 group-hover:text-[#CCFF00]">
+                15K
+              </span>
+            </div>
+            <p class="mt-4 text-sm text-gray-400 leading-relaxed max-w-3xl hidden group-hover:block transition-all">
+              Continuous multi-year pre-placement mentorship cultivating psychological safety, emotional resilience, and day-one workplace readiness.
+            </p>
+          </div>
+        </div>
+
+        <!-- Dynamic Lower Feature Split (Slide 3 Athlete photo translated to Conclave Hall) -->
+        <div class="p-8 rounded-3xl bg-[#141414] border border-[#2D2D2D] grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          <div class="md:col-span-7 space-y-4">
+            <span class="text-xs font-mono uppercase tracking-wider brand-accent-text text-[#CCFF00]">
+              VERIFIED INSTITUTIONAL COHORT
+            </span>
+            <h4 class="font-display text-2xl font-bold text-white">
+              Over 15,000 Scholars Guided by Industry Mentors Across 7 Conclaves
+            </h4>
+            <p class="text-sm text-gray-300 leading-relaxed">
+              From Microsoft, LSEG, and Amazon to Apollo Hospitals and Sun Pharma, SOA students bridge classroom theory with enterprise reality.
+            </p>
+          </div>
+          <div class="md:col-span-5 relative aspect-[16/10] rounded-2xl overflow-hidden bg-surface-3 border border-white/10">
+            <img src="/IMG_7873.jpg" alt="Conclave Delegation" class="w-full h-full object-cover">
+            <span class="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-black/80 backdrop-blur-md text-xs font-mono font-bold text-white">
+              500+ Boardroom CXOs
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 4. SECTION: WHAT'S HAPPENING IN THE LIVING LABS & FLOATING GLASS SCHEDULE  -->
+  <!-- (Direct translation of Slide 4 from Reference)                            -->
+  <!-- ========================================================================= -->
+  <section id="pulse-labs" class="py-24 px-6 sm:px-12 border-b border-[#2C2C2C] bg-[#0E0E0E]">
+    <div class="max-w-[1720px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <!-- Left: Giant Numbers + Floating Frosted Schedule Card -->
+      <div class="lg:col-span-6 space-y-8">
+        <div class="space-y-2">
+          <div class="font-display text-6xl sm:text-7xl font-black text-white">
+            94.54%
+          </div>
+          <div class="text-sm font-mono text-gray-400 uppercase tracking-widest">
+            B.TECH COHORT PLACEMENT RATE &bull; 1,802 SCHOLARS PLACED
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <div class="font-display text-5xl sm:text-6xl font-black brand-accent-text text-[#CCFF00]">
+            18+ CoEs
+          </div>
+          <div class="text-sm font-mono text-gray-400 uppercase tracking-widest">
+            DEDICATED RESEARCH CENTRES OF EXCELLENCE
+          </div>
+        </div>
+
+        <!-- Floating Glass Schedule Card (Slide 4 reference: Saturday 08:00 AM) -->
+        <div class="p-6 rounded-3xl bg-black/60 backdrop-blur-xl border border-white/20 shadow-2xl max-w-md space-y-4">
+          <div class="flex items-center justify-between text-xs font-mono">
+            <span class="brand-accent-text text-[#CCFF00] font-bold">NEXT CONCLAVE CYCLE 2.0</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-white/10 text-white font-mono text-[10px]">
+              CONFIRMED
+            </span>
+          </div>
+
+          <div class="space-y-1">
+            <h4 class="font-display text-xl font-bold text-white">
+              National Executive Roundtable
+            </h4>
+            <p class="text-xs text-gray-300 leading-relaxed">
+              Deliberating Gen-Z psychological safety, AI-driven medical instrumentation, and executive allyship.
+            </p>
+          </div>
+
+          <div class="flex items-center gap-3 pt-2">
+            <img src="/soa-iter-building.jpg" alt="ITER" class="w-16 h-12 rounded-xl object-cover border border-white/10">
+            <div class="text-xs font-mono">
+              <div class="text-white font-semibold">1,400-Seat Auditorium</div>
+              <div class="text-gray-400 text-[11px]">Khandagiri Square Campus</div>
+            </div>
+            <button class="ml-auto w-8 h-8 rounded-full bg-white text-black font-bold flex items-center justify-center hover:scale-110 transition-transform">
+              +
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Narrative & Living Lab Highlights -->
+      <div class="lg:col-span-6 space-y-6">
+        <span class="text-xs font-mono uppercase tracking-widest brand-accent-text text-[#CCFF00]">
+          [ ONE COMMUNITY &bull; ENDLESS RESEARCH CORRIDORS ]
+        </span>
+
+        <h3 class="font-display text-3xl sm:text-5xl font-bold text-white leading-tight">
+          What's Happening in the Living Labs
+        </h3>
+
+        <p class="text-base text-gray-300 leading-relaxed font-normal">
+          Academic alliances can be transactional, but at SOA they are built around sustainable human capital, collaborative clinical trials, and deep-tech incubation.
+        </p>
+
+        <div class="grid grid-cols-2 gap-4 pt-4">
+          <div class="p-5 rounded-2xl bg-[#141414] border border-[#2D2D2D] space-y-2">
+            <span class="text-xs font-mono text-gray-400 uppercase">Incubation</span>
+            <div class="font-display text-lg font-bold text-white">AIC-SOA Atal Centre</div>
+            <p class="text-xs text-gray-400">Backed by NITI Aayog with patent filing cell.</p>
+          </div>
+          <div class="p-5 rounded-2xl bg-[#141414] border border-[#2D2D2D] space-y-2">
+            <span class="text-xs font-mono text-gray-400 uppercase">Clinical Healthcare</span>
+            <div class="font-display text-lg font-bold text-white">IMS &amp; SUM Hospital</div>
+            <p class="text-xs text-gray-400">1,750+ beds with 100% placement track record.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 5. SECTION: CHOOSE YOUR PARTNERSHIP TIER & TESTIMONIAL QUOTE DOCK          -->
+  <!-- (Direct translation of Slide 5 from Reference)                            -->
+  <!-- ========================================================================= -->
+  <section id="pulse-tiers" class="py-24 px-6 sm:px-12 border-b border-[#2C2C2C] bg-[#090909]">
+    <div class="max-w-[1720px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <!-- Left: Interactive Level Selector -->
+      <div class="lg:col-span-6 space-y-8">
+        <div class="space-y-2">
+          <span class="text-xs font-mono uppercase tracking-widest text-gray-400">
+            [ CHOOSE YOUR ALLIANCE TIER ]
+          </span>
+          <h3 class="font-display text-3xl sm:text-5xl font-bold text-white leading-tight">
+            Partnership is a journey. Your enterprise objective is where it begins.
+          </h3>
+        </div>
+
+        <div class="space-y-4">
+          <!-- Tier 1 -->
+          <div class="p-4 rounded-2xl bg-[#121212] border border-[#222222] text-gray-400 font-mono text-xs cursor-pointer hover:border-white transition-colors">
+            Talent Corridor Partner &bull; Annual Hiring Drives &amp; Pre-Placement Internships
+          </div>
+
+          <!-- Tier 2: Selected -->
+          <div class="p-6 rounded-2xl bg-[#141414] border-2 border-[#CCFF00] space-y-3">
+            <div class="flex items-center justify-between font-mono text-xs font-bold brand-accent-text text-[#CCFF00]">
+              <span>ACTIVE MODEL: CENTRES OF EXCELLENCE ANCHOR</span>
+              <span>FLAGSHIP</span>
+            </div>
+            <h4 class="font-display text-xl font-bold text-white">Dedicated CoE Infrastructure</h4>
+            <p class="text-xs text-gray-300 leading-relaxed">
+              Co-establish specialized physical research laboratories on campus modeled on Tech Mahindra, LTTS, and Blue Star with dedicated branding and faculty squads.
+            </p>
+          </div>
+
+          <!-- Tier 3 -->
+          <div class="p-4 rounded-2xl bg-[#121212] border border-[#222222] text-gray-400 font-mono text-xs cursor-pointer hover:border-white transition-colors">
+            Executive Advisory &amp; Curriculum Co-Design Council
+          </div>
+        </div>
+
+        <div class="pt-2 flex items-center gap-4">
+          <a href="http://localhost:3005/collaborate#submit-challenge" target="_blank" class="brand-accent-bg brand-radius px-6 py-3.5 bg-[#CCFF00] text-black font-bold text-xs font-mono uppercase tracking-wider hover:scale-105 transition-all">
+            Submit Partnership Brief &rarr;
+          </a>
+          <span class="text-xs font-mono text-gray-400">Directly routed to Dean Office</span>
+        </div>
+      </div>
+
+      <!-- Right: High-Res Image with Floating Testimonial Quote (Slide 5 reference: Kurnia Meiga) -->
+      <div class="lg:col-span-6 relative">
+        <div class="relative aspect-[4/3] rounded-3xl overflow-hidden bg-surface-3 border border-[#2C2C2C] shadow-2xl">
+          <img src="/IMG_7328_whole_4_3.jpg" alt="Prof. Dr. Raj Kumar Hota" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent pointer-events-none"></div>
+
+          <!-- Floating Glass Quote Pill (Slide 5 Reference) -->
+          <div class="absolute bottom-6 left-6 right-6 p-5 rounded-2xl bg-black/75 backdrop-blur-xl border border-white/20 shadow-2xl space-y-3">
+            <div class="flex items-center justify-between text-xs font-mono">
+              <div class="flex items-center gap-2.5">
+                <img src="/testimonials/pb-kotur-v2.jpg" alt="Dr. P.B. Kotur" class="w-8 h-8 rounded-full object-cover border border-white/20">
+                <span class="text-white font-bold">Dr. P.B. Kotur</span>
+              </div>
+              <span class="text-gray-400">Global Head &bull; LTTS</span>
+            </div>
+
+            <p class="text-xs text-gray-200 italic leading-relaxed">
+              "TRUE ALLYSHIP BRIDGES THE GAP BETWEEN CAMPUS AND CAREER. GROUNDING PARTNERSHIPS IN SHARED PURPOSE CREATES AN ENVIRONMENT WHERE YOUNG PROFESSIONALS THRIVE FROM DAY ONE."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- 6. SECTION: LEADERSHIP ROSTER STRIP WITH RULER TICKS & MASSIVE FOOTER       -->
+  <!-- (Direct translation of Slide 6 from Reference)                            -->
+  <!-- ========================================================================= -->
+  <section id="pulse-roster" class="pt-20 border-t border-[#2C2C2C] bg-[#060606]">
+    <div class="max-w-[1720px] mx-auto px-6 sm:px-12 space-y-12">
+      <!-- Section Title -->
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest brand-accent-text text-[#CCFF00] block">
+            [ LEADERSHIP &amp; DIGNITARY ROSTER ]
+          </span>
+          <h3 class="font-display text-2xl sm:text-4xl font-bold text-white mt-1">
+            Academic Stewards &amp; Conclave Patrons
+          </h3>
+        </div>
+        <div class="text-xs font-mono text-gray-400">
+          SIKSHA 'O' ANUSANDHAN DEEMED TO BE UNIVERSITY
+        </div>
+      </div>
+
+      <!-- Upper Strip: Ruler Ticks + Coach/Leader Avatars (Slide 6 Reference) -->
+      <div class="space-y-4">
+        <!-- Top Ruler Ticks -->
+        <div class="ruler-ticks"></div>
+
+        <!-- 6 Leadership Cards -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          <!-- 1: VC -->
+          <div class="p-4 rounded-2xl bg-[#121212] border border-[#222222] text-center space-y-3 group hover:border-[#CCFF00] transition-all">
+            <img src="/leadership/pradipta-kumar-nanda.jpg" alt="VC" class="w-16 h-16 rounded-full mx-auto object-cover border border-white/20 group-hover:scale-105 transition-transform">
+            <div>
+              <div class="font-display font-bold text-xs text-white">Prof. Pradipta Kumar Nanda</div>
+              <div class="text-[10px] font-mono text-gray-400">Vice-Chancellor</div>
+              <div class="text-[10px] font-mono brand-accent-text text-[#CCFF00] mt-0.5">Academic Vision</div>
+            </div>
+          </div>
+
+          <!-- 2: Pro-VC -->
+          <div class="p-4 rounded-2xl bg-[#121212] border border-[#222222] text-center space-y-3 group hover:border-[#CCFF00] transition-all">
+            <img src="/leadership/pro-vc-soa.jpg" alt="Pro-VC" class="w-16 h-16 rounded-full mx-auto object-cover border border-white/20 group-hover:scale-105 transition-transform" style="object-position: 50% 20%">
+            <div>
+              <div class="font-display font-bold text-xs text-white">Prof. Prashanta Kumar Patra</div>
+              <div class="text-[10px] font-mono text-gray-400">Pro-Vice-Chancellor</div>
+              <div class="text-[10px] font-mono brand-accent-text text-[#CCFF00] mt-0.5">Multidisciplinary</div>
+            </div>
+          </div>
+
+          <!-- 3: Dean / Convener -->
+          <div class="p-4 rounded-2xl bg-[#121212] border border-[#222222] text-center space-y-3 group hover:border-[#CCFF00] transition-all">
+            <img src="/IMG_7328_whole_4_3.jpg" alt="Dean" class="w-16 h-16 rounded-full mx-auto object-cover border border-white/20 group-hover:scale-105 transition-transform">
+            <div>
+              <div class="font-display font-bold text-xs text-white">Prof. Raj Kumar Hota</div>
+              <div class="text-[10px] font-mono text-gray-400">Dean &amp; Convener</div>
+              <div class="text-[10px] font-mono brand-accent-text text-[#CCFF00] mt-0.5">Corporate Relations</div>
+            </div>
+          </div>
+
+          <!-- 4: Anju Bobby George -->
+          <div class="p-4 rounded-2xl bg-[#121212] border border-[#222222] text-center space-y-3 group hover:border-[#CCFF00] transition-all">
+            <div class="w-16 h-16 rounded-full mx-auto bg-[#1A1A1A] border border-white/20 flex items-center justify-center font-display font-bold text-xs text-[#CCFF00]">
+              OLY
+            </div>
+            <div>
+              <div class="font-display font-bold text-xs text-white">Anju Bobby George</div>
+              <div class="text-[10px] font-mono text-gray-400">Olympian Icon</div>
+              <div class="text-[10px] font-mono brand-accent-text text-[#CCFF00] mt-0.5">Bengaluru Keynote</div>
+            </div>
+          </div>
+
+          <!-- 5: Arshad Ayub -->
+          <div class="p-4 rounded-2xl bg-[#121212] border border-[#222222] text-center space-y-3 group hover:border-[#CCFF00] transition-all">
+            <div class="w-16 h-16 rounded-full mx-auto bg-[#1A1A1A] border border-white/20 flex items-center justify-center font-display font-bold text-xs text-[#CCFF00]">
+              IND
+            </div>
+            <div>
+              <div class="font-display font-bold text-xs text-white">Arshad Ayub</div>
+              <div class="text-[10px] font-mono text-gray-400">Former Test Cricketer</div>
+              <div class="text-[10px] font-mono brand-accent-text text-[#CCFF00] mt-0.5">Hyderabad Keynote</div>
+            </div>
+          </div>
+
+          <!-- 6: Nilesh Kulkarni -->
+          <div class="p-4 rounded-2xl bg-[#121212] border border-[#222222] text-center space-y-3 group hover:border-[#CCFF00] transition-all">
+            <div class="w-16 h-16 rounded-full mx-auto bg-[#1A1A1A] border border-white/20 flex items-center justify-center font-display font-bold text-xs text-[#CCFF00]">
+              IND
+            </div>
+            <div>
+              <div class="font-display font-bold text-xs text-white">Nilesh Kulkarni</div>
+              <div class="text-[10px] font-mono text-gray-400">Former Test Cricketer</div>
+              <div class="text-[10px] font-mono brand-accent-text text-[#CCFF00] mt-0.5">Mumbai Keynote</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Ruler Ticks -->
+        <div class="ruler-ticks"></div>
+      </div>
+    </div>
+
+    <!-- Massive Architectural Footer (Slide 6 Reference) -->
+    <footer class="mt-20 border-t border-[#2C2C2C] bg-black px-6 sm:px-12 py-16 relative overflow-hidden">
+      <div class="max-w-[1720px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start relative z-10">
+        <!-- Left: Quick Links -->
+        <div class="lg:col-span-3 space-y-3 font-mono text-xs uppercase tracking-wider text-gray-400">
+          <div class="text-white font-bold mb-4 font-display text-sm">Navigation</div>
+          <div><a href="http://localhost:3005/" class="hover:text-white transition-colors">Home Stage</a></div>
+          <div><a href="http://localhost:3005/about" class="hover:text-white transition-colors">Institutional Mandate</a></div>
+          <div><a href="http://localhost:3005/event" class="hover:text-white transition-colors">Conclave Chapters</a></div>
+          <div><a href="http://localhost:3005/collaborate" class="hover:text-white transition-colors">Collaborate Portal</a></div>
+          <div><a href="http://localhost:3005/impact" class="hover:text-white transition-colors">Impact &amp; Media</a></div>
+          <div><a href="http://localhost:3005/discover-soa" class="hover:text-white transition-colors">Discover SOA</a></div>
+        </div>
+
+        <!-- Center: Campus Geolocation & Clock -->
+        <div class="lg:col-span-4 space-y-4 font-mono text-xs text-gray-400">
+          <div class="text-white font-bold font-display text-sm">Campus Headquarters</div>
+          <div>Office of Corporate Relations &amp; Placement</div>
+          <div>Siksha 'O' Anusandhan (Deemed to be University)</div>
+          <div>Khandagiri Square, Bhubaneswar, Odisha 751030</div>
+          <div class="pt-4 border-t border-white/10 text-emerald-400">
+            THU 26 NOV \ 14:15 IST \ 28&deg;C BHUBANESWAR
+          </div>
+        </div>
+
+        <!-- Right: Social & Pill Controls -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="flex flex-wrap gap-2 text-xs font-mono">
+            <span class="px-3 py-1 rounded-full bg-[#1A1A1A] border border-[#2D2D2D] text-gray-300">[ NIRF #15 ]</span>
+            <span class="px-3 py-1 rounded-full bg-[#1A1A1A] border border-[#2D2D2D] text-gray-300">[ NAAC 'A++' ]</span>
+            <span class="px-3 py-1 rounded-full bg-[#1A1A1A] border border-[#2D2D2D] text-gray-300">[ 18 CoEs ]</span>
+            <span class="px-3 py-1 rounded-full bg-[#1A1A1A] border border-[#2D2D2D] text-gray-300">[ 94.54% PLACED ]</span>
+            <span class="px-3 py-1 rounded-full bg-[#1A1A1A] border border-[#2D2D2D] text-gray-300">[ NITI AAYOG AIC ]</span>
+          </div>
+
+          <!-- Monumental Architectural Wordmark (Slide 6 PULSE Reference) -->
+          <div class="pt-8">
+            <div class="font-display text-6xl sm:text-8xl lg:text-9xl font-black text-white/[0.08] tracking-tighter uppercase select-none pointer-events-none">
+              ALLYSHIP<span class="text-white/[0.15]">++</span>
+            </div>
+          </div>
+
+          <div class="text-[11px] font-mono text-gray-500">
+            &copy; 2026 Siksha 'O' Anusandhan (Deemed to be University). All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- CLIENT SCRIPT FOR DYNAMIC BRAND OPTION SWITCHING                          -->
+  <!-- ========================================================================= -->
+  <script>
+    function setBrandOption(optClass, label) {
+      const body = document.getElementById('dynamic-brand-body');
+
+      // Remove existing option classes
+      body.className = body.className.replace(/\bopt-\S+/g, '');
+      body.classList.add(optClass);
+
+      // Update active label
+      document.getElementById('active-brand-label').innerText = label;
+
+      // Update button styling in dock
+      for (let i = 1; i <= 10; i++) {
+        const btn = document.getElementById(`btn-opt-${i}`);
+        if (btn) {
+          btn.className = "px-3 py-1.5 rounded-full text-gray-300 hover:text-white hover:bg-white/10 whitespace-nowrap transition-all";
+        }
+      }
+
+      // Mark the active button
+      event.target.className = "px-3.5 py-1.5 rounded-full bg-white text-black font-bold whitespace-nowrap transition-all shadow-md";
+    }
+
+    function selectPulseTrack(id) {
+      for (let i = 1; i <= 4; i++) {
+        const el = document.getElementById(`pulse-track-${i}`);
+        if (el) {
+          if (i === id) {
+            el.className = "cursor-pointer group p-8 rounded-3xl bg-[#141414] border-2 border-[#CCFF00] shadow-xl transition-all duration-300";
+          } else {
+            el.className = "cursor-pointer group p-8 rounded-3xl bg-[#0F0F0F] border border-[#222222] hover:border-[#CCFF00] hover:bg-[#141414] transition-all duration-300";
+          }
+        }
+      }
+    }
+
+    function filterCity(city) {
+      alert(`Selected Conclave Chapter: ${city.toUpperCase()}. Loading official delegation chronicle...`);
+    }
+  </script>
+</body>
+</html>
