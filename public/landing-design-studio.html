@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALLYSHIP++ · Landing Page Design Studio · 20 Aesthetic Themes & Section Options</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Unbounded:wght@400;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@600;700;900&family=Syne:wght@700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            gold: '#D4AF37',
+            'gold-light': '#F3E5AB',
+            'gold-dark': '#997D22',
+            canvas: '#0B0D11',
+            surface: '#12161D',
+            'surface-2': '#191F28',
+            'surface-3': '#222A36',
+            line: '#28313E',
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            display: ['"Unbounded"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+            serif: ['"Playfair Display"', 'serif'],
+            editorial: ['"Syne"', 'sans-serif'],
+            grotesk: ['"Space Grotesk"', 'sans-serif'],
+            classic: ['"Cinzel"', 'serif'],
+            impact: ['"Bebas Neue"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Custom scrollbars */
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #0B0D11; }
+    ::-webkit-scrollbar-thumb { background: #28313E; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #D4AF37; }
+
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: max-content;
+      animation: marquee 35s linear infinite;
+    }
+    .animate-marquee:hover { animation-play-state: paused; }
+
+    /* Theme Variable Injection Presets */
+    :root {
+      --accent-color: #D4AF37;
+      --accent-glow: rgba(212, 175, 55, 0.25);
+      --bg-canvas: #0B0D11;
+      --bg-surface: #12161D;
+      --bg-surface-2: #191F28;
+      --border-line: #28313E;
+      --text-main: #FFFFFF;
+      --text-muted: #94A3B8;
+      --font-heading: 'Unbounded', sans-serif;
+      --radius-theme: 1.5rem;
+    }
+
+    .theme-pulse {
+      --accent-color: #CCFF00;
+      --accent-glow: rgba(204, 255, 0, 0.25);
+      --bg-canvas: #0A0A0A;
+      --bg-surface: #141414;
+      --bg-surface-2: #1E1E1E;
+      --border-line: #2C2C2C;
+      --font-heading: 'Unbounded', sans-serif;
+      --radius-theme: 9999px;
+    }
+
+    .theme-neobrutalism {
+      --accent-color: #FFE600;
+      --accent-glow: rgba(255, 230, 0, 0.4);
+      --bg-canvas: #000000;
+      --bg-surface: #111111;
+      --bg-surface-2: #1A1A1A;
+      --border-line: #FFFFFF;
+      --font-heading: 'Space Grotesk', sans-serif;
+      --radius-theme: 0px;
+    }
+
+    .theme-swiss {
+      --accent-color: #FF3300;
+      --accent-glow: rgba(255, 51, 0, 0.3);
+      --bg-canvas: #0F0F10;
+      --bg-surface: #17181A;
+      --bg-surface-2: #212226;
+      --border-line: #303138;
+      --font-heading: 'Helvetica Neue', Inter, sans-serif;
+      --radius-theme: 0.25rem;
+    }
+
+    .theme-cyberpunk {
+      --accent-color: #00F0FF;
+      --accent-glow: rgba(0, 240, 255, 0.35);
+      --bg-canvas: #050811;
+      --bg-surface: #0C1222;
+      --bg-surface-2: #141F36;
+      --border-line: #1E3156;
+      --font-heading: 'JetBrains Mono', monospace;
+      --radius-theme: 0.5rem;
+    }
+
+    .theme-quiet-luxury {
+      --accent-color: #C5A059;
+      --accent-glow: rgba(197, 160, 89, 0.2);
+      --bg-canvas: #0D0E10;
+      --bg-surface: #15161A;
+      --bg-surface-2: #1D1F24;
+      --border-line: #2A2D35;
+      --font-heading: 'Playfair Display', serif;
+      --radius-theme: 1rem;
+    }
+
+    .theme-aurora {
+      --accent-color: #A855F7;
+      --accent-glow: rgba(168, 85, 247, 0.3);
+      --bg-canvas: #070714;
+      --bg-surface: #0E0E24;
+      --bg-surface-2: #171738;
+      --border-line: #292856;
+      --font-heading: 'Plus Jakarta Sans', sans-serif;
+      --radius-theme: 2rem;
+    }
+  </style>
+</head>
+<body class="bg-canvas text-white font-sans antialiased min-h-screen">
+
+  <!-- ========================================================================= -->
+  <!-- TOP STUDIO COMMAND BAR (Sticky Control Console)                            -->
+  <!-- ========================================================================= -->
+  <header class="sticky top-0 z-50 bg-[#0B0D11]/90 backdrop-blur-xl border-b border-line px-4 sm:px-8 py-3.5 flex flex-wrap items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded-lg bg-gold/15 border border-gold/40 flex items-center justify-center text-gold font-bold font-mono text-sm">
+        SOA
+      </div>
+      <div>
+        <div class="font-display font-bold text-sm tracking-wide text-white flex items-center gap-2">
+          <span>ALLYSHIP++ LANDING STUDIO</span>
+          <span class="px-2 py-0.5 rounded-full bg-gold/15 text-gold text-[10px] font-mono font-semibold uppercase tracking-wider">
+            20 Themes &bull; 60 Section Variants
+          </span>
+        </div>
+        <div class="text-[11px] text-gray-400 font-mono">
+          Figma-Inspired Aesthetic Lab &bull; Siksha 'O' Anusandhan
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation Pills -->
+    <div class="flex items-center gap-2 bg-surface-2 p-1 rounded-xl border border-line text-xs font-semibold">
+      <button onclick="setStudioView('themes')" id="tab-btn-themes" class="px-3.5 py-1.5 rounded-lg bg-gold text-black transition-all">
+        20 Aesthetic Themes
+      </button>
+      <button onclick="setStudioView('sections')" id="tab-btn-sections" class="px-3.5 py-1.5 rounded-lg text-gray-300 hover:text-white transition-all">
+        Section Options (10 Each)
+      </button>
+      <button onclick="setStudioView('canvas')" id="tab-btn-canvas" class="px-3.5 py-1.5 rounded-lg text-gray-300 hover:text-white transition-all">
+        Live Full Landing Page
+      </button>
+    </div>
+
+    <!-- Live Port / Quick Link -->
+    <div class="flex items-center gap-2">
+      <a href="http://localhost:3005/" target="_blank" class="px-3 py-1.5 rounded-lg bg-surface border border-line hover:border-gold text-xs font-mono text-gold flex items-center gap-1.5 transition-colors">
+        <span>Current Live /</span>
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- VIEW 1: 20 AESTHETIC THEMES FOR THE LANDING PAGE                         -->
+  <!-- ========================================================================= -->
+  <main id="view-themes" class="max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 py-10 space-y-12">
+    <!-- Intro Banner -->
+    <div class="bg-gradient-to-r from-surface to-surface-2 p-8 sm:p-12 rounded-3xl border border-line relative overflow-hidden">
+      <div class="max-w-3xl space-y-4 relative z-10">
+        <span class="px-3.5 py-1 rounded-full bg-gold/10 text-gold border border-gold/30 text-xs font-mono font-bold tracking-wider uppercase">
+          Figma Design Systems &bull; Architectural &amp; Creative Archetypes
+        </span>
+        <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-tight">
+          20 Artistic Concept Directions for ALLYSHIP++
+        </h1>
+        <p class="text-sm sm:text-base text-gray-300 leading-relaxed">
+          Select any of the 20 visual identities below to inspect its creative layout, typography hierarchy, card geometry, and micro-interactions. Click <strong>"Preview in Live Canvas"</strong> to see the entire landing page instantly re-skinned in that exact aesthetic.
+        </p>
+      </div>
+      <div class="absolute right-0 top-0 bottom-0 w-96 bg-gradient-to-l from-gold/10 to-transparent pointer-events-none"></div>
+    </div>
+
+    <!-- 20 Themes Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="themes-card-container">
+      <!-- Generated via JS for clean modularity -->
+    </div>
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- VIEW 2: SECTION-BY-SECTION EXPLORER (10 OPTIONS PER SECTION)              -->
+  <!-- ========================================================================= -->
+  <main id="view-sections" class="hidden max-w-[1720px] mx-auto px-6 sm:px-8 lg:px-12 py-10 space-y-10">
+    <!-- Section Nav Pills -->
+    <div class="bg-surface p-4 rounded-2xl border border-line flex flex-wrap items-center justify-between gap-4 sticky top-20 z-40">
+      <div class="flex flex-wrap gap-2 text-xs font-bold font-mono">
+        <button onclick="switchSectionTab('hero')" id="sect-tab-hero" class="px-4 py-2 rounded-xl bg-gold text-black transition-all">
+          01. Hero Section (10 Options)
+        </button>
+        <button onclick="switchSectionTab('stats')" id="sect-tab-stats" class="px-4 py-2 rounded-xl bg-surface-2 text-gray-300 hover:text-white border border-line transition-all">
+          02. Stats &amp; Credibility (10 Options)
+        </button>
+        <button onclick="switchSectionTab('tracks')" id="sect-tab-tracks" class="px-4 py-2 rounded-xl bg-surface-2 text-gray-300 hover:text-white border border-line transition-all">
+          03. Strategic Tracks (10 Options)
+        </button>
+        <button onclick="switchSectionTab('conclaves')" id="sect-tab-conclaves" class="px-4 py-2 rounded-xl bg-surface-2 text-gray-300 hover:text-white border border-line transition-all">
+          04. Conclaves &amp; Metros (10 Options)
+        </button>
+        <button onclick="switchSectionTab('leadership')" id="sect-tab-leadership" class="px-4 py-2 rounded-xl bg-surface-2 text-gray-300 hover:text-white border border-line transition-all">
+          05. Leadership &amp; Voice (10 Options)
+        </button>
+        <button onclick="switchSectionTab('cta')" id="sect-tab-cta" class="px-4 py-2 rounded-xl bg-surface-2 text-gray-300 hover:text-white border border-line transition-all">
+          06. Executive CTA (10 Options)
+        </button>
+      </div>
+
+      <div class="text-xs font-mono text-gold flex items-center gap-1.5">
+        <span class="w-2 h-2 rounded-full bg-gold animate-pulse"></span>
+        <span>Interactive Section Sandbox</span>
+      </div>
+    </div>
+
+    <!-- Active Section Container -->
+    <div id="section-options-display" class="space-y-12">
+      <!-- Rendered dynamically by renderSectionOptions() -->
+    </div>
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- VIEW 3: LIVE FULL LANDING PAGE CANVAS (THEME INJECTED)                    -->
+  <!-- ========================================================================= -->
+  <main id="view-canvas" class="hidden max-w-[1720px] mx-auto px-4 sm:px-8 py-8 space-y-10">
+    <!-- Canvas Floating Toolbar -->
+    <div class="bg-surface-2 p-4 rounded-2xl border border-line flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <span class="text-xs font-mono text-gray-400">ACTIVE CANVAS THEME:</span>
+        <span id="canvas-active-theme-name" class="px-3 py-1 rounded-full bg-gold/15 text-gold text-xs font-bold font-mono">
+          01. PULSE Athletic Editorial (High-Velocity)
+        </span>
+      </div>
+      <div class="flex items-center gap-3 text-xs">
+        <span class="text-gray-400">Quick Theme Switch:</span>
+        <select onchange="applyCanvasTheme(this.value)" id="quick-theme-select" class="px-3 py-1.5 rounded-lg bg-surface border border-line text-white text-xs font-mono">
+          <!-- Filled by JS -->
+        </select>
+      </div>
+    </div>
+
+    <!-- Rendered Full Landing Page Container -->
+    <div id="canvas-landing-mockup" class="rounded-3xl border border-line overflow-hidden bg-canvas transition-colors duration-500 shadow-2xl">
+      <!-- Full Page Structure Injected -->
+    </div>
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- JAVASCRIPT: DATA & INTERACTIVITY ENGINE                                    -->
+  <!-- ========================================================================= -->
+  <script>
+    // 20 Artistic Themes Data
+    const THEMES = [
+      {
+        id: "pulse",
+        num: "01",
+        name: "PULSE High-Velocity Athletic Editorial",
+        figmaInspo: "Ikbal Mahmud (Dribbble/Instagram Viral) · Dribbble Pro",
+        accent: "#CCFF00",
+        bg: "#0A0A0A",
+        font: "Unbounded (Display) + Inter",
+        desc: "Monumental architectural wordmark behind subjects, coordinate stamps (20° 17′ N), live green status indicator, pill badges, and high-speed running ticker.",
+        vibe: "High-Energy · Architectural · Dynamic Movement",
+        tags: ["Monumental Headline", "Pill Buttons", "Running Marquee", "Coordinate Meta"]
+      },
+      {
+        id: "neobrutalism",
+        num: "02",
+        name: "Neo-Brutalist Architectural Grid",
+        figmaInspo: "Figma Community Brutalism · Gumroad / Framer Award Winner",
+        accent: "#FFE600",
+        bg: "#000000",
+        font: "Space Grotesk + JetBrains Mono",
+        desc: "Heavy 2px black & white borders, solid box shadows, zero border radius, monospace metadata, high-contrast raw structural impact.",
+        vibe: "Raw · Uncompromising · High Contrast",
+        tags: ["Heavy Borders", "Zero Radius", "Hard Drop Shadow", "Monospace Specs"]
+      },
+      {
+        id: "swiss",
+        num: "03",
+        name: "Swiss International Typographic (Akzidenz)",
+        figmaInspo: "Josef Müller-Brockmann & International Typographic Style",
+        accent: "#FF3300",
+        bg: "#0F0F10",
+        font: "Helvetica Neue / Inter Strict",
+        desc: "Rigorous 12-column grid, oversized flush-left typography, asymmetric negative space, bold red Swiss accents, pure content-first dignity.",
+        vibe: "Mathematical · Timeless · Institutional Dignity",
+        tags: ["Strict Grid", "Generous Margin", "High Legibility", "Red Punctuation"]
+      },
+      {
+        id: "cyber-hud",
+        num: "04",
+        name: "Cyber-Bento HUD & Deep Tech",
+        figmaInspo: "Linear.app · Raycast · Vercel Ship Design System",
+        accent: "#00F0FF",
+        bg: "#050811",
+        font: "JetBrains Mono + Plus Jakarta Sans",
+        desc: "Luminous cyan radar lines, coordinate telemetry, glowing bento boxes, real-time status pulses, and glassmorphic HUD chips.",
+        vibe: "Futuristic · High-Tech Engineering · Prototyping",
+        tags: ["Telemetry Grid", "Cyan Glow", "Bento HUD", "Radar Accents"]
+      },
+      {
+        id: "quiet-luxury",
+        num: "05",
+        name: "Editorial Luxury Noir (Vogue / Monocle)",
+        figmaInspo: "The Row · Kinfolk Magazine · Bottega Veneta Digital",
+        accent: "#C5A059",
+        bg: "#0D0E10",
+        font: "Playfair Display (Italic) + Plus Jakarta Sans",
+        desc: "Serif italic headlines, warm champagne gold, generous negative space, drop caps, tactile matte paper borders, high-society quiet luxury.",
+        vibe: "Refined · Academic Aristocracy · Understated",
+        tags: ["Serif Display", "Champagne Gold", "Editorial Quotes", "Quiet Luxury"]
+      },
+      {
+        id: "aurora-spatial",
+        num: "06",
+        name: "Apple Spatial / Glassmorphic Aurora",
+        figmaInspo: "Apple visionOS · macOS Sonoma UI Kits",
+        accent: "#A855F7",
+        bg: "#070714",
+        font: "Plus Jakarta Sans Rounded",
+        desc: "Multi-layered frosted glass panels, subtle fluid blur orbs, refractive 1px border lighting, rounded capsule controls, smooth kinetic depth.",
+        vibe: "Luminous · Frosted Glass · Dimensional",
+        tags: ["Glassmorphism", "Aurora Blur", "Capsule Pills", "Refractive Borders"]
+      },
+      {
+        id: "kinetic-bauhaus",
+        num: "07",
+        name: "Kinetic Bauhaus & Constructivism",
+        figmaInspo: "Bauhaus Dessau Archive & Modernist Posters",
+        accent: "#F59E0B",
+        bg: "#111215",
+        font: "Syne / Bebas Neue + Inter",
+        desc: "Bold geometric forms, diagonal dividing ribbons, high-impact black & warm amber contrast, functional architecture with stark purpose.",
+        vibe: "Artistic · Functionalist · Geometric",
+        tags: ["Diagonal Stripes", "Geometric Prisms", "Amber Gold", "Bold Numbers"]
+      },
+      {
+        id: "retro-terminal",
+        num: "08",
+        name: "Retro-Futuristic Terminal 1996",
+        figmaInspo: "Bloomberg Terminal · MIT Media Lab Archive",
+        accent: "#10B981",
+        bg: "#030A06",
+        font: "JetBrains Mono + VT323",
+        desc: "CRT scanline textures, emerald green phosphor glow, command prompts (EST. 1996 > NIRF #15), ASCII borders, institutional hacker prestige.",
+        vibe: "Retro-Tech · Telemetry · Command Center",
+        tags: ["Green Phosphor", "Command Prompt", "ASCII Dividers", "Scanlines"]
+      },
+      {
+        id: "japandi-minimal",
+        num: "09",
+        name: "Serene Japandi & Wabi-Sabi",
+        figmaInspo: "Muji · Nendo Design Studio Tokyo",
+        accent: "#D6C7A1",
+        bg: "#121314",
+        font: "Inter Light + Playfair Display",
+        desc: "Warm oat and charcoal tones, washi paper-inspired matte surfaces, balanced asymmetrical breathing space, serene philosophical authority.",
+        vibe: "Meditative · Balanced · Harmonious",
+        tags: ["Washi Textures", "Warm Clay", "Soft Margins", "Subtle Elegance"]
+      },
+      {
+        id: "hyper-3d",
+        num: "10",
+        name: "Hyper-Dimensional 3D Isometric",
+        figmaInspo: "Spline 3D Community · Stripe Press",
+        accent: "#6366F1",
+        bg: "#0A0D18",
+        font: "Unbounded + Space Grotesk",
+        desc: "Isometric card tilts, colored shadow bounces, floating elevation badges, stacked layered perspective that pops off the screen.",
+        vibe: "Volumetric · Spatial · Layered Depth",
+        tags: ["Isometric Tilt", "Color Bounce", "Elevation 4", "Floating Badges"]
+      },
+      {
+        id: "davos-summit",
+        num: "11",
+        name: "Davos World Economic Forum Prestige",
+        figmaInspo: "WEF Annual Meeting · Financial Times Special Reports",
+        accent: "#38BDF8",
+        bg: "#070E1B",
+        font: "Cinzel + Inter",
+        desc: "Plenary blue and platinum palette, global leadership summit seals, crisp economic trajectory indicators, boardroom executive grandeur.",
+        vibe: "Global Summit · High Finance · Diplomatic",
+        tags: ["Deep Navy", "Platinum Accents", "Global Seals", "Plenary Dignity"]
+      },
+      {
+        id: "neo-pop",
+        num: "12",
+        name: "Bold Neo-Pop Post-Digital",
+        figmaInspo: "Playground.ai · Framer Creative of the Year",
+        accent: "#EC4899",
+        bg: "#0E0712",
+        font: "Plus Jakarta Sans Bold + Syne",
+        desc: "High-voltage neon pink & gold pill tags, expressive micro-stickers, Gen-Z executive crossover, energetic youth-meets-industry aesthetic.",
+        vibe: "Vibrant · Youthful · Unconventional",
+        tags: ["Neon Pink Accent", "Sticker Badges", "Dynamic Pills", "Pop Energy"]
+      },
+      {
+        id: "nordic-clean",
+        num: "13",
+        name: "Nordic Clean & Hyper-Legible",
+        figmaInspo: "Bang & Olufsen · Teenage Engineering",
+        accent: "#E2E8F0",
+        bg: "#0B0C0E",
+        font: "Inter Tight + Space Grotesk",
+        desc: "Stark monochrome palette, precision border radii, ultra-high contrast WCAG AAA ratios, crisp Scandinavian architectural restraint.",
+        vibe: "Functional · Minimal · Crystalline",
+        tags: ["Monochrome", "High Contrast", "Airy Margins", "Clean Sans"]
+      },
+      {
+        id: "blueprint-cad",
+        num: "14",
+        name: "Architectural Blueprint & CAD Spec",
+        figmaInspo: "Foster + Partners Digital Archives · Architectural Digest",
+        accent: "#3B82F6",
+        bg: "#070E20",
+        font: "JetBrains Mono + Space Grotesk",
+        desc: "CAD drafting grid lines, dimension measurement callouts (127 ACRES · 1,400 SEATS), crosshair corner brackets, deep technical proof.",
+        vibe: "Architectural · Draftsman · Precision",
+        tags: ["Dimension Lines", "CAD Grid", "Crosshairs", "Technical Callouts"]
+      },
+      {
+        id: "dossier-agency",
+        num: "15",
+        name: "Executive Dossier & Intelligence Brief",
+        figmaInspo: "Pentagram Identity Design · Department of Defense Special Projects",
+        accent: "#EAB308",
+        bg: "#101010",
+        font: "Courier Prime / JetBrains Mono + Unbounded",
+        desc: "Document folders with tabbed handles, red and gold classified security stamps, paper-clip iconography, executive memo aesthetics.",
+        vibe: "Confidential · Authoritative · High-Stakes",
+        tags: ["Document Tabs", "Classified Stamp", "Docket Numbers", "Security Seals"]
+      },
+      {
+        id: "industrial-raw",
+        num: "16",
+        name: "Midnight Copper & Industrial Foundry",
+        figmaInspo: "Tesla Cybertruck Site · Rimowa Luggage Design",
+        accent: "#F97316",
+        bg: "#0C0C0D",
+        font: "Bebas Neue + Inter",
+        desc: "Brushed copper gradients on graphite carbon, industrial rivet dividers, heavy mechanical weight, manufacturing engineering pride.",
+        vibe: "Industrial · Heavy-Duty · Metallic",
+        tags: ["Raw Copper", "Carbon Fiber", "Mechanical Borders", "Heavy Sans"]
+      },
+      {
+        id: "vignelli-strict",
+        num: "17",
+        name: "Artisanal Vignelli Strict Grid",
+        figmaInspo: "Massimo Vignelli Canon · NYC Subway System Design",
+        accent: "#EF4444",
+        bg: "#121214",
+        font: "Helvetica / Inter Black",
+        desc: "Uncompromising 4-column master grid, black/white/red discipline, giant section numbers (01, 02, 03), pure typographic authority.",
+        vibe: "Legendary · Disciplined · Purist",
+        tags: ["Four Column", "Giant Numbers", "Red Dots", "Purist Grid"]
+      },
+      {
+        id: "olympic-legacy",
+        num: "18",
+        name: "Olympic Legacy & Athletic Laurels",
+        figmaInspo: "Paris 2024 Design Identity · Tokyo 1964 Archival",
+        accent: "#D4AF37",
+        bg: "#08090C",
+        font: "Cinzel + Plus Jakarta Sans",
+        desc: "Honoring Gurbux Singh, Nilesh Kulkarni, and Anju Bobby George. Golden laurel motifs, athletic split timing stamps, high-performance psychology.",
+        vibe: "Heroic · Athletic · Prestigious",
+        tags: ["Laurel Wreath", "Split Times", "Gold Medals", "Championship Grit"]
+      },
+      {
+        id: "holographic-ai",
+        num: "19",
+        name: "Hyper-Modern Holographic AI Biome",
+        figmaInspo: "Midjourney v6 Web Interface · OpenAI Research",
+        accent: "#818CF8",
+        bg: "#060714",
+        font: "Space Grotesk + Plus Jakarta Sans",
+        desc: "Prismatic holographic gradient borders, subtle particle starfields, AI neural connection diagrams, next-gen university portal.",
+        vibe: "Next-Gen · Intelligent · Ethereal",
+        tags: ["Prismatic Sheen", "Neural Nodes", "Holo Badges", "Fluid Glow"]
+      },
+      {
+        id: "heritage-modern",
+        num: "20",
+        name: "Temple City Heritage meets Deep Tech",
+        figmaInspo: "Odisha Modern Architecture · Mukteswar Kalinga Geometry",
+        accent: "#F59E0B",
+        bg: "#0C0908",
+        font: "Playfair Display + JetBrains Mono",
+        desc: "Fusion of ancient Kalinga stone carved geometry (Bhubaneswar Temple City) with 21st-century deep tech and NITI Aayog incubation.",
+        vibe: "Cultural Roots · Silicon Valley Velocity · Epic",
+        tags: ["Kalinga Motifs", "Warm Terracotta", "Stone & Glass", "Ancient + Future"]
+      }
+    ];
+
+    // SECTION OPTIONS DATA (10 OPTIONS PER SECTION)
+    const SECTION_OPTIONS = {
+      hero: [
+        { id: "h1", name: "Monumental Split Stage (PULSE Reference)", badge: "Figma Trending", desc: "Layered oversized 'CO•CREATE' wordmark behind leadership cutout, top GPS coordinates, running marquee ribbon, and dual primary/secondary action capsules." },
+        { id: "h2", name: "Cinema Full-Bleed Video with Glass Console", badge: "Immersive", desc: "Edge-to-edge campus drone video background with centered frosted-glass cockpit displaying live conclave dates, NIRF #15 rank, and rapid RSVP." },
+        { id: "h3", name: "Minimalist Typographic Statement (Swiss)", badge: "Pure Content", desc: "Huge 84px stark sans headline with zero visual clutter: 'Where Industry & Academia Meet.' Followed by a strict 3-column metadata spec sheet." },
+        { id: "h4", name: "Interactive Bento Dashboard Hero", badge: "Linear Style", desc: "Hero organized as an interactive 4-card dashboard: Live Placement Dial (94.54%), Active CoEs (Tech Mahindra/LTTS), Next Conclave Countdown, and Video Reel." },
+        { id: "h5", name: "Twin Pillar Split: Industry vs Academia", badge: "Conceptual", desc: "Split-screen 50/50 layout: Left side dark navy (Enterprise Boardrooms), Right side warm gold (Academic Laboratories) merging seamlessly in the center." },
+        { id: "h6", name: "Terminal Telemetry Launchpad (EST. 1996)", badge: "Hacker / Deep Tech", desc: "Monospaced green/amber prompt initializing SOA institutional node: Coordinates, 15,000+ scholars loaded, 18 CoEs active, click to execute partnership." },
+        { id: "h7", name: "Editorial Magazine Cover (Quiet Luxury)", badge: "High Prestige", desc: "Framed portrait of conclave delegation with serif italic title 'The Architecture of Alliances', volume issue 'CYCLE 2.0', and gold embossed badges." },
+        { id: "h8", name: "3D Isometric Perspective Cards", badge: "Spatial", desc: "Interactive cards for Engineering, Management, and Medicine floating at a 20-degree isometric slant with live hover elevation and glow." },
+        { id: "h9", name: "Horizontal Kinetic Marquee Hero", badge: "Brutalist Energy", desc: "Three stacked running ticker bands at contrasting speeds moving behind high-contrast brutalist headline 'BRIDGING BOARDROOMS & SCHOLARS'." },
+        { id: "h10", name: "Executive Keynote Spotlight (Chairman Vision)", badge: "Authoritative", desc: "Full-width architectural portrait of Chairman Prof. (Dr.) Manojranjan Nayak with integrated audio quote preview and institutional declaration." }
+      ],
+      stats: [
+        { id: "s1", name: "Monolithic 4-Column Stat Pillars", badge: "Standard Luxe", desc: "Four clean vertical monoliths: 94.54% B.Tech Placements, 500+ CXO Network, 18+ CoEs, ₹46 LPA Peak Package with animated counter dials." },
+        { id: "s2", name: "Infinite Stock-Ticker Ribbon Band", badge: "High Velocity", desc: "Continuous dual-direction scrolling ticker displaying real placement stats, marquee recruiters, and conclave cities separated by gold glyphs." },
+        { id: "s3", name: "Frosted Glass Floating Dock", badge: "Apple Spatial", desc: "A floating pill-shaped capsule dock anchored to the viewport containing four live pulsing key indicators." },
+        { id: "s4", name: "Circular Radar / SVG Gauge Visualizers", badge: "Deep Tech", desc: "Four circular animated SVG SVG radial gauges showing percentage completion and trajectory gains over 3 years." },
+        { id: "s5", name: "Audit Spec Table with Verification Seals", badge: "Government / ISO", desc: "Formal audited ledger showing NIRF ranking metrics, NAAC 'A++' score, and Ministry of Education verification seals." },
+        { id: "s6", name: "Bento Metric Tiles with Sparkline Graphs", badge: "Modern SaaS", desc: "Asymmetric bento cards featuring miniature 3-year sparkline charts for engineering, medical, and business placements." },
+        { id: "s7", name: "High-Contrast Brutalist Number Blocks", badge: "Neo-Brutalism", desc: "Massive solid yellow and black number cards with thick 3px outlines, raw drop shadows, and zero border radius." },
+        { id: "s8", name: "Minimalist Editorial Inline Sentence", badge: "Editorial", desc: "A flowing single paragraph of text with large bold highlighted numbers: 'In 2024, SOA placed [94.54%] of engineering cohorts across [500+] enterprise partners...'" },
+        { id: "s9", name: "Benchmark Split vs National Average", badge: "Comparative", desc: "Side-by-side comparison bars showing SOA metrics vs All-India university averages in placement speed and research output." },
+        { id: "s10", name: "Interactive Metric Slider / Time Machine", badge: "Interactive", desc: "A draggable time slider allowing users to slide from 1996 -> 2015 -> 2024 to see the exponential institutional growth." }
+      ],
+      tracks: [
+        { id: "t1", name: "Stacked Typographic Deck (PULSE Reference)", badge: "Figma Viral", desc: "Vertical numbered list (01 to 04) that updates an interactive right-hand media deck with photos, tags, and partner logos on hover." },
+        { id: "t2", name: "Asymmetric 4-Card Bento Grid", badge: "Linear Style", desc: "A 12-column bento grid with unequal card weights for CoEs (large), Incubation (tall), Advisory (wide), and Fellowships." },
+        { id: "t3", name: "Horizontal Snap-Scroll Carousel", badge: "Mobile Fluid", desc: "Smooth horizontal snap-scroll track cards with progress dot indicator and keyboard arrow navigation." },
+        { id: "t4", name: "Operating System Console Tabs", badge: "SaaS / Pro", desc: "Desktop tabbed console with code-like JSON parameters, SLA turnaround times, and direct partner routing." },
+        { id: "t5", name: "Accordion Drawer System", badge: "Compact", desc: "Sleek vertical accordion drawers that expand smoothly with spring physics to reveal faculty leads and CoE models." },
+        { id: "t6", name: "Radial Orbit Hub", badge: "Creative", desc: "A central SOA crest with 4 orbital satellites representing the 4 collaboration pathways connected by pulsing SVG cables." },
+        { id: "t7", name: "Card Flip 3D Showcase", badge: "Tactile", desc: "Interactive cards that flip 180 degrees on hover/click to reveal the technical curriculum and recruiting partners on the reverse." },
+        { id: "t8", name: "Executive Dossier Folders", badge: "Tactile Paper", desc: "Layered manila/graphite folder tabs labeled 'CoE SPECS', 'NITI AAYOG', 'WIPRO MASTERCLASS', and 'LSEG HIRING'." },
+        { id: "t9", name: "Brutalist High-Contrast Stack", badge: "Neo-Brutalism", desc: "Giant monospaced numbered bars that highlight in electric yellow with hard black borders on hover." },
+        { id: "t10", name: "Timeline Stepper with Milestone Nodes", badge: "Sequential", desc: "A 4-step progressive onboarding timeline: 'Phase 1: Problem Statement' -> 'Phase 2: Faculty Pairing' -> 'Phase 3: Prototype' -> 'Phase 4: CoE'." }
+      ],
+      conclaves: [
+        { id: "c1", name: "Interactive Metro City Pills (PULSE Style)", badge: "Clean Urban", desc: "Oval city pills [BENGALURU] [HYDERABAD] [MUMBAI] [CHENNAI] [KOLKATA] [BHUBANESWAR] switching photo and attendee roster." },
+        { id: "c2", name: "Pan-India Geographic Pinboard", badge: "Cartographic", desc: "Stylized vector map of India with glowing interactive city nodes that trigger conclave highlight popups on hover." },
+        { id: "c3", name: "Asymmetric Bento Chapter Collage", badge: "Editorial", desc: "7-panel mosaic combining event photos, keynote quotes from Arshad Ayub & Premanand J., and media clippings." },
+        { id: "c4", name: "Metro Stadium Ticket Stubs", badge: "Athletic/Championship", desc: "Boarding pass / ticket stub layout with perforated tear-off lines, barcode, venue seat, and conclave date." },
+        { id: "c5", name: "VIP Executive Guest Passes Matrix", badge: "Event Prestige", desc: "Lanyard-style hanging VIP badge cards featuring speaker photos, corporate titles, and key takeaways." },
+        { id: "c6", name: "Editorial Conclave Chronicle Timeline", badge: "Historical", desc: "Vertical chronological spine tracing the expansion from the June 2024 Bengaluru inaugural to the August 2026 Chennai 2.0 edition." },
+        { id: "c7", name: "Full-Screen Video Highlights Mosaic", badge: "Rich Media", desc: "Video lightbox grid with timestamp markers for panel discussions on Gen-Z psychological safety and corporate allyship." },
+        { id: "c8", name: "City CXO Quote Wall", badge: "Social Proof", desc: "Oversized quotes from leaders of Microsoft, Dell, UPS, Standard Chartered, and PwC filtered by city chapter." },
+        { id: "c9", name: "Continuous Filmstrip Scroll", badge: "Cinematic", desc: "Perforated 35mm filmstrip layout with high-resolution banquet and panel photography rolling smoothly horizontally." },
+        { id: "c10", name: "Minimalist Metro Specification Table", badge: "Terminal Spec", desc: "Clean tabular terminal listing City, Venue Hotel, Lead Dignitaries, Delegate Count, and Post-Conclave CoE Outcomes." }
+      ],
+      leadership: [
+        { id: "l1", name: "Mirrored Executive Cards (Photo Left, Text Right)", badge: "Current Polish", desc: "The exact refined layout crafted for Pro-VC & Convener: 4:3 portrait with glass badge on left, 3-4 line quote and signature on right." },
+        { id: "l2", name: "Full-Width Chairman Panoramic Portrait", badge: "Monumental", desc: "Expansive portrait of Founder President Prof. (Dr.) Manojranjan Nayak with overlaid philosophical manifesto on multidisciplinary education." },
+        { id: "l3", name: "Side-by-Side Leadership Triad", badge: "Balanced", desc: "Three balanced cards for VC Prof. Pradipta Kumar Nanda, Pro-VC Prof. Prashanta Kumar Patra, and Convener Prof. Raj Kumar Hota." },
+        { id: "l4", name: "Interactive Voice / Audio Clip Player", badge: "Podcast Style", desc: "Audio waveform player letting visitors listen to actual 60-second keynote excerpts from the conclave podium." },
+        { id: "l5", name: "Executive Letterhead with Digital Signature", badge: "Formal", desc: "Official university letterhead design with gold crest, formal paragraph text, and verified digital signatures." },
+        { id: "l6", name: "Bilateral Dialogue: Corporate vs Academic", badge: "Perspective", desc: "Side-by-side card comparing academic direction (SOA Directorate) with enterprise response (LTTS Global Head Dr. P.B. Kotur)." },
+        { id: "l7", name: "Circular Medallion Portraits with Quote Drawer", badge: "Classic", desc: "High-contrast circular portraits with gold rim lighting that expand downward to show verified executive bios." },
+        { id: "l8", name: "Video Keynote Lightbox Carousel", badge: "Media First", desc: "Video thumb cards with play buttons linking directly to YouTube / archive recordings of leadership conclave addresses." },
+        { id: "l9", name: "Academic Senate Creed & Crest", badge: "Institutional", desc: "Monumental seal of Siksha 'O' Anusandhan with university charter, NIRF #15 citation, and governance council roster." },
+        { id: "l10", name: "Hover Popover Leadership Roster Strip", badge: "Compact", desc: "Compact avatar row in the footer with rich popover cards on hover showing full titles, conclave roles, and contact routing." }
+      ],
+      cta: [
+        { id: "cta1", name: "Deep Navy & Metallic Gold Impact Banner", badge: "Classic Luxe", desc: "Full-bleed navy container with gold ambient glow, 'Join the Next National Conclave', dual action buttons, and live RSVP badge." },
+        { id: "cta2", name: "Interactive Problem Brief Studio", badge: "Direct Action", desc: "Integrated mini problem statement form allowing immediate submission of engineering or talent needs without leaving the page." },
+        { id: "cta3", name: "Executive VIP Invitation Card with Wax Seal", badge: "Exclusive", desc: "High-prestige invitation card design with simulated gold wax seal: 'By Invitation Only: The 2026 Executive Roundtables'." },
+        { id: "cta4", name: "Terminal Execution Bar", badge: "Developer / Deep Tech", desc: "Monospaced command line: 'soa.collaborate --track=all --partner=enterprise [EXECUTE RSVP]' with one-click terminal copy." },
+        { id: "cta5", name: "Dual Pathway Fork: Enterprise vs Research", badge: "Segmented", desc: "Split CTA: Left fork for 'Corporate Recruitment & CoEs', Right fork for 'Academic Advisory & NITI Aayog Incubation'." },
+        { id: "cta6", name: "Floating Glass Capsule CTA Dock", badge: "Persistent", desc: "Unobtrusive bottom floating glass capsule dock that stays accessible across the page with 'Request Brief' & 'Conclave RSVP'." },
+        { id: "cta7", name: "High-Energy Brutalist Ribbon Marquee CTA", badge: "Neo-Brutalist", desc: "Electric yellow high-contrast banner with rotating arrows, black typography, and immediate click-through urgency." },
+        { id: "cta8", name: "127-Acre Campus Aerial Overlay", badge: "Scenic", desc: "High-res aerial view of Khandagiri campus with darkened gradient and direct meeting scheduler with Dean of Corporate Relations." },
+        { id: "cta9", name: "Next Conclave City Countdown Card", badge: "Event Urgency", desc: "Real-time countdown timer to the next scheduled conclave edition with city weather, venue hotel, and remaining delegate seats." },
+        { id: "cta10", name: "Dean Corporate Relations Direct Hotline", badge: "Personal Touch", desc: "Direct contact card for Prof. (Dr.) Raj Kumar Hota with official SOA email, phone routing, and office location in Khandagiri Square." }
+      ]
+    };
+
+    // Initialize Themes Grid
+    function renderThemesGrid() {
+      const container = document.getElementById('themes-card-container');
+      container.innerHTML = THEMES.map(theme => `
+        <div class="bg-surface rounded-3xl p-6 border border-line hover:border-gold transition-all duration-300 flex flex-col justify-between group space-y-5">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs font-bold px-2.5 py-1 rounded-full bg-surface-2 text-gold border border-line">
+                THEME ${theme.num}
+              </span>
+              <div class="w-4 h-4 rounded-full border border-white/20" style="background-color: ${theme.accent}"></div>
+            </div>
+
+            <h3 class="font-display text-lg font-bold text-white group-hover:text-gold transition-colors">
+              ${theme.name}
+            </h3>
+
+            <p class="text-xs text-gray-400 leading-relaxed">
+              ${theme.desc}
+            </p>
+
+            <div class="pt-2 text-[11px] font-mono text-gray-400 space-y-1">
+              <div><strong class="text-gray-300">Inspo:</strong> ${theme.figmaInspo}</div>
+              <div><strong class="text-gray-300">Fonts:</strong> ${theme.font}</div>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5 pt-2">
+              ${theme.tags.map(t => `<span class="px-2 py-0.5 rounded bg-surface-2 text-[10px] text-gray-300 border border-line">${t}</span>`).join('')}
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-line flex items-center justify-between">
+            <button onclick="previewThemeInCanvas('${theme.id}')" class="w-full py-2.5 px-4 rounded-xl bg-surface-2 hover:bg-gold hover:text-black border border-line text-xs font-bold transition-all flex items-center justify-center gap-1.5">
+              <span>Preview Theme Live &rarr;</span>
+            </button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Populate Quick Theme Select Dropdown
+    function populateQuickThemeSelect() {
+      const sel = document.getElementById('quick-theme-select');
+      sel.innerHTML = THEMES.map(t => `<option value="${t.id}">${t.num}. ${t.name}</option>`).join('');
+    }
+
+    // Switch Studio View
+    function setStudioView(view) {
+      document.getElementById('view-themes').classList.add('hidden');
+      document.getElementById('view-sections').classList.add('hidden');
+      document.getElementById('view-canvas').classList.add('hidden');
+
+      document.getElementById('tab-btn-themes').className = "px-3.5 py-1.5 rounded-lg text-gray-300 hover:text-white transition-all";
+      document.getElementById('tab-btn-sections').className = "px-3.5 py-1.5 rounded-lg text-gray-300 hover:text-white transition-all";
+      document.getElementById('tab-btn-canvas').className = "px-3.5 py-1.5 rounded-lg text-gray-300 hover:text-white transition-all";
+
+      if (view === 'themes') {
+        document.getElementById('view-themes').classList.remove('hidden');
+        document.getElementById('tab-btn-themes').className = "px-3.5 py-1.5 rounded-lg bg-gold text-black transition-all";
+      } else if (view === 'sections') {
+        document.getElementById('view-sections').classList.remove('hidden');
+        document.getElementById('tab-btn-sections').className = "px-3.5 py-1.5 rounded-lg bg-gold text-black transition-all";
+        renderSectionOptions('hero');
+      } else if (view === 'canvas') {
+        document.getElementById('view-canvas').classList.remove('hidden');
+        document.getElementById('tab-btn-canvas').className = "px-3.5 py-1.5 rounded-lg bg-gold text-black transition-all";
+        renderFullLandingMockup('pulse');
+      }
+    }
+
+    // Switch Section Tab in View 2
+    function switchSectionTab(tab) {
+      const tabs = ['hero', 'stats', 'tracks', 'conclaves', 'leadership', 'cta'];
+      tabs.forEach(t => {
+        const btn = document.getElementById(`sect-tab-${t}`);
+        if (btn) {
+          if (t === tab) {
+            btn.className = "px-4 py-2 rounded-xl bg-gold text-black transition-all font-mono";
+          } else {
+            btn.className = "px-4 py-2 rounded-xl bg-surface-2 text-gray-300 hover:text-white border border-line transition-all font-mono";
+          }
+        }
+      });
+      renderSectionOptions(tab);
+    }
+
+    // Render 10 Options for Chosen Section
+    function renderSectionOptions(sectionKey) {
+      const options = SECTION_OPTIONS[sectionKey] || [];
+      const container = document.getElementById('section-options-display');
+
+      container.innerHTML = `
+        <div class="border-b border-line pb-4 flex items-center justify-between">
+          <div>
+            <h2 class="font-display text-2xl font-bold uppercase tracking-tight text-white">
+              Section: ${sectionKey.toUpperCase()} &mdash; 10 Creative Variations
+            </h2>
+            <p class="text-xs text-gray-400 mt-1 font-mono">
+              Review 10 distinct UI structures for this specific slice of the landing page.
+            </p>
+          </div>
+          <span class="px-3 py-1 rounded-full bg-gold/15 text-gold text-xs font-mono font-semibold">
+            10 Options Available
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          ${options.map((opt, idx) => `
+            <div class="bg-surface rounded-3xl p-6 sm:p-8 border border-line hover:border-gold transition-all duration-300 flex flex-col justify-between space-y-6 group">
+              <div class="space-y-3">
+                <div class="flex items-center justify-between">
+                  <span class="font-mono text-xs font-bold px-2.5 py-1 rounded-full bg-surface-2 text-gold border border-line">
+                    OPTION 0${idx + 1}
+                  </span>
+                  <span class="text-[11px] font-mono px-2 py-0.5 rounded bg-surface-2 text-gray-300 border border-line">
+                    ${opt.badge}
+                  </span>
+                </div>
+
+                <h3 class="font-display text-xl font-bold text-white group-hover:text-gold transition-colors">
+                  ${opt.name}
+                </h3>
+
+                <p class="text-sm text-gray-300 leading-relaxed">
+                  ${opt.desc}
+                </p>
+              </div>
+
+              <!-- Mini Mockup Frame Preview -->
+              <div class="p-4 rounded-2xl bg-surface-2 border border-line text-xs font-mono text-gray-400 space-y-2">
+                <div class="flex items-center justify-between text-[11px] text-gray-500 pb-2 border-b border-line">
+                  <span>WIREFRAME SCHEMATIC</span>
+                  <span class="text-gold">RESPONSIVE 390px / 768px / 1440px</span>
+                </div>
+                <div class="h-20 rounded-xl bg-surface-3 flex items-center justify-center text-center p-2 text-gray-300 border border-dashed border-gray-600">
+                  <span class="text-xs">Interactive Prototype Available in Full Canvas</span>
+                </div>
+              </div>
+
+              <div class="pt-2 flex items-center justify-between">
+                <button onclick="applySectionToCanvas('${sectionKey}', '${opt.id}')" class="btn-primary text-xs py-2 px-4 rounded-xl bg-gold text-black hover:bg-gold-light font-bold flex items-center gap-1.5 transition-all">
+                  <span>Select &amp; Preview in Canvas &rarr;</span>
+                </button>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    // Apply Specific Theme in View 3
+    function previewThemeInCanvas(themeId) {
+      setStudioView('canvas');
+      applyCanvasTheme(themeId);
+    }
+
+    function applyCanvasTheme(themeId) {
+      const selected = THEMES.find(t => t.id === themeId) || THEMES[0];
+      document.getElementById('canvas-active-theme-name').innerText = `${selected.num}. ${selected.name}`;
+      document.getElementById('quick-theme-select').value = selected.id;
+      renderFullLandingMockup(selected.id);
+    }
+
+    function applySectionToCanvas(sectionKey, optId) {
+      setStudioView('canvas');
+      alert(`Applied Option ${optId} to Section ${sectionKey.toUpperCase()} in the Live Canvas!`);
+    }
+
+    // Render Full Landing Page Mockup into View 3
+    function renderFullLandingMockup(themeId) {
+      const theme = THEMES.find(t => t.id === themeId) || THEMES[0];
+      const canvas = document.getElementById('canvas-landing-mockup');
+
+      canvas.className = `rounded-3xl border border-line overflow-hidden bg-canvas transition-colors duration-500 shadow-2xl theme-${themeId}`;
+
+      canvas.innerHTML = `
+        <!-- Mockup Top Brand Header -->
+        <div class="border-b border-line px-8 py-4 flex items-center justify-between bg-surface/80 backdrop-blur-md">
+          <div class="flex items-center gap-3">
+            <span class="font-display font-black text-xl text-white tracking-wider">ALLYSHIP<span style="color: ${theme.accent}">++</span></span>
+            <span class="text-xs font-mono text-gray-400 hidden sm:inline">&bull; SIKSHA 'O' ANUSANDHAN DEEMED TO BE UNIVERSITY</span>
+          </div>
+          <div class="flex items-center gap-3 text-xs font-mono">
+            <span class="text-gray-400">NIRF #15 NATIONALLY</span>
+            <button class="px-3.5 py-1.5 rounded-full font-bold text-black" style="background-color: ${theme.accent}">
+              Get Invited
+            </button>
+          </div>
+        </div>
+
+        <!-- Section 1: Hero -->
+        <section class="relative pt-20 pb-16 px-6 sm:px-12 border-b border-line overflow-hidden">
+          <div class="absolute inset-0 flex items-center justify-center opacity-5 select-none pointer-events-none font-display font-black text-[16vw]">
+            CO&bull;CREATE
+          </div>
+          <div class="relative z-10 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div class="lg:col-span-7 space-y-6">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold" style="background-color: ${theme.accent}15; color: ${theme.accent}; border: 1px solid ${theme.accent}40">
+                <span>EST. 1996 &bull; 20&deg; 17&prime; N &middot; 85&deg; 49&prime; E</span>
+              </div>
+              <h1 class="font-display text-4xl sm:text-6xl font-black text-white leading-tight">
+                Where Industry <br>
+                <span class="italic font-normal">&amp; Academia</span> <br>
+                <span style="color: ${theme.accent}">Co-Create</span> the Future
+              </h1>
+              <p class="text-base text-gray-300 leading-relaxed max-w-xl">
+                Connecting Fortune 500 boardrooms with 15,000+ scholars, 18 Centres of Excellence, and Atal Incubation under NITI Aayog across 6 corporate capitals.
+              </p>
+              <div class="pt-2 flex flex-wrap gap-4">
+                <button class="px-6 py-3 rounded-xl font-bold text-black text-xs font-mono shadow-lg transition-transform hover:scale-105" style="background-color: ${theme.accent}">
+                  Submit Industry Challenge &rarr;
+                </button>
+                <button class="px-6 py-3 rounded-xl font-semibold text-white text-xs font-mono bg-surface-2 border border-line hover:border-white transition-colors">
+                  Explore 6 Conclave Chapters
+                </button>
+              </div>
+            </div>
+            <div class="lg:col-span-5">
+              <div class="rounded-3xl p-1 bg-surface border border-line shadow-2xl relative overflow-hidden">
+                <img src="/IMG_7873.jpg" alt="Conclave Delegation" class="rounded-2xl object-cover aspect-[4/3] w-full">
+                <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-black/80 backdrop-blur-md text-xs font-mono font-bold" style="color: ${theme.accent}">
+                  &bull; 500+ CXO NETWORK
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 2: Running Ticker -->
+        <div class="py-3 bg-surface-2 border-b border-line overflow-hidden font-mono text-xs uppercase tracking-widest text-gray-400">
+          <div class="animate-marquee gap-8">
+            <span>&bull; 94.54% B.TECH PLACEMENT</span>
+            <span style="color: ${theme.accent}">&copy; TECH MAHINDRA CLOUD COE</span>
+            <span>&bull; LTTS MEDICAL AI BIOME</span>
+            <span style="color: ${theme.accent}">&copy; BLUE STAR HVAC SKILL HUB</span>
+            <span>&bull; AIC-SOA ATAL INCUBATION NITI AAYOG</span>
+            <span style="color: ${theme.accent}">&copy; BENGALURU &bull; HYDERABAD &bull; MUMBAI &bull; CHENNAI &bull; KOLKATA</span>
+          </div>
+        </div>
+
+        <!-- Section 3: 4 Impact Metrics -->
+        <section class="py-14 px-6 sm:px-12 border-b border-line bg-surface/50">
+          <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="p-6 rounded-2xl bg-surface border border-line">
+              <div class="font-display text-3xl font-bold" style="color: ${theme.accent}">94.54%</div>
+              <div class="text-xs text-gray-400 mt-1 font-mono uppercase">Placement Rate</div>
+            </div>
+            <div class="p-6 rounded-2xl bg-surface border border-line">
+              <div class="font-display text-3xl font-bold text-white">₹46 LPA</div>
+              <div class="text-xs text-gray-400 mt-1 font-mono uppercase">Peak Package</div>
+            </div>
+            <div class="p-6 rounded-2xl bg-surface border border-line">
+              <div class="font-display text-3xl font-bold" style="color: ${theme.accent}">18+ CoEs</div>
+              <div class="text-xs text-gray-400 mt-1 font-mono uppercase">Dedicated Hubs</div>
+            </div>
+            <div class="p-6 rounded-2xl bg-surface border border-line">
+              <div class="font-display text-3xl font-bold text-white">NIRF #15</div>
+              <div class="text-xs text-gray-400 mt-1 font-mono uppercase">National Rank</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 4: Pro-VC & Convener Executive Cards -->
+        <section class="py-16 px-6 sm:px-12 border-b border-line">
+          <div class="max-w-6xl mx-auto space-y-8">
+            <div class="text-xs font-mono uppercase tracking-widest" style="color: ${theme.accent}">
+              ACADEMIC DIRECTION &bull; ALLYSHIP++ CONCLAVES
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 p-8 rounded-3xl bg-surface border border-line items-center">
+              <div class="lg:col-span-5 relative aspect-[4/3] rounded-2xl overflow-hidden bg-surface-3">
+                <img src="/leadership/pro-vc-soa.jpg" alt="Pro-VC" class="object-cover w-full h-full" style="object-position: 50% 20%">
+                <span class="absolute top-3 right-3 px-3 py-1 rounded-full bg-black/80 backdrop-blur-md text-xs font-mono font-bold" style="color: ${theme.accent}">
+                  &bull; PRO-VICE-CHANCELLOR
+                </span>
+              </div>
+              <div class="lg:col-span-7 space-y-4">
+                <h3 class="font-display text-2xl font-bold text-white">Message from Prof. (Dr.) Prashanta Kumar Patra</h3>
+                <blockquote class="italic text-base text-gray-200 border-l-2 pl-4 py-2 bg-surface-2 rounded-r-xl" style="border-color: ${theme.accent}">
+                  "Industry–academia interface is essential to bridge the gap between theoretical education and real-world workforce demands, driving innovation, employability, and economic growth through practical learning under NEP 2020."
+                </blockquote>
+                <div class="text-xs font-mono text-gray-400">
+                  <div class="font-bold text-white">Prof. (Dr.) Prashanta Kumar Patra</div>
+                  <div style="color: ${theme.accent}">Pro-Vice-Chancellor &bull; Siksha 'O' Anusandhan</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Mockup Bottom Footer -->
+        <div class="py-8 px-6 sm:px-12 bg-surface-2 flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-gray-400">
+          <div>&copy; 2026 Siksha 'O' Anusandhan (Deemed to be University). All Rights Reserved.</div>
+          <div class="flex items-center gap-4">
+            <a href="http://localhost:3005/collaborate" target="_blank" class="hover:text-white" style="color: ${theme.accent}">Collaborate Portal</a>
+            <span>&bull;</span>
+            <a href="http://localhost:3005/impact" target="_blank" class="hover:text-white">Impact &amp; Media</a>
+            <span>&bull;</span>
+            <a href="http://localhost:3005/event" target="_blank" class="hover:text-white">Event Archives</a>
+          </div>
+        </div>
+      `;
+    }
+
+    // On Load
+    window.onload = function() {
+      renderThemesGrid();
+      populateQuickThemeSelect();
+      renderSectionOptions('hero');
+      renderFullLandingMockup('pulse');
+    };
+  </script>
+</body>
+</html>
